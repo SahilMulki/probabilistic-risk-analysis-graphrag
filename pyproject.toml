@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pragraph"
+version = "0.1.0"
+description = "Knowledge-graph RAG over U.S. NRC Licensee Event Reports (LERs), with a probabilistic risk layer and a graph-vs-vector comparison."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "anthropic>=0.40",         # LLM: extraction, router, answerer
+    "pydantic>=2.5",           # the validated LER record schema
+    "pandas>=2.0",             # reading the INL LER-search export (build_fetch_list)
+    "rapidfuzz>=3.0",          # entity resolution against the equipment-code vocab
+    "neo4j==5.28.4",           # official driver, pinned; compatible with Neo4j 5 Community
+    "sentence-transformers>=3.0",  # local embeddings for the vector-RAG baseline (pulls torch; CPU/MPS)
+    "fastapi>=0.110",          # web UI backend (live mode)
+    "uvicorn>=0.29",           # ASGI server for the FastAPI app
+]
+
+# src-layout: the importable package lives under src/, so a plain checkout can't
+# shadow the installed package. `pip install -e .` puts `pragraph` on the path.
+[tool.setuptools.packages.find]
+where = ["src"]

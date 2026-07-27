@@ -26,7 +26,6 @@ import os
 import sys
 import threading
 
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from pathlib import Path
 
@@ -35,14 +34,14 @@ from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
-import risk
-from answer import answer as answer_fn
-from llm import LLM
-from load_graph import load_records
-from retrieve import Clarification, Evidence, GraphRetriever
-from vector_baseline import VectorRetriever
+from . import risk
+from .answer import answer as answer_fn
+from .llm import LLM
+from .load_graph import load_records
+from .retrieve import Clarification, Evidence, GraphRetriever
+from .vector_baseline import VectorRetriever
 
-REPO_ROOT = Path(__file__).resolve().parent.parent
+REPO_ROOT = Path(__file__).resolve().parents[2]
 WEB_DIR = REPO_ROOT / "web"
 BUNDLE = WEB_DIR / "demo_bundle.json"
 METRICS = WEB_DIR / "metrics.json"
@@ -411,14 +410,14 @@ def subgraph(kind: str, system: str | None = None, intent: str | None = None,
 @app.get("/examples")
 def examples():
     if not BUNDLE.exists():
-        raise HTTPException(404, "demo bundle not built — run: python src/precompute.py")
+        raise HTTPException(404, "demo bundle not built — run: python -m pragraph.precompute")
     return FileResponse(BUNDLE, media_type="application/json")
 
 
 @app.get("/metrics")
 def metrics():
     if not METRICS.exists():
-        raise HTTPException(404, "metrics not built — run: python src/precompute.py")
+        raise HTTPException(404, "metrics not built — run: python -m pragraph.precompute")
     return FileResponse(METRICS, media_type="application/json")
 
 

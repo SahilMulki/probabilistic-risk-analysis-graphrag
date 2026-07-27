@@ -1,8 +1,4 @@
-anthropic>=0.40
-pydantic>=2.5
-pandas>=2.0
-rapidfuzz>=3.0
-neo4j==5.28.4          # Phase 5 — official driver, pinned; compatible with Neo4j 5 Community
-sentence-transformers>=3.0   # Phase 9 — local embeddings for the vector-RAG baseline (pulls torch; CPU/MPS)
-fastapi>=0.110         # Phase 10a — web UI backend (live mode); demo mode needs no backend
-uvicorn>=0.29          # Phase 10a — ASGI server for the FastAPI app
+# Dependencies are declared in pyproject.toml. This file installs the pragraph
+# package (editable) plus those pinned deps, so `pip install -r requirements.txt`
+# and `pip install -e .` are equivalent.
+-e .

@@ -33,10 +33,9 @@ from __future__ import annotations
 import os
 import sys
 
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from load_graph import load_records
-from retrieve import Clarification
+from .load_graph import load_records
+from .retrieve import Clarification
 
 # The three hand-marked HPCI LERs remain the STABLE anchors at scale: their
 # extractions are frozen/known, so expected sets derived from them don't drift.

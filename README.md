@@ -1,7 +1,6 @@
 # Probabilistic Risk Analysis GraphRAG
 
-**A question-answering system for U.S. nuclear-plant failure reports that connects the dots
-_across_ thousands of documents — the kind of question ordinary AI search can't answer.**
+**All federal nuclear-incident reports from 2020 to 2026, restructured into a knowledge graph (12,474 nodes, 17,372 links): trace a plant failure's causal chain, rank the systems that carry the most risk, and answer challenging cross-document questions**
 
 ### ▶︎ [**Try the live demo**](https://sahilmulki.github.io/probabilistic-risk-analysis-graphrag/) &nbsp;·&nbsp; runs in your browser, nothing to install
 
@@ -147,8 +146,8 @@ Needs [Neo4j](https://neo4j.com/download/) running and an Anthropic API key in a
 (~$0.02–0.05 per question).
 
 ```bash
-pip install -r requirements.txt
-uvicorn app:app --app-dir src         # serves the page + the /ask API at http://localhost:8000
+pip install -e .                      # installs the `pragraph` package + pinned deps
+uvicorn pragraph.app:app              # serves the page + the /ask API at http://localhost:8000
 ```
 
 The **[demo guide](docs/DEMO_GUIDE.md)** lists every kind of question you can
@@ -159,10 +158,10 @@ causes to drop into your own questions.
 <summary>Rebuild the graph and re-run the evaluation from scratch</summary>
 
 ```bash
-python src/pipeline.py                # extract + score reports  → out/
-python src/load_graph.py              # load into Neo4j (idempotent)
-python src/ask.py --golden            # run the full graded question suite
-python src/precompute.py              # rebuild the demo bundle from real output, and prove demo ≡ live
+python -m pragraph.pipeline           # extract + score reports  → out/
+python -m pragraph.load_graph         # load into Neo4j (idempotent)
+python -m pragraph.ask --golden       # run the full graded question suite
+python -m pragraph.precompute         # rebuild the demo bundle from real output, and prove demo ≡ live
 ```
 
 </details>

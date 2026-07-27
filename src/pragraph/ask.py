@@ -1,9 +1,9 @@
 """
 ask.py — Phase 6 CLI: ask the LER graph a question, or run the golden-question eval.
 
-    python src/ask.py "What components have failed in HPCI across the corpus?"
-    python src/ask.py --golden        # run the MVP-now golden set with scoring
-    python src/ask.py --golden --brief # one line per question
+    python -m pragraph.ask "What components have failed in HPCI across the corpus?"
+    python -m pragraph.ask --golden        # run the MVP-now golden set with scoring
+    python -m pragraph.ask --golden --brief # one line per question
 
 Graph retrieval (LLM router + Cypher templates) -> grounded answer (cites LERs).
 The --golden runner prints, per question: the routed intent, the nodes/LERs the
@@ -17,13 +17,12 @@ import argparse
 import os
 import sys
 
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from answer import answer
-from golden_eval import build_expected, golden, judge
-from llm import LLM
-from load_graph import load_records
-from retrieve import Clarification, GraphRetriever
+from .answer import answer
+from .golden_eval import build_expected, golden, judge
+from .llm import LLM
+from .load_graph import load_records
+from .retrieve import Clarification, GraphRetriever
 
 
 def _provenance_map() -> dict:

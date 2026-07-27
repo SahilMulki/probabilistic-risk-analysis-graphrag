@@ -23,7 +23,7 @@ Design split (see docs/journal/phase_4.md):
     resolve.py joins plants.csv on docket.
 
 Verify against the oracle:
-    python src/parse_form366.py ML26022A036 ML25122A139
+    python -m pragraph.parse_form366 ML26022A036 ML25122A139
 """
 from __future__ import annotations
 
@@ -33,14 +33,12 @@ import sys
 from pathlib import Path
 from typing import Optional
 
-# make sibling modules importable whether run as `python src/x.py` or `-m src.x`
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from pydantic import BaseModel, ConfigDict, Field
 
-from models import Block13Row, CauseBlock, CauseCode, Identity, ReportingBasis
+from .models import Block13Row, CauseBlock, CauseCode, Identity, ReportingBasis
 
-REPO_ROOT = Path(__file__).resolve().parent.parent
+REPO_ROOT = Path(__file__).resolve().parents[2]
 
 # --------------------------------------------------------------------------- #
 # Static tables
@@ -536,7 +534,7 @@ def load_meta(accession: str, raw_dir: Path) -> dict:
     """Pull reliable identity fields from the cached APS JSON (fetch_ler.derive_meta)."""
     import json
 
-    from fetch_ler import derive_meta        # sibling module in src/ (already on sys.path)
+    from .fetch_ler import derive_meta        # sibling module in src/ (already on sys.path)
 
     resp = json.loads((raw_dir / f"{accession}.json").read_text())
     return derive_meta(resp)

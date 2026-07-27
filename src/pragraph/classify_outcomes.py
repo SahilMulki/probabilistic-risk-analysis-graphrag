@@ -9,11 +9,11 @@ poll -> collect -> parse/validate -> stamp `outcome_class` + `classifier_confide
 (out/outcome_classes.json). The taxonomy + severities are owned by risk.py; the versioned
 instructions are prompts/outcome_classification.md.
 
-  python src/classify_outcomes.py --calibrate 20     # small sample: validate output + project cost
-  python src/classify_outcomes.py --run              # full ~971-consequence classification (paid)
-  python src/classify_outcomes.py --resume msgbatch_1 # collect an already-submitted batch
-  python src/classify_outcomes.py --restamp          # re-stamp graph from the artifact (no API)
-  python src/classify_outcomes.py --validate         # score the artifact vs the hand-labeled ref
+  python -m pragraph.classify_outcomes --calibrate 20     # small sample: validate output + project cost
+  python -m pragraph.classify_outcomes --run              # full ~971-consequence classification (paid)
+  python -m pragraph.classify_outcomes --resume msgbatch_1 # collect an already-submitted batch
+  python -m pragraph.classify_outcomes --restamp          # re-stamp graph from the artifact (no API)
+  python -m pragraph.classify_outcomes --validate         # score the artifact vs the hand-labeled ref
 
 Why classify what PHYSICALLY happened, not how it was reported: the reporting criterion is withheld
 from the input on purpose so the correlation between outcome severity and the reporting rule stays
@@ -28,14 +28,13 @@ import re
 import sys
 from pathlib import Path
 
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from llm import LLM, extract_json
-from load_graph import _connect
-from pipeline_batch import PRICES, wait_for_batch
-from risk import CONFIDENCE_GATE, OUTCOME_CLASSES, OUTCOME_KEYS
+from .llm import LLM, extract_json
+from .load_graph import _connect
+from .pipeline_batch import PRICES, wait_for_batch
+from .risk import CONFIDENCE_GATE, OUTCOME_CLASSES, OUTCOME_KEYS
 
-REPO_ROOT = Path(__file__).resolve().parent.parent
+REPO_ROOT = Path(__file__).resolve().parents[2]
 PROMPT_PATH = REPO_ROOT / "prompts" / "outcome_classification.md"
 # NB: NOT under out/*.json — load_graph.load_records() globs that for LER records. Keep the risk
 # artifact in out/risk/ so it is out of that glob (still under the git-ignored out/ tree).

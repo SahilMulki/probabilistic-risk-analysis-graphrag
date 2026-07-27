@@ -8,10 +8,10 @@ loop, done a round at a time). Deterministic Form-366 parsing and the resolver a
 reused verbatim from pipeline.py, so extraction quality is identical to the trusted
 sequential path — only the transport changes.
 
-  python src/pipeline_batch.py --from-file data/source/accessions.txt      # full run
-  python src/pipeline_batch.py --docs ML26149A009 ML26146A061  # a few (calibration)
-  python src/pipeline_batch.py --limit 10 --from-file data/source/accessions.txt  # first 10
-  python src/pipeline_batch.py --resume msgbatch_123           # collect an existing batch
+  python -m pragraph.pipeline_batch --from-file data/source/accessions.txt      # full run
+  python -m pragraph.pipeline_batch --docs ML26149A009 ML26146A061  # a few (calibration)
+  python -m pragraph.pipeline_batch --limit 10 --from-file data/source/accessions.txt  # first 10
+  python -m pragraph.pipeline_batch --resume msgbatch_123           # collect an existing batch
 
 Only the 3 oracle LERs are graded (score_all skips the rest); every doc is spot-
 checkable in out/. Cost + cache split are logged to logs/batch_tokens.csv and a
@@ -27,19 +27,18 @@ import sys
 import time
 from pathlib import Path
 
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from pydantic import ValidationError
 
-from llm import LLM, extract_json
-from models import LERRecord
-from parse_form366 import load_and_parse
-from pipeline import (FEWSHOT_LER, build_prefix, build_tail, load_fewshot,
+from .llm import LLM, extract_json
+from .models import LERRecord
+from .parse_form366 import load_and_parse
+from .pipeline import (FEWSHOT_LER, build_prefix, build_tail, load_fewshot,
                       load_template)
-from resolve import GrowLogs, load_refs, resolve
-from score import load_oracle, print_aggregate, print_scorecard, score_all
+from .resolve import GrowLogs, load_refs, resolve
+from .score import load_oracle, print_aggregate, print_scorecard, score_all
 
-REPO_ROOT = Path(__file__).resolve().parent.parent
+REPO_ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_TARGET = 835                       # full corpus size, for the cost projection
 
 # Sonnet-5 per-1M-token rates. Intro (through 2026-08-31) = $2/$10; standard = $3/$15.

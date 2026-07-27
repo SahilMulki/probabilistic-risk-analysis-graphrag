@@ -33,16 +33,15 @@ import os
 import sys
 from pathlib import Path
 
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from answer import answer as answer_fn
-from golden_eval import build_expected, golden
-from llm import LLM
-from retrieve import Clarification, Evidence, GraphRetriever
-from vector_baseline import (CHUNK_CONFIGS, DEFAULT_CONFIG, DEFAULT_K, MODELS,
+from .answer import answer as answer_fn
+from .golden_eval import build_expected, golden
+from .llm import LLM
+from .retrieve import Clarification, Evidence, GraphRetriever
+from .vector_baseline import (CHUNK_CONFIGS, DEFAULT_CONFIG, DEFAULT_K, MODELS,
                              VectorIndex, VectorRetriever)
 
-REPO_ROOT = Path(__file__).resolve().parent.parent
+REPO_ROOT = Path(__file__).resolve().parents[2]
 RESULTS = REPO_ROOT / "out" / "vector" / "compare_results.json"
 
 HEAD_TO_HEAD = ("lookup-id", "lookup-content", "multi-hop", "cross-doc", "negative")

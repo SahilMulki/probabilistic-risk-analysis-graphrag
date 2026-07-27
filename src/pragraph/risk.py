@@ -885,7 +885,7 @@ def main(argv=None) -> int:
     if args.taxonomy:
         _print_taxonomy()
     if args.materialize or args.stats:
-        from load_graph import _connect
+        from .load_graph import _connect
         d = _connect(); d.verify_connectivity()
         try:
             with d.session() as s:

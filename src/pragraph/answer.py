@@ -12,10 +12,9 @@ from __future__ import annotations
 import os
 import sys
 
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from llm import LLM
-from retrieve import Evidence, RISK_INTENTS, SINGLE_SUBJECT_INTENTS
+from .llm import LLM
+from .retrieve import Evidence, RISK_INTENTS, SINGLE_SUBJECT_INTENTS
 
 ANSWER_SYSTEM = """You answer questions about U.S. NRC Licensee Event Reports (LERs) using
 ONLY the EVIDENCE provided. The EVIDENCE is retrieved context about the reports: it may be

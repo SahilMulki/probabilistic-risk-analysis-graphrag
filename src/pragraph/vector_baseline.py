@@ -29,11 +29,10 @@ from pathlib import Path
 
 import numpy as np
 
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from retrieve import Evidence  # the shared, retriever-agnostic hand-off to answer.py
+from .retrieve import Evidence  # the shared, retriever-agnostic hand-off to answer.py
 
-REPO_ROOT = Path(__file__).resolve().parent.parent
+REPO_ROOT = Path(__file__).resolve().parents[2]
 RAW_DIR = REPO_ROOT / "data" / "raw"
 OUT_DIR = REPO_ROOT / "out"
 CACHE_DIR = REPO_ROOT / "out" / "vector"

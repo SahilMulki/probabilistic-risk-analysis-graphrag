@@ -32,13 +32,12 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Optional
 
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from rapidfuzz import fuzz, process
 
-from models import LERRecord
+from .models import LERRecord
 
-REPO_ROOT = Path(__file__).resolve().parent.parent
+REPO_ROOT = Path(__file__).resolve().parents[2]
 
 # Acronyms confirmed from the corpus but not yet seeded in systems_components.csv
 # (grow-as-encountered; docs/journal/phase_4.md calls these out for Limerick).
@@ -365,7 +364,7 @@ def resolve(
 if __name__ == "__main__":
     import json
 
-    from parse_form366 import load_and_parse
+    from .parse_form366 import load_and_parse
 
     refs = load_refs()
     acc = sys.argv[1] if len(sys.argv) > 1 else "ML26022A036"

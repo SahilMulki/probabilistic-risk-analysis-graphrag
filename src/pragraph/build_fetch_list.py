@@ -19,8 +19,8 @@ event at its latest revision, so the rule is a safeguard here rather than a fix;
 we still collapse the two "combined filings" (one ADAMS doc under two LER numbers)
 down to unique accessions.
 
-    python src/build_fetch_list.py             # -> data/source/accessions.txt, data/raw/fetch_list.csv
-    python src/build_fetch_list.py --xlsx X --out data/source/accessions.txt
+    python -m pragraph.build_fetch_list             # -> data/source/accessions.txt, data/raw/fetch_list.csv
+    python -m pragraph.build_fetch_list --xlsx X --out data/source/accessions.txt
 """
 from __future__ import annotations
 
@@ -30,7 +30,7 @@ import re
 import sys
 from pathlib import Path
 
-REPO_ROOT = Path(__file__).resolve().parent.parent
+REPO_ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_XLSX = REPO_ROOT / "data" / "source" / "2020s_LERs.xlsx"
 HEADER_ROW = 4                                   # 0-indexed; the real header is the 5th row
 

@@ -16,9 +16,9 @@ Stdlib only (urllib), so it runs before the rest of the env is set up.
 Usage
 -----
     export ADAMS_APS_KEY=xxxxxxxxxxxxxxxx
-    python src/fetch_ler.py ML26022A036 ML25122A139 ML25308A004
-    python src/fetch_ler.py --from-file data/source/accessions.txt --out data/raw
-    python src/fetch_ler.py ML26022A036 --force        # re-fetch even if cached
+    python -m pragraph.fetch_ler ML26022A036 ML25122A139 ML25308A004
+    python -m pragraph.fetch_ler --from-file data/source/accessions.txt --out data/raw
+    python -m pragraph.fetch_ler ML26022A036 --force        # re-fetch even if cached
 
 Never commit your subscription key. Keep it in the ADAMS_APS_KEY env var (or a
 git-ignored .env) — do not pass it on the command line on shared machines.

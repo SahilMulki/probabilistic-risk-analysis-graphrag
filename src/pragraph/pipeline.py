@@ -13,9 +13,9 @@ For each LER:
 Quad Cities is the few-shot exemplar and is deliberately NOT in the eval set
 (keeping it held out); the default corpus is Dresden + Limerick.
 
-    python src/pipeline.py                     # Dresden + Limerick, narrative-only (locked)
-    python src/pipeline.py --abstract          # opt back into the block-16 abstract
-    python src/pipeline.py --docs ML26022A036  # one document
+    python -m pragraph.pipeline                     # Dresden + Limerick, narrative-only (locked)
+    python -m pragraph.pipeline --abstract          # opt back into the block-16 abstract
+    python -m pragraph.pipeline --docs ML26022A036  # one document
 
 Abstract A/B (locked): narrative-only beats narrative+abstract — equal node F1 and
 higher, more stable edge F1 across 3 runs each on Dresden + Limerick (the abstract
@@ -31,17 +31,16 @@ import re
 import sys
 from pathlib import Path
 
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from pydantic import ValidationError
 
-from llm import LLM
-from models import LERRecord
-from parse_form366 import Form366Parse, load_and_parse
-from resolve import GrowLogs, load_refs, resolve
-from score import load_oracle, print_aggregate, print_scorecard, score_all
+from .llm import LLM
+from .models import LERRecord
+from .parse_form366 import Form366Parse, load_and_parse
+from .resolve import GrowLogs, load_refs, resolve
+from .score import load_oracle, print_aggregate, print_scorecard, score_all
 
-REPO_ROOT = Path(__file__).resolve().parent.parent
+REPO_ROOT = Path(__file__).resolve().parents[2]
 PROMPT_PATH = REPO_ROOT / "prompts" / "narrative_extraction.md"
 ORACLE_PATH = REPO_ROOT / "data" / "raw" / "ground_truth" / "ground_truth.json"
 FEWSHOT_LER = "254-2025-006-00"          # Quad Cities — exemplar, held out of eval

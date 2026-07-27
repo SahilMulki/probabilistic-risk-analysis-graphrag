@@ -27,11 +27,10 @@ import os
 import sys
 from dataclasses import dataclass, field
 
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-import risk
-from llm import LLM
-from load_graph import _connect
+from . import risk
+from .llm import LLM
+from .load_graph import _connect
 
 # --------------------------------------------------------------------------- #
 # intents
@@ -541,8 +540,8 @@ class GraphRetriever:
     def _risk_unmaterialized(self, intent, anchors) -> Evidence:
         return Evidence(intent, anchors,
                         "(the risk layer has not been materialized yet — run "
-                        "`python src/classify_outcomes.py --run` then "
-                        "`python src/risk.py --materialize`)", empty=True)
+                        "`python -m pragraph.classify_outcomes --run` then "
+                        "`python -m pragraph.risk --materialize`)", empty=True)
 
     @staticmethod
     def _dist_lines(counts: dict, n: int, order_by_prob: bool = True) -> list[str]:

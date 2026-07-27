@@ -97,9 +97,9 @@ multi-event cases in Phase 8.
 
 ## How to run
 ```
-python src/ask.py "What caused HPCI inoperability?"                    # -> clarifies
-python src/ask.py "What caused HPCI inoperability in LER 254-2025-006-00?"  # -> answers
-python src/ask.py --golden --brief                                     # 12/12
+python -m pragraph.ask "What caused HPCI inoperability?"                    # -> clarifies
+python -m pragraph.ask "What caused HPCI inoperability in LER 254-2025-006-00?"  # -> answers
+python -m pragraph.ask --golden --brief                                    # 12/12
 ```
 
 ## Scope / non-goals

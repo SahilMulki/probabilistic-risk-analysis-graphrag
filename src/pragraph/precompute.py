@@ -8,9 +8,9 @@ never a hand-edited "nicer" version. Because the answer text is LLM-generated (a
 not reproducible byte-for-byte), the demo≡live guarantee is asserted on the DETERMINISTIC
 retrieval layer:
 
-    python src/precompute.py            # capture the showcase bundle + metrics (costs API $)
-    python src/precompute.py --assert   # re-run RETRIEVAL only (LLM-free) and prove identity
-    python src/precompute.py --metrics  # rebuild only web/metrics.json (LLM-free)
+    python -m pragraph.precompute            # capture the showcase bundle + metrics (costs API $)
+    python -m pragraph.precompute --assert   # re-run RETRIEVAL only (LLM-free) and prove identity
+    python -m pragraph.precompute --metrics  # rebuild only web/metrics.json (LLM-free)
 
 `--assert` re-runs the vector retriever (fully deterministic) and re-dispatches the graph
 Cypher template for the stored (intent, anchors) — bypassing the LLM router — then checks the
@@ -31,17 +31,16 @@ import os
 import sys
 from pathlib import Path
 
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-import app as webapp
-from answer import answer as answer_fn
-from compare import HEAD_TO_HEAD, EPS, recall_at_k
-from golden_eval import build_expected, golden
-from llm import LLM
-from retrieve import Clarification, GraphRetriever
-from vector_baseline import VectorRetriever
+from . import app as webapp
+from .answer import answer as answer_fn
+from .compare import HEAD_TO_HEAD, EPS, recall_at_k
+from .golden_eval import build_expected, golden
+from .llm import LLM
+from .retrieve import Clarification, GraphRetriever
+from .vector_baseline import VectorRetriever
 
-REPO_ROOT = Path(__file__).resolve().parent.parent
+REPO_ROOT = Path(__file__).resolve().parents[2]
 WEB_DIR = REPO_ROOT / "web"
 BUNDLE = WEB_DIR / "demo_bundle.json"
 METRICS = WEB_DIR / "metrics.json"
@@ -134,7 +133,7 @@ def build_bundle() -> dict:
     gr.close()
     return {**_stamp(),
             "note": "captured real pipeline output; demo mode replays it verbatim. "
-                    "Verify retrieval identity with: python src/precompute.py --assert",
+                    "Verify retrieval identity with: python -m pragraph.precompute --assert",
             "examples": examples}
 
 
@@ -144,7 +143,7 @@ def build_bundle() -> dict:
 def _head_to_head_scores() -> dict:
     """Per-id (graph_score, vector_score) from the cached Phase-9 head-to-head."""
     if not COMPARE_RESULTS.exists():
-        raise SystemExit(f"missing {COMPARE_RESULTS} — run: python src/compare.py --headtohead")
+        raise SystemExit(f"missing {COMPARE_RESULTS} — run: python -m pragraph.compare --headtohead")
     rows = json.loads(COMPARE_RESULTS.read_text())["rows"]
     return {r["id"]: (r["graph"].get("score"), r["vector"].get("score")) for r in rows}
 
@@ -197,7 +196,7 @@ def build_metrics() -> dict:
 # --------------------------------------------------------------------------- #
 def assert_identity() -> int:
     if not BUNDLE.exists():
-        raise SystemExit(f"no bundle at {BUNDLE} — build it first: python src/precompute.py")
+        raise SystemExit(f"no bundle at {BUNDLE} — build it first: python -m pragraph.precompute")
     bundle = json.loads(BUNDLE.read_text())
     gr = GraphRetriever()  # no LLM needed: we re-dispatch templates directly
     vr = VectorRetriever(model=bundle["vector"]["model"], config=bundle["vector"]["config"],

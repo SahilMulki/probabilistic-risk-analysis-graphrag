@@ -21,7 +21,7 @@ Tolerances (oracle stays frozen — encoded here):
 Gate (docs/journal/phase_4.md): identity 100%, cause-code 100% on non-provisional,
 edge-F1 ≥ 0.85, every coded System/Component resolved.
 
-    python src/score.py out/            # score every extracted JSON in out/
+    python -m pragraph.score out/            # score every extracted JSON in out/
 """
 from __future__ import annotations
 
@@ -31,13 +31,12 @@ import sys
 from pathlib import Path
 from typing import Optional
 
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from rapidfuzz import fuzz
 
-from models import GroundTruth, LERRecord
+from .models import GroundTruth, LERRecord
 
-REPO_ROOT = Path(__file__).resolve().parent.parent
+REPO_ROOT = Path(__file__).resolve().parents[2]
 ORACLE_PATH = REPO_ROOT / "data" / "raw" / "ground_truth" / "ground_truth.json"
 
 FUZZY_TYPES = {"FailureMode", "Consequence", "CorrectiveAction", "RegulatoryReference"}

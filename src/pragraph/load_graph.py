@@ -39,10 +39,10 @@ the de-duplicated hub node: role (System endpoints), theme + proximate_text
 (HAS_CAUSE), evidence, and ler_number provenance on every edge.
 
 Usage:
-    python src/load_graph.py --dry-run     # validate + report, no database needed
-    python src/load_graph.py               # MERGE-load into Neo4j (idempotent)
-    python src/load_graph.py --wipe --yes  # reset the database first, then load
-    python src/load_graph.py --verify      # run the gate queries against the DB
+    python -m pragraph.load_graph --dry-run     # validate + report, no database needed
+    python -m pragraph.load_graph               # MERGE-load into Neo4j (idempotent)
+    python -m pragraph.load_graph --wipe --yes  # reset the database first, then load
+    python -m pragraph.load_graph --verify      # run the gate queries against the DB
 
 Neo4j connection is read from the git-ignored .env:
     NEO4J_URI=bolt://localhost:7687
@@ -58,12 +58,11 @@ import sys
 from collections import defaultdict
 from pathlib import Path
 
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from llm import load_env
-from models import GroundTruth, LERRecord
+from .llm import load_env
+from .models import GroundTruth, LERRecord
 
-REPO_ROOT = Path(__file__).resolve().parent.parent
+REPO_ROOT = Path(__file__).resolve().parents[2]
 ORACLE_PATH = REPO_ROOT / "data" / "raw" / "ground_truth" / "ground_truth.json"
 OUT_DIR = REPO_ROOT / "out"
 
