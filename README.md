@@ -151,7 +151,7 @@ pip install -r requirements.txt
 uvicorn app:app --app-dir src         # serves the page + the /ask API at http://localhost:8000
 ```
 
-**New to the domain?** The **[demo guide](docs/DEMO_GUIDE.md)** lists every kind of question you can
+The **[demo guide](docs/DEMO_GUIDE.md)** lists every kind of question you can
 ask in Live mode, with copy-paste examples and a plain-language vocabulary of real plants, systems, and
 causes to drop into your own questions.
 

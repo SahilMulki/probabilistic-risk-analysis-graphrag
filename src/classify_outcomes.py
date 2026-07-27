@@ -17,7 +17,7 @@ instructions are prompts/outcome_classification.md.
 
 Why classify what PHYSICALLY happened, not how it was reported: the reporting criterion is withheld
 from the input on purpose so the correlation between outcome severity and the reporting rule stays
-observable downstream as selection bias (see phase_7.md), rather than being baked in circularly.
+observable downstream as selection bias (see docs/journal/phase_7.md), rather than being baked in circularly.
 """
 from __future__ import annotations
 

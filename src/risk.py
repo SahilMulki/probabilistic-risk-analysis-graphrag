@@ -3,7 +3,7 @@ risk.py — Phase 7 probabilistic / risk layer over the LER graph.
 
 *Dynamic Risk RAG* earns its name here: rank failure outcomes and paths by observed
 frequency across the corpus. This is a DEMONSTRATION of the Dynamic-PRA idea, explicitly
-NOT a certified reactor risk model. Read `phase_7.md` for the honesty framing; the short
+NOT a certified reactor risk model. Read `docs/journal/phase_7.md` for the honesty framing; the short
 version lives in `OBSERVED_RISK_CAVEAT` below and is threaded into every risk answer.
 
 Three statistical-soundness rules are load-bearing (from the plan's review) and are built
@@ -23,7 +23,7 @@ into this module, not merely caveated:
      ranked quantity is `observed_risk_contribution` (not "risk"), and the n_events axis is a
      corpus/reporting artifact, not a true failure rate. `expected_severity` is additionally
      inflated by outcome-selection bias (loss-of-safety-function is often the reporting
-     *trigger*, 10 CFR 50.73(a)(2)(v)(D)). Both are named in answers and phase_7.md.
+     *trigger*, 10 CFR 50.73(a)(2)(v)(D)). Both are named in answers and docs/journal/phase_7.md.
 
 Layout:
   * Taxonomy + severity (editable data)      — this file, top.
@@ -847,7 +847,7 @@ def _print_taxonomy() -> None:
 
 
 def _print_stats(session) -> None:
-    """Compute (without writing) and print the risk summary — the numbers phase_7.md quotes."""
+    """Compute (without writing) and print the risk summary — the numbers docs/journal/phase_7.md quotes."""
     counts, n_tot, n_cls = corpus_outcome_distribution(session)
     print(f"\ncorpus: {n_tot} reportable events, {n_cls} with a usable worst-outcome "
           f"({n_cls/n_tot:.0%} coverage)")
@@ -856,7 +856,7 @@ def _print_stats(session) -> None:
         print(f"    {o:26} {p:5.0%}  ({counts[o]} events)  [sev {SEVERITY[o]}]")
 
     stats = compute_stats(session)
-    print("\ntop 10 systems by observed_risk_contribution (n_events-dominated — see phase_7.md):")
+    print("\ntop 10 systems by observed_risk_contribution (n_events-dominated — see docs/journal/phase_7.md):")
     for i, s in enumerate(rank_by_risk(stats["System"], top_n=10), 1):
         print(f"  {i:2}. {s.line()}")
     print("\ncause categories by observed_risk_contribution:")

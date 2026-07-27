@@ -41,7 +41,7 @@ from models import LERRecord
 REPO_ROOT = Path(__file__).resolve().parent.parent
 
 # Acronyms confirmed from the corpus but not yet seeded in systems_components.csv
-# (grow-as-encountered; phase_4.md calls these out for Limerick).
+# (grow-as-encountered; docs/journal/phase_4.md calls these out for Limerick).
 SEED_SYS_ACRONYMS: dict[str, str] = {"CS": "BM"}     # Core Spray -> Low Pressure Core Spray
 
 # Normalized full-name aliases for systems that are genuinely ambiguous by fuzzy

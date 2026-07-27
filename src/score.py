@@ -1,7 +1,7 @@
 """
 score.py — score an extracted `LERRecord` against the hand-marked oracle.
 
-The fast-feedback loop for prompt iteration (phase_4.md). Canonicalize both
+The fast-feedback loop for prompt iteration (docs/journal/phase_4.md). Canonicalize both
 graphs to `match_key`, align nodes, then report:
 
   * Node P/R/F1, overall and per type. Coded nodes (LER/Unit/coded
@@ -18,7 +18,7 @@ Tolerances (oracle stays frozen — encoded here):
   * Dresden provisional (block-13 TBD): the cause-code check is excused, and a
     missing provisional CorrectiveAction placeholder isn't a recall penalty.
 
-Gate (phase_4.md): identity 100%, cause-code 100% on non-provisional,
+Gate (docs/journal/phase_4.md): identity 100%, cause-code 100% on non-provisional,
 edge-F1 ≥ 0.85, every coded System/Component resolved.
 
     python src/score.py out/            # score every extracted JSON in out/

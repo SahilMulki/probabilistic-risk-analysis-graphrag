@@ -8,9 +8,9 @@ loop, done a round at a time). Deterministic Form-366 parsing and the resolver a
 reused verbatim from pipeline.py, so extraction quality is identical to the trusted
 sequential path — only the transport changes.
 
-  python src/pipeline_batch.py --from-file accessions.txt      # full run
+  python src/pipeline_batch.py --from-file data/source/accessions.txt      # full run
   python src/pipeline_batch.py --docs ML26149A009 ML26146A061  # a few (calibration)
-  python src/pipeline_batch.py --limit 10 --from-file accessions.txt  # first 10
+  python src/pipeline_batch.py --limit 10 --from-file data/source/accessions.txt  # first 10
   python src/pipeline_batch.py --resume msgbatch_123           # collect an existing batch
 
 Only the 3 oracle LERs are graded (score_all skips the rest); every doc is spot-

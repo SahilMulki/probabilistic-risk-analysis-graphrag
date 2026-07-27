@@ -13,7 +13,7 @@ sees these fields except as grounding, and resolve.py treats them as
 authoritative, so getting them right here is what makes the whole pipeline
 trustworthy.
 
-Design split (see phase_4.md):
+Design split (see docs/journal/phase_4.md):
   * IDENTITY that the API knows reliably  -> taken from metadata
     (accession, docket, ler_number, report_date).
   * IDENTITY that only the content states  -> parsed here
@@ -125,7 +125,7 @@ def _iso_from_slashes(mm: str, dd: str, yy: str) -> Optional[str]:
 # segmentation: cover letter | form header/blocks | abstract | 366A narrative
 # --------------------------------------------------------------------------- #
 def segment(text: str) -> dict:
-    """Split raw content into the four regions. Markers per phase_4.md."""
+    """Split raw content into the four regions. Markers per docs/journal/phase_4.md."""
     # first 366A marks the start of the narrative continuation sheets
     m_366a = re.search(r"NRC\s*FORM\s*366A", text, re.I)
     narrative_start = m_366a.start() if m_366a else len(text)
@@ -536,8 +536,7 @@ def load_meta(accession: str, raw_dir: Path) -> dict:
     """Pull reliable identity fields from the cached APS JSON (fetch_ler.derive_meta)."""
     import json
 
-    sys.path.insert(0, str(REPO_ROOT))
-    from fetch_ler import derive_meta
+    from fetch_ler import derive_meta        # sibling module in src/ (already on sys.path)
 
     resp = json.loads((raw_dir / f"{accession}.json").read_text())
     return derive_meta(resp)

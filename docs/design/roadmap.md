@@ -38,8 +38,8 @@ hubs dense (the HPCI system joins **45 events across ~15 plants**). Extraction c
   Phase 7's aggregations must be **deliberate about which axis is shared vs per-LER.**
 
 ## Remaining sequence
-1. ~~**Phase 7 — probabilistic / risk layer**~~ — **COMPLETE** (see [phase_7.md](phase_7.md)).
-2. ~~**Vector-RAG baseline + comparison** — capstone.~~ — **COMPLETE** (see [phase_9.md](phase_9.md)).
+1. ~~**Phase 7 — probabilistic / risk layer**~~ — **COMPLETE** (see [phase_7.md](../journal/phase_7.md)).
+2. ~~**Vector-RAG baseline + comparison** — capstone.~~ — **COMPLETE** (see [phase_9.md](../journal/phase_9.md)).
    Graph suite **42/42**; per-bucket head-to-head with a shared answer model and a verified
    format-neutral answer prompt. Graph wins `cross-doc` (vector recall@100 only 0.10–0.55 of a
    coded hub vs 1.00), `multi-hop`, and `lookup-id`; **vector wins `lookup-content`** (free-form
@@ -50,7 +50,7 @@ hubs dense (the HPCI system joins **45 events across ~15 plants**). Extraction c
    would invite writing the narrative while the numbers are still being generated. The UI's
    centrepiece is the split-pane *same question → graph answer vs vector answer* view, which
    only became buildable once the baseline existed.
-   - **Phase 10a — web UI — COMPLETE** (see [phase_10a.md](phase_10a.md)). Single-page app
+   - **Phase 10a — web UI — COMPLETE** (see [phase_10a.md](../journal/phase_10a.md)). Single-page app
      ([web/](web/)) + FastAPI backend ([src/app.py](src/app.py)); split-pane compare, interactive
      provenance-tagged subgraph with visible criterion-based truncation, and a static Phase-9
      "rigor" tab. Demo mode runs the whole core demo from a precomputed bundle of **real** pipeline
@@ -74,7 +74,7 @@ a re-keying pass for 37 (~5%) cosmetically malformed LER keys.
 > paths and a general faceted-frequency engine: reverse, combination/pairs, compound-AND, temporal,
 > numeric, corrective-action, and comparative queries). A pre-existing loader
 > stub-merge bug found during the build was fixed (recovered ~8% of the corpus). Full write-up in
-> **[phase_7.md](phase_7.md)**. The plan below is retained as the design record.
+> **[phase_7.md](../journal/phase_7.md)**. The plan below is retained as the design record.
 
 ## Framing
 *Dynamic Risk RAG* — Phase 7 is where "risk" earns its name. Goal (from plan.md): **rank

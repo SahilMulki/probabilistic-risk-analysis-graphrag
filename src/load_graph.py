@@ -32,7 +32,7 @@ Connectivity normalization (added at load, not in the frozen extraction):
     * LER -[:INVOLVES]-> Component  (synthesized) for any component the extraction
       left dangling (component-failure-data rows with no other edge)
   Both are tagged (structural / synthesized) and stamped with ler_number so they
-  are distinguishable from extracted edges. See phase_5.md.
+  are distinguishable from extracted edges. See docs/journal/phase_5.md.
 
 Per-LER attributes that vary by report are carried on the *relationship*, not on
 the de-duplicated hub node: role (System endpoints), theme + proximate_text

@@ -3,10 +3,10 @@
 build_fetch_list.py — Phase 8 step 1: turn the INL LER Search export into a
 de-duplicated fetch list for fetch_ler.py.
 
-Input : 2020s_LERs.xlsx  (INL "LER Search" export; header on row 5; the
-        "Accession #" column is an HTML <a> whose <strong> holds the ML… number
+Input : data/source/2020s_LERs.xlsx  (INL "LER Search" export; header on row 5;
+        the "Accession #" column is an HTML <a> whose <strong> holds the ML… number
         and whose href filename ends in R<NN>.pdf — the revision).
-Output: accessions.txt        one ML accession per line (fetch_ler.py --from-file)
+Output: data/source/accessions.txt  one ML accession per line (fetch_ler.py --from-file)
         data/raw/fetch_list.csv  sheet metadata kept for golden-set expansion /
                                  spot-checks (event_date is here; the ADAMS API
                                  only returns report_date, so this is the source
@@ -19,8 +19,8 @@ event at its latest revision, so the rule is a safeguard here rather than a fix;
 we still collapse the two "combined filings" (one ADAMS doc under two LER numbers)
 down to unique accessions.
 
-    python build_fetch_list.py                 # -> accessions.txt, data/raw/fetch_list.csv
-    python build_fetch_list.py --xlsx X --out accessions.txt
+    python src/build_fetch_list.py             # -> data/source/accessions.txt, data/raw/fetch_list.csv
+    python src/build_fetch_list.py --xlsx X --out data/source/accessions.txt
 """
 from __future__ import annotations
 
@@ -30,8 +30,8 @@ import re
 import sys
 from pathlib import Path
 
-REPO_ROOT = Path(__file__).resolve().parent
-DEFAULT_XLSX = REPO_ROOT / "2020s_LERs.xlsx"
+REPO_ROOT = Path(__file__).resolve().parent.parent
+DEFAULT_XLSX = REPO_ROOT / "data" / "source" / "2020s_LERs.xlsx"
 HEADER_ROW = 4                                   # 0-indexed; the real header is the 5th row
 
 ACC_RE = re.compile(r"(ML\w+)")
@@ -89,7 +89,7 @@ def build(xlsx: Path) -> list[dict]:
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description="Build a de-duplicated ADAMS fetch list from the LER export.")
     ap.add_argument("--xlsx", default=str(DEFAULT_XLSX))
-    ap.add_argument("--out", default=str(REPO_ROOT / "accessions.txt"))
+    ap.add_argument("--out", default=str(REPO_ROOT / "data" / "source" / "accessions.txt"))
     ap.add_argument("--csv", default=str(REPO_ROOT / "data" / "raw" / "fetch_list.csv"))
     args = ap.parse_args(argv)
 

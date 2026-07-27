@@ -56,7 +56,7 @@ VEC_MODEL, VEC_CONFIG, VEC_K = "bge-large", "medium", 8
 SUBGRAPH_TOP_N = 20
 
 # Head-to-head buckets carry a PRE-REGISTERED Phase-9 verdict (frozen before any retriever ran,
-# see phase_9.md). The chip shows THIS, never a live recomputation. Per-example scores are shown
+# see docs/journal/phase_9.md). The chip shows THIS, never a live recomputation. Per-example scores are shown
 # only as secondary detail, and the showcase examples are chosen so the two never disagree.
 BUCKET_VERDICT = {
     "lookup-id": "GRAPH", "lookup-content": "VECTOR", "multi-hop": "GRAPH",
