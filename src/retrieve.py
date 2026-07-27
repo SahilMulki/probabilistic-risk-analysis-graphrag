@@ -254,6 +254,9 @@ class GraphRetriever:
         self.llm = llm or LLM()
         with self.driver.session() as s:
             self.vocab = GraphVocab.load(s)
+            self.plants = [r["p"] for r in s.run(
+                "MATCH (l:LER) WHERE NOT l.stub AND l.plant_name IS NOT NULL "
+                "RETURN DISTINCT l.plant_name AS p")]
 
     def close(self):
         self.driver.close()
@@ -262,11 +265,29 @@ class GraphRetriever:
     def retrieve(self, question: str) -> "Evidence | Clarification":
         r = route(question, self.vocab, self.llm)
         intent, anchors = r["intent"], r["anchors"]
+        if anchors.get("plant"):
+            anchors["plant"] = self._resolve_plant(anchors["plant"])
         with self.driver.session() as s:
             handler = getattr(self, f"_t_{intent}", None)
             if handler is None:
                 return self._empty(intent, anchors)
             return handler(s, anchors)
+
+    def _resolve_plant(self, raw: str) -> str:
+        """Canonicalize a free-text plant name to a corpus plant so a near-miss ('Brown
+        Ferry' → 'Browns Ferry', 'Diablo' → 'Diablo Canyon') resolves instead of refusing.
+        The exact-substring fast path is unchanged (existing matches keep working); only a
+        non-substring name gets fuzzy-matched, and only above a high cutoff — so a genuinely
+        out-of-corpus plant ('Three Mile Island', 'Chernobyl') still falls through to refusal."""
+        raw = (raw or "").strip()
+        if not raw:
+            return raw
+        low = raw.lower()
+        if any(low in p.lower() for p in self.plants):
+            return raw
+        from rapidfuzz import fuzz, process
+        m = process.extractOne(raw, self.plants, scorer=fuzz.token_set_ratio)
+        return m[0] if m and m[1] >= 88 else raw
 
     # -- helpers ------------------------------------------------------------ #
     def _empty(self, intent, anchors) -> Evidence:

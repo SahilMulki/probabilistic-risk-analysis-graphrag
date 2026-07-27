@@ -1,0 +1,163 @@
+<!doctype html>
+<!-- default to light mode regardless of OS preference; JS restores a saved choice -->
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Probabilistic Risk Analysis GraphRAG</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="vendor/vis-network.min.js"></script>
+</head>
+<body>
+  <header class="masthead">
+    <div class="masthead-inner">
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle light or dark mode">Light</button>
+      <div class="wordmark">
+        <span class="mark" aria-hidden="true"></span>
+        <h1>Probabilistic Risk Analysis GraphRAG</h1>
+      </div>
+      <p class="tagline">Answering questions about U.S. nuclear-plant failure reports —
+        two ways, compared.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <p>When something goes wrong at a U.S. nuclear power plant, the operator files a public
+        <strong>Licensee Event Report (LER)</strong> with the Nuclear Regulatory Commission — a
+        standardized account of what failed, why, and what the safety consequences were. This
+        project reads <strong>833 of these reports (2020–2026)</strong> and answers questions about
+        them two different ways:</p>
+      <ul class="intro-two">
+        <li class="card-graph">
+          <div class="card-text"><span class="tag-graph">Knowledge graph</span> — every report is
+            linked to every other by the systems, components, and root causes they share, so questions
+            can be answered by <em>following those connections</em>.</div>
+          <figure class="concept-fig concept-shot">
+            <img src="assets/kg_graph.png" width="2300" height="1200" loading="lazy"
+                 alt="A real failure chain from one report (LER 353-2025-001-00): a degraded cannon-plug
+                      connector leads to an electrical short, then a closed valve, then loss of the HPCI
+                      safety function, with four backup safety systems available.">
+            <figcaption class="concept-cap">One report's failure chain (LER 353-2025-001-00): a degraded
+              connector → short circuit → closed valve → loss of safety function, with four backups
+              available. The graph captures every such chain — and links them across reports.</figcaption>
+          </figure>
+        </li>
+        <li class="card-vector">
+          <div class="card-text"><span class="tag-vector">Vector search</span> — the standard modern
+            approach: find reports by <em>text similarity</em> to the question.</div>
+          <figure class="concept-fig concept-shot">
+            <svg viewBox="0 0 420 210" role="img"
+                 aria-label="Diagram: reports as points in a similarity space; the question retrieves only the nearest few">
+              <g stroke="#dfe1e2" stroke-width="1">
+                <line x1="30" y1="30" x2="30" y2="185"/><line x1="30" y1="185" x2="392" y2="185"/>
+              </g>
+              <g fill="#71767a">
+                <circle cx="70" cy="55" r="7"/><circle cx="112" cy="40" r="7"/>
+                <circle cx="150" cy="66" r="7"/><circle cx="342" cy="52" r="7"/>
+                <circle cx="378" cy="98" r="7"/><circle cx="356" cy="160" r="7"/>
+                <circle cx="298" cy="182" r="7"/><circle cx="86" cy="150" r="7"/>
+                <circle cx="60" cy="112" r="7"/><circle cx="150" cy="178" r="7"/>
+              </g>
+              <circle cx="212" cy="108" r="62" fill="#fbeee2" stroke="#c05600"
+                      stroke-width="2" stroke-dasharray="5 4"/>
+              <g fill="#c05600">
+                <circle cx="180" cy="88" r="7"/><circle cx="248" cy="96" r="7"/>
+                <circle cx="232" cy="150" r="7"/><circle cx="186" cy="146" r="7"/>
+                <circle cx="256" cy="132" r="7"/>
+              </g>
+              <circle cx="212" cy="108" r="9" fill="#c05600" stroke="#ffffff" stroke-width="2.5"/>
+              <text x="212" y="112" text-anchor="middle" font-size="11" font-weight="800"
+                    fill="#fff" font-family="'Public Sans', system-ui, sans-serif">?</text>
+            </svg>
+            <figcaption class="concept-cap">The question (dot) pulls back only its nearest look-alikes.</figcaption>
+          </figure>
+        </li>
+      </ul>
+      <p>The demo puts the same question to both, side by side, to show where linking reports into a
+        graph beats plain search — <strong>and where it doesn't</strong>. It also estimates, from how
+        often each outcome actually occurred across these reports, which systems and failures carry
+        the most observed risk.</p>
+    </section>
+
+    <div class="intro-divider"><span>Try it</span></div>
+
+    <section class="ask-area">
+      <h2 class="ask-heading">Ask a question</h2>
+      <p class="ask-sub">Pick a ready-made example below, or switch to Live to type your own.</p>
+      <div class="mode-row">
+        <span class="mode-label">Mode</span>
+        <div class="modetoggle" role="tablist" aria-label="data mode">
+          <button id="mode-demo" class="on" role="tab">Demo</button>
+          <button id="mode-live" role="tab">Live</button>
+        </div>
+        <span id="modenote" class="modenote">precomputed answers — no database or API needed</span>
+      </div>
+      <form id="askform" autocomplete="off">
+        <input id="q" type="text" placeholder="Ask a question about nuclear-plant failures…"
+               aria-label="question">
+        <button id="askbtn" type="submit">Ask</button>
+      </form>
+      <div class="examples">
+        <label class="examples-title" for="example-select">Example questions</label>
+        <p class="examples-note">Questions chosen in advance to test both systems on different kinds
+          of task. Pick one to see how each answers it — instantly, because these were computed
+          ahead of time.</p>
+        <select id="example-select" class="example-select" aria-label="example questions">
+          <option value="">Select an example question…</option>
+        </select>
+      </div>
+      <div id="livehint" class="notice" hidden></div>
+    </section>
+
+    <nav class="tabs" role="tablist">
+      <button data-tab="compare" class="on" role="tab">Compare</button>
+      <button data-tab="subgraph" role="tab">Connections</button>
+    </nav>
+
+    <section id="tab-compare" class="tab on">
+      <div id="qtype" class="qtype" hidden></div>
+      <h3 id="qcaption" class="qcaption"></h3>
+      <div class="split">
+        <article class="pane graph">
+          <div class="pane-head"><span class="pane-title">Knowledge graph</span>
+            <span class="intent" id="g-intent"></span></div>
+          <div class="pane-body" id="g-body"><p class="placeholder">Pick an example question above.</p></div>
+        </article>
+        <article class="pane vector">
+          <div class="pane-head"><span class="pane-title">Vector search</span>
+            <span class="intent" id="v-intent"></span></div>
+          <div class="pane-body" id="v-body"><p class="placeholder">The similarity-search baseline.</p></div>
+        </article>
+      </div>
+      <div id="verdict" class="verdict"></div>
+    </section>
+
+    <section id="tab-subgraph" class="tab">
+      <p id="sg-meta" class="sg-meta"></p>
+      <div id="sg-trunc" class="notice" hidden></div>
+      <div id="network" class="network"></div>
+      <div class="sg-legend" id="sg-legend"></div>
+    </section>
+
+    <!-- The measured results — a standalone section at the bottom (demo mode only), not a tab. -->
+    <section id="scorecard-section" hidden>
+      <p class="scorecard-eyebrow">The measured results</p>
+      <div id="results-body"><p class="placeholder">Loading the measured results…</p></div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p class="attrib">Built by <strong>Sahil Mulki</strong> ·
+      <a href="mailto:sahilmulki7@gmail.com">sahilmulki7@gmail.com</a> ·
+      <a href="https://github.com/SahilMulki/probabilistic-risk-analysis-graphrag"
+         target="_blank" rel="noopener">source on GitHub</a></p>
+    <p id="stamp" class="muted"></p>
+    <p class="muted">Source data: public NRC Licensee Event Reports (2020–2026). Risk figures are
+      observed reportable-event frequencies within this report set — not certified failure rates.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

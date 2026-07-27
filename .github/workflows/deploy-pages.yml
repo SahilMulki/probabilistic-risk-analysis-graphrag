@@ -1,0 +1,41 @@
+name: Deploy demo to GitHub Pages
+
+# Publishes the static demo (web/) to GitHub Pages. Demo mode is fully client-side — it reads the
+# precomputed web/demo_bundle.json and web/metrics.json — so it needs no backend, no database, and
+# no API key. (Live mode's /ask + /subgraph calls simply aren't reachable on Pages; the UI shows a
+# friendly "run it locally" notice, which is expected.)
+#
+# One-time setup by the repo owner: Settings -> Pages -> Build and deployment -> Source: GitHub Actions.
+# After that, every push to main that touches web/ redeploys automatically.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "web/**"
+      - ".github/workflows/deploy-pages.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: web            # serve the web/ folder as the site root
+      - id: deployment
+        uses: actions/deploy-pages@v4

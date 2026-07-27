@@ -1,0 +1,146 @@
+{
+  "generated_at": "2026-07-23T17:29:03-04:00",
+  "git_sha": "87efefc433c7",
+  "vector": {
+    "model": "bge-large",
+    "config": "medium",
+    "k": 8
+  },
+  "head_to_head": [
+    {
+      "bucket": "lookup-id",
+      "n": 6,
+      "graph": 0.83,
+      "vector": 0.0,
+      "win": 5,
+      "tie": 1,
+      "loss": 0,
+      "verdict": "GRAPH"
+    },
+    {
+      "bucket": "lookup-content",
+      "n": 5,
+      "graph": 0.0,
+      "vector": 0.4,
+      "win": 0,
+      "tie": 3,
+      "loss": 2,
+      "verdict": "VECTOR"
+    },
+    {
+      "bucket": "multi-hop",
+      "n": 5,
+      "graph": 1.0,
+      "vector": 0.0,
+      "win": 5,
+      "tie": 0,
+      "loss": 0,
+      "verdict": "GRAPH"
+    },
+    {
+      "bucket": "cross-doc",
+      "n": 5,
+      "graph": 1.0,
+      "vector": 0.08,
+      "win": 5,
+      "tie": 0,
+      "loss": 0,
+      "verdict": "GRAPH"
+    },
+    {
+      "bucket": "negative",
+      "n": 5,
+      "graph": 1.0,
+      "vector": 1.0,
+      "win": 0,
+      "tie": 5,
+      "loss": 0,
+      "verdict": "TIE"
+    }
+  ],
+  "recall_at_k": {
+    "ks": [
+      1,
+      2,
+      5,
+      10,
+      20,
+      50,
+      100
+    ],
+    "rows": [
+      {
+        "id": "XDOC-HPCI-COMP",
+        "question": "What components have failed in the HPCI system across the whole corpus?",
+        "full": 47,
+        "recall": {
+          "1": 0.0,
+          "2": 0.021,
+          "5": 0.085,
+          "10": 0.191,
+          "20": 0.362,
+          "50": 0.447,
+          "100": 0.553
+        }
+      },
+      {
+        "id": "XDOC-RCIC-COMP",
+        "question": "What components have failed in the RCIC system across the whole corpus?",
+        "full": 24,
+        "recall": {
+          "1": 0.042,
+          "2": 0.083,
+          "5": 0.208,
+          "10": 0.333,
+          "20": 0.333,
+          "50": 0.417,
+          "100": 0.5
+        }
+      },
+      {
+        "id": "AGG-WEAK-PROG",
+        "question": "Which events across all these plants trace back to a weak maintenance or procedure program (personnel error)?",
+        "full": 33,
+        "recall": {
+          "1": 0.0,
+          "2": 0.0,
+          "5": 0.03,
+          "10": 0.03,
+          "20": 0.061,
+          "50": 0.152,
+          "100": 0.212
+        }
+      },
+      {
+        "id": "XPLANT-SHARED",
+        "question": "Find events at different plants that share both a common component and a common cause.",
+        "full": 21,
+        "recall": {
+          "1": 0.0,
+          "2": 0.0,
+          "5": 0.0,
+          "10": 0.0,
+          "20": 0.0,
+          "50": 0.048,
+          "100": 0.095
+        }
+      },
+      {
+        "id": "XDOC-BACKUPS",
+        "question": "Which events were mitigated by a redundant safety system being available?",
+        "full": 274,
+        "recall": {
+          "1": 0.004,
+          "2": 0.007,
+          "5": 0.011,
+          "10": 0.018,
+          "20": 0.036,
+          "50": 0.084,
+          "100": 0.161
+        }
+      }
+    ]
+  },
+  "graph_suite": "42 of 42 evaluation questions passed",
+  "caption": "Both systems answered the same set of evaluation questions using the same answer-writing model, so the only difference measured here is how each one RETRIEVES the reports. Each question's category was decided in advance, before either system ran, so the winner could not be chosen after the fact."
+}

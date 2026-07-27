@@ -1,237 +1,212 @@
-# Dynamic Risk RAG — Graph RAG over NRC Licensee Event Reports
+# Probabilistic Risk Analysis GraphRAG
 
-A knowledge-graph RAG system that answers **multi-hop, cross-document** questions about
-nuclear-plant failures — the kind of relational, "connect-the-reports" questions that flat
-vector search structurally cannot. It ingests U.S. NRC **Licensee Event Reports (LERs)**,
-extracts a failure-analysis knowledge graph from each one, resolves entities across reports,
-loads them into **Neo4j**, and answers grounded questions with citations back to the source LERs.
+**A question-answering system for U.S. nuclear-plant failure reports that connects the dots
+*across* thousands of documents — the kind of question ordinary AI search can't answer.**
 
-Built as a personal project to learn knowledge graphs, retrieval, and LLM extraction pipelines
-end-to-end — with an eye toward dynamic probabilistic risk analysis (PRA) for safety-critical
-systems. See [phase_0.md](phase_0.md) for the original framing and [plan.md](plan.md) for the
-full build plan.
+### ▶︎ [**Try the live demo**](https://sahilmulki.github.io/probabilistic-risk-analysis-graphrag/) &nbsp;·&nbsp; runs in your browser, nothing to install
 
-> **Status:** the MVP (Phases 1–6) is complete and verified. Extraction scores node-F1 **0.88** /
-> edge-F1 **0.72** against a hand-marked oracle; the loaded graph is a single connected component;
-> the golden-question suite passes **9/9**. Probabilistic reasoning (Phase 7) and full-corpus
-> scale-up + a vector-RAG baseline (Phase 8) are the remaining stretch work.
+![The app: a cooling-tower masthead over a plain-language explanation of the two approaches being compared](docs/screenshots/landing.png)
 
 ---
 
-## Why a graph?
+## The 60-second version
 
-The corpus is a set of independent failure reports. The interesting questions are *relational*:
+Every time something goes wrong at a U.S. nuclear power plant — a pump fails, a valve sticks, a
+safety system trips — the operator is legally required to file a public **Licensee Event Report
+(LER)** with the Nuclear Regulatory Commission. Each one is a standardized account of *what failed,
+why, and how close it came to mattering for safety.* There are thousands of them, all public.
 
-- *"What chain of failures led to HPCI being inoperable at Limerick?"* — a **multi-hop** path within one report.
-- *"What components have failed in the HPCI system across the whole corpus?"* — a **cross-document** join on a shared system.
-- *"Which events trace back to a weak maintenance program?"* — a **cross-document** join on a normalized cause.
+The useful questions about this data are almost never about a single report. They're about
+**patterns across many:**
 
-A vector store can retrieve *a* relevant chunk, but it can't assemble a causal chain or join three
-reports through a shared component code. A graph keyed on the NRC's own **EIIS component/system codes**
-does both natively. The full list of target questions lives in [phase_0.md](phase_0.md#golden-questions).
+- *"What components have failed in the high-pressure cooling system — across every plant?"*
+- *"Which failures trace back to a weak maintenance program?"*
+- *"When this system fails, what safety outcome usually follows?"*
 
-## Demo
+The standard modern tool for searching documents — **vector search**, the "retrieval" behind most
+RAG systems and AI chatbots — is good at *"find me a report about X"* but structurally bad at
+*"assemble every report connected to Y,"* because no single document is "most similar" to a pattern
+spread across fifteen plants.
 
-```
-$ python src/ask.py "What chain of failures led to HPCI being inoperable at Limerick?"
+So this project builds the alternative: a **knowledge graph.** It reads all **833 reports**, uses an
+LLM to extract the key entities from each (systems, components, root causes, consequences), and links
+every report to every other through what they share. Now a question can be answered by *following
+those links.*
 
-  routed intent : failure_chain   anchors={'plant': 'Limerick'}
-  retrieved LERs: 353-2025-001-00 [pipeline]
-  answer: At Limerick (LER 353-2025-001-00), the failure chain began with a degraded
-    Cannon plug connector, which caused an electrical short circuit within the ECCS
-    Contact Test Unit. This short circuit resulted in the HPCI Turbine Exhaust Line
-    Vacuum Breaker Outboard PCIV closing, which in turn rendered the HPCI System
-    inoperable, constituting a loss of safety function. Root cause: Design/Manufacturing/
-    Installation (B). Backups available: ADS, RCIC, RHR, Core Spray.
-  citations: 353-2025-001-00 [pipeline]
-```
+Then — the part I'm most proud of — it **also builds the vector-search baseline and measures, head to
+head, where each approach wins, including where the knowledge graph loses.** No cherry-picking.
 
-```
-$ python src/ask.py "What components have failed in the HPCI system across the whole corpus?"
+> **What this is:** a solo, end-to-end project built to learn LLM extraction pipelines, knowledge
+> graphs, retrieval, and honest evaluation. It's a *demonstration* of ideas from nuclear
+> probabilistic risk analysis — not a certified safety tool.
 
-  routed intent : system_components   anchors={'system_code': 'BJ'}
-  retrieved LERs: 237-2025-003-00 [pipeline], 254-2025-006-00 [oracle], 353-2025-001-00 [pipeline]
-  answer: ...at Dresden — the HPCI Turbine, HPCI pumps, a Negative 125 VDC fuse, the stop
-    valve indicating light circuit, the turning gear, the turning gear motor; at Quad
-    Cities — a breaker feeding an MOV, an opening coil, a roller assembly, a thermal
-    overload relay, Turbine Inlet MOV 1-2301-3; at Limerick — a cannon plug connector,
-    the ECCS Contact Test Unit, the HPCI Turbine Exhaust Line Vacuum Breaker PCIV.
-  citations: all three LERs
-```
+---
 
-The second answer is the payoff: **one query fuses three separate reports** through the shared
-`System:BJ` (HPCI) hub — something no single-document retriever can do.
+## Why a knowledge graph beats search here
 
-## How it works
+The whole thesis in one picture. Ask *"What components have failed in the HPCI cooling system across
+the whole corpus?"* — the graph follows one shared link and returns **all ~47 reports across ~15
+plants**; vector search, ranking by text similarity, can't assemble a set that's scattered across
+documents.
 
-```
- raw LER (NRC ADAMS)
-        │
-        ▼
- ┌──────────────────────────────────────────────────────────┐
- │ EXTRACTION  (Phase 4)                                     │
- │  parse_form366.py  deterministic Form-366 header/blocks   │  ← authoritative
- │  llm.py + prompt   LLM narrative → schema JSON            │  ← causal chain
- │  resolve.py        merge + canonicalize EIIS codes        │
- │  score.py          grade vs ground_truth.json (oracle)   │
- └──────────────────────────────────────────────────────────┘
-        │  validated LERRecord (Pydantic, schema v4.1)
-        ▼
- ┌──────────────────────────────────────────────────────────┐
- │ GRAPH BUILD  (Phase 5)  load_graph.py                    │
- │  MERGE on a graph key (not record-local id) → coded       │
- │  System/Component/Cause/… become cross-document hubs;     │
- │  event-specific nodes stay per-report; connectivity       │
- │  normalized; loaded into Neo4j                            │
- └──────────────────────────────────────────────────────────┘
-        │  connected Neo4j graph
-        ▼
- ┌──────────────────────────────────────────────────────────┐
- │ RETRIEVAL + ANSWER  (Phase 6)                            │
- │  retrieve.py  LLM router → Cypher templates → subgraph    │
- │  answer.py    Claude, grounded in evidence, cites LERs    │
- │  ask.py       CLI + golden-question eval                  │
- └──────────────────────────────────────────────────────────┘
-```
+![An interactive graph: one shared cooling system at the center, ~20 failure reports from many different plants radiating out from it](docs/screenshots/connections.png)
 
-**Mixed extraction.** The deterministic parser owns everything structured (identity, coded
-Block-13 table, official cause code) and is authoritative; the LLM owns only the narrative
-(the causal chain, corrective actions, backups). This keeps the fragile part small and the
-factual part exact.
+*Each dot is a separate failure report; the center is the one system they all share. The gold node is
+a report I hand-checked as a quality-control reference — its provenance is tracked all the way into
+the visualization, so you can always see what was human-verified vs. machine-extracted.*
 
-**Entity resolution is up-front, not a graph-merge afterthought.** Every node carries a
-canonical `match_key` (`System:BJ`, `Component:V|1-2301-3`, `Cause:Design/Manufacturing/Installation`).
-Coded systems/components anchor to their EIIS codes; un-coded ones use deterministic fuzzy matching
-(`rapidfuzz`); free-text causes normalize into shared categories. The graph loader then just
-`MERGE`s on that key, so the same system across three reports is one node.
+---
 
-## The knowledge graph (schema v4.1)
+## Does it actually work?
 
-10 node types and 11 edge types, drawn directly from the LER structure — full spec in
-[ler_schema_v4.1.md](ler_schema_v4.1.md).
+Both systems answered the **same 42 evaluation questions**, using the **same answer-writing model** —
+so the only thing being measured is *how each one retrieves.* Every question was sorted into a
+category **in advance**, before either system ran, so no winner could be picked after the fact.
 
-| Nodes | Edges |
-|---|---|
-| LER, Unit, System, Component, FailureMode, Cause, Consequence, CorrectiveAction, Manufacturer, RegulatoryReference | OCCURRED_AT, INVOLVES, LEADS_TO, CAUSED_BY, MITIGATED_BY, BACKED_UP_BY, REPORTED_UNDER, MANUFACTURED_BY, PART_OF, SIMILAR_TO, REVISES |
+| Question type | Graph | Vector | Winner |
+|---|:---:|:---:|:---:|
+| Find one specific report by its ID | **0.83** | 0.00 | 🔵 Graph |
+| Find a report by what happened | 0.00 | **0.40** | 🟠 **Vector** |
+| Trace a failure chain within one report | **1.00** | 0.00 | 🔵 Graph |
+| Connect many related reports | **1.00** | 0.08 | 🔵 Graph |
+| Refuse an out-of-corpus question | **1.00** | **1.00** | ⚪ Tie |
 
-**Cross-document hubs** are the coded/canonical types (System, Component, non-provisional Cause,
-Unit, Manufacturer, RegulatoryReference, LER). **Event-specific** types (FailureMode, Consequence,
-CorrectiveAction, and provisional causes) are keyed per-report so distinct events never collapse.
-At load time each report is wired into one connected subgraph with a structural
-`LER-[:HAS_CAUSE]->Cause` bridge (details and rationale in [phase_5.md](phase_5.md)).
+*Scores are the fraction of the correct reports each system found (1.00 = all, 0.00 = none).*
 
-## Results
+The honest headline: **the graph dominates cross-document and multi-hop questions, vector search
+genuinely wins free-form "find the report where X happened,"** and both correctly refuse questions
+about things not in the data (e.g. Chernobyl — not a U.S. LER). Showing the category vector *wins* is
+the point; a demo that only shows the graph winning wouldn't be trustworthy.
 
-| Stage | Metric |
-|---|---|
-| **Extraction** (Phase 4) | identity 100%, cause-code 100%; aggregate **node-F1 0.88 / edge-F1 0.72**; Limerick 1.00 / 0.94 |
-| **Graph** (Phase 5) | 57 nodes, 60 edges, **one connected corpus component**; hubs `System:BJ`, ADS, `50.73(a)(2)(v)(D)`, `System:BN` link the reports |
-| **Retrieval** (Phase 6) | golden suite **9/9 pass**; retrieval recall 1.00 where applicable; out-of-corpus questions refused (no hallucination) |
+The gap on the hardest questions is stark: even allowed to pull back **100** reports, vector search
+recovers only ~55% of the HPCI components (and ~16% of the 274 "a backup was available" reports),
+while the graph returns 100% by construction.
 
-Evaluation is honest about the small corpus: cross-document *aggregation* questions that need more
-than three documents (e.g. "most common failure mode") are marked **materialize-at-scale** and
-claim no graph-vs-vector "winner" until Phase 8.
+![The measured scorecard: a per-category comparison table and a chart showing vector search's recall staying far below the graph's 1.00 no matter how deep it searches](docs/screenshots/scorecard.png)
 
-## Corpus
+---
 
-Three real LERs, all High-Pressure Coolant Injection (HPCI) inoperability events, chosen so the
-cross-document links appear quickly:
+## The probabilistic risk layer
 
-| LER | Plant | Event | In graph via |
-|---|---|---|---|
-| 254-2025-006-00 | Quad Cities 1 | Turbine inlet valve failed to open | **oracle** (few-shot exemplar, held out of the extraction eval to avoid leakage) |
-| 237-2025-003-00 | Dresden 2 | Failed indicating light + blown fuse | **pipeline** |
-| 353-2025-001-00 | Limerick 2 | HPCI valve isolated by a degraded test connector | **pipeline** |
+Nuclear engineers use **Probabilistic Risk Analysis (PRA)** to reason about how likely different
+failure outcomes are. This project adds a layer in that spirit: it classifies every reported outcome
+by severity and computes, from how often each outcome *actually occurred* across the corpus, a
+distribution like *"when this system is involved, here's what tends to happen."*
 
-`ground_truth.json` is a frozen, hand-marked answer key; scorer tolerances live in `score.py` so
-the oracle is never edited to fit the model.
+The interesting engineering here is the **honesty**. These numbers are observed frequencies in one
+selected set of reports — **not** certified failure rates — and the system says so, every time: it
+shows the full distribution (not a single scary number), states the denominator, refuses to invent a
+"failure rate" it can't compute, and names the biases baked into the data. Getting an LLM to stay
+disciplined about that was half the work.
 
-## Repository layout
+![The split-pane comparison on a risk question: the graph returns a real outcome distribution with visual bars and event counts, while vector search fabricates confident-sounding frequencies with no denominator](docs/screenshots/compare.png)
+
+---
+
+## How it's built
+
+A four-stage pipeline turns raw reports into answerable structure:
 
 ```
-src/
-  parse_form366.py   deterministic Form-366 parser
-  llm.py             thin Claude interface (swappable; token logging)
-  models.py          Pydantic v2 schema v4.1 (LERRecord, nodes, edges)
-  resolve.py         merge parse + LLM, canonicalize EIIS codes
-  score.py           grade extraction vs the oracle
-  pipeline.py        raw LER → validated JSON → scored  (Phase 4)
-  load_graph.py      load records into Neo4j            (Phase 5)
-  retrieve.py        LLM router + Cypher templates       (Phase 6)
-  answer.py          grounded, LER-citing answerer       (Phase 6)
-  golden_eval.py     golden-question eval spec + scoring
-  ask.py             CLI: ask a question / run the eval
-prompts/             versioned extraction prompt
-graph/queries.cypher constraints + gate/verification Cypher
-data/raw/            LER text + reference tables + ground_truth.json
-out/                 extracted records (Dresden, Limerick)
-ler_schema_v4.1.md   the schema spec
-phase_*.md           per-phase notes; plan.md = the overall build plan
+ Raw LER (public NRC filing)
+    │
+    ▼  EXTRACTION
+    │  A deterministic parser reads the structured header/tables (identity, official codes) —
+    │  exact, never guessed. An LLM reads only the free-text narrative (the causal chain). The
+    │  fragile part is kept small; the factual part stays exact.
+    ▼
+ Validated record (Pydantic schema: 10 entity types, 11 relationship types)
+    │
+    ▼  RESOLUTION + GRAPH BUILD
+    │  Entities are normalized to the NRC's own equipment codes so the same system across three
+    │  reports becomes one shared node, then loaded into Neo4j as one connected graph.
+    ▼
+ Knowledge graph — 12,474 nodes / 17,372 edges, one connected component, 0 orphans
+    │
+    ▼  RETRIEVAL + ANSWER
+    │  An LLM router maps a question to one of ~11 intents + vetted query templates (no free-form
+    │  generated queries), pulls the subgraph, and a second LLM writes a grounded answer that
+    │  cites the source reports.
+    ▼
+ Grounded answer with citations
 ```
 
-## Setup & usage
+**A few decisions I'd call out:**
 
-**Prerequisites:** Python 3.12+, [Neo4j](https://neo4j.com/download/) (Community Edition, local via
-Neo4j Desktop), and an Anthropic API key.
+- **Deterministic-first extraction.** Coded fields are *parsed*, not guessed by the LLM — so the
+  identity and official cause codes are exact, and the LLM only does what it's actually good at
+  (reading narrative). Extraction scored **node-F1 0.88 / edge-F1 0.72** against a hand-marked answer
+  key, and the whole 833-report corpus cost **~$27** to extract (batched LLM calls + prompt caching).
+- **No LLM-generated database queries.** Retrieval uses a router constrained to the graph's real
+  vocabulary plus reviewed query templates — far more robust than letting an LLM write raw Cypher.
+- **A frozen answer key.** The evaluation's ground truth is never edited to flatter the model; the
+  full question suite passes **42/42**.
+- **One render contract for the web app.** The demo and the live backend produce the *identical* data
+  shape, so the UI code never branches on where the answer came from — and a script proves the demo's
+  retrieval is byte-for-byte a fresh live run.
+
+---
+
+## Run it yourself
+
+**Demo mode — zero setup, $0, no backend.** The [live demo](https://sahilmulki.github.io/probabilistic-risk-analysis-graphrag/)
+runs entirely in the browser from a bundle of *real, captured* pipeline output. To run it locally:
+
+```bash
+python -m http.server -d web 8000     # then open http://localhost:8000
+```
+
+**Live mode — ask your own questions.** Runs both retrievers and the answerer against a live database.
+Needs [Neo4j](https://neo4j.com/download/) running and an Anthropic API key in a `.env` file
+(~$0.02–0.05 per question).
 
 ```bash
 pip install -r requirements.txt
+uvicorn app:app --app-dir src         # serves the page + the /ask API at http://localhost:8000
 ```
 
-Create a git-ignored `.env`:
-
-```
-ANTHROPIC_API_KEY=sk-ant-...
-NEO4J_URI=bolt://localhost:7687      # or neo4j://127.0.0.1:7687
-NEO4J_USER=neo4j
-NEO4J_PASSWORD=your-db-password
-ADAMS_APS_KEY=...                    # only for fetching new LERs
-```
-
-Then, with Neo4j running:
+<details>
+<summary>Rebuild the graph and re-run the evaluation from scratch</summary>
 
 ```bash
-python src/pipeline.py                 # extract + score Dresden & Limerick  → out/
-python src/load_graph.py --dry-run     # validate the graph build in memory (no DB)
-python src/load_graph.py               # load into Neo4j (idempotent; --wipe --yes to reset)
-python src/load_graph.py --verify      # run the gate queries against the DB
-
-python src/ask.py "Which events were mitigated by a redundant safety system?"
-python src/ask.py --golden             # run the full golden-question eval with scoring
+python src/pipeline.py                # extract + score reports  → out/
+python src/load_graph.py              # load into Neo4j (idempotent)
+python src/ask.py --golden            # run the full graded question suite
+python src/precompute.py              # rebuild the demo bundle from real output, and prove demo ≡ live
 ```
+</details>
 
-To grow the corpus, `fetch_ler.py` pulls LER text from the NRC ADAMS public library by accession
-number (see `data/raw/manifest.csv`).
-
-## Build status
-
-| Phase | | |
-|---|---|---|
-| 0 | Frame + golden questions | ✅ |
-| 1 | Acquire & hand-read LERs | ✅ |
-| 2 | Design the schema (→ v4.1) | ✅ |
-| 3 | Pick the framework (custom Python + LLM) | ✅ |
-| 4 | Extraction pipeline | ✅ |
-| 5 | Entity resolution + Neo4j graph | ✅ |
-| 6 | Graph retrieval + grounded answering | ✅ |
-| 7 | Probabilistic layer (PRA-style path ranking) | ⬜ stretch |
-| 8 | Scale-up + vector-RAG baseline comparison | ⬜ stretch |
-
-## Design decisions worth calling out
-
-- **Deterministic-first extraction** — coded fields are parsed, not guessed; the LLM only fills the narrative.
-- **Deterministic fuzzy matching** over embeddings for un-coded entity resolution (transparent, free, good enough given EIIS codes carry most identity).
-- **Frozen oracle** — the answer key is never edited to fit the model; tolerances live in the scorer.
-- **Vector baseline deferred to Phase 8** — with three documents there is no retrieval pressure (top-k returns the whole corpus), so a graph-vs-vector comparison now would be non-robust. The retrieval layer sits behind a `Retriever` interface so the baseline drops in cleanly at scale.
-- **No Text2Cypher** — retrieval uses an LLM router with anchors constrained to the graph's real vocabulary plus vetted Cypher templates, which is far more robust than free-form LLM-generated Cypher.
+---
 
 ## Tech stack
 
-Python · Pydantic v2 · rapidfuzz · Anthropic SDK (Claude Sonnet) · Neo4j (Community) + `neo4j` driver
+**Python** · **Anthropic Claude** (extraction + routing + answering) · **Pydantic v2** (typed schema)
+· **Neo4j** (graph database) · **sentence-transformers** (the vector-search baseline) · **FastAPI**
+(backend) · **vanilla HTML/CSS/JS** + `vis-network` (the zero-build web app, hosted free on GitHub
+Pages).
 
-## Data & references
+---
 
-Source data is public: the [NRC ADAMS](https://www.nrc.gov/reading-rm/adams.html) library of Licensee
-Event Reports, structured per NRC Form 366/366A and the EIIS component/system code standards (IEEE 803.1 /
-805). Domain framing follows NUREG-1022. This is a personal learning project and is not affiliated with
-or endorsed by the NRC.
+## Honest scope
+
+This is a personal learning project, and it's careful about what it claims. The corpus was chosen to
+be dense in one system family, so "most-represented in this data" is not the same as "riskiest in
+reality" — and the app says so. The risk figures are observed reportable-event frequencies, not
+certified PRA failure rates. It is **not affiliated with or endorsed by the NRC**; the visual style
+borrows the U.S. Web Design System (which the NRC's own site uses) but uses no agency seal or branding.
+
+---
+
+## About
+
+Built by **Sahil Mulki** — I built this end-to-end to go deep on LLM extraction pipelines, knowledge
+graphs, retrieval, and evaluation that doesn't lie to you.
+
+- 📧 [sahilmulki7@gmail.com](mailto:sahilmulki7@gmail.com)
+- 💼 [LinkedIn](https://www.linkedin.com/in/smulki/)
+- 🔗 Portfolio — *coming soon*
+- 💻 [Source on GitHub](https://github.com/SahilMulki/probabilistic-risk-analysis-graphrag)
+
+*Data: the public [NRC ADAMS](https://www.nrc.gov/reading-rm/adams.html) library of Licensee Event
+Reports (2020–2026), structured per NRC Form 366 and the EIIS equipment-code standards; domain framing
+follows NUREG-1022. Masthead photo: royalty-free stock.*

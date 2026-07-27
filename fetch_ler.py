@@ -61,7 +61,7 @@ def fetch(accession: str, key: str, timeout: int = 60,
             "Cache-Control": "no-cache",
             "Accept": "application/json",
             "Accept-Encoding": "gzip",
-            "User-Agent": "ler-graphrag/fetch_ler.py",
+            "User-Agent": "probabilistic-risk-analysis-graphrag/fetch_ler.py",
         },
     )
     last = ""

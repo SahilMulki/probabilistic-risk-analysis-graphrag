@@ -50,6 +50,16 @@ hubs dense (the HPCI system joins **45 events across ~15 plants**). Extraction c
    would invite writing the narrative while the numbers are still being generated. The UI's
    centrepiece is the split-pane *same question → graph answer vs vector answer* view, which
    only became buildable once the baseline existed.
+   - **Phase 10a — web UI — COMPLETE** (see [phase_10a.md](phase_10a.md)). Single-page app
+     ([web/](web/)) + FastAPI backend ([src/app.py](src/app.py)); split-pane compare, interactive
+     provenance-tagged subgraph with visible criterion-based truncation, and a static Phase-9
+     "rigor" tab. Demo mode runs the whole core demo from a precomputed bundle of **real** pipeline
+     output ($0, no backend); `precompute.py --assert` proves demo≡live at the retrieval layer
+     (8/8). Verdict chips bound to pre-registered buckets, withheld on free-form; the showcase
+     features the buckets where **vector wins**.
+   - *Remaining in Phase 10:* the narrative writeup; and the **router prompt-cache** optimization
+     kept as a separate change off the UI critical path (a `cache_control` breakpoint on the ~9k-token
+     router vocab prefix, with a before/after `logs/tokens.csv` check + a golden re-run).
 
 Deferred by explicit decision (not worth it now): the README update to the 833-doc numbers;
 a re-keying pass for 37 (~5%) cosmetically malformed LER keys.
