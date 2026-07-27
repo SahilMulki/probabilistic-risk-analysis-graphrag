@@ -1,0 +1,296 @@
+{
+  "ler_number": "25-2024-001-00",
+  "identity": {
+    "accession_number": "ML24078A343",
+    "docket": "05200025",
+    "plant_name": "Vogtle",
+    "unit": 3,
+    "reactor_type": "PWR",
+    "nss_vendor": "Westinghouse",
+    "event_date": "2024-01-18",
+    "report_date": "2024-03-18",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Condition Prohibited by Technical Specification Limiting Condition of Operation 3.1.6 Control Bank Overlap Limits Exceeded Due to Inadequate Procedure Guidance"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "inadequate procedure guidance to specify an effective overlap verification method (e.g., manual calculation) to detect abnormal conditions absent receiving a control rod out of sequence indication or alarm",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "procedure guidance inadequacy",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 05200025-2024-002-00",
+      "properties": {
+        "match_key": "LER:05200025-2024-002-00"
+      },
+      "type": "LER",
+      "key": "25-2024-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:25-2024-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Vogtle Unit 3",
+      "properties": {
+        "match_key": "Unit:05200025",
+        "reactor_type": "PWR",
+        "nss_vendor": "Westinghouse"
+      },
+      "type": "Unit",
+      "key": "05200025",
+      "match_key": "Unit:05200025"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {
+        "match_key": "Cause:provisional"
+      },
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "procedure guidance inadequacy",
+      "proximate_text": "inadequate procedure guidance to specify an effective overlap verification method (e.g., manual calculation) to detect abnormal conditions absent receiving a control rod out of sequence indication or alarm",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_rod",
+      "display_name": "Control Rod Drive / Rod Position",
+      "properties": {
+        "match_key": "System:AA"
+      },
+      "type": "System",
+      "eiis_code": "AA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:AA"
+    },
+    {
+      "id": "c_rod",
+      "display_name": "Control Rod",
+      "properties": {
+        "match_key": "Component:ROD"
+      },
+      "type": "Component",
+      "eiis_code": "ROD",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:ROD"
+    },
+    {
+      "id": "c_alm",
+      "display_name": "Control Rod Out of Sequence Alarm",
+      "properties": {
+        "match_key": "Component:ALM"
+      },
+      "type": "Component",
+      "eiis_code": "ALM",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:ALM"
+    },
+    {
+      "id": "fm_proc",
+      "display_name": "Surveillance procedure lacked effective overlap verification method",
+      "properties": {
+        "match_key": "FailureMode:surveillance-procedure-lacked-effective-overlap-verification-method"
+      },
+      "type": "FailureMode",
+      "description": "Procedure relied on receiving a control rod out-of-sequence indication/alarm rather than requiring manual calculation of tip-to-tip distance.",
+      "match_key": "FailureMode:surveillance-procedure-lacked-effective-overlap-verification-method"
+    },
+    {
+      "id": "fm_noalarm",
+      "display_name": "Out-of-sequence alarm/indication not received during surveillance performances",
+      "properties": {
+        "match_key": "FailureMode:out-of-sequence-alarm-not-received"
+      },
+      "type": "FailureMode",
+      "description": "The allowed alternate methods depended on an alarm/indication that was not received during three surveillance performances, making them ineffective.",
+      "match_key": "FailureMode:out-of-sequence-alarm-indication-not-received-during-surveillance-performances"
+    },
+    {
+      "id": "fm_missed",
+      "display_name": "Control bank overlap exceedance not detected during three surveillances",
+      "properties": {
+        "match_key": "FailureMode:overlap-exceedance-not-detected"
+      },
+      "type": "FailureMode",
+      "description": "Three recent performances of the 12-hour TS surveillance failed to determine that tip-to-tip distance between two control rod banks exceeded COLR limits.",
+      "match_key": "FailureMode:control-bank-overlap-exceedance-not-detected-during-three-surveillances"
+    },
+    {
+      "id": "fm_missedentry",
+      "display_name": "Missed entries into LCO 3.1.6 Condition B",
+      "properties": {
+        "match_key": "FailureMode:missed-condition-b-entries"
+      },
+      "type": "FailureMode",
+      "description": "Failure to detect the overlap exceedance resulted in missed entries into Condition B and exceeding TS required action completion times.",
+      "match_key": "FailureMode:missed-entries-into-lco-3-1-6-condition-b"
+    },
+    {
+      "id": "cons_tsviol",
+      "display_name": "Condition prohibited by Technical Specifications - control bank overlap limits exceeded",
+      "properties": {
+        "match_key": "Consequence:ts-overlap-limits-exceeded"
+      },
+      "type": "Consequence",
+      "start": "2024-01-18",
+      "end": "2024-01-20",
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:condition-prohibited-by-technical-specifications-control-bank-overlap-limits-exceeded"
+    },
+    {
+      "id": "ca_standing",
+      "display_name": "Establish standing order for timely instruction to operating shifts",
+      "properties": {
+        "match_key": "CorrectiveAction:standing-order"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:establish-standing-order-for-timely-instruction-to-operating-shifts"
+    },
+    {
+      "id": "ca_procrevision",
+      "display_name": "Revise surveillance procedure to require manual recording of rod position and tip-to-tip distance calculation",
+      "properties": {
+        "match_key": "CorrectiveAction:revise-surveillance-procedure"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-surveillance-procedure-to-require-manual-recording-of-rod-position-and-tip-to-tip-distance-calculation"
+    },
+    {
+      "id": "ca_cap",
+      "display_name": "Additional corrective actions per corrective action program",
+      "properties": {
+        "match_key": "CorrectiveAction:additional-cap-actions"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:additional-corrective-actions-per-corrective-action-program"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rod",
+      "evidence": null
+    },
+    {
+      "source": "c_rod",
+      "relation": "PART_OF",
+      "target": "sys_rod",
+      "evidence": null
+    },
+    {
+      "source": "fm_proc",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_proc",
+      "relation": "LEADS_TO",
+      "target": "fm_noalarm",
+      "evidence": null
+    },
+    {
+      "source": "fm_noalarm",
+      "relation": "LEADS_TO",
+      "target": "fm_missed",
+      "evidence": null
+    },
+    {
+      "source": "fm_missed",
+      "relation": "LEADS_TO",
+      "target": "fm_missedentry",
+      "evidence": null
+    },
+    {
+      "source": "fm_missedentry",
+      "relation": "LEADS_TO",
+      "target": "cons_tsviol",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_standing",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procrevision",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_cap",
+      "evidence": null
+    }
+  ],
+  "chain": "inadequate procedure guidance [cause TBD] -> alternate verification methods relied on unreceived out-of-sequence alarm -> overlap exceedance undetected across three surveillances -> missed LCO 3.1.6 Condition B entries -> TS overlap limits exceeded (no safety consequence; shutdown margin maintained)",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code remains TBD/provisional per FORM-366 fields; narrative describes a procedure-adequacy issue but no final cause code/category was assigned in the header, so category is kept as 'provisional' per rule 4. Event date in FORM-366 fields (2024-01-18) differs from narrative's stated discovery date/time (2024-01-20 ~2000 EDT); FORM-366 event_date is authoritative and copied unchanged, narrative timing used for consequence window only. No SSCs were inoperable at event onset per narrative, so no BACKED_UP_BY edges are warranted. 'Previous Similar Events: None' stated explicitly, so no stub LER/SIMILAR_TO edge created."
+}

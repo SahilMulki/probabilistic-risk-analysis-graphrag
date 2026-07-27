@@ -1,0 +1,461 @@
+{
+  "ler_number": "265-2020-001-00",
+  "identity": {
+    "accession_number": "ML20140A093",
+    "docket": "05000265",
+    "plant_name": "Quad Cities",
+    "unit": 2,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2020-03-20",
+    "report_date": "2020-05-19",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "inspection",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Loss of Both Divisions of Residual Heat Removal Low Pressure Coolant Injection Due to Swing Bus Failure to Transfer''"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)(D)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "Reportable",
+      "system": "to",
+      "component": "ICES",
+      "manufacturer": "Reportable",
+      "reportable": null
+    }
+  ],
+  "cause": {
+    "proximate_text": "Detailed failure analysis of the relay revealed a manufacturing error that caused the barrel spring to be incorrectly positioned. The barrel spring aids in the closure of the normally closed contacts. This resulted in the inconsistent closure of Contacts 2-6 and the observed failure to auto-transfer.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "relay manufacturing defect (misplaced barrel spring)",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 265-2020-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "265-2020-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:265-2020-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Quad Cities Unit 2",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000265",
+      "match_key": "Unit:05000265"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "relay manufacturing defect (misplaced barrel spring)",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_lpci",
+      "display_name": "Residual Heat Removal Low Pressure Coolant Injection",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BO",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected safety system",
+      "match_key": "System:BO"
+    },
+    {
+      "id": "sys_swingbus",
+      "display_name": "Swing Bus",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BU",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected system",
+      "match_key": "System:BU"
+    },
+    {
+      "id": "c_mcc",
+      "display_name": "Motor Control Center 28/29-5",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "MCC",
+      "identifier": "28/29-5",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:MCC|28/29-5"
+    },
+    {
+      "id": "c_mov_a",
+      "display_name": "MOV 2-1001-29A",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "2-1001-29A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:mov-2-1001-29a"
+    },
+    {
+      "id": "c_mov_b",
+      "display_name": "MOV 2-1001-29B",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "2-1001-29B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:mov-2-1001-29b"
+    },
+    {
+      "id": "c_feedbreaker",
+      "display_name": "Bus 29 feed breaker to MCC 28/29-5",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:bus-29-feed-breaker-to-mcc-28-29-5"
+    },
+    {
+      "id": "c_contactor",
+      "display_name": "M-contactor for Bus 29 feed",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:m-contactor-for-bus-29-feed"
+    },
+    {
+      "id": "c_auxcontact",
+      "display_name": "Auxiliary contact 2-3 on M-contactor",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:auxiliary-contact-2-3-on-m-contactor"
+    },
+    {
+      "id": "c_tdr",
+      "display_name": "LPCI Swing Bus Time Delay Relay",
+      "properties": {
+        "manufacturer": "Tyco Electronics (Agastat)"
+      },
+      "type": "Component",
+      "eiis_code": "RLY",
+      "identifier": "S/N 80349",
+      "model": "E7022AD003",
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:RLY|S/N 80349"
+    },
+    {
+      "id": "c_barrelspring",
+      "display_name": "Barrel spring (internal to Time Delay Relay)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:barrel-spring-internal-to-time-delay-relay"
+    },
+    {
+      "id": "fm_spring",
+      "display_name": "Barrel spring incorrectly positioned during manufacture",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Manufacturing error caused the barrel spring, which aids closure of normally closed contacts, to be incorrectly positioned.",
+      "match_key": "FailureMode:barrel-spring-incorrectly-positioned-during-manufacture"
+    },
+    {
+      "id": "fm_contacts",
+      "display_name": "Time Delay Relay Contacts 2-6 fail to close consistently",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Contacts 2-6 in the Bus 29 feed trip circuit found open with 131 mega-ohm resistance, indicating hung-up/high-resistance contacts.",
+      "match_key": "FailureMode:time-delay-relay-contacts-2-6-fail-to-close-consistently"
+    },
+    {
+      "id": "fm_notrip",
+      "display_name": "Bus 29 feed breaker fails to receive trip signal",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The open/high-resistance Contacts 2-6 prevented the Bus 29 feed breaker from receiving a trip signal.",
+      "match_key": "FailureMode:bus-29-feed-breaker-fails-to-receive-trip-signal"
+    },
+    {
+      "id": "fm_notransfer",
+      "display_name": "MCC 28/29-5 fails to auto-transfer from Bus 29 to Bus 28",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The contactor at MCC 28/29-5 opened but the associated feed breaker did not open, so the swing bus did not transfer as designed.",
+      "match_key": "FailureMode:mcc-28-29-5-fails-to-auto-transfer-from-bus-29-to-bus-28"
+    },
+    {
+      "id": "cons_lpci",
+      "display_name": "Loss of both divisions of LPCI safety function",
+      "properties": {
+        "note": "Failure to transfer would have prevented LPCI Loop Select Logic from opening MOVs 2-1001-29A/B, resulting in loss of LPCI safety function; LPCI already inoperable under TS 3.5.1 Condition E for two systems."
+      },
+      "type": "Consequence",
+      "start": "2020-03-20T10:25:00",
+      "end": null,
+      "duration": null,
+      "tz": "CDT",
+      "match_key": "Consequence:loss-of-both-divisions-of-lpci-safety-function"
+    },
+    {
+      "id": "ca_restore",
+      "display_name": "Operations restored power to Bus 28/29-5",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:operations-restored-power-to-bus-28-29-5"
+    },
+    {
+      "id": "ca_replace_relay",
+      "display_name": "Maintenance replaced the degraded time delay relay",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:maintenance-replaced-the-degraded-time-delay-relay"
+    },
+    {
+      "id": "ca_part21",
+      "display_name": "Work with relay manufacturer to consider Part 21 reportability",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:work-with-relay-manufacturer-to-consider-part-21-reportability"
+    },
+    {
+      "id": "mfr_tyco",
+      "display_name": "Tyco Electronics (Agastat)",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": null,
+      "match_key": "Manufacturer:tyco-electronics-agastat"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "rr_ts351",
+      "display_name": "Technical Specification 3.5.1",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:technical-specification-3-5-1"
+    },
+    {
+      "id": "rr_ts381",
+      "display_name": "TS Bases 3.8.1",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ts-bases-3-8-1"
+    },
+    {
+      "id": "rr_ufsar83",
+      "display_name": "UFSAR Section 8.3",
+      "properties": {
+        "type": "analysis-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ufsar-section-8-3"
+    },
+    {
+      "id": "ler_prev_2011",
+      "display_name": "LER 265/2011-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "265/2011-001-00",
+      "stub": true,
+      "title": "Loss of Unit 2 Essential Service 480 VAC Bus",
+      "plant": "Quad Cities Nuclear Power Station Unit 2",
+      "match_key": "LER:265/2011-001-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_lpci",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_swingbus",
+      "evidence": null
+    },
+    {
+      "source": "c_mcc",
+      "relation": "PART_OF",
+      "target": "sys_swingbus",
+      "evidence": null
+    },
+    {
+      "source": "c_auxcontact",
+      "relation": "PART_OF",
+      "target": "c_contactor",
+      "evidence": null
+    },
+    {
+      "source": "c_barrelspring",
+      "relation": "PART_OF",
+      "target": "c_tdr",
+      "evidence": null
+    },
+    {
+      "source": "fm_spring",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_spring",
+      "relation": "LEADS_TO",
+      "target": "fm_contacts",
+      "evidence": null
+    },
+    {
+      "source": "fm_contacts",
+      "relation": "LEADS_TO",
+      "target": "fm_notrip",
+      "evidence": null
+    },
+    {
+      "source": "fm_notrip",
+      "relation": "LEADS_TO",
+      "target": "fm_notransfer",
+      "evidence": null
+    },
+    {
+      "source": "fm_notransfer",
+      "relation": "LEADS_TO",
+      "target": "cons_lpci",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_restore",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_relay",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_part21",
+      "evidence": null
+    },
+    {
+      "source": "c_tdr",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_tyco",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev_2011",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts351",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts381",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ufsar83",
+      "evidence": null
+    }
+  ],
+  "chain": "relay manufacturing defect (misplaced barrel spring) [cause TBD] -> Contacts 2-6 fail to close consistently -> Bus 29 feed breaker receives no trip signal -> MCC 28/29-5 fails to auto-transfer -> loss of both divisions of LPCI safety function [no backup asserted; LPCI already inoperable under TS 3.5.1 Condition E]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code is TBD/provisional per FORM-366 fields; narrative strongly implicates a component/manufacturing defect (Design/Manufacturing category likely) but per Rule 4 the official code governs and is copied verbatim. Block-13 row in source data appears garbled/OCR-damaged ('to', 'ICES') and is copied as-is per instructions to preserve FORM-366 fields unchanged. No BACKED_UP_BY edge asserted: LPCI itself was already inoperable (TS 3.5.1 Condition E) prior to this event and no operable backup system is explicitly stated as available during the transfer-failure window; safety analysis notes ECCS acceptance criteria can be met without LPCI function, but this is a design-basis/regulatory-acceptance statement, not a stated-operable backup system per Rule 6, so it is not modeled as a BACKED_UP_BY edge. Previous occurrence LER 265/2011-001-00 modeled as stub per Rule 9, key copied exactly as printed ('265/2011-001-00')."
+}

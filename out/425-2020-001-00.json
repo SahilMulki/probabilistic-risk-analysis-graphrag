@@ -1,0 +1,308 @@
+{
+  "ler_number": "425-2020-001-00",
+  "identity": {
+    "accession_number": "ML21008A571",
+    "docket": "05000425",
+    "plant_name": "Vogtle",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2020-11-12",
+    "report_date": "2021-01-08",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2020-001-00 for Vogtle Electric Generating Plant Unit 2, Transformer failure leads to main generator trip and subsequent reactor trip"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The cause of the main step-up transformer fault was an internal fault around the Deenergized Tap Changer (DETC). There were no previous indications that there were any issues with this transformer.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "internal transformer fault (DETC)",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 425-2020-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "425-2020-001-00",
+      "stub": false,
+      "title": "Transformer failure leads to main generator trip and subsequent reactor trip",
+      "plant": null,
+      "match_key": "LER:425-2020-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Vogtle Unit 2",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000425",
+      "match_key": "Unit:05000425"
+    },
+    {
+      "id": "cause",
+      "display_name": "TBD (provisional)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "internal transformer fault (DETC)",
+      "proximate_text": "The cause of the main step-up transformer fault was an internal fault around the Deenergized Tap Changer (DETC). There were no previous indications that there were any issues with this transformer.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_rps",
+      "display_name": "Reactor Protection System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "automatic actuation; reported trigger",
+      "match_key": "System:JC"
+    },
+    {
+      "id": "sys_afw",
+      "display_name": "Auxiliary Feedwater",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "automatic actuation; operated as expected",
+      "match_key": "System:BA"
+    },
+    {
+      "id": "c_xfmr",
+      "display_name": "Main Step-Up Transformer (B-phase)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "XFMR",
+      "model": "Siemens 351-18210",
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:main-step-up-transformer-b-phase"
+    },
+    {
+      "id": "c_detc",
+      "display_name": "Deenergized Tap Changer (DETC)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:deenergized-tap-changer-detc"
+    },
+    {
+      "id": "mfr_siemens",
+      "display_name": "Siemens",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": null,
+      "match_key": "Manufacturer:siemens"
+    },
+    {
+      "id": "fm_detc_fault",
+      "display_name": "Internal fault around Deenergized Tap Changer",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Internal fault around the DETC caused a B-phase fault in the main step-up transformer.",
+      "match_key": "FailureMode:internal-fault-around-deenergized-tap-changer"
+    },
+    {
+      "id": "fm_xfmr_fault",
+      "display_name": "Main step-up transformer B-phase fault",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Fault in the B-phase main step-up transformer caused the generator to trip.",
+      "match_key": "FailureMode:main-step-up-transformer-b-phase-fault"
+    },
+    {
+      "id": "fm_gen_trip",
+      "display_name": "Main generator trip",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Generator tripped due to the transformer fault.",
+      "match_key": "FailureMode:main-generator-trip"
+    },
+    {
+      "id": "fm_turbine_trip",
+      "display_name": "Turbine trip",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Turbine tripped subsequent to the generator trip.",
+      "match_key": "FailureMode:turbine-trip"
+    },
+    {
+      "id": "cons_reactor_trip",
+      "display_name": "Automatic reactor trip",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2020-11-12T17:32:00",
+      "end": null,
+      "duration": null,
+      "tz": "EST",
+      "match_key": "Consequence:automatic-reactor-trip"
+    },
+    {
+      "id": "ca_realign",
+      "display_name": "Remove faulted transformer from service and realign switchyard to place spare main step-up transformer into service",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:remove-faulted-transformer-from-service-and-realign-switchyard-to-place-spare-main-step-up-transformer-into-service"
+    },
+    {
+      "id": "ca_inspect",
+      "display_name": "Inspect remaining main step-up and spare step-up transformers for abnormal indications",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:inspect-remaining-main-step-up-and-spare-step-up-transformers-for-abnormal-indications"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_ufsar",
+      "display_name": "UFSAR Chapter 15",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:ufsar-chapter-15"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rps",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_afw",
+      "evidence": null
+    },
+    {
+      "source": "c_detc",
+      "relation": "PART_OF",
+      "target": "c_xfmr",
+      "evidence": null
+    },
+    {
+      "source": "c_xfmr",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_siemens",
+      "evidence": null
+    },
+    {
+      "source": "fm_detc_fault",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_detc_fault",
+      "relation": "LEADS_TO",
+      "target": "fm_xfmr_fault",
+      "evidence": null
+    },
+    {
+      "source": "fm_xfmr_fault",
+      "relation": "LEADS_TO",
+      "target": "fm_gen_trip",
+      "evidence": null
+    },
+    {
+      "source": "fm_gen_trip",
+      "relation": "LEADS_TO",
+      "target": "fm_turbine_trip",
+      "evidence": null
+    },
+    {
+      "source": "fm_turbine_trip",
+      "relation": "LEADS_TO",
+      "target": "cons_reactor_trip",
+      "evidence": null
+    },
+    {
+      "source": "cons_reactor_trip",
+      "relation": "MITIGATED_BY",
+      "target": "sys_rps",
+      "evidence": null
+    },
+    {
+      "source": "cons_reactor_trip",
+      "relation": "MITIGATED_BY",
+      "target": "sys_afw",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_realign",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_inspect",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ufsar",
+      "evidence": null
+    }
+  ],
+  "chain": "internal DETC fault [cause TBD] -> B-phase transformer fault -> generator trip -> turbine trip -> automatic reactor trip [mitigated by RPS, AFW auto-actuation]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code is TBD/provisional per form-366 fields; narrative identifies proximate cause as an internal fault around the DETC within the main step-up transformer. Transformer serves no safety-related function; event bounded by UFSAR Ch.15 analysis. No previous similar events reported (Section E: None), so no SIMILAR_TO stub LER emitted."
+}

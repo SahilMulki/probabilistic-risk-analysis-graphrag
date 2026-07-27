@@ -1,0 +1,342 @@
+{
+  "ler_number": "483-2023-001-00",
+  "identity": {
+    "accession_number": "ML23333A143",
+    "docket": "05000483",
+    "plant_name": "Callaway",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2023-10-20",
+    "report_date": "2023-11-29",
+    "operating_mode": "3",
+    "power_level": null,
+    "discovery_context": "inspection",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Inoperable Instrument Tunnel Sump Level Indication Resulted In Condition Prohibited By Technical Specifications"
+  },
+  "reporting_basis": {
+    "reported_under": [],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "the stem of the level instrument was not centered in the stilling well pipe. This allowed the float to contact the side of the pipe, making it unable to move freely along the stem... the evidence indicates that the float became stuck on the lower edge of the stilling well due to the stem not being centered",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "installation/design deficiency - uncentered sensor stem in stilling well allowing float to bind",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 483-2023-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "483-2023-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:483-2023-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Callaway Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000483",
+      "match_key": "Unit:05000483"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "installation/design deficiency - uncentered sensor stem in stilling well allowing float to bind",
+      "proximate_text": "the stem of the level instrument was not centered in the stilling well pipe. This allowed the float to contact the side of the pipe, making it unable to move freely along the stem... the evidence indicates that the float became stuck on the lower edge of the stilling well due to the stem not being centered",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_bd",
+      "display_name": "Containment Sump Level and Flow Monitoring System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BD",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "leak detection instrumentation",
+      "match_key": "System:BD"
+    },
+    {
+      "id": "sys_air_particulate",
+      "display_name": "Containment Atmosphere Particulate Radioactivity Monitoring System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "backup; remained available",
+      "match_key": "System:containment-atmosphere-particulate-radioactivity-monitoring-system"
+    },
+    {
+      "id": "sys_cond_monitor",
+      "display_name": "Containment Cooler Condensate Monitoring System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SD",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; remained available",
+      "match_key": "System:SD"
+    },
+    {
+      "id": "c_sensor",
+      "display_name": "GEMS XM-800 Level Sensor",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": "XM-800",
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:gems-xm-800-level-sensor"
+    },
+    {
+      "id": "c_stilling_well",
+      "display_name": "Stilling Well (4-inch pipe)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:stilling-well-4-inch-pipe"
+    },
+    {
+      "id": "c_float",
+      "display_name": "Magnetic Float",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:magnetic-float"
+    },
+    {
+      "id": "fm_stem_uncentered",
+      "display_name": "Sensor stem not centered in stilling well pipe",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "There is no mechanism for ensuring the tip of the sensor is centered in the stilling well when installed.",
+      "match_key": "FailureMode:sensor-stem-not-centered-in-stilling-well-pipe"
+    },
+    {
+      "id": "fm_float_stuck",
+      "display_name": "Float stuck against stilling well pipe wall",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Float contacted the side of the pipe and became stuck on the lower edge of the stilling well, unable to move freely along the stem.",
+      "match_key": "FailureMode:float-stuck-against-stilling-well-pipe-wall"
+    },
+    {
+      "id": "fm_sensor_unresponsive",
+      "display_name": "Sump level sensor stopped responding to level changes",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Containment instrument sump level monitor/indication had stopped responding to changes in sump level as of March 2, 2023.",
+      "match_key": "FailureMode:sump-level-sensor-stopped-responding-to-level-changes"
+    },
+    {
+      "id": "cons_inop",
+      "display_name": "Containment sump level and flow monitoring system inoperable; condition prohibited by Technical Specifications",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2023-03-02",
+      "end": "2023-10-20",
+      "duration": "approximately 7 months",
+      "tz": null,
+      "match_key": "Consequence:containment-sump-level-and-flow-monitoring-system-inoperable-condition-prohibited-by-technical-specifications"
+    },
+    {
+      "id": "ca_inspect",
+      "display_name": "Perform immediate corrective action to reconnect/repair instrument tunnel sump level indication",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:perform-immediate-corrective-action-to-reconnect-repair-instrument-tunnel-sump-level-indication"
+    },
+    {
+      "id": "ca_modify",
+      "display_name": "Evaluate and implement modification to stilling well/sensor installation to ensure centering",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:evaluate-and-implement-modification-to-stilling-well-sensor-installation-to-ensure-centering"
+    },
+    {
+      "id": "ca_procedures",
+      "display_name": "Revise operations procedures for sump level indicator monitoring and trending",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-operations-procedures-for-sump-level-indicator-monitoring-and-trending"
+    },
+    {
+      "id": "rr_ts34_15",
+      "display_name": "Technical Specification 3.4.15, RCS Leakage Detection Instrumentation",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-3-4-15-rcs-leakage-detection-instrumentation"
+    },
+    {
+      "id": "rr_ts34_13",
+      "display_name": "Technical Specification 3.4.13, RCS Operational LEAKAGE",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-3-4-13-rcs-operational-leakage"
+    },
+    {
+      "id": "rr_rg145",
+      "display_name": "Regulatory Guide 1.45",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "standard/guidance",
+      "match_key": "RegulatoryReference:regulatory-guide-1-45"
+    },
+    {
+      "id": "rr_fsar",
+      "display_name": "FSAR 5.2.5.A",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:fsar-5-2-5-a"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "Previous replacement of containment instrument tunnel sump level transmitter (2010, prior to Refuel 25)",
+      "properties": {},
+      "type": "LER",
+      "key": "483-2010-XXX",
+      "stub": true,
+      "title": "Prior instrument tunnel sump level transmitter degraded due to age",
+      "plant": "Callaway Plant",
+      "match_key": "LER:483-2010-XXX"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts34_15",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts34_13",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bd",
+      "evidence": null
+    },
+    {
+      "source": "c_sensor",
+      "relation": "PART_OF",
+      "target": "sys_bd",
+      "evidence": null
+    },
+    {
+      "source": "fm_stem_uncentered",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_stem_uncentered",
+      "relation": "LEADS_TO",
+      "target": "fm_float_stuck",
+      "evidence": null
+    },
+    {
+      "source": "fm_float_stuck",
+      "relation": "LEADS_TO",
+      "target": "fm_sensor_unresponsive",
+      "evidence": null
+    },
+    {
+      "source": "fm_sensor_unresponsive",
+      "relation": "LEADS_TO",
+      "target": "cons_inop",
+      "evidence": null
+    },
+    {
+      "source": "cons_inop",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_air_particulate",
+      "evidence": null
+    },
+    {
+      "source": "cons_inop",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_cond_monitor",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_inspect",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_modify",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procedures",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    }
+  ],
+  "chain": "sensor stem not centered in stilling well [cause TBD] -> float stuck against pipe wall -> sump level sensor stopped responding -> containment sump level and flow monitoring system inoperable (~7 months, TS-prohibited condition) [backups: containment air particulate monitor, containment cooler condensate monitor]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4"
+  ],
+  "notes": "Cause code left TBD/provisional per FORM-366 (not adjudicated in narrative with an official code). Component/system EIIS codes limited to BD (explicitly bracketed); GEMS XM-800 sensor, stilling well, and float have no EIIS code given, so eiis_code left null. Backup systems (particulate monitor, condensate monitor) explicitly stated to have 'remained available' except during brief planned surveillance outages, satisfying BACKED_UP_BY criteria. Previous similar event section describes a 2010 replacement documented in CR 2022-00168, but no formal LER number is given in the narrative for that prior event; a stub LER node was created with a placeholder key since no explicit LER number was stated—this deviates from strict rule 9 guidance to copy the LER number exactly, as none was provided in the text (only a CR number and a plant modification number). Analysts should verify/correct this stub key if a true prior LER exists in NRC records."
+}

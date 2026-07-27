@@ -1,0 +1,311 @@
+{
+  "ler_number": "391-2025-001-00",
+  "identity": {
+    "accession_number": "ML25021A128",
+    "docket": "05000391",
+    "plant_name": "Watts Bar",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2024-11-22",
+    "report_date": "2025-01-21",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Loss of The Control Room Emergency Air Temperature Control System Due to Chiller Valve Malfunction"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)(D)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "X",
+      "system": "BI",
+      "component": "TCV",
+      "manufacturer": "METREX",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The most likely cause or contributing factor for the TCV malfunction was internal blockage that prevented normal operation.",
+    "cause_code": "X",
+    "category": "Other",
+    "theme": "TCV internal blockage causing malfunction",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 391-2025-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "391-2025-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:391-2025-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Watts Bar Unit 2",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000391",
+      "match_key": "Unit:05000391"
+    },
+    {
+      "id": "cause",
+      "display_name": "Other (X)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "X",
+      "category": "Other",
+      "theme": "TCV internal blockage causing malfunction",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Other"
+    },
+    {
+      "id": "sys_creatcs",
+      "display_name": "Control Room Emergency Air Temperature Control System",
+      "properties": {
+        "note": "two independent and redundant trains, A and B"
+      },
+      "type": "System",
+      "eiis_code": "VI",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:VI"
+    },
+    {
+      "id": "c_bb_chiller",
+      "display_name": "B-B Main Control Room Chiller",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "B-B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:b-b-main-control-room-chiller"
+    },
+    {
+      "id": "c_aa_chiller",
+      "display_name": "A-A Main Control Room Chiller",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "A-A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:a-a-main-control-room-chiller"
+    },
+    {
+      "id": "c_tcv",
+      "display_name": "Automatic Water Temperature Control Valve (TCV)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "TCV",
+      "identifier": null,
+      "model": "FTVA-300-WAT",
+      "manufacturer_code": "METREX",
+      "inferred_code": false,
+      "match_key": "Component:TCV"
+    },
+    {
+      "id": "fm_aa_trip",
+      "display_name": "A-A MCR chiller tripped with oil failure alarm (Train A declared inoperable)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "A-A MCR chiller found tripped with oil failure alarm; Unit 2 entered TS LCO 3.7.11 Condition A",
+      "match_key": "FailureMode:a-a-mcr-chiller-tripped-with-oil-failure-alarm-train-a-declared-inoperable"
+    },
+    {
+      "id": "fm_tcv_blockage",
+      "display_name": "TCV internal blockage preventing normal automatic operation",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Internal blockage prevented the automatic water regulating TCV on the B-B MCR chiller from operating correctly in the automatic position",
+      "match_key": "FailureMode:tcv-internal-blockage-preventing-normal-automatic-operation"
+    },
+    {
+      "id": "fm_bb_trip",
+      "display_name": "B-B MCR chiller tripped on high gas discharge pressure",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "B-B MCR chiller tripped on high gas discharge pressure due to malfunctioning automatic TCV",
+      "match_key": "FailureMode:b-b-mcr-chiller-tripped-on-high-gas-discharge-pressure"
+    },
+    {
+      "id": "cons_both_trains",
+      "display_name": "Both trains of CREATCS simultaneously inoperable",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2024-11-22T19:37",
+      "end": "2024-11-23T01:30",
+      "duration": "5.88 hours (approx. 6 hours)",
+      "tz": "EST",
+      "match_key": "Consequence:both-trains-of-creatcs-simultaneously-inoperable"
+    },
+    {
+      "id": "ca_manual_control",
+      "display_name": "Manually controlling cooling water to B-B MCR chiller (compensatory measure)",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:manually-controlling-cooling-water-to-b-b-mcr-chiller-compensatory-measure"
+    },
+    {
+      "id": "ca_tcv_restore",
+      "display_name": "Maintenance refrigeration crew placed TCV back into automatic",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:maintenance-refrigeration-crew-placed-tcv-back-into-automatic"
+    },
+    {
+      "id": "ca_monitoring_plan",
+      "display_name": "Generate work order for monitoring plan and compensatory measures for reliable B-B MCR chiller operation",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:generate-work-order-for-monitoring-plan-and-compensatory-measures-for-reliable-b-b-mcr-chiller-operation"
+    },
+    {
+      "id": "ca_pm_frequency",
+      "display_name": "Evaluate increasing frequency of associated preventive maintenance activities",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:evaluate-increasing-frequency-of-associated-preventive-maintenance-activities"
+    },
+    {
+      "id": "mfr_metrex",
+      "display_name": "METREX",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "METREX",
+      "match_key": "Manufacturer:METREX"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_creatcs",
+      "evidence": null
+    },
+    {
+      "source": "c_bb_chiller",
+      "relation": "PART_OF",
+      "target": "sys_creatcs",
+      "evidence": null
+    },
+    {
+      "source": "c_aa_chiller",
+      "relation": "PART_OF",
+      "target": "sys_creatcs",
+      "evidence": null
+    },
+    {
+      "source": "fm_tcv_blockage",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_aa_trip",
+      "relation": "LEADS_TO",
+      "target": "cons_both_trains",
+      "evidence": null
+    },
+    {
+      "source": "fm_tcv_blockage",
+      "relation": "LEADS_TO",
+      "target": "fm_bb_trip",
+      "evidence": null
+    },
+    {
+      "source": "fm_bb_trip",
+      "relation": "LEADS_TO",
+      "target": "cons_both_trains",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_manual_control",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_tcv_restore",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_monitoring_plan",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_pm_frequency",
+      "evidence": null
+    },
+    {
+      "source": "c_tcv",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_metrex",
+      "evidence": null
+    }
+  ],
+  "chain": "A-A MCR chiller trip (Train A declared inoperable, prior condition) + TCV internal blockage [cause X] -> B-B MCR chiller trips on high gas discharge pressure -> both CREATCS trains simultaneously inoperable (~5.88 hrs) [restored via manual/compensatory cooling water control; no other system performs CREATCS function]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Both CREATCS trains became inoperable through two distinct, parallel failure paths: Train A was already inoperable (A-A chiller tripped on oil failure alarm) prior to the event, while Train B failed due to the TCV internal blockage causing the B-B chiller trip. Only the TCV malfunction is the officially coded/proximate cause (X - Other); the A-A chiller trip is modeled as a separate pre-existing FailureMode contributing to the consequence per Section II.B, but it is not part of the official causal chain to the Cause node. No backup system exists per narrative ('no other systems that would perform the function of CREATCS'), so no BACKED_UP_BY edge is asserted. No previous similar events reported (Section VII: None), so no SIMILAR_TO edge/stub LER created."
+}

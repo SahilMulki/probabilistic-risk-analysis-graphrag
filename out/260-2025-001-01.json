@@ -1,0 +1,299 @@
+{
+  "ler_number": "260-2025-001-01",
+  "identity": {
+    "accession_number": "ML25252A080",
+    "docket": "05000260",
+    "plant_name": "Browns Ferry",
+    "unit": 2,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2025-05-12",
+    "report_date": "2025-09-09",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Reactor SCRAM due to Low Electro-Hydraulic Control Pressure"
+  },
+  "reporting_basis": {
+    "reported_under": [],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The Unit 2 SCRAM on low EHC pressure was caused by the failure of three of four ASTM A574 grade 4137 black oxide coated mounting cap screws for shutoff valve BFN-2-FCV-047-0154C...ultimately failed due to hydrogen embrittlement. Hydrogen embrittlement could have been introduced from environmental sources (plant environment, improper cleaning, improper lubricant, etc.), or during the manufacturing process (black oxide coating).",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "hydrogen embrittlement of mounting cap screws (environmental or manufacturing origin, undetermined)",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 260-2025-001-01",
+      "properties": {},
+      "type": "LER",
+      "key": "260-2025-001-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:260-2025-001-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Browns Ferry Unit 2",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000260",
+      "match_key": "Unit:05000260"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "hydrogen embrittlement of mounting cap screws (environmental or manufacturing origin, undetermined)",
+      "proximate_text": "The Unit 2 SCRAM on low EHC pressure was caused by the failure of three of four ASTM A574 grade 4137 black oxide coated mounting cap screws for shutoff valve BFN-2-FCV-047-0154C...ultimately failed due to hydrogen embrittlement.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_ehc",
+      "display_name": "Electro-Hydraulic Control",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "control system for turbine, source of the leak",
+      "match_key": "System:JA"
+    },
+    {
+      "id": "c_shutoff_valve",
+      "display_name": "EHC Shutoff Valve 2-FCV-047-0154C",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "V",
+      "identifier": "2-FCV-047-0154C",
+      "model": null,
+      "manufacturer_code": "QA0",
+      "inferred_code": false,
+      "match_key": "Component:V|2-FCV-047-0154C"
+    },
+    {
+      "id": "c_bypass_valve",
+      "display_name": "Turbine Bypass Valves",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "V",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:V"
+    },
+    {
+      "id": "c_cap_screws",
+      "display_name": "Mounting cap screws (ASTM A574 grade 4137, black oxide coated)",
+      "properties": {
+        "material": "ASTM A574 grade 4137",
+        "coating": "black oxide"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": "QA0",
+      "inferred_code": false,
+      "match_key": "Component:mounting-cap-screws-astm-a574-grade-4137-black-oxide-coated"
+    },
+    {
+      "id": "fm_pressure_surge",
+      "display_name": "EHC pressure surge from placing B pump into service",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "EHC system pressure increased ~54 PSIG (~3.5%) when alternate EHC pump B was placed into service for testing; within operating limits but most likely initiating event.",
+      "match_key": "FailureMode:ehc-pressure-surge-from-placing-b-pump-into-service"
+    },
+    {
+      "id": "fm_screws_sheared",
+      "display_name": "Mounting cap screws sheared (hydrogen embrittlement)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Three of four mounting cap screws on 2-FCV-047-0154C failed due to hydrogen embrittlement, breaching the EHC pressure boundary.",
+      "match_key": "FailureMode:mounting-cap-screws-sheared-hydrogen-embrittlement"
+    },
+    {
+      "id": "fm_ehc_leak",
+      "display_name": "EHC pressure boundary breach / tank drained",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Breach of the EHC pressure boundary at the shutoff valve drained the Unit 2 EHC tank, causing significant EHC leak and loss of system pressure.",
+      "match_key": "FailureMode:ehc-pressure-boundary-breach-tank-drained"
+    },
+    {
+      "id": "fm_bypass_fail",
+      "display_name": "Turbine bypass valves failed closed",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Turbine bypass valves failed closed due to loss of EHC pressure following the leak.",
+      "match_key": "FailureMode:turbine-bypass-valves-failed-closed"
+    },
+    {
+      "id": "cons_turbine_trip_scram",
+      "display_name": "Turbine trip and automatic reactor SCRAM on low EHC pressure",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2025-05-12T13:53:00",
+      "end": null,
+      "duration": null,
+      "tz": "CST",
+      "match_key": "Consequence:turbine-trip-and-automatic-reactor-scram-on-low-ehc-pressure"
+    },
+    {
+      "id": "cons_rps2",
+      "display_name": "Second automatic RPS actuation due to low reactor water level transient",
+      "properties": {
+        "triggering_action": "manual opening and closing of a main steam relief valve"
+      },
+      "type": "Consequence",
+      "start": "2025-05-12T14:07:00",
+      "end": null,
+      "duration": null,
+      "tz": "CST",
+      "match_key": "Consequence:second-automatic-rps-actuation-due-to-low-reactor-water-level-transient"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace shutoff valve and mounting cap screws",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-shutoff-valve-and-mounting-cap-screws"
+    },
+    {
+      "id": "ca_capr005",
+      "display_name": "CAPR 2012739-005: change procurement strategy of mounting cap screws to QA3 with added documentation/testing",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:capr-2012739-005-change-procurement-strategy-of-mounting-cap-screws-to-qa3-with-added-documentation-testing"
+    },
+    {
+      "id": "ca_capr007",
+      "display_name": "CAPR 2012739-007: revise procedures to align with vendor manual VTD-G080-3255 (cleaning, reuse, lock washers, lubrication)",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:capr-2012739-007-revise-procedures-to-align-with-vendor-manual-vtd-g080-3255-cleaning-reuse-lock-washers-lubrication"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ehc",
+      "evidence": null
+    },
+    {
+      "source": "c_shutoff_valve",
+      "relation": "PART_OF",
+      "target": "sys_ehc",
+      "evidence": null
+    },
+    {
+      "source": "fm_pressure_surge",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_pressure_surge",
+      "relation": "LEADS_TO",
+      "target": "fm_screws_sheared",
+      "evidence": null
+    },
+    {
+      "source": "fm_screws_sheared",
+      "relation": "LEADS_TO",
+      "target": "fm_ehc_leak",
+      "evidence": null
+    },
+    {
+      "source": "fm_ehc_leak",
+      "relation": "LEADS_TO",
+      "target": "cons_turbine_trip_scram",
+      "evidence": null
+    },
+    {
+      "source": "fm_ehc_leak",
+      "relation": "LEADS_TO",
+      "target": "fm_bypass_fail",
+      "evidence": null
+    },
+    {
+      "source": "cons_turbine_trip_scram",
+      "relation": "LEADS_TO",
+      "target": "cons_rps2",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_capr005",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_capr007",
+      "evidence": null
+    }
+  ],
+  "chain": "EHC pressure surge from B pump start [cause TBD, hydrogen embrittlement] -> mounting cap screws shear on 2-FCV-047-0154C -> EHC pressure boundary breach / tank drained -> turbine trip & reactor SCRAM (also: turbine bypass valves fail closed) -> second RPS actuation from low reactor water level transient",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code left TBD/provisional per FORM-366 fields, though narrative extensively discusses hydrogen embrittlement of mounting cap screws as proximate mechanical cause (source - environmental vs. manufacturing - undetermined). No SSCs were inoperable prior to the event; no BACKED_UP_BY edges emitted since bypass valve failure and RPS actuation were consequences, not backups. Feedwater pump and main steam line drains used post-trip for level control/decay heat removal are operator response actions, not stated pre-event backups for a failed system-so not modeled as BACKED_UP_BY. No previous similar events reported per Section VII, so no stub LER/SIMILAR_TO edge emitted. Manufacturer for cap screws is generically coded QA0 (non-safety related) per Block 13.D; no distinct Manufacturer entity/edge created since a manufacturer name/code beyond category code QA0 is not given."
+}

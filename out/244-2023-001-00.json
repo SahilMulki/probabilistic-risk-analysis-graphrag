@@ -1,0 +1,339 @@
+{
+  "ler_number": "244-2023-001-00",
+  "identity": {
+    "accession_number": "ML23158A263",
+    "docket": "05000244",
+    "plant_name": "Ginna",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2023-04-11",
+    "report_date": "2023-06-07",
+    "operating_mode": "5",
+    "power_level": null,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Vital Bus 17 failed to load onto Emergency Diesel Generator B during Load I Safeguard Sequence Testing; corroded breaker shunt trip attachment plunger found which indicated an earlier violation of Technical Specifications 3.8.1."
+  },
+  "reporting_basis": {
+    "reported_under": [],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "the failure of the breaker shunt trip attachment (STA) to reset to its shelf condition following a trip due to surface corrosion on the STA moving core causing friction between the core and coil",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "corrosion-induced mechanical binding",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 244-2023-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "244-2023-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:244-2023-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Ginna Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000244",
+      "match_key": "Unit:05000244"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "corrosion-induced mechanical binding",
+      "proximate_text": "the failure of the breaker shunt trip attachment (STA) to reset to its shelf condition following a trip due to surface corrosion on the STA moving core causing friction between the core and coil",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_eb",
+      "display_name": "Emergency Diesel Generator Electrical Distribution",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "EB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:EB"
+    },
+    {
+      "id": "sys_edga",
+      "display_name": "Emergency Diesel Generator A",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "backup EDG; remained operable during MODE 5 window",
+      "match_key": "System:emergency-diesel-generator-a"
+    },
+    {
+      "id": "c_bkr",
+      "display_name": "Breaker 52/EG1B2 (Supply breaker for Bus 17 from EDG B)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "BKR",
+      "identifier": "52/EG1B2",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:BKR|52/EG1B2"
+    },
+    {
+      "id": "c_sta",
+      "display_name": "Shunt Trip Attachment (STA) moving core/plunger",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:shunt-trip-attachment-sta-moving-core-plunger"
+    },
+    {
+      "id": "c_bus17",
+      "display_name": "Vital Bus 17",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:vital-bus-17"
+    },
+    {
+      "id": "fm_corrosion",
+      "display_name": "Surface corrosion/rust on STA moving core",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "STA moving core plunger entirely coated in surface rust, causing friction between core and coil",
+      "match_key": "FailureMode:surface-corrosion-rust-on-sta-moving-core"
+    },
+    {
+      "id": "fm_notreset",
+      "display_name": "STA not fully reset from previous trip",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Rust-induced friction prevented STA plunger from resetting to shelf condition after prior trip",
+      "match_key": "FailureMode:sta-not-fully-reset-from-previous-trip"
+    },
+    {
+      "id": "fm_bkrfail",
+      "display_name": "Breaker 52/EG1B2 tripped free / failed to close and remain closed",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Breaker closed then immediately reopened (tripped free) when demanded during safeguard sequence test",
+      "match_key": "FailureMode:breaker-52-eg1b2-tripped-free-failed-to-close-and-remain-closed"
+    },
+    {
+      "id": "cons_bus17",
+      "display_name": "Bus 17 failed to load onto EDG B / EDG B declared inoperable",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2023-04-11T13:20",
+      "end": "2023-04-12T09:40",
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:bus-17-failed-to-load-onto-edg-b-edg-b-declared-inoperable"
+    },
+    {
+      "id": "cons_ts381",
+      "display_name": "Retroactive violation of TS 3.8.1 (only one/no EDG operable when two required)",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2023-04-06T05:43",
+      "end": "2023-04-10T15:07",
+      "duration": "4 days 9.4 hours",
+      "tz": null,
+      "match_key": "Consequence:retroactive-violation-of-ts-3-8-1-only-one-no-edg-operable-when-two-required"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace breaker 52/EG1B2 with spare unit of same type/model",
+      "properties": {
+        "work_order": "C93909101"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-breaker-52-eg1b2-with-spare-unit-of-same-type-model"
+    },
+    {
+      "id": "ca_extent",
+      "display_name": "Perform extent-of-condition inspection of EDG A breaker STA",
+      "properties": {
+        "work_order": "C93910116",
+        "result": "STA found in excellent condition and cycled as expected"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:perform-extent-of-condition-inspection-of-edg-a-breaker-sta"
+    },
+    {
+      "id": "ca_procedure",
+      "display_name": "Add guidance to breaker maintenance procedures to inspect STA for corrosion and free operation",
+      "properties": {
+        "note": "Replace STA if any Screenhouse breaker STA fails acceptance criteria"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:add-guidance-to-breaker-maintenance-procedures-to-inspect-sta-for-corrosion-and-free-operation"
+    },
+    {
+      "id": "rr_ts381",
+      "display_name": "Technical Specification 3.8.1",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-3-8-1"
+    },
+    {
+      "id": "rr_ts382",
+      "display_name": "Technical Specification 3.8.2",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-3-8-2"
+    },
+    {
+      "id": "rr_50731iB",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_50732v",
+      "display_name": "10 CFR 50.73(a)(2)(v)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_50731iB",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_50732v",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_eb",
+      "evidence": null
+    },
+    {
+      "source": "c_bkr",
+      "relation": "PART_OF",
+      "target": "sys_eb",
+      "evidence": null
+    },
+    {
+      "source": "c_sta",
+      "relation": "PART_OF",
+      "target": "c_bkr",
+      "evidence": null
+    },
+    {
+      "source": "fm_corrosion",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_corrosion",
+      "relation": "LEADS_TO",
+      "target": "fm_notreset",
+      "evidence": null
+    },
+    {
+      "source": "fm_notreset",
+      "relation": "LEADS_TO",
+      "target": "fm_bkrfail",
+      "evidence": null
+    },
+    {
+      "source": "fm_bkrfail",
+      "relation": "LEADS_TO",
+      "target": "cons_bus17",
+      "evidence": null
+    },
+    {
+      "source": "fm_bkrfail",
+      "relation": "LEADS_TO",
+      "target": "cons_ts381",
+      "evidence": null
+    },
+    {
+      "source": "cons_bus17",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_edga",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_extent",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procedure",
+      "evidence": null
+    }
+  ],
+  "chain": "surface corrosion on STA moving core [cause TBD] -> STA fails to reset to shelf condition -> breaker 52/EG1B2 trips free on demand -> Bus 17 fails to load onto EDG B / EDG B inoperable -> retroactive TS 3.8.1 violation (one/no EDG operable, 4d9.4h) [backup EDG A operable during MODE 5 window]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code was TBD/provisional in FORM-366 fields; narrative gives a clear direct-cause statement (STA corrosion) but no official cause code letter was assigned, so category remains 'provisional' per rule 4. Two consequences modeled: the immediate test-time failure (Bus 17/EDG B) and the retroactively identified TS 3.8.1 violation window (one/no EDG operable) discovered via review of prior trip history. EDG A explicitly stated to have remained operable throughout the relevant MODE 5 period, justifying BACKED_UP_BY; note narrative states EDG A was itself briefly inoperable for its own surveillance testing on 4/7, but that is a separate, non-immobilizing detail not modeled as a backup failure since it is not part of this failure chain. No prior similar LERs found per licensee search, so no SIMILAR_TO/stub LER emitted."
+}

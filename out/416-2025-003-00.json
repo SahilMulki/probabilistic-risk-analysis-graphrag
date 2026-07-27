@@ -1,0 +1,361 @@
+{
+  "ler_number": "416-2025-003-00",
+  "identity": {
+    "accession_number": "ML25230A099",
+    "docket": "05000416",
+    "plant_name": "Grand Gulf",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2025-06-17",
+    "report_date": "2025-08-18",
+    "operating_mode": "1",
+    "power_level": 70,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Grand Gulf Nuclear Station, Unit 1 Licensee Event Report 2025-003-00, Manual Reactor Scram due to Degraded Main Condenser Vacuum Caused by Circulating Water Pump Trip"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The direct cause of the event was a failure of an embedded winding Resistance Temperature Device (RTD) in the Circulating Water Pump A Motor which resulted in false high winding temperatures and actuation of the motor thermal overload protection function.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "RTD sensor failure causing spurious motor protection trip",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 416-2025-003-00",
+      "properties": {
+        "match_key": "LER:416-2025-003-00"
+      },
+      "type": "LER",
+      "key": "416-2025-003-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:416-2025-003-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Grand Gulf Unit 1",
+      "properties": {
+        "match_key": "Unit:05000416",
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000416",
+      "match_key": "Unit:05000416"
+    },
+    {
+      "id": "cause",
+      "display_name": "TBD Cause (provisional)",
+      "properties": {
+        "match_key": "Cause:provisional"
+      },
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "RTD sensor failure causing spurious motor protection trip",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_sg",
+      "display_name": "Main Condenser Vacuum",
+      "properties": {
+        "match_key": "System:SG"
+      },
+      "type": "System",
+      "eiis_code": "SG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SG"
+    },
+    {
+      "id": "sys_ke",
+      "display_name": "Circulating Water",
+      "properties": {
+        "match_key": "System:KE"
+      },
+      "type": "System",
+      "eiis_code": "KE",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:KE"
+    },
+    {
+      "id": "sys_sj",
+      "display_name": "Main Feedwater",
+      "properties": {
+        "match_key": "System:SJ"
+      },
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; operable, maintained reactor level",
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "c_pump",
+      "display_name": "Circulating Water Pump A",
+      "properties": {
+        "match_key": "Component:P|A"
+      },
+      "type": "Component",
+      "eiis_code": "P",
+      "identifier": "A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:P|A"
+    },
+    {
+      "id": "c_rtd",
+      "display_name": "Embedded winding Resistance Temperature Device (RTD)",
+      "properties": {
+        "match_key": "Component:embedded-winding-rtd"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:embedded-winding-resistance-temperature-device-rtd"
+    },
+    {
+      "id": "fm_rtdfail",
+      "display_name": "RTD failed, producing false high winding temperature reading",
+      "properties": {
+        "match_key": "FailureMode:rtd-failed-false-high-temp"
+      },
+      "type": "FailureMode",
+      "description": "Embedded winding RTD in Circulating Water Pump A Motor failed, causing false high winding temperature indication.",
+      "match_key": "FailureMode:rtd-failed-producing-false-high-winding-temperature-reading"
+    },
+    {
+      "id": "fm_ovltrip",
+      "display_name": "Motor thermal overload protection actuated",
+      "properties": {
+        "match_key": "FailureMode:thermal-overload-actuated"
+      },
+      "type": "FailureMode",
+      "description": "False high winding temperature reading actuated the motor thermal overload protection function.",
+      "match_key": "FailureMode:motor-thermal-overload-protection-actuated"
+    },
+    {
+      "id": "fm_pumptrip",
+      "display_name": "Circulating Water Pump A tripped",
+      "properties": {
+        "match_key": "FailureMode:circ-water-pump-a-tripped"
+      },
+      "type": "FailureMode",
+      "description": null,
+      "match_key": "FailureMode:circulating-water-pump-a-tripped"
+    },
+    {
+      "id": "fm_vacloss",
+      "display_name": "Degraded main condenser vacuum",
+      "properties": {
+        "match_key": "FailureMode:degraded-condenser-vacuum"
+      },
+      "type": "FailureMode",
+      "description": null,
+      "match_key": "FailureMode:degraded-main-condenser-vacuum"
+    },
+    {
+      "id": "cons_scram",
+      "display_name": "Manual reactor scram",
+      "properties": {
+        "match_key": "Consequence:manual-reactor-scram"
+      },
+      "type": "Consequence",
+      "start": "2025-06-17T04:26",
+      "end": null,
+      "duration": null,
+      "tz": "CT",
+      "match_key": "Consequence:manual-reactor-scram"
+    },
+    {
+      "id": "cons_isolation",
+      "display_name": "Reactor water Level 3 isolation signal received",
+      "properties": {
+        "match_key": "Consequence:level-3-isolation-signal"
+      },
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:reactor-water-level-3-isolation-signal-received"
+    },
+    {
+      "id": "ca_replace_rtd",
+      "display_name": "Remove failed RTD from circuit and use installed spare",
+      "properties": {
+        "match_key": "CorrectiveAction:remove-failed-rtd-use-spare"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:remove-failed-rtd-from-circuit-and-use-installed-spare"
+    },
+    {
+      "id": "ca_logic",
+      "display_name": "Change thermal overload trip logic from 1-out-of-2 to 2-out-of-2",
+      "properties": {
+        "match_key": "CorrectiveAction:change-trip-logic-2-of-2"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:change-thermal-overload-trip-logic-from-1-out-of-2-to-2-out-of-2"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "LER 416-2025-001-00",
+      "properties": {
+        "match_key": "LER:1-2025-001-00"
+      },
+      "type": "LER",
+      "key": "416-2025-001-00",
+      "stub": true,
+      "title": "Manual Scram Due to Degraded Condenser Vacuum",
+      "plant": "Grand Gulf Nuclear Station",
+      "match_key": "LER:416-2025-001-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ke",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sg",
+      "evidence": null
+    },
+    {
+      "source": "c_rtd",
+      "relation": "PART_OF",
+      "target": "c_pump",
+      "evidence": null
+    },
+    {
+      "source": "c_pump",
+      "relation": "PART_OF",
+      "target": "sys_ke",
+      "evidence": null
+    },
+    {
+      "source": "fm_rtdfail",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_rtdfail",
+      "relation": "LEADS_TO",
+      "target": "fm_ovltrip",
+      "evidence": null
+    },
+    {
+      "source": "fm_ovltrip",
+      "relation": "LEADS_TO",
+      "target": "fm_pumptrip",
+      "evidence": null
+    },
+    {
+      "source": "fm_pumptrip",
+      "relation": "LEADS_TO",
+      "target": "fm_vacloss",
+      "evidence": null
+    },
+    {
+      "source": "fm_vacloss",
+      "relation": "LEADS_TO",
+      "target": "cons_scram",
+      "evidence": null
+    },
+    {
+      "source": "cons_scram",
+      "relation": "LEADS_TO",
+      "target": "cons_isolation",
+      "evidence": null
+    },
+    {
+      "source": "cons_isolation",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_sj",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_rtd",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_logic",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    }
+  ],
+  "chain": "RTD failure (embedded winding) [cause TBD] -> false high winding temperature reading -> motor thermal overload protection actuated -> Circulating Water Pump A tripped -> degraded main condenser vacuum -> manual reactor scram -> Level 3 isolation signal [backup: main feedwater maintained level]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code is TBD/provisional per FORM-366 fields; category left as 'provisional' per rule 4 even though narrative clearly identifies a component (RTD) failure as direct cause. c_pump component given identifier 'A' per narrative designation 'Circulating Water Pump A'. Previous similar event cited as 'LEA 2025-001-00' in narrative (likely OCR typo for LER); key recorded as stated form with unit digit prefix per rule 9 guidance, using '1-2025-001-00' since Grand Gulf is a single-unit plant referenced as Unit 1."
+}

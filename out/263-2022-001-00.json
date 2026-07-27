@@ -1,0 +1,391 @@
+{
+  "ler_number": "263-2022-001-00",
+  "identity": {
+    "accession_number": "ML22189A111",
+    "docket": "05000263",
+    "plant_name": "Monticello",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2022-05-13",
+    "report_date": "2022-07-07",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "inspection",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2022-001-00 for Monticello Nuclear Generating Plant, Loss of Control Room Envelope Operability"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(ii)(B)",
+      "10 CFR 50.73(a)(2)(v)(D)",
+      "10 CFR 50.73(a)(2)(vii)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "B",
+      "system": "SH",
+      "component": "PCV",
+      "manufacturer": "C665",
+      "reportable": "Y"
+    },
+    {
+      "cause": "X",
+      "system": "SH",
+      "component": "PCV",
+      "manufacturer": "C665",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The cause of the steam leak from MS-24-2 was improperly consolidated valve packing when the valve was installed. MS-23-2 developed a through body leak, the apparent cause of which cannot be determined without an inspection of the valve body.",
+    "cause_code": "B",
+    "category": "Design/Manufacturing/Installation",
+    "theme": "improperly consolidated valve packing at installation; unexplained through-body leak",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 263-2022-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "263-2022-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:263-2022-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Monticello Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000263",
+      "match_key": "Unit:05000263"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Manufacturing/Installation (B)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "B",
+      "category": "Design/Manufacturing/Installation",
+      "theme": "improperly consolidated valve packing at installation; unexplained through-body leak",
+      "proximate_text": "The cause of the steam leak from MS-24-2 was improperly consolidated valve packing when the valve was installed. MS-23-2 developed a through body leak, the apparent cause of which cannot be determined without an inspection of the valve body.",
+      "provisional": false,
+      "match_key": "Cause:Design/Manufacturing/Installation"
+    },
+    {
+      "id": "sys_sh",
+      "display_name": "Steam Jet Air Ejector",
+      "properties": {
+        "note": "SJAE system, source of leaking steam"
+      },
+      "type": "System",
+      "eiis_code": "SH",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SH"
+    },
+    {
+      "id": "sys_cre",
+      "display_name": "Control Room Envelope",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "affected safety function",
+      "match_key": "System:control-room-envelope"
+    },
+    {
+      "id": "sys_cref",
+      "display_name": "Control Room Emergency Filtration System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "both subsystems otherwise available during event",
+      "match_key": "System:control-room-emergency-filtration-system"
+    },
+    {
+      "id": "c_ms232",
+      "display_name": "12 SJAE Pressure Control Outlet Valve MS-23-2",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "PCV",
+      "identifier": "MS-23-2",
+      "model": null,
+      "manufacturer_code": "C665",
+      "inferred_code": false,
+      "match_key": "Component:PCV|MS-23-2"
+    },
+    {
+      "id": "c_ms242",
+      "display_name": "12 SJAE Pressure Control Bypass Valve MS-24-2",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "PCV",
+      "identifier": "MS-24-2",
+      "model": null,
+      "manufacturer_code": "C665",
+      "inferred_code": false,
+      "match_key": "Component:PCV|MS-24-2"
+    },
+    {
+      "id": "fm_packing",
+      "display_name": "MS-24-2 valve packing improperly consolidated at installation",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Improperly consolidated valve packing at MS-24-2 installation led to steam leakage from the valve packing.",
+      "match_key": "FailureMode:ms-24-2-valve-packing-improperly-consolidated-at-installation"
+    },
+    {
+      "id": "fm_bodyleak",
+      "display_name": "MS-23-2 through-body leak",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "MS-23-2 developed a through-body leak; apparent cause undetermined without inspection of valve body.",
+      "match_key": "FailureMode:ms-23-2-through-body-leak"
+    },
+    {
+      "id": "fm_leakage_exceed",
+      "display_name": "Combined steam leakage exceeded AST dose analysis assumptions",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Accumulated steam leakage from MS-23-2 and MS-24-2, combined with margin already eroded by previously identified leaks, exceeded the leakage rate assumptions of the Alternate Source Term (AST) dose analysis calculation.",
+      "match_key": "FailureMode:combined-steam-leakage-exceeded-ast-dose-analysis-assumptions"
+    },
+    {
+      "id": "cons_cre",
+      "display_name": "Control Room Envelope declared inoperable",
+      "properties": {
+        "note": "LCO 3.7.4 Condition B entered; estimated post-accident CR operator dose limit could have been exceeded prior to compensatory measures"
+      },
+      "type": "Consequence",
+      "start": "2022-05-05",
+      "end": "2022-05-20",
+      "duration": "15 days",
+      "tz": null,
+      "match_key": "Consequence:control-room-envelope-declared-inoperable"
+    },
+    {
+      "id": "ca_contain",
+      "display_name": "Contain leakage from MS-23-2 and MS-24-2",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:contain-leakage-from-ms-23-2-and-ms-24-2"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace MS-23-2 and MS-24-2 valves during next refueling outage",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-ms-23-2-and-ms-24-2-valves-during-next-refueling-outage"
+    },
+    {
+      "id": "ca_procedure",
+      "display_name": "Develop procedural clarifications to verify valve packing installation/consolidation",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:develop-procedural-clarifications-to-verify-valve-packing-installation-consolidation"
+    },
+    {
+      "id": "ca_maint_review",
+      "display_name": "Review maintenance strategies against AST consequences",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:review-maintenance-strategies-against-ast-consequences"
+    },
+    {
+      "id": "mfr_c665",
+      "display_name": "Manufacturer C665",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "C665",
+      "match_key": "Manufacturer:C665"
+    },
+    {
+      "id": "rr_5073ii",
+      "display_name": "10 CFR 50.73(a)(2)(ii)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-ii-b"
+    },
+    {
+      "id": "rr_5073v",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "rr_5073vii",
+      "display_name": "10 CFR 50.73(a)(2)(vii)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-vii"
+    },
+    {
+      "id": "rr_nei",
+      "display_name": "NEI 99-02 Regulatory Assessment Performance Indicator Guideline",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "standard/guidance",
+      "match_key": "RegulatoryReference:nei-99-02-regulatory-assessment-performance-indicator-guideline"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073ii",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073v",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073vii",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_nei",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sh",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_cre",
+      "evidence": null
+    },
+    {
+      "source": "c_ms232",
+      "relation": "PART_OF",
+      "target": "sys_sh",
+      "evidence": null
+    },
+    {
+      "source": "c_ms242",
+      "relation": "PART_OF",
+      "target": "sys_sh",
+      "evidence": null
+    },
+    {
+      "source": "c_ms232",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_c665",
+      "evidence": null
+    },
+    {
+      "source": "c_ms242",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_c665",
+      "evidence": null
+    },
+    {
+      "source": "fm_packing",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_packing",
+      "relation": "LEADS_TO",
+      "target": "fm_leakage_exceed",
+      "evidence": null
+    },
+    {
+      "source": "fm_bodyleak",
+      "relation": "LEADS_TO",
+      "target": "fm_leakage_exceed",
+      "evidence": null
+    },
+    {
+      "source": "fm_leakage_exceed",
+      "relation": "LEADS_TO",
+      "target": "cons_cre",
+      "evidence": null
+    },
+    {
+      "source": "cons_cre",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_cref",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_contain",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procedure",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_maint_review",
+      "evidence": null
+    }
+  ],
+  "chain": "MS-24-2 packing improperly consolidated at installation [cause B] -> MS-23-2 through-body leak (undetermined cause) -> combined SJAE steam leakage exceeds AST dose analysis leakage assumptions -> Control Room Envelope declared inoperable (15 days) [backup: both CREF subsystems otherwise available]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Two block-13 rows both describe the same MS-23-2/MS-24-2 valve leakage event with different cause codes (B for MS-24-2 installation packing, X for MS-23-2 undetermined through-body leak); official form-level cause_code/category is B, Design/Manufacturing/Installation, per instructions. Both failure modes modeled as separate FailureMode nodes since they are physically distinct defects converging on the same consequence. CREF is not modeled as a full System with EIIS code since only its availability is referenced narratively as a backup; treated as non_eiis stated-operable backup per rule 6. No previous similar LER stub created since narrative explicitly states none exist in the past three years."
+}

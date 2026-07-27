@@ -1,0 +1,349 @@
+{
+  "ler_number": "483-2020-006-00",
+  "identity": {
+    "accession_number": "ML20330A267",
+    "docket": "05000483",
+    "plant_name": "Callaway",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2020-09-27",
+    "report_date": "2020-11-25",
+    "operating_mode": "1",
+    "power_level": 98,
+    "discovery_context": "inspection",
+    "status": "final",
+    "revision": "00",
+    "ens_number": "54916",
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Reactor Trip Due to Main Generator Ground Fault."
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)",
+      "10 CFR 50.73(a)(2)(iv)(B)(1)",
+      "10 CFR 50.73(a)(2)(iv)(B)(6)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The laminated sheet on the 5B flexible link became detached and caused a phase-to-ground fault on B phase of the 25-kV isophase bus system. This actuated the main generator protection system, which resulted in a turbine trip (with reactor power above the P-9 setpoint) and an automatic reactor trip.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "isophase bus flexible link degradation",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 483-2020-006-00",
+      "properties": {},
+      "type": "LER",
+      "key": "483-2020-006-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:483-2020-006-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Callaway Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000483",
+      "match_key": "Unit:05000483"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "isophase bus flexible link degradation",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_rps",
+      "display_name": "Reactor Trip System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "actuated safety system",
+      "match_key": "System:reactor-trip-system"
+    },
+    {
+      "id": "sys_gen",
+      "display_name": "Main Generator",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "TB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "faulted system",
+      "match_key": "System:TB"
+    },
+    {
+      "id": "sys_afw",
+      "display_name": "Auxiliary Feedwater System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "actuated per design",
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "c_isophase",
+      "display_name": "Isolated Phase (Isophase) Bus System, 25-kV",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:isolated-phase-isophase-bus-system-25-kv"
+    },
+    {
+      "id": "c_flexlink",
+      "display_name": "5B Flexible Link (laminated sheet-style)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "5B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:5b-flexible-link-laminated-sheet-style"
+    },
+    {
+      "id": "fm_detach",
+      "display_name": "Laminated sheet on 5B flexible link became detached",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "A piece of the laminated sheet-style flexible link separated inside the isophase bus duct.",
+      "match_key": "FailureMode:laminated-sheet-on-5b-flexible-link-became-detached"
+    },
+    {
+      "id": "fm_ground",
+      "display_name": "Phase-to-ground fault on B phase of 25-kV isophase bus",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Detached sheet caused a phase-to-ground fault on the B phase of the 25-kV isophase bus system.",
+      "match_key": "FailureMode:phase-to-ground-fault-on-b-phase-of-25-kv-isophase-bus"
+    },
+    {
+      "id": "fm_genprotect",
+      "display_name": "Main generator protection system actuation / generator trip",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The fault actuated the main generator protection system, resulting in a main generator trip.",
+      "match_key": "FailureMode:main-generator-protection-system-actuation-generator-trip"
+    },
+    {
+      "id": "fm_turbtrip",
+      "display_name": "Turbine trip (reactor power above P-9 setpoint)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Generator trip caused a turbine trip while reactor power was above the P-9 setpoint.",
+      "match_key": "FailureMode:turbine-trip-reactor-power-above-p-9-setpoint"
+    },
+    {
+      "id": "cons_trip",
+      "display_name": "Automatic reactor trip and AFW actuation",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2020-09-27T02:03",
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:automatic-reactor-trip-and-afw-actuation"
+    },
+    {
+      "id": "ca_inspect",
+      "display_name": "Inspect and repair all isophase flexible link locations as necessary",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:inspect-and-repair-all-isophase-flexible-link-locations-as-necessary"
+    },
+    {
+      "id": "ca_design",
+      "display_name": "Consider additional actions to improve flexible link design configuration",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:consider-additional-actions-to-improve-flexible-link-design-configuration"
+    },
+    {
+      "id": "rr_5073iv_a",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5073iv_b1",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(B)(1)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-b-1"
+    },
+    {
+      "id": "rr_5073iv_b6",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(B)(6)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-b-6"
+    },
+    {
+      "id": "ler_prev_2013",
+      "display_name": "LER 483-2013-008-00",
+      "properties": {},
+      "type": "LER",
+      "key": "483-2013-008-00",
+      "stub": true,
+      "title": "Electrical faults caused damage to isophase bus in auxiliary transformer and main generator neutral connection box, causing generator trip and reactor trip",
+      "plant": "Callaway Plant",
+      "match_key": "LER:483-2013-008-00"
+    },
+    {
+      "id": "ler_prev_2014",
+      "display_name": "LER 483-2014-006-00",
+      "properties": {},
+      "type": "LER",
+      "key": "483-2014-006-00",
+      "stub": true,
+      "title": "Turbine trip when main generator excitation transformer faulted to ground, resulting in uncomplicated reactor trip",
+      "plant": "Callaway Plant",
+      "match_key": "LER:483-2014-006-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073iv_a",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073iv_b1",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073iv_b6",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rps",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_gen",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_afw",
+      "evidence": null
+    },
+    {
+      "source": "c_flexlink",
+      "relation": "PART_OF",
+      "target": "c_isophase",
+      "evidence": null
+    },
+    {
+      "source": "fm_detach",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_detach",
+      "relation": "LEADS_TO",
+      "target": "fm_ground",
+      "evidence": null
+    },
+    {
+      "source": "fm_ground",
+      "relation": "LEADS_TO",
+      "target": "fm_genprotect",
+      "evidence": null
+    },
+    {
+      "source": "fm_genprotect",
+      "relation": "LEADS_TO",
+      "target": "fm_turbtrip",
+      "evidence": null
+    },
+    {
+      "source": "fm_turbtrip",
+      "relation": "LEADS_TO",
+      "target": "cons_trip",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_inspect",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_design",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev_2013",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev_2014",
+      "evidence": null
+    }
+  ],
+  "chain": "laminated sheet on 5B flexible link detaches [cause TBD] -> phase-to-ground fault on B phase of 25-kV isophase bus -> main generator protection system actuates / generator trip -> turbine trip (power above P-9) -> automatic reactor trip and AFW actuation",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code left TBD/provisional per FORM-366 fields; narrative provides detailed proximate cause (flexible link detachment) but no official cause code/category was assigned in the source fields. Isophase bus and flexible link modeled as components since narrative explicitly describes containment (flexible link located inside the bus duct / part of isophase bus system). Two previous similar LERs captured as stubs per Section 8; docket-derived unit prefix '1' used per plant (Callaway Unit 1), as stated in narrative reference format 'LER 2013-008' — no explicit unit digit given in text, so conventional unit-1 prefix applied consistent with plant having a single unit LER numbering convention absent further detail."
+}

@@ -1,0 +1,375 @@
+{
+  "ler_number": "374-2023-001-00",
+  "identity": {
+    "accession_number": "ML23107A190",
+    "docket": "05000374",
+    "plant_name": "La Salle",
+    "unit": 2,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2023-02-17",
+    "report_date": "2023-04-17",
+    "operating_mode": "5",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Standby Liquid Control valve Inoperable due to failed motor starter contactor"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "8",
+      "system": "SC",
+      "component": "BKR",
+      "manufacturer": "E062",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "binding of the full voltage reversing (FVR) contactor mechanical interlock. The FVR mechanical interlock is designed to return to the neutral position following contactor de-energization. When the mechanical interlock binds, it does not return to the center position, preventing one of the two contactors from closing.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "mechanical interlock binding (component defect, Part 21)",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 374-2023-001-00",
+      "properties": {
+        "match_key": "LER:374-2023-001-00"
+      },
+      "type": "LER",
+      "key": "374-2023-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:374-2023-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "La Salle Unit 2",
+      "properties": {
+        "match_key": "Unit:05000374",
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000374",
+      "match_key": "Unit:05000374"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional (TBD)",
+      "properties": {
+        "match_key": "Cause:provisional"
+      },
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "mechanical interlock binding (component defect, Part 21)",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_sc",
+      "display_name": "Standby Liquid Control",
+      "properties": {
+        "match_key": "System:SC"
+      },
+      "type": "System",
+      "eiis_code": "SC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected system",
+      "match_key": "System:SC"
+    },
+    {
+      "id": "c_valve",
+      "display_name": "A SLC storage tank outlet valve 2C41-F001A",
+      "properties": {
+        "match_key": "Component:V|2C41-F001A"
+      },
+      "type": "Component",
+      "eiis_code": "V",
+      "identifier": "2C41-F001A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:V|2C41-F001A"
+    },
+    {
+      "id": "c_bkr",
+      "display_name": "Breaker, A SLC storage tank outlet valve",
+      "properties": {
+        "match_key": "Component:BKR|2AP75E-C2"
+      },
+      "type": "Component",
+      "eiis_code": "BKR",
+      "identifier": "2AP75E-C2",
+      "model": null,
+      "manufacturer_code": "E062",
+      "inferred_code": false,
+      "match_key": "Component:BKR|2AP75E-C2"
+    },
+    {
+      "id": "c_contactor",
+      "display_name": "Full voltage reversing (FVR) contactor",
+      "properties": {
+        "match_key": "Component:fvr-contactor"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:full-voltage-reversing-fvr-contactor"
+    },
+    {
+      "id": "c_interlock",
+      "display_name": "FVR contactor mechanical interlock",
+      "properties": {
+        "match_key": "Component:fvr-mechanical-interlock"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:fvr-contactor-mechanical-interlock"
+    },
+    {
+      "id": "fm_interlock_bind",
+      "display_name": "Mechanical interlock bound / failed to return to neutral position",
+      "properties": {
+        "match_key": "FailureMode:interlock-bound"
+      },
+      "type": "FailureMode",
+      "description": "The FVR mechanical interlock became bound the previous time the contactor picked up when operated in L2R18, preventing it from returning to the center position.",
+      "match_key": "FailureMode:mechanical-interlock-bound-failed-to-return-to-neutral-position"
+    },
+    {
+      "id": "fm_contactor_fail",
+      "display_name": "Contactor fails to close/operate",
+      "properties": {
+        "match_key": "FailureMode:contactor-fails-to-operate"
+      },
+      "type": "FailureMode",
+      "description": "One of the two contactors could not close because the bound interlock prevented it, causing the contactor to fail to operate.",
+      "match_key": "FailureMode:contactor-fails-to-close-operate"
+    },
+    {
+      "id": "fm_valve_fail",
+      "display_name": "A SLC storage tank outlet valve fails to open",
+      "properties": {
+        "match_key": "FailureMode:valve-fails-to-open"
+      },
+      "type": "FailureMode",
+      "description": "2C41-F001A failed to open during outage surveillance testing due to the failed breaker contactor.",
+      "match_key": "FailureMode:a-slc-storage-tank-outlet-valve-fails-to-open"
+    },
+    {
+      "id": "cons_slc_inop",
+      "display_name": "A SLC train inoperable for entire operating cycle",
+      "properties": {
+        "match_key": "Consequence:slc-a-train-inoperable"
+      },
+      "type": "Consequence",
+      "start": null,
+      "end": "2023-02-17T15:44",
+      "duration": "approximately 2 years (since L2R18 refueling outage)",
+      "tz": "CST",
+      "match_key": "Consequence:a-slc-train-inoperable-for-entire-operating-cycle"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace failed contactor mechanical interlock with updated design",
+      "properties": {
+        "match_key": "CorrectiveAction:replace-interlock"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-failed-contactor-mechanical-interlock-with-updated-design"
+    },
+    {
+      "id": "mfr_eaton",
+      "display_name": "Eaton",
+      "properties": {
+        "match_key": "Manufacturer:E062"
+      },
+      "type": "Manufacturer",
+      "code": "E062",
+      "match_key": "Manufacturer:E062"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion",
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_lco317",
+      "display_name": "LCO 3.1.7 (SLC System)",
+      "properties": {
+        "type": "license-basis",
+        "match_key": "RegulatoryReference:lco-3-1-7"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:lco-3-1-7-slc-system"
+    },
+    {
+      "id": "rr_lco381",
+      "display_name": "LCO 3.8.1 (AC Sources-Operating)",
+      "properties": {
+        "type": "license-basis",
+        "match_key": "RegulatoryReference:lco-3-8-1"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:lco-3-8-1-ac-sources-operating"
+    },
+    {
+      "id": "rr_part21",
+      "display_name": "Westinghouse Part 21 Notification (ML22140A208)",
+      "properties": {
+        "type": "standard/guidance",
+        "match_key": "RegulatoryReference:part21-ml22140a208"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:westinghouse-part-21-notification-ml22140a208"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "Westinghouse Part 21 Notification (4/11/2022) - Eaton FVR contactor mechanical interlock pawl failures",
+      "properties": {
+        "match_key": "LER:Part21-2022-Westinghouse"
+      },
+      "type": "LER",
+      "key": "Part21-2022-Westinghouse",
+      "stub": true,
+      "title": "Eaton FVR contactors sporadically failed to electrically close on demand due to mechanical interlock pawl failing to return to neutral position",
+      "plant": null,
+      "match_key": "LER:Part21-2022-Westinghouse"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_lco317",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_lco381",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sc",
+      "evidence": null
+    },
+    {
+      "source": "c_valve",
+      "relation": "PART_OF",
+      "target": "sys_sc",
+      "evidence": null
+    },
+    {
+      "source": "c_interlock",
+      "relation": "PART_OF",
+      "target": "c_contactor",
+      "evidence": null
+    },
+    {
+      "source": "fm_interlock_bind",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_interlock_bind",
+      "relation": "LEADS_TO",
+      "target": "fm_contactor_fail",
+      "evidence": null
+    },
+    {
+      "source": "fm_contactor_fail",
+      "relation": "LEADS_TO",
+      "target": "fm_valve_fail",
+      "evidence": null
+    },
+    {
+      "source": "fm_valve_fail",
+      "relation": "LEADS_TO",
+      "target": "cons_slc_inop",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "c_bkr",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_eaton",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_part21",
+      "evidence": null
+    }
+  ],
+  "chain": "FVR mechanical interlock binds (previous actuation, L2R18) [cause TBD, Part 21 defect] -> contactor fails to close/operate -> A SLC outlet valve 2C41-F001A fails to open -> A SLC train inoperable for entire operating cycle (~2 years) [corrective: replace interlock with updated design]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q9"
+  ],
+  "notes": "Official cause code is TBD in FORM-366 fields (block 13 shows '8' as a numeric code, not one of the standard A-E/X cause letters, so cause_code/category are kept as provisional per rule 4). Failure was discovered retrospectively via failure analysis; the valve had not been operated since refueling outage L2R18, roughly two years prior, establishing a past inoperability condition for the full cycle. No BACKED_UP_BY edges emitted: B train of SLC was also affected by concurrent DG inoperabilities per LCO 3.8.1, and narrative does not state B train remained operable throughout — it is discussed only as an LCO-driven consequence, not a stated available backup. Previous occurrence stub uses Part 21 notification date/company as the closest identifiable prior-occurrence record since no formal LER number is given in the narrative."
+}

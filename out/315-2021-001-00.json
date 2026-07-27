@@ -1,0 +1,384 @@
+{
+  "ler_number": "315-2021-001-00",
+  "identity": {
+    "accession_number": "ML21161A329",
+    "docket": "05000315",
+    "plant_name": "D.C. Cook",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2021-04-15",
+    "report_date": "2021-06-10",
+    "operating_mode": "1",
+    "power_level": 49,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Main Steam Safety Valve Setpoints Found Outside Technical Specifications Limits"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "X",
+      "system": "SB",
+      "component": "RV",
+      "manufacturer": "Dresser",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "setpoint drift is responsible for not meeting the surveillance test acceptance criteria... due to the low frequency of failure of these valves and the historical randomness of setpoint drift",
+    "cause_code": "X",
+    "category": "Other",
+    "theme": "random setpoint drift",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 315-2021-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "315-2021-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:315-2021-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "D.C. Cook Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000315",
+      "match_key": "Unit:05000315"
+    },
+    {
+      "id": "cause",
+      "display_name": "Other (X)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "X",
+      "category": "Other",
+      "theme": "random setpoint drift",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Other"
+    },
+    {
+      "id": "sys_sb",
+      "display_name": "Main Steam Safety Valves system",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SB"
+    },
+    {
+      "id": "sys_sg",
+      "display_name": "Steam Generator",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SG"
+    },
+    {
+      "id": "c_1a3",
+      "display_name": "MSSV 2-SV-1A-3",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "RV",
+      "identifier": "2-SV-1A-3",
+      "model": "3707RA",
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:RV|2-SV-1A-3"
+    },
+    {
+      "id": "c_2b3",
+      "display_name": "MSSV 2-SV-2B-3",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "RV",
+      "identifier": "2-SV-2B-3",
+      "model": "3707RA",
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:RV|2-SV-2B-3"
+    },
+    {
+      "id": "c_2b2",
+      "display_name": "MSSV 2-SV-2B-2",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "RV",
+      "identifier": "2-SV-2B-2",
+      "model": "3707RA",
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:RV|2-SV-2B-2"
+    },
+    {
+      "id": "fm_drift_1a3",
+      "display_name": "2-SV-1A-3 lift setpoint drifted high (1099.1 psig vs 1065 psig +/-3%)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "As-found lift setpoint above TS allowable band",
+      "match_key": "FailureMode:2-sv-1a-3-lift-setpoint-drifted-high-1099-1-psig-vs-1065-psig-3"
+    },
+    {
+      "id": "fm_drift_2b3",
+      "display_name": "2-SV-2B-3 lift setpoint drifted high (1126.8 psig vs 1075 psig +/-3%)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "As-found lift setpoint above TS allowable band",
+      "match_key": "FailureMode:2-sv-2b-3-lift-setpoint-drifted-high-1126-8-psig-vs-1075-psig-3"
+    },
+    {
+      "id": "fm_drift_2b2",
+      "display_name": "2-SV-2B-2 lift setpoint drifted low (1040.0 psig vs 1075 psig +/-3%)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "As-found lift setpoint below TS allowable band",
+      "match_key": "FailureMode:2-sv-2b-2-lift-setpoint-drifted-low-1040-0-psig-vs-1075-psig-3"
+    },
+    {
+      "id": "cons_inop",
+      "display_name": "Three MSSVs considered inoperable beyond TS allowed time; condition reportable under 10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "note": "20 total MSSVs required operable per TS LCO 3.7.1; expanded testing performed per ASME OM Code"
+      },
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:three-mssvs-considered-inoperable-beyond-ts-allowed-time-condition-reportable-under-10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "ca_adjust",
+      "display_name": "Adjust the three out-of-tolerance MSSVs to meet as-left criteria",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:adjust-the-three-out-of-tolerance-mssvs-to-meet-as-left-criteria"
+    },
+    {
+      "id": "ca_expand",
+      "display_name": "Test all remaining SG MSSVs per ASME OM Code expanded scope requirement",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:test-all-remaining-sg-mssvs-per-asme-om-code-expanded-scope-requirement"
+    },
+    {
+      "id": "mfr_dresser",
+      "display_name": "Consolidated-Dresser",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "Dresser",
+      "match_key": "Manufacturer:Dresser"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts371",
+      "display_name": "TS LCO 3.7.1 (Main Steam Safety Valves)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-lco-3-7-1-main-steam-safety-valves"
+    },
+    {
+      "id": "rr_nureg1022",
+      "display_name": "NUREG-1022, Revision 3",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "standard/guidance",
+      "match_key": "RegulatoryReference:nureg-1022-revision-3"
+    },
+    {
+      "id": "rr_asme_om",
+      "display_name": "ASME OM Code",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "standard/guidance",
+      "match_key": "RegulatoryReference:asme-om-code"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "Prior Unit 1 LER: Main Steam Safety Valve Setpoints Found Outside Technical Specification Limits",
+      "properties": {},
+      "type": "LER",
+      "key": "1-2019-XXX",
+      "stub": true,
+      "title": "Main Steam Safety Valve Setpoints Found Outside Technical Specification Limits",
+      "plant": "Donald C. Cook Nuclear Plant Unit 1",
+      "match_key": "LER:1-2019-XXX"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts371",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sg",
+      "evidence": null
+    },
+    {
+      "source": "c_1a3",
+      "relation": "PART_OF",
+      "target": "sys_sg",
+      "evidence": null
+    },
+    {
+      "source": "c_2b3",
+      "relation": "PART_OF",
+      "target": "sys_sg",
+      "evidence": null
+    },
+    {
+      "source": "c_2b2",
+      "relation": "PART_OF",
+      "target": "sys_sg",
+      "evidence": null
+    },
+    {
+      "source": "c_1a3",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_dresser",
+      "evidence": null
+    },
+    {
+      "source": "c_2b3",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_dresser",
+      "evidence": null
+    },
+    {
+      "source": "c_2b2",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_dresser",
+      "evidence": null
+    },
+    {
+      "source": "fm_drift_1a3",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_drift_2b3",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_drift_2b2",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_drift_1a3",
+      "relation": "LEADS_TO",
+      "target": "cons_inop",
+      "evidence": null
+    },
+    {
+      "source": "fm_drift_2b3",
+      "relation": "LEADS_TO",
+      "target": "cons_inop",
+      "evidence": null
+    },
+    {
+      "source": "fm_drift_2b2",
+      "relation": "LEADS_TO",
+      "target": "cons_inop",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_adjust",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_expand",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_nureg1022",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_asme_om",
+      "evidence": null
+    }
+  ],
+  "chain": "random setpoint drift [cause X] -> 2-SV-1A-3/2-SV-2B-3 drift high & 2-SV-2B-2 drifts low (independent, parallel) -> three MSSVs deemed inoperable beyond TS-allowed time -> reportable per 10 CFR 50.73(a)(2)(i)(B) [adjusted and returned to spec; no safety consequence, remaining SVs and SG PORVs available]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4"
+  ],
+  "notes": "Three physically distinct MSSVs each drifted independently (two high, one low) triggering the same TS LCO 3.7.1 inoperability consequence; modeled as three parallel FailureMode nodes each CAUSED_BY the single Cause node and each LEADS_TO the shared Consequence, per rule 5. No PART_OF from valve to SB system asserted (only INVOLVES) but valve->SG membership is per literal 'Unit 2 SG #3 MSSV' phrasing, treated as explicit containment. Previous similar occurrence (Unit 1, filed 2019-04-30) referenced without an explicit LER number in the narrative; stub key approximated as '1-2019-XXX' since no LER number was given in the text -- flagged as uncertain. No backups modeled: PORVs and remaining MSSVs are named only in PRA/design-context discussion of overpressure mitigation capability, not as operable backups during an inoperability window for these specific valves."
+}

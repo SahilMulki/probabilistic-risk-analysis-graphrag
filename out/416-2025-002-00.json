@@ -1,0 +1,210 @@
+{
+  "ler_number": "416-2025-002-00",
+  "identity": {
+    "accession_number": "ML25133A192",
+    "docket": "05000416",
+    "plant_name": "Grand Gulf",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2025-03-15",
+    "report_date": "2025-05-13",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Grand Gulf Nuclear Station, Unit 1 Licensee Event Report 2025-002-00, Automatic Emergency Diesel Generator Actuation Caused by Grid Transient"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "A degraded voltage of the offsite grid caused the event to occur.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "grid disturbance",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 05000416-2025-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "416-2025-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:416-2025-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Grand Gulf Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000416",
+      "match_key": "Unit:05000416"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "grid disturbance",
+      "proximate_text": "A degraded voltage of the offsite grid caused the event to occur.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "c_breaker",
+      "display_name": "17AC Breaker",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "17AC",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:17ac-breaker"
+    },
+    {
+      "id": "sys_bus",
+      "display_name": "17AC Safety-Related Electrical Bus",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:17ac-safety-related-electrical-bus"
+    },
+    {
+      "id": "sys_edg3",
+      "display_name": "Division III Emergency Diesel Generator",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:division-iii-emergency-diesel-generator"
+    },
+    {
+      "id": "fm_gridtransient",
+      "display_name": "Grid transient caused degraded offsite voltage",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "A grid transient caused a degraded voltage condition on the offsite grid.",
+      "match_key": "FailureMode:grid-transient-caused-degraded-offsite-voltage"
+    },
+    {
+      "id": "fm_breakertrip",
+      "display_name": "17AC breaker tripped open",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The 17AC breaker tripped open in response to the grid transient.",
+      "match_key": "FailureMode:17ac-breaker-tripped-open"
+    },
+    {
+      "id": "cons_edgstart",
+      "display_name": "Division III EDG automatically started and repowered 17AC bus",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2025-03-15T12:48:00",
+      "end": null,
+      "duration": null,
+      "tz": "CDT",
+      "match_key": "Consequence:division-iii-edg-automatically-started-and-repowered-17ac-bus"
+    },
+    {
+      "id": "ca_reclose",
+      "display_name": "Close 17AC offsite source feeder breaker and secure Division III EDG",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:close-17ac-offsite-source-feeder-breaker-and-secure-division-iii-edg"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_edg3",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bus",
+      "evidence": null
+    },
+    {
+      "source": "fm_gridtransient",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_gridtransient",
+      "relation": "LEADS_TO",
+      "target": "fm_breakertrip",
+      "evidence": null
+    },
+    {
+      "source": "fm_breakertrip",
+      "relation": "LEADS_TO",
+      "target": "cons_edgstart",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_reclose",
+      "evidence": null
+    }
+  ],
+  "chain": "degraded offsite grid voltage [cause TBD] -> grid transient -> 17AC breaker trips open -> Division III EDG auto-starts and repowers 17AC bus (as designed)",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code is TBD/provisional per FORM-366 fields; narrative attributes the event to a degraded offsite grid voltage transient. No previous similar events were identified, so no SIMILAR_TO edge or stub LER node was created. EDG and bus modeled as non-EIIS systems since no bracket codes were given in the narrative."
+}

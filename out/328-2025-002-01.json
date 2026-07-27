@@ -1,0 +1,392 @@
+{
+  "ler_number": "328-2025-002-01",
+  "identity": {
+    "accession_number": "ML25275A002",
+    "docket": "05000328",
+    "plant_name": "Sequoyah",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2025-06-24",
+    "report_date": "2025-10-01",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "inspection",
+    "status": "final",
+    "revision": "01",
+    "ens_number": "202190",
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Manual Reactor Trip due to a"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(b)(3)(iv)(A)",
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The root cause for this event was determined to be the MFRV diaphragm provided by the vendor did not meet the vendor's specifications for the valve. TVA determined the diaphragm was made of Ethylene Propylene Rubber (EPR)-70 instead of EPDM or Nitrile. The vendor only provides torque specifications for EPDM or Nitrile, not EPR-70. The performance characteristics of EPR diaphragms are unknown, especially relative to their influence on the required clamping forces.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "vendor-supplied component did not conform to specification",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 328-2025-002-01",
+      "properties": {},
+      "type": "LER",
+      "key": "328-2025-002-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:328-2025-002-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Sequoyah Unit 2",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000328",
+      "match_key": "Unit:05000328"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "vendor-supplied component did not conform to specification",
+      "proximate_text": "The root cause for this event was determined to be the MFRV diaphragm provided by the vendor did not meet the vendor's specifications for the valve. TVA determined the diaphragm was made of Ethylene Propylene Rubber (EPR)-70 instead of EPDM or Nitrile.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_ab",
+      "display_name": "Steam Generator",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "AB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:AB"
+    },
+    {
+      "id": "sys_sj",
+      "display_name": "Main Feedwater",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "sys_jc",
+      "display_name": "Reactor Protection System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JC"
+    },
+    {
+      "id": "sys_ba",
+      "display_name": "Auxiliary Feedwater System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "responded automatically to trip",
+      "match_key": "System:BA"
+    },
+    {
+      "id": "c_mfrv",
+      "display_name": "Main Feedwater Regulating Valve 2-FCV-3-35",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "2-FCV-3-35",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:main-feedwater-regulating-valve-2-fcv-3-35"
+    },
+    {
+      "id": "c_actuator",
+      "display_name": "Fisher Controls Size 80, Type 667 actuator",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": "Size 80, Type 667",
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:fisher-controls-size-80-type-667-actuator"
+    },
+    {
+      "id": "c_diaphragm",
+      "display_name": "Actuator diaphragm",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:actuator-diaphragm"
+    },
+    {
+      "id": "fm_material",
+      "display_name": "Diaphragm fabricated from non-conforming EPR-70 material",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Diaphragm was made of Ethylene Propylene Rubber (EPR)-70 instead of specified EPDM or Nitrile; performance characteristics relative to required clamping forces were unknown.",
+      "match_key": "FailureMode:diaphragm-fabricated-from-non-conforming-epr-70-material"
+    },
+    {
+      "id": "fm_clamp",
+      "display_name": "Insufficient clamping force at diaphragm casing cap screw joint",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Evaluation concluded rupture occurred due to tensile overload at diaphragm casing cap screw holes, likely due to insufficient clamping forces on the joint.",
+      "match_key": "FailureMode:insufficient-clamping-force-at-diaphragm-casing-cap-screw-joint"
+    },
+    {
+      "id": "fm_rupture",
+      "display_name": "Diaphragm ruptured / could not hold air pressure",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Diaphragm rupture occurred initially between five circumferentially adjacent cap screw holes with two secondary tears extending radially toward the center; diaphragm could not hold air pressure.",
+      "match_key": "FailureMode:diaphragm-ruptured-could-not-hold-air-pressure"
+    },
+    {
+      "id": "fm_valvestuck",
+      "display_name": "MFRV would not change states via MCR handswitch",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "MFRV 2-FCV-03-35 would not change states (open or close) when the MCR handswitch was activated.",
+      "match_key": "FailureMode:mfrv-would-not-change-states-via-mcr-handswitch"
+    },
+    {
+      "id": "fm_sglevel",
+      "display_name": "SG Loop 1 water level rapidly lowering",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "SG water level began rapidly lowering; recovery efforts to fully open the valve via manual control did not restore level.",
+      "match_key": "FailureMode:sg-loop-1-water-level-rapidly-lowering"
+    },
+    {
+      "id": "cons_trip",
+      "display_name": "Manual reactor trip / unit entered Mode 3",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2025-06-24T03:51",
+      "end": null,
+      "duration": null,
+      "tz": "EDT",
+      "match_key": "Consequence:manual-reactor-trip-unit-entered-mode-3"
+    },
+    {
+      "id": "ca_extent",
+      "display_name": "Extent-of-condition review of Unit 1 and Unit 2 MFRVs",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:extent-of-condition-review-of-unit-1-and-unit-2-mfrvs"
+    },
+    {
+      "id": "ca_specs",
+      "display_name": "Identify vendor-specified characteristics and acceptance criteria for Nitrile/EPDM diaphragms",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:identify-vendor-specified-characteristics-and-acceptance-criteria-for-nitrile-epdm-diaphragms"
+    },
+    {
+      "id": "ca_inspection",
+      "display_name": "Require receipt inspection/testing of diaphragms to confirm characteristics",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:require-receipt-inspection-testing-of-diaphragms-to-confirm-characteristics"
+    },
+    {
+      "id": "mfr_fisher",
+      "display_name": "Fisher Controls International, Inc.",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": null,
+      "match_key": "Manufacturer:fisher-controls-international-inc"
+    },
+    {
+      "id": "rr_5073biv",
+      "display_name": "10 CFR 50.73(b)(3)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-b-3-iv-a"
+    },
+    {
+      "id": "rr_5073aiv",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_ufsar",
+      "display_name": "Updated Final Safety Analysis Report",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:updated-final-safety-analysis-report"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073biv",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073aiv",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sj",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ab",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ba",
+      "evidence": null
+    },
+    {
+      "source": "c_diaphragm",
+      "relation": "PART_OF",
+      "target": "c_actuator",
+      "evidence": null
+    },
+    {
+      "source": "c_actuator",
+      "relation": "PART_OF",
+      "target": "c_mfrv",
+      "evidence": null
+    },
+    {
+      "source": "fm_material",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_material",
+      "relation": "LEADS_TO",
+      "target": "fm_clamp",
+      "evidence": null
+    },
+    {
+      "source": "fm_clamp",
+      "relation": "LEADS_TO",
+      "target": "fm_rupture",
+      "evidence": null
+    },
+    {
+      "source": "fm_rupture",
+      "relation": "LEADS_TO",
+      "target": "fm_valvestuck",
+      "evidence": null
+    },
+    {
+      "source": "fm_valvestuck",
+      "relation": "LEADS_TO",
+      "target": "fm_sglevel",
+      "evidence": null
+    },
+    {
+      "source": "fm_sglevel",
+      "relation": "LEADS_TO",
+      "target": "cons_trip",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_extent",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_specs",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_inspection",
+      "evidence": null
+    },
+    {
+      "source": "c_actuator",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_fisher",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ufsar",
+      "evidence": null
+    }
+  ],
+  "chain": "vendor-nonconforming EPR-70 diaphragm material [cause TBD] -> insufficient clamping force at cap screw joint -> diaphragm rupture / loses air pressure -> MFRV won't change states -> SG Loop 1 level rapidly lowers -> manual reactor trip / Mode 3",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code is TBD on FORM-366 fields; cause node marked provisional per rule 4. AFW and RPS are named as actuated systems per reporting criterion 50.73(a)(2)(iv)(A), not as design-context backups, so modeled as INVOLVES rather than BACKED_UP_BY. No previous similar events reported at SQN within three years, so no SIMILAR_TO edge/stub LER emitted. Reactor type/vendor inferred from known Sequoyah plant data (Westinghouse PWR), not explicitly stated in the excerpt provided."
+}

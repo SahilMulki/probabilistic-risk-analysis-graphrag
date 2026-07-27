@@ -1,0 +1,312 @@
+{
+  "ler_number": "423-2020-001-00",
+  "identity": {
+    "accession_number": "ML20070H650",
+    "docket": "05000423",
+    "plant_name": "Millstone",
+    "unit": 3,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2020-01-15",
+    "report_date": "2020-03-05",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Technical Specification Allowed Outage Time Exceeded by Accident Monitoring Instrument"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)",
+      "10 CFR 50.73(a)(2)(i)(8)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "the transmitter experienced a zero shift in it's calibration. The specific failure mechanism is unknown.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "instrument calibration drift / unknown mechanism",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 423-2020-001-00",
+      "properties": {
+        "match_key": "LER:423-2020-001-00"
+      },
+      "type": "LER",
+      "key": "423-2020-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:423-2020-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Millstone Unit 3",
+      "properties": {
+        "match_key": "Unit:05000423",
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000423",
+      "match_key": "Unit:05000423"
+    },
+    {
+      "id": "cause",
+      "display_name": "Unknown/Other (X) - provisional",
+      "properties": {
+        "match_key": "Cause:provisional"
+      },
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "instrument calibration drift / unknown mechanism",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_ba",
+      "display_name": "Auxiliary Feedwater",
+      "properties": {
+        "match_key": "System:BA"
+      },
+      "type": "System",
+      "eiis_code": "BA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BA"
+    },
+    {
+      "id": "c_ft51b",
+      "display_name": "Transmitter, Differential, Pressure (3FWA*FT51B)",
+      "properties": {
+        "match_key": "Component:PDT|3FWA*FT51B"
+      },
+      "type": "Component",
+      "eiis_code": "PDT",
+      "identifier": "3FWA*FT51B",
+      "model": "Rosemount 1153D",
+      "manufacturer_code": "R369",
+      "inferred_code": false,
+      "match_key": "Component:PDT|3FWA*FT51B"
+    },
+    {
+      "id": "c_pt_fi33b1",
+      "display_name": "Redundant AFW flow indicator (3FWA*FI33B1)",
+      "properties": {
+        "role": "backup; operable",
+        "match_key": "Component:redundant-afw-flow-indicator-3fwa-fi33b1"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "3FWA*FI33B1",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:redundant-afw-flow-indicator-3fwa-fi33b1"
+    },
+    {
+      "id": "fm_airintrusion",
+      "display_name": "Air in transmitter pressure sensing lines",
+      "properties": {
+        "match_key": "FailureMode:air-in-transmitter-pressure-sensing-lines"
+      },
+      "type": "FailureMode",
+      "description": "Small amount of air found in the pressure sensing lines during investigation; release of air did not restore normal indication.",
+      "match_key": "FailureMode:air-in-transmitter-pressure-sensing-lines"
+    },
+    {
+      "id": "fm_zeroshift",
+      "display_name": "Transmitter zero-shift in calibration",
+      "properties": {
+        "match_key": "FailureMode:transmitter-zero-shift-in-calibration"
+      },
+      "type": "FailureMode",
+      "description": "3FWA*FT51B calibration zero-shifted; readings averaged 1.877 mA above desired values across the span, outside acceptance criteria.",
+      "match_key": "FailureMode:transmitter-zero-shift-in-calibration"
+    },
+    {
+      "id": "fm_erroneous_indication",
+      "display_name": "Erroneous elevated AFW flow indication",
+      "properties": {
+        "match_key": "FailureMode:erroneous-elevated-afw-flow-indication"
+      },
+      "type": "FailureMode",
+      "description": "Computer point 3FWA-F51B3 indicated 118 gpm vs ~12 gpm on redundant channels with no AFW pumps running.",
+      "match_key": "FailureMode:erroneous-elevated-afw-flow-indication"
+    },
+    {
+      "id": "cons_lco",
+      "display_name": "Accident monitoring instrument channel inoperable beyond allowed outage time / TS AOT exceeded",
+      "properties": {
+        "match_key": "Consequence:ts-aot-exceeded-accident-monitoring-instrument"
+      },
+      "type": "Consequence",
+      "start": "2020-01-04T20:23",
+      "end": "2020-01-16T20:40",
+      "duration": "approximately 12 days 0h17m",
+      "tz": null,
+      "match_key": "Consequence:accident-monitoring-instrument-channel-inoperable-beyond-allowed-outage-time-ts-aot-exceeded"
+    },
+    {
+      "id": "ca_calibrate",
+      "display_name": "Calibrate and restore transmitter 3FWA*FT51B to operable status",
+      "properties": {
+        "match_key": "CorrectiveAction:calibrate-and-restore-transmitter-3fwa-ft51b"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:calibrate-and-restore-transmitter-3fwa-ft51b-to-operable-status"
+    },
+    {
+      "id": "ca_cap",
+      "display_name": "Additional corrective actions per station corrective action program",
+      "properties": {
+        "match_key": "CorrectiveAction:additional-corrective-actions-cap"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:additional-corrective-actions-per-station-corrective-action-program"
+    },
+    {
+      "id": "mfr_r369",
+      "display_name": "Rosemount",
+      "properties": {
+        "match_key": "Manufacturer:R369"
+      },
+      "type": "Manufacturer",
+      "code": "R369",
+      "match_key": "Manufacturer:R369"
+    },
+    {
+      "id": "rr_5073i1b",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_5073i8",
+      "display_name": "10 CFR 50.73(a)(2)(i)(8)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-8"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-8"
+    },
+    {
+      "id": "rr_ts3336",
+      "display_name": "TS 3.3.3.6 Action a. (Accident Monitoring Instrumentation)",
+      "properties": {
+        "match_key": "RegulatoryReference:ts-3-3-3-6-action-a"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-3-3-3-6-action-a-accident-monitoring-instrumentation"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073i1b",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073i8",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts3336",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ba",
+      "evidence": null
+    },
+    {
+      "source": "c_ft51b",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_r369",
+      "evidence": null
+    },
+    {
+      "source": "fm_airintrusion",
+      "relation": "LEADS_TO",
+      "target": "fm_zeroshift",
+      "evidence": null
+    },
+    {
+      "source": "fm_zeroshift",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_zeroshift",
+      "relation": "LEADS_TO",
+      "target": "fm_erroneous_indication",
+      "evidence": null
+    },
+    {
+      "source": "fm_erroneous_indication",
+      "relation": "LEADS_TO",
+      "target": "cons_lco",
+      "evidence": null
+    },
+    {
+      "source": "cons_lco",
+      "relation": "BACKED_UP_BY",
+      "target": "c_pt_fi33b1",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_calibrate",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_cap",
+      "evidence": null
+    }
+  ],
+  "chain": "unknown mechanism (cause X, provisional) -> air noted in sensing lines (did not explain shift) -> transmitter 3FWA*FT51B zero-shift in calibration -> erroneous elevated AFW flow indication on 3FWA-F51B3 -> accident monitoring channel inoperable beyond TS allowed outage time [backup: redundant channel 3FWA*FI33B1 remained operable]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code reported as 'X' in block 13 (component failure row) but FORM-366 cause_code field states 'TBD'/category 'provisional'; per rule 4 the official code governs category, and since the narrative states 'the specific failure mechanism is unknown,' the cause node is modeled as provisional per rule 4's TBD guidance while retaining the X code from block 13. Air-in-lines finding is explicitly stated not to have caused/explained the shift, but is modeled as a preceding investigated condition leading into the zero-shift failure per the narrative's sequence. No previous similar occurrences reported (explicitly stated none in past three years), so no stub LER/SIMILAR_TO edge emitted."
+}

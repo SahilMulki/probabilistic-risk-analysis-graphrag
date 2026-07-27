@@ -1,0 +1,349 @@
+{
+  "ler_number": "270-2021-001-00",
+  "identity": {
+    "accession_number": "ML21277A218",
+    "docket": "05000270",
+    "plant_name": "Oconee",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2021-08-03",
+    "report_date": "2021-10-04",
+    "operating_mode": null,
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "2B Motor Driven Emergency Feedwater Pump Past Inoperability Resulted In Condition Prohibited by Technical Specifications"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The 2B MDEFW pump trip was a result of an intermittent poor electrical connection due to the loose current transformer (CT) shorting screws on the shorting block in the secondary circuit of the protective over current relay.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "loose shorting-block screws causing intermittent electrical connection",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 270-2021-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "270-2021-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:270-2021-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Oconee Unit 2",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000270",
+      "match_key": "Unit:05000270"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "loose shorting-block screws causing intermittent electrical connection",
+      "proximate_text": "The 2B MDEFW pump trip was a result of an intermittent poor electrical connection due to the loose current transformer (CT) shorting screws on the shorting block in the secondary circuit of the protective over current relay.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_ba",
+      "display_name": "Emergency Feedwater System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BA"
+    },
+    {
+      "id": "sys_sb",
+      "display_name": "Auxiliary Steam System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SB"
+    },
+    {
+      "id": "c_2b_pump",
+      "display_name": "2B Motor Driven EFW Pump",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "P",
+      "identifier": "2B MDEFW",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:P|2B MDEFW"
+    },
+    {
+      "id": "c_relay",
+      "display_name": "Protective over current relay",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:protective-over-current-relay"
+    },
+    {
+      "id": "c_shorting_block",
+      "display_name": "Shorting block (secondary circuit, CT shorting screws)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:shorting-block-secondary-circuit-ct-shorting-screws"
+    },
+    {
+      "id": "fm_loose_screws",
+      "display_name": "Shorting screws on block loosened",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The shorting screws on the shorting block had loosened, allowing the circuit to open.",
+      "match_key": "FailureMode:shorting-screws-on-block-loosened"
+    },
+    {
+      "id": "fm_circuit_open",
+      "display_name": "Secondary circuit opened, causing arcing",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Loosened screws allowed the circuit to open, causing arcing and a distorted current waveform.",
+      "match_key": "FailureMode:secondary-circuit-opened-causing-arcing"
+    },
+    {
+      "id": "fm_relay_trip",
+      "display_name": "Protective over current relay tripped",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The distorted current waveform tripped the protective over current relay.",
+      "match_key": "FailureMode:protective-over-current-relay-tripped"
+    },
+    {
+      "id": "cons_pump_trip",
+      "display_name": "2B MDEFW pump tripped during bump/rotation test",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2021-08-02T17:14",
+      "end": null,
+      "duration": null,
+      "tz": "EDT",
+      "match_key": "Consequence:2b-mdefw-pump-tripped-during-bump-rotation-test"
+    },
+    {
+      "id": "cons_inop",
+      "display_name": "2B MDEFW pump past inoperability exceeding TS LCO 3.7.5 AOT",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2021-02-01T00:00",
+      "end": "2021-08-04T22:22",
+      "duration": "longer than 7-day allowed outage time",
+      "tz": null,
+      "match_key": "Consequence:2b-mdefw-pump-past-inoperability-exceeding-ts-lco-3-7-5-aot"
+    },
+    {
+      "id": "ca_replace_block",
+      "display_name": "Replace affected shorting block",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-affected-shorting-block"
+    },
+    {
+      "id": "ca_tighten_screws",
+      "display_name": "Tighten shorting screws",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:tighten-shorting-screws"
+    },
+    {
+      "id": "ca_install_jumpers",
+      "display_name": "Install shorting jumpers to eliminate the problem",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:install-shorting-jumpers-to-eliminate-the-problem"
+    },
+    {
+      "id": "ca_extent_of_condition",
+      "display_name": "Extent-of-condition review of other MDEFW pumps' secondary wiring/shorting blocks",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:extent-of-condition-review-of-other-mdefw-pumps-secondary-wiring-shorting-blocks"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts375",
+      "display_name": "TS 3.7.5 - EFW System",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ts-3-7-5-efw-system"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts375",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ba",
+      "evidence": null
+    },
+    {
+      "source": "c_2b_pump",
+      "relation": "PART_OF",
+      "target": "sys_ba",
+      "evidence": null
+    },
+    {
+      "source": "c_relay",
+      "relation": "PART_OF",
+      "target": "c_2b_pump",
+      "evidence": null
+    },
+    {
+      "source": "c_shorting_block",
+      "relation": "PART_OF",
+      "target": "c_relay",
+      "evidence": null
+    },
+    {
+      "source": "fm_loose_screws",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_loose_screws",
+      "relation": "LEADS_TO",
+      "target": "fm_circuit_open",
+      "evidence": null
+    },
+    {
+      "source": "fm_circuit_open",
+      "relation": "LEADS_TO",
+      "target": "fm_relay_trip",
+      "evidence": null
+    },
+    {
+      "source": "fm_relay_trip",
+      "relation": "LEADS_TO",
+      "target": "cons_pump_trip",
+      "evidence": null
+    },
+    {
+      "source": "fm_loose_screws",
+      "relation": "LEADS_TO",
+      "target": "cons_inop",
+      "evidence": null
+    },
+    {
+      "source": "cons_pump_trip",
+      "relation": "LEADS_TO",
+      "target": "cons_inop",
+      "evidence": null
+    },
+    {
+      "source": "cons_inop",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_ba",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_block",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_tighten_screws",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_install_jumpers",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_extent_of_condition",
+      "evidence": null
+    }
+  ],
+  "chain": "loose CT shorting screws [cause TBD] -> secondary circuit opens/arcs -> distorted current waveform trips protective relay -> 2B MDEFW pump trips (Aug 2 2021) -> retroactive discovery of Feb 1 2021 root cause -> 2B MDEFW pump found inoperable Feb 1-Aug 4 2021 exceeding TS LCO 3.7.5 7-day AOT [backups 2A MDEFW pump and/or TDEFW pump available]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code is TBD/provisional per FORM-366 fields; narrative attributes the trip to a mechanical/electrical connection failure (loose shorting screws) rather than assigning a formal cause code category. Two failure events are linked: the Aug 2, 2021 pump trip and the retroactively-discovered extended inoperability (Feb 1-Aug 4, 2021) traced to the same root cause via cause evaluation. EFW system itself served as its own backup via redundant trains (2A MDEFW and TDEFW pumps), which were stated operable throughout the inoperability window -- modeled via BACKED_UP_BY to sys_ba representing the redundant EFW train capability; individual redundant pump components (2A MDEFW, TDEFW) were not separately modeled as System nodes since the narrative treats them as alternate trains of the same EFW System already captured. Auxiliary Steam System [SB] and steam headers were mentioned only as EFW system design context (steam supply description) and were excluded from INVOLVES/edges per rule 6, though the System node is retained for completeness of EIIS mapping potential; no edges assert its involvement in the failure chain."
+}

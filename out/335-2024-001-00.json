@@ -1,0 +1,395 @@
+{
+  "ler_number": "335-2024-001-00",
+  "identity": {
+    "accession_number": "ML24269A205",
+    "docket": "05000335",
+    "plant_name": "Saint Lucie",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2024-07-28",
+    "report_date": "2024-09-25",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Unplanned Reactor Scram"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "E",
+      "system": "JD",
+      "component": "94",
+      "manufacturer": null,
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "This event was caused by the failure to identify the failed ESFAS relay as a Single Point Vulnerability (SPV). This resulted in an ineffective component replacement strategy.",
+    "cause_code": "E",
+    "category": "Management/QA Deficiency",
+    "theme": "Single Point Vulnerability not identified in component replacement strategy",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 335-2024-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "335-2024-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:335-2024-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Saint Lucie Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000335",
+      "match_key": "Unit:05000335"
+    },
+    {
+      "id": "cause",
+      "display_name": "Management/QA Deficiency (E)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "E",
+      "category": "Management/QA Deficiency",
+      "theme": "Single Point Vulnerability not identified in component replacement strategy",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Management/QA Deficiency"
+    },
+    {
+      "id": "sys_jd",
+      "display_name": "Engineered Safety Features Actuation System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JD",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JD"
+    },
+    {
+      "id": "sys_msiv",
+      "display_name": "Main Steam Isolation System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:main-steam-isolation-system"
+    },
+    {
+      "id": "sys_mfiv",
+      "display_name": "Main Feedwater Isolation System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "sys_afw",
+      "display_name": "Auxiliary Feedwater",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "actuated as expected during trip",
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "c_relay",
+      "display_name": "ESFAS relay",
+      "properties": {
+        "state": "normally energized"
+      },
+      "type": "Component",
+      "eiis_code": "94",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:94"
+    },
+    {
+      "id": "c_msiv_a",
+      "display_name": "'A' Main Steam Isolation Valve",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": true,
+      "match_key": "Component:ISV"
+    },
+    {
+      "id": "c_mfivs",
+      "display_name": "Main Feedwater Isolation Valves (both)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:main-feedwater-isolation-valves-both"
+    },
+    {
+      "id": "fm_spv",
+      "display_name": "ESFAS relay not identified as Single Point Vulnerability",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Failure to identify the failed ESFAS relay as an SPV, resulting in ineffective component replacement strategy.",
+      "match_key": "FailureMode:esfas-relay-not-identified-as-single-point-vulnerability"
+    },
+    {
+      "id": "fm_relayfail",
+      "display_name": "ESFAS relay failed",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Failure of a normally energized relay in the ESFAS.",
+      "match_key": "FailureMode:esfas-relay-failed"
+    },
+    {
+      "id": "fm_msivclose",
+      "display_name": "'A' MSIV automatically closed",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Automatic closure of 'A' Main Steam Isolation Valve due to relay failure.",
+      "match_key": "FailureMode:a-msiv-automatically-closed"
+    },
+    {
+      "id": "fm_mfivclose",
+      "display_name": "Both MFIVs automatically closed",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Automatic closure of both Main Feedwater Isolation Valves due to relay failure.",
+      "match_key": "FailureMode:both-mfivs-automatically-closed"
+    },
+    {
+      "id": "fm_mfiv_stuck",
+      "display_name": "MFIVs unable to be repositioned within 30 minutes",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Due to the MSIV closure signal being initiated, the MFIVs could not be repositioned (manually or automatically) within 30 minutes of the event.",
+      "match_key": "FailureMode:mfivs-unable-to-be-repositioned-within-30-minutes"
+    },
+    {
+      "id": "cons_trip",
+      "display_name": "Automatic reactor trip",
+      "properties": {
+        "time": "2024-07-28T18:37"
+      },
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": "EDT",
+      "match_key": "Consequence:automatic-reactor-trip"
+    },
+    {
+      "id": "cons_complications",
+      "display_name": "Unplanned scram with complications / extended unit shutdown",
+      "properties": {
+        "criteria": "NEI 99-02 Unplanned Scram with Complications; MFIVs not repositioned within 30 minutes"
+      },
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:unplanned-scram-with-complications-extended-unit-shutdown"
+    },
+    {
+      "id": "ca_replace_relay",
+      "display_name": "Replace failed relay and associated ESFAS relays in Unit 1",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-failed-relay-and-associated-esfas-relays-in-unit-1"
+    },
+    {
+      "id": "ca_evaluate_spv",
+      "display_name": "Evaluate ESFAS subcomponents for Unit 1 and Unit 2 to identify latent SPVs",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:evaluate-esfas-subcomponents-for-unit-1-and-unit-2-to-identify-latent-spvs"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_nei9902",
+      "display_name": "NEI 99-02",
+      "properties": {
+        "type": "standard/guidance"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:nei-99-02"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jd",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_msiv",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_mfiv",
+      "evidence": null
+    },
+    {
+      "source": "c_relay",
+      "relation": "PART_OF",
+      "target": "sys_jd",
+      "evidence": null
+    },
+    {
+      "source": "c_msiv_a",
+      "relation": "PART_OF",
+      "target": "sys_msiv",
+      "evidence": null
+    },
+    {
+      "source": "c_mfivs",
+      "relation": "PART_OF",
+      "target": "sys_mfiv",
+      "evidence": null
+    },
+    {
+      "source": "fm_spv",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_spv",
+      "relation": "LEADS_TO",
+      "target": "fm_relayfail",
+      "evidence": null
+    },
+    {
+      "source": "fm_relayfail",
+      "relation": "LEADS_TO",
+      "target": "fm_msivclose",
+      "evidence": null
+    },
+    {
+      "source": "fm_relayfail",
+      "relation": "LEADS_TO",
+      "target": "fm_mfivclose",
+      "evidence": null
+    },
+    {
+      "source": "fm_msivclose",
+      "relation": "LEADS_TO",
+      "target": "cons_trip",
+      "evidence": null
+    },
+    {
+      "source": "fm_mfivclose",
+      "relation": "LEADS_TO",
+      "target": "cons_trip",
+      "evidence": null
+    },
+    {
+      "source": "fm_mfivclose",
+      "relation": "LEADS_TO",
+      "target": "fm_mfiv_stuck",
+      "evidence": null
+    },
+    {
+      "source": "fm_mfiv_stuck",
+      "relation": "LEADS_TO",
+      "target": "cons_complications",
+      "evidence": null
+    },
+    {
+      "source": "cons_trip",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_afw",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_relay",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_evaluate_spv",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_nei9902",
+      "evidence": null
+    }
+  ],
+  "chain": "SPV not identified for ESFAS relay [cause E] -> normally energized ESFAS relay fails -> 'A' MSIV closes & both MFIVs close (parallel) -> reactor trip [backup AFW actuated] -> MFIVs cannot be repositioned within 30 min -> unplanned scram with complications / extended shutdown",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "No previous similar occurrence LER emitted per narrative ('A review of events over the past 5 years did not identify any unplanned reactor scrams as a result of a failed ESFAS relay') - this is a negative finding, not a citation of a prior LER, so no SIMILAR_TO edge or stub LER node created. Plant/unit/reactor-type/vendor filled from narrative header ('St. Lucie Unit 1') since FORM-366 fields left them null. AFW modeled as BACKED_UP_BY the trip consequence since narrative states it 'actuated as expected' during the trip; MFIV/MSIV closure was itself the failure mode, not backed-up-by relationship. Component code '94' (relay) and system 'JD' taken directly from block 13."
+}

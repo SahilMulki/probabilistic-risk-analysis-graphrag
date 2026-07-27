@@ -1,0 +1,272 @@
+{
+  "ler_number": "321-2024-003-00",
+  "identity": {
+    "accession_number": "ML24185A269",
+    "docket": "05000321",
+    "plant_name": "Hatch",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2024-05-08",
+    "report_date": "2024-07-03",
+    "operating_mode": null,
+    "power_level": 7,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Reactor Core Isolation Cooling (RCIC) System Inoperable Due to Mispositioned Link"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The link being inadvertently left open was due to a gap in the usage of HU tools such as task preview, validating assumptions, and having a questioning attitude when manipulating plant equipment.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "human-performance tool usage gap",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 321-2024-003-00",
+      "properties": {},
+      "type": "LER",
+      "key": "321-2024-003-00",
+      "stub": false,
+      "title": "Reactor Core Isolation Cooling (RCIC) System Inoperable Due to Mispositioned Link",
+      "plant": "Edwin I. Hatch Nuclear Plant",
+      "match_key": "LER:321-2024-003-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Hatch Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000321",
+      "match_key": "Unit:05000321"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "human-performance tool usage gap",
+      "proximate_text": "The link being inadvertently left open was due to a gap in the usage of HU tools such as task preview, validating assumptions, and having a questioning attitude when manipulating plant equipment.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_bn",
+      "display_name": "Reactor Core Isolation Cooling",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BN",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BN"
+    },
+    {
+      "id": "sys_bj",
+      "display_name": "High Pressure Coolant Injection",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "operable, except brief overlap on 3/10-3/11/2024",
+      "match_key": "System:BJ"
+    },
+    {
+      "id": "c_link",
+      "display_name": "Electrical link (High Reactor Water Level trip circuit)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:electrical-link-high-reactor-water-level-trip-circuit"
+    },
+    {
+      "id": "fm_open_link",
+      "display_name": "Electrical link left in open position",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Link that should have been closed was found open, defeating the RCIC High Reactor Water Level trip function.",
+      "match_key": "FailureMode:electrical-link-left-in-open-position"
+    },
+    {
+      "id": "fm_trip_defeated",
+      "display_name": "RCIC High Reactor Water Level trip function defeated",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "With the link open, the Technical Specification required High Reactor Water Level trip function was disabled.",
+      "match_key": "FailureMode:rcic-high-reactor-water-level-trip-function-defeated"
+    },
+    {
+      "id": "cons_rcic_inop",
+      "display_name": "RCIC inoperable / TS 3.5.3 completion time exceeded",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2024-03-08",
+      "end": "2024-05-08T17:25",
+      "duration": "~61 days (intermittent mode applicability)",
+      "tz": "EDT",
+      "match_key": "Consequence:rcic-inoperable-ts-3-5-3-completion-time-exceeded"
+    },
+    {
+      "id": "ca_close_link",
+      "display_name": "Close the link to restore trip function and RCIC operability",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:close-the-link-to-restore-trip-function-and-rcic-operability"
+    },
+    {
+      "id": "ca_management_reinforce",
+      "display_name": "Management reinforcement of HU Tool usage",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:management-reinforcement-of-hu-tool-usage"
+    },
+    {
+      "id": "ca_oral_boards",
+      "display_name": "Conduct oral boards to reinforce use of HU Tools",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:conduct-oral-boards-to-reinforce-use-of-hu-tools"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts_3_5_3",
+      "display_name": "TS 3.5.3 (RCIC)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-3-5-3-rcic"
+    },
+    {
+      "id": "rr_ts_3_5_1",
+      "display_name": "TS 3.5.1.G (RCIC and HPCI concurrent inoperability)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-3-5-1-g-rcic-and-hpci-concurrent-inoperability"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts_3_5_3",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts_3_5_1",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bn",
+      "evidence": null
+    },
+    {
+      "source": "c_link",
+      "relation": "PART_OF",
+      "target": "sys_bn",
+      "evidence": null
+    },
+    {
+      "source": "fm_open_link",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_open_link",
+      "relation": "LEADS_TO",
+      "target": "fm_trip_defeated",
+      "evidence": null
+    },
+    {
+      "source": "fm_trip_defeated",
+      "relation": "LEADS_TO",
+      "target": "cons_rcic_inop",
+      "evidence": null
+    },
+    {
+      "source": "cons_rcic_inop",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_bj",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_close_link",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_management_reinforce",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_oral_boards",
+      "evidence": null
+    }
+  ],
+  "chain": "human-performance tool-usage gap [cause TBD] -> electrical link left open -> RCIC High Reactor Water Level trip function defeated -> RCIC inoperable (TS 3.5.3 completion time exceeded, ~61 days intermittent) [backup HPCI operable except brief 3/10-3/11 overlap; low-pressure ECCS operable throughout]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code left TBD/provisional per FORM-366 fields; narrative attributes the miswired link to a human-performance (HU) tool usage gap, captured in theme/proximate_text. No previous similar events referenced (narrative states 'None'), so no SIMILAR_TO edge or stub LER emitted. HPCI and low-pressure ECCS systems modeled as stated-operable backups during the RCIC inoperability window per rule 6; the brief 3/10-3/11 HPCI outage for a surveillance test is noted in properties but did not exceed TS limits, so BACKED_UP_BY edge retained with caveat noted."
+}

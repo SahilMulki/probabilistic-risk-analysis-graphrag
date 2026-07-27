@@ -1,0 +1,405 @@
+{
+  "ler_number": "413--2020-003-00",
+  "identity": {
+    "accession_number": "ML20310A151",
+    "docket": "05000413",
+    "plant_name": "Catawba",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2020-09-08",
+    "report_date": "2020-11-05",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Duke Energy Carolinas, LLC Catawba Nuclear Station, Unit 1 Docket No. 50-413 Licensee Event Report (LER) 413/2020-003-00"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(1)",
+      "10 CFR 50.73(a)(2)(iv)(A)",
+      "10 CFR 50.73(a)(2)(iv)(B)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "due to overconfidence, a non-licensed, utility personnel maintenance technician did not complete self-checking prior to pulling 1N42 NIS power range drawer from the cabinet rack",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "personnel error - inadequate self-checking",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 413-2020-003-00",
+      "properties": {
+        "match_key": "LER:413-2020-003-00"
+      },
+      "type": "LER",
+      "key": "413--2020-003-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:413--2020-003-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Catawba Unit 1",
+      "properties": {
+        "match_key": "Unit:05000413",
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000413",
+      "match_key": "Unit:05000413"
+    },
+    {
+      "id": "cause",
+      "display_name": "Personnel Error (TBD)",
+      "properties": {
+        "match_key": "Cause:provisional"
+      },
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "personnel error - inadequate self-checking",
+      "proximate_text": "due to overconfidence, a non-licensed, utility personnel maintenance technician did not complete self-checking prior to pulling 1N42 NIS power range drawer from the cabinet rack",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_nis",
+      "display_name": "Nuclear Instrumentation System",
+      "properties": {
+        "note": "monitors reactor power via power range channels N41-N44",
+        "match_key": "System:nuclear-instrumentation-system"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:nuclear-instrumentation-system"
+    },
+    {
+      "id": "sys_rps",
+      "display_name": "Reactor Protection / Reactor Trip System",
+      "properties": {
+        "match_key": "System:reactor-protection-system"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "actuated; performed safety function",
+      "match_key": "System:reactor-protection-reactor-trip-system"
+    },
+    {
+      "id": "sys_ca",
+      "display_name": "Auxiliary Feedwater System",
+      "properties": {
+        "identifier": "CA",
+        "match_key": "System:BA"
+      },
+      "type": "System",
+      "eiis_code": "BA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "actuated as expected via AMSAC signal",
+      "match_key": "System:BA"
+    },
+    {
+      "id": "sys_amsac",
+      "display_name": "ATWS Mitigation System Actuation Circuitry",
+      "properties": {
+        "match_key": "System:atws-mitigation-system-actuation-circuitry"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "actuated CA pumps; performed as designed",
+      "match_key": "System:atws-mitigation-system-actuation-circuitry"
+    },
+    {
+      "id": "c_1n41",
+      "display_name": "NIS Power Range Channel 1 Drawer (1N41)",
+      "properties": {
+        "match_key": "Component:1n41"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "1N41",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:nis-power-range-channel-1-drawer-1n41"
+    },
+    {
+      "id": "c_1n42",
+      "display_name": "NIS Power Range Channel 2 Drawer (1N42)",
+      "properties": {
+        "match_key": "Component:1n42"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "1N42",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:nis-power-range-channel-2-drawer-1n42"
+    },
+    {
+      "id": "fm_noselfcheck",
+      "display_name": "Technician failed to self-check prior to manipulating drawer",
+      "properties": {
+        "match_key": "FailureMode:failed-to-self-check"
+      },
+      "type": "FailureMode",
+      "description": "Technician A did not complete self-checking prior to pulling drawer from cabinet rack",
+      "match_key": "FailureMode:technician-failed-to-self-check-prior-to-manipulating-drawer"
+    },
+    {
+      "id": "fm_wrongdrawer",
+      "display_name": "Wrong NIS drawer (1N42) inappropriately pulled",
+      "properties": {
+        "match_key": "FailureMode:wrong-drawer-pulled"
+      },
+      "type": "FailureMode",
+      "description": "Technician A inappropriately pulled drawer 1N42 approximately 6 inches instead of 1N41",
+      "match_key": "FailureMode:wrong-nis-drawer-1n42-inappropriately-pulled"
+    },
+    {
+      "id": "fm_spurious",
+      "display_name": "Spurious signal sent to Channel 2 OPDT logic",
+      "properties": {
+        "match_key": "FailureMode:spurious-opdt-signal"
+      },
+      "type": "FailureMode",
+      "description": "Pulling 1N42 sent an erroneous/spurious reactor power signal to Channel 2 OPDT logic",
+      "match_key": "FailureMode:spurious-signal-sent-to-channel-2-opdt-logic"
+    },
+    {
+      "id": "fm_reactortrip",
+      "display_name": "Automatic reactor trip on OPDT signal",
+      "properties": {
+        "match_key": "FailureMode:automatic-reactor-trip"
+      },
+      "type": "FailureMode",
+      "description": "Channel 1 (in TEST) and Channel 2 (spurious) OPDT signals combined to produce a valid automatic reactor trip",
+      "match_key": "FailureMode:automatic-reactor-trip-on-opdt-signal"
+    },
+    {
+      "id": "cons_trip",
+      "display_name": "Unit 1 reactor trip with AFW/AMSAC actuation",
+      "properties": {
+        "match_key": "Consequence:unit-1-reactor-trip"
+      },
+      "type": "Consequence",
+      "start": "2020-09-08T09:25",
+      "end": "2020-09-09T00:00",
+      "duration": "approx. 1 day (restarted 9/9/20)",
+      "tz": "EST",
+      "match_key": "Consequence:unit-1-reactor-trip-with-afw-amsac-actuation"
+    },
+    {
+      "id": "ca_accountability",
+      "display_name": "Appropriate accountability and remediation actions performed",
+      "properties": {
+        "match_key": "CorrectiveAction:accountability-remediation"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:appropriate-accountability-and-remediation-actions-performed"
+    },
+    {
+      "id": "ca_comm",
+      "display_name": "Communication to Maintenance department on conservative/deliberate self-checks",
+      "properties": {
+        "match_key": "CorrectiveAction:maintenance-communication-self-check"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:communication-to-maintenance-department-on-conservative-deliberate-self-checks"
+    },
+    {
+      "id": "ca_observation",
+      "display_name": "Establish observation report-out expectations and supervisor review tracker for Maintenance manipulations",
+      "properties": {
+        "match_key": "CorrectiveAction:observation-tracker-expectations"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:establish-observation-report-out-expectations-and-supervisor-review-tracker-for-maintenance-manipulations"
+    },
+    {
+      "id": "rr_5073a1",
+      "display_name": "10 CFR 50.73(a)(1)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-1"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-1"
+    },
+    {
+      "id": "rr_5073a2ivA",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5073a2ivB",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(B)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-b"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-b"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073a1",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073a2ivA",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073a2ivB",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_nis",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rps",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ca",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_amsac",
+      "evidence": null
+    },
+    {
+      "source": "fm_noselfcheck",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_noselfcheck",
+      "relation": "LEADS_TO",
+      "target": "fm_wrongdrawer",
+      "evidence": null
+    },
+    {
+      "source": "fm_wrongdrawer",
+      "relation": "LEADS_TO",
+      "target": "fm_spurious",
+      "evidence": null
+    },
+    {
+      "source": "fm_spurious",
+      "relation": "LEADS_TO",
+      "target": "fm_reactortrip",
+      "evidence": null
+    },
+    {
+      "source": "fm_reactortrip",
+      "relation": "LEADS_TO",
+      "target": "cons_trip",
+      "evidence": null
+    },
+    {
+      "source": "cons_trip",
+      "relation": "MITIGATED_BY",
+      "target": "sys_ca",
+      "evidence": null
+    },
+    {
+      "source": "cons_trip",
+      "relation": "MITIGATED_BY",
+      "target": "sys_amsac",
+      "evidence": null
+    },
+    {
+      "source": "c_1n42",
+      "relation": "PART_OF",
+      "target": "sys_nis",
+      "evidence": null
+    },
+    {
+      "source": "c_1n41",
+      "relation": "PART_OF",
+      "target": "sys_nis",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_accountability",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_comm",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_observation",
+      "evidence": null
+    }
+  ],
+  "chain": "overconfidence / inadequate self-check [cause TBD] -> wrong NIS drawer (1N42) pulled -> spurious signal to Channel 2 OPDT -> automatic reactor trip -> AFW/AMSAC actuation and Unit 1 shutdown [mitigated by CA System, AMSAC]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4"
+  ],
+  "notes": "Official cause code left TBD/provisional per FORM-366 fields (category='provisional'); narrative clearly attributes root cause to personnel error/self-checking failure but no official cause_code letter was assigned in the form fields. AFW (CA) and AMSAC both functioned as designed during the event and are modeled as systems that mitigated the trip consequence, not as pre-existing backups during an inoperability window (per rule 6, this is a different scenario - normal expected actuation, not backup-during-failure). No previous similar events were identified per the narrative, so no SIMILAR_TO stub LER is created. No manufacturer, block_13, or component EIIS codes were given in the narrative."
+}

@@ -1,0 +1,351 @@
+{
+  "ler_number": "254-2021-001-00",
+  "identity": {
+    "accession_number": "ML21138A819",
+    "docket": "05000254",
+    "plant_name": "Quad Cities",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2021-03-19",
+    "report_date": "2021-05-18",
+    "operating_mode": "5",
+    "power_level": 0,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": "55146",
+    "ens_date": "2021-03-20",
+    "ens_time": null,
+    "title": "Automatic Actuation of Emergency Diesel Generator Due to Transformer Maintenance"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "A",
+      "system": "EK",
+      "component": "DG",
+      "manufacturer": "E147",
+      "reportable": "Y"
+    },
+    {
+      "cause": "A",
+      "system": "ED",
+      "component": "XFMR",
+      "manufacturer": "W070",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "Workers failed to perform an adequate pre-job brief prior to work execution and failed to perform human performance verification techniques to validate the status of the Unit 1 RAT. The OAD person assumed that the Unit 1 RAT had already been removed from service without validating the actual condition.",
+    "cause_code": "A",
+    "category": "Personnel Error",
+    "theme": "inadequate pre-job brief / human performance verification failure",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 254-2021-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "254-2021-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:254-2021-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Quad Cities Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric",
+        "thermal_power_mwt": "2957"
+      },
+      "type": "Unit",
+      "key": "05000254",
+      "match_key": "Unit:05000254"
+    },
+    {
+      "id": "cause",
+      "display_name": "Personnel Error (A)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "A",
+      "category": "Personnel Error",
+      "theme": "inadequate pre-job brief / human performance verification failure",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Personnel Error"
+    },
+    {
+      "id": "sys_ek",
+      "display_name": "Emergency Diesel Generator",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "EK",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; automatically started per design",
+      "match_key": "System:EK"
+    },
+    {
+      "id": "sys_ed",
+      "display_name": "Reserve Auxiliary Transformer / Offsite Power",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "ED",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:ED"
+    },
+    {
+      "id": "sys_bu",
+      "display_name": "Bus 12",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BU",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BU"
+    },
+    {
+      "id": "c_dg",
+      "display_name": "1/2 Emergency Diesel Generator",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "DG",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": "E147",
+      "inferred_code": false,
+      "match_key": "Component:DG"
+    },
+    {
+      "id": "c_xfmr",
+      "display_name": "Unit 1 Reserve Auxiliary Transformer",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "XFMR",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": "W070",
+      "inferred_code": false,
+      "match_key": "Component:XFMR"
+    },
+    {
+      "id": "fm_prejob",
+      "display_name": "Inadequate pre-job brief / no human performance verification",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Workers failed to perform an adequate pre-job brief and did not validate actual status of the Unit 1 RAT before relay routine work.",
+      "match_key": "FailureMode:inadequate-pre-job-brief-no-human-performance-verification"
+    },
+    {
+      "id": "fm_assumed",
+      "display_name": "OAD personnel incorrectly assumed RAT already removed from service",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The OAD person assumed that the Unit 1 RAT had already been removed from service without validating the actual condition.",
+      "match_key": "FailureMode:oad-personnel-incorrectly-assumed-rat-already-removed-from-service"
+    },
+    {
+      "id": "fm_trip",
+      "display_name": "Unplanned trip of Unit 1 RAT",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Performance of Unit 1 RAT to Bus 12 relay routines while the RAT was still energized caused an unplanned trip of the transformer.",
+      "match_key": "FailureMode:unplanned-trip-of-unit-1-rat"
+    },
+    {
+      "id": "cons_dgstart",
+      "display_name": "Automatic start/load of Unit 1 EDG; Loss of Offsite Power to Unit 1",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2021-03-19T20:30",
+      "end": "2021-03-19T23:10",
+      "duration": "2:40",
+      "tz": null,
+      "match_key": "Consequence:automatic-start-load-of-unit-1-edg-loss-of-offsite-power-to-unit-1"
+    },
+    {
+      "id": "ca_restore",
+      "display_name": "Operations restored power to Unit 1 RAT and associated 480V/4kV buses",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:operations-restored-power-to-unit-1-rat-and-associated-480v-4kv-buses"
+    },
+    {
+      "id": "ca_prejob",
+      "display_name": "Management to review/reinforce pre-job brief expectations and develop pre-job brief work aid",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:management-to-review-reinforce-pre-job-brief-expectations-and-develop-pre-job-brief-work-aid"
+    },
+    {
+      "id": "mfr_e147",
+      "display_name": "E147",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "E147",
+      "match_key": "Manufacturer:E147"
+    },
+    {
+      "id": "mfr_w070",
+      "display_name": "W070",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "W070",
+      "match_key": "Manufacturer:W070"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5072",
+      "display_name": "10 CFR 50.72(b)(3)(iv)(A)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-3-iv-a"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "LER 254-2018-004-00",
+      "properties": {},
+      "type": "LER",
+      "key": "254-2018-004-00",
+      "stub": true,
+      "title": "Reactor Scram due to Turbine-Generator Load Reject",
+      "plant": "Quad Cities Nuclear Power Station",
+      "match_key": "LER:254-2018-004-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ek",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ed",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bu",
+      "evidence": null
+    },
+    {
+      "source": "fm_prejob",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_prejob",
+      "relation": "LEADS_TO",
+      "target": "fm_assumed",
+      "evidence": null
+    },
+    {
+      "source": "fm_assumed",
+      "relation": "LEADS_TO",
+      "target": "fm_trip",
+      "evidence": null
+    },
+    {
+      "source": "fm_trip",
+      "relation": "LEADS_TO",
+      "target": "cons_dgstart",
+      "evidence": null
+    },
+    {
+      "source": "cons_dgstart",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_ek",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_restore",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_prejob",
+      "evidence": null
+    },
+    {
+      "source": "c_dg",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_e147",
+      "evidence": null
+    },
+    {
+      "source": "c_xfmr",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_w070",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    }
+  ],
+  "chain": "inadequate pre-job brief / no HU verification [cause A] -> OAD assumed RAT already de-energized -> relay work tripped energized Unit 1 RAT -> Unit 1 EDG auto-started, LOOP to Unit 1 [backup EDG per design; cross-tie breakers used]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "No equipment failures per Section G; the trip was purely a personnel-error-induced unplanned de-energization of an in-service RAT during relay routine work. EDG start was an automatic, per-design response, not a failure mode, so it is modeled as Consequence/backup rather than a failure. Bus 12 (BU) is modeled as an involved System since relay routines were being performed on it; no PART_OF edges asserted since narrative only describes functional/power relationships. 1/2 EDG being out for planned maintenance at event onset is contextual (TS 3.8.1 Condition B) but not part of the causal chain for the RAT trip itself, so not modeled as a failure mode."
+}

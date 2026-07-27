@@ -1,0 +1,310 @@
+{
+  "ler_number": "250-2020-004-00",
+  "identity": {
+    "accession_number": "ML20281A330",
+    "docket": "05000250",
+    "plant_name": "Turkey Point",
+    "unit": 3,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2020-08-20",
+    "report_date": "2020-10-07",
+    "operating_mode": "3",
+    "power_level": 34,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2020-004-00 for Turkey Point Unit 3 re Manual Reactor Trip in Response to Automatic Trip of the 3B Steam Generator Feedwater Pump"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The SGFP Recirculation Valve Master Controller, from where the positions of the recirculation valves are demanded, was in Manual, but should have been in Automatic mode to properly position CV-3-1414. ... the SGFP Recirculation Valve Master Controller had reverted to Manual mode, as designed, following a Unit 3 manual reactor trip that had occurred 3 days prior. The root cause and factors involved in the delayed recognition of the SGFP Valve Master Controller mode of operation are currently being evaluated on AR 2366158.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Master controller reverted to Manual mode undetected, leaving recirc valve mispositioned",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 250-2020-004-00",
+      "properties": {},
+      "type": "LER",
+      "key": "250-2020-004-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:250-2020-004-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Turkey Point Unit 3",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000250",
+      "match_key": "Unit:05000250"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Master controller reverted to Manual mode undetected, leaving recirc valve mispositioned",
+      "proximate_text": "The SGFP Recirculation Valve Master Controller, from where the positions of the recirculation valves are demanded, was in Manual, but should have been in Automatic mode to properly position CV-3-1414. ... the SGFP Recirculation Valve Master Controller had reverted to Manual mode, as designed, following a Unit 3 manual reactor trip that had occurred 3 days prior. The root cause and factors involved in the delayed recognition of the SGFP Valve Master Controller mode of operation are currently being evaluated on AR 2366158.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_sj",
+      "display_name": "Steam Generator Feedwater System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "involved system",
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "sys_af",
+      "display_name": "Auxiliary Feedwater System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; automatically initiated",
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "c_sgfp3b",
+      "display_name": "3B Steam Generator Feedwater Pump",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "P",
+      "identifier": "3B SGFP",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:P|3B SGFP"
+    },
+    {
+      "id": "c_cv31414",
+      "display_name": "CV-3-1414, 3B SGFP Discharge Recirculation Valve",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "V",
+      "identifier": "CV-3-1414",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:V|CV-3-1414"
+    },
+    {
+      "id": "c_pmc",
+      "display_name": "SGFP Recirculation Valve Master Controller",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "PMC",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:PMC"
+    },
+    {
+      "id": "fm_reverted",
+      "display_name": "Master Controller reverted to Manual mode following prior reactor trip",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The SGFP Recirculation Valve Master Controller reverted to Manual mode, as designed, following a Unit 3 manual reactor trip 3 days prior, and this was not recognized.",
+      "match_key": "FailureMode:master-controller-reverted-to-manual-mode-following-prior-reactor-trip"
+    },
+    {
+      "id": "fm_valve_open",
+      "display_name": "CV-3-1414 left open due to Manual-mode demand",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "With the Master Controller in Manual instead of Automatic, CV-3-1414 remained open when operating conditions required it closed, causing near run-out conditions on the 3B SGFP.",
+      "match_key": "FailureMode:cv-3-1414-left-open-due-to-manual-mode-demand"
+    },
+    {
+      "id": "fm_operator_closed",
+      "display_name": "Operator manually closed CV-3-1414",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Reactor Operator closed CV-3-1414 after discovering the Master Controller was in Manual instead of Automatic, causing a pressure fluctuation.",
+      "match_key": "FailureMode:operator-manually-closed-cv-3-1414"
+    },
+    {
+      "id": "fm_low_suction",
+      "display_name": "Low suction pressure below 225 psig setpoint",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Pressure fluctuation from closing CV-3-1414 caused suction pressure to drop below the 225 psig setpoint.",
+      "match_key": "FailureMode:low-suction-pressure-below-225-psig-setpoint"
+    },
+    {
+      "id": "fm_sgfp_trip",
+      "display_name": "3B SGFP automatic trip",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The 3B SGFP automatically tripped in response to the low suction pressure condition.",
+      "match_key": "FailureMode:3b-sgfp-automatic-trip"
+    },
+    {
+      "id": "cons_reactor_trip",
+      "display_name": "Manual reactor trip and stabilization in Mode 3",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2020-08-20T23:58",
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:manual-reactor-trip-and-stabilization-in-mode-3"
+    },
+    {
+      "id": "ca_ar",
+      "display_name": "Develop corrective actions for Root Cause(s), Contributing Cause(s), and Extent of Condition under AR 2366158",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:develop-corrective-actions-for-root-cause-s-contributing-cause-s-and-extent-of-condition-under-ar-2366158"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "ler_prev_unit4",
+      "display_name": "AR 2263299 - Turkey Point Unit 4 SGFP Recirculation Valve Master Controller found in Manual",
+      "properties": {},
+      "type": "LER",
+      "key": "4-2018-AR2263299",
+      "stub": true,
+      "title": "Turkey Point Unit 4 SGFP Recirculation Valve Master Controller found in Manual mode during board walkdown",
+      "plant": "Turkey Point Unit 4",
+      "match_key": "LER:4-2018-AR2263299"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sj",
+      "evidence": null
+    },
+    {
+      "source": "c_sgfp3b",
+      "relation": "PART_OF",
+      "target": "sys_sj",
+      "evidence": null
+    },
+    {
+      "source": "c_cv31414",
+      "relation": "PART_OF",
+      "target": "sys_sj",
+      "evidence": null
+    },
+    {
+      "source": "c_pmc",
+      "relation": "PART_OF",
+      "target": "sys_sj",
+      "evidence": null
+    },
+    {
+      "source": "fm_reverted",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_reverted",
+      "relation": "LEADS_TO",
+      "target": "fm_valve_open",
+      "evidence": null
+    },
+    {
+      "source": "fm_valve_open",
+      "relation": "LEADS_TO",
+      "target": "fm_operator_closed",
+      "evidence": null
+    },
+    {
+      "source": "fm_operator_closed",
+      "relation": "LEADS_TO",
+      "target": "fm_low_suction",
+      "evidence": null
+    },
+    {
+      "source": "fm_low_suction",
+      "relation": "LEADS_TO",
+      "target": "fm_sgfp_trip",
+      "evidence": null
+    },
+    {
+      "source": "fm_sgfp_trip",
+      "relation": "LEADS_TO",
+      "target": "cons_reactor_trip",
+      "evidence": null
+    },
+    {
+      "source": "cons_reactor_trip",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_af",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_ar",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev_unit4",
+      "evidence": null
+    }
+  ],
+  "chain": "Master Controller reverted to Manual mode after prior trip (undetected) [cause TBD] -> CV-3-1414 left open (near run-out) -> operator manually closes CV-3-1414 -> low suction pressure below 225 psig -> 3B SGFP automatic trip -> manual reactor trip / stabilized in Mode 3 [backup: AFW auto-initiated]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code is TBD/provisional per FORM-366 fields; root cause evaluation deferred to AR 2366158. Similar prior event referenced is a 2018 Unit 4 occurrence (AR 2263299) with no formal LER number given in narrative, so the stub LER key uses the AR number prefixed with unit '4-2018-' per available text; this is an approximation since no standard LER number was stated. Auxiliary Feedwater System has no EIIS bracket code given in narrative, so eiis_code left null per rule 2."
+}

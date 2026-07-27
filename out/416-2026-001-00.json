@@ -1,0 +1,319 @@
+{
+  "ler_number": "416-2026-001-00",
+  "identity": {
+    "accession_number": "ML26092A228",
+    "docket": "05000416",
+    "plant_name": "Grand Gulf",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2026-02-01",
+    "report_date": "2026-04-02",
+    "operating_mode": "1",
+    "power_level": 97,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Grand Gulf Nuclear Station, Unit 1 Licensee Event Report 2026-001-00, High Pressure Core Spray Inoperable Due to Breaker Trip"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)(D)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "B",
+      "system": "BG",
+      "component": "BKR",
+      "manufacturer": "E062",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The Direct Cause of the condition was the HPCS SW Pump Breaker trip.",
+    "cause_code": "B",
+    "category": "Design/Manufacturing/Installation",
+    "theme": "breaker trip of unknown/design origin",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 416-2026-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "416-2026-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:416-2026-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Grand Gulf Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000416",
+      "match_key": "Unit:05000416"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Manufacturing/Installation (B)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "B",
+      "category": "Design/Manufacturing/Installation",
+      "theme": "breaker trip of unknown/design origin",
+      "proximate_text": "The Direct Cause of the condition was the HPCS SW Pump Breaker trip.",
+      "provisional": false,
+      "match_key": "Cause:Design/Manufacturing/Installation"
+    },
+    {
+      "id": "sys_bg",
+      "display_name": "High Pressure Core Spray",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected system",
+      "match_key": "System:BG"
+    },
+    {
+      "id": "sys_bn",
+      "display_name": "Reactor Core Isolation Cooling",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BN",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; remained operable per Tech Spec 3.5.1",
+      "match_key": "System:BN"
+    },
+    {
+      "id": "c_swpump",
+      "display_name": "HPCS Service Water Pump",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "BG:P",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:BG:P"
+    },
+    {
+      "id": "c_bkr",
+      "display_name": "HPCS SW Pump Breaker 52-170124",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "BG:BKR",
+      "identifier": "52-170124",
+      "model": null,
+      "manufacturer_code": "E062",
+      "inferred_code": false,
+      "match_key": "Component:BG:BKR|52-170124"
+    },
+    {
+      "id": "c_dg",
+      "display_name": "HPCS Diesel Generator",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:hpcs-diesel-generator"
+    },
+    {
+      "id": "fm_bkrtrip",
+      "display_name": "HPCS SW Pump Breaker tripped with no abnormal indications",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Breaker 52-170124 tripped during manual DG start surveillance with no abnormal indications observed",
+      "match_key": "FailureMode:hpcs-sw-pump-breaker-tripped-with-no-abnormal-indications"
+    },
+    {
+      "id": "fm_nopressure",
+      "display_name": "HPCS SW Pump lost discharge pressure and light indications",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "No discharge pressure developed and light indications for the HPCS SW Pump were lost",
+      "match_key": "FailureMode:hpcs-sw-pump-lost-discharge-pressure-and-light-indications"
+    },
+    {
+      "id": "cons_hpci",
+      "display_name": "HPCS system inoperable",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2026-02-01T20:10",
+      "end": "2026-02-09T00:00",
+      "duration": "approx. 8 days",
+      "tz": "CT",
+      "match_key": "Consequence:hpcs-system-inoperable"
+    },
+    {
+      "id": "ca_newbkr",
+      "display_name": "Install and test new breaker",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:install-and-test-new-breaker"
+    },
+    {
+      "id": "ca_failanalysis",
+      "display_name": "Perform failure analysis of tripped breaker",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:perform-failure-analysis-of-tripped-breaker"
+    },
+    {
+      "id": "ca_mccbproc",
+      "display_name": "Develop MCCB testing procedure for GE and Eaton breakers",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:develop-mccb-testing-procedure-for-ge-and-eaton-breakers"
+    },
+    {
+      "id": "ca_standard",
+      "display_name": "Develop standard for breaker trip setpoints and electrical coordination",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:develop-standard-for-breaker-trip-setpoints-and-electrical-coordination"
+    },
+    {
+      "id": "mfr_e062",
+      "display_name": "Manufacturer E062",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "E062",
+      "match_key": "Manufacturer:E062"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "rr_ts351",
+      "display_name": "Technical Specification 3.5.1, ECCS - Operating",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-3-5-1-eccs-operating"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bg",
+      "evidence": null
+    },
+    {
+      "source": "c_swpump",
+      "relation": "PART_OF",
+      "target": "sys_bg",
+      "evidence": null
+    },
+    {
+      "source": "fm_bkrtrip",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_bkrtrip",
+      "relation": "LEADS_TO",
+      "target": "fm_nopressure",
+      "evidence": null
+    },
+    {
+      "source": "fm_nopressure",
+      "relation": "LEADS_TO",
+      "target": "cons_hpci",
+      "evidence": null
+    },
+    {
+      "source": "cons_hpci",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_bn",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_newbkr",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_failanalysis",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_mccbproc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_standard",
+      "evidence": null
+    },
+    {
+      "source": "c_bkr",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_e062",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts351",
+      "evidence": null
+    }
+  ],
+  "chain": "HPCS SW Pump Breaker trips (no abnormal indications) [cause B] -> SW Pump loses discharge pressure/indications -> HPCS system inoperable [backup RCIC remained operable]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code B (Design/Manufacturing/Installation) governs category despite narrative describing only a breaker trip with unknown root cause; planned failure analysis to determine if internal malfunction exists. No previous similar events were identified per narrative, so no SIMILAR_TO/stub LER emitted. HPCS DG itself was not failed (operators manually secured it after SW pump alarm); modeled as context component only, not part of failure chain."
+}

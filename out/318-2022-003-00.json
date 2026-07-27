@@ -1,0 +1,435 @@
+{
+  "ler_number": "318-2022-003-00",
+  "identity": {
+    "accession_number": "ML22325A332",
+    "docket": "05000318",
+    "plant_name": "Calvert Cliffs",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2022-09-21",
+    "report_date": "2022-11-21",
+    "operating_mode": "1",
+    "power_level": 38,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2022-003-00 for Calvert Cliffs Nuclear Power Plant, Unit No. 2, Pressurizer Safety Valve As-Found Settings (Low) Outside Technical Specification Limits Due to Setpoint Drift"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "B",
+      "system": "AB",
+      "component": "RV",
+      "manufacturer": "D243",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The most likely causes of the issue have been determined to be due to (1) the lack of thermal soaks and gradual RCS pressurizations to NOP performed during the operating cycle starting with the completion of the 2021 RFO and (2) excessive lifts that were required prior to installation during the 2021 RFO in order to achieve acceptable as-left test results.",
+    "cause_code": "B",
+    "category": "Design/Manufacturing/Installation",
+    "theme": "PSV setpoint drift from procedure elimination and excessive test lifts",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 318-2022-003-00",
+      "properties": {},
+      "type": "LER",
+      "key": "318-2022-003-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:318-2022-003-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Calvert Cliffs Unit 2",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000318",
+      "match_key": "Unit:05000318"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Manufacturing/Installation (B)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "B",
+      "category": "Design/Manufacturing/Installation",
+      "theme": "PSV setpoint drift from procedure elimination and excessive test lifts",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Design/Manufacturing/Installation"
+    },
+    {
+      "id": "sys_ab",
+      "display_name": "Reactor Coolant System / Pressurizer",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "AB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:AB"
+    },
+    {
+      "id": "c_psv200",
+      "display_name": "Pressurizer Safety Valve 2RV200",
+      "properties": {
+        "serial_number": "BV02950"
+      },
+      "type": "Component",
+      "eiis_code": "RV",
+      "identifier": "2RV200",
+      "model": null,
+      "manufacturer_code": "D243",
+      "inferred_code": false,
+      "match_key": "Component:RV|2RV200"
+    },
+    {
+      "id": "c_spindle",
+      "display_name": "Stainless-steel spindle",
+      "properties": {
+        "material": "stainless steel",
+        "runout": "<0.003 inch"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:stainless-steel-spindle"
+    },
+    {
+      "id": "c_psv201",
+      "display_name": "Pressurizer Safety Valve 2RV201",
+      "properties": {
+        "serial_number": "BM07949",
+        "note": "as-found lift within TS limits"
+      },
+      "type": "Component",
+      "eiis_code": "RV",
+      "identifier": "2RV201",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:RV|2RV201"
+    },
+    {
+      "id": "fm_procremoved",
+      "display_name": "Pressurizer thermal soak / gradual RCS pressurization steps removed from startup procedure",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Site removed OP-01-2 steps for a 3-hr pressurizer soak and 2-hr gradual RCS pressure increase to NOP prior to startup following the 2021 RFO, believing the soak was based on outdated legacy information.",
+      "match_key": "FailureMode:pressurizer-thermal-soak-gradual-rcs-pressurization-steps-removed-from-startup-procedure"
+    },
+    {
+      "id": "fm_excessivelifts",
+      "display_name": "Excessive test lifts (20) required to achieve as-left acceptance criteria",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "20 lifts (exceeding the 15-lift threshold requiring special authorization) were required to certify PSV BV02950 to meet as-left tolerances prior to installation.",
+      "match_key": "FailureMode:excessive-test-lifts-20-required-to-achieve-as-left-acceptance-criteria"
+    },
+    {
+      "id": "fm_seatleak",
+      "display_name": "PSV 2RV200 seat leakage / degradation",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Seat leakage past 2RV200 identified July 2021 via increased Quench Tank level, worsening through subsequent thermal/pressure transients (manual trips, automatic trip, simmering, power manipulations).",
+      "match_key": "FailureMode:psv-2rv200-seat-leakage-degradation"
+    },
+    {
+      "id": "fm_setpointdrift",
+      "display_name": "PSV 2RV200 setpoint drift (low)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "As-found lift setting for 2RV200 measured 2470 psia (-1.2% from nominal 2500 psia setpoint), below the TS SR 3.4.10.1 low limit of 2475 psia.",
+      "match_key": "FailureMode:psv-2rv200-setpoint-drift-low"
+    },
+    {
+      "id": "cons_tsviol",
+      "display_name": "PSV as-found setpoint outside Technical Specification limits / undetected inoperability",
+      "properties": {
+        "note": "Condition existed for an undetermined period while valve was installed in the plant, longer than TS Completion Times; should have required entry into TS LCO 3.0.3"
+      },
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:psv-as-found-setpoint-outside-technical-specification-limits-undetected-inoperability"
+    },
+    {
+      "id": "ca_spare",
+      "display_name": "Install spare PSV with Inconel spindle at 2RV200",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:install-spare-psv-with-inconel-spindle-at-2rv200"
+    },
+    {
+      "id": "ca_procrevise",
+      "display_name": "Revise site procedures to reincorporate pressurizer soak and gradual RCS pressurization to NOP",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-site-procedures-to-reincorporate-pressurizer-soak-and-gradual-rcs-pressurization-to-nop"
+    },
+    {
+      "id": "ca_testlimit",
+      "display_name": "Revise PSV test procedure to firmly limit number of lifts allowed when establishing setpoints",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-psv-test-procedure-to-firmly-limit-number-of-lifts-allowed-when-establishing-setpoints"
+    },
+    {
+      "id": "mfr_dresser",
+      "display_name": "Dresser Consolidated, Inc.",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "D243",
+      "match_key": "Manufacturer:D243"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts3410",
+      "display_name": "Technical Specification SR 3.4.10.1 / Condition 3.4.10",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-sr-3-4-10-1-condition-3-4-10"
+    },
+    {
+      "id": "rr_nureg1022",
+      "display_name": "NUREG-1022, Revision 3",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "standard/guidance",
+      "match_key": "RegulatoryReference:nureg-1022-revision-3"
+    },
+    {
+      "id": "ler_2011_002",
+      "display_name": "LER 318-2011-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "318-2011-002-00",
+      "stub": true,
+      "title": null,
+      "plant": "Calvert Cliffs Nuclear Power Plant",
+      "match_key": "LER:318-2011-002-00"
+    },
+    {
+      "id": "ler_2013_002",
+      "display_name": "LER 318-2013-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "318-2013-002-00",
+      "stub": true,
+      "title": null,
+      "plant": "Calvert Cliffs Nuclear Power Plant",
+      "match_key": "LER:318-2013-002-00"
+    },
+    {
+      "id": "ler_2014_003",
+      "display_name": "LER 317-2014-003-00",
+      "properties": {},
+      "type": "LER",
+      "key": "317-2014-003-00",
+      "stub": true,
+      "title": null,
+      "plant": "Calvert Cliffs Nuclear Power Plant",
+      "match_key": "LER:317-2014-003-00"
+    },
+    {
+      "id": "ler_2017_001",
+      "display_name": "LER 318-2017-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "318-2017-001-00",
+      "stub": true,
+      "title": null,
+      "plant": "Calvert Cliffs Nuclear Power Plant",
+      "match_key": "LER:318-2017-001-00"
+    },
+    {
+      "id": "ler_2018_001",
+      "display_name": "LER 317-2018-001-01",
+      "properties": {},
+      "type": "LER",
+      "key": "317-2018-001-01",
+      "stub": true,
+      "title": null,
+      "plant": "Calvert Cliffs Nuclear Power Plant",
+      "match_key": "LER:317-2018-001-01"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ab",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_psv200",
+      "evidence": null
+    },
+    {
+      "source": "c_psv200",
+      "relation": "PART_OF",
+      "target": "sys_ab",
+      "evidence": null
+    },
+    {
+      "source": "c_spindle",
+      "relation": "PART_OF",
+      "target": "c_psv200",
+      "evidence": null
+    },
+    {
+      "source": "fm_procremoved",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_excessivelifts",
+      "relation": "LEADS_TO",
+      "target": "fm_seatleak",
+      "evidence": null
+    },
+    {
+      "source": "fm_procremoved",
+      "relation": "LEADS_TO",
+      "target": "fm_seatleak",
+      "evidence": null
+    },
+    {
+      "source": "fm_seatleak",
+      "relation": "LEADS_TO",
+      "target": "fm_setpointdrift",
+      "evidence": null
+    },
+    {
+      "source": "fm_setpointdrift",
+      "relation": "LEADS_TO",
+      "target": "cons_tsviol",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_spare",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procrevise",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_testlimit",
+      "evidence": null
+    },
+    {
+      "source": "c_psv200",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_dresser",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts3410",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_nureg1022",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_2011_002",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_2013_002",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_2014_003",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_2017_001",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_2018_001",
+      "evidence": null
+    }
+  ],
+  "chain": "excessive test lifts (20) during recertification + elimination of pressurizer soak/gradual RCS pressurization [cause B] -> PSV 2RV200 seat leakage degrades over multiple thermal/pressure transients -> setpoint drifts low (2470 psia, below 2475 psia TS limit) -> undetected TS-limit violation / inoperability beyond allowed Completion Time",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Block-13 system code AB corresponds to Reactor Coolant System/Pressurizer per IEEE 805; component RV = pressurizer safety valve. Discovery occurred at offsite testing facility after valve removal, though the LER text also references discovery during 'normal operation' timeframe in Block A/date fields (self-identified per CAP IR 04524139). Five previous occurrence LERs modeled as stub nodes per instructions, using unit digits as stated in narrative (317 = Unit 1, 318 = Unit 2 for this plant)."
+}

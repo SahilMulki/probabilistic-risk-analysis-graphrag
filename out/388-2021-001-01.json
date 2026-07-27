@@ -1,0 +1,488 @@
+{
+  "ler_number": "388-2021-001-01",
+  "identity": {
+    "accession_number": "ML22080A215",
+    "docket": "05000388",
+    "plant_name": "Susquehanna",
+    "unit": 2,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2021-07-06",
+    "report_date": "2022-03-21",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2021-001-01 for Susquehanna Unit 2, Condition Prohibited by Technical Specifications Due to Drift of Reactor Pressure Switch"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)",
+      "10 CFR 50.73(a)(2)(v)(D)",
+      "10 CFR 50.73(a)(2)(vii)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "B",
+      "system": "JE",
+      "component": "PS",
+      "manufacturer": "GE/Cameron",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The direct cause was determined to be instrument setpoint drift due to temperature/humidity changes and mechanical hysteresis. The apparent cause involved the original design inputs not accounting for temperature and humidity effects on the switch.",
+    "cause_code": "B",
+    "category": "Design/Manufacturing/Installation",
+    "theme": "Design inputs did not account for temperature/humidity effects, causing recurring instrument drift",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 388-2021-001-01",
+      "properties": {},
+      "type": "LER",
+      "key": "388-2021-001-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:388-2021-001-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Susquehanna Unit 2",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000388",
+      "match_key": "Unit:05000388"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Manufacturing/Installation (B)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "B",
+      "category": "Design/Manufacturing/Installation",
+      "theme": "Design inputs did not account for temperature/humidity effects, causing recurring instrument drift",
+      "proximate_text": "The direct cause was determined to be instrument setpoint drift due to temperature/humidity changes and mechanical hysteresis. The apparent cause involved the original design inputs not accounting for temperature and humidity effects on the switch.",
+      "provisional": false,
+      "match_key": "Cause:Design/Manufacturing/Installation"
+    },
+    {
+      "id": "sys_je",
+      "display_name": "Reactor Steam Dome Pressure - Low channels",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JE",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "instrumentation providing ECCS injection permissive",
+      "match_key": "System:JE"
+    },
+    {
+      "id": "sys_bm",
+      "display_name": "Core Spray",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BM",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected ECCS injection function",
+      "match_key": "System:BM"
+    },
+    {
+      "id": "sys_bo",
+      "display_name": "Residual Heat Removal / Low Pressure Coolant Injection (RHR/LPCI)",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BO",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected ECCS injection function",
+      "match_key": "System:BO"
+    },
+    {
+      "id": "c_ps_d",
+      "display_name": "Reactor Steam Dome Pressure-Low switch, 'D' channel (PS-B21-2N021D, Microswitch 2)",
+      "properties": {
+        "modification": "over-range condition and movement assembly/linkages removed; indication function removed"
+      },
+      "type": "Component",
+      "eiis_code": "PS",
+      "identifier": "PS-B21-2N021D",
+      "model": "Cameron-Barton 288A (modified)",
+      "manufacturer_code": "Cameron",
+      "inferred_code": false,
+      "match_key": "Component:PS|PS-B21-2N021D"
+    },
+    {
+      "id": "c_ps_c",
+      "display_name": "Reactor Steam Dome Pressure-Low switch, 'C' channel (PIS-B21-2N021C)",
+      "properties": {
+        "note": "surveillance tested just prior to identification of 'D' channel drift, rendering both channels inoperable concurrently"
+      },
+      "type": "Component",
+      "eiis_code": "PS",
+      "identifier": "PIS-B21-2N021C",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:PS|PIS-B21-2N021C"
+    },
+    {
+      "id": "fm_designgap",
+      "display_name": "Original design inputs did not account for temperature/humidity effects on switch",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Apparent cause: design did not adequately account for environmental effects on pressure switch mechanism",
+      "match_key": "FailureMode:original-design-inputs-did-not-account-for-temperature-humidity-effects-on-switch"
+    },
+    {
+      "id": "fm_drift",
+      "display_name": "Instrument setpoint drift due to temperature/humidity changes and mechanical hysteresis",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Direct cause of the drift event on July 6, 2021",
+      "match_key": "FailureMode:instrument-setpoint-drift-due-to-temperature-humidity-changes-and-mechanical-hysteresis"
+    },
+    {
+      "id": "fm_below_av",
+      "display_name": "'D' channel switch drifted outside lower TS allowable value",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Microswitch 2 (PS-B21-2N021D) found outside TS 3.3.5.1 lower allowable value on July 6, 2021",
+      "match_key": "FailureMode:d-channel-switch-drifted-outside-lower-ts-allowable-value"
+    },
+    {
+      "id": "fm_concurrent_inop",
+      "display_name": "Redundant 'C' channel concurrently inoperable due to surveillance testing",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "PIS-B21-2N021C was under surveillance test just prior to identification of 'D' channel drift, making both redundant channels inoperable simultaneously",
+      "match_key": "FailureMode:redundant-c-channel-concurrently-inoperable-due-to-surveillance-testing"
+    },
+    {
+      "id": "cons_tsprohibited",
+      "display_name": "Condition prohibited by Technical Specifications / common cause inoperability of ECCS instrumentation channels",
+      "properties": {
+        "note": "Condition likely existed longer than allowed by TS 3.3.5.1, TS 3.5.1, and TS 3.0.3; impacted both Core Spray and LPCI injection permissive functions"
+      },
+      "type": "Consequence",
+      "start": "2021-07-06",
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:condition-prohibited-by-technical-specifications-common-cause-inoperability-of-eccs-instrumentation-channels"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace switch with unmodified pressure indicating switch",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-switch-with-unmodified-pressure-indicating-switch"
+    },
+    {
+      "id": "ca_revise_av",
+      "display_name": "Revise allowable value for TS 3.3.5.1 Functions 1.c, 1.d, 2.c, and 2.d",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-allowable-value-for-ts-3-3-5-1-functions-1-c-1-d-2-c-and-2-d"
+    },
+    {
+      "id": "mfr_cameron",
+      "display_name": "Cameron",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "Cameron",
+      "match_key": "Manufacturer:Cameron"
+    },
+    {
+      "id": "rr_5073i",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_5073v",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "rr_5073vii",
+      "display_name": "10 CFR 50.73(a)(2)(vii)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-vii"
+    },
+    {
+      "id": "rr_5046",
+      "display_name": "10 CFR 50.46 (peak cladding temperature limits)",
+      "properties": {
+        "type": "analysis-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-46-peak-cladding-temperature-limits"
+    },
+    {
+      "id": "rr_ts33051",
+      "display_name": "TS 3.3.5.1, ECCS Instrumentation",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ts-3-3-5-1-eccs-instrumentation"
+    },
+    {
+      "id": "rr_ts351",
+      "display_name": "TS 3.5.1, ECCS-Operating",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ts-3-5-1-eccs-operating"
+    },
+    {
+      "id": "rr_ts303",
+      "display_name": "TS 3.0.3",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ts-3-0-3"
+    },
+    {
+      "id": "ler_prev_2020",
+      "display_name": "LER 388-2020-002-01",
+      "properties": {},
+      "type": "LER",
+      "key": "388-2020-002-01",
+      "stub": true,
+      "title": "Condition Prohibited by Technical Specifications Due to Drift of Reactor Pressure Switch Caused by Lack of Requirements for Acclimation of the Instrument to the Operating Environment",
+      "plant": "Susquehanna Steam Electric Station Unit 2",
+      "match_key": "LER:388-2020-002-01"
+    },
+    {
+      "id": "ler_prev_2018",
+      "display_name": "LER 387(388)-2018-005-02",
+      "properties": {},
+      "type": "LER",
+      "key": "387(388)-2018-005-02",
+      "stub": true,
+      "title": "Condition Prohibited by Technical Specifications Due to Drift of Reactor Pressure Switches",
+      "plant": "Susquehanna Steam Electric Station Units 1/2",
+      "match_key": "LER:387(388)-2018-005-02"
+    },
+    {
+      "id": "ler_prev_2017",
+      "display_name": "LER 388-2017-010-02",
+      "properties": {},
+      "type": "LER",
+      "key": "388-2017-010-02",
+      "stub": true,
+      "title": "Condition Prohibited by Technical Specifications Due to Drift of Reactor Pressure Switches",
+      "plant": "Susquehanna Steam Electric Station Unit 2",
+      "match_key": "LER:388-2017-010-02"
+    },
+    {
+      "id": "ler_prev_2015",
+      "display_name": "LER 388(387)-2015-001-01",
+      "properties": {},
+      "type": "LER",
+      "key": "388(387)-2015-001-01",
+      "stub": true,
+      "title": "Condition Prohibited by Technical Specifications Due to Drift of Reactor Pressure Steam Dome-Low Switches",
+      "plant": "Susquehanna Steam Electric Station Units 1/2",
+      "match_key": "LER:388(387)-2015-001-01"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073i",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073v",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073vii",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_je",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bm",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bo",
+      "evidence": null
+    },
+    {
+      "source": "c_ps_d",
+      "relation": "PART_OF",
+      "target": "sys_je",
+      "evidence": null
+    },
+    {
+      "source": "c_ps_c",
+      "relation": "PART_OF",
+      "target": "sys_je",
+      "evidence": null
+    },
+    {
+      "source": "c_ps_d",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_cameron",
+      "evidence": null
+    },
+    {
+      "source": "fm_designgap",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_designgap",
+      "relation": "LEADS_TO",
+      "target": "fm_drift",
+      "evidence": null
+    },
+    {
+      "source": "fm_drift",
+      "relation": "LEADS_TO",
+      "target": "fm_below_av",
+      "evidence": null
+    },
+    {
+      "source": "fm_below_av",
+      "relation": "LEADS_TO",
+      "target": "fm_concurrent_inop",
+      "evidence": null
+    },
+    {
+      "source": "fm_concurrent_inop",
+      "relation": "LEADS_TO",
+      "target": "cons_tsprohibited",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_revise_av",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev_2020",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev_2018",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev_2017",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev_2015",
+      "evidence": null
+    },
+    {
+      "source": "cons_tsprohibited",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5046",
+      "evidence": null
+    },
+    {
+      "source": "cons_tsprohibited",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts33051",
+      "evidence": null
+    },
+    {
+      "source": "cons_tsprohibited",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts351",
+      "evidence": null
+    },
+    {
+      "source": "cons_tsprohibited",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts303",
+      "evidence": null
+    }
+  ],
+  "chain": "design inputs omitted temperature/humidity effects [cause B] -> instrument setpoint drift (temp/humidity + hysteresis) -> 'D' channel switch drifts below TS lower allowable value -> redundant 'C' channel concurrently inoperable (surveillance test) -> condition prohibited by TS / common-cause inoperability of ECCS injection permissive channels (Core Spray & LPCI)",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "As-found setpoint remained above the accident-analysis analytical limit, so no actual safety system functional failure occurred despite exceeding the TS allowable value. Four previous similar occurrences cited, all involving drift of reactor pressure switches at SSES; keys captured exactly as stated in narrative including combined-unit notations. Component identifier PS-B21-2N021D used per narrative naming; EIIS code JE per block 13 (narrative labels it as JE/PS for the Reactor Steam Dome Pressure-Low channel)."
+}

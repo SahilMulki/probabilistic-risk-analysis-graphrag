@@ -1,0 +1,316 @@
+{
+  "ler_number": "387-2020-002-01",
+  "identity": {
+    "accession_number": "ML21041A348",
+    "docket": "05000387",
+    "plant_name": "Susquehanna",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2020-07-01",
+    "report_date": "2021-02-10",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2020-002-01 for Susquehanna Steam Electric Station Unit 1, Inoperability of Unit 1 \"B\" Residual Heat Removal Service Water Pump Due to the Circuit Breaker Spring Charging Motor Contact Actuator Being Out of Adjustment"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "E",
+      "system": "BI",
+      "component": "72",
+      "manufacturer": "C770",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "the Eaton/Cutler-Hammer 4.16kV vacuum circuit breaker spring charging motor contact actuator being out of adjustment with the motor cut off cam, resulting in the spring charging motor contact not experiencing full travel. Additionally, age was determined to be the most likely causal factor, combined with the original equipment manufacturer vendor's failure to recommend a periodic replacement for the circuit breaker's two limit switches.",
+    "cause_code": "E",
+    "category": "Management/QA Deficiency",
+    "theme": "vendor PM guidance deficiency / component aging",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 387-2020-002-01",
+      "properties": {},
+      "type": "LER",
+      "key": "387-2020-002-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:387-2020-002-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Susquehanna Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000387",
+      "match_key": "Unit:05000387"
+    },
+    {
+      "id": "cause",
+      "display_name": "Management/QA Deficiency (E)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "E",
+      "category": "Management/QA Deficiency",
+      "theme": "vendor PM guidance deficiency / component aging",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Management/QA Deficiency"
+    },
+    {
+      "id": "sys_bi",
+      "display_name": "Residual Heat Removal Service Water",
+      "properties": {
+        "note": "RHRSW system"
+      },
+      "type": "System",
+      "eiis_code": "BI",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BI"
+    },
+    {
+      "id": "c_pump_1b",
+      "display_name": "Unit 1 \"B\" RHRSW Pump (1P506B)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "P",
+      "identifier": "1P506B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:P|1P506B"
+    },
+    {
+      "id": "c_breaker",
+      "display_name": "Circuit Breaker 1A20408",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "72",
+      "identifier": "1A20408",
+      "model": "50DHP-VR-250U",
+      "manufacturer_code": "C770",
+      "inferred_code": false,
+      "match_key": "Component:72|1A20408"
+    },
+    {
+      "id": "c_actuator",
+      "display_name": "Spring charging motor contact actuator",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:spring-charging-motor-contact-actuator"
+    },
+    {
+      "id": "c_limit_switch",
+      "display_name": "Circuit breaker limit switches",
+      "properties": {
+        "quantity": 2
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:circuit-breaker-limit-switches"
+    },
+    {
+      "id": "fm_no_pm",
+      "display_name": "Vendor failed to recommend periodic replacement of limit switches",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "OEM vendor's failure to recommend a periodic replacement for the circuit breaker's two limit switches, combined with component age.",
+      "match_key": "FailureMode:vendor-failed-to-recommend-periodic-replacement-of-limit-switches"
+    },
+    {
+      "id": "fm_actuator_misadjust",
+      "display_name": "Spring charging motor contact actuator out of adjustment",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Actuator out of adjustment with the motor cut off cam, resulting in the spring charging motor contact not experiencing full travel.",
+      "match_key": "FailureMode:spring-charging-motor-contact-actuator-out-of-adjustment"
+    },
+    {
+      "id": "fm_springs_no_recharge",
+      "display_name": "Closing springs did not recharge",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Closing springs did not recharge following the circuit breaker's last closing operation on June 21, 2020.",
+      "match_key": "FailureMode:closing-springs-did-not-recharge"
+    },
+    {
+      "id": "fm_pump_no_start",
+      "display_name": "RHRSW pump did not start",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "1B RHRSW pump did not start when being placed into service for Spray Pond Cooling testing.",
+      "match_key": "FailureMode:rhrsw-pump-did-not-start"
+    },
+    {
+      "id": "cons_inop",
+      "display_name": "1B RHRSW pump / subsystem inoperable, TS 3.7.1 Condition B entered",
+      "properties": {
+        "discovery": "2020-07-01T20:26"
+      },
+      "type": "Consequence",
+      "start": "2020-06-21T07:35",
+      "end": "2020-07-02T02:44",
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:1b-rhrsw-pump-subsystem-inoperable-ts-3-7-1-condition-b-entered"
+    },
+    {
+      "id": "ca_replace_breaker",
+      "display_name": "Replaced 1B RHRSW pump circuit breaker 1A20408",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replaced-1b-rhrsw-pump-circuit-breaker-1a20408"
+    },
+    {
+      "id": "ca_revise_pm",
+      "display_name": "Revise preventative maintenance strategy for spring charging motor contact actuator and limit switch",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-preventative-maintenance-strategy-for-spring-charging-motor-contact-actuator-and-limit-switch"
+    },
+    {
+      "id": "mfr_eaton",
+      "display_name": "EATON/Cutler-Hammer",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "C770",
+      "match_key": "Manufacturer:C770"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bi",
+      "evidence": null
+    },
+    {
+      "source": "c_pump_1b",
+      "relation": "PART_OF",
+      "target": "sys_bi",
+      "evidence": null
+    },
+    {
+      "source": "c_actuator",
+      "relation": "PART_OF",
+      "target": "c_breaker",
+      "evidence": null
+    },
+    {
+      "source": "c_limit_switch",
+      "relation": "PART_OF",
+      "target": "c_breaker",
+      "evidence": null
+    },
+    {
+      "source": "fm_no_pm",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_no_pm",
+      "relation": "LEADS_TO",
+      "target": "fm_actuator_misadjust",
+      "evidence": null
+    },
+    {
+      "source": "fm_actuator_misadjust",
+      "relation": "LEADS_TO",
+      "target": "fm_springs_no_recharge",
+      "evidence": null
+    },
+    {
+      "source": "fm_springs_no_recharge",
+      "relation": "LEADS_TO",
+      "target": "fm_pump_no_start",
+      "evidence": null
+    },
+    {
+      "source": "fm_pump_no_start",
+      "relation": "LEADS_TO",
+      "target": "cons_inop",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_breaker",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_revise_pm",
+      "evidence": null
+    },
+    {
+      "source": "c_breaker",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_eaton",
+      "evidence": null
+    }
+  ],
+  "chain": "vendor failed to recommend periodic limit-switch replacement / component age [cause E] -> spring charging motor contact actuator out of adjustment -> closing springs did not recharge -> 1B RHRSW pump did not start -> RHRSW subsystem inoperable (TS 3.7.1 Condition B, ~6/21 07:35 to 7/2 02:44)",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "1A RHRSW pump verified operable throughout the event and analyzed as sufficient to meet accident analysis assumptions, but narrative frames this as an engineering evaluation of the redundant train rather than an explicit 'operable backup during the event' statement for a distinct system node with BACKED_UP_BY semantics matching other examples; included no BACKED_UP_BY edge since 1A pump is the same system's redundant train, not a distinct backup System per schema convention (component/subsystem redundancy, not a separate System node). No previous occurrences reported (None). Component failure info block maps to circuit breaker (model 50DHP-VR-250U)."
+}

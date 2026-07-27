@@ -1,0 +1,399 @@
+{
+  "ler_number": "395-2022-001-01",
+  "identity": {
+    "accession_number": "ML22349A700",
+    "docket": "05000395",
+    "plant_name": "Summer",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2021-11-15",
+    "report_date": "2022-12-15",
+    "operating_mode": "1",
+    "power_level": 47,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Manual Reactor Trip Due to Main Transformer Fault"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "□",
+      "system": "50.",
+      "component": "73(a)(2)(x)",
+      "manufacturer": "10",
+      "reportable": null
+    }
+  ],
+  "cause": {
+    "proximate_text": "The fault was caused by a failure of the center phase high-voltage bushing. Substantial evidence supports that an electrical failure occurred inside the bushing itself. Failure analysis indicates that it is most probable that the H2 bushing failed due to one or more manufacturing defects. Specifically, erroneous layers of paper insulation and a large surface defect on the conductor.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "main transformer bushing manufacturing defect",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 395-2022-001-01",
+      "properties": {
+        "match_key": "LER:395-2022-001-01"
+      },
+      "type": "LER",
+      "key": "395-2022-001-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:395-2022-001-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Summer Unit 1",
+      "properties": {
+        "match_key": "Unit:05000395",
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000395",
+      "match_key": "Unit:05000395"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {
+        "match_key": "Cause:provisional"
+      },
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "main transformer bushing manufacturing defect",
+      "proximate_text": "The fault was caused by a failure of the center phase high-voltage bushing. Substantial evidence supports that an electrical failure occurred inside the bushing itself. Failure analysis indicates that it is most probable that the H2 bushing failed due to one or more manufacturing defects. Specifically, erroneous layers of paper insulation and a large surface defect on the conductor.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_rps",
+      "display_name": "Reactor Protection System",
+      "properties": {
+        "note": "manually actuated",
+        "match_key": "System:reactor-protection-system"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:reactor-protection-system"
+    },
+    {
+      "id": "sys_efw",
+      "display_name": "Emergency Feedwater",
+      "properties": {
+        "match_key": "System:emergency-feedwater"
+      },
+      "type": "System",
+      "eiis_code": "BA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "actuated automatically as designed",
+      "match_key": "System:BA"
+    },
+    {
+      "id": "sys_steamdump",
+      "display_name": "Steam Dump System",
+      "properties": {
+        "match_key": "System:steam-dump-system"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "used for decay heat removal post-trip",
+      "match_key": "System:steam-dump-system"
+    },
+    {
+      "id": "c_xtf",
+      "display_name": "Main Transformer (XTF0001)",
+      "properties": {
+        "match_key": "Component:XTF0001"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "XTF0001",
+      "model": "HE11343",
+      "manufacturer_code": "Mitsubishi Electric Corporation",
+      "inferred_code": false,
+      "match_key": "Component:main-transformer-xtf0001"
+    },
+    {
+      "id": "c_bushing",
+      "display_name": "Center phase (H2) high-voltage bushing",
+      "properties": {
+        "match_key": "Component:h2-high-voltage-bushing"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": "ABB O+C 230kV 900kV BIL 4000A oil impregnated bushing",
+      "manufacturer_code": "ABB",
+      "inferred_code": false,
+      "match_key": "Component:center-phase-h2-high-voltage-bushing"
+    },
+    {
+      "id": "fm_manufacturing",
+      "display_name": "Manufacturing defects in bushing (erroneous paper insulation layers, conductor surface defect)",
+      "properties": {
+        "match_key": "FailureMode:bushing-manufacturing-defects"
+      },
+      "type": "FailureMode",
+      "description": "Erroneous layers of paper insulation and a large surface defect on the conductor within the H2 bushing.",
+      "match_key": "FailureMode:manufacturing-defects-in-bushing-erroneous-paper-insulation-layers-conductor-surface-defect"
+    },
+    {
+      "id": "fm_bushingfail",
+      "display_name": "H2 bushing electrical failure",
+      "properties": {
+        "match_key": "FailureMode:h2-bushing-electrical-failure"
+      },
+      "type": "FailureMode",
+      "description": "Electrical failure occurred inside the bushing itself, causing a fault on the B-phase of the main transformer.",
+      "match_key": "FailureMode:h2-bushing-electrical-failure"
+    },
+    {
+      "id": "fm_xtffault",
+      "display_name": "Main transformer B-phase fault",
+      "properties": {
+        "match_key": "FailureMode:main-transformer-b-phase-fault"
+      },
+      "type": "FailureMode",
+      "description": "Fault on the B-phase of the main transformer (XTF0001).",
+      "match_key": "FailureMode:main-transformer-b-phase-fault"
+    },
+    {
+      "id": "cons_trip",
+      "display_name": "Manual reactor trip / turbine trip / EFW actuation",
+      "properties": {
+        "match_key": "Consequence:manual-reactor-trip-turbine-trip-efw-actuation"
+      },
+      "type": "Consequence",
+      "start": "2021-11-15T17:28",
+      "end": "2021-12-10T00:00",
+      "duration": null,
+      "tz": "EST",
+      "match_key": "Consequence:manual-reactor-trip-turbine-trip-efw-actuation"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Remove faulted transformer, install spare main transformer, return unit online",
+      "properties": {
+        "match_key": "CorrectiveAction:replace-transformer"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:remove-faulted-transformer-install-spare-main-transformer-return-unit-online"
+    },
+    {
+      "id": "ca_newbushing",
+      "display_name": "Select new high voltage composite bushing design for replacement transformer",
+      "properties": {
+        "match_key": "CorrectiveAction:new-composite-bushing-design"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:select-new-high-voltage-composite-bushing-design-for-replacement-transformer"
+    },
+    {
+      "id": "ca_vendorplan",
+      "display_name": "Develop and implement vendor surveillance plan for bushing manufacturing/testing",
+      "properties": {
+        "match_key": "CorrectiveAction:vendor-surveillance-plan"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:develop-and-implement-vendor-surveillance-plan-for-bushing-manufacturing-testing"
+    },
+    {
+      "id": "mfr_abb",
+      "display_name": "ABB",
+      "properties": {
+        "match_key": "Manufacturer:ABB"
+      },
+      "type": "Manufacturer",
+      "code": null,
+      "match_key": "Manufacturer:abb"
+    },
+    {
+      "id": "mfr_mitsubishi",
+      "display_name": "Mitsubishi Electric Corporation",
+      "properties": {
+        "match_key": "Manufacturer:Mitsubishi-Electric-Corporation"
+      },
+      "type": "Manufacturer",
+      "code": null,
+      "match_key": "Manufacturer:mitsubishi-electric-corporation"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_ufsar",
+      "display_name": "UFSAR Chapter 15",
+      "properties": {
+        "match_key": "RegulatoryReference:ufsar-ch-15"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:ufsar-chapter-15"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "LER 395-2017-003-01",
+      "properties": {
+        "match_key": "LER:1-2017-003-01"
+      },
+      "type": "LER",
+      "key": "395-2017-003-01",
+      "stub": true,
+      "title": "Turbine Trip due to Main Generator Differential Lockout from Fault on Center Phase 230 kV Lightning Arrester on Main Transformer",
+      "plant": "V.C. Summer Nuclear Station",
+      "match_key": "LER:395-2017-003-01"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rps",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_efw",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_steamdump",
+      "evidence": null
+    },
+    {
+      "source": "fm_manufacturing",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_manufacturing",
+      "relation": "LEADS_TO",
+      "target": "fm_bushingfail",
+      "evidence": null
+    },
+    {
+      "source": "fm_bushingfail",
+      "relation": "LEADS_TO",
+      "target": "fm_xtffault",
+      "evidence": null
+    },
+    {
+      "source": "fm_xtffault",
+      "relation": "LEADS_TO",
+      "target": "cons_trip",
+      "evidence": null
+    },
+    {
+      "source": "cons_trip",
+      "relation": "MITIGATED_BY",
+      "target": "sys_efw",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_newbushing",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_vendorplan",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ufsar",
+      "evidence": null
+    },
+    {
+      "source": "c_bushing",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_abb",
+      "evidence": null
+    },
+    {
+      "source": "c_xtf",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_mitsubishi",
+      "evidence": null
+    },
+    {
+      "source": "c_bushing",
+      "relation": "PART_OF",
+      "target": "c_xtf",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    }
+  ],
+  "chain": "manufacturing defects in H2 bushing (erroneous paper insulation, conductor surface defect) [cause TBD] -> H2 bushing electrical failure -> main transformer B-phase fault -> manual reactor trip / turbine trip / EFW actuation [mitigated by EFW]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "FORM-366 block_13 fields and cause_code were malformed/garbled in the source input (system/component/manufacturer fields contained fragments of a regulatory citation, e.g. '50.', '73(a)(2)(x)', '10'); treated as not meaningfully populated and set to null per authoritative field copying, with cause_code left TBD/provisional as given. XTF0001 explicitly stated as non-safety-related; EFW and steam dump modeled as involved/mitigating systems per narrative language ('actuation occurred as expected', 'utilizing the steam dump system'). RPS actuation was manual per abstract/narrative. Previous similar event LER key preserved exactly as stated in narrative ('LER 2017-003-01'), rendered with leading unit digit per instructions as '1-2017-003-01'."
+}

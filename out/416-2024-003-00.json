@@ -1,0 +1,322 @@
+{
+  "ler_number": "416-2024-003-00",
+  "identity": {
+    "accession_number": "ML24239A788",
+    "docket": "05000416",
+    "plant_name": "Grand Gulf",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2022-04-02",
+    "report_date": "2024-08-26",
+    "operating_mode": null,
+    "power_level": null,
+    "discovery_context": "inspection",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Grand Gulf Nuclear Station, Unit 1 Licensee Event Report 2024-003-00, Feedwater Inlet Check Valve Incorrectly Determined Operable"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The direct cause of the event was degradation and wear of the valve's seat which resulted in the failed leakage rate test. An additional cause of insufficient knowledge of the Appendix J program requirements by the Senior Reactor Operators (SROs) was also identified as the cause of the incorrectly performed operability evaluation.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "valve seat wear combined with SRO misapplication of Appendix J requirements in operability evaluation",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 416-2024-003-00",
+      "properties": {},
+      "type": "LER",
+      "key": "416-2024-003-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:416-2024-003-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Grand Gulf Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000416",
+      "match_key": "Unit:05000416"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "valve seat wear combined with SRO misapplication of Appendix J requirements in operability evaluation",
+      "proximate_text": "The direct cause of the event was degradation and wear of the valve's seat which resulted in the failed leakage rate test. An additional cause of insufficient knowledge of the Appendix J program requirements by the Senior Reactor Operators (SROs) was also identified as the cause of the incorrectly performed operability evaluation.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_fw",
+      "display_name": "Feedwater System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "system containing PCIV subject to Appendix J testing",
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "c_check_valve",
+      "display_name": "Feedwater Inlet Check Valve 1B21-F032B",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "1B21-F032B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:feedwater-inlet-check-valve-1b21-f032b"
+    },
+    {
+      "id": "c_isolation_valve",
+      "display_name": "Feedwater Isolation Shutoff Valve 1B21-F065B",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "1B21-F065B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:feedwater-isolation-shutoff-valve-1b21-f065b"
+    },
+    {
+      "id": "fm_seat_wear",
+      "display_name": "Valve seat degradation and wear",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Degradation and wear of check valve 1B21-F032B seat resulted in a failing leakage rate test (7650 mL/min).",
+      "match_key": "FailureMode:valve-seat-degradation-and-wear"
+    },
+    {
+      "id": "fm_leak_fail",
+      "display_name": "Failed post-work leakage rate test",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Leakage rate of 7650 mL/min observed during post-work Appendix J leakage rate test, exceeding acceptable criteria.",
+      "match_key": "FailureMode:failed-post-work-leakage-rate-test"
+    },
+    {
+      "id": "fm_op_eval_error",
+      "display_name": "Incorrect operability evaluation",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "SROs made an incorrect assumption about Appendix J requirements and concluded the failing leakage rate was within allowable limits, incorrectly determining the valve operable.",
+      "match_key": "FailureMode:incorrect-operability-evaluation"
+    },
+    {
+      "id": "cons_pciv_inop",
+      "display_name": "PCIV operated in condition prohibited by Technical Specifications",
+      "properties": {
+        "note": "Valve remained in service through the fuel cycle; identified June 27, 2024 during NRC Biennial PI&R Inspection as Green finding/NCV of TS 3.6.1.3 and violation of TS 3.0.4."
+      },
+      "type": "Consequence",
+      "start": "2022-04-02",
+      "end": null,
+      "duration": "remained in service for 24-month fuel cycle",
+      "tz": null,
+      "match_key": "Consequence:pciv-operated-in-condition-prohibited-by-technical-specifications"
+    },
+    {
+      "id": "ca_repair_seat",
+      "display_name": "Repair valve seat and retest",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:repair-valve-seat-and-retest"
+    },
+    {
+      "id": "ca_training",
+      "display_name": "Update Operability Training for SROs on Code testing requirements",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:update-operability-training-for-sros-on-code-testing-requirements"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts3613",
+      "display_name": "TS 3.6.1.3 Primary Containment Isolation Valves",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-3-6-1-3-primary-containment-isolation-valves"
+    },
+    {
+      "id": "rr_ts304",
+      "display_name": "TS 3.0.4",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-3-0-4"
+    },
+    {
+      "id": "rr_appj",
+      "display_name": "Appendix J Primary Containment Leakage Rate Testing Program",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "standard/guidance",
+      "match_key": "RegulatoryReference:appendix-j-primary-containment-leakage-rate-testing-program"
+    },
+    {
+      "id": "ler_stub_2023001",
+      "display_name": "Valve Closure Test Failure Resulting in Condition Prohibited by Technical Specification",
+      "properties": {},
+      "type": "LER",
+      "key": "2023-001-01",
+      "stub": true,
+      "title": "Valve Closure Test Failure Resulting in Condition Prohibited by Technical Specification",
+      "plant": "Grand Gulf Nuclear Station",
+      "match_key": "LER:2023-001-01"
+    },
+    {
+      "id": "ler_stub_2021001",
+      "display_name": "Primary Containment Outer Airlock Door Inoperable Due To Unacceptable Leak Rate",
+      "properties": {},
+      "type": "LER",
+      "key": "2021-001-01",
+      "stub": true,
+      "title": "Primary Containment Outer Airlock Door Inoperable Due To Unacceptable Leak Rate",
+      "plant": "Grand Gulf Nuclear Station",
+      "match_key": "LER:2021-001-01"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts3613",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts304",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_appj",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_fw",
+      "evidence": null
+    },
+    {
+      "source": "c_check_valve",
+      "relation": "PART_OF",
+      "target": "sys_fw",
+      "evidence": null
+    },
+    {
+      "source": "fm_seat_wear",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_seat_wear",
+      "relation": "LEADS_TO",
+      "target": "fm_leak_fail",
+      "evidence": null
+    },
+    {
+      "source": "fm_leak_fail",
+      "relation": "LEADS_TO",
+      "target": "fm_op_eval_error",
+      "evidence": null
+    },
+    {
+      "source": "fm_op_eval_error",
+      "relation": "LEADS_TO",
+      "target": "cons_pciv_inop",
+      "evidence": null
+    },
+    {
+      "source": "cons_pciv_inop",
+      "relation": "BACKED_UP_BY",
+      "target": "c_isolation_valve",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_repair_seat",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_training",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_stub_2023001",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_stub_2021001",
+      "evidence": null
+    }
+  ],
+  "chain": "valve seat degradation/wear [cause TBD] -> failed post-work leakage rate test -> SRO incorrect Appendix J operability evaluation -> PCIV 1B21-F032B operated in condition prohibited by TS 3.6.1.3 (24-month fuel cycle) [backup: feedwater isolation shutoff valve 1B21-F065B maintained penetration leak rate]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code and category are TBD/provisional in FORM-366 FIELDS despite narrative providing a clear direct-cause statement (valve seat wear) and additional cause (SRO knowledge gap on Appendix J); per rule 4 the official code governs and is copied verbatim, with provisional=true. Event discovered as a self-revealing condition during 2022 test but formally reportable/identified as violation following June 27, 2024 NRC Biennial PI&R Inspection; discovery_context set to 'inspection' per FORM-366 FIELDS. Feedwater isolation shutoff valve 1821F065B is stated to have maintained leakage rates for the penetration and is modeled as a functioning backup component (not a System) since it is a valve, not a system-level backup; no separate System node created for it. Previous similar occurrence keys preserved exactly as stated in narrative ('LEA 2023-001-01' text is treated as LER 2023-001-01 per context) and '2021-001-01'."
+}

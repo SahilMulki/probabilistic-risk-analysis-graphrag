@@ -1,0 +1,323 @@
+{
+  "ler_number": "382-2023-004-00",
+  "identity": {
+    "accession_number": "ML24045A179",
+    "docket": "05000382",
+    "plant_name": "Waterford",
+    "unit": 3,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2023-12-17",
+    "report_date": "2024-02-14",
+    "operating_mode": "6",
+    "power_level": null,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "License Event Report 50-382/2023-004-00, Non-Compliance with Technical Specifications due to Performing Startup Channel 1 Functional Testing during Fuel Movement"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "D",
+      "system": "IG",
+      "component": "DET",
+      "manufacturer": "G063",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "Procedural guidance was inadequate. The precautions and limitations section of OP-903-101 only referenced Technical Specification 3.1.2.9, Boron Dilution Monitors. At the time, OP-903-101 did not reference Tech Spec 3.9.2 in the precautions and limitations section, nor does the procedure have a circle/slash sign off step to verify core alterations are not in progress.",
+    "cause_code": "D",
+    "category": "Defective Procedure",
+    "theme": "surveillance procedure missing TS cross-reference for concurrent refueling operations",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 382-2023-004-00",
+      "properties": {},
+      "type": "LER",
+      "key": "382-2023-004-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:382-2023-004-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Waterford Unit 3",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000382",
+      "match_key": "Unit:05000382"
+    },
+    {
+      "id": "cause",
+      "display_name": "Defective Procedure (D)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "D",
+      "category": "Defective Procedure",
+      "theme": "surveillance procedure missing TS cross-reference for concurrent refueling operations",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Defective Procedure"
+    },
+    {
+      "id": "sys_ig",
+      "display_name": "Refueling Operations Instrumentation (Source Range Neutron Flux Monitoring)",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "IG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "involved; monitored under TS 3.9.2",
+      "match_key": "System:IG"
+    },
+    {
+      "id": "c_startup1",
+      "display_name": "Startup Channel 1 (Source Range Neutron Flux Monitor)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "DET",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": "G063",
+      "inferred_code": false,
+      "match_key": "Component:DET"
+    },
+    {
+      "id": "c_procedure",
+      "display_name": "Procedure OP-903-101, Startup Channel Functional Test",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:procedure-op-903-101-startup-channel-functional-test"
+    },
+    {
+      "id": "fm_procgap",
+      "display_name": "Procedure lacked reference to TS 3.9.2 and lacked core-alteration verification step",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "OP-903-101 precautions and limitations section referenced only TS 3.1.2.9, not TS 3.9.2, and had no sign-off step to verify core alterations were not in progress.",
+      "match_key": "FailureMode:procedure-lacked-reference-to-ts-3-9-2-and-lacked-core-alteration-verification-step"
+    },
+    {
+      "id": "fm_briefgap",
+      "display_name": "Operator proficiency gap / incomplete pre-job brief on TS applicability",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Licensed operators failed to identify that TS 3.9.2 applied during refueling operations; pre-job brief covered TS 3.1.2.9 but not TS 3.9.2.",
+      "match_key": "FailureMode:operator-proficiency-gap-incomplete-pre-job-brief-on-ts-applicability"
+    },
+    {
+      "id": "fm_testconfig",
+      "display_name": "Startup Channel 1 made inoperable by test configuration",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Startup Channel 1 was inoperable during performance of OP-903-101 due to the test configuration of the Startup Drawer.",
+      "match_key": "FailureMode:startup-channel-1-made-inoperable-by-test-configuration"
+    },
+    {
+      "id": "fm_missedentry",
+      "display_name": "TS 3.9.2 Action (a) entry to suspend core alterations was missed",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "On-shift operators did not suspend core alterations while Startup Channel 1 was inoperable, as required by TS 3.9.2 Action (a).",
+      "match_key": "FailureMode:ts-3-9-2-action-a-entry-to-suspend-core-alterations-was-missed"
+    },
+    {
+      "id": "cons_tsviol",
+      "display_name": "Non-compliance with TS 3.9.2 during fuel movement / core alterations not suspended",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2023-12-17",
+      "end": "2023-12-17",
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:non-compliance-with-ts-3-9-2-during-fuel-movement-core-alterations-not-suspended"
+    },
+    {
+      "id": "ca_checklist",
+      "display_name": "Review and verification of Pre-Core Alteration Checklist to confirm surveillances current and communication/level monitoring not lost",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:review-and-verification-of-pre-core-alteration-checklist-to-confirm-surveillances-current-and-communication-level-monitoring-not-lost"
+    },
+    {
+      "id": "ca_qualrevoke",
+      "display_name": "Revoke qualifications for involved individuals until remediation complete",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revoke-qualifications-for-involved-individuals-until-remediation-complete"
+    },
+    {
+      "id": "ca_lessonplan",
+      "display_name": "Incorporate operating experience into system and refueling outage lesson plans",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:incorporate-operating-experience-into-system-and-refueling-outage-lesson-plans"
+    },
+    {
+      "id": "ca_procrevise",
+      "display_name": "Revise OP-903-101 to include TS 3.9.2 requirements",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-op-903-101-to-include-ts-3-9-2-requirements"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts392",
+      "display_name": "TS 3.9.2, Refueling Operations Instrumentation",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-3-9-2-refueling-operations-instrumentation"
+    },
+    {
+      "id": "rr_ts3129",
+      "display_name": "TS 3.1.2.9, Boron Dilution Monitors",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-3-1-2-9-boron-dilution-monitors"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ig",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_procedure",
+      "evidence": null
+    },
+    {
+      "source": "c_startup1",
+      "relation": "PART_OF",
+      "target": "sys_ig",
+      "evidence": null
+    },
+    {
+      "source": "fm_procgap",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_procgap",
+      "relation": "LEADS_TO",
+      "target": "fm_briefgap",
+      "evidence": null
+    },
+    {
+      "source": "fm_briefgap",
+      "relation": "LEADS_TO",
+      "target": "fm_testconfig",
+      "evidence": null
+    },
+    {
+      "source": "fm_testconfig",
+      "relation": "LEADS_TO",
+      "target": "fm_missedentry",
+      "evidence": null
+    },
+    {
+      "source": "fm_missedentry",
+      "relation": "LEADS_TO",
+      "target": "cons_tsviol",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_checklist",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_qualrevoke",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_lessonplan",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procrevise",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts392",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts3129",
+      "evidence": null
+    }
+  ],
+  "chain": "inadequate procedure lacking TS 3.9.2 reference [cause D] -> operator proficiency gap in pre-job brief -> Startup Channel 1 rendered inoperable by test configuration -> TS 3.9.2 Action (a) entry missed -> TS non-compliance during fuel movement (shutdown margin maintained throughout)",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "No previous similar events reported ('None'), so no stub LER/SIMILAR_TO edge created. No backups modeled since TS 3.9.2 requires two operable monitors and the second channel's status during the event is not explicitly confirmed operable in narrative; safety was maintained via shutdown margin/boron concentration, not a system backup, so no BACKED_UP_BY edge asserted. Manufacturer code G063 given in block 13 but no manufacturer name provided in narrative, so no separate Manufacturer node created (would require guessing display name) -- omitted per rule against inventing data; manufacturer_code retained on component properties instead."
+}

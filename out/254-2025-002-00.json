@@ -1,0 +1,367 @@
+{
+  "ler_number": "254-2025-002-00",
+  "identity": {
+    "accession_number": "ML25086A216",
+    "docket": "05000254",
+    "plant_name": "Quad Cities",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2025-01-26",
+    "report_date": "2025-03-27",
+    "operating_mode": "1",
+    "power_level": 91,
+    "discovery_context": "inspection",
+    "status": "final",
+    "revision": "00",
+    "ens_number": "57515",
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Control Room Emergency Ventilation Air Conditioning System Inoperable due to Logic Issue"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)(D)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "X",
+      "system": "VI",
+      "component": "52",
+      "manufacturer": "C770",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The causal product identified a design vulnerability where a simultaneous failure of a pressure switch and time delay relay could also cause the issue. A simultaneous failure could have potentially allowed a high inrush starting current during one of the CREV RCU compressor pump down cycles.",
+    "cause_code": "X",
+    "category": "Other",
+    "theme": "design vulnerability - simultaneous relay/pressure switch failure permitting high inrush current",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 254-2025-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "254-2025-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:254-2025-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Quad Cities Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric",
+        "thermal_power_mwt": "2957"
+      },
+      "type": "Unit",
+      "key": "05000254",
+      "match_key": "Unit:05000254"
+    },
+    {
+      "id": "cause",
+      "display_name": "Other (X)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "X",
+      "category": "Other",
+      "theme": "design vulnerability - simultaneous relay/pressure switch failure permitting high inrush current",
+      "proximate_text": "The causal product identified a design vulnerability where a simultaneous failure of a pressure switch and time delay relay could also cause the issue. A simultaneous failure could have potentially allowed a high inrush starting current during one of the CREV RCU compressor pump down cycles.",
+      "provisional": false,
+      "match_key": "Cause:Other"
+    },
+    {
+      "id": "sys_vi",
+      "display_name": "Control Room Emergency Ventilation",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "VI",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:VI"
+    },
+    {
+      "id": "sys_rfu",
+      "display_name": "Refrigeration",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "RFU",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:RFU"
+    },
+    {
+      "id": "sys_acu",
+      "display_name": "CREV Air Conditioning",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "ACU",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:ACU"
+    },
+    {
+      "id": "sys_train_a_hvac",
+      "display_name": "Train A Control Room HVAC",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "backup; operable",
+      "match_key": "System:train-a-control-room-hvac"
+    },
+    {
+      "id": "c_rcu",
+      "display_name": "Refrigeration Condensing Unit 0-9400-102",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "0-9400-102",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:refrigeration-condensing-unit-0-9400-102"
+    },
+    {
+      "id": "c_bkr",
+      "display_name": "Electrical feed breaker (480V MCC breaker)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "BKR",
+      "identifier": null,
+      "model": "KD3250",
+      "manufacturer_code": "C770",
+      "inferred_code": false,
+      "match_key": "Component:BKR"
+    },
+    {
+      "id": "c_tdr",
+      "display_name": "Time delay relay",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "62",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:62"
+    },
+    {
+      "id": "c_ps",
+      "display_name": "Low suction pressure switch",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "PS",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:PS"
+    },
+    {
+      "id": "fm_design_vuln",
+      "display_name": "Simultaneous failure of pressure switch and time delay relay (design vulnerability)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Design vulnerability permitting a simultaneous failure of the low suction pressure switch and time delay relay, potentially allowing a high inrush starting current during a compressor pump-down cycle.",
+      "match_key": "FailureMode:simultaneous-failure-of-pressure-switch-and-time-delay-relay-design-vulnerability"
+    },
+    {
+      "id": "fm_inrush",
+      "display_name": "High inrush starting current during pump-down cycle",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Compressor experiences high inrush current during a pump-down cycle due to the logic/design vulnerability.",
+      "match_key": "FailureMode:high-inrush-starting-current-during-pump-down-cycle"
+    },
+    {
+      "id": "fm_bkr_trip",
+      "display_name": "RCU feed breaker tripped",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Breaker tripped, removing power from the CREV RCU.",
+      "match_key": "FailureMode:rcu-feed-breaker-tripped"
+    },
+    {
+      "id": "cons_crev",
+      "display_name": "CREV AC system inoperable",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2025-01-26T14:50",
+      "end": null,
+      "duration": null,
+      "tz": "CST",
+      "match_key": "Consequence:crev-ac-system-inoperable"
+    },
+    {
+      "id": "ca_bkr_overhaul",
+      "display_name": "Inspect and overhaul breaker cubicle",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:inspect-and-overhaul-breaker-cubicle"
+    },
+    {
+      "id": "ca_replace_relay_switch",
+      "display_name": "Replace time delay relay and low suction pressure switch",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-time-delay-relay-and-low-suction-pressure-switch"
+    },
+    {
+      "id": "mfr_eaton",
+      "display_name": "Cutler-Hammer/Eaton",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "C770",
+      "match_key": "Manufacturer:C770"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "rr_ufsar",
+      "display_name": "UFSAR Section 6.4, Habitability Systems",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:ufsar-section-6-4-habitability-systems"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "LER 254-2020-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "254-2020-001-00",
+      "stub": true,
+      "title": "Control Room Emergency Ventilation Air Conditioning System Inoperable Due to Incorrect Breaker Setting",
+      "plant": "Quad Cities Nuclear Power Station Unit 1",
+      "match_key": "LER:254-2020-001-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_vi",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rfu",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_acu",
+      "evidence": null
+    },
+    {
+      "source": "c_rcu",
+      "relation": "PART_OF",
+      "target": "sys_rfu",
+      "evidence": null
+    },
+    {
+      "source": "fm_design_vuln",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_design_vuln",
+      "relation": "LEADS_TO",
+      "target": "fm_inrush",
+      "evidence": null
+    },
+    {
+      "source": "fm_inrush",
+      "relation": "LEADS_TO",
+      "target": "fm_bkr_trip",
+      "evidence": null
+    },
+    {
+      "source": "fm_bkr_trip",
+      "relation": "LEADS_TO",
+      "target": "cons_crev",
+      "evidence": null
+    },
+    {
+      "source": "cons_crev",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_train_a_hvac",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_bkr_overhaul",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_relay_switch",
+      "evidence": null
+    },
+    {
+      "source": "c_bkr",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_eaton",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ufsar",
+      "evidence": null
+    }
+  ],
+  "chain": "design vulnerability: simultaneous pressure switch + time delay relay failure [cause X] -> high inrush starting current during pump-down cycle -> RCU feed breaker trips -> CREV AC system inoperable [backup: Train A Control Room HVAC available]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code X (Other) governs category despite narrative describing a design vulnerability; theme captures the design angle. RCU is modeled as PART_OF the Refrigeration [RFU] system per explicit narrative statement ('CREV Refrigeration Condensing Unit'). Train A HVAC is explicitly stated as available/operating throughout the event, so BACKED_UP_BY is asserted. Previous occurrence LER 254-2020-001-00 captured as stub with SIMILAR_TO edge, key preserved exactly as stated in narrative."
+}

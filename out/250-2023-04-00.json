@@ -1,0 +1,255 @@
+{
+  "ler_number": "250-2023-04-00",
+  "identity": {
+    "accession_number": "ML23347A130",
+    "docket": "05000250",
+    "plant_name": "Turkey Point",
+    "unit": 3,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2023-10-24",
+    "report_date": "2023-12-13",
+    "operating_mode": null,
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Unplanned Automatic Scram During RPS Testing"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": null,
+      "system": null,
+      "component": null,
+      "manufacturer": null,
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The direct cause of this event are human performance errors by I&C technicians performing steps in an RPS test procedure on the incorrect unit.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "cross-unit human performance error during RPS testing",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 250-2023-006-00",
+      "properties": {},
+      "type": "LER",
+      "key": "250-2023-04-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:250-2023-04-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Turkey Point Unit 3",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000250",
+      "match_key": "Unit:05000250"
+    },
+    {
+      "id": "cause",
+      "display_name": "Human Performance Error (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "cross-unit human performance error during RPS testing",
+      "proximate_text": "The direct cause of this event are human performance errors by I&C technicians performing steps in an RPS test procedure on the incorrect unit.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_je",
+      "display_name": "Reactor Protection System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JE",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "system under test; source of erroneous actuation",
+      "match_key": "System:JE"
+    },
+    {
+      "id": "sys_ba",
+      "display_name": "Auxiliary Feedwater",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "responded automatically post-trip",
+      "match_key": "System:BA"
+    },
+    {
+      "id": "fm_wrongunit",
+      "display_name": "I&C technicians performed RPS test steps on incorrect unit (U3 instead of U4)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Technicians performing RPS logic testing intended for Unit 4 instead operated on Unit 3 equipment.",
+      "match_key": "FailureMode:i-c-technicians-performed-rps-test-steps-on-incorrect-unit-u3-instead-of-u4"
+    },
+    {
+      "id": "fm_barriers",
+      "display_name": "Lack of hard barriers/guarding for shared-room equipment",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Shared room between units lacked physical barriers to prevent inadvertent actions on the operating unit's equipment.",
+      "match_key": "FailureMode:lack-of-hard-barriers-guarding-for-shared-room-equipment"
+    },
+    {
+      "id": "fm_si_signal",
+      "display_name": "Incorrect initiation of U3 RPS Safety Injection signal",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Erroneous test actions created an actual Safety Injection signal on Unit 3 RPS.",
+      "match_key": "FailureMode:incorrect-initiation-of-u3-rps-safety-injection-signal"
+    },
+    {
+      "id": "cons_scram",
+      "display_name": "Automatic reactor trip (scram) of Unit 3",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2023-10-24",
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:automatic-reactor-trip-scram-of-unit-3"
+    },
+    {
+      "id": "ca_standdown",
+      "display_name": "Stand down with I&C department personnel to share learnings",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:stand-down-with-i-c-department-personnel-to-share-learnings"
+    },
+    {
+      "id": "ca_procrevise",
+      "display_name": "Revise procedures governing guarding/blocking of shared-room equipment",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-procedures-governing-guarding-blocking-of-shared-room-equipment"
+    },
+    {
+      "id": "ca_locks",
+      "display_name": "Modify RPS cabinet locks so U3 and U4 keys are no longer interchangeable",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:modify-rps-cabinet-locks-so-u3-and-u4-keys-are-no-longer-interchangeable"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_je",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ba",
+      "evidence": null
+    },
+    {
+      "source": "fm_barriers",
+      "relation": "LEADS_TO",
+      "target": "fm_wrongunit",
+      "evidence": null
+    },
+    {
+      "source": "fm_wrongunit",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_wrongunit",
+      "relation": "LEADS_TO",
+      "target": "fm_si_signal",
+      "evidence": null
+    },
+    {
+      "source": "fm_si_signal",
+      "relation": "LEADS_TO",
+      "target": "cons_scram",
+      "evidence": null
+    },
+    {
+      "source": "cons_scram",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_ba",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_standdown",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procrevise",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_locks",
+      "evidence": null
+    }
+  ],
+  "chain": "lack of hard barriers in shared U3/U4 room -> I&C technicians perform RPS test steps on wrong unit (U3) -> incorrect Safety Injection signal initiated on U3 RPS -> automatic reactor trip of Unit 3 [AFW actuated as expected backup]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause_code/category are 'TBD'/'provisional' per FORM-366 fields; narrative describes human performance error with contributing organizational and physical-barrier factors, but these are captured in FailureMode nodes/theme rather than overriding the provisional cause code per rule 4. AFW is modeled as an involved/operable system since narrative states it actuated and responded normally post-trip, not as design-context only. Plant name/unit inferred from narrative text ('Turkey Point Unit 3') since FORM-366 fields left them null; docket 05000250 corresponds to Turkey Point Unit 3."
+}

@@ -1,0 +1,298 @@
+{
+  "ler_number": "250-2023-001-00",
+  "identity": {
+    "accession_number": "ML23165A158",
+    "docket": "05000250",
+    "plant_name": "Turkey Point",
+    "unit": 3,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2023-04-15",
+    "report_date": "2023-06-14",
+    "operating_mode": "6",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2023-001-00 for Turkey Point Unit 3, RCS Pressure Boundary Degraded"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(ii)(A)",
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "Reportable",
+      "system": "To",
+      "component": "IRIS",
+      "manufacturer": "X",
+      "reportable": null
+    }
+  ],
+  "cause": {
+    "proximate_text": "The most likely cause of the through-wall crack is intergranular stress-corrosion cracking (IGSCC). For IGSCC to occur, the following factors must be present: susceptible material, environment, and stress. The pressure stresses due to RCS pressure and the stress intensification of the geometry (i.e. the shoulder) contributed to the crack propagation. Additionally, the observed cracks and deterioration occurred in a sensitized region of the tube material, making it more susceptible to IGSCC.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Intergranular stress-corrosion cracking of sensitized guide tube material",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 250-2023-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "250-2023-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:250-2023-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Turkey Point Unit 3",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000250",
+      "match_key": "Unit:05000250"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Intergranular stress-corrosion cracking of sensitized guide tube material",
+      "proximate_text": "The most likely cause of the through-wall crack is intergranular stress-corrosion cracking (IGSCC). For IGSCC to occur, the following factors must be present: susceptible material, environment, and stress. The pressure stresses due to RCS pressure and the stress intensification of the geometry (i.e. the shoulder) contributed to the crack propagation. Additionally, the observed cracks and deterioration occurred in a sensitized region of the tube material, making it more susceptible to IGSCC.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_rcs",
+      "display_name": "Reactor Coolant System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "AB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "pressure boundary; involved system",
+      "match_key": "System:AB"
+    },
+    {
+      "id": "c_guide_tube",
+      "display_name": "Flux Mapper Seal Table Guide Tube H-6",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "H-6",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:flux-mapper-seal-table-guide-tube-h-6"
+    },
+    {
+      "id": "fm_susceptible_material",
+      "display_name": "Sensitized guide tube material susceptible to IGSCC",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The observed cracks and deterioration occurred in a sensitized region of the tube material, making it more susceptible to IGSCC.",
+      "match_key": "FailureMode:sensitized-guide-tube-material-susceptible-to-igscc"
+    },
+    {
+      "id": "fm_stress",
+      "display_name": "Pressure and geometric stress intensification",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The pressure stresses due to RCS pressure and the stress intensification of the geometry (i.e. the shoulder) contributed to the crack propagation.",
+      "match_key": "FailureMode:pressure-and-geometric-stress-intensification"
+    },
+    {
+      "id": "fm_igscc",
+      "display_name": "Intergranular stress-corrosion cracking (IGSCC)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "For IGSCC to occur, the following factors must be present: susceptible material, environment, and stress.",
+      "match_key": "FailureMode:intergranular-stress-corrosion-cracking-igscc"
+    },
+    {
+      "id": "fm_throughwall_crack",
+      "display_name": "Through-wall crack in guide tube",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "A rejectable indication was identified during non-destructive testing on the Flux Mapper Seal Table Guide Tube H-6, revealing a through-wall crack.",
+      "match_key": "FailureMode:through-wall-crack-in-guide-tube"
+    },
+    {
+      "id": "cons_degraded_boundary",
+      "display_name": "RCS Pressure Boundary degraded / did not meet ASME Section XI acceptance standards",
+      "properties": {
+        "note": "Through-wall leakage was non-quantifiable and well within RCS makeup capability; no safety margins challenged; structural ability of guide tubes not affected."
+      },
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:rcs-pressure-boundary-degraded-did-not-meet-asme-section-xi-acceptance-standards"
+    },
+    {
+      "id": "ca_remove_stub",
+      "display_name": "Remove affected guide tube stub from below seal table",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:remove-affected-guide-tube-stub-from-below-seal-table"
+    },
+    {
+      "id": "ca_patch_plate",
+      "display_name": "Add engineered patch plate to seal table",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:add-engineered-patch-plate-to-seal-table"
+    },
+    {
+      "id": "ca_coupling",
+      "display_name": "Add extra coupling on guide tube",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:add-extra-coupling-on-guide-tube"
+    },
+    {
+      "id": "rr_5073_ii_a",
+      "display_name": "10 CFR 50.73(a)(2)(ii)(A)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-ii-a"
+    },
+    {
+      "id": "rr_5073_i_b",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_asme",
+      "display_name": "ASME Section XI, Table IWB-3410-1",
+      "properties": {
+        "type": "standard/guidance"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:asme-section-xi-table-iwb-3410-1"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_ii_a",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_i_b",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rcs",
+      "evidence": null
+    },
+    {
+      "source": "c_guide_tube",
+      "relation": "PART_OF",
+      "target": "sys_rcs",
+      "evidence": null
+    },
+    {
+      "source": "fm_susceptible_material",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_susceptible_material",
+      "relation": "LEADS_TO",
+      "target": "fm_igscc",
+      "evidence": null
+    },
+    {
+      "source": "fm_stress",
+      "relation": "LEADS_TO",
+      "target": "fm_igscc",
+      "evidence": null
+    },
+    {
+      "source": "fm_igscc",
+      "relation": "LEADS_TO",
+      "target": "fm_throughwall_crack",
+      "evidence": null
+    },
+    {
+      "source": "fm_throughwall_crack",
+      "relation": "LEADS_TO",
+      "target": "cons_degraded_boundary",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_remove_stub",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_patch_plate",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_coupling",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_asme",
+      "evidence": null
+    }
+  ],
+  "chain": "sensitized guide tube material + pressure/geometric stress -> intergranular stress-corrosion cracking (IGSCC) -> through-wall crack in Flux Mapper Seal Table Guide Tube H-6 -> RCS pressure boundary degraded / non-compliant with ASME Section XI standards",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4"
+  ],
+  "notes": "Cause code is officially TBD/provisional per FORM-366; narrative attributes the crack to IGSCC driven by sensitized material, pressure stress, and geometric stress intensification, modeled as parallel contributing failure modes converging on the IGSCC mechanism. No SSFF occurred; event was low safety significance with no system actuation. No similar prior occurrences were identified in a 10-year review, so no SIMILAR_TO edge or stub LER was created. Block-13 fields appear garbled/OCR-damaged in the source form and are copied verbatim."
+}

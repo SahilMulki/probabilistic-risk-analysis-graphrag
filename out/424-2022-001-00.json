@@ -1,0 +1,320 @@
+{
+  "ler_number": "424-2022-001-00",
+  "identity": {
+    "accession_number": "ML22175A161",
+    "docket": "05000424",
+    "plant_name": "Vogtle",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2022-05-03",
+    "report_date": "2022-06-24",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Manual Reactor Trip Due to Loss of a Main Feed Pump"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "X",
+      "system": "SJ",
+      "component": "SC",
+      "manufacturer": "GE",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The cause of the event was a failure of the 1B Main Feed Pump control system which caused the pump to slow down, resulting in lowering main feedwater flow to the steam generators.",
+    "cause_code": "X",
+    "category": "Other",
+    "theme": "control-module malfunction causing feed pump speed loss",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 424-2022-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "424-2022-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:424-2022-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Vogtle Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000424",
+      "match_key": "Unit:05000424"
+    },
+    {
+      "id": "cause",
+      "display_name": "Other (X)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "X",
+      "category": "Other",
+      "theme": "control-module malfunction causing feed pump speed loss",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Other"
+    },
+    {
+      "id": "sys_sj",
+      "display_name": "Main Feed Pump system",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "sys_jc",
+      "display_name": "Reactor Protection System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "actuated during event",
+      "match_key": "System:JC"
+    },
+    {
+      "id": "sys_ba",
+      "display_name": "Auxiliary Feedwater System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "actuated during event; responded as designed",
+      "match_key": "System:BA"
+    },
+    {
+      "id": "c_ctrl",
+      "display_name": "1B Main Feed Pump control system",
+      "properties": {
+        "acronym": "JK"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:1b-main-feed-pump-control-system"
+    },
+    {
+      "id": "c_module",
+      "display_name": "GE IS420UCSBH1A control module",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "SC",
+      "identifier": null,
+      "model": "IS420UCSBH1A",
+      "manufacturer_code": "GE",
+      "inferred_code": false,
+      "match_key": "Component:SC"
+    },
+    {
+      "id": "c_rods",
+      "display_name": "Control rods",
+      "properties": {
+        "note": "fully inserted into the core on trip"
+      },
+      "type": "Component",
+      "eiis_code": "AA",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:AA"
+    },
+    {
+      "id": "fm_module",
+      "display_name": "Control module malfunction",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "General Electric IS420UCSBH1A control modules in the 1B Main Feed Pump control system malfunctioned.",
+      "match_key": "FailureMode:control-module-malfunction"
+    },
+    {
+      "id": "fm_slow",
+      "display_name": "1B Main Feed Pump slows down",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Control system malfunction caused the pump to slow down, lowering main feedwater flow to the steam generators.",
+      "match_key": "FailureMode:1b-main-feed-pump-slows-down"
+    },
+    {
+      "id": "fm_sglevel",
+      "display_name": "Steam generator water levels lowering",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Lowering main feedwater flow caused steam generator water levels to decrease.",
+      "match_key": "FailureMode:steam-generator-water-levels-lowering"
+    },
+    {
+      "id": "cons_trip",
+      "display_name": "Manual reactor trip / RPS and AFW actuation",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2022-05-03T15:41",
+      "end": null,
+      "duration": null,
+      "tz": "EDT",
+      "match_key": "Consequence:manual-reactor-trip-rps-and-afw-actuation"
+    },
+    {
+      "id": "ca_repair",
+      "display_name": "Repair Main Feed Pump control system",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:repair-main-feed-pump-control-system"
+    },
+    {
+      "id": "mfr_ge",
+      "display_name": "General Electric",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "GE",
+      "match_key": "Manufacturer:GE"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_ufsar",
+      "display_name": "UFSAR Chapter 15",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:ufsar-chapter-15"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sj",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ba",
+      "evidence": null
+    },
+    {
+      "source": "c_module",
+      "relation": "PART_OF",
+      "target": "c_ctrl",
+      "evidence": null
+    },
+    {
+      "source": "c_ctrl",
+      "relation": "PART_OF",
+      "target": "sys_sj",
+      "evidence": null
+    },
+    {
+      "source": "fm_module",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_module",
+      "relation": "LEADS_TO",
+      "target": "fm_slow",
+      "evidence": null
+    },
+    {
+      "source": "fm_slow",
+      "relation": "LEADS_TO",
+      "target": "fm_sglevel",
+      "evidence": null
+    },
+    {
+      "source": "fm_sglevel",
+      "relation": "LEADS_TO",
+      "target": "cons_trip",
+      "evidence": null
+    },
+    {
+      "source": "cons_trip",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_ba",
+      "evidence": null
+    },
+    {
+      "source": "c_module",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_ge",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_repair",
+      "evidence": null
+    },
+    {
+      "source": "cons_trip",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ufsar",
+      "evidence": null
+    }
+  ],
+  "chain": "GE IS420UCSBH1A control module malfunction [cause X] -> 1B Main Feed Pump slows down -> steam generator water levels lowering -> manual reactor trip / RPS & AFW actuation [backup AFW responded as designed]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Plant name/unit/reactor_type not present in FORM-366 FIELDS identity block but derived from narrative (Vogtle Unit 1, PWR). Main Feed Pump control system given only as acronym JK in narrative (no bracket EIIS code observed for the control-system entity itself, distinct from SJ pump system and SC component code in block 13); eiis_code left null per rule 2. No previous similar events reported (Section E: None), so no stub LER/SIMILAR_TO edge emitted per rule 9."
+}

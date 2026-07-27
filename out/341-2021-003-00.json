@@ -1,0 +1,382 @@
+{
+  "ler_number": "341-2021-003-00",
+  "identity": {
+    "accession_number": "ML21363A084",
+    "docket": "05000341",
+    "plant_name": "Fermi",
+    "unit": 2,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2021-06-03",
+    "report_date": "2021-12-29",
+    "operating_mode": "3",
+    "power_level": null,
+    "discovery_context": "operability test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Licensee Event Report (LER) No. 2021-003"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)(D)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The direct cause is Electrical Contact Degradation due to the oxidation of the E41A-K17 relay contact.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "relay contact oxidation causing delayed suction transfer logic response",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 341-2021-003-00",
+      "properties": {},
+      "type": "LER",
+      "key": "341-2021-003-00",
+      "stub": false,
+      "title": "Licensee Event Report (LER) No. 2021-003",
+      "plant": null,
+      "match_key": "LER:341-2021-003-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Fermi Unit 2",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000341",
+      "match_key": "Unit:05000341"
+    },
+    {
+      "id": "cause",
+      "display_name": "Electrical Contact Degradation (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "relay contact oxidation causing delayed suction transfer logic response",
+      "proximate_text": "The direct cause is Electrical Contact Degradation due to the oxidation of the E41A-K17 relay contact.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_bj",
+      "display_name": "High Pressure Coolant Injection",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected system; declared inoperable retroactively",
+      "match_key": "System:BJ"
+    },
+    {
+      "id": "sys_bt",
+      "display_name": "Suppression Pool",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BT",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BT"
+    },
+    {
+      "id": "sys_rcic",
+      "display_name": "Reactor Core Isolation Cooling (RCIC)",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BN",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "declared inoperable twice during surveillances",
+      "match_key": "System:BN"
+    },
+    {
+      "id": "sys_bo",
+      "display_name": "Low Pressure Coolant Injection (LPCI)",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BO",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; operable (Division 2, and Division 1 except during EECW testing)",
+      "match_key": "System:BO"
+    },
+    {
+      "id": "sys_bm",
+      "display_name": "Core Spray (CS)",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BM",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; operable (Division 2, and Division 1 except during EECW testing)",
+      "match_key": "System:BM"
+    },
+    {
+      "id": "sys_ads",
+      "display_name": "Automatic Depressurization System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "backup; operable",
+      "match_key": "System:automatic-depressurization-system"
+    },
+    {
+      "id": "c_isv",
+      "display_name": "HPCI Pump Suction Isolation Valve E4150-F042",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": "E4150-F042",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:ISV|E4150-F042"
+    },
+    {
+      "id": "c_rly",
+      "display_name": "Common relay E41A-K17",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "RLY",
+      "identifier": "E41A-K17",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:RLY|E41A-K17"
+    },
+    {
+      "id": "fm_oxide",
+      "display_name": "Oxidized relay contact on common relay E41A-K17",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Oxidation of the E41A-K17 relay contact caused degraded conductivity affecting both channels of the CST low level suction transfer logic.",
+      "match_key": "FailureMode:oxidized-relay-contact-on-common-relay-e41a-k17"
+    },
+    {
+      "id": "fm_slowopen",
+      "display_name": "HPCI Pump Suction Isolation Valve slow to open",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "E4150-F042 isolation valve from the suppression pool took approximately 5 minutes to open on the simulated low CST level signal, rather than opening promptly.",
+      "match_key": "FailureMode:hpci-pump-suction-isolation-valve-slow-to-open"
+    },
+    {
+      "id": "fm_bothchan",
+      "display_name": "Both channels of CST low-level suction transfer logic impacted",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The oxidized relay contact affected both redundant channels of the CST low level suction transfer logic, meaning HPCI suction transfer capability was degraded on both channels, not just the tested one.",
+      "match_key": "FailureMode:both-channels-of-cst-low-level-suction-transfer-logic-impacted"
+    },
+    {
+      "id": "fm_missedTS",
+      "display_name": "Failure to recognize required TS 3.3.5.1 Action D.1 entry",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Because the impact to both channels was not initially recognized, TS 3.3.5.1 Action D.1 (declare HPCI inoperable or transfer suction within 1 hour) was not entered when it should have been.",
+      "match_key": "FailureMode:failure-to-recognize-required-ts-3-3-5-1-action-d-1-entry"
+    },
+    {
+      "id": "cons_hpci",
+      "display_name": "HPCI should have been declared inoperable; TS 3.5.1 Condition I not entered during concurrent RCIC outages",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2021-06-03T03:13",
+      "end": "2021-06-04T14:51",
+      "duration": "35:38",
+      "tz": null,
+      "match_key": "Consequence:hpci-should-have-been-declared-inoperable-ts-3-5-1-condition-i-not-entered-during-concurrent-rcic-outages"
+    },
+    {
+      "id": "ca_burnish",
+      "display_name": "Burnish E41A-K17 relay contact during troubleshooting",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:burnish-e41a-k17-relay-contact-during-troubleshooting"
+    },
+    {
+      "id": "ca_retest",
+      "display_name": "Return valve to operable status and successfully retest",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:return-valve-to-operable-status-and-successfully-retest"
+    },
+    {
+      "id": "ca_proc",
+      "display_name": "Revise Inspection and Testing of Multi-Contact Auxiliary Relays (HFA, HMA, HGA) procedure to require contact burnishing",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-inspection-and-testing-of-multi-contact-auxiliary-relays-hfa-hma-hga-procedure-to-require-contact-burnishing"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "rr_5072",
+      "display_name": "10 CFR 50.72",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72"
+    },
+    {
+      "id": "rr_ts3351",
+      "display_name": "Technical Specification 3.3.5.1",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-3-3-5-1"
+    },
+    {
+      "id": "rr_ts351",
+      "display_name": "Technical Specification 3.5.1",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-3-5-1"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bj",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rcic",
+      "evidence": null
+    },
+    {
+      "source": "c_isv",
+      "relation": "PART_OF",
+      "target": "sys_bj",
+      "evidence": null
+    },
+    {
+      "source": "fm_oxide",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_oxide",
+      "relation": "LEADS_TO",
+      "target": "fm_slowopen",
+      "evidence": null
+    },
+    {
+      "source": "fm_oxide",
+      "relation": "LEADS_TO",
+      "target": "fm_bothchan",
+      "evidence": null
+    },
+    {
+      "source": "fm_bothchan",
+      "relation": "LEADS_TO",
+      "target": "fm_missedTS",
+      "evidence": null
+    },
+    {
+      "source": "fm_slowopen",
+      "relation": "LEADS_TO",
+      "target": "cons_hpci",
+      "evidence": null
+    },
+    {
+      "source": "fm_missedTS",
+      "relation": "LEADS_TO",
+      "target": "cons_hpci",
+      "evidence": null
+    },
+    {
+      "source": "cons_hpci",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_bo",
+      "evidence": null
+    },
+    {
+      "source": "cons_hpci",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_bm",
+      "evidence": null
+    },
+    {
+      "source": "cons_hpci",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_ads",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_burnish",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_retest",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_proc",
+      "evidence": null
+    }
+  ],
+  "chain": "oxidized relay contact E41A-K17 [cause TBD] -> HPCI suction isolation valve slow to open (~5 min) -> both CST low-level suction transfer logic channels impacted -> TS 3.3.5.1 Action D.1 entry missed -> HPCI should have been declared inoperable (35h38m, concurrent RCIC surveillance outages) [backups LPCI, Core Spray, ADS available]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code and category are TBD/provisional in FORM-366 FIELDS despite the narrative clearly identifying 'Electrical Contact Degradation' as the direct cause; per rule 4 we preserve TBD/provisional and set provisional=true, capturing the narrative's cause statement in proximate_text/theme. No block_13 rows were provided. No previous similar occurrences were cited (narrative explicitly states none), so no stub LER/SIMILAR_TO edge was created. HPCI was determined to remain available/functional throughout per Technical Evaluation, but was retroactively determined to have met inoperability criteria under TS 3.3.5.1 Action D.1 due to the common-mode relay issue affecting both channels — modeled as a Consequence reflecting the missed required declaration/TS entry rather than an actual loss of function. Manual operation of the ISV via the relay contact was unaffected, so HPCI retained a manual backstop, but this is design/procedural context rather than a distinct backup system and was not modeled as a System node."
+}

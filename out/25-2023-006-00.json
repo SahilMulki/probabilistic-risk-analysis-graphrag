@@ -1,0 +1,441 @@
+{
+  "ler_number": "25-2023-006-00",
+  "identity": {
+    "accession_number": "ML23262A958",
+    "docket": "05200025",
+    "plant_name": "Vogtle",
+    "unit": 3,
+    "reactor_type": "PWR",
+    "nss_vendor": "Westinghouse",
+    "event_date": "2023-07-21",
+    "report_date": "2023-09-19",
+    "operating_mode": "1",
+    "power_level": 32,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2023-006-00 for Vogtle Electric Generating Plant, Unit 3 Regarding Automatic Reactor Protection System Actuation During Startup Testing Due to Auto Reactive Power Regulator Being Active While In Island Mode Operation"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The cause of this event was the main generator's AQR being active and attempting to maintain the reactive power setpoint following a 100 percent load rejection and in island mode operation. The AQR is not designed to be used as a voltage control method when the plant is disconnected from the grid.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Design/control-software deficiency allowing improper voltage-regulation mode during island operation",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 05200025-2023-006-00",
+      "properties": {},
+      "type": "LER",
+      "key": "25-2023-006-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:25-2023-006-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Vogtle Unit 3",
+      "properties": {
+        "reactor_type": "PWR",
+        "nss_vendor": "Westinghouse"
+      },
+      "type": "Unit",
+      "key": "05200025",
+      "match_key": "Unit:05200025"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Design/control-software deficiency allowing improper voltage-regulation mode during island operation",
+      "proximate_text": "The cause of this event was the main generator's AQR being active and attempting to maintain the reactive power setpoint following a 100 percent load rejection and in island mode operation. The AQR is not designed to be used as a voltage control method when the plant is disconnected from the grid.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_jc",
+      "display_name": "Reactor Protection System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "actuated/protective",
+      "match_key": "System:JC"
+    },
+    {
+      "id": "sys_el",
+      "display_name": "Electrical Distribution / Switchyard",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "EL",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "involved",
+      "match_key": "System:EL"
+    },
+    {
+      "id": "sys_tl",
+      "display_name": "Main Generator Voltage/Excitation Control",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "TL",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "involved",
+      "match_key": "System:TL"
+    },
+    {
+      "id": "sys_tb",
+      "display_name": "Turbine System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "TB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "involved",
+      "match_key": "System:TB"
+    },
+    {
+      "id": "sys_ab",
+      "display_name": "Reactor Coolant System (RCP power)",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "AB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "involved",
+      "match_key": "System:AB"
+    },
+    {
+      "id": "sys_sb",
+      "display_name": "Steam Generator Power Operated Relief Valve System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; operable",
+      "match_key": "System:SB"
+    },
+    {
+      "id": "c_bkr",
+      "display_name": "Switchyard breakers",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "BKR",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:BKR"
+    },
+    {
+      "id": "c_gen",
+      "display_name": "Main generator",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "GEN",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:GEN"
+    },
+    {
+      "id": "c_rg",
+      "display_name": "Auto Reactive Power Regulator (AQR)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "RG",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:RG"
+    },
+    {
+      "id": "c_rly",
+      "display_name": "Main step-up transformer protection relay",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "RLY",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:RLY"
+    },
+    {
+      "id": "c_trb",
+      "display_name": "Turbine",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "TRB",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:TRB"
+    },
+    {
+      "id": "c_rcp",
+      "display_name": "Reactor Coolant Pumps",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "P",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:P"
+    },
+    {
+      "id": "c_pcv",
+      "display_name": "Steam generator power operated relief valves",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "PCV",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:PCV"
+    },
+    {
+      "id": "fm_islandmode",
+      "display_name": "Grid disconnection (100% load rejection) placed plant in island mode",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Switchyard breakers opened to disconnect main generator from offsite grid during test, establishing island mode operation.",
+      "match_key": "FailureMode:grid-disconnection-100-load-rejection-placed-plant-in-island-mode"
+    },
+    {
+      "id": "fm_aqractive",
+      "display_name": "AQR remained active in island mode and attempted to maintain reactive power setpoint",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "AQR was not disabled upon disconnection from grid and continued attempting to regulate reactive power, a function not designed for island-mode operation.",
+      "match_key": "FailureMode:aqr-remained-active-in-island-mode-and-attempted-to-maintain-reactive-power-setpoint"
+    },
+    {
+      "id": "fm_voltagerise",
+      "display_name": "Generator voltage increased beyond limits",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "AQR action caused increasing voltage until the main step-up transformer protection relay tripped.",
+      "match_key": "FailureMode:generator-voltage-increased-beyond-limits"
+    },
+    {
+      "id": "fm_gentrip",
+      "display_name": "Main generator and turbine trip",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Protection relay trip caused a trip of the main generator and turbine.",
+      "match_key": "FailureMode:main-generator-and-turbine-trip"
+    },
+    {
+      "id": "fm_rcplosspower",
+      "display_name": "Loss of power to Reactor Coolant Pumps",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Turbine generator trip, simulating loss of grid, caused loss of power to the RCPs.",
+      "match_key": "FailureMode:loss-of-power-to-reactor-coolant-pumps"
+    },
+    {
+      "id": "cons_rpstrip",
+      "display_name": "Automatic RPS actuation on low RCP speed",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2023-07-21T11:48",
+      "end": null,
+      "duration": null,
+      "tz": "EDT",
+      "match_key": "Consequence:automatic-rps-actuation-on-low-rcp-speed"
+    },
+    {
+      "id": "ca_procedure",
+      "display_name": "Revise plant procedures to exclude AQR as voltage control method in island mode",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-plant-procedures-to-exclude-aqr-as-voltage-control-method-in-island-mode"
+    },
+    {
+      "id": "ca_software",
+      "display_name": "Modify control logic/software to automatically disable AQR in island mode",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:modify-control-logic-software-to-automatically-disable-aqr-in-island-mode"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_el",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_tl",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_tb",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ab",
+      "evidence": null
+    },
+    {
+      "source": "c_bkr",
+      "relation": "PART_OF",
+      "target": "sys_el",
+      "evidence": null
+    },
+    {
+      "source": "c_gen",
+      "relation": "PART_OF",
+      "target": "sys_el",
+      "evidence": null
+    },
+    {
+      "source": "c_rg",
+      "relation": "PART_OF",
+      "target": "sys_tl",
+      "evidence": null
+    },
+    {
+      "source": "c_rly",
+      "relation": "PART_OF",
+      "target": "sys_tl",
+      "evidence": null
+    },
+    {
+      "source": "c_trb",
+      "relation": "PART_OF",
+      "target": "sys_tb",
+      "evidence": null
+    },
+    {
+      "source": "c_rcp",
+      "relation": "PART_OF",
+      "target": "sys_ab",
+      "evidence": null
+    },
+    {
+      "source": "fm_islandmode",
+      "relation": "LEADS_TO",
+      "target": "fm_aqractive",
+      "evidence": null
+    },
+    {
+      "source": "fm_aqractive",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_aqractive",
+      "relation": "LEADS_TO",
+      "target": "fm_voltagerise",
+      "evidence": null
+    },
+    {
+      "source": "fm_voltagerise",
+      "relation": "LEADS_TO",
+      "target": "fm_gentrip",
+      "evidence": null
+    },
+    {
+      "source": "fm_gentrip",
+      "relation": "LEADS_TO",
+      "target": "fm_rcplosspower",
+      "evidence": null
+    },
+    {
+      "source": "fm_rcplosspower",
+      "relation": "LEADS_TO",
+      "target": "cons_rpstrip",
+      "evidence": null
+    },
+    {
+      "source": "cons_rpstrip",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procedure",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_software",
+      "evidence": null
+    }
+  ],
+  "chain": "island-mode grid disconnection during 100% load rejection test -> AQR remains active [cause TBD] attempting to hold reactive power setpoint -> generator voltage rises -> main step-up transformer relay trips generator/turbine -> loss of power to RCPs -> automatic RPS actuation on low RCP speed [backup: SG PORVs used for decay heat removal]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code is TBD/provisional per FORM-366 fields; category kept as 'provisional' per rule 4 despite narrative clearly identifying a design/operational-control cause (AQR misapplication during island mode). No previous similar events referenced in narrative, so no SIMILAR_TO/stub LER emitted. Breaker->generator and RG/RLY->TL relationships modeled as PART_OF per narrative's explicit EIIS sub-grouping (TL/RG, TL/RLY, EL/BKR, EL/GEN) indicating component-to-system bracket pairing; treated as explicit membership consistent with EIIS notation convention."
+}

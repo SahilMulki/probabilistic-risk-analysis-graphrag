@@ -1,0 +1,281 @@
+{
+  "ler_number": "374-2023-003-00",
+  "identity": {
+    "accession_number": "ML23122A016",
+    "docket": "05000374",
+    "plant_name": "La Salle",
+    "unit": 2,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2023-03-04",
+    "report_date": "2023-05-02",
+    "operating_mode": "4",
+    "power_level": 0,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Automatic Actuation of Reactor Protection System (RPS) During Restoration from Hydrostatic Test Conditions"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "With the CRD Charging Water Stop Valve closed and the Low Charging Water Header Pressure scram signal not bypassed, reactor depressurization resulted in an RPS Scram on Low Charging Water Header Pressure. The Low Charging Water Scram Signal is not required in Mode 4 for Rod Cycling and the Scram signal should have remained bypassed, in accordance with station procedures.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "procedure/bypass restoration error during test transition",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 374-2023-003-00",
+      "properties": {},
+      "type": "LER",
+      "key": "374-2023-003-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:374-2023-003-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "La Salle Unit 2",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000374",
+      "match_key": "Unit:05000374"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "procedure/bypass restoration error during test transition",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_rps",
+      "display_name": "Reactor Protection System",
+      "properties": {
+        "note": "acronym RPS given; no bracket EIIS code stated"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:reactor-protection-system"
+    },
+    {
+      "id": "sys_crd",
+      "display_name": "Control Rod Drive",
+      "properties": {
+        "note": "acronym CRD given; no bracket EIIS code stated"
+      },
+      "type": "System",
+      "eiis_code": "AA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:AA"
+    },
+    {
+      "id": "c_stopvalve",
+      "display_name": "CRD Charging Water Stop Valve",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:crd-charging-water-stop-valve"
+    },
+    {
+      "id": "c_scramsignal",
+      "display_name": "Low Charging Water Header Pressure Scram Signal (bypass)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:low-charging-water-header-pressure-scram-signal-bypass"
+    },
+    {
+      "id": "fm_bypass_restored",
+      "display_name": "Low Charging Water Header Pressure scram signal bypass improperly restored (not left bypassed) during transition to scram time testing",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Scram signal bypass was removed/restored during transition into scram time testing while it should have remained bypassed per procedure for Mode 4 rod cycling.",
+      "match_key": "FailureMode:low-charging-water-header-pressure-scram-signal-bypass-improperly-restored-not-left-bypassed-during-transition-to-scram-time-testing"
+    },
+    {
+      "id": "fm_valve_closed",
+      "display_name": "CRD Charging Water Stop Valve closed per test procedure while bypass not maintained",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Testing procedure directed closure of the CRD Charging Water Stop Valve, which combined with the non-bypassed scram signal created the low-pressure condition.",
+      "match_key": "FailureMode:crd-charging-water-stop-valve-closed-per-test-procedure-while-bypass-not-maintained"
+    },
+    {
+      "id": "fm_low_pressure",
+      "display_name": "Low Charging Water Header Pressure condition reached during depressurization",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Reactor depressurization with the stop valve closed caused charging water header pressure to fall below the scram setpoint.",
+      "match_key": "FailureMode:low-charging-water-header-pressure-condition-reached-during-depressurization"
+    },
+    {
+      "id": "cons_scram",
+      "display_name": "Automatic RPS scram actuation (valid, all rods inserted, Mode 4)",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2023-03-04T09:10",
+      "end": null,
+      "duration": null,
+      "tz": "CST",
+      "match_key": "Consequence:automatic-rps-scram-actuation-valid-all-rods-inserted-mode-4"
+    },
+    {
+      "id": "ca_coach",
+      "display_name": "Coach personnel involved in the event",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:coach-personnel-involved-in-the-event"
+    },
+    {
+      "id": "ca_procedure",
+      "display_name": "Revise station procedures to verify Low Charging Water Header Pressure Scram is bypassed prior to closing CRD charging water stop valve",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-station-procedures-to-verify-low-charging-water-header-pressure-scram-is-bypassed-prior-to-closing-crd-charging-water-stop-valve"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5072",
+      "display_name": "10 CFR 50.72(b)(3)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-3-iv-a"
+    },
+    {
+      "id": "rr_nei",
+      "display_name": "NEI 99-02, Regulatory Assessment Performance Indicator Guideline",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "standard/guidance",
+      "match_key": "RegulatoryReference:nei-99-02-regulatory-assessment-performance-indicator-guideline"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rps",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_crd",
+      "evidence": null
+    },
+    {
+      "source": "c_stopvalve",
+      "relation": "PART_OF",
+      "target": "sys_crd",
+      "evidence": null
+    },
+    {
+      "source": "fm_bypass_restored",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_bypass_restored",
+      "relation": "LEADS_TO",
+      "target": "fm_valve_closed",
+      "evidence": null
+    },
+    {
+      "source": "fm_valve_closed",
+      "relation": "LEADS_TO",
+      "target": "fm_low_pressure",
+      "evidence": null
+    },
+    {
+      "source": "fm_low_pressure",
+      "relation": "LEADS_TO",
+      "target": "cons_scram",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_coach",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procedure",
+      "evidence": null
+    }
+  ],
+  "chain": "bypass restored prematurely during transition to scram time testing [cause TBD] -> CRD charging water stop valve closed per test procedure with bypass not maintained -> low charging water header pressure condition reached during depressurization -> automatic RPS scram actuation (valid, Mode 4, all rods already inserted)",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code and category are TBD/provisional per FORM-366 fields (no official cause code assigned); narrative describes a procedural/human-performance sequencing error (bypass restored before valve was closed per test procedure) but this is not re-derived into a definitive cause code per rule 4. No SSFF per NEI 99-02 review. No manufacturer, backup system, or previous-occurrence LER referenced in narrative."
+}

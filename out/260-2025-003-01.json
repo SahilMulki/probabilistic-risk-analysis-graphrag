@@ -1,0 +1,466 @@
+{
+  "ler_number": "260-2025-003-01",
+  "identity": {
+    "accession_number": "ML25300A115",
+    "docket": "05000260",
+    "plant_name": "Browns Ferry",
+    "unit": 2,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2025-05-30",
+    "report_date": "2025-10-27",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Primary Containment Isolation and Manual Reactor Trip Due to Dual Recirculation Pump Trips"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The power supply loss was caused by an incorrect risk evaluation/preventative maintenance strategy for a contactor. The contactor failure was determined to be most likely age-related and directly related to incorrect component classification resulting in an inadequate preventative maintenance strategy.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "inadequate PM strategy / component misclassification leading to age-related contactor failure",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 260-2025-006-01",
+      "properties": {},
+      "type": "LER",
+      "key": "260-2025-003-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:260-2025-003-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Browns Ferry Unit 2",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000260",
+      "match_key": "Unit:05000260"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "inadequate PM strategy / component misclassification leading to age-related contactor failure",
+      "proximate_text": "The power supply loss was caused by an incorrect risk evaluation/preventative maintenance strategy for a contactor. The contactor failure was determined to be most likely age-related and directly related to incorrect component classification resulting in an inadequate preventative maintenance strategy.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_ad",
+      "display_name": "Reactor Recirculation",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "AD",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:AD"
+    },
+    {
+      "id": "sys_jm",
+      "display_name": "Primary Containment Isolation System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JM",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JM"
+    },
+    {
+      "id": "sys_jc",
+      "display_name": "Reactor Protection System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JC"
+    },
+    {
+      "id": "sys_sd",
+      "display_name": "Condensate",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SD",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; used for reactor water level control",
+      "match_key": "System:SD"
+    },
+    {
+      "id": "sys_sj",
+      "display_name": "Feedwater",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; used for reactor water level control",
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "sys_sg",
+      "display_name": "Main Condenser",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; used via turbine bypass valves for cooldown",
+      "match_key": "System:SG"
+    },
+    {
+      "id": "c_contactor",
+      "display_name": "Contactor 2-CONT-068-0002 for VFD 2A/2B 120VAC Aux Power Distribution",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "CNTR",
+      "identifier": "2-CONT-068-0002",
+      "model": "CL08AB00MJ",
+      "manufacturer_code": "GE",
+      "inferred_code": false,
+      "match_key": "Component:CNTR|2-CONT-068-0002"
+    },
+    {
+      "id": "c_relay",
+      "display_name": "Normally energized transfer relay",
+      "properties": {
+        "note": "one contact within relay failed; relay function was to swap power supply to alternate board on loss of normal supply"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:normally-energized-transfer-relay"
+    },
+    {
+      "id": "c_vfd",
+      "display_name": "VFD (2A and 2B) cabinets",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "DRIV",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:DRIV"
+    },
+    {
+      "id": "mfr_ge",
+      "display_name": "General Electric",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "GE",
+      "match_key": "Manufacturer:GE"
+    },
+    {
+      "id": "fm_contactor",
+      "display_name": "Contactor loss of continuity",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "2-CONT-068-0002 failed due to loss of continuity; one contact within the normally energized transfer relay failed.",
+      "match_key": "FailureMode:contactor-loss-of-continuity"
+    },
+    {
+      "id": "fm_transfer",
+      "display_name": "Loss of automatic transfer capability of Normal/Alternate power to VFD cooling fans",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Both trains of cooling to two trains of VFDs were lost because both trains were supplied from a common power supply and the relay meant to transfer to an alternate board failed.",
+      "match_key": "FailureMode:loss-of-automatic-transfer-capability-of-normal-alternate-power-to-vfd-cooling-fans"
+    },
+    {
+      "id": "fm_overtemp",
+      "display_name": "Excessive temperatures in VFD cabinets",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Loss of cooling fan power resulted in excessive temperatures in VFD cabinets.",
+      "match_key": "FailureMode:excessive-temperatures-in-vfd-cabinets"
+    },
+    {
+      "id": "fm_bypass",
+      "display_name": "Multiple VFD cells failed to auto-bypass",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Excessive VFD cabinet temperatures caused multiple VFD cells to fail to auto-bypass.",
+      "match_key": "FailureMode:multiple-vfd-cells-failed-to-auto-bypass"
+    },
+    {
+      "id": "fm_pump2a",
+      "display_name": "Reactor Recirculation Pump 2A automatic trip",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "VFD cell bypass failures caused automatic trip of Recirc Pump 2A.",
+      "match_key": "FailureMode:reactor-recirculation-pump-2a-automatic-trip"
+    },
+    {
+      "id": "fm_pump2b",
+      "display_name": "Reactor Recirculation Pump 2B automatic trip",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "VFD cell bypass failures caused automatic trip of Recirc Pump 2B, the only operating recirc pump remaining.",
+      "match_key": "FailureMode:reactor-recirculation-pump-2b-automatic-trip"
+    },
+    {
+      "id": "cons_scram",
+      "display_name": "Manual reactor scram and PCIS actuation (Groups 2, 3, 6, 8)",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2025-05-30T22:47",
+      "end": "2025-06-06T07:45",
+      "duration": "approx. 6 days 9 hours (to grid resync)",
+      "tz": "CST",
+      "match_key": "Consequence:manual-reactor-scram-and-pcis-actuation-groups-2-3-6-8"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace failed contactor (WO#125365629)",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-failed-contactor-wo-125365629"
+    },
+    {
+      "id": "ca_restart",
+      "display_name": "Restart reactor and sync to grid",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:restart-reactor-and-sync-to-grid"
+    },
+    {
+      "id": "ca_similar",
+      "display_name": "Perform similar contactor replacements and evaluations",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:perform-similar-contactor-replacements-and-evaluations"
+    },
+    {
+      "id": "ca_maintstrategy",
+      "display_name": "Revise maintenance strategies for contactor classification",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-maintenance-strategies-for-contactor-classification"
+    },
+    {
+      "id": "ca_redundancy",
+      "display_name": "Add future power supply redundancies",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:add-future-power-supply-redundancies"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5072b2",
+      "display_name": "10 CFR 50.72(b)(2)(iv)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-2-iv-b"
+    },
+    {
+      "id": "rr_5072b3",
+      "display_name": "10 CFR 50.72(b)(3)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-3-iv-a"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072b2",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072b3",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ad",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jm",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jc",
+      "evidence": null
+    },
+    {
+      "source": "c_contactor",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_ge",
+      "evidence": null
+    },
+    {
+      "source": "fm_contactor",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_contactor",
+      "relation": "LEADS_TO",
+      "target": "fm_transfer",
+      "evidence": null
+    },
+    {
+      "source": "fm_transfer",
+      "relation": "LEADS_TO",
+      "target": "fm_overtemp",
+      "evidence": null
+    },
+    {
+      "source": "fm_overtemp",
+      "relation": "LEADS_TO",
+      "target": "fm_bypass",
+      "evidence": null
+    },
+    {
+      "source": "fm_bypass",
+      "relation": "LEADS_TO",
+      "target": "fm_pump2a",
+      "evidence": null
+    },
+    {
+      "source": "fm_bypass",
+      "relation": "LEADS_TO",
+      "target": "fm_pump2b",
+      "evidence": null
+    },
+    {
+      "source": "fm_pump2a",
+      "relation": "LEADS_TO",
+      "target": "fm_pump2b",
+      "evidence": null
+    },
+    {
+      "source": "fm_pump2b",
+      "relation": "LEADS_TO",
+      "target": "cons_scram",
+      "evidence": null
+    },
+    {
+      "source": "cons_scram",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_sd",
+      "evidence": null
+    },
+    {
+      "source": "cons_scram",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_sj",
+      "evidence": null
+    },
+    {
+      "source": "cons_scram",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_sg",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_restart",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_similar",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_maintstrategy",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_redundancy",
+      "evidence": null
+    }
+  ],
+  "chain": "inadequate PM strategy/component misclassification (age-related) [cause TBD] -> contactor loss of continuity -> loss of automatic transfer of Normal/Alternate power to VFD cooling fans -> excessive VFD cabinet temperatures -> multiple VFD cells fail to auto-bypass -> Recirc Pump 2A trips -> Recirc Pump 2B trips -> manual reactor scram + PCIS actuation [backups Condensate, Feedwater, Main Condenser via turbine bypass]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code is TBD/provisional per FORM-366 despite narrative detailing an age-related contactor failure tied to incorrect component classification/PM strategy; per rule 4, cause node kept provisional. No previous similar events were found per Section VII, so no SIMILAR_TO/stub LER emitted. Condensate, Feedwater, and Main Condenser are modeled as backups because the narrative states they were actively used during the event for level control/cooldown, not merely design context. No safety system was rendered inoperable (Section V.B), so ADS/RCIC/etc. not modeled as no ECCS actuation occurred beyond PCIS."
+}

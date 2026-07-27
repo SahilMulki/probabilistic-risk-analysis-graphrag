@@ -1,0 +1,433 @@
+{
+  "ler_number": "306-2024-001-01",
+  "identity": {
+    "accession_number": "ML24155A195",
+    "docket": "05000306",
+    "plant_name": "Prairie Island",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2024-03-03",
+    "report_date": "2024-05-31",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Reactor Trip and Auto-Start Actuation of Auxiliary Feedwater due to Loss of Suction to the 22 Main Feedwater Pump"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "B",
+      "system": "SF",
+      "component": "FCV",
+      "manufacturer": "P304",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "CV-31940 failed to open due to differential pressure across the valve being too large to overcome as the design of the valve was not adequate to actuate across the expected system differential pressures",
+    "cause_code": "B",
+    "category": "Design/Manufacturing/Installation",
+    "theme": "undersized valve actuator / inadequate design margin",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 306-2024-001-01",
+      "properties": {},
+      "type": "LER",
+      "key": "306-2024-001-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:306-2024-001-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Prairie Island Unit 2",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000306",
+      "match_key": "Unit:05000306"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Manufacturing/Installation (B)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "B",
+      "category": "Design/Manufacturing/Installation",
+      "theme": "undersized valve actuator / inadequate design margin",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Design/Manufacturing/Installation"
+    },
+    {
+      "id": "sys_sj",
+      "display_name": "Main Feedwater",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "sys_ba",
+      "display_name": "Auxiliary Feedwater",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; automatically actuated",
+      "match_key": "System:BA"
+    },
+    {
+      "id": "sys_ta",
+      "display_name": "Main Turbine",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "TA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:TA"
+    },
+    {
+      "id": "sys_sd",
+      "display_name": "Condensate",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SD",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SD"
+    },
+    {
+      "id": "sys_sf",
+      "display_name": "Condensate Polishing",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SF",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SF"
+    },
+    {
+      "id": "c_cv39140",
+      "display_name": "CV-39140, Condensate Filter Demineralizer System Main Bypass Valve",
+      "properties": {
+        "part_number": "1264"
+      },
+      "type": "Component",
+      "eiis_code": "FCV",
+      "identifier": "CV-39140",
+      "model": null,
+      "manufacturer_code": "P304",
+      "inferred_code": false,
+      "match_key": "Component:FCV|CV-39140"
+    },
+    {
+      "id": "c_cv39220",
+      "display_name": "CV-39220, 22 Condensate Filter Demineralizer Outlet Flow Control Valve",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "FCV",
+      "identifier": "CV-39220",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:FCV|CV-39220"
+    },
+    {
+      "id": "c_22fwpump",
+      "display_name": "22 Main Feedwater Pump",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "22 Main FW Pump",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:22-main-feedwater-pump"
+    },
+    {
+      "id": "c_22fd",
+      "display_name": "22 Condensate Filter Demineralizer",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "22 F/D",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:22-condensate-filter-demineralizer"
+    },
+    {
+      "id": "fm_valvedesign",
+      "display_name": "CV-39140 inadequately designed to actuate across expected differential pressure",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Automatic bypass valve actuator torque insufficient to overcome expected system differential pressure",
+      "match_key": "FailureMode:cv-39140-inadequately-designed-to-actuate-across-expected-differential-pressure"
+    },
+    {
+      "id": "fm_valvefail",
+      "display_name": "CV-39140 failed to open when flow through 22 F/D was reduced",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Valve did not open to relieve differential pressure across the Filter Demineralizer bypass line",
+      "match_key": "FailureMode:cv-39140-failed-to-open-when-flow-through-22-f-d-was-reduced"
+    },
+    {
+      "id": "fm_lossofflow",
+      "display_name": "Insufficient flow to supply 22 Main FW Pump suction",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Drastic flow change occurred after throttling CV-39220 to reduce differential pressure",
+      "match_key": "FailureMode:insufficient-flow-to-supply-22-main-fw-pump-suction"
+    },
+    {
+      "id": "fm_pumptrip",
+      "display_name": "22 Main FW Pump tripped on low suction pressure",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Loss of suction caused suction pressure to drop below trip setpoint",
+      "match_key": "FailureMode:22-main-fw-pump-tripped-on-low-suction-pressure"
+    },
+    {
+      "id": "fm_turbinetrip",
+      "display_name": "Main Turbine trip",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Loss of 22 Main FW Pump with 21 Main FW Pump off led to turbine trip",
+      "match_key": "FailureMode:main-turbine-trip"
+    },
+    {
+      "id": "cons_reactortrip",
+      "display_name": "Unit 2 Reactor trip and automatic AFW actuation",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2024-03-03T11:42",
+      "end": null,
+      "duration": null,
+      "tz": "CDT",
+      "match_key": "Consequence:unit-2-reactor-trip-and-automatic-afw-actuation"
+    },
+    {
+      "id": "ca_nocp",
+      "display_name": "Condensate Polishing system not used during subsequent startup pending root cause determination; steam generator blowdown used instead",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:condensate-polishing-system-not-used-during-subsequent-startup-pending-root-cause-determination-steam-generator-blowdown-used-instead"
+    },
+    {
+      "id": "ca_ec",
+      "display_name": "Engineering Change to identify required actuation torque for CV-39140, replace actuator, and ensure valve is appropriately designed",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:engineering-change-to-identify-required-actuation-torque-for-cv-39140-replace-actuator-and-ensure-valve-is-appropriately-designed"
+    },
+    {
+      "id": "ca_proc",
+      "display_name": "Procedural changes to ensure flow through CP System is maintained while in service",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:procedural-changes-to-ensure-flow-through-cp-system-is-maintained-while-in-service"
+    },
+    {
+      "id": "mfr_posiseal",
+      "display_name": "POSI-SEAL INTERNATIONAL",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "P304",
+      "match_key": "Manufacturer:P304"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "Previous LER: Loss of Control Power to CV-39140 (2019)",
+      "properties": {},
+      "type": "LER",
+      "key": "306-2019-TBD",
+      "stub": true,
+      "title": "Loss of Control Power to CV-39140",
+      "plant": "Prairie Island Nuclear Generating Plant, Unit 2",
+      "match_key": "LER:306-2019-TBD"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sj",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sf",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ba",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ta",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sd",
+      "evidence": null
+    },
+    {
+      "source": "c_cv39140",
+      "relation": "PART_OF",
+      "target": "sys_sf",
+      "evidence": null
+    },
+    {
+      "source": "c_cv39220",
+      "relation": "PART_OF",
+      "target": "sys_sf",
+      "evidence": null
+    },
+    {
+      "source": "c_22fwpump",
+      "relation": "PART_OF",
+      "target": "sys_sj",
+      "evidence": null
+    },
+    {
+      "source": "fm_valvedesign",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_valvedesign",
+      "relation": "LEADS_TO",
+      "target": "fm_valvefail",
+      "evidence": null
+    },
+    {
+      "source": "fm_valvefail",
+      "relation": "LEADS_TO",
+      "target": "fm_lossofflow",
+      "evidence": null
+    },
+    {
+      "source": "fm_lossofflow",
+      "relation": "LEADS_TO",
+      "target": "fm_pumptrip",
+      "evidence": null
+    },
+    {
+      "source": "fm_pumptrip",
+      "relation": "LEADS_TO",
+      "target": "fm_turbinetrip",
+      "evidence": null
+    },
+    {
+      "source": "fm_turbinetrip",
+      "relation": "LEADS_TO",
+      "target": "cons_reactortrip",
+      "evidence": null
+    },
+    {
+      "source": "cons_reactortrip",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_ba",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_nocp",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_ec",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_proc",
+      "evidence": null
+    },
+    {
+      "source": "c_cv39140",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_posiseal",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    }
+  ],
+  "chain": "inadequate valve design/actuator torque [cause B] -> CV-39140 fails to open against differential pressure -> insufficient flow to 22 Main FW Pump suction -> pump trips on low suction -> Main Turbine trips -> Reactor trip / AFW actuation [backup AFW auto-started]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Narrative text has an apparent typo, referring to the failed valve alternately as CV-39140 and CV-31940; treated as the same component (CV-39140) per the bulk of the narrative and block 13. Plant/unit identity fields were null in FORM-366 FIELDS and were populated from the narrative header (Prairie Island Unit 2). Previous similar event (2019) referenced only by description, not an LER number; stub key set to '306-2019-TBD' as no explicit LER number was given in the narrative -- this violates strict rule 9 guidance to copy the LER number verbatim, but no number was provided in the source text."
+}

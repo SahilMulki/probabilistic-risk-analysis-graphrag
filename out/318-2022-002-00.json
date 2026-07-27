@@ -1,0 +1,308 @@
+{
+  "ler_number": "318-2022-002-00",
+  "identity": {
+    "accession_number": "ML22316A019",
+    "docket": "05000318",
+    "plant_name": "Calvert Cliffs",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2022-09-14",
+    "report_date": "2022-11-11",
+    "operating_mode": "5",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Unplanned Safety Injection Actuation Signal due to Human Error"
+  },
+  "reporting_basis": {
+    "reported_under": [],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "A",
+      "system": null,
+      "component": null,
+      "manufacturer": null,
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "the cause was personal accountability to uphold human performance and place keeping standards due to the perceived low level of complexity of the task and Operators high level of familiarity with ESFAS operation",
+    "cause_code": "A",
+    "category": "Personnel Error",
+    "theme": "procedure use and adherence failure during routine bypass task",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 318-2022-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "318-2022-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:318-2022-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Calvert Cliffs Unit 2",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000318",
+      "match_key": "Unit:05000318"
+    },
+    {
+      "id": "cause",
+      "display_name": "Personnel Error (A)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "A",
+      "category": "Personnel Error",
+      "theme": "procedure use and adherence failure during routine bypass task",
+      "proximate_text": "the cause was personal accountability to uphold human performance and place keeping standards due to the perceived low level of complexity of the task and Operators high level of familiarity with ESFAS operation",
+      "provisional": false,
+      "match_key": "Cause:Personnel Error"
+    },
+    {
+      "id": "sys_je",
+      "display_name": "Engineered Safety Features Actuation System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JE",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "involved; SIAS/SGIS logic being bypassed",
+      "match_key": "System:JE"
+    },
+    {
+      "id": "c_sensor_modules",
+      "display_name": "SIAS Block Sensor Modules",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:sias-block-sensor-modules"
+    },
+    {
+      "id": "fm_procedure_error",
+      "display_name": "Procedure use and adherence error during SIAS sensor module bypass",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Licensed Operators failed to satisfactorily comply with procedure use and adherence standards per HU-AA-104-101 while performing Section 6.8/Appendix J to bypass SIAS and SIAS Block sensor modules.",
+      "match_key": "FailureMode:procedure-use-and-adherence-error-during-sias-sensor-module-bypass"
+    },
+    {
+      "id": "fm_2of4_sensed",
+      "display_name": "2oo4 SIAS sensor modules sensed low pressurizer pressure condition",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Two of four SIAS sensor modules sensed the actual pressurizer pressure (~135 psia), below the nominal SIAS setpoint (<=1740 psia), due to the procedure error, generating an actuation condition.",
+      "match_key": "FailureMode:2oo4-sias-sensor-modules-sensed-low-pressurizer-pressure-condition"
+    },
+    {
+      "id": "cons_siаs",
+      "display_name": "Unplanned SIAS A and B actuation",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2022-09-14T13:48",
+      "end": "2022-09-14T13:59",
+      "duration": "0:11",
+      "tz": null,
+      "match_key": "Consequence:unplanned-sias-a-and-b-actuation"
+    },
+    {
+      "id": "cons_dg_start",
+      "display_name": "Automatic start of 2A DG and 2B DG (no-load, secured later)",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2022-09-14T13:48",
+      "end": "2022-09-14T16:11",
+      "duration": "2:23",
+      "tz": null,
+      "match_key": "Consequence:automatic-start-of-2a-dg-and-2b-dg-no-load-secured-later"
+    },
+    {
+      "id": "sys_2adg",
+      "display_name": "2A Diesel Generator",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "automatically started; remained in no-load operation, operated satisfactorily",
+      "match_key": "System:2a-diesel-generator"
+    },
+    {
+      "id": "sys_2bdg",
+      "display_name": "2B Diesel Generator",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "automatically started; remained in no-load operation, operated satisfactorily",
+      "match_key": "System:2b-diesel-generator"
+    },
+    {
+      "id": "ca_cap_eval",
+      "display_name": "Performed a Corrective Action Program evaluation",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:performed-a-corrective-action-program-evaluation"
+    },
+    {
+      "id": "ca_personnel",
+      "display_name": "Addressed personnel accountability actions per Human Resource policies",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:addressed-personnel-accountability-actions-per-human-resource-policies"
+    },
+    {
+      "id": "ca_procedure_revision",
+      "display_name": "Revise applicable ESFAS/AFAS procedures to clearly delineate supervisory oversight",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-applicable-esfas-afas-procedures-to-clearly-delineate-supervisory-oversight"
+    },
+    {
+      "id": "rr_5072",
+      "display_name": "10 CFR 50.72(b)(3)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-3-iv-a"
+    },
+    {
+      "id": "rr_ts335",
+      "display_name": "Technical Specification 3.3.5",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-3-3-5"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "LER 318-2021-004-00",
+      "properties": {},
+      "type": "LER",
+      "key": "318-2021-004-00",
+      "stub": true,
+      "title": "Unit 2 Manual Reactor Trip Due to Lowering Steam Generator Levels",
+      "plant": "Calvert Cliffs Nuclear Power Plant, Unit 2",
+      "match_key": "LER:318-2021-004-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_je",
+      "evidence": null
+    },
+    {
+      "source": "c_sensor_modules",
+      "relation": "PART_OF",
+      "target": "sys_je",
+      "evidence": null
+    },
+    {
+      "source": "fm_procedure_error",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_procedure_error",
+      "relation": "LEADS_TO",
+      "target": "fm_2of4_sensed",
+      "evidence": null
+    },
+    {
+      "source": "fm_2of4_sensed",
+      "relation": "LEADS_TO",
+      "target": "cons_siаs",
+      "evidence": null
+    },
+    {
+      "source": "cons_siаs",
+      "relation": "LEADS_TO",
+      "target": "cons_dg_start",
+      "evidence": null
+    },
+    {
+      "source": "cons_dg_start",
+      "relation": "MITIGATED_BY",
+      "target": "sys_2adg",
+      "evidence": null
+    },
+    {
+      "source": "cons_dg_start",
+      "relation": "MITIGATED_BY",
+      "target": "sys_2bdg",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_cap_eval",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_personnel",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procedure_revision",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    }
+  ],
+  "chain": "personnel error / procedure use and adherence failure [cause A] -> 2 of 4 SIAS sensor modules sense low pressurizer pressure condition -> unplanned SIAS A and B actuation -> automatic start of 2A DG and 2B DG (no-load, secured normally) -> reset successfully, no safety injection occurred, SDC unaffected",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Event occurred in Mode 5 with HPSI LTOP tagout and both LPSI pumps already running SDC, so despite the unplanned SIAS, no actual safety injection occurred and SDC was unaffected; DGs auto-started but never loaded onto their buses (no undervoltage condition) and were later secured normally, so this is modeled as a mitigated consequence rather than a true backup system relationship. No component failures were identified (Section H), consistent with cause code A / personnel error and no block-13 system/component codes. Previous occurrence LER 318-2021-004 is a stub per explicit narrative reference; it is a different type of personnel-error event (arc-flash/breaker) and not an ESFAS actuation, but the narrative explicitly ties it in as the closest previous occurrence."
+}

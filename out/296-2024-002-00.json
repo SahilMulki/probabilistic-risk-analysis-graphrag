@@ -1,0 +1,279 @@
+{
+  "ler_number": "296-2024-002-00",
+  "identity": {
+    "accession_number": "ML24115A165",
+    "docket": "05000296",
+    "plant_name": "Browns Ferry",
+    "unit": 3,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2024-02-24",
+    "report_date": "2024-04-24",
+    "operating_mode": "5",
+    "power_level": 0,
+    "discovery_context": "inspection",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Breaker Trip Automatically Started an Emergency Diesel Generator"
+  },
+  "reporting_basis": {
+    "reported_under": [],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "An investigation found no root cause of this event. No components failed during this event, which was believed to have been caused by an intermittent loose connection, because the investigation was unable to completely refute that possibility.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Undetermined - suspected intermittent loose connection",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 296-2024-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "296-2024-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:296-2024-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Browns Ferry Unit 3",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000296",
+      "match_key": "Unit:05000296"
+    },
+    {
+      "id": "cause",
+      "display_name": "Undetermined (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Undetermined - suspected intermittent loose connection",
+      "proximate_text": "An investigation found no root cause of this event. No components failed during this event, which was believed to have been caused by an intermittent loose connection, because the investigation was unable to completely refute that possibility.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_sdbd",
+      "display_name": "4kV Shutdown Board 3EB",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "affected bus",
+      "match_key": "System:4kv-shutdown-board-3eb"
+    },
+    {
+      "id": "sys_dg",
+      "display_name": "Emergency Diesel Generator (DG)",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "DG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup power source, started automatically",
+      "match_key": "System:DG"
+    },
+    {
+      "id": "c_bkr_ts3e",
+      "display_name": "Transformer TS3E normal feeder breaker",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "3-BKR-211-03EB/009",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:transformer-ts3e-normal-feeder-breaker"
+    },
+    {
+      "id": "c_bkr_3eb",
+      "display_name": "3EB 4kV SDBD normal feeder breaker",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "3-BKR-211-03EB/014",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:3eb-4kv-sdbd-normal-feeder-breaker"
+    },
+    {
+      "id": "c_dg_3b",
+      "display_name": "3B Emergency Diesel Generator",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "DG",
+      "identifier": "3B EDG",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:DG|3B EDG"
+    },
+    {
+      "id": "fm_racking",
+      "display_name": "Racking in and closing TS3E normal feeder breaker during clearance re-alignment",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "During scheduled work on 3B 480V SDBD, racking in and closing transformer TS3E normal feeder breaker caused the 3EB 4kV SDBD normal feeder breaker to unexpectedly trip open.",
+      "match_key": "FailureMode:racking-in-and-closing-ts3e-normal-feeder-breaker-during-clearance-re-alignment"
+    },
+    {
+      "id": "fm_trip",
+      "display_name": "3EB 4kV SDBD normal feeder breaker unexpectedly trips open",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The 3EB 4kV SDBD normal feeder breaker (3-BKR-211-03EB/014) tripped open unexpectedly, possibly due to an intermittent loose connection.",
+      "match_key": "FailureMode:3eb-4kv-sdbd-normal-feeder-breaker-unexpectedly-trips-open"
+    },
+    {
+      "id": "fm_uv",
+      "display_name": "Valid 4kV bus under-voltage condition",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Loss of the normal feeder breaker caused a valid 4kV bus under-voltage condition on 3EB SDBD.",
+      "match_key": "FailureMode:valid-4kv-bus-under-voltage-condition"
+    },
+    {
+      "id": "cons_start",
+      "display_name": "3B EDG automatically started and tied to board",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2024-02-24T02:19",
+      "end": "2024-02-24T11:11",
+      "duration": "8:52",
+      "tz": "CST",
+      "match_key": "Consequence:3b-edg-automatically-started-and-tied-to-board"
+    },
+    {
+      "id": "ca_trouble",
+      "display_name": "Troubleshooting: inspect and check tightness of all accessible wiring and connections",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:troubleshooting-inspect-and-check-tightness-of-all-accessible-wiring-and-connections"
+    },
+    {
+      "id": "ca_acmp",
+      "display_name": "Adverse Condition Monitoring Plan (ACMP) for circuits associated with loads on this board",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:adverse-condition-monitoring-plan-acmp-for-circuits-associated-with-loads-on-this-board"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sdbd",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_dg",
+      "evidence": null
+    },
+    {
+      "source": "c_dg_3b",
+      "relation": "PART_OF",
+      "target": "sys_dg",
+      "evidence": null
+    },
+    {
+      "source": "fm_racking",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_racking",
+      "relation": "LEADS_TO",
+      "target": "fm_trip",
+      "evidence": null
+    },
+    {
+      "source": "fm_trip",
+      "relation": "LEADS_TO",
+      "target": "fm_uv",
+      "evidence": null
+    },
+    {
+      "source": "fm_uv",
+      "relation": "LEADS_TO",
+      "target": "cons_start",
+      "evidence": null
+    },
+    {
+      "source": "cons_start",
+      "relation": "MITIGATED_BY",
+      "target": "ca_trouble",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_trouble",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_acmp",
+      "evidence": null
+    },
+    {
+      "source": "c_bkr_ts3e",
+      "relation": "LEADS_TO",
+      "target": "c_bkr_3eb",
+      "evidence": null
+    }
+  ],
+  "chain": "racking in/closing TS3E normal feeder breaker during clearance work [cause TBD, suspected intermittent loose connection] -> 3EB SDBD normal feeder breaker trips open -> valid 4kV bus under-voltage condition -> 3B EDG auto-starts and ties to board (8h52m until normal power restored)",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "No component failure was confirmed; cause remains undetermined/provisional per official TBD code, with narrative theorizing an intermittent loose connection that could not be fully refuted. No SSC inoperability contributed to the event per Section II.B. Search of prior LERs at BFN Units 1-3 over 5 years found no similar events, so no SIMILAR_TO stub LER is emitted. Breaker-to-breaker relationship modeled as LEADS_TO (racking/closing one breaker caused the other to trip) rather than PART_OF, since this is a causal/functional interaction, not containment."
+}

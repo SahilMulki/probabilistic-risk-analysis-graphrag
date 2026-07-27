@@ -1,0 +1,400 @@
+{
+  "ler_number": "499-2023-001-00",
+  "identity": {
+    "accession_number": "ML24015A002",
+    "docket": "05000499",
+    "plant_name": "South Texas",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2023-11-16",
+    "report_date": "2024-01-15",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Two Essential Chilled Water Trains Inoperable Resulting in a Condition That Could Have Prevented Fulfillment of a Safety Function"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)(D)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "B",
+      "system": "CH",
+      "component": "RLY",
+      "manufacturer": "P297",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The cause of the component failure was a short circuit that caused an overcurrent. This increased ohmic heating of the relay, causing a blown fuse and the relay coil to open... It was determined the relay experienced infant mortality.",
+    "cause_code": "B",
+    "category": "Design/Manufacturing/Installation",
+    "theme": "Premature relay failure (infant mortality) causing loss of redundant train",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 499-2023-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "499-2023-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:499-2023-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "South Texas Unit 2",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000499",
+      "match_key": "Unit:05000499"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Manufacturing/Installation (B)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "B",
+      "category": "Design/Manufacturing/Installation",
+      "theme": "Premature relay failure (infant mortality) causing loss of redundant train",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Design/Manufacturing/Installation"
+    },
+    {
+      "id": "sys_ch",
+      "display_name": "Essential Chilled Water System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "CH",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "provides cooling to safety-related AHUs including CRE HVAC",
+      "match_key": "System:CH"
+    },
+    {
+      "id": "sys_a",
+      "display_name": "Essential Chilled Water Train A",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "CH",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "remained operable throughout event",
+      "match_key": "System:CH"
+    },
+    {
+      "id": "c_chiller22c",
+      "display_name": "Train C Essential Chiller 22C",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "22C",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:train-c-essential-chiller-22c"
+    },
+    {
+      "id": "c_relay3r",
+      "display_name": "Relay 3R",
+      "properties": {
+        "location": "Train C Essential Chiller 22C Local Control Panel (C1CHZLP625)"
+      },
+      "type": "Component",
+      "eiis_code": "RLY",
+      "identifier": "3R",
+      "model": "MDR131-1",
+      "manufacturer_code": "P297",
+      "inferred_code": false,
+      "match_key": "Component:RLY|3R"
+    },
+    {
+      "id": "c_fuse",
+      "display_name": "Downstream fuse (Train C chiller local control panel)",
+      "properties": {
+        "location": "C1CHZLP625"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:downstream-fuse-train-c-chiller-local-control-panel"
+    },
+    {
+      "id": "c_lcp",
+      "display_name": "Train C Essential Chiller Local Control Panel (C1CHZLP625)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "C1CHZLP625",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:train-c-essential-chiller-local-control-panel-c1chzlp625"
+    },
+    {
+      "id": "c_chillerB",
+      "display_name": "Train B Essential Chiller 22B",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "22B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:train-b-essential-chiller-22b"
+    },
+    {
+      "id": "fm_shortcircuit",
+      "display_name": "Short circuit causing overcurrent in relay 3R",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Short circuit caused overcurrent, increasing ohmic heating of the relay coil.",
+      "match_key": "FailureMode:short-circuit-causing-overcurrent-in-relay-3r"
+    },
+    {
+      "id": "fm_fuseblown",
+      "display_name": "Blown fuse and relay coil open",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Overcurrent heating blew a downstream fuse and caused the relay coil to open (resistance 4.44E+6 ohms vs typical 50-200 ohms).",
+      "match_key": "FailureMode:blown-fuse-and-relay-coil-open"
+    },
+    {
+      "id": "fm_relayfail",
+      "display_name": "Relay 3R failed to energize chiller compressor start",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Relay 3R failed to energize/de-energize to start the chiller compressor, resulting in failure to start.",
+      "match_key": "FailureMode:relay-3r-failed-to-energize-chiller-compressor-start"
+    },
+    {
+      "id": "fm_trainCinop",
+      "display_name": "Train C Essential Chiller 22C failed to start / tripped",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Chiller 22C tripped and Train C Essential Chilled Water system was declared INOPERABLE.",
+      "match_key": "FailureMode:train-c-essential-chiller-22c-failed-to-start-tripped"
+    },
+    {
+      "id": "fm_trainBmaint",
+      "display_name": "Train B Essential Chilled Water system out for planned maintenance",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Train B declared INOPERABLE and Non-Functional for planned maintenance beginning 11/05/23, overlapping with the Train C failure.",
+      "match_key": "FailureMode:train-b-essential-chilled-water-system-out-for-planned-maintenance"
+    },
+    {
+      "id": "cons_twotrains",
+      "display_name": "Two of three Essential Chilled Water trains (B and C) inoperable; CRE HVAC safety function potentially not met",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2023-11-16T15:41",
+      "end": "2023-11-18T17:02",
+      "duration": "49:21",
+      "tz": "CST",
+      "match_key": "Consequence:two-of-three-essential-chilled-water-trains-b-and-c-inoperable-cre-hvac-safety-function-potentially-not-met"
+    },
+    {
+      "id": "ca_trainB",
+      "display_name": "Complete Train B planned maintenance, restoring second train to OPERABLE status",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:complete-train-b-planned-maintenance-restoring-second-train-to-operable-status"
+    },
+    {
+      "id": "ca_relay",
+      "display_name": "Replace failed relay 3R and affected downstream fuse in Train C local control panel",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-failed-relay-3r-and-affected-downstream-fuse-in-train-c-local-control-panel"
+    },
+    {
+      "id": "mfr_pb",
+      "display_name": "Potter and Brumfield",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "P297",
+      "match_key": "Manufacturer:P297"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "rr_dbd_ch",
+      "display_name": "Essential Chilled Water System Design Basis Document",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:essential-chilled-water-system-design-basis-document"
+    },
+    {
+      "id": "rr_dbd_cre",
+      "display_name": "CRE HVAC System Design Basis Document",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:cre-hvac-system-design-basis-document"
+    },
+    {
+      "id": "ler_prev1",
+      "display_name": "CR 21-9693 - Abnormal buzzing sound from relay 4R inside ZLP625 (Unit 2)",
+      "properties": {},
+      "type": "LER",
+      "key": "21-9693",
+      "stub": true,
+      "title": "Abnormal buzzing sound from relay 4R inside ZLP625 during Essential Chiller C startup",
+      "plant": "South Texas Project Unit 2",
+      "match_key": "LER:21-9693"
+    },
+    {
+      "id": "ler_prev2",
+      "display_name": "CR 23-294 - AGASTAT 1TDR relay out of tolerance, Essential Chiller 12A local control panel (Unit 1)",
+      "properties": {},
+      "type": "LER",
+      "key": "23-294",
+      "stub": true,
+      "title": "AGASTAT 1TDR light did not flash/light during Essential Chiller 12A start; relay found out of tolerance",
+      "plant": "South Texas Project Unit 1",
+      "match_key": "LER:23-294"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ch",
+      "evidence": null
+    },
+    {
+      "source": "c_relay3r",
+      "relation": "PART_OF",
+      "target": "c_lcp",
+      "evidence": null
+    },
+    {
+      "source": "c_lcp",
+      "relation": "PART_OF",
+      "target": "c_chiller22c",
+      "evidence": null
+    },
+    {
+      "source": "fm_shortcircuit",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_shortcircuit",
+      "relation": "LEADS_TO",
+      "target": "fm_fuseblown",
+      "evidence": null
+    },
+    {
+      "source": "fm_fuseblown",
+      "relation": "LEADS_TO",
+      "target": "fm_relayfail",
+      "evidence": null
+    },
+    {
+      "source": "fm_relayfail",
+      "relation": "LEADS_TO",
+      "target": "fm_trainCinop",
+      "evidence": null
+    },
+    {
+      "source": "fm_trainBmaint",
+      "relation": "LEADS_TO",
+      "target": "cons_twotrains",
+      "evidence": null
+    },
+    {
+      "source": "fm_trainCinop",
+      "relation": "LEADS_TO",
+      "target": "cons_twotrains",
+      "evidence": null
+    },
+    {
+      "source": "cons_twotrains",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_a",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_trainB",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_relay",
+      "evidence": null
+    },
+    {
+      "source": "c_relay3r",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_pb",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev1",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev2",
+      "evidence": null
+    }
+  ],
+  "chain": "relay 3R design/manufacturing defect (infant mortality) [cause B] -> short circuit/overcurrent -> blown fuse and relay coil open -> relay fails to energize chiller compressor start -> Train C Essential Chiller 22C trips/inoperable (concurrent with Train B in planned maintenance) -> two of three Essential Chilled Water trains inoperable for 49h21m, CRE HVAC safety function potentially not met [backup: Train A operable throughout]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Train A Essential Chilled Water is modeled as a System node because the narrative explicitly states Trains A and B (post-restoration) ensured CRE HVAC safety function was met, implying Train A remained operable throughout. Train B's planned-maintenance unavailability is modeled as its own FailureMode (not a Cause) since it was a scheduled/administrative condition, not the reported design/manufacturing cause; both fm_trainBmaint and fm_trainCinop feed the same Consequence. Relay 3R and downstream fuse are both replaced per corrective action; fuse is modeled as a component but not manufacturer-linked (only relay manufacturer given). Fixed prior validation error by removing edge to nonexistent mfr_eaton_pb node and adding proper mfr_pb Manufacturer node with MANUFACTURED_BY edge from c_relay3r."
+}

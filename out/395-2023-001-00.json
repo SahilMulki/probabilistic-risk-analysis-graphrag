@@ -1,0 +1,415 @@
+{
+  "ler_number": "395-2023-001-00",
+  "identity": {
+    "accession_number": "ML23150A162",
+    "docket": "05000395",
+    "plant_name": "Summer",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2023-04-05",
+    "report_date": "2023-05-30",
+    "operating_mode": "1",
+    "power_level": 85,
+    "discovery_context": "inspection",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Manual Reactor Trip Due to Loss of MAIN Feedwater Pump"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "B",
+      "system": "SJ",
+      "component": "p",
+      "manufacturer": "G533",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The apparent cause of the FWP 'C' trip was a combination of the following factors: improper instrumentation thresholds during the last vendor preventative maintenance evolution in 2014, normal thrust bearing wear, and change in pump performance characteristics when the 'B' Main Feedwater Pump was secured. Engineering analysis determined that the thrust bearing wear detector 'Y' clearance was set low at some time in the past, most likely during major inspection as a part of RF21 in the Spring of 2014.",
+    "cause_code": "B",
+    "category": "Design/Manufacturing/Installation",
+    "theme": "Miscalibrated thrust-bearing wear detector from 2014 maintenance masked normal bearing wear",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 395-2023-002-00",
+      "properties": {
+        "match_key": "LER:395-2023-002-00"
+      },
+      "type": "LER",
+      "key": "395-2023-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:395-2023-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Summer Unit 1",
+      "properties": {
+        "match_key": "Unit:05000395",
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000395",
+      "match_key": "Unit:05000395"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Manufacturing/Installation (B)",
+      "properties": {
+        "match_key": "Cause:Design/Manufacturing/Installation"
+      },
+      "type": "Cause",
+      "cause_code": "B",
+      "category": "Design/Manufacturing/Installation",
+      "theme": "Miscalibrated thrust-bearing wear detector from 2014 maintenance masked normal bearing wear",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Design/Manufacturing/Installation"
+    },
+    {
+      "id": "sys_sj",
+      "display_name": "Main Feedwater",
+      "properties": {
+        "match_key": "System:SJ"
+      },
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "sys_efw",
+      "display_name": "Emergency Feedwater",
+      "properties": {
+        "match_key": "System:emergency-feedwater"
+      },
+      "type": "System",
+      "eiis_code": "BA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; actuated automatically",
+      "match_key": "System:BA"
+    },
+    {
+      "id": "sys_rps",
+      "display_name": "Reactor Protection System",
+      "properties": {
+        "match_key": "System:reactor-protection-system"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "manually actuated to trip reactor",
+      "match_key": "System:reactor-protection-system"
+    },
+    {
+      "id": "sys_steamdump",
+      "display_name": "Steam Dump System",
+      "properties": {
+        "match_key": "System:steam-dump-system"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "used for decay heat removal post-trip",
+      "match_key": "System:steam-dump-system"
+    },
+    {
+      "id": "c_fwpc",
+      "display_name": "Main Feedwater Pump 'C' (FWP 'C')",
+      "properties": {
+        "match_key": "Component:P|FWP-C"
+      },
+      "type": "Component",
+      "eiis_code": "P",
+      "identifier": "FWP-C",
+      "model": "GE DRV-631, 6 Stage, Dual Inlet, Feedwater Pump Turbine",
+      "manufacturer_code": "G533",
+      "inferred_code": false,
+      "match_key": "Component:P|FWP-C"
+    },
+    {
+      "id": "c_thrustbearing",
+      "display_name": "FWP 'C' thrust bearing",
+      "properties": {
+        "match_key": "Component:fwp-c-thrust-bearing"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:fwp-c-thrust-bearing"
+    },
+    {
+      "id": "c_weardetector",
+      "display_name": "Thrust bearing wear detector 'Y'",
+      "properties": {
+        "match_key": "Component:thrust-bearing-wear-detector-y"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:thrust-bearing-wear-detector-y"
+    },
+    {
+      "id": "fm_miscal",
+      "display_name": "Wear detector 'Y' clearance set too low (miscalibrated)",
+      "properties": {
+        "match_key": "FailureMode:wear-detector-y-miscalibrated"
+      },
+      "type": "FailureMode",
+      "description": "Thrust bearing wear detector 'Y' clearance was set low at some time in the past, most likely during the RF21 2014 major inspection, preventing online monitoring of thrust bearing wear.",
+      "match_key": "FailureMode:wear-detector-y-clearance-set-too-low-miscalibrated"
+    },
+    {
+      "id": "fm_bearingwear",
+      "display_name": "Normal thrust bearing wear undetected",
+      "properties": {
+        "match_key": "FailureMode:thrust-bearing-wear-undetected"
+      },
+      "type": "FailureMode",
+      "description": "Normal thrust bearing wear progressed undetected because the wear detector configuration did not allow online monitoring of the oil sensing lines.",
+      "match_key": "FailureMode:normal-thrust-bearing-wear-undetected"
+    },
+    {
+      "id": "fm_perfchange",
+      "display_name": "Pump performance characteristics changed when FWP 'B' secured",
+      "properties": {
+        "match_key": "FailureMode:pump-performance-change-fwpb-secured"
+      },
+      "type": "FailureMode",
+      "description": "Change in FWP 'C' pump performance characteristics occurred when the 'B' Main Feedwater Pump was removed from service, contributing to the trip.",
+      "match_key": "FailureMode:pump-performance-characteristics-changed-when-fwp-b-secured"
+    },
+    {
+      "id": "fm_fwpctrip",
+      "display_name": "FWP 'C' tripped",
+      "properties": {
+        "match_key": "FailureMode:fwp-c-tripped"
+      },
+      "type": "FailureMode",
+      "description": "Main Feedwater Pump 'C' tripped, resulting in loss of the second of two operating feedwater pumps.",
+      "match_key": "FailureMode:fwp-c-tripped"
+    },
+    {
+      "id": "cons_trip",
+      "display_name": "Manual reactor trip / turbine trip; plant stabilized in Mode 3",
+      "properties": {
+        "match_key": "Consequence:manual-reactor-trip"
+      },
+      "type": "Consequence",
+      "start": "2023-04-05T06:51:00",
+      "end": null,
+      "duration": null,
+      "tz": "EDT",
+      "match_key": "Consequence:manual-reactor-trip-turbine-trip-plant-stabilized-in-mode-3"
+    },
+    {
+      "id": "ca_fma",
+      "display_name": "Perform failure modes analysis for FWP 'C' trip cause",
+      "properties": {
+        "match_key": "CorrectiveAction:perform-failure-modes-analysis"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:perform-failure-modes-analysis-for-fwp-c-trip-cause"
+    },
+    {
+      "id": "ca_extent",
+      "display_name": "Extent of condition review of FWP 'A' and 'B' thrust bearings and wear detectors",
+      "properties": {
+        "match_key": "CorrectiveAction:extent-of-condition-review"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:extent-of-condition-review-of-fwp-a-and-b-thrust-bearings-and-wear-detectors"
+    },
+    {
+      "id": "ca_pressuregauges",
+      "display_name": "Install pressure gauges on active and inactive thrust bearing wear detector oil sensing lines for all three Main Feedwater Pumps",
+      "properties": {
+        "note": "engineering design change implemented to enable online monitoring of margin to trip setpoint",
+        "match_key": "CorrectiveAction:install-pressure-gauges"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:install-pressure-gauges-on-active-and-inactive-thrust-bearing-wear-detector-oil-sensing-lines-for-all-three-main-feedwater-pumps"
+    },
+    {
+      "id": "ca_fieldmeasure",
+      "display_name": "Field measurements by Design Engineering and vendor for future enhancements",
+      "properties": {
+        "match_key": "CorrectiveAction:field-measurements-future-enhancements"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:field-measurements-by-design-engineering-and-vendor-for-future-enhancements"
+    },
+    {
+      "id": "mfr_ge",
+      "display_name": "General Electric",
+      "properties": {
+        "match_key": "Manufacturer:G533"
+      },
+      "type": "Manufacturer",
+      "code": "G533",
+      "match_key": "Manufacturer:G533"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {
+        "type": "reporting-criterion",
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sj",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rps",
+      "evidence": null
+    },
+    {
+      "source": "c_fwpc",
+      "relation": "PART_OF",
+      "target": "sys_sj",
+      "evidence": null
+    },
+    {
+      "source": "c_weardetector",
+      "relation": "PART_OF",
+      "target": "c_thrustbearing",
+      "evidence": null
+    },
+    {
+      "source": "c_fwpc",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_ge",
+      "evidence": null
+    },
+    {
+      "source": "fm_miscal",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_miscal",
+      "relation": "LEADS_TO",
+      "target": "fm_bearingwear",
+      "evidence": null
+    },
+    {
+      "source": "fm_bearingwear",
+      "relation": "LEADS_TO",
+      "target": "fm_fwpctrip",
+      "evidence": null
+    },
+    {
+      "source": "fm_perfchange",
+      "relation": "LEADS_TO",
+      "target": "fm_fwpctrip",
+      "evidence": null
+    },
+    {
+      "source": "fm_fwpctrip",
+      "relation": "LEADS_TO",
+      "target": "cons_trip",
+      "evidence": null
+    },
+    {
+      "source": "cons_trip",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_efw",
+      "evidence": null
+    },
+    {
+      "source": "cons_trip",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_steamdump",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_fma",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_extent",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_pressuregauges",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_fieldmeasure",
+      "evidence": null
+    }
+  ],
+  "chain": "wear detector 'Y' miscalibrated during 2014 PM [cause B] -> normal thrust bearing wear undetected -> pump performance change when FWP 'B' secured -> FWP 'C' tripped -> manual reactor trip / turbine trip [backups EFW, steam dump]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Section 7.0 Similar Events lists only the word 'malfunction' with no identifiable prior LER reference, so no stub LER/SIMILAR_TO edge was created. Two parallel contributing failure modes (undetected bearing wear and performance change from securing FWP 'B') both feed into the FWP 'C' trip per rule 5. RPS and EFW modeled as systems since RPS was manually actuated and EFW auto-actuated during the event; steam dump system modeled since narrative states it was used for decay heat removal post-trip (operable backup)."
+}

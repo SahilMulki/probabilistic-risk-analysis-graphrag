@@ -1,0 +1,420 @@
+{
+  "ler_number": "265-2023-001-01",
+  "identity": {
+    "accession_number": "ML23334A076",
+    "docket": "05000265",
+    "plant_name": "Quad Cities",
+    "unit": 2,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2023-08-11",
+    "report_date": "2023-11-30",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Licensee Event Report Revision 265/2023-001 -01 \"Turbine Trip and Automatic Reactor Scram due to High Moisture Separator Level"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "A",
+      "system": "SN",
+      "component": "LC",
+      "manufacturer": "F130",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The cause of the scram was an improperly tuned emergency level control valve (LCV) for a MSDT. Tuning was performed by a utility technician based on knowledge of the component and their understanding of plant response without adequate work instructions. The controller's setpoints were configured to provide a slower response than was appropriate for responding to a FWH level transient.",
+    "cause_code": "A",
+    "category": "Personnel Error",
+    "theme": "Improper valve tuning without adequate work instructions",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 265-2023-001-01",
+      "properties": {},
+      "type": "LER",
+      "key": "265-2023-001-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:265-2023-001-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Quad Cities Unit 2",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000265",
+      "match_key": "Unit:05000265"
+    },
+    {
+      "id": "cause",
+      "display_name": "Personnel Error (A)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "A",
+      "category": "Personnel Error",
+      "theme": "Improper valve tuning without adequate work instructions",
+      "proximate_text": "The cause of the scram was an improperly tuned emergency level control valve (LCV) for a MSDT. Tuning was performed by a utility technician based on knowledge of the component and their understanding of plant response without adequate work instructions.",
+      "provisional": false,
+      "match_key": "Cause:Personnel Error"
+    },
+    {
+      "id": "sys_ess",
+      "display_name": "Essential Service System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "UJX",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "system where initiating fault occurred",
+      "match_key": "System:UJX"
+    },
+    {
+      "id": "sys_msdt",
+      "display_name": "Moisture Separator Drain Tank",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SN",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SN"
+    },
+    {
+      "id": "sys_fwh",
+      "display_name": "Feedwater Heater System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "HX",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "transient originated here",
+      "match_key": "System:HX"
+    },
+    {
+      "id": "sys_trb",
+      "display_name": "Main Turbine",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "TRB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:TRB"
+    },
+    {
+      "id": "sys_msr",
+      "display_name": "Moisture Separators",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "MSR",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:MSR"
+    },
+    {
+      "id": "c_lcv",
+      "display_name": "2A Moisture Separator Drain Tank drain valve (emergency LCV)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "LC",
+      "identifier": "2A MSDT drain valve",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:LC|2A MSDT drain valve"
+    },
+    {
+      "id": "c_tank",
+      "display_name": "2A Moisture Separator Drain Tank",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "TK",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:TK"
+    },
+    {
+      "id": "c_lco",
+      "display_name": "Level Controller",
+      "properties": {
+        "nomenclature": "Pneumatic Controller"
+      },
+      "type": "Component",
+      "eiis_code": "LCO",
+      "identifier": null,
+      "model": "4195KB",
+      "manufacturer_code": "F130",
+      "inferred_code": false,
+      "match_key": "Component:LCO"
+    },
+    {
+      "id": "fm_essfault",
+      "display_name": "ESS fault causes FWH system transient",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "A fault in the Essential Service System caused a feedwater heater (FWH) system transient.",
+      "match_key": "FailureMode:ess-fault-causes-fwh-system-transient"
+    },
+    {
+      "id": "fm_lcvtuning",
+      "display_name": "Emergency MSDT LCV improperly tuned",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Controller setpoints configured for slower response than appropriate for a FWH level transient.",
+      "match_key": "FailureMode:emergency-msdt-lcv-improperly-tuned"
+    },
+    {
+      "id": "fm_valveslow",
+      "display_name": "Drain valve did not open rapidly enough",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The drain valve for the 2A MSDT did not open rapidly enough to prevent water level in the moisture separators from reaching turbine trip setpoints.",
+      "match_key": "FailureMode:drain-valve-did-not-open-rapidly-enough"
+    },
+    {
+      "id": "fm_highlevel",
+      "display_name": "High moisture separator level reached turbine trip setpoint",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Water level in the moisture separators reached established turbine trip setpoints.",
+      "match_key": "FailureMode:high-moisture-separator-level-reached-turbine-trip-setpoint"
+    },
+    {
+      "id": "cons_trip",
+      "display_name": "Main turbine trip and automatic reactor scram",
+      "properties": {
+        "details": "All control rods inserted, scram uncomplicated; containment isolation valves closed on valid Group II signal."
+      },
+      "type": "Consequence",
+      "start": "2023-08-11T03:29",
+      "end": null,
+      "duration": null,
+      "tz": "CDT",
+      "match_key": "Consequence:main-turbine-trip-and-automatic-reactor-scram"
+    },
+    {
+      "id": "ca_tune",
+      "display_name": "Tuned the emergency MSDT LCV to ensure appropriate transient response",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:tuned-the-emergency-msdt-lcv-to-ensure-appropriate-transient-response"
+    },
+    {
+      "id": "ca_procedure",
+      "display_name": "Implement procedure change for MSDT LCV tuning at all power levels",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:implement-procedure-change-for-msdt-lcv-tuning-at-all-power-levels"
+    },
+    {
+      "id": "ca_training",
+      "display_name": "Implement training on acceptable use of maintenance activities without written instructions",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:implement-training-on-acceptable-use-of-maintenance-activities-without-written-instructions"
+    },
+    {
+      "id": "mfr_fisher",
+      "display_name": "Fisher Controllers",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "F130",
+      "match_key": "Manufacturer:F130"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_ufsar15",
+      "display_name": "UFSAR Chapter 15",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:ufsar-chapter-15"
+    },
+    {
+      "id": "rr_ufsar6",
+      "display_name": "UFSAR Chapter 6",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:ufsar-chapter-6"
+    },
+    {
+      "id": "rr_nei",
+      "display_name": "NEI 99-02, Revision 7",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "standard/guidance",
+      "match_key": "RegulatoryReference:nei-99-02-revision-7"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "Previous ESS UPS component failure event (2020-02-26)",
+      "properties": {},
+      "type": "LER",
+      "key": "2-2020-XXX",
+      "stub": true,
+      "title": "ESS UPS component failure causing FWH level transient",
+      "plant": "Quad Cities Nuclear Power Station Unit 2",
+      "match_key": "LER:2-2020-XXX"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_msdt",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ess",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_fwh",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_trb",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_msr",
+      "evidence": null
+    },
+    {
+      "source": "c_lcv",
+      "relation": "PART_OF",
+      "target": "sys_msdt",
+      "evidence": null
+    },
+    {
+      "source": "c_tank",
+      "relation": "PART_OF",
+      "target": "sys_msdt",
+      "evidence": null
+    },
+    {
+      "source": "c_lco",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_fisher",
+      "evidence": null
+    },
+    {
+      "source": "fm_lcvtuning",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_essfault",
+      "relation": "LEADS_TO",
+      "target": "fm_valveslow",
+      "evidence": null
+    },
+    {
+      "source": "fm_lcvtuning",
+      "relation": "LEADS_TO",
+      "target": "fm_valveslow",
+      "evidence": null
+    },
+    {
+      "source": "fm_valveslow",
+      "relation": "LEADS_TO",
+      "target": "fm_highlevel",
+      "evidence": null
+    },
+    {
+      "source": "fm_highlevel",
+      "relation": "LEADS_TO",
+      "target": "cons_trip",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_tune",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procedure",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_training",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    }
+  ],
+  "chain": "improperly tuned emergency MSDT LCV [cause A] -> (parallel: ESS fault causes FWH transient) -> drain valve doesn't open rapidly enough -> moisture separator high level reaches turbine trip setpoint -> main turbine trip -> automatic reactor scram",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Block-13 system code SN (MSDT) and component LC (drain valve/LCV) map to sys_msdt and c_lcv respectively. The ESS fault (UJX) and FWH transient (HX) are named as the triggering event in Part A, running in parallel with the improperly tuned LCV as contributing failure paths converging on the valve's slow response. Previous occurrence LER number not given in-text as a formal LER identifier (only IR 4321603 and a date); stub key approximated as '2-2020-XXX' since no explicit LER number was stated — this deviates from rule 9's requirement to copy an exact LER number, because none was provided in the narrative, only an internal IR number and event date. Feedwater system and ECCS mentioned only as available makeup sources (Safety Analysis / design-context) — not modeled per rule 6, since they were not involved in the failure chain and no explicit backup relationship for the failed system is stated (this event's core system, MSDT/LCV, had no operating backup engaged)."
+}

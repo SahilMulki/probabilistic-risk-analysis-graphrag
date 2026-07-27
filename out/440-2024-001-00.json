@@ -1,0 +1,439 @@
+{
+  "ler_number": "440-2024-001-00",
+  "identity": {
+    "accession_number": "ML24172A162",
+    "docket": "05000440",
+    "plant_name": "Perry",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2024-04-25",
+    "report_date": "2024-06-20",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": "57092",
+    "ens_date": "2024-04-25",
+    "ens_time": "2024",
+    "title": "Perry Nuclear Power Plant, Docket No. 50-440, License No. NPF-58: Licensee Event Report Submittal"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)",
+      "10 CFR 50.73(a)(2)(ii)(B)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "Cause 1: A series of human performance errors during the preparation, review, and approval of SOI-E12 RHR Rev 80 being implemented as a Simple Change. Cause 2: Communication of vital information between Operations and Engineering that could have directly prevented the procedure change leading to the plant being operated in an unanalyzed condition was not effective. Contributing Cause: Previous evaluations of the same requested procedure change to make RHR operable using Alternate Keepfill missed the opportunity to embed guidance in SOI-E12 that clearly states that this change does not support Design Basis Criteria (SACF) USAR Chapter 15 Requirements.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Procedure revision error and ineffective Operations/Engineering communication",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 440-2024-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "440-2024-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:440-2024-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Perry Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000440",
+      "match_key": "Unit:05000440"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Procedure revision error and ineffective Operations/Engineering communication",
+      "proximate_text": "Cause 1: A series of human performance errors during the preparation, review, and approval of SOI-E12 RHR Rev 80 being implemented as a Simple Change. Cause 2: Communication of vital information between Operations and Engineering that could have directly prevented the procedure change leading to the plant being operated in an unanalyzed condition was not effective. Contributing Cause: Previous evaluations of the same requested procedure change to make RHR operable using Alternate Keepfill missed the opportunity to embed guidance in SOI-E12 that clearly states that this change does not support Design Basis Criteria (SACF) USAR Chapter 15 Requirements.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_rhr",
+      "display_name": "Residual Heat Removal System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BO",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "ECCS LPCI function, event-involved",
+      "match_key": "System:BO"
+    },
+    {
+      "id": "sys_kats",
+      "display_name": "Condensate Transfer and Storage System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "KA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "non-safety alternate keep fill water source",
+      "match_key": "System:KA"
+    },
+    {
+      "id": "sys_rhr_a",
+      "display_name": "RHR Loop A",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BO",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; remained operable throughout event",
+      "match_key": "System:BO"
+    },
+    {
+      "id": "c_waterleg_bc",
+      "display_name": "RHR Waterleg Pump (loops B and C)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "P",
+      "identifier": "RHR B/C waterleg pump",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:P|RHR B/C waterleg pump"
+    },
+    {
+      "id": "c_checkvalve",
+      "display_name": "RHR Loop B/C 8-inch Check Valve",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "V",
+      "identifier": "8-inch safety-related check valve",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:V|8-inch safety-related check valve"
+    },
+    {
+      "id": "c_soi_e12",
+      "display_name": "SOI-E12 \"Residual Heat Removal System\" Operating Procedure",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:soi-e12-residual-heat-removal-system-operating-procedure"
+    },
+    {
+      "id": "fm_procrevision",
+      "display_name": "SOI-E12 Rev 80 deleted RHR inoperability directives for alternate keep fill / waterleg pump outage",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Revision 80 removed the precaution and procedure step requiring operators to declare an RHR loop inoperable when on alternate keep fill or with waterleg pump shutdown.",
+      "match_key": "FailureMode:soi-e12-rev-80-deleted-rhr-inoperability-directives-for-alternate-keep-fill-waterleg-pump-outage"
+    },
+    {
+      "id": "fm_commfail",
+      "display_name": "Ineffective communication between Operations and Engineering",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Vital information that could have prevented the procedure change from being implemented was not effectively communicated between Operations and Engineering.",
+      "match_key": "FailureMode:ineffective-communication-between-operations-and-engineering"
+    },
+    {
+      "id": "fm_notdeclared",
+      "display_name": "RHR loops B and C not declared inoperable per revised procedure",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Operators followed SOI-E12 Rev 80 and did not declare RHR loops B and C inoperable when the waterleg pump was declared inoperable on March 25, 2024.",
+      "match_key": "FailureMode:rhr-loops-b-and-c-not-declared-inoperable-per-revised-procedure"
+    },
+    {
+      "id": "fm_altkeepfill",
+      "display_name": "RHR B/C loops operated in alternate keep fill configuration",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Alternate keep fill startup using non-safety Condensate Transfer and Storage System water was established for RHR loops B and C, relying on check valves to perform an active isolation function not credited by the licensing basis.",
+      "match_key": "FailureMode:rhr-b-c-loops-operated-in-alternate-keep-fill-configuration"
+    },
+    {
+      "id": "cons_tsviol",
+      "display_name": "Operation in condition prohibited by Technical Specifications (TS 3.5.1 Conditions A/C/D not entered)",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2024-03-25T20:15",
+      "end": "2024-03-31T04:40",
+      "duration": "~5 days 8h25m",
+      "tz": null,
+      "match_key": "Consequence:operation-in-condition-prohibited-by-technical-specifications-ts-3-5-1-conditions-a-c-d-not-entered"
+    },
+    {
+      "id": "cons_unanalyzed",
+      "display_name": "Operation in unanalyzed condition (alternate keep fill check valve credited with active isolation function)",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2024-03-25T20:20",
+      "end": "2024-03-30T20:32",
+      "duration": "5 days 0h12m",
+      "tz": null,
+      "match_key": "Consequence:operation-in-unanalyzed-condition-alternate-keep-fill-check-valve-credited-with-active-isolation-function"
+    },
+    {
+      "id": "ca_revise_soi",
+      "display_name": "Revise SOI-E12 (Rev 81 and Rev 82) to restore licensing-basis inoperability requirements",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-soi-e12-rev-81-and-rev-82-to-restore-licensing-basis-inoperability-requirements"
+    },
+    {
+      "id": "ca_well_sheet",
+      "display_name": "Develop and implement WELL sheet for procedure preparation, 50.59 RAD, and Screen processes",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:develop-and-implement-well-sheet-for-procedure-preparation-50-59-rad-and-screen-processes"
+    },
+    {
+      "id": "ca_case_study",
+      "display_name": "Develop and deliver training case study on communications",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:develop-and-deliver-training-case-study-on-communications"
+    },
+    {
+      "id": "ca_anchor_soi",
+      "display_name": "Anchor reason for RHR inoperability on Alternate Keepfill to SOI-E12",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:anchor-reason-for-rhr-inoperability-on-alternate-keepfill-to-soi-e12"
+    },
+    {
+      "id": "ca_anchor_ist",
+      "display_name": "Anchor reason for RHR inoperability on Alternate Keepfill to inservice testing program procedure",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:anchor-reason-for-rhr-inoperability-on-alternate-keepfill-to-inservice-testing-program-procedure"
+    },
+    {
+      "id": "rr_5073i",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_5073ii",
+      "display_name": "10 CFR 50.73(a)(2)(ii)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-ii-b"
+    },
+    {
+      "id": "rr_5072",
+      "display_name": "10 CFR 50.72(b)(3)(ii)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-3-ii-b"
+    },
+    {
+      "id": "rr_usar15",
+      "display_name": "USAR Chapter 15 Accident Analysis",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:usar-chapter-15-accident-analysis"
+    },
+    {
+      "id": "rr_usar633",
+      "display_name": "USAR Section 6.3.1.1.1 / 6.3.1.1.3 ECCS Design Bases",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:usar-section-6-3-1-1-1-6-3-1-1-3-eccs-design-bases"
+    },
+    {
+      "id": "rr_rg174",
+      "display_name": "Regulatory Guide 1.174",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "standard/guidance",
+      "match_key": "RegulatoryReference:regulatory-guide-1-174"
+    },
+    {
+      "id": "rr_ts351",
+      "display_name": "Technical Specification 3.5.1 ECCS - Operating",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-3-5-1-eccs-operating"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073i",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073ii",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rhr",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_kats",
+      "evidence": null
+    },
+    {
+      "source": "c_waterleg_bc",
+      "relation": "PART_OF",
+      "target": "sys_rhr",
+      "evidence": null
+    },
+    {
+      "source": "c_checkvalve",
+      "relation": "PART_OF",
+      "target": "sys_rhr",
+      "evidence": null
+    },
+    {
+      "source": "fm_procrevision",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_procrevision",
+      "relation": "LEADS_TO",
+      "target": "fm_commfail",
+      "evidence": null
+    },
+    {
+      "source": "fm_commfail",
+      "relation": "LEADS_TO",
+      "target": "fm_notdeclared",
+      "evidence": null
+    },
+    {
+      "source": "fm_notdeclared",
+      "relation": "LEADS_TO",
+      "target": "cons_tsviol",
+      "evidence": null
+    },
+    {
+      "source": "fm_procrevision",
+      "relation": "LEADS_TO",
+      "target": "fm_altkeepfill",
+      "evidence": null
+    },
+    {
+      "source": "fm_altkeepfill",
+      "relation": "LEADS_TO",
+      "target": "cons_unanalyzed",
+      "evidence": null
+    },
+    {
+      "source": "cons_tsviol",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_rhr_a",
+      "evidence": null
+    },
+    {
+      "source": "cons_unanalyzed",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_rhr_a",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_revise_soi",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_well_sheet",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_case_study",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_anchor_soi",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_anchor_ist",
+      "evidence": null
+    },
+    {
+      "source": "fm_altkeepfill",
+      "relation": "PART_OF",
+      "target": "sys_rhr",
+      "evidence": null
+    }
+  ],
+  "chain": "human performance errors in SOI-E12 Rev 80 procedure revision [cause TBD] -> ineffective Operations/Engineering communication -> RHR loops B/C not declared inoperable (TS violation) & RHR B/C operated on alternate keep fill (unanalyzed condition, check valve credited with active isolation function) -> plant operated outside licensing basis for ~5 days [backup: RHR loop A remained operable throughout]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code left TBD/provisional per FORM-366 fields; narrative gives detailed Cause 1/Cause 2/Contributing Cause statements captured in proximate_text and split into two parallel FailureMode branches (procedural failure to declare inoperable -> TS-prohibited condition; and alternate keep fill configuration itself -> unanalyzed condition) both stemming from the same root procedure-revision failure. RHR loop A explicitly stated to have 'remained operable... throughout this event' and is modeled as BACKED_UP_BY. Condensate Transfer and Storage System [KA] is modeled as an involved system (not mere design context) because it was the actual water source used during the event's alternate keep fill configuration. No previous similar events were reported (section states 'None'), so no stub LER/SIMILAR_TO edge created. Block 13 was empty in FORM-366 fields, consistent with narrative's blank/checkbox-only Block 13 table."
+}

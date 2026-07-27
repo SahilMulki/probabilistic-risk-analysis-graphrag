@@ -1,0 +1,225 @@
+{
+  "ler_number": "336-2022-001-00",
+  "identity": {
+    "accession_number": "ML22081A025",
+    "docket": "05000336",
+    "plant_name": "Millstone",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2022-01-20",
+    "report_date": "2022-03-18",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "inspection",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Structural Integrity Of Reactor Building Component Cooling Water Cracked Threaded Fitting Could Not Be Established Resulting In System Inoperable Longer Than Allowed By Technical Specifications"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The structural integrity of the piping to the 'C' RCP motor lower bearing cooler, which includes a flange and threaded piece, could not be established after a crack was identified in the threaded fitting, resulting in the RBCCW train being declared inoperable longer than allowed by Technical Specifications.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "cracked threaded pipe fitting causing indeterminate structural integrity",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 336-2022-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "336-2022-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:336-2022-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Millstone Unit 2",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000336",
+      "match_key": "Unit:05000336"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "cracked threaded pipe fitting causing indeterminate structural integrity",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_cc",
+      "display_name": "Closed/Component Cooling System (RBCCW)",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "CC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:CC"
+    },
+    {
+      "id": "c_pipe",
+      "display_name": "Threaded fitting / flange, inlet piping to lower bearing cooler",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "PSF",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:PSF"
+    },
+    {
+      "id": "c_cooler",
+      "display_name": "'C' RCP motor lower bearing cooler",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:c-rcp-motor-lower-bearing-cooler"
+    },
+    {
+      "id": "fm_crack",
+      "display_name": "Threaded fitting cracked",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "A crack was identified in the threaded piece of the inlet piping to the 'C' RCP motor lower bearing cooler.",
+      "match_key": "FailureMode:threaded-fitting-cracked"
+    },
+    {
+      "id": "fm_integrity",
+      "display_name": "Structural integrity of piping could not be established",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Following discovery of the crack, structural integrity of the flange/threaded piece could not be established.",
+      "match_key": "FailureMode:structural-integrity-of-piping-could-not-be-established"
+    },
+    {
+      "id": "cons_inop",
+      "display_name": "RBCCW train inoperable longer than TS Allowed Outage Time",
+      "properties": {},
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:rbccw-train-inoperable-longer-than-ts-allowed-outage-time"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace leaking inlet piping (flange and threaded piece) on 'C' RCP",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-leaking-inlet-piping-flange-and-threaded-piece-on-c-rcp"
+    },
+    {
+      "id": "ca_cap",
+      "display_name": "Additional corrective action per Corrective Action Program",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:additional-corrective-action-per-corrective-action-program"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_cc",
+      "evidence": null
+    },
+    {
+      "source": "c_pipe",
+      "relation": "PART_OF",
+      "target": "c_cooler",
+      "evidence": null
+    },
+    {
+      "source": "fm_crack",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_crack",
+      "relation": "LEADS_TO",
+      "target": "fm_integrity",
+      "evidence": null
+    },
+    {
+      "source": "fm_integrity",
+      "relation": "LEADS_TO",
+      "target": "cons_inop",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_cap",
+      "evidence": null
+    }
+  ],
+  "chain": "cracked threaded fitting [cause TBD] -> structural integrity of piping to 'C' RCP motor lower bearing cooler could not be established -> RBCCW train declared inoperable beyond TS AOT [opposite RBCCW header available as backup for safety shutdown]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code left TBD/provisional per FORM-366 fields (no official cause code was assigned). No previous similar occurrences were reported in the narrative, so no stub LER/SIMILAR_TO edge is created. The opposite RBCCW header is mentioned as available in a hypothetical worsening scenario for maintaining safety shutdown, not as an operable backup during the actual event window, so BACKED_UP_BY was not asserted; primary makeup water and fire water systems are design-context alternate makeup sources, not modeled per rule 6. Reactor type inferred as PWR from RCP references, not explicitly stated in provided fields."
+}

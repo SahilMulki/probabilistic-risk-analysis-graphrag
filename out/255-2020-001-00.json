@@ -1,0 +1,283 @@
+{
+  "ler_number": "255-2020-001-00",
+  "identity": {
+    "accession_number": "ML20269A166",
+    "docket": "05000255",
+    "plant_name": "Palisades",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2020-07-27",
+    "report_date": "2020-09-25",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "- Service Water System Inoperable for Longer than Allowed by Technical Specifications"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "A",
+      "system": "Bl",
+      "component": "FCV",
+      "manufacturer": "P095",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The direct cause of the event was determined to be an incorrectly pinned Bettis actuator coupling by a non-licensed operator.",
+    "cause_code": "A",
+    "category": "Personnel Error",
+    "theme": "Incorrect installation of actuator coupling pin",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 255-2020-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "255-2020-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:255-2020-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Palisades Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000255",
+      "match_key": "Unit:05000255"
+    },
+    {
+      "id": "cause",
+      "display_name": "Personnel Error (A)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "A",
+      "category": "Personnel Error",
+      "theme": "Incorrect installation of actuator coupling pin",
+      "proximate_text": "The direct cause of the event was determined to be an incorrectly pinned Bettis actuator coupling by a non-licensed operator.",
+      "provisional": false,
+      "match_key": "Cause:Personnel Error"
+    },
+    {
+      "id": "sys_bl",
+      "display_name": "Service Water System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BI",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BI"
+    },
+    {
+      "id": "c_cv0826",
+      "display_name": "Component Cooling Water Heat Exchanger E-54B Service Water Outlet Valve CV-0826",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "FCV",
+      "identifier": "CV-0826",
+      "model": null,
+      "manufacturer_code": "P095",
+      "inferred_code": false,
+      "match_key": "Component:FCV|CV-0826"
+    },
+    {
+      "id": "c_cplg",
+      "display_name": "Bettis actuator coupling",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "CPLG",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:CPLG"
+    },
+    {
+      "id": "c_cv0823",
+      "display_name": "Component Cooling Water Heat Exchanger E-54A Service Water Outlet Valve CV-0823",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "CV-0823",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:component-cooling-water-heat-exchanger-e-54a-service-water-outlet-valve-cv-0823"
+    },
+    {
+      "id": "fm_pin",
+      "display_name": "Bettis operating pin incorrectly installed",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "During previous maintenance, the Bettis operating pin was incorrectly installed on CV-0826's actuator.",
+      "match_key": "FailureMode:bettis-operating-pin-incorrectly-installed"
+    },
+    {
+      "id": "fm_coupling_disengaged",
+      "display_name": "Actuator coupling disengaged from valve stem",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Incorrect pin installation allowed the CV-0826 Bettis actuator coupling to become disengaged from the valve stem.",
+      "match_key": "FailureMode:actuator-coupling-disengaged-from-valve-stem"
+    },
+    {
+      "id": "fm_valve_no_operate",
+      "display_name": "CV-0826 fails to operate despite indicated position",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Control room position indication showed valve fully open, but minimal service water pressure change indicated the valve was not actually operating.",
+      "match_key": "FailureMode:cv-0826-fails-to-operate-despite-indicated-position"
+    },
+    {
+      "id": "cons_sws",
+      "display_name": "Left train Service Water System inoperable",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2020-05-27",
+      "end": "2020-07-28",
+      "duration": "approximately 2 months",
+      "tz": "ET",
+      "match_key": "Consequence:left-train-service-water-system-inoperable"
+    },
+    {
+      "id": "ca_restore",
+      "display_name": "Return CV-0826 to intended configuration, test, and restore operability",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:return-cv-0826-to-intended-configuration-test-and-restore-operability"
+    },
+    {
+      "id": "ca_procedure",
+      "display_name": "Revise SOP-15 Attachment 1 to include steps for proper installation verification",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-sop-15-attachment-1-to-include-steps-for-proper-installation-verification"
+    },
+    {
+      "id": "mfr_p095",
+      "display_name": "Bettis (P095)",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "P095",
+      "match_key": "Manufacturer:P095"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bl",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_cv0826",
+      "evidence": null
+    },
+    {
+      "source": "c_cplg",
+      "relation": "PART_OF",
+      "target": "c_cv0826",
+      "evidence": null
+    },
+    {
+      "source": "c_cv0826",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_p095",
+      "evidence": null
+    },
+    {
+      "source": "fm_pin",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_pin",
+      "relation": "LEADS_TO",
+      "target": "fm_coupling_disengaged",
+      "evidence": null
+    },
+    {
+      "source": "fm_coupling_disengaged",
+      "relation": "LEADS_TO",
+      "target": "fm_valve_no_operate",
+      "evidence": null
+    },
+    {
+      "source": "fm_valve_no_operate",
+      "relation": "LEADS_TO",
+      "target": "cons_sws",
+      "evidence": null
+    },
+    {
+      "source": "cons_sws",
+      "relation": "BACKED_UP_BY",
+      "target": "c_cv0823",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_restore",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procedure",
+      "evidence": null
+    }
+  ],
+  "chain": "incorrectly pinned Bettis actuator coupling [cause A] -> coupling disengages from valve stem -> CV-0826 fails to operate despite indicated open position -> left train SWS inoperable (~2 months) [backup opposite-train valve CV-0823 operable]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "No previous similar events reported (narrative states 'None'), so no SIMILAR_TO edge or stub LER node created. Opposite-train valve CV-0823 modeled as a Component providing backup function rather than a System, since it is a redundant train component explicitly confirmed operable throughout the inoperability window, not a distinct backup system."
+}

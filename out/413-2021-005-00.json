@@ -1,0 +1,380 @@
+{
+  "ler_number": "413-2021-005-00",
+  "identity": {
+    "accession_number": "ML21355A165",
+    "docket": "05000413",
+    "plant_name": "Catawba",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2021-10-27",
+    "report_date": "2021-12-21",
+    "operating_mode": "6",
+    "power_level": 0,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Duke Energy Carolinas, LLC Catawba Nuclear Station, Unit 1 Docket No. 50-413 Licensee Event Report (LER) 413/2021-005-00"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(1)",
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "a jumper which was placed with a mini grabber lost adequate connection resulting in test relays changing state and re-establishing the normal system configuration. Additionally, the procedure directing the timer calibration evolution did not have proper verification controls during performance to manage/eliminate risk to prevent the loss of the essential bus.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "test jumper connection loss during timer calibration combined with inadequate procedural verification controls",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 413/2021-005-00",
+      "properties": {},
+      "type": "LER",
+      "key": "413-2021-005-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:413-2021-005-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Catawba Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000413",
+      "match_key": "Unit:05000413"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "test jumper connection loss during timer calibration combined with inadequate procedural verification controls",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_je",
+      "display_name": "Engineered Safety Features Actuation System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JE",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JE"
+    },
+    {
+      "id": "sys_ek",
+      "display_name": "Diesel Generator Load Sequencer",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "EK",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:EK"
+    },
+    {
+      "id": "sys_ba",
+      "display_name": "Auxiliary Feedwater System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BA"
+    },
+    {
+      "id": "c_bus1etb",
+      "display_name": "4160 Volt essential power bus 1ETB",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "1ETB",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:4160-volt-essential-power-bus-1etb"
+    },
+    {
+      "id": "c_feeder_bkr",
+      "display_name": "Feeder breaker from transformer SATB",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "SATB feeder breaker",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:feeder-breaker-from-transformer-satb"
+    },
+    {
+      "id": "c_dgb",
+      "display_name": "1B Emergency Diesel Generator",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "DG",
+      "identifier": "1B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:DG|1B"
+    },
+    {
+      "id": "c_seq_b",
+      "display_name": "1B EDG Load Sequencer",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "EK",
+      "identifier": "1B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:EK|1B"
+    },
+    {
+      "id": "c_jumper",
+      "display_name": "Mini grabber test jumper",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:mini-grabber-test-jumper"
+    },
+    {
+      "id": "fm_jumper_loss",
+      "display_name": "Mini grabber jumper lost adequate connection",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Test jumper connection degraded, causing test relays to change state and re-establish normal system configuration",
+      "match_key": "FailureMode:mini-grabber-jumper-lost-adequate-connection"
+    },
+    {
+      "id": "fm_proc_gap",
+      "display_name": "Inadequate procedural verification controls",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Timer calibration procedure lacked proper verification controls to detect sequencer removal from test condition and prevent breaker opening",
+      "match_key": "FailureMode:inadequate-procedural-verification-controls"
+    },
+    {
+      "id": "fm_relay_state",
+      "display_name": "Test relays changed state, restoring normal configuration",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Loss of jumper connection caused relays to revert to normal (non-test) configuration during calibration",
+      "match_key": "FailureMode:test-relays-changed-state-restoring-normal-configuration"
+    },
+    {
+      "id": "fm_feeder_open",
+      "display_name": "Feeder breaker from transformer SATB opened",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "1ETB feeder breaker opened, de-energizing the essential bus",
+      "match_key": "FailureMode:feeder-breaker-from-transformer-satb-opened"
+    },
+    {
+      "id": "fm_seq_actuation",
+      "display_name": "1B EDG load sequencer actuated on undervoltage",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Undervoltage on 1ETB caused sequencer to send valid start signals to 1B EDG and Unit 1 CA system, but neither started because both were removed from service for maintenance",
+      "match_key": "FailureMode:1b-edg-load-sequencer-actuated-on-undervoltage"
+    },
+    {
+      "id": "cons_bus_deenergized",
+      "display_name": "4160V essential bus 1ETB de-energized; 1B EDG and CA system failed to auto-start (both out of service for maintenance)",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2021-10-27T14:30",
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:4160v-essential-bus-1etb-de-energized-1b-edg-and-ca-system-failed-to-auto-start-both-out-of-service-for-maintenance"
+    },
+    {
+      "id": "ca_restore_power",
+      "display_name": "Power restored to 1ETB",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:power-restored-to-1etb"
+    },
+    {
+      "id": "ca_revise_procs",
+      "display_name": "Revise unit/train procedures for timer calibration controls to detect sequencer removal from test condition and prevent breaker opening",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-unit-train-procedures-for-timer-calibration-controls-to-detect-sequencer-removal-from-test-condition-and-prevent-breaker-opening"
+    },
+    {
+      "id": "ca_standing_order",
+      "display_name": "Issue standing order restricting mini grabber jumper usage without proper controls/oversight",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:issue-standing-order-restricting-mini-grabber-jumper-usage-without-proper-controls-oversight"
+    },
+    {
+      "id": "ca_revise_admin_proc",
+      "display_name": "Revise administrative maintenance procedure to restrict use of mini grabber leads for output blocking",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-administrative-maintenance-procedure-to-restrict-use-of-mini-grabber-leads-for-output-blocking"
+    },
+    {
+      "id": "rr_5073a1",
+      "display_name": "10 CFR 50.73(a)(1)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-1"
+    },
+    {
+      "id": "rr_5073a2ivA",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073a1",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073a2ivA",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_je",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ek",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ba",
+      "evidence": null
+    },
+    {
+      "source": "c_seq_b",
+      "relation": "PART_OF",
+      "target": "sys_ek",
+      "evidence": null
+    },
+    {
+      "source": "fm_jumper_loss",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_jumper_loss",
+      "relation": "LEADS_TO",
+      "target": "fm_relay_state",
+      "evidence": null
+    },
+    {
+      "source": "fm_proc_gap",
+      "relation": "LEADS_TO",
+      "target": "fm_relay_state",
+      "evidence": null
+    },
+    {
+      "source": "fm_relay_state",
+      "relation": "LEADS_TO",
+      "target": "fm_feeder_open",
+      "evidence": null
+    },
+    {
+      "source": "fm_feeder_open",
+      "relation": "LEADS_TO",
+      "target": "fm_seq_actuation",
+      "evidence": null
+    },
+    {
+      "source": "fm_seq_actuation",
+      "relation": "LEADS_TO",
+      "target": "cons_bus_deenergized",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_restore_power",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_revise_procs",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_standing_order",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_revise_admin_proc",
+      "evidence": null
+    }
+  ],
+  "chain": "mini grabber jumper connection loss + inadequate procedural verification controls [cause TBD] -> test relays revert to normal configuration -> 1ETB feeder breaker from SATB opens -> essential bus 1ETB de-energized -> 1B EDG load sequencer sends valid start signals to 1B EDG and Unit 1 CA, but neither auto-starts (both out of service for maintenance) -> essential bus de-energized event [1A train equipment maintained core/spent fuel cooling]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause_code is TBD in FORM-366 FIELDS, so cause node marked provisional per rule 4. No block_13 rows provided. Narrative states 1B EDG and Unit 1 CA system were both already removed from service for maintenance and thus did not auto-start on the valid sequencer signals -- this is not a component failure but a pre-existing maintenance condition, modeled as part of the consequence description rather than a separate BACKED_UP_BY edge (no explicit statement that 1B train was 'operable' during the window -- in fact it was inoperable due to maintenance). 1A train equipment is mentioned only in Safety Analysis as maintaining core/spent fuel cooling under design-basis train redundancy, not as an explicit operable backup system with a stated system name/code, so no System node created for it. No manufacturer or previous-occurrence LER referenced (report explicitly states none in past 3 years with same causal factor)."
+}

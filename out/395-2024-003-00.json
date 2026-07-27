@@ -1,0 +1,215 @@
+{
+  "ler_number": "395-2024-003-00",
+  "identity": {
+    "accession_number": "ML24323A154",
+    "docket": "05000395",
+    "plant_name": "Summer",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2024-09-17",
+    "report_date": "2024-11-18",
+    "operating_mode": null,
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Common Cause Inoperability of Engineered Safety Features"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(vii)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "VCSNS identified that Door DRCB/501, located between the Control Building and Turbine Building on the 463' elevation, was closed, but not latching properly. DRCB/501 is a SPB credited to mitigate postulated high energy line breaks in the Turbine Building and is relied upon to support OPERABILITY of ESF equipment located in the Control Building.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "steam propagation barrier door failed to latch, degrading its high-energy line break mitigation function",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 395-2024-003-00",
+      "properties": {},
+      "type": "LER",
+      "key": "395-2024-003-00",
+      "stub": false,
+      "title": "Common Cause Inoperability of Engineered Safety Features",
+      "plant": "V.C. Summer Nuclear Station",
+      "match_key": "LER:395-2024-003-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Summer Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000395",
+      "match_key": "Unit:05000395"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "steam propagation barrier door failed to latch, degrading its high-energy line break mitigation function",
+      "proximate_text": "VCSNS identified that Door DRCB/501, located between the Control Building and Turbine Building on the 463' elevation, was closed, but not latching properly. DRCB/501 is a SPB credited to mitigate postulated high energy line breaks in the Turbine Building and is relied upon to support OPERABILITY of ESF equipment located in the Control Building.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_esf",
+      "display_name": "Engineered Safety Features",
+      "properties": {
+        "note": "ESF equipment located in the Control Building"
+      },
+      "type": "System",
+      "eiis_code": "JE",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected equipment; both trains declared inoperable",
+      "match_key": "System:JE"
+    },
+    {
+      "id": "c_drcb501",
+      "display_name": "Door DRCB/501 (Steam Propagation Barrier)",
+      "properties": {
+        "location": "Control Building / Turbine Building boundary, 463' elevation",
+        "function": "steam propagation barrier for postulated high energy line breaks"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "DRCB/501",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:door-drcb-501-steam-propagation-barrier"
+    },
+    {
+      "id": "fm_latch",
+      "display_name": "DRCB/501 door closed but not latching properly",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Door was closed but failed to latch, degrading the steam propagation barrier function.",
+      "match_key": "FailureMode:drcb-501-door-closed-but-not-latching-properly"
+    },
+    {
+      "id": "fm_spb_degraded",
+      "display_name": "Steam propagation barrier function degraded",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Without proper latching, the SPB could not be relied upon to mitigate a postulated high energy line break in the Turbine Building.",
+      "match_key": "FailureMode:steam-propagation-barrier-function-degraded"
+    },
+    {
+      "id": "cons_esf_inop",
+      "display_name": "Both trains of ESF equipment in Control Building declared inoperable",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2024-09-17T20:05",
+      "end": "2024-09-17T20:32",
+      "duration": "0:27",
+      "tz": "ET",
+      "match_key": "Consequence:both-trains-of-esf-equipment-in-control-building-declared-inoperable"
+    },
+    {
+      "id": "ca_repair",
+      "display_name": "Repair DRCB/501 latch and restore ESF equipment to OPERABLE",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:repair-drcb-501-latch-and-restore-esf-equipment-to-operable"
+    },
+    {
+      "id": "ca_supplemental",
+      "display_name": "Further corrective actions per CR1269095 to be provided in supplemental report",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:further-corrective-actions-per-cr1269095-to-be-provided-in-supplemental-report"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(vii)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-vii"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_esf",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_drcb501",
+      "evidence": null
+    },
+    {
+      "source": "fm_latch",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_latch",
+      "relation": "LEADS_TO",
+      "target": "fm_spb_degraded",
+      "evidence": null
+    },
+    {
+      "source": "fm_spb_degraded",
+      "relation": "LEADS_TO",
+      "target": "cons_esf_inop",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_repair",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_supplemental",
+      "evidence": null
+    }
+  ],
+  "chain": "[cause TBD] DRCB/501 door closed but not latching properly -> steam propagation barrier function degraded -> both ESF trains in Control Building declared inoperable (0:27) -> restored upon latch repair",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4"
+  ],
+  "notes": "Cause code TBD/provisional; CR1269095 remains open with a supplemental report expected by 2025-01-31, so status set to 'supplement-expected'. No EIIS codes or specific component identifiers (e.g., breakers, valves) were given in the narrative beyond the door itself; ESF is modeled as a System node with no eiis_code since narrative refers to it generically as 'engineered safety features' without a specific system acronym/code. No block-13 rows were provided in FORM-366 fields. No backup systems were stated as operable during the event, so no BACKED_UP_BY edges emitted. No previous similar occurrence was cited (Section 5.0 'SIMILAR EVENTS' contains no LER reference), so no SIMILAR_TO edge/stub LER node created."
+}

@@ -1,0 +1,404 @@
+{
+  "ler_number": "416-2021-004-00",
+  "identity": {
+    "accession_number": "ML22019A270",
+    "docket": "05000416",
+    "plant_name": "Grand Gulf",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2021-01-29",
+    "report_date": "2022-01-19",
+    "operating_mode": null,
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Grand Gulf Nuclear Station, Unit 1 Licensee Event Report 2021-004-00, Procedure Inadequacy Resulted in Core Monitoring System Miscalibration and Violation of Technical Specification"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "multiple conversion calculations in the procedure were incorrect, and the procedural guidance was unclear. This resulted in the wrong data for jet pump flow being used to calibrate Jet Pump Loop Flow Summers for Loop A and Loop B",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "procedure inadequacy / calibration error",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 416-2021-004-00",
+      "properties": {},
+      "type": "LER",
+      "key": "416-2021-004-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:416-2021-004-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Grand Gulf Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000416",
+      "match_key": "Unit:05000416"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "procedure inadequacy / calibration error",
+      "proximate_text": "multiple conversion calculations in the procedure were incorrect, and the procedural guidance was unclear. This resulted in the wrong data for jet pump flow being used to calibrate Jet Pump Loop Flow Summers for Loop A and Loop B",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_cms",
+      "display_name": "Core Monitoring System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "IG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:IG"
+    },
+    {
+      "id": "sys_recirc",
+      "display_name": "Reactor Recirculation System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "AD",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; used for alternate core flow calculation",
+      "match_key": "System:AD"
+    },
+    {
+      "id": "c_jploopa",
+      "display_name": "Jet Pump Loop Flow Summer - Loop A",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:jet-pump-loop-flow-summer-loop-a"
+    },
+    {
+      "id": "c_jploopb",
+      "display_name": "Jet Pump Loop Flow Summer - Loop B",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:jet-pump-loop-flow-summer-loop-b"
+    },
+    {
+      "id": "c_spreadsheet",
+      "display_name": "Jet pump calibration spreadsheet",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:jet-pump-calibration-spreadsheet"
+    },
+    {
+      "id": "c_procedure",
+      "display_name": "Site core flow calibration procedure",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:site-core-flow-calibration-procedure"
+    },
+    {
+      "id": "fm_procerror",
+      "display_name": "Procedure contained incorrect conversion calculations and unclear guidance",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Multiple conversion calculations in the procedure were incorrect, and procedural guidance for which data points to use was unclear.",
+      "match_key": "FailureMode:procedure-contained-incorrect-conversion-calculations-and-unclear-guidance"
+    },
+    {
+      "id": "fm_wrongvoltage",
+      "display_name": "Incorrect voltage inputs provided to I&C personnel",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Reactor Engineering provided I&C personnel incorrect voltage inputs derived from the flawed procedure.",
+      "match_key": "FailureMode:incorrect-voltage-inputs-provided-to-i-c-personnel"
+    },
+    {
+      "id": "fm_miscal",
+      "display_name": "Jet Pump Loop Flow Summers miscalibrated (Loop A and Loop B)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Miscalibration of the Jet Pump Loop Flow Summers for Loop A and Loop B resulting from incorrect calibration data.",
+      "match_key": "FailureMode:jet-pump-loop-flow-summers-miscalibrated-loop-a-and-loop-b"
+    },
+    {
+      "id": "fm_coreflow_signal",
+      "display_name": "Core flow signal reading high by ~1.95 Mlbm/hr (~2% of rated flow)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Core flow signal from the jet pump summers to the core monitoring software was 1.95 Mlbm/hr higher than actual core flow, approximately two percent of rated flow.",
+      "match_key": "FailureMode:core-flow-signal-reading-high-by-1-95-mlbm-hr-2-of-rated-flow"
+    },
+    {
+      "id": "cons_indication",
+      "display_name": "Incorrect core flow indication to control room panel and Core Monitoring System",
+      "properties": {
+        "note": "Adverse effect on thermal limits generated by core monitoring software"
+      },
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:incorrect-core-flow-indication-to-control-room-panel-and-core-monitoring-system"
+    },
+    {
+      "id": "cons_ts",
+      "display_name": "Violation of Technical Specification 3.2.2 MCPR",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2021-01-29",
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:violation-of-technical-specification-3-2-2-mcpr"
+    },
+    {
+      "id": "ca_revise_proc",
+      "display_name": "Revise site procedure to correct gaps and errors",
+      "properties": {
+        "due_date": "2022-06-30"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-site-procedure-to-correct-gaps-and-errors"
+    },
+    {
+      "id": "ca_recal",
+      "display_name": "Reperform Jet Pump Calibration",
+      "properties": {
+        "due_date": "2022-07-29"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:reperform-jet-pump-calibration"
+    },
+    {
+      "id": "ca_fix_spreadsheet",
+      "display_name": "Correct errors in jet pump calibration spreadsheet and align with procedure",
+      "properties": {
+        "due_date": "2022-07-13"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:correct-errors-in-jet-pump-calibration-spreadsheet-and-align-with-procedure"
+    },
+    {
+      "id": "ca_so21015",
+      "display_name": "Standing Order 21-015: administrative reduction in MFLCPR limit to 0.970",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:standing-order-21-015-administrative-reduction-in-mflcpr-limit-to-0-970"
+    },
+    {
+      "id": "ca_so21018",
+      "display_name": "Standing Order 21-018: enable core flow calculation via recirculation drive flow indications",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:standing-order-21-018-enable-core-flow-calculation-via-recirculation-drive-flow-indications"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts322",
+      "display_name": "Technical Specification 3.2.2 MCPR",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:technical-specification-3-2-2-mcpr"
+    },
+    {
+      "id": "prev_ler",
+      "display_name": "Grand Gulf Apparent Cause Analysis CR-GGN-2018-8553",
+      "properties": {},
+      "type": "LER",
+      "key": "CR-GGN-2018-8553",
+      "stub": true,
+      "title": "Apparent Cause Analysis with inadequate corrective actions regarding questioning attitude and JRPUMP retirement",
+      "plant": "Grand Gulf Nuclear Station",
+      "match_key": "LER:CR-GGN-2018-8553"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_cms",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_jploopa",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_jploopb",
+      "evidence": null
+    },
+    {
+      "source": "fm_procerror",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_procerror",
+      "relation": "LEADS_TO",
+      "target": "fm_wrongvoltage",
+      "evidence": null
+    },
+    {
+      "source": "fm_wrongvoltage",
+      "relation": "LEADS_TO",
+      "target": "fm_miscal",
+      "evidence": null
+    },
+    {
+      "source": "fm_miscal",
+      "relation": "LEADS_TO",
+      "target": "fm_coreflow_signal",
+      "evidence": null
+    },
+    {
+      "source": "fm_coreflow_signal",
+      "relation": "LEADS_TO",
+      "target": "cons_indication",
+      "evidence": null
+    },
+    {
+      "source": "cons_indication",
+      "relation": "LEADS_TO",
+      "target": "cons_ts",
+      "evidence": null
+    },
+    {
+      "source": "cons_ts",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_recirc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_revise_proc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_recal",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_fix_spreadsheet",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_so21015",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_so21018",
+      "evidence": null
+    },
+    {
+      "source": "cons_ts",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts322",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "prev_ler",
+      "evidence": null
+    }
+  ],
+  "chain": "procedure contained incorrect conversion calculations/unclear guidance [cause TBD] -> incorrect voltage inputs given to I&C -> Jet Pump Loop Flow Summers (A & B) miscalibrated -> core flow signal reads ~2% high -> incorrect core flow indication to control room/Core Monitoring System -> TS 3.2.2 MCPR violation [backup: recirc drive flow indication via SO 21-018; MFLCPR limit reduced via SO 21-015]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause_code/category were reported as 'TBD'/'provisional' in FORM-366 FIELDS and are copied verbatim; no official code was assigned in the source. Narrative implicates procedure/spreadsheet errors, a knowledge gap in Reactor Engineering, and inadequate prior corrective actions from CR-GGN-2018-8553 (modeled as stub LER per rule 9, using the CR number as stated since no formal LER number was given for that prior event). Recirculation flow system only qualifies as BACKED_UP_BY because SO 21-018 explicitly enabled its use as an alternate operable means of calculating core flow during the event condition."
+}

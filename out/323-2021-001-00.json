@@ -1,0 +1,318 @@
+{
+  "ler_number": "323-2021-001-00",
+  "identity": {
+    "accession_number": "ML21263A062",
+    "docket": "05000323",
+    "plant_name": "Diablo Canyon",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2021-07-22",
+    "report_date": "2021-09-20",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Emergency Diesel Generator Declared Inoperable due to Low Frequency Condition Discovery during Routine Surveillance"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)",
+      "10 CFR 50.73(a)(2)(v)(D)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "X",
+      "system": "DC",
+      "component": "DG",
+      "manufacturer": "ALCO",
+      "reportable": "N"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The cause of the EDG 2-3 low frequency condition was due to an inadequately performed post maintenance test. The testing sequence did not fully consider the need for revalidation of frequency following setting of the EDG governor following maintenance activities.",
+    "cause_code": "X",
+    "category": "Other",
+    "theme": "inadequate post-maintenance test procedure",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 323-2021-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "323-2021-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:323-2021-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Diablo Canyon Unit 2",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000323",
+      "match_key": "Unit:05000323"
+    },
+    {
+      "id": "cause",
+      "display_name": "Other (X)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "X",
+      "category": "Other",
+      "theme": "inadequate post-maintenance test procedure",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Other"
+    },
+    {
+      "id": "sys_dc",
+      "display_name": "Diesel Generator (AC Standby Power)",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "DC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "primary system involved",
+      "match_key": "System:DC"
+    },
+    {
+      "id": "c_edg23",
+      "display_name": "Emergency Diesel Generator 2-3",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "DG",
+      "identifier": "2-3",
+      "model": null,
+      "manufacturer_code": "ALCO",
+      "inferred_code": false,
+      "match_key": "Component:DG|2-3"
+    },
+    {
+      "id": "c_governor",
+      "display_name": "EDG governor",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:edg-governor"
+    },
+    {
+      "id": "fm_pmt",
+      "display_name": "Inadequately performed post-maintenance test",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Testing sequence did not fully consider need for revalidation of frequency following governor setting after maintenance.",
+      "match_key": "FailureMode:inadequately-performed-post-maintenance-test"
+    },
+    {
+      "id": "fm_govmisadjust",
+      "display_name": "EDG governor frequency setting not revalidated after maintenance",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Governor frequency setpoint drifted/was not verified after maintenance, resulting in low-frequency output on automatic start.",
+      "match_key": "FailureMode:edg-governor-frequency-setting-not-revalidated-after-maintenance"
+    },
+    {
+      "id": "fm_lowfreq",
+      "display_name": "EDG 2-3 low-frequency condition on automatic UV start",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "On July 21, 2021 automatic UV start, EDG 2-3 frequency indicated 58.90 Hz / 880 rpm, below the TS required 59.5-60.5 Hz band.",
+      "match_key": "FailureMode:edg-2-3-low-frequency-condition-on-automatic-uv-start"
+    },
+    {
+      "id": "cons_inop",
+      "display_name": "EDG 2-3 declared inoperable / TS-prohibited condition existed",
+      "properties": {
+        "note": "Non-conforming condition existed from June 30, 2021 (previous successful surveillance) through July 22, 2021 (restored to operable)."
+      },
+      "type": "Consequence",
+      "start": "2021-06-30",
+      "end": "2021-07-22",
+      "duration": "~23 days",
+      "tz": null,
+      "match_key": "Consequence:edg-2-3-declared-inoperable-ts-prohibited-condition-existed"
+    },
+    {
+      "id": "ca_restore",
+      "display_name": "Adjusted EDG 2-3 frequency/speed into proper band and completed surveillance test; restored to Operable status",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:adjusted-edg-2-3-frequency-speed-into-proper-band-and-completed-surveillance-test-restored-to-operable-status"
+    },
+    {
+      "id": "ca_followup",
+      "display_name": "Follow-up corrective actions managed under DCPP Corrective Action Program to prevent recurrence",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:follow-up-corrective-actions-managed-under-dcpp-corrective-action-program-to-prevent-recurrence"
+    },
+    {
+      "id": "rr_5073i",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_5073v",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "rr_ts381",
+      "display_name": "Technical Specification 3.8.1",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:technical-specification-3-8-1"
+    },
+    {
+      "id": "rr_nureg1022",
+      "display_name": "NUREG-1022, Revision 3",
+      "properties": {
+        "type": "standard/guidance"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:nureg-1022-revision-3"
+    },
+    {
+      "id": "mfr_alco",
+      "display_name": "ALCO",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "ALCO",
+      "match_key": "Manufacturer:ALCO"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073i",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073v",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_dc",
+      "evidence": null
+    },
+    {
+      "source": "c_edg23",
+      "relation": "PART_OF",
+      "target": "sys_dc",
+      "evidence": null
+    },
+    {
+      "source": "c_governor",
+      "relation": "PART_OF",
+      "target": "c_edg23",
+      "evidence": null
+    },
+    {
+      "source": "c_edg23",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_alco",
+      "evidence": null
+    },
+    {
+      "source": "fm_pmt",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_pmt",
+      "relation": "LEADS_TO",
+      "target": "fm_govmisadjust",
+      "evidence": null
+    },
+    {
+      "source": "fm_govmisadjust",
+      "relation": "LEADS_TO",
+      "target": "fm_lowfreq",
+      "evidence": null
+    },
+    {
+      "source": "fm_lowfreq",
+      "relation": "LEADS_TO",
+      "target": "cons_inop",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_restore",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_followup",
+      "evidence": null
+    },
+    {
+      "source": "cons_inop",
+      "relation": "MITIGATED_BY",
+      "target": "rr_ts381",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_nureg1022",
+      "evidence": null
+    }
+  ],
+  "chain": "inadequately performed post-maintenance test [cause X] -> EDG 2-3 governor frequency not revalidated after maintenance -> low-frequency condition on automatic UV start (58.90 Hz) -> EDG 2-3 declared inoperable / TS 3.8.1 non-conforming condition (~23 days) [two of three EDGs remained operable]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code X (Other) is used because the official coding does not fit a discrete personnel/design/procedure/equipment bin in block 13's letter scheme; category taken verbatim from FORM-366 fields. No BACKED_UP_BY edge modeled to the other two EDGs as discrete System nodes because they are the same EIIS system/component class (DG) rather than a distinct backup system; narrative simply notes 2 of 3 EDGs were operable at time of discovery, captured in chain and consequence note instead. No previous similar occurrence LER to stub-create: narrative explicitly states 'There have been no similar events for the EDGs at DCPP in the previous three years,' so no SIMILAR_TO edge or stub LER node was created. TS 3.8.1 modeled as RegulatoryReference linked via MITIGATED_BY-adjacent role since it defines the violated limit context (license-basis), not a corrective action itself."
+}

@@ -1,0 +1,190 @@
+{
+  "ler_number": "364-2020-001-01",
+  "identity": {
+    "accession_number": "ML21084A234",
+    "docket": "05000364",
+    "plant_name": "Farley",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2020-10-06",
+    "report_date": "2021-03-25",
+    "operating_mode": "1",
+    "power_level": 95,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Main Steam Safety Valve Lift Pressure Outside of Technical Specifications Limits due to Setpoint Drift"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "Cap11e",
+      "system": "Sy11tem",
+      "component": "Manufactunlr",
+      "manufacturer": "C;111H",
+      "reportable": null
+    }
+  ],
+  "cause": {
+    "proximate_text": null,
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Main steam safety valve setpoint drift outside Technical Specifications limits",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 364-2020-002-01",
+      "properties": {
+        "match_key": "LER:364-2020-002-01"
+      },
+      "type": "LER",
+      "key": "364-2020-001-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:364-2020-001-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Farley Unit 2",
+      "properties": {
+        "match_key": "Unit:05000364",
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000364",
+      "match_key": "Unit:05000364"
+    },
+    {
+      "id": "cause",
+      "display_name": "Cause TBD",
+      "properties": {
+        "match_key": "Cause:provisional"
+      },
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Main steam safety valve setpoint drift outside Technical Specifications limits",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_ms",
+      "display_name": "Main Steam",
+      "properties": {
+        "match_key": "System:main-steam"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:main-steam"
+    },
+    {
+      "id": "c_msv",
+      "display_name": "Main Steam Safety Valve",
+      "properties": {
+        "match_key": "Component:main-steam-safety-valve"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:main-steam-safety-valve"
+    },
+    {
+      "id": "fm_setpoint_drift",
+      "display_name": "Main steam safety valve lift setpoint drifted outside Tech Spec limits",
+      "properties": {
+        "match_key": "FailureMode:main-steam-safety-valve-lift-setpoint-drifted"
+      },
+      "type": "FailureMode",
+      "description": null,
+      "match_key": "FailureMode:main-steam-safety-valve-lift-setpoint-drifted-outside-tech-spec-limits"
+    },
+    {
+      "id": "cons_ts",
+      "display_name": "Main steam safety valve lift pressure outside Technical Specifications limits",
+      "properties": {
+        "match_key": "Consequence:msv-lift-pressure-outside-ts-limits"
+      },
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:main-steam-safety-valve-lift-pressure-outside-technical-specifications-limits"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)",
+      "properties": {
+        "type": "reporting-criterion",
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ms",
+      "evidence": null
+    },
+    {
+      "source": "c_msv",
+      "relation": "PART_OF",
+      "target": "sys_ms",
+      "evidence": null
+    },
+    {
+      "source": "fm_setpoint_drift",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_setpoint_drift",
+      "relation": "LEADS_TO",
+      "target": "cons_ts",
+      "evidence": null
+    }
+  ],
+  "chain": "setpoint drift [cause TBD] -> main steam safety valve lift setpoint outside Tech Spec limits -> reportable condition",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4"
+  ],
+  "notes": "FORM-366 FIELDS block_13 and cause_code fields appear corrupted/garbled ('Cap11e', 'Sy11tem', 'Manufactunlr', 'C;111H') and were not usable as structured data; treated as unavailable and omitted/nulled per authoritative-copy rule since they do not represent valid coded values. No narrative (366A) text was provided, so component/system identifiers, EIIS codes, timing, and corrective actions could not be extracted beyond what the title indicates. Plant name, unit, reactor type, and NSS vendor were not provided in FORM-366 FIELDS and are left null. Cause code remains TBD/provisional per explicit FORM-366 FIELDS value. No corrective actions, manufacturer, or backup systems could be identified due to absence of narrative text."
+}

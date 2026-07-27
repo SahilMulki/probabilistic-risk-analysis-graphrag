@@ -1,0 +1,359 @@
+{
+  "ler_number": "458-2021-05-00",
+  "identity": {
+    "accession_number": "ML21350A425",
+    "docket": "05000458",
+    "plant_name": "River Bend",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2021-10-19",
+    "report_date": "2021-12-16",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "I 2021-05-00, \"Potential Loss of Safety Function due to Inoperable Reactor Core Isolation Cooling Steam Flow Transmitter"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)(C)",
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The wire insulation degradation was most likely caused by moisture intrusion.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "moisture intrusion causing wire insulation degradation",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 458-2021-005-00",
+      "properties": {},
+      "type": "LER",
+      "key": "458-2021-05-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:458-2021-05-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "River Bend Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000458",
+      "match_key": "Unit:05000458"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "moisture intrusion causing wire insulation degradation",
+      "proximate_text": "The wire insulation degradation was most likely caused by moisture intrusion.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_bn",
+      "display_name": "Reactor Core Isolation Cooling",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BN",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BN"
+    },
+    {
+      "id": "sys_ahr",
+      "display_name": "Residual Heat Removal",
+      "properties": {
+        "note": "shares common steam supply line with RCIC; system role context only"
+      },
+      "type": "System",
+      "eiis_code": "BO",
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BO"
+    },
+    {
+      "id": "c_pdt_b",
+      "display_name": "RCIC Steam Flow Transmitter E31-PDTN084B",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "PDT",
+      "identifier": "E31-PDTN084B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:PDT|E31-PDTN084B"
+    },
+    {
+      "id": "c_pdt_a",
+      "display_name": "RCIC Steam Flow Transmitter E31-PDTN084A",
+      "properties": {
+        "role": "redundant channel; rendered inoperable for planned surveillance testing 09/1/2020"
+      },
+      "type": "Component",
+      "eiis_code": "PDT",
+      "identifier": "E31-PDTN084A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:PDT|E31-PDTN084A"
+    },
+    {
+      "id": "c_wire_neg",
+      "display_name": "Negative wire terminated in transmitter",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:negative-wire-terminated-in-transmitter"
+    },
+    {
+      "id": "c_conduit_seal",
+      "display_name": "Conduit seal mounted on transmitter",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:conduit-seal-mounted-on-transmitter"
+    },
+    {
+      "id": "fm_moisture",
+      "display_name": "Moisture intrusion at transmitter conduit seal",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Moisture intrusion, most likely through the conduit seal, degraded internal wire insulation.",
+      "match_key": "FailureMode:moisture-intrusion-at-transmitter-conduit-seal"
+    },
+    {
+      "id": "fm_insulation",
+      "display_name": "Negative wire insulation degraded/falling off",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Insulation falling off negative wire terminated in transmitter E31-PDTN084B; positive wire insulation intact but discolored.",
+      "match_key": "FailureMode:negative-wire-insulation-degraded-falling-off"
+    },
+    {
+      "id": "fm_ground_potential",
+      "display_name": "Potential for bare wire to contact grounded housing during seismic event",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Bare negative wire could contact transmitter housing (ground) during a seismic event, potentially causing signal to fail downscale.",
+      "match_key": "FailureMode:potential-for-bare-wire-to-contact-grounded-housing-during-seismic-event"
+    },
+    {
+      "id": "cons_inoperable",
+      "display_name": "RCIC steam supply high flow isolation function inoperable",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2021-10-19",
+      "end": "2021-10-21T08:38",
+      "duration": "43 hours",
+      "tz": "CT",
+      "match_key": "Consequence:rcic-steam-supply-high-flow-isolation-function-inoperable"
+    },
+    {
+      "id": "ca_correct_wire",
+      "display_name": "Correct degraded wire insulation with qualified material",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:correct-degraded-wire-insulation-with-qualified-material"
+    },
+    {
+      "id": "ca_torque",
+      "display_name": "Validate torque on transmitter conduit bolt",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:validate-torque-on-transmitter-conduit-bolt"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace transmitter E31-PDTN084B",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-transmitter-e31-pdtn084b"
+    },
+    {
+      "id": "ca_inspect",
+      "display_name": "Perform internal inspection of E31-PDTN084B and document results",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:perform-internal-inspection-of-e31-pdtn084b-and-document-results"
+    },
+    {
+      "id": "ca_procedure",
+      "display_name": "Update surveillance test procedure to include visual inspection of internal wiring insulation for E31-PDTN084B and all EQAR qualified transmitters",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:update-surveillance-test-procedure-to-include-visual-inspection-of-internal-wiring-insulation-for-e31-pdtn084b-and-all-eqar-qualified-transmitters"
+    },
+    {
+      "id": "rr_5073v",
+      "display_name": "10 CFR 50.73(a)(2)(v)(C)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-c"
+    },
+    {
+      "id": "rr_5073i",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_nei",
+      "display_name": "NEI 99-02 Regulatory Assessment Performance Indicator Guideline",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "standard/guidance",
+      "match_key": "RegulatoryReference:nei-99-02-regulatory-assessment-performance-indicator-guideline"
+    },
+    {
+      "id": "rr_usar",
+      "display_name": "Updated Safety Analysis Report - RCIC Steam Supply Line break analysis",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:updated-safety-analysis-report-rcic-steam-supply-line-break-analysis"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073v",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073i",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bn",
+      "evidence": null
+    },
+    {
+      "source": "c_pdt_b",
+      "relation": "PART_OF",
+      "target": "sys_bn",
+      "evidence": null
+    },
+    {
+      "source": "c_wire_neg",
+      "relation": "PART_OF",
+      "target": "c_pdt_b",
+      "evidence": null
+    },
+    {
+      "source": "fm_moisture",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_moisture",
+      "relation": "LEADS_TO",
+      "target": "fm_insulation",
+      "evidence": null
+    },
+    {
+      "source": "fm_insulation",
+      "relation": "LEADS_TO",
+      "target": "fm_ground_potential",
+      "evidence": null
+    },
+    {
+      "source": "fm_ground_potential",
+      "relation": "LEADS_TO",
+      "target": "cons_inoperable",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_correct_wire",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_torque",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_inspect",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procedure",
+      "evidence": null
+    }
+  ],
+  "chain": "moisture intrusion [cause TBD] -> negative wire insulation degrades/falls off -> bare wire could contact grounded transmitter housing during seismic event -> RCIC steam supply high flow isolation function inoperable (43h, TS allows 37h) [redundant channel PDTN084A was itself out for testing 09/1/2020, no concurrent backup during this event]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code TBD per form fields; narrative gives only a qualitative cause statement ('most likely caused by moisture intrusion') without an official cause code, so cause node marked provisional per rule 4. No Block 13 rows were provided in the source fields. RHR modeled only as design-context system sharing the common steam line, not as an operable backup during the event -- no BACKED_UP_BY edge asserted since the redundant channel (PDTN084A) was not stated to be operable during this specific event's 43-hour window (it had been tested out on a different date, 09/1/2020, illustrating a separate historical condition rather than concurrent backup availability). Previous Similar Events section explicitly states 'None', so no SIMILAR_TO edge or stub LER emitted."
+}

@@ -1,0 +1,468 @@
+{
+  "ler_number": "390-2020-003-00",
+  "identity": {
+    "accession_number": "ML20254A015",
+    "docket": "05000390",
+    "plant_name": "Watts Bar",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2020-07-15",
+    "report_date": "2020-09-10",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Control Room Emergency Ventilation System Inoperable due to Main Control Room Door Being Left Open"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)(D)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The event was caused by a human performance error when an individual traversing the control room boundary door failed to self check by fully challenging and ensuring the door was properly latched and secured.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Failure to self-check/verify door latching",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 390-2020-003-00",
+      "properties": {
+        "match_key": "LER:390-2020-003-00"
+      },
+      "type": "LER",
+      "key": "390-2020-003-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:390-2020-003-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Watts Bar Unit 1",
+      "properties": {
+        "match_key": "Unit:05000390",
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000390",
+      "match_key": "Unit:05000390"
+    },
+    {
+      "id": "cause",
+      "display_name": "Personnel Error (A)",
+      "properties": {
+        "match_key": "Cause:Personnel Error"
+      },
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Failure to self-check/verify door latching",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_vi",
+      "display_name": "Control Room Emergency Ventilation System",
+      "properties": {
+        "match_key": "System:VI"
+      },
+      "type": "System",
+      "eiis_code": "VI",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:VI"
+    },
+    {
+      "id": "c_door",
+      "display_name": "Control Room Envelope boundary door C036",
+      "properties": {
+        "match_key": "Component:DR|C036"
+      },
+      "type": "Component",
+      "eiis_code": "DR",
+      "identifier": "C036",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:DR|C036"
+    },
+    {
+      "id": "fm_selfcheck",
+      "display_name": "Individual failed to self-check door latching",
+      "properties": {
+        "match_key": "FailureMode:failed-to-self-check-door-latching"
+      },
+      "type": "FailureMode",
+      "description": "An individual traversing the control room boundary door failed to fully challenge and ensure the door was properly latched and secured.",
+      "match_key": "FailureMode:individual-failed-to-self-check-door-latching"
+    },
+    {
+      "id": "fm_dooropen",
+      "display_name": "CRE boundary door left ajar",
+      "properties": {
+        "match_key": "FailureMode:cre-boundary-door-left-ajar"
+      },
+      "type": "FailureMode",
+      "description": "Door C036 was left ajar, breaching the Control Room Envelope boundary integrity.",
+      "match_key": "FailureMode:cre-boundary-door-left-ajar"
+    },
+    {
+      "id": "cons_crevs",
+      "display_name": "CREVS declared inoperable (both trains) / TS LCO 3.7.10 Condition B entered",
+      "properties": {
+        "match_key": "Consequence:crevs-inoperable-lco-3-7-10"
+      },
+      "type": "Consequence",
+      "start": "2020-07-15T08:35:00",
+      "end": "2020-07-15T08:39:00",
+      "duration": "00:04",
+      "tz": "EDT",
+      "match_key": "Consequence:crevs-declared-inoperable-both-trains-ts-lco-3-7-10-condition-b-entered"
+    },
+    {
+      "id": "ca_close",
+      "display_name": "Door identified and promptly closed",
+      "properties": {
+        "match_key": "CorrectiveAction:door-identified-and-closed"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:door-identified-and-promptly-closed"
+    },
+    {
+      "id": "ca_coach",
+      "display_name": "Worker coached on door control issue",
+      "properties": {
+        "match_key": "CorrectiveAction:worker-coached"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:worker-coached-on-door-control-issue"
+    },
+    {
+      "id": "ca_standdown",
+      "display_name": "Stand down with contract personnel on proper door control (video demonstrations)",
+      "properties": {
+        "match_key": "CorrectiveAction:stand-down-door-control"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:stand-down-with-contract-personnel-on-proper-door-control-video-demonstrations"
+    },
+    {
+      "id": "ca_twoperson",
+      "display_name": "Two-person rule for MCR entry implemented (until Sept 30, 2020)",
+      "properties": {
+        "match_key": "CorrectiveAction:two-person-rule"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:two-person-rule-for-mcr-entry-implemented-until-sept-30-2020"
+    },
+    {
+      "id": "ca_brief",
+      "display_name": "Brief affected work groups",
+      "properties": {
+        "match_key": "CorrectiveAction:brief-work-groups"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:brief-affected-work-groups"
+    },
+    {
+      "id": "ca_video",
+      "display_name": "Develop video on door operation",
+      "properties": {
+        "match_key": "CorrectiveAction:develop-door-video"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:develop-video-on-door-operation"
+    },
+    {
+      "id": "ca_dynamic",
+      "display_name": "Establish dynamic learning activity for contract personnel outage training",
+      "properties": {
+        "match_key": "CorrectiveAction:dynamic-learning-activity"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:establish-dynamic-learning-activity-for-contract-personnel-outage-training"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {
+        "type": "reporting-criterion",
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "rr_gdc19",
+      "display_name": "GDC 19 / 10 CFR 50 Appendix A Criterion 19",
+      "properties": {
+        "type": "analysis-basis",
+        "match_key": "RegulatoryReference:gdc-19"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:gdc-19-10-cfr-50-appendix-a-criterion-19"
+    },
+    {
+      "id": "ler_391_2020_001",
+      "display_name": "LER 391-2020-001-00",
+      "properties": {
+        "match_key": "LER:391-2020-001-00"
+      },
+      "type": "LER",
+      "key": "391-2020-001-00",
+      "stub": true,
+      "title": null,
+      "plant": "Watts Bar Nuclear Plant",
+      "match_key": "LER:391-2020-001-00"
+    },
+    {
+      "id": "ler_390_2019_001",
+      "display_name": "LER 390-2019-001-00",
+      "properties": {
+        "match_key": "LER:390-2019-001-00"
+      },
+      "type": "LER",
+      "key": "390-2019-001-00",
+      "stub": true,
+      "title": null,
+      "plant": "Watts Bar Nuclear Plant",
+      "match_key": "LER:390-2019-001-00"
+    },
+    {
+      "id": "ler_390_2019_004",
+      "display_name": "LER 390-2019-004-00",
+      "properties": {
+        "match_key": "LER:390-2019-004-00"
+      },
+      "type": "LER",
+      "key": "390-2019-004-00",
+      "stub": true,
+      "title": null,
+      "plant": "Watts Bar Nuclear Plant",
+      "match_key": "LER:390-2019-004-00"
+    },
+    {
+      "id": "ler_390_2018_003",
+      "display_name": "LER 390-2018-003-00",
+      "properties": {
+        "match_key": "LER:390-2018-003-00"
+      },
+      "type": "LER",
+      "key": "390-2018-003-00",
+      "stub": true,
+      "title": null,
+      "plant": "Watts Bar Nuclear Plant",
+      "match_key": "LER:390-2018-003-00"
+    },
+    {
+      "id": "ler_390_2018_004",
+      "display_name": "LER 390-2018-004-00",
+      "properties": {
+        "match_key": "LER:390-2018-004-00"
+      },
+      "type": "LER",
+      "key": "390-2018-004-00",
+      "stub": true,
+      "title": null,
+      "plant": "Watts Bar Nuclear Plant",
+      "match_key": "LER:390-2018-004-00"
+    },
+    {
+      "id": "ler_390_2017_007",
+      "display_name": "LER 390-2017-007-001",
+      "properties": {
+        "match_key": "LER:390-2017-007-001"
+      },
+      "type": "LER",
+      "key": "390-2017-007-001",
+      "stub": true,
+      "title": null,
+      "plant": "Watts Bar Nuclear Plant",
+      "match_key": "LER:390-2017-007-001"
+    },
+    {
+      "id": "ler_390_2017_014",
+      "display_name": "LER 390-2017-014-00",
+      "properties": {
+        "match_key": "LER:390-2017-014-00"
+      },
+      "type": "LER",
+      "key": "390-2017-014-00",
+      "stub": true,
+      "title": null,
+      "plant": "Watts Bar Nuclear Plant",
+      "match_key": "LER:390-2017-014-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_vi",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_door",
+      "evidence": null
+    },
+    {
+      "source": "c_door",
+      "relation": "PART_OF",
+      "target": "sys_vi",
+      "evidence": null
+    },
+    {
+      "source": "fm_selfcheck",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_selfcheck",
+      "relation": "LEADS_TO",
+      "target": "fm_dooropen",
+      "evidence": null
+    },
+    {
+      "source": "fm_dooropen",
+      "relation": "LEADS_TO",
+      "target": "cons_crevs",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_close",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_coach",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_standdown",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_twoperson",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_brief",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_video",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_dynamic",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_391_2020_001",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_390_2019_001",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_390_2019_004",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_390_2018_003",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_390_2018_004",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_390_2017_007",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_390_2017_014",
+      "evidence": null
+    }
+  ],
+  "chain": "failure to self-check door latching [cause A] -> CRE boundary door C036 left ajar -> low MCR positive pressure alarm -> CREVS (both trains) declared inoperable / LCO 3.7.10 Condition B entered -> door closed, boundary restored (~4 min)",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Plant/unit/reactor_type not given in FORM-366 fields but stated in narrative header (Watts Bar Unit 1, PWR). Event affected both Unit 1 and Unit 2 CREVS trains via shared control room boundary, but this LER's docket is 05000390 (Unit 1); Unit 2 companion LER 391/2020-001-00 modeled as SIMILAR_TO stub per explicit narrative reference rather than as the reporting unit. No component/system failed mechanically; failure mode is procedural/human-performance (door not latched). No manufacturer or Block 13 rows given (empty in form fields, and 'D' section of narrative left blank). GDC 19 dose-limit basis captured as RegulatoryReference (analysis-basis) since it is cited as the licensing basis for CRE integrity, not modeled as a System/backup."
+}

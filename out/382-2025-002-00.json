@@ -1,0 +1,511 @@
+{
+  "ler_number": "382-2025-002-00",
+  "identity": {
+    "accession_number": "ML25149A137",
+    "docket": "05000382",
+    "plant_name": "Waterford",
+    "unit": 3,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2025-04-17",
+    "report_date": "2025-05-29",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Auxiliary Pressurizer Spray Train Inoperable Resulting in a Condition Prohibited by Technical Specifications Waterford Steam Electric Station, Unit 3 NRC Docket No. 50-382 Renewed Facility Operating License No. NPF-38"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "the direct cause of the trip of Charging Pump 'A' was due to degraded packing in the lube oil pump which resulted in oil recirculating back to the oil sump",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "degraded lube oil pump packing / inadequate troubleshooting",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 382-2025-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "382-2025-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:382-2025-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Waterford Unit 3",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000382",
+      "match_key": "Unit:05000382"
+    },
+    {
+      "id": "cause",
+      "display_name": "TBD Cause",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "degraded lube oil pump packing / inadequate troubleshooting",
+      "proximate_text": "the direct cause of the trip of Charging Pump 'A' was due to degraded packing in the lube oil pump which resulted in oil recirculating back to the oil sump",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_cb",
+      "display_name": "Chemical and Volume Control System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "CB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:CB"
+    },
+    {
+      "id": "sys_ab",
+      "display_name": "Reactor Coolant System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "AB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:AB"
+    },
+    {
+      "id": "c_pumpA",
+      "display_name": "Charging Pump 'A'",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "P",
+      "identifier": "A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:P|A"
+    },
+    {
+      "id": "c_pumpB",
+      "display_name": "Charging Pump 'B'",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "P",
+      "identifier": "B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:P|B"
+    },
+    {
+      "id": "c_pumpAB",
+      "display_name": "Charging Pump 'AB'",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "P",
+      "identifier": "AB",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:P|AB"
+    },
+    {
+      "id": "c_oilpump",
+      "display_name": "Charging Pump 'A' lube oil pump",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:charging-pump-a-lube-oil-pump"
+    },
+    {
+      "id": "c_packing",
+      "display_name": "Lube oil pump packing gland",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:lube-oil-pump-packing-gland"
+    },
+    {
+      "id": "fm_packing_degraded",
+      "display_name": "Lube oil pump packing gland damaged",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Packing gland damaged, allowing oil to leak past the packing and recirculate back to the reservoir",
+      "match_key": "FailureMode:lube-oil-pump-packing-gland-damaged"
+    },
+    {
+      "id": "fm_oil_recirc",
+      "display_name": "Lube oil recirculating to sump / low lube oil pressure",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Degraded packing caused oil to recirculate back to the oil sump, resulting in chronic low lube oil pressure on starts",
+      "match_key": "FailureMode:lube-oil-recirculating-to-sump-low-lube-oil-pressure"
+    },
+    {
+      "id": "fm_pump_trip",
+      "display_name": "Charging Pump 'A' trips on low lube oil pressure",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Charging Pump 'A' tripped approximately 30 seconds after start on low lube oil pressure (repeated occurrences Dec 2024-Mar 2025, culminating March 31, 2025)",
+      "match_key": "FailureMode:charging-pump-a-trips-on-low-lube-oil-pressure"
+    },
+    {
+      "id": "fm_troubleshoot_fail",
+      "display_name": "Troubleshooting failed to identify true cause",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Repeated troubleshooting addressed symptoms (lube oil pressure adjustment, filter and relief valve replacement) without identifying the degraded packing gland as the true cause",
+      "match_key": "FailureMode:troubleshooting-failed-to-identify-true-cause"
+    },
+    {
+      "id": "fm_missed_fma",
+      "display_name": "Missed opportunity to perform Failure Mode Analysis",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Organization missed the opportunity to perform a Failure Mode Analysis (FMA) after multiple repeat equipment failures",
+      "match_key": "FailureMode:missed-opportunity-to-perform-failure-mode-analysis"
+    },
+    {
+      "id": "cons_inoperable",
+      "display_name": "Charging Pump 'A' inoperable beyond TS allowed completion time / condition prohibited by TS",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2025-02-23",
+      "end": "2025-04-08",
+      "duration": "36 days (exceeded 30-day TS completion time by 6 days)",
+      "tz": null,
+      "match_key": "Consequence:charging-pump-a-inoperable-beyond-ts-allowed-completion-time-condition-prohibited-by-ts"
+    },
+    {
+      "id": "ca_oilpump_replace",
+      "display_name": "Charging Pump 'A' oil pump replaced",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:charging-pump-a-oil-pump-replaced"
+    },
+    {
+      "id": "ca_24hr_run",
+      "display_name": "24-hour run of Charging Pump 'A' after oil pump replacement",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:24-hour-run-of-charging-pump-a-after-oil-pump-replacement"
+    },
+    {
+      "id": "ca_revise_mm006021",
+      "display_name": "Revise MM-006-021 and MM-006-215 maintenance procedures to capture OE from troubleshooting",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-mm-006-021-and-mm-006-215-maintenance-procedures-to-capture-oe-from-troubleshooting"
+    },
+    {
+      "id": "ca_revise_oi037000",
+      "display_name": "Revise OI-037-000 to prompt Shift Managers to evaluate need for FMA",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-oi-037-000-to-prompt-shift-managers-to-evaluate-need-for-fma"
+    },
+    {
+      "id": "ca_emergent_issues",
+      "display_name": "Effectively manage emergent issues per EN-FAP-WM-107",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:effectively-manage-emergent-issues-per-en-fap-wm-107"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts3432",
+      "display_name": "Technical Specification 3.4.3.2 Auxiliary Pressurizer Spray",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-3-4-3-2-auxiliary-pressurizer-spray"
+    },
+    {
+      "id": "rr_trm3124",
+      "display_name": "Technical Requirements Manual 3.1.2.4 Charging Pumps - Operating",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-requirements-manual-3-1-2-4-charging-pumps-operating"
+    },
+    {
+      "id": "ler_prev1",
+      "display_name": "Previous occurrence: Charging Pump 'A' low lube oil pressure found during operator rounds (Sept 15, 2024)",
+      "properties": {},
+      "type": "LER",
+      "key": "3-2024-XXX",
+      "stub": true,
+      "title": "Charging Pump 'A' lube oil pressure below acceptable range during operator rounds",
+      "plant": "Waterford Steam Electric Station Unit 3",
+      "match_key": "LER:3-2024-XXX"
+    },
+    {
+      "id": "ler_prev2",
+      "display_name": "Previous occurrence: Charging Pump 'A' oil pressure gauge pegged high (Oct 28, 2024)",
+      "properties": {},
+      "type": "LER",
+      "key": "3-2024-XXX-2",
+      "stub": true,
+      "title": "Charging Pump 'A' local oil pressure gauge pegged high during PME lubrication start",
+      "plant": "Waterford Steam Electric Station Unit 3",
+      "match_key": "LER:3-2024-XXX-2"
+    },
+    {
+      "id": "ler_prev3",
+      "display_name": "Previous occurrence: Charging Pump 'A' tripped on low lube oil pressure (Dec 16, 2024)",
+      "properties": {},
+      "type": "LER",
+      "key": "3-2024-XXX-3",
+      "stub": true,
+      "title": "Charging Pump 'A' tripped on low lube oil pressure upon starting",
+      "plant": "Waterford Steam Electric Station Unit 3",
+      "match_key": "LER:3-2024-XXX-3"
+    },
+    {
+      "id": "ler_prev4",
+      "display_name": "Previous occurrence: Charging Pump 'A' tripped on low lube oil pressure (Jan 31, 2025)",
+      "properties": {},
+      "type": "LER",
+      "key": "3-2025-XXX",
+      "stub": true,
+      "title": "Charging Pump 'A' tripped on low lube oil pressure upon starting",
+      "plant": "Waterford Steam Electric Station Unit 3",
+      "match_key": "LER:3-2025-XXX"
+    },
+    {
+      "id": "ler_prev5",
+      "display_name": "Previous occurrence: Charging Pump 'A' tripped ~30 seconds after start (Feb 4, 2025)",
+      "properties": {},
+      "type": "LER",
+      "key": "3-2025-XXX-2",
+      "stub": true,
+      "title": "Charging Pump 'A' tripped approximately 30 seconds after start following OP-904-007",
+      "plant": "Waterford Steam Electric Station Unit 3",
+      "match_key": "LER:3-2025-XXX-2"
+    },
+    {
+      "id": "ler_prev6",
+      "display_name": "Previous occurrence: Charging Pump 'A' tripped on low lube oil pressure (Mar 3, 2025)",
+      "properties": {},
+      "type": "LER",
+      "key": "3-2025-XXX-3",
+      "stub": true,
+      "title": "Charging Pump 'A' tripped on low lube oil pressure upon starting",
+      "plant": "Waterford Steam Electric Station Unit 3",
+      "match_key": "LER:3-2025-XXX-3"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts3432",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_trm3124",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_cb",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_pumpA",
+      "evidence": null
+    },
+    {
+      "source": "sys_ab",
+      "relation": "PART_OF",
+      "target": "sys_cb",
+      "evidence": null
+    },
+    {
+      "source": "fm_packing_degraded",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_packing_degraded",
+      "relation": "LEADS_TO",
+      "target": "fm_oil_recirc",
+      "evidence": null
+    },
+    {
+      "source": "fm_oil_recirc",
+      "relation": "LEADS_TO",
+      "target": "fm_pump_trip",
+      "evidence": null
+    },
+    {
+      "source": "fm_pump_trip",
+      "relation": "LEADS_TO",
+      "target": "fm_troubleshoot_fail",
+      "evidence": null
+    },
+    {
+      "source": "fm_troubleshoot_fail",
+      "relation": "LEADS_TO",
+      "target": "fm_missed_fma",
+      "evidence": null
+    },
+    {
+      "source": "fm_missed_fma",
+      "relation": "LEADS_TO",
+      "target": "cons_inoperable",
+      "evidence": null
+    },
+    {
+      "source": "cons_inoperable",
+      "relation": "BACKED_UP_BY",
+      "target": "c_pumpB",
+      "evidence": null
+    },
+    {
+      "source": "cons_inoperable",
+      "relation": "BACKED_UP_BY",
+      "target": "c_pumpAB",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_oilpump_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_24hr_run",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_revise_mm006021",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_revise_oi037000",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_emergent_issues",
+      "evidence": null
+    },
+    {
+      "source": "c_packing",
+      "relation": "PART_OF",
+      "target": "c_oilpump",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev1",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev2",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev3",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev4",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev5",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev6",
+      "evidence": null
+    }
+  ],
+  "chain": "degraded lube oil pump packing gland [cause TBD] -> oil recirculates to sump / chronic low lube oil pressure -> Charging Pump 'A' trips on low lube oil pressure (repeated) -> troubleshooting fails to identify true cause -> missed opportunity for FMA -> Charging Pump 'A' inoperable 36 days, exceeding TS 30-day completion time by 6 days [backups Charging Pump 'B'/'AB' available]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code was not provided in FORM-366 FIELDS (TBD/provisional); narrative attributes direct cause to degraded lube oil pump packing plus organizational causal factors (inadequate troubleshooting, missed FMA opportunity). LER number inferred as 382-2025-002-00 from docket and report context; sequence number not explicitly stated in provided fields. Six prior occurrences (Sept 2024-Mar 2025) are described narratively but not given LER numbers, so they are modeled as stub LER nodes with placeholder keys reflecting unit 3 and approximate year -- these keys should be treated as uncertain pending confirmation of actual LER numbers if any were filed for those events. TS 3.4.3.2 and TRM 3.1.2.4 modeled as RegulatoryReference (license-basis) rather than System/Component nodes since they are the license-basis actions entered, not systems themselves."
+}

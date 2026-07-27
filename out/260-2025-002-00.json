@@ -1,0 +1,395 @@
+{
+  "ler_number": "260-2025-002-00",
+  "identity": {
+    "accession_number": "ML25195A123",
+    "docket": "05000260",
+    "plant_name": "Browns Ferry",
+    "unit": 2,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2025-05-16",
+    "report_date": "2025-07-14",
+    "operating_mode": "5",
+    "power_level": 0,
+    "discovery_context": "inspection",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Residual Heat Removal Suppression Pool Spray Inoperable Due to Missing U-Bolt"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)(D)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The most likely cause of the event was a human performance error that was committed on March 24, 2019, while performing maintenance on the Loop I SPS valve 2-FCV-074-0058 or its motor operator [MO] 2-MVOP-074-0058... the configuration control forms were not filled out documenting the removal and reinstallation of the u-bolt.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "configuration control / maintenance documentation failure",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 260-2025-003-00",
+      "properties": {},
+      "type": "LER",
+      "key": "260-2025-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:260-2025-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Browns Ferry Unit 2",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000260",
+      "match_key": "Unit:05000260"
+    },
+    {
+      "id": "cause",
+      "display_name": "Human Performance Error (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "configuration control / maintenance documentation failure",
+      "proximate_text": "The most likely cause of the event was a human performance error that was committed on March 24, 2019, while performing maintenance on the Loop I SPS valve 2-FCV-074-0058 or its motor operator [MO] 2-MVOP-074-0058... the configuration control forms were not filled out documenting the removal and reinstallation of the u-bolt.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_bo",
+      "display_name": "Residual Heat Removal",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BO",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BO"
+    },
+    {
+      "id": "sys_bt",
+      "display_name": "Suppression Pool Spray",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BT",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "RHR Loop I subsystem, inoperable",
+      "match_key": "System:BT"
+    },
+    {
+      "id": "sys_dg",
+      "display_name": "Diesel Generator",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "DG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "supports RHR SPS loops per TS 3.8.1",
+      "match_key": "System:DG"
+    },
+    {
+      "id": "c_support",
+      "display_name": "Pipe support 2-H-343",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "SNB",
+      "identifier": "2-H-343-IE",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:SNB|2-H-343-IE"
+    },
+    {
+      "id": "c_valve",
+      "display_name": "Loop I SPS valve 2-FCV-074-0058",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "FCV",
+      "identifier": "2-FCV-074-0058",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:FCV|2-FCV-074-0058"
+    },
+    {
+      "id": "c_mo",
+      "display_name": "Motor operator 2-MVOP-074-0058",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "MO",
+      "identifier": "2-MVOP-074-0058",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:MO|2-MVOP-074-0058"
+    },
+    {
+      "id": "c_isv",
+      "display_name": "Loop I SPS isolation valve 2-FCV-074-0057",
+      "properties": {
+        "note": "not impacted by this event, discussed in PRA flow-diversion analysis"
+      },
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": "2-FCV-074-0057",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:ISV|2-FCV-074-0057"
+    },
+    {
+      "id": "c_ubolt",
+      "display_name": "U-bolt",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:u-bolt"
+    },
+    {
+      "id": "fm_wo_error",
+      "display_name": "Configuration control forms not completed for u-bolt removal/reinstallation",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "WOs 118592493 and 119860080 did not document removal and reinstallation of the u-bolt during maintenance on the valve/motor operator.",
+      "match_key": "FailureMode:configuration-control-forms-not-completed-for-u-bolt-removal-reinstallation"
+    },
+    {
+      "id": "fm_missing_ubolt",
+      "display_name": "U-bolt missing from support 2-H-343",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Support 2-H-343 found missing a u-bolt, resulting in a lack of load on the support.",
+      "match_key": "FailureMode:u-bolt-missing-from-support-2-h-343"
+    },
+    {
+      "id": "fm_valve_inop",
+      "display_name": "SPS valve unable to open or close reliably",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Missing u-bolt could have prevented the RHR Loop I SPS valve from opening or closing.",
+      "match_key": "FailureMode:sps-valve-unable-to-open-or-close-reliably"
+    },
+    {
+      "id": "cons_sps_inop",
+      "display_name": "Unit 2 RHR Loop I Suppression Pool Spray inoperable",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2022-03-01",
+      "end": "2025-03-24T16:55",
+      "duration": "approximately three years (POE determined); returned to service 4 days after discovery on 2025-03-20",
+      "tz": "CDT",
+      "match_key": "Consequence:unit-2-rhr-loop-i-suppression-pool-spray-inoperable"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace missing u-bolt on support 2-H-343",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-missing-u-bolt-on-support-2-h-343"
+    },
+    {
+      "id": "ca_noi",
+      "display_name": "Conduct Notice of Indication evaluation of the support",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:conduct-notice-of-indication-evaluation-of-the-support"
+    },
+    {
+      "id": "ca_brief",
+      "display_name": "Brief maintenance personnel on proper use of configuration control forms",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:brief-maintenance-personnel-on-proper-use-of-configuration-control-forms"
+    },
+    {
+      "id": "rr_5073v",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "rr_5073i",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts3624",
+      "display_name": "TS LCO 3.6.2.4 RHR Suppression Pool Spray",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-lco-3-6-2-4-rhr-suppression-pool-spray"
+    },
+    {
+      "id": "rr_ts381",
+      "display_name": "TS LCO 3.8.1",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-lco-3-8-1"
+    },
+    {
+      "id": "rr_ts304",
+      "display_name": "TS LCO 3.0.4",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-lco-3-0-4"
+    },
+    {
+      "id": "rr_pracalc",
+      "display_name": "TVA Calculation NDN-000-074-2007-0025 R6",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:tva-calculation-ndn-000-074-2007-0025-r6"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073v",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073i",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bo",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bt",
+      "evidence": null
+    },
+    {
+      "source": "c_valve",
+      "relation": "PART_OF",
+      "target": "sys_bt",
+      "evidence": null
+    },
+    {
+      "source": "c_support",
+      "relation": "PART_OF",
+      "target": "sys_bt",
+      "evidence": null
+    },
+    {
+      "source": "fm_wo_error",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_wo_error",
+      "relation": "LEADS_TO",
+      "target": "fm_missing_ubolt",
+      "evidence": null
+    },
+    {
+      "source": "fm_missing_ubolt",
+      "relation": "LEADS_TO",
+      "target": "fm_valve_inop",
+      "evidence": null
+    },
+    {
+      "source": "fm_valve_inop",
+      "relation": "LEADS_TO",
+      "target": "cons_sps_inop",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_noi",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_brief",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts3624",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts381",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts304",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_pracalc",
+      "evidence": null
+    }
+  ],
+  "chain": "human performance error (2019 maintenance, configuration control forms not completed) [cause TBD] -> u-bolt missing from support 2-H-343 -> SPS valve unable to reliably open/close -> Unit 2 RHR Loop I Suppression Pool Spray inoperable (~3 years, discovered 2025-03-20, restored 2025-03-24) [no operable backup for Loop I stated; Loop II SPS at times concurrently inoperable; RHR heat removal function itself remained available]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code and category were TBD/provisional per FORM-366 fields; narrative discusses human performance/configuration control causal theme but no NRC cause code letter was assigned in the source fields, so cause node marked provisional per rule 4. Two reporting criteria cited (50.73(a)(2)(v)(D) and (a)(2)(i)(B)) both captured in reporting_basis and as REPORTED_UNDER edges. Isolation valve 2-FCV-074-0057 modeled as Component since it is discussed as part of the flow-diversion safety analysis directly relevant to this event's consequence assessment, not merely generic design context. No previous similar occurrence LER identified (narrative states none found in past three years) so no stub LER/SIMILAR_TO edge emitted. RHR Loop II SPS and DGs mentioned only in context of TS applicability windows, not as stated-operable backups during this specific inoperability window covering the full 3-year period, so no BACKED_UP_BY edges asserted for them; RHR system's heat removal function noted as available but this is a different function than SPS, so not modeled as a backup to the SPS consequence."
+}

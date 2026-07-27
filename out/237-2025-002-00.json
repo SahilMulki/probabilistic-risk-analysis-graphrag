@@ -1,0 +1,294 @@
+{
+  "ler_number": "237-2025-002-00",
+  "identity": {
+    "accession_number": "ML25360A001",
+    "docket": "05000237",
+    "plant_name": "Dresden",
+    "unit": 2,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2025-10-27",
+    "report_date": "2025-12-26",
+    "operating_mode": "3",
+    "power_level": 0,
+    "discovery_context": "normal operation",
+    "status": "supplement-expected",
+    "revision": "00",
+    "ens_number": "58008",
+    "ens_date": "2025-10-27",
+    "ens_time": "0750 CDT",
+    "title": "Valid Reactor Protection System Actuation While Shutdown"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The cause of the event was a valid high level in the SDV. An evaluation of the event is currently in progress.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "valid SDV high-level scram signal",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 237-2025-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "237-2025-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:237-2025-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Dresden Unit 2",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric",
+        "thermal_power_mwt": "2957"
+      },
+      "type": "Unit",
+      "key": "05000237",
+      "match_key": "Unit:05000237"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "valid SDV high-level scram signal",
+      "proximate_text": "The cause of the event was a valid high level in the SDV. An evaluation of the event is currently in progress.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_jc",
+      "display_name": "Reactor Protection System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JC"
+    },
+    {
+      "id": "sys_aa",
+      "display_name": "Control Rod Drive",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "AA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:AA"
+    },
+    {
+      "id": "c_sdv",
+      "display_name": "Scram Discharge Volume",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "SDV",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:scram-discharge-volume"
+    },
+    {
+      "id": "c_bypass_switch",
+      "display_name": "SDV high level bypass switch",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:sdv-high-level-bypass-switch"
+    },
+    {
+      "id": "c_pilot_valve",
+      "display_name": "SDV pilot valves",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "V",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:V"
+    },
+    {
+      "id": "c_drain_valve",
+      "display_name": "SDV drain valves",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "ORN",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:ORN"
+    },
+    {
+      "id": "c_vent_valve",
+      "display_name": "SDV vent valves",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "VTV",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:VTV"
+    },
+    {
+      "id": "fm_sdv_highlevel",
+      "display_name": "Valid high level in Scram Discharge Volume during bypass switch restoration",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "SDV high level signal received while restoring the SDV high level bypass switch to normal",
+      "match_key": "FailureMode:valid-high-level-in-scram-discharge-volume-during-bypass-switch-restoration"
+    },
+    {
+      "id": "fm_rps_actuation",
+      "display_name": "RPS automatically initiates scram signal",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "RPS logic actuated a scram as designed upon receipt of the valid SDV high-level signal",
+      "match_key": "FailureMode:rps-automatically-initiates-scram-signal"
+    },
+    {
+      "id": "cons_scram",
+      "display_name": "Valid RPS scram actuation while shut down",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2025-10-27T01:17:00-05:00",
+      "end": "2025-10-27T01:21:00-05:00",
+      "duration": "4 minutes",
+      "tz": "CDT",
+      "match_key": "Consequence:valid-rps-scram-actuation-while-shut-down"
+    },
+    {
+      "id": "ca_reset",
+      "display_name": "Reset scram per station procedures",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:reset-scram-per-station-procedures"
+    },
+    {
+      "id": "ca_eval",
+      "display_name": "Complete evaluation and determine additional corrective actions",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:complete-evaluation-and-determine-additional-corrective-actions"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "Stub: previous occurrence review (none found)",
+      "properties": {},
+      "type": "LER",
+      "key": "unknown",
+      "stub": true,
+      "title": "5-year CAP/LER database review; no previous valid RPS actuation occurrences found",
+      "plant": "Dresden Nuclear Power Station",
+      "match_key": "LER:unknown"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_aa",
+      "evidence": null
+    },
+    {
+      "source": "c_sdv",
+      "relation": "PART_OF",
+      "target": "sys_aa",
+      "evidence": null
+    },
+    {
+      "source": "fm_sdv_highlevel",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_sdv_highlevel",
+      "relation": "LEADS_TO",
+      "target": "fm_rps_actuation",
+      "evidence": null
+    },
+    {
+      "source": "fm_rps_actuation",
+      "relation": "LEADS_TO",
+      "target": "cons_scram",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_reset",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_eval",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    }
+  ],
+  "chain": "valid high SDV level during bypass switch restoration [cause TBD/provisional] -> RPS logic automatically initiates scram signal -> reactor scram (all rods already inserted) -> scram reset at 0121 CDT",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4"
+  ],
+  "notes": "Cause code is TBD/provisional per FORM-366 fields; evaluation in progress with supplemental report expected. No component failures identified (Section G: Not applicable) - all systems/components responded as designed to a valid high-level condition. SDV modeled as part of CRD system per narrative context describing CRD scram water containment function; bypass switch, pilot/drain/vent valves included as components involved in the SDV/scram function. Previous-occurrence review found no similar events, so stub LER represents a negative-result search rather than a specific referenced LER; key set to 'unknown' since no LER number was given for a similar event."
+}

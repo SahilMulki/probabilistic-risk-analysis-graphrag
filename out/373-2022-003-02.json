@@ -1,0 +1,354 @@
+{
+  "ler_number": "373-2022-003-02",
+  "identity": {
+    "accession_number": "ML22362A013",
+    "docket": "05000373",
+    "plant_name": "La Salle",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2022-05-20",
+    "report_date": "2022-12-28",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "inspection",
+    "status": "final",
+    "revision": "02",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LaSalle County Station, Units 1 and 2 Renewed Facility Operating License No. NPF-11 and NPF-18 NRC Docket Nos. 50-373 and 50-374"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)(D)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": ".",
+      "system": "D",
+      "component": "VI",
+      "manufacturer": "BKR",
+      "reportable": null
+    }
+  ],
+  "cause": {
+    "proximate_text": "The cause of the event is an inadequate breaker setting resulting in the A VE Return Fan breaker tripping prematurely on fan start.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "inadequate breaker trip setting causing premature fan-breaker trip",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 373-2022-003-02",
+      "properties": {},
+      "type": "LER",
+      "key": "373-2022-003-02",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:373-2022-003-02"
+    },
+    {
+      "id": "unit",
+      "display_name": "La Salle Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000373",
+      "match_key": "Unit:05000373"
+    },
+    {
+      "id": "cause",
+      "display_name": "Inadequate breaker setting (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "inadequate breaker trip setting causing premature fan-breaker trip",
+      "proximate_text": "The cause of the event is an inadequate breaker setting resulting in the A VE Return Fan breaker tripping prematurely on fan start.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_vc",
+      "display_name": "Main Control Room Area Ventilation System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "VC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected system",
+      "match_key": "System:VC"
+    },
+    {
+      "id": "sys_ve",
+      "display_name": "Auxiliary Equipment Room Ventilation System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "VE",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected system",
+      "match_key": "System:VE"
+    },
+    {
+      "id": "c_breaker",
+      "display_name": "Breaker, A AEER HVAC Return Fan",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "1AP80E-B5",
+      "model": "HFW3125JLY",
+      "manufacturer_code": "BKR",
+      "inferred_code": false,
+      "match_key": "Component:breaker-a-aeer-hvac-return-fan"
+    },
+    {
+      "id": "c_fan",
+      "display_name": "A VE Return Fan",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:a-ve-return-fan"
+    },
+    {
+      "id": "fm_breakersetting",
+      "display_name": "Inadequate breaker trip setting",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The A VE Return Fan breaker was set to trip prematurely on fan start.",
+      "match_key": "FailureMode:inadequate-breaker-trip-setting"
+    },
+    {
+      "id": "fm_breakertrip",
+      "display_name": "A VE Return Fan breaker trips on fan start",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Breaker tripped after swap to A VCNE train, and tripped again on second start attempt.",
+      "match_key": "FailureMode:a-ve-return-fan-breaker-trips-on-fan-start"
+    },
+    {
+      "id": "fm_fantrip2",
+      "display_name": "A VE Return Fan trips again on 5/23/22",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "After swapping to A VCNE on 5/23/22, the A VE return fan tripped again at 1256, requiring breaker reset.",
+      "match_key": "FailureMode:a-ve-return-fan-trips-again-on-5-23-22"
+    },
+    {
+      "id": "cons_bothinop_0520",
+      "display_name": "Both VCNE trains inoperable (5/20/22) - CRAF and MCR ventilation",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2022-05-20T09:05",
+      "end": "2022-05-20T12:00",
+      "duration": "approximately 3 hours",
+      "tz": "CDT",
+      "match_key": "Consequence:both-vcne-trains-inoperable-5-20-22-craf-and-mcr-ventilation"
+    },
+    {
+      "id": "cons_bothinop_0523",
+      "display_name": "Both VCNE trains inoperable (5/23/22) - MCR ventilation (HVAC) only",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2022-05-23T12:56",
+      "end": "2022-05-23T17:55",
+      "duration": "approximately 5 hours",
+      "tz": "CDT",
+      "match_key": "Consequence:both-vcne-trains-inoperable-5-23-22-mcr-ventilation-hvac-only"
+    },
+    {
+      "id": "ca_troubleshoot",
+      "display_name": "Basic troubleshooting performed",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:basic-troubleshooting-performed"
+    },
+    {
+      "id": "ca_opseval",
+      "display_name": "Operability evaluation performed prior to declaring VCNE operable",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:operability-evaluation-performed-prior-to-declaring-vcne-operable"
+    },
+    {
+      "id": "ca_inspecttest",
+      "display_name": "Inspect and test A and B VCNE trains; perform repairs and breaker adjustments based on results",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:inspect-and-test-a-and-b-vcne-trains-perform-repairs-and-breaker-adjustments-based-on-results"
+    },
+    {
+      "id": "ca_mwomod",
+      "display_name": "Modify model work order for breaker receipt inspection to include trip testing",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:modify-model-work-order-for-breaker-receipt-inspection-to-include-trip-testing"
+    },
+    {
+      "id": "mfr_eaton",
+      "display_name": "Eaton",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": null,
+      "match_key": "Manufacturer:eaton"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "ler_prev_2014",
+      "display_name": "LER 373-2014-004-00",
+      "properties": {},
+      "type": "LER",
+      "key": "373-2014-004-00",
+      "stub": true,
+      "title": "Both trains of VCNE inoperable - A VE compressor shutdown due to shorted wire on liquid line solenoid valve",
+      "plant": "LaSalle County Station Unit 1/2",
+      "match_key": "LER:373-2014-004-00"
+    },
+    {
+      "id": "ler_prev_2013",
+      "display_name": "LER 373-2013-008-00",
+      "properties": {},
+      "type": "LER",
+      "key": "373-2013-008-00",
+      "stub": true,
+      "title": "Both trains of VCNE inoperable - B AEER Cooler Condenser Fan motor winding failure",
+      "plant": "LaSalle County Station Unit 1/2",
+      "match_key": "LER:373-2013-008-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_vc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ve",
+      "evidence": null
+    },
+    {
+      "source": "c_fan",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_eaton",
+      "evidence": null
+    },
+    {
+      "source": "fm_breakersetting",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_breakersetting",
+      "relation": "LEADS_TO",
+      "target": "fm_breakertrip",
+      "evidence": null
+    },
+    {
+      "source": "fm_breakertrip",
+      "relation": "LEADS_TO",
+      "target": "cons_bothinop_0520",
+      "evidence": null
+    },
+    {
+      "source": "fm_breakersetting",
+      "relation": "LEADS_TO",
+      "target": "fm_fantrip2",
+      "evidence": null
+    },
+    {
+      "source": "fm_fantrip2",
+      "relation": "LEADS_TO",
+      "target": "cons_bothinop_0523",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_troubleshoot",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_opseval",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_inspecttest",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_mwomod",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev_2014",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev_2013",
+      "evidence": null
+    }
+  ],
+  "chain": "inadequate breaker trip setting [cause TBD] -> A VE Return Fan breaker trips on fan start (5/20/22) -> both VCNE trains inoperable (~3h, CRAF+MCR ventilation) ; inadequate breaker trip setting -> A VE Return Fan trips again (5/23/22) -> both VCNE trains inoperable (~5h, MCR ventilation only)",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code reported as TBD in FORM-366 with category 'provisional'; narrative attributes cause to an inadequate breaker setting but no official cause code letter was assigned, so cause node marked provisional per rule 4. Two related but temporally distinct inoperability events (5/20 and 5/23) both stem from the same root failure mode (inadequate breaker setting) manifesting as separate breaker/fan trip events - modeled as two FailureMode nodes and two Consequence nodes to preserve distinctness per rule 5. No explicit backup system stated as operable during the event (both VCNE trains were inoperable simultaneously), so no BACKED_UP_BY edges emitted. Block 13 system/component codes (D/VI/BKR) copied verbatim from FORM-366 though narrative more specifically identifies VC/VE systems and a breaker component."
+}

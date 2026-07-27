@@ -1,0 +1,450 @@
+{
+  "ler_number": "269-2025-001-00",
+  "identity": {
+    "accession_number": "ML25111A260",
+    "docket": "05000269",
+    "plant_name": "Oconee",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2025-02-20",
+    "report_date": "2025-04-21",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Revision 00 – Inoperability of Keowee Hydroelectric Unit Due to Legacy Deficiencies in Generator Exciter Speed Switch Calibration Procedure Resulting in a Condition Prohibited by Technical Specifications"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "D",
+      "system": "EK",
+      "component": "SIS",
+      "manufacturer": "D283",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The procedure contained a legacy issue in which a series of procedure revisions performed in 2010-2012 replaced procedure steps with informational notes. This resulted in incomplete setup of the speed switches, which caused the observed delays in actuation. In addition, the scope of post-maintenance testing guidance specified in the procedure was inadequate to identify a speed switch with an incomplete setup.",
+    "cause_code": "D",
+    "category": "Defective Procedure",
+    "theme": "legacy procedure defect converting directive steps to informational notes, compounded by inadequate post-maintenance test scope",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 269-2025-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "269-2025-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:269-2025-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Oconee Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000269",
+      "match_key": "Unit:05000269"
+    },
+    {
+      "id": "cause",
+      "display_name": "Defective Procedure (D)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "D",
+      "category": "Defective Procedure",
+      "theme": "legacy procedure defect converting directive steps to informational notes, compounded by inadequate post-maintenance test scope",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Defective Procedure"
+    },
+    {
+      "id": "sys_ek",
+      "display_name": "Keowee Hydroelectric Station",
+      "properties": {
+        "note": "Emergency power source analogous to diesel generators; two hydro units (KHU-1, KHU-2)"
+      },
+      "type": "System",
+      "eiis_code": "EK",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:EK"
+    },
+    {
+      "id": "sys_lct",
+      "display_name": "Lee Combustion Turbine",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "EK",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; operable/available",
+      "match_key": "System:EK"
+    },
+    {
+      "id": "c_khu1",
+      "display_name": "Keowee Hydro Unit 1 (KHU-1)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "KHU-1",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:keowee-hydro-unit-1-khu-1"
+    },
+    {
+      "id": "c_khu2",
+      "display_name": "Keowee Hydro Unit 2 (KHU-2)",
+      "properties": {
+        "role": "backup; remained operable"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "KHU-2",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:keowee-hydro-unit-2-khu-2"
+    },
+    {
+      "id": "c_speedswitch",
+      "display_name": "Generator exciter speed switch",
+      "properties": {
+        "manufacturer_name": "Dynalco"
+      },
+      "type": "Component",
+      "eiis_code": "SIS",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": "D283",
+      "inferred_code": false,
+      "match_key": "Component:SIS"
+    },
+    {
+      "id": "c_excitercircuit",
+      "display_name": "Generator exciter control circuit",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:generator-exciter-control-circuit"
+    },
+    {
+      "id": "fm_procdefect",
+      "display_name": "Speed switch calibration procedure steps replaced with informational notes",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "2010-2012 procedure revisions converted directive setup steps into informational notes",
+      "match_key": "FailureMode:speed-switch-calibration-procedure-steps-replaced-with-informational-notes"
+    },
+    {
+      "id": "fm_incompletesetup",
+      "display_name": "Incomplete speed switch setup during replacement",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Maintenance replacement of speed switches resulted in incomplete setup due to defective procedure",
+      "match_key": "FailureMode:incomplete-speed-switch-setup-during-replacement"
+    },
+    {
+      "id": "fm_testinadequate",
+      "display_name": "Inadequate post-maintenance testing scope",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Post-maintenance testing guidance in the procedure was inadequate to detect the incomplete speed switch setup",
+      "match_key": "FailureMode:inadequate-post-maintenance-testing-scope"
+    },
+    {
+      "id": "fm_excitationdelay",
+      "display_name": "KHU-1 generator excitation delay",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "KHU-1 generator field excitation delayed 50 seconds to ~2 minutes during startups, exceeding 23-second emergency requirement",
+      "match_key": "FailureMode:khu-1-generator-excitation-delay"
+    },
+    {
+      "id": "cons_khu1inop",
+      "display_name": "KHU-1 inoperable / TS 3.8.1 condition prohibited",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2025-02-18T08:14",
+      "end": "2025-02-21T14:29",
+      "duration": "~78:15 (retroactive TS 3.8.1 Condition D exceedance)",
+      "tz": "EST",
+      "match_key": "Consequence:khu-1-inoperable-ts-3-8-1-condition-prohibited"
+    },
+    {
+      "id": "ca_reinstall",
+      "display_name": "Reinstalled original speed switches and verified response time",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:reinstalled-original-speed-switches-and-verified-response-time"
+    },
+    {
+      "id": "ca_reviseproc",
+      "display_name": "Revise Dynalco speed switch procedures to ensure required actions are in steps, not notes",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-dynalco-speed-switch-procedures-to-ensure-required-actions-are-in-steps-not-notes"
+    },
+    {
+      "id": "ca_extentcondition",
+      "display_name": "Extent of condition review of other instrument calibration procedures for directive notes",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:extent-of-condition-review-of-other-instrument-calibration-procedures-for-directive-notes"
+    },
+    {
+      "id": "ca_reviewtesting_speed",
+      "display_name": "Review post-maintenance testing strategy for Dynalco speed switches",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:review-post-maintenance-testing-strategy-for-dynalco-speed-switches"
+    },
+    {
+      "id": "ca_reviewtesting_general",
+      "display_name": "Review post-maintenance testing strategy for complex hardware configurable electronic devices",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:review-post-maintenance-testing-strategy-for-complex-hardware-configurable-electronic-devices"
+    },
+    {
+      "id": "ca_communicate_eng",
+      "display_name": "Communicate learnings to Engineering, Maintenance, and Procedures groups",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:communicate-learnings-to-engineering-maintenance-and-procedures-groups"
+    },
+    {
+      "id": "ca_communicate_ops",
+      "display_name": "Communicate learnings to Operations on timely CAP identification",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:communicate-learnings-to-operations-on-timely-cap-identification"
+    },
+    {
+      "id": "mfr_dynalco",
+      "display_name": "Dynalco",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "D283",
+      "match_key": "Manufacturer:D283"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts381",
+      "display_name": "Technical Specification 3.8.1",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-3-8-1"
+    },
+    {
+      "id": "prev_ler",
+      "display_name": "LER 269/2024-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "269/2024-001-00",
+      "stub": true,
+      "title": "Inoperability of ONS Unit 1 Standby Shutdown Facility RCS Pressurizer Heaters due to miscalibration of a current switch",
+      "plant": "Oconee Nuclear Station",
+      "match_key": "LER:269/2024-001-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts381",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ek",
+      "evidence": null
+    },
+    {
+      "source": "c_khu1",
+      "relation": "PART_OF",
+      "target": "sys_ek",
+      "evidence": null
+    },
+    {
+      "source": "c_khu2",
+      "relation": "PART_OF",
+      "target": "sys_ek",
+      "evidence": null
+    },
+    {
+      "source": "c_speedswitch",
+      "relation": "PART_OF",
+      "target": "c_excitercircuit",
+      "evidence": null
+    },
+    {
+      "source": "c_speedswitch",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_dynalco",
+      "evidence": null
+    },
+    {
+      "source": "fm_procdefect",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_procdefect",
+      "relation": "LEADS_TO",
+      "target": "fm_incompletesetup",
+      "evidence": null
+    },
+    {
+      "source": "fm_procdefect",
+      "relation": "LEADS_TO",
+      "target": "fm_testinadequate",
+      "evidence": null
+    },
+    {
+      "source": "fm_incompletesetup",
+      "relation": "LEADS_TO",
+      "target": "fm_excitationdelay",
+      "evidence": null
+    },
+    {
+      "source": "fm_testinadequate",
+      "relation": "LEADS_TO",
+      "target": "fm_excitationdelay",
+      "evidence": null
+    },
+    {
+      "source": "fm_excitationdelay",
+      "relation": "LEADS_TO",
+      "target": "cons_khu1inop",
+      "evidence": null
+    },
+    {
+      "source": "cons_khu1inop",
+      "relation": "BACKED_UP_BY",
+      "target": "c_khu2",
+      "evidence": null
+    },
+    {
+      "source": "cons_khu1inop",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_lct",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_reinstall",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_reviseproc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_extentcondition",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_reviewtesting_speed",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_reviewtesting_general",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_communicate_eng",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_communicate_ops",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "prev_ler",
+      "evidence": null
+    }
+  ],
+  "chain": "legacy procedure defect (steps->informational notes) [cause D] -> incomplete speed switch setup during replacement -> (parallel) inadequate post-maintenance testing scope -> KHU-1 generator excitation delay (50s-2min, exceeds 23s requirement) -> KHU-1 inoperable / TS 3.8.1 condition prohibited [backups KHU-2 operable, Lee Combustion Turbines available]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Plant/unit not given in FORM-366 identity block but derived from narrative header (Oconee Nuclear Station Unit 1, docket 05000269). LER number inferred from title 'Revision 00' and docket/date context as 269-2025-002-00 (not explicitly stated as such in provided fields; format assumed consistent with docket-year-sequence-revision convention). Standby Shutdown Facility and Protected Service Water mentioned only in Safety Analysis as general redundancy context, not modeled as involved systems since not part of the direct failure chain of KHU-1. Lee Combustion Turbine modeled under EIIS code EK per narrative bracket tag, though it is a distinct physical system from Keowee Hydro; both share bracket [EK] in the text. Previous occurrence LER 269/2024-001-00 key preserved exactly as stated in narrative (slash format)."
+}

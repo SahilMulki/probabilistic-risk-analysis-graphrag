@@ -1,0 +1,331 @@
+{
+  "ler_number": "251-2025-001-01",
+  "identity": {
+    "accession_number": "ML25143A173",
+    "docket": "05000251",
+    "plant_name": "Turkey Point",
+    "unit": 4,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2025-03-03",
+    "report_date": "2025-05-23",
+    "operating_mode": "5",
+    "power_level": null,
+    "discovery_context": "inspection",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Degraded Condition"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(ii)(A)",
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "B",
+      "system": "AB",
+      "component": "NZL",
+      "manufacturer": null,
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The metallurgical failure analysis identified that the 304 stainless steel BMN safe-end had a \"sensitized\" microstructure...A review of the vessel fabrication and installation sequence...identified that the safe end was welded to the penetrating nozzle prior to post weld heat treatment of the vessel penetration welds. This likely provided the thermal event needed to cause \"sensitization\".",
+    "cause_code": "B",
+    "category": "Design/Manufacturing/Installation",
+    "theme": "Fabrication-sequence-induced sensitization of safe-end weld material",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 251-2025-001-01",
+      "properties": {},
+      "type": "LER",
+      "key": "251-2025-001-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:251-2025-001-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Turkey Point Unit 4",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000251",
+      "match_key": "Unit:05000251"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Manufacturing/Installation (B)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "B",
+      "category": "Design/Manufacturing/Installation",
+      "theme": "Fabrication-sequence-induced sensitization of safe-end weld material",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Design/Manufacturing/Installation"
+    },
+    {
+      "id": "sys_ab",
+      "display_name": "Reactor Coolant System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "AB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "pressure boundary; involved",
+      "match_key": "System:AB"
+    },
+    {
+      "id": "c_nzl",
+      "display_name": "Bottom Mounted Instrumentation (BMI) Nozzle #6",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "NZL",
+      "identifier": "BMI nozzle #6",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:NZL|BMI nozzle #6"
+    },
+    {
+      "id": "c_safeend",
+      "display_name": "BMN safe-end (304 stainless steel)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:bmn-safe-end-304-stainless-steel"
+    },
+    {
+      "id": "c_thimble",
+      "display_name": "Thimble guide tube",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:thimble-guide-tube"
+    },
+    {
+      "id": "fm_sensitize",
+      "display_name": "Safe-end weld material sensitized (chromium depletion at grain boundaries)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Welding of safe-end to penetrating nozzle prior to post-weld heat treatment of vessel penetration welds produced a thermal event in the 900F-1300F range, sensitizing the 304 SS microstructure and reducing corrosion resistance.",
+      "match_key": "FailureMode:safe-end-weld-material-sensitized-chromium-depletion-at-grain-boundaries"
+    },
+    {
+      "id": "fm_cracking",
+      "display_name": "Cracking in BMN safe-end",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Sensitized microstructure led to cracking in the safe-end.",
+      "match_key": "FailureMode:cracking-in-bmn-safe-end"
+    },
+    {
+      "id": "fm_leak",
+      "display_name": "Boric acid leak through BMI nozzle #6",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Small cross-section through-wall indication resulted in boric acid leakage identified by the ISI program.",
+      "match_key": "FailureMode:boric-acid-leak-through-bmi-nozzle-6"
+    },
+    {
+      "id": "cons_inop",
+      "display_name": "RCS pressure boundary inoperable / TS 3.4.13.a violation",
+      "properties": {
+        "note": "Unit 4 entered Mode 5 on 2025-03-01, exiting the mode of applicability"
+      },
+      "type": "Consequence",
+      "start": "2024-01-15",
+      "end": "2025-03-01",
+      "duration": "~1 year, 1 month",
+      "tz": null,
+      "match_key": "Consequence:rcs-pressure-boundary-inoperable-ts-3-4-13-a-violation"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace BMN safe-end with designed replacement (socket welded coupling joining nozzle to thimble guide tube)",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-bmn-safe-end-with-designed-replacement-socket-welded-coupling-joining-nozzle-to-thimble-guide-tube"
+    },
+    {
+      "id": "ca_inspect",
+      "display_name": "Visually inspect all other BMN safe-end nozzles for leakage",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:visually-inspect-all-other-bmn-safe-end-nozzles-for-leakage"
+    },
+    {
+      "id": "ca_guidance",
+      "display_name": "Continue following industry guidance for visual monitoring per existing programmatic scope/frequency (no program changes required)",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:continue-following-industry-guidance-for-visual-monitoring-per-existing-programmatic-scope-frequency-no-program-changes-required"
+    },
+    {
+      "id": "rr_5073ii",
+      "display_name": "10 CFR 50.73(a)(2)(ii)(A)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-ii-a"
+    },
+    {
+      "id": "rr_5073i",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts",
+      "display_name": "TS 3.4.13.a",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ts-3-4-13-a"
+    },
+    {
+      "id": "rr_asme",
+      "display_name": "ASME Section XI, Table IWB-3410-1, Acceptable Standards",
+      "properties": {
+        "type": "standard/guidance"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:asme-section-xi-table-iwb-3410-1-acceptable-standards"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073ii",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073i",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ab",
+      "evidence": null
+    },
+    {
+      "source": "c_nzl",
+      "relation": "PART_OF",
+      "target": "sys_ab",
+      "evidence": null
+    },
+    {
+      "source": "c_safeend",
+      "relation": "PART_OF",
+      "target": "c_nzl",
+      "evidence": null
+    },
+    {
+      "source": "fm_sensitize",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_sensitize",
+      "relation": "LEADS_TO",
+      "target": "fm_cracking",
+      "evidence": null
+    },
+    {
+      "source": "fm_cracking",
+      "relation": "LEADS_TO",
+      "target": "fm_leak",
+      "evidence": null
+    },
+    {
+      "source": "fm_leak",
+      "relation": "LEADS_TO",
+      "target": "cons_inop",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_inspect",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_guidance",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_asme",
+      "evidence": null
+    }
+  ],
+  "chain": "fabrication sequence: safe-end welded to nozzle before post-weld heat treatment [cause B] -> thermal event sensitizes 304 SS microstructure -> cracking in BMN safe-end -> boric acid through-wall leak at BMI nozzle #6 -> RCS pressure boundary inoperable / TS 3.4.13.a violation (2024-01-15 to 2025-03-01) [mitigated by charging pump makeup capability and functional leakage detection, corrected via safe-end replacement]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Plant name/unit not present in FORM-366 FIELDS identity block but derivable from narrative ('Turkey Point Unit 3 and Unit 4', 'unit 4 entered Mode 5'); docket 05000251 corresponds to Turkey Point Unit 4. No previous similar occurrence LER emitted since narrative states review found no similar events with same cause -> no SIMILAR_TO edge/stub. Charging pump makeup capability and leakage detection systems described as functional mitigations during the inoperability window but not modeled as System/BACKED_UP_BY since they mitigate consequence severity rather than serving as an operable backup system per rule 6; captured instead in consequence chain summary only, per conservative interpretation of rule 6 given ambiguity of 'charging pumps had capability to make up for leakage' as a mitigating capability description rather than a full backup system statement. Manufacturer not stated for NZL component, no ManufacturerNode created."
+}

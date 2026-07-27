@@ -1,0 +1,189 @@
+{
+  "ler_number": "458-2021-01-00",
+  "identity": {
+    "accession_number": "ML21141A193",
+    "docket": "05000458",
+    "plant_name": "River Bend",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2021-03-25",
+    "report_date": "2021-05-20",
+    "operating_mode": "1",
+    "power_level": 80,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Manual Reactor Scram due to Loss of Main Condenser Vacuum"
+  },
+  "reporting_basis": {
+    "reported_under": [],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "E",
+      "system": "SH",
+      "component": "CNV",
+      "manufacturer": "N174",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": null,
+    "cause_code": "E",
+    "category": "Management/QA Deficiency",
+    "theme": "loss of main condenser vacuum",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 458-2021-002-00",
+      "properties": {
+        "match_key": "LER:458-2021-002-00"
+      },
+      "type": "LER",
+      "key": "458-2021-01-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:458-2021-01-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "River Bend Unit 1",
+      "properties": {
+        "match_key": "Unit:05000458",
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000458",
+      "match_key": "Unit:05000458"
+    },
+    {
+      "id": "cause",
+      "display_name": "Management/QA Deficiency (E)",
+      "properties": {
+        "match_key": "Cause:Management/QA Deficiency"
+      },
+      "type": "Cause",
+      "cause_code": "E",
+      "category": "Management/QA Deficiency",
+      "theme": "loss of main condenser vacuum",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Management/QA Deficiency"
+    },
+    {
+      "id": "sys_sh",
+      "display_name": "Main Condenser / Circulating Water System",
+      "properties": {
+        "match_key": "System:SH"
+      },
+      "type": "System",
+      "eiis_code": "SH",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SH"
+    },
+    {
+      "id": "c_cnv",
+      "display_name": "Main Condenser",
+      "properties": {
+        "match_key": "Component:CNV"
+      },
+      "type": "Component",
+      "eiis_code": "CNV",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": "N174",
+      "inferred_code": false,
+      "match_key": "Component:CNV"
+    },
+    {
+      "id": "fm_vacuum",
+      "display_name": "Loss of main condenser vacuum",
+      "properties": {
+        "match_key": "FailureMode:loss-of-main-condenser-vacuum"
+      },
+      "type": "FailureMode",
+      "description": null,
+      "match_key": "FailureMode:loss-of-main-condenser-vacuum"
+    },
+    {
+      "id": "cons_scram",
+      "display_name": "Manual reactor scram",
+      "properties": {
+        "match_key": "Consequence:manual-reactor-scram"
+      },
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:manual-reactor-scram"
+    },
+    {
+      "id": "mfr_n174",
+      "display_name": "Manufacturer N174",
+      "properties": {
+        "match_key": "Manufacturer:N174"
+      },
+      "type": "Manufacturer",
+      "code": "N174",
+      "match_key": "Manufacturer:N174"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sh",
+      "evidence": null
+    },
+    {
+      "source": "fm_vacuum",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_vacuum",
+      "relation": "LEADS_TO",
+      "target": "cons_scram",
+      "evidence": null
+    },
+    {
+      "source": "c_cnv",
+      "relation": "PART_OF",
+      "target": "sys_sh",
+      "evidence": null
+    },
+    {
+      "source": "c_cnv",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_n174",
+      "evidence": null
+    }
+  ],
+  "chain": "management/QA deficiency [cause E] -> loss of main condenser vacuum -> manual reactor scram",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Narrative text was not provided in the input (empty NARRATIVE 366A section); extraction based solely on FORM-366 FIELDS. Plant name, unit number, reactor type, and detailed causal chain/corrective actions could not be determined without narrative text. Cause proximate_text left null since no narrative cause statement was available to quote."
+}

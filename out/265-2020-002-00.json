@@ -1,0 +1,389 @@
+{
+  "ler_number": "265-2020-002-00",
+  "identity": {
+    "accession_number": "ML20149K600",
+    "docket": "05000265",
+    "plant_name": "Quad Cities",
+    "unit": 2,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2020-03-30",
+    "report_date": "2020-05-28",
+    "operating_mode": "4",
+    "power_level": 0,
+    "discovery_context": "inspection",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Electromatic Relief Valve 3D Did Not Actuate Due to Out of Specification Plunger''"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "Reportable",
+      "system": "to",
+      "component": "ICES",
+      "manufacturer": "Reportable",
+      "reportable": null
+    }
+  ],
+  "cause": {
+    "proximate_text": "The cause of the failure was an out of specification plunger received from the vendor. The bent upper guide bracket was able to perform acceptably while installed during previous operating cycles but would only begin binding when initiated by the plunger.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "vendor-supplied part out of manufacturer tolerance",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 265-2020-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "265-2020-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:265-2020-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Quad Cities Unit 2",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000265",
+      "match_key": "Unit:05000265"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "vendor-supplied part out of manufacturer tolerance",
+      "proximate_text": "The cause of the failure was an out of specification plunger received from the vendor. The bent upper guide bracket was able to perform acceptably while installed during previous operating cycles but would only begin binding when initiated by the plunger.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_bf",
+      "display_name": "Automatic Depressurization System",
+      "properties": {
+        "note": "consists of four ERVs and one Target Rock safety/relief valve"
+      },
+      "type": "System",
+      "eiis_code": "BF",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BF"
+    },
+    {
+      "id": "c_erv3d",
+      "display_name": "Electromatic Relief Valve 2-0203-3D",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "RV",
+      "identifier": "2-0203-3D",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:RV|2-0203-3D"
+    },
+    {
+      "id": "c_actuator",
+      "display_name": "ERV Actuator",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "362B2632G001",
+      "model": "362B2632G001",
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:erv-actuator"
+    },
+    {
+      "id": "c_plunger",
+      "display_name": "Actuator plunger",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:actuator-plunger"
+    },
+    {
+      "id": "c_bracket",
+      "display_name": "Upper guide bracket",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:upper-guide-bracket"
+    },
+    {
+      "id": "fm_plunger_oos",
+      "display_name": "Plunger out of specification width (splayed legs)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Plunger width measured 2.592\", 0.027\" larger than manufacturer's tolerance of 2.565\", indicating legs splaying from top to mid-length.",
+      "match_key": "FailureMode:plunger-out-of-specification-width-splayed-legs"
+    },
+    {
+      "id": "fm_bracket_tilt",
+      "display_name": "Upper guide bracket tilted / misaligned",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Upper guide bracket tilted down on left end; tilt varied stroke to stroke, causing intermittent sticking.",
+      "match_key": "FailureMode:upper-guide-bracket-tilted-misaligned"
+    },
+    {
+      "id": "fm_plunger_rub",
+      "display_name": "Plunger intermittently rubbing lever arm",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Plunger intermittently rubbed with the lever arm on the left side, causing actuator sticking/binding.",
+      "match_key": "FailureMode:plunger-intermittently-rubbing-lever-arm"
+    },
+    {
+      "id": "fm_actuator_stick",
+      "display_name": "Actuator sticking / failed to actuate",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "2-0203-3D ERV actuator failed to stroke when manually actuated during TS SR 3.5.1.10 surveillance.",
+      "match_key": "FailureMode:actuator-sticking-failed-to-actuate"
+    },
+    {
+      "id": "cons_erv_inop",
+      "display_name": "ERV 2-0203-3D inoperable for entire operating cycle",
+      "properties": {
+        "note": "Valve found inoperable for entire cycle Q2C25; violates TS 3.5.1 Condition H allowance of 14 days"
+      },
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:erv-2-0203-3d-inoperable-for-entire-operating-cycle"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace 3D ERV and actuator; successfully tested",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-3d-erv-and-actuator-successfully-tested"
+    },
+    {
+      "id": "ca_purchase",
+      "display_name": "Determine/implement purchase requirements to ensure plungers meet vendor specifications",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:determine-implement-purchase-requirements-to-ensure-plungers-meet-vendor-specifications"
+    },
+    {
+      "id": "ca_part21",
+      "display_name": "Review plunger out-of-spec width with vendor for Part 21 implications",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:review-plunger-out-of-spec-width-with-vendor-for-part-21-implications"
+    },
+    {
+      "id": "ca_procedure",
+      "display_name": "Enhance ERV actuator rebuild procedure (bracket inspection, alignment, plunger-to-switch-plate check, plunger width verification)",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:enhance-erv-actuator-rebuild-procedure-bracket-inspection-alignment-plunger-to-switch-plate-check-plunger-width-verification"
+    },
+    {
+      "id": "mfr_ge",
+      "display_name": "General Electric",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": null,
+      "match_key": "Manufacturer:general-electric"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts351",
+      "display_name": "TS 3.5.1 Condition H",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ts-3-5-1-condition-h"
+    },
+    {
+      "id": "rr_ufsar",
+      "display_name": "UFSAR 6.3.3.1.4",
+      "properties": {
+        "type": "analysis-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ufsar-6-3-3-1-4"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "LER 254/2010-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "254/2010-001-00",
+      "stub": true,
+      "title": "Electromatic Relief Valve Main Disc Failure",
+      "plant": "Quad Cities Nuclear Power Station Unit 1",
+      "match_key": "LER:254/2010-001-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts351",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bf",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_erv3d",
+      "evidence": null
+    },
+    {
+      "source": "c_erv3d",
+      "relation": "PART_OF",
+      "target": "sys_bf",
+      "evidence": null
+    },
+    {
+      "source": "fm_plunger_oos",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_plunger_oos",
+      "relation": "LEADS_TO",
+      "target": "fm_plunger_rub",
+      "evidence": null
+    },
+    {
+      "source": "fm_bracket_tilt",
+      "relation": "LEADS_TO",
+      "target": "fm_plunger_rub",
+      "evidence": null
+    },
+    {
+      "source": "fm_plunger_rub",
+      "relation": "LEADS_TO",
+      "target": "fm_actuator_stick",
+      "evidence": null
+    },
+    {
+      "source": "fm_actuator_stick",
+      "relation": "LEADS_TO",
+      "target": "cons_erv_inop",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_purchase",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_part21",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procedure",
+      "evidence": null
+    },
+    {
+      "source": "c_actuator",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_ge",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ufsar",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    }
+  ],
+  "chain": "vendor-supplied plunger out of spec width [cause TBD] -> plunger legs splay/rub lever arm (compounded by tilted upper guide bracket) -> actuator sticks/fails to stroke -> ERV 2-0203-3D fails to actuate -> ADS valve inoperable for entire cycle [other 4 ADS valves confirmed operable]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Form-366 block_13 fields were garbled in input ('to'/'ICES'); reconstructed system=BF (ADS), component=RV (relief valve) from narrative EIIS codes. Cause code officially TBD/provisional per form fields despite narrative clearly attributing root cause to out-of-spec vendor plunger; category kept as 'provisional' per rule 4. Bracket tilt and plunger oversizing are modeled as two parallel failure modes converging on plunger rubbing, since narrative describes them as distinct defects (bent bracket tolerated in prior cycles; plunger width was the triggering out-of-spec condition). No BACKED_UP_BY edges emitted: LPCI/Core Spray and other ADS valves are discussed only as design-basis/system-design context or as separately-tested valves, not as backups operable specifically during this valve's inoperability window in a way meeting rule 6's strict test; other 4 ADS valves stroked successfully but this is capacity confirmation, not an explicit backup-during-event statement, so treated as note only. Previous occurrence LER key preserved exactly as '254/2010-001-00' per report text."
+}

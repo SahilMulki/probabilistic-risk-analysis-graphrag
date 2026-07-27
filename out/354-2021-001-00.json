@@ -1,0 +1,427 @@
+{
+  "ler_number": "354-2021-001-00",
+  "identity": {
+    "accession_number": "ML21225A038",
+    "docket": "05000354",
+    "plant_name": "Hope Creek",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2021-06-14",
+    "report_date": "2021-08-13",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Hope Creek Generating Station Renewed Facility Operating License No. NPF-57 Docket No. 50-354"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "B",
+      "system": "SB",
+      "component": "RV",
+      "manufacturer": "T020",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "Setpoint exceedance for two of the SRV pilot stage assemblies (A and J) is attributed to corrosion bonding between the pilot discs and seating surfaces, which is consistent with industry experience. The cause of the R SRV Main failing to actuate is attributed to the main disc and piston thread wear, resulting in side-loading of the main piston within the guide, allowing slight grooves to form in the guide in which the piston and rings could bind.",
+    "cause_code": "B",
+    "category": "Design/Manufacturing/Installation",
+    "theme": "SRV pilot corrosion bonding and main-stage piston/thread wear causing setpoint drift and failure to lift",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 354-2021-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "354-2021-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:354-2021-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Hope Creek Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000354",
+      "match_key": "Unit:05000354"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Manufacturing/Installation (B)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "B",
+      "category": "Design/Manufacturing/Installation",
+      "theme": "SRV pilot corrosion bonding and main-stage piston/thread wear causing setpoint drift and failure to lift",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Design/Manufacturing/Installation"
+    },
+    {
+      "id": "sys_sb",
+      "display_name": "Main Steam",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SB"
+    },
+    {
+      "id": "c_srv_a",
+      "display_name": "Safety Relief Valve F013A (2-stage, Target Rock 7567F)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "RV",
+      "identifier": "F013A",
+      "model": "7567F",
+      "manufacturer_code": "T020",
+      "inferred_code": false,
+      "match_key": "Component:RV|F013A"
+    },
+    {
+      "id": "c_srv_j",
+      "display_name": "Safety Relief Valve F013J (2-stage, Target Rock 7567F)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "RV",
+      "identifier": "F013J",
+      "model": "7567F",
+      "manufacturer_code": "T020",
+      "inferred_code": false,
+      "match_key": "Component:RV|F013J"
+    },
+    {
+      "id": "c_srv_r",
+      "display_name": "Safety Relief Valve R (3-stage, Target Rock 0867F)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "RV",
+      "identifier": "R",
+      "model": "0867F",
+      "manufacturer_code": "T020",
+      "inferred_code": false,
+      "match_key": "Component:RV|R"
+    },
+    {
+      "id": "fm_corrosion",
+      "display_name": "Corrosion bonding between pilot discs and seating surfaces",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Corrosion bonding occurring during the operating cycle causes pilot stage setpoint drift in 2-stage SRVs.",
+      "match_key": "FailureMode:corrosion-bonding-between-pilot-discs-and-seating-surfaces"
+    },
+    {
+      "id": "fm_setpoint_drift",
+      "display_name": "SRV pilot stage setpoint drift outside TS tolerance",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "As-found set pressure testing for F013A and F013J exceeded the +/-3% TS 3.4.2.1 tolerance.",
+      "match_key": "FailureMode:srv-pilot-stage-setpoint-drift-outside-ts-tolerance"
+    },
+    {
+      "id": "fm_thread_wear",
+      "display_name": "Main disc and piston thread wear causing side-loading",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Thread wear on the main disc and piston resulted in side-loading of the main piston within the guide.",
+      "match_key": "FailureMode:main-disc-and-piston-thread-wear-causing-side-loading"
+    },
+    {
+      "id": "fm_grooving_binding",
+      "display_name": "Piston guide grooving and ring binding",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Side-loading allowed slight grooves to form in the guide in which the piston and rings could bind.",
+      "match_key": "FailureMode:piston-guide-grooving-and-ring-binding"
+    },
+    {
+      "id": "fm_r_no_lift",
+      "display_name": "R SRV main valve failed to lift",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "During SRV Main Stage assembly testing at NWS Technologies, the R SRV main valve did not lift.",
+      "match_key": "FailureMode:r-srv-main-valve-failed-to-lift"
+    },
+    {
+      "id": "cons_inoperable",
+      "display_name": "Two or more SRVs inoperable / TS 3.4.2.1 condition reportable",
+      "properties": {
+        "note": "As-found results for F013A and F013J outside TS tolerance, plus R SRV failure to lift, met TS 3.4.2.1 Action (a) two-or-more-inoperable reporting threshold."
+      },
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:two-or-more-srvs-inoperable-ts-3-4-2-1-condition-reportable"
+    },
+    {
+      "id": "ca_replace_2stage",
+      "display_name": "Replace all seven 2-stage SRV assemblies with pre-tested, certified 3-stage SRV assemblies",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-all-seven-2-stage-srv-assemblies-with-pre-tested-certified-3-stage-srv-assemblies"
+    },
+    {
+      "id": "ca_replace_r",
+      "display_name": "Replace R SRV with a 3-stage SRV model",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-r-srv-with-a-3-stage-srv-model"
+    },
+    {
+      "id": "mfr_targetrock",
+      "display_name": "Target Rock",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "T020",
+      "match_key": "Manufacturer:T020"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts3421",
+      "display_name": "Technical Specification 3.4.2.1",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:technical-specification-3-4-2-1"
+    },
+    {
+      "id": "rr_ts_sr4422",
+      "display_name": "TS Surveillance Requirement 4.4.2.2",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ts-surveillance-requirement-4-4-2-2"
+    },
+    {
+      "id": "rr_ts_sr4423",
+      "display_name": "TS Surveillance Requirement 4.4.2.3",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ts-surveillance-requirement-4-4-2-3"
+    },
+    {
+      "id": "ler_2016_003",
+      "display_name": "LER 354-2016-003-00",
+      "properties": {},
+      "type": "LER",
+      "key": "354-2016-003-00",
+      "stub": true,
+      "title": "Similar SRV setpoint exceedance event (H1RF20 refueling outage)",
+      "plant": "Hope Creek Generating Station",
+      "match_key": "LER:354-2016-003-00"
+    },
+    {
+      "id": "ler_2018_002",
+      "display_name": "LER 354-2018-002-01",
+      "properties": {},
+      "type": "LER",
+      "key": "354-2018-002-01",
+      "stub": true,
+      "title": "Similar SRV setpoint exceedance event (H1RF21 refueling outage)",
+      "plant": "Hope Creek Generating Station",
+      "match_key": "LER:354-2018-002-01"
+    },
+    {
+      "id": "ler_2019_002",
+      "display_name": "LER 354-2019-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "354-2019-002-00",
+      "stub": true,
+      "title": "Similar SRV setpoint exceedance event (H1RF22 refueling outage)",
+      "plant": "Hope Creek Generating Station",
+      "match_key": "LER:354-2019-002-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts3421",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts_sr4422",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts_sr4423",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "c_srv_a",
+      "relation": "PART_OF",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "c_srv_j",
+      "relation": "PART_OF",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "c_srv_r",
+      "relation": "PART_OF",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "c_srv_a",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_targetrock",
+      "evidence": null
+    },
+    {
+      "source": "c_srv_j",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_targetrock",
+      "evidence": null
+    },
+    {
+      "source": "c_srv_r",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_targetrock",
+      "evidence": null
+    },
+    {
+      "source": "fm_corrosion",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_corrosion",
+      "relation": "LEADS_TO",
+      "target": "fm_setpoint_drift",
+      "evidence": null
+    },
+    {
+      "source": "fm_setpoint_drift",
+      "relation": "LEADS_TO",
+      "target": "cons_inoperable",
+      "evidence": null
+    },
+    {
+      "source": "fm_thread_wear",
+      "relation": "LEADS_TO",
+      "target": "fm_grooving_binding",
+      "evidence": null
+    },
+    {
+      "source": "fm_grooving_binding",
+      "relation": "LEADS_TO",
+      "target": "fm_r_no_lift",
+      "evidence": null
+    },
+    {
+      "source": "fm_r_no_lift",
+      "relation": "LEADS_TO",
+      "target": "cons_inoperable",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_2stage",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_r",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_2016_003",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_2018_002",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_2019_002",
+      "evidence": null
+    }
+  ],
+  "chain": "corrosion bonding at pilot disc/seat [cause B] -> SRV pilot setpoint drift (F013A, F013J) -> TS 3.4.2.1 inoperability; separately: main disc/piston thread wear -> piston side-loading -> guide grooving/ring binding -> R SRV main valve fails to lift -> two-or-more SRVs inoperable, TS 3.4.2.1 Action (a) reportable condition",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Two independent, parallel failure mechanisms converge on the same TS 3.4.2.1 reportability consequence: (1) corrosion-bonding-driven pilot setpoint drift on 2-stage SRVs F013A/F013J, and (2) thread wear/side-loading/grooving causing the R (3-stage) SRV main valve to fail to lift. Both are modeled as separate chains CAUSED_BY the same official cause code B (Design/Manufacturing/Installation), per the narrative's cause statement covering both mechanisms. No operable backup system is named for SRV function in this narrative (safety significance argued via design margins, not a backup system), so no BACKED_UP_BY edge is asserted. Previous-occurrence LERs are modeled as stubs per instructions, using LER numbers exactly as stated in text (including revision suffixes where given)."
+}

@@ -1,0 +1,456 @@
+{
+  "ler_number": "483-2020-001-01",
+  "identity": {
+    "accession_number": "ML21040A515",
+    "docket": "05000483",
+    "plant_name": "Callaway",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2020-02-18",
+    "report_date": "2021-02-09",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "inspection",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2020-001-01 for Callaway Plant Unit 1, Emergency Exhaust Inoperable Due To Fan Belt Degradation And Failure"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "this LER's investigation attributes the event to a lack of guidance for equipment designed to require rigorous tensioning, sheave alignment, and belt inspection; the belt tensioning, sheave alignment, and drive alignment were not considered adequate absent a procedure requiring explicit guidance for turning, jacking, and belt replacement work performed by unqualified personnel; unclear procedures for belt replacement adopted by maintenance personnel contributed to inadequate tensioning of the belts",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "inadequate belt-replacement procedure/guidance leading to improper tensioning and premature belt failure",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 483-2020-001-01",
+      "properties": {
+        "match_key": "LER:483-2020-001-01"
+      },
+      "type": "LER",
+      "key": "483-2020-001-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:483-2020-001-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Callaway Unit 1",
+      "properties": {
+        "match_key": "Unit:05000483",
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000483",
+      "match_key": "Unit:05000483"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {
+        "match_key": "Cause:provisional"
+      },
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "inadequate belt-replacement procedure/guidance leading to improper tensioning and premature belt failure",
+      "proximate_text": "this LER's investigation attributes the event to a lack of guidance for equipment designed to require rigorous tensioning, sheave alignment, and belt inspection; unclear procedures for belt replacement adopted by maintenance personnel contributed to inadequate tensioning of the belts",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_vf",
+      "display_name": "Emergency Exhaust System",
+      "properties": {
+        "match_key": "System:VF",
+        "note": "serves auxiliary building and fuel building; two redundant trains"
+      },
+      "type": "System",
+      "eiis_code": "VF",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:VF"
+    },
+    {
+      "id": "c_fan_b",
+      "display_name": "CGGO2B Emergency Exhaust Fan",
+      "properties": {
+        "match_key": "Component:FAN|CGGO2B"
+      },
+      "type": "Component",
+      "eiis_code": "FAN",
+      "identifier": "CGGO2B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:FAN|CGGO2B"
+    },
+    {
+      "id": "c_belt",
+      "display_name": "V-belt drive belts (CGGO2B)",
+      "properties": {
+        "match_key": "Component:v-belt-drive-belts-cggo2b"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:v-belt-drive-belts-cggo2b"
+    },
+    {
+      "id": "c_sheave",
+      "display_name": "Motor sheave",
+      "properties": {
+        "match_key": "Component:motor-sheave"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:motor-sheave"
+    },
+    {
+      "id": "fm_proc",
+      "display_name": "Inadequate belt-replacement/tensioning procedure guidance",
+      "properties": {
+        "match_key": "FailureMode:inadequate-belt-replacement-tensioning-procedure-guidance"
+      },
+      "type": "FailureMode",
+      "description": "Belt replacement job lacked explicit guidance/task for verifying belt tension, sheave alignment, and drive alignment.",
+      "match_key": "FailureMode:inadequate-belt-replacement-tensioning-procedure-guidance"
+    },
+    {
+      "id": "fm_mistension",
+      "display_name": "Improper belt tension/sheave alignment on installation (June 25, 2019)",
+      "properties": {
+        "match_key": "FailureMode:improper-belt-tension-sheave-alignment-installation"
+      },
+      "type": "FailureMode",
+      "description": "Belts installed June 25, 2019 without adequate tensioning/alignment verification.",
+      "match_key": "FailureMode:improper-belt-tension-sheave-alignment-on-installation-june-25-2019"
+    },
+    {
+      "id": "fm_beltbreak",
+      "display_name": "Inner belt tensile break after ~10 hours run-time",
+      "properties": {
+        "match_key": "FailureMode:inner-belt-tensile-break"
+      },
+      "type": "FailureMode",
+      "description": "Inner belt found broken on bottom of belt guard, tensile break, no long-term wear evidence, after ~10 hours of run-time since June 25, 2019 replacement.",
+      "match_key": "FailureMode:inner-belt-tensile-break-after-10-hours-run-time"
+    },
+    {
+      "id": "fm_relube_tension",
+      "display_name": "As-found belt tensions outside acceptance criteria after Feb 22 replacement",
+      "properties": {
+        "match_key": "FailureMode:as-found-belt-tensions-outside-acceptance-criteria"
+      },
+      "type": "FailureMode",
+      "description": "Following the Feb 22, 2020 belt replacement, outer belt tension observed to relax; as-found tension of both belts measured outside acceptance criteria.",
+      "match_key": "FailureMode:as-found-belt-tensions-outside-acceptance-criteria-after-feb-22-replacement"
+    },
+    {
+      "id": "cons_inop",
+      "display_name": "EES B train inoperable (~246 days)",
+      "properties": {
+        "match_key": "Consequence:ees-b-train-inoperable"
+      },
+      "type": "Consequence",
+      "start": "2019-06-25",
+      "end": "2020-02-26T14:42",
+      "duration": "approximately 246 days",
+      "tz": null,
+      "match_key": "Consequence:ees-b-train-inoperable-246-days"
+    },
+    {
+      "id": "cons_bothinop",
+      "display_name": "Both EES trains unavailable concurrently (Feb 12, 2020)",
+      "properties": {
+        "match_key": "Consequence:both-ees-trains-unavailable-concurrently",
+        "note": "EES A train out of service for in-place filter testing while EES B train was inoperable; condition that would have prevented fulfillment of a safety function"
+      },
+      "type": "Consequence",
+      "start": "2020-02-12",
+      "end": "2020-02-12",
+      "duration": "3 hours 6 minutes",
+      "tz": null,
+      "match_key": "Consequence:both-ees-trains-unavailable-concurrently-feb-12-2020"
+    },
+    {
+      "id": "ca_replace_belts_feb22",
+      "display_name": "Replace belts on CGGO2B (Feb 22, 2020)",
+      "properties": {
+        "match_key": "CorrectiveAction:replace-belts-cggo2b-feb22"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-belts-on-cggo2b-feb-22-2020"
+    },
+    {
+      "id": "ca_replace_sheave",
+      "display_name": "Replace motor sheave with spare",
+      "properties": {
+        "match_key": "CorrectiveAction:replace-motor-sheave"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-motor-sheave-with-spare"
+    },
+    {
+      "id": "ca_retension_feb24",
+      "display_name": "Adjust v-belt tension and drive alignment; replace belts again (Feb 24-26, 2020)",
+      "properties": {
+        "match_key": "CorrectiveAction:adjust-v-belt-tension-drive-alignment"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:adjust-v-belt-tension-and-drive-alignment-replace-belts-again-feb-24-26-2020"
+    },
+    {
+      "id": "ca_addtask_tension",
+      "display_name": "Add task to belt replacement job to check belt tension",
+      "properties": {
+        "match_key": "CorrectiveAction:add-task-check-belt-tension"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:add-task-to-belt-replacement-job-to-check-belt-tension"
+    },
+    {
+      "id": "ca_cadocument",
+      "display_name": "Write corrective action document on inadequate belt tensions",
+      "properties": {
+        "match_key": "CorrectiveAction:write-corrective-action-document"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:write-corrective-action-document-on-inadequate-belt-tensions"
+    },
+    {
+      "id": "ca_verify_8hr",
+      "display_name": "Verify belt tension after 8-hour run and adjust fan speed",
+      "properties": {
+        "match_key": "CorrectiveAction:verify-belt-tension-8hr-run"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:verify-belt-tension-after-8-hour-run-and-adjust-fan-speed"
+    },
+    {
+      "id": "rr_5073ib",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion",
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_5073vc",
+      "display_name": "10 CFR 50.73(a)(2)(v)(C)",
+      "properties": {
+        "type": "reporting-criterion",
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-c"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-c"
+    },
+    {
+      "id": "rr_5073vd",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {
+        "type": "reporting-criterion",
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "rr_ts3713",
+      "display_name": "Technical Specification 3.7.13, Emergency Exhaust System",
+      "properties": {
+        "type": "license-basis",
+        "match_key": "RegulatoryReference:ts-3-7-13"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:technical-specification-3-7-13-emergency-exhaust-system"
+    },
+    {
+      "id": "rr_ts552b",
+      "display_name": "Technical Specification 5.5.2.b, Leak Rate Monitoring",
+      "properties": {
+        "type": "license-basis",
+        "match_key": "RegulatoryReference:ts-5-5-2-b"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:technical-specification-5-5-2-b-leak-rate-monitoring"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073ib",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073vc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073vd",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_vf",
+      "evidence": null
+    },
+    {
+      "source": "c_fan_b",
+      "relation": "PART_OF",
+      "target": "sys_vf",
+      "evidence": null
+    },
+    {
+      "source": "fm_proc",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_proc",
+      "relation": "LEADS_TO",
+      "target": "fm_mistension",
+      "evidence": null
+    },
+    {
+      "source": "fm_mistension",
+      "relation": "LEADS_TO",
+      "target": "fm_beltbreak",
+      "evidence": null
+    },
+    {
+      "source": "fm_beltbreak",
+      "relation": "LEADS_TO",
+      "target": "cons_inop",
+      "evidence": null
+    },
+    {
+      "source": "fm_proc",
+      "relation": "LEADS_TO",
+      "target": "fm_relube_tension",
+      "evidence": null
+    },
+    {
+      "source": "fm_relube_tension",
+      "relation": "LEADS_TO",
+      "target": "cons_inop",
+      "evidence": null
+    },
+    {
+      "source": "cons_inop",
+      "relation": "LEADS_TO",
+      "target": "cons_bothinop",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_belts_feb22",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_sheave",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_retension_feb24",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_addtask_tension",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_cadocument",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_verify_8hr",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts3713",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts552b",
+      "evidence": null
+    }
+  ],
+  "chain": "inadequate belt-replacement/tensioning procedure guidance [cause TBD] -> improper belt tension/sheave alignment at June 25 2019 install -> inner belt tensile break after ~10 hrs run-time -> EES B train inoperable (~246 days); parallel: same procedural inadequacy -> as-found tensions outside acceptance criteria after Feb 22 replacement -> continued EES B inoperability -> concurrent brief overlap with EES A out for filter testing on Feb 12 2020 -> both EES trains unavailable",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Form-366 cause_code/category were provided as TBD/provisional; narrative does not state an official NRC cause-code letter, only a root-cause discussion pointing to inadequate procedural guidance for belt tensioning/alignment during maintenance. Two distinct failure episodes are modeled: (1) original June 2019 belt install with inadequate tensioning leading to tensile break Feb 18 2020, and (2) Feb 22 2020 replacement also found with as-found tensions outside acceptance criteria, requiring further correction through Feb 26 2020 - both trace to the same underlying procedural cause. EES A train was operable throughout except a brief 3hr6min outage for filter testing on Feb 12, 2020, which is modeled as a distinct escalation consequence (both trains unavailable) rather than a BACKED_UP_BY edge, since it was not a standing backup during the B-train outage. No corrective action explicitly tied to writing/revising the belt replacement procedure was described beyond adding the tension-check task, which is captured as ca_addtask_tension."
+}

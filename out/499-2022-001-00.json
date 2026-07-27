@@ -1,0 +1,428 @@
+{
+  "ler_number": "499-2022-001-00",
+  "identity": {
+    "accession_number": "ML22062B665",
+    "docket": "05000499",
+    "plant_name": "South Texas",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2022-01-06",
+    "report_date": "2022-03-03",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2022-001-00 from South Texas Project Unit 2, Automatic Actuation of Emergency Diesel Generator due to Lockout of Switchyard Electrical Bus"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)",
+      "10 CFR 50.73(a)(2)(iv)(B)(8)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "Raportable",
+      "system": "To",
+      "component": "IRIS",
+      "manufacturer": "x",
+      "reportable": null
+    }
+  ],
+  "cause": {
+    "proximate_text": "A flashover occurred when an electrical arc flashed along the top side of a TDSP owned insulator from the bus to the insulator support, effectively grounding the A phase of the south bus. There were no previous indications of issues with the insulator.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "external switchyard insulator failure (TDSP-owned equipment)",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 499-2022-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "499-2022-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:499-2022-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "South Texas Unit 2",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000499",
+      "match_key": "Unit:05000499"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "external switchyard insulator failure (TDSP-owned equipment)",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_fk",
+      "display_name": "Switchyard (TDSP owned equipment)",
+      "properties": {
+        "note": "offsite electrical / switchyard system, TDSP owned"
+      },
+      "type": "System",
+      "eiis_code": "FK",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:FK"
+    },
+    {
+      "id": "sys_ac_offsite",
+      "display_name": "Offsite Electrical System",
+      "properties": {
+        "note": "standby transformers, 345 kV switchyard, transmission circuits"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:offsite-electrical-system"
+    },
+    {
+      "id": "sys_edg",
+      "display_name": "Emergency Diesel Generator",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "onsite emergency AC power; actuated",
+      "match_key": "System:emergency-diesel-generator"
+    },
+    {
+      "id": "sys_esf",
+      "display_name": "Engineered Safety Features Electrical Bus",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:engineered-safety-features-electrical-bus"
+    },
+    {
+      "id": "c_insulator",
+      "display_name": "South Bus Insulator (TDSP owned)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "INS",
+      "identifier": null,
+      "model": "34618-1 / 24812-2",
+      "manufacturer_code": "LAPP",
+      "inferred_code": false,
+      "match_key": "Component:INS"
+    },
+    {
+      "id": "c_standby_xfmr",
+      "display_name": "Unit 2 Standby Transformer",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:unit-2-standby-transformer"
+    },
+    {
+      "id": "c_protective_relay",
+      "display_name": "Protective Relay / Breaker (south bus)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:protective-relay-breaker-south-bus"
+    },
+    {
+      "id": "fm_arcflash",
+      "display_name": "Arc flash across insulator causing phase-to-ground fault",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Electrical arc flashed along top side of TDSP owned insulator from bus to insulator support, grounding A phase of the south bus.",
+      "match_key": "FailureMode:arc-flash-across-insulator-causing-phase-to-ground-fault"
+    },
+    {
+      "id": "fm_buslockout",
+      "display_name": "South bus lockout / de-energization",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Protective relay detected the fault and cycled the breaker, momentarily removing all voltage from the south bus to isolate the fault; bus locked out.",
+      "match_key": "FailureMode:south-bus-lockout-de-energization"
+    },
+    {
+      "id": "fm_xfmr_disconnect",
+      "display_name": "Unit 2 standby transformer disconnected from grid",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "De-energization of the south bus disconnected the Unit 2 standby transformer from the grid, the normal supply to Unit 2 B Train ESF bus.",
+      "match_key": "FailureMode:unit-2-standby-transformer-disconnected-from-grid"
+    },
+    {
+      "id": "fm_loop_signal",
+      "display_name": "Undervoltage / LOOP signal on Train B ESF bus",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Resulting undervoltage condition on Unit 2 Train B ESF bus initiated a loss of offsite power (LOOP) signal.",
+      "match_key": "FailureMode:undervoltage-loop-signal-on-train-b-esf-bus"
+    },
+    {
+      "id": "cons_edg_actuation",
+      "display_name": "Automatic actuation of Emergency Diesel Generator 22 and sequenced ESF loading",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2022-01-06T06:03",
+      "end": "2022-01-06T10:22",
+      "duration": "4:19",
+      "tz": null,
+      "match_key": "Consequence:automatic-actuation-of-emergency-diesel-generator-22-and-sequenced-esf-loading"
+    },
+    {
+      "id": "cons_ts_action",
+      "display_name": "T.S. 3.8.1.1.e/.a Action entry - offsite AC circuits inoperable",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2022-01-06T06:03",
+      "end": "2022-01-06T22:27",
+      "duration": "16:24",
+      "tz": null,
+      "match_key": "Consequence:t-s-3-8-1-1-e-a-action-entry-offsite-ac-circuits-inoperable"
+    },
+    {
+      "id": "ca_replace_insulator",
+      "display_name": "Replace flashed insulator",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-flashed-insulator"
+    },
+    {
+      "id": "ca_corona_inspect",
+      "display_name": "Perform corona effect inspections on insulators before/after cleaning",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:perform-corona-effect-inspections-on-insulators-before-after-cleaning"
+    },
+    {
+      "id": "ca_clean_insulators",
+      "display_name": "Clean other insulators on North and South Bus",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:clean-other-insulators-on-north-and-south-bus"
+    },
+    {
+      "id": "ca_restore_equipment",
+      "display_name": "Restore equipment as required by plant conditions",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:restore-equipment-as-required-by-plant-conditions"
+    },
+    {
+      "id": "mfr_lapp",
+      "display_name": "LAPP",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "LAPP",
+      "match_key": "Manufacturer:LAPP"
+    },
+    {
+      "id": "rr_5073_iv_a",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5073_iv_b8",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(B)(8)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-b-8"
+    },
+    {
+      "id": "rr_ts_3811",
+      "display_name": "STP Technical Specification 3.8.1.1",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:stp-technical-specification-3-8-1-1"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_iv_a",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_iv_b8",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_fk",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ac_offsite",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_edg",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_esf",
+      "evidence": null
+    },
+    {
+      "source": "c_insulator",
+      "relation": "PART_OF",
+      "target": "sys_fk",
+      "evidence": null
+    },
+    {
+      "source": "c_insulator",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_lapp",
+      "evidence": null
+    },
+    {
+      "source": "fm_arcflash",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_arcflash",
+      "relation": "LEADS_TO",
+      "target": "fm_buslockout",
+      "evidence": null
+    },
+    {
+      "source": "fm_buslockout",
+      "relation": "LEADS_TO",
+      "target": "fm_xfmr_disconnect",
+      "evidence": null
+    },
+    {
+      "source": "fm_xfmr_disconnect",
+      "relation": "LEADS_TO",
+      "target": "fm_loop_signal",
+      "evidence": null
+    },
+    {
+      "source": "fm_loop_signal",
+      "relation": "LEADS_TO",
+      "target": "cons_edg_actuation",
+      "evidence": null
+    },
+    {
+      "source": "fm_buslockout",
+      "relation": "LEADS_TO",
+      "target": "cons_ts_action",
+      "evidence": null
+    },
+    {
+      "source": "cons_edg_actuation",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_edg",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_insulator",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_corona_inspect",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_clean_insulators",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_restore_equipment",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts_3811",
+      "evidence": null
+    }
+  ],
+  "chain": "insulator arc flash (TDSP owned, cause TBD) -> phase-to-ground fault / south bus lockout -> Unit 2 standby transformer disconnected from grid -> undervoltage/LOOP signal on Train B ESF bus -> automatic actuation of EDG 22 and sequenced ESF loading [T.S. 3.8.1.1.e/.a entered, 16h24m total offsite circuit inoperability]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code left TBD/provisional per FORM-366 fields (official code not resolved despite narrative describing the arc-flash root cause); category set to 'provisional' per rule 4. Block 13 fields in FORM-366 were garbled ('Raportable'/'To'/'IRIS'/'x'); corrected using narrative's Failed Component Information section (System FK, Component INS, Manufacturer LAPP). No PART_OF edge created for standby transformer or ESF bus to system, since narrative does not explicitly state containment. EDG modeled as System per narrative treatment as an actuated safety system, consistent with reporting basis (v)(B)(8) emergency AC actuation criterion."
+}

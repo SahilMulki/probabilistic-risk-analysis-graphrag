@@ -1,0 +1,496 @@
+{
+  "ler_number": "387-2021-002-00",
+  "identity": {
+    "accession_number": "ML21179A288",
+    "docket": "05000387",
+    "plant_name": "Susquehanna",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2021-04-29",
+    "report_date": "2021-06-28",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2021-002-00 for Susquehanna, Units 1 and 2, Inoperability of Computer Room Floor Cooling Fan Caused by Extended Operation with Worn Belts Due to Less Than Adequate Preventive Maintenance Replacement Interval"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)",
+      "10 CFR 50.73(a)(2)(v)(D)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "E",
+      "system": "VI",
+      "component": "FAN",
+      "manufacturer": "C150",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The direct cause of the Computer Room Floor Cooling Fan (0V115B) throwing its belts was extended operation with worn belts. This worn belt condition was due to less than adequate Preventive Maintenance (PM) replacement interval of the belts.",
+    "cause_code": "E",
+    "category": "Management/QA Deficiency",
+    "theme": "PM interval too long for belt wear",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 387-2021-002-00",
+      "properties": {
+        "match_key": "LER:387-2021-002-00"
+      },
+      "type": "LER",
+      "key": "387-2021-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:387-2021-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Susquehanna Unit 1",
+      "properties": {
+        "match_key": "Unit:05000387",
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000387",
+      "match_key": "Unit:05000387"
+    },
+    {
+      "id": "cause",
+      "display_name": "Management/QA Deficiency (E)",
+      "properties": {
+        "match_key": "Cause:Management/QA Deficiency"
+      },
+      "type": "Cause",
+      "cause_code": "E",
+      "category": "Management/QA Deficiency",
+      "theme": "PM interval too long for belt wear",
+      "proximate_text": "The direct cause of the Computer Room Floor Cooling Fan (0V115B) throwing its belts was extended operation with worn belts. This worn belt condition was due to less than adequate Preventive Maintenance (PM) replacement interval of the belts.",
+      "provisional": false,
+      "match_key": "Cause:Management/QA Deficiency"
+    },
+    {
+      "id": "sys_vi_div2",
+      "display_name": "Division II Computer Room Floor Cooling System",
+      "properties": {
+        "match_key": "System:VI"
+      },
+      "type": "System",
+      "eiis_code": "VI",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected train",
+      "match_key": "System:VI"
+    },
+    {
+      "id": "sys_vi_div1_chiller",
+      "display_name": "Division I Control Structure Chiller System",
+      "properties": {
+        "match_key": "System:VI-div1"
+      },
+      "type": "System",
+      "eiis_code": "VI",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "concurrently inoperable train",
+      "match_key": "System:VI"
+    },
+    {
+      "id": "c_fan",
+      "display_name": "Computer Room Floor Cooling Fan B (0V115B)",
+      "properties": {
+        "match_key": "Component:FAN|0V115B"
+      },
+      "type": "Component",
+      "eiis_code": "FAN",
+      "identifier": "0V115B",
+      "model": "39ED75",
+      "manufacturer_code": "C150",
+      "inferred_code": false,
+      "match_key": "Component:FAN|0V115B"
+    },
+    {
+      "id": "c_chiller",
+      "display_name": "Division I Control Structure Chiller",
+      "properties": {
+        "match_key": "Component:CHU"
+      },
+      "type": "Component",
+      "eiis_code": "CHU",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:CHU"
+    },
+    {
+      "id": "c_belts",
+      "display_name": "Fan drive belts (0V115B)",
+      "properties": {
+        "match_key": "Component:fan-drive-belts"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:fan-drive-belts-0v115b"
+    },
+    {
+      "id": "fm_pm_interval",
+      "display_name": "Inadequate PM replacement interval for belts",
+      "properties": {
+        "match_key": "FailureMode:inadequate-pm-replacement-interval-for-belts"
+      },
+      "type": "FailureMode",
+      "description": "PM frequency (eight years) too long, allowing belts to wear beyond acceptable condition before replacement",
+      "match_key": "FailureMode:inadequate-pm-replacement-interval-for-belts"
+    },
+    {
+      "id": "fm_belts_worn",
+      "display_name": "Extended operation with worn belts",
+      "properties": {
+        "match_key": "FailureMode:extended-operation-with-worn-belts"
+      },
+      "type": "FailureMode",
+      "description": "Fan belts operated beyond their useful life due to extended replacement interval",
+      "match_key": "FailureMode:extended-operation-with-worn-belts"
+    },
+    {
+      "id": "fm_belts_thrown",
+      "display_name": "Belts thrown / disengaged from sheaves",
+      "properties": {
+        "match_key": "FailureMode:belts-thrown-disengaged-from-sheaves"
+      },
+      "type": "FailureMode",
+      "description": "Two of five belts thrown from sheaves and one beginning to loosen, causing elevated vibration",
+      "match_key": "FailureMode:belts-thrown-disengaged-from-sheaves"
+    },
+    {
+      "id": "fm_chiller_trip",
+      "display_name": "Division I CS Chiller trip",
+      "properties": {
+        "match_key": "FailureMode:division-i-cs-chiller-trip"
+      },
+      "type": "FailureMode",
+      "description": "Division I Control Structure Chiller tripped, rendering Division I systems inoperable",
+      "match_key": "FailureMode:division-i-cs-chiller-trip"
+    },
+    {
+      "id": "cons_div2_inop",
+      "display_name": "Division II Computer Room Floor Cooling Fan inoperable (mission time not justified)",
+      "properties": {
+        "match_key": "Consequence:division-ii-fan-inoperable"
+      },
+      "type": "Consequence",
+      "start": "2021-04-29",
+      "end": "2021-05-04T16:01",
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:division-ii-computer-room-floor-cooling-fan-inoperable-mission-time-not-justified"
+    },
+    {
+      "id": "cons_concurrent_inop",
+      "display_name": "Both ventilation trains (Division I and Division II) concurrently inoperable beyond TS 3.0.3 allowed time",
+      "properties": {
+        "match_key": "Consequence:both-trains-concurrently-inoperable"
+      },
+      "type": "Consequence",
+      "start": "2021-04-29",
+      "end": "2021-04-30T20:35",
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:both-ventilation-trains-division-i-and-division-ii-concurrently-inoperable-beyond-ts-3-0-3-allowed-time"
+    },
+    {
+      "id": "ca_replace_belts",
+      "display_name": "Replace belts with new belts",
+      "properties": {
+        "match_key": "CorrectiveAction:replace-belts-with-new-belts"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-belts-with-new-belts"
+    },
+    {
+      "id": "ca_revise_pm",
+      "display_name": "Revise PM frequency from eight years to six years",
+      "properties": {
+        "match_key": "CorrectiveAction:revise-pm-frequency"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-pm-frequency-from-eight-years-to-six-years"
+    },
+    {
+      "id": "mfr_carrier",
+      "display_name": "Carrier Corporation",
+      "properties": {
+        "match_key": "Manufacturer:C150"
+      },
+      "type": "Manufacturer",
+      "code": "C150",
+      "match_key": "Manufacturer:C150"
+    },
+    {
+      "id": "rr_5073ib",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion",
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_5073vd",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {
+        "type": "reporting-criterion",
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "rr_ts373",
+      "display_name": "TS 3.7.3 Control Room Emergency Outside Air Supply (CREOAS) System",
+      "properties": {
+        "type": "license-basis",
+        "match_key": "RegulatoryReference:ts-3-7-3"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ts-3-7-3-control-room-emergency-outside-air-supply-creoas-system"
+    },
+    {
+      "id": "rr_ts374",
+      "display_name": "TS 3.7.4 Control Room Floor Cooling System",
+      "properties": {
+        "type": "license-basis",
+        "match_key": "RegulatoryReference:ts-3-7-4"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ts-3-7-4-control-room-floor-cooling-system"
+    },
+    {
+      "id": "ler_prev1",
+      "display_name": "LER 387-2019-001-01",
+      "properties": {
+        "match_key": "LER:387-2019-001-01"
+      },
+      "type": "LER",
+      "key": "387-2019-001-01",
+      "stub": true,
+      "title": "Loss of Both Control Structure Chillers due to Misaligned Breaker Stab",
+      "plant": "Susquehanna Steam Electric Station",
+      "match_key": "LER:387-2019-001-01"
+    },
+    {
+      "id": "ler_prev2",
+      "display_name": "LER 388-2015-015-00",
+      "properties": {
+        "match_key": "LER:388-2015-015-00"
+      },
+      "type": "LER",
+      "key": "388-2015-015-00",
+      "stub": true,
+      "title": "Loss of Safety Function due to Inoperability of Both Trains of the Control Room Emergency Outside Air Supply (CREOAS) System",
+      "plant": "Susquehanna Steam Electric Station",
+      "match_key": "LER:388-2015-015-00"
+    },
+    {
+      "id": "ler_prev3",
+      "display_name": "LER 387-2014-009-00",
+      "properties": {
+        "match_key": "LER:387-2014-009-00"
+      },
+      "type": "LER",
+      "key": "387-2014-009-00",
+      "stub": true,
+      "title": "Loss of Both Trains of Control Structure Chilled Water during Application of Clearance Order",
+      "plant": "Susquehanna Steam Electric Station",
+      "match_key": "LER:387-2014-009-00"
+    },
+    {
+      "id": "ler_prev4",
+      "display_name": "LER 387-2014-008-00",
+      "properties": {
+        "match_key": "LER:387-2014-008-00"
+      },
+      "type": "LER",
+      "key": "387-2014-008-00",
+      "stub": true,
+      "title": "Loss of Both Trains of Control Structure Chilled Water due to Personnel Error",
+      "plant": "Susquehanna Steam Electric Station",
+      "match_key": "LER:387-2014-008-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073ib",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073vd",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts373",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts374",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_vi_div2",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_vi_div1_chiller",
+      "evidence": null
+    },
+    {
+      "source": "c_fan",
+      "relation": "PART_OF",
+      "target": "sys_vi_div2",
+      "evidence": null
+    },
+    {
+      "source": "c_belts",
+      "relation": "PART_OF",
+      "target": "c_fan",
+      "evidence": null
+    },
+    {
+      "source": "c_chiller",
+      "relation": "PART_OF",
+      "target": "sys_vi_div1_chiller",
+      "evidence": null
+    },
+    {
+      "source": "fm_pm_interval",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_pm_interval",
+      "relation": "LEADS_TO",
+      "target": "fm_belts_worn",
+      "evidence": null
+    },
+    {
+      "source": "fm_belts_worn",
+      "relation": "LEADS_TO",
+      "target": "fm_belts_thrown",
+      "evidence": null
+    },
+    {
+      "source": "fm_belts_thrown",
+      "relation": "LEADS_TO",
+      "target": "cons_div2_inop",
+      "evidence": null
+    },
+    {
+      "source": "fm_chiller_trip",
+      "relation": "LEADS_TO",
+      "target": "cons_concurrent_inop",
+      "evidence": null
+    },
+    {
+      "source": "fm_belts_thrown",
+      "relation": "LEADS_TO",
+      "target": "cons_concurrent_inop",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_belts",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_revise_pm",
+      "evidence": null
+    },
+    {
+      "source": "c_fan",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_carrier",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev1",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev2",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev3",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev4",
+      "evidence": null
+    }
+  ],
+  "chain": "inadequate PM replacement interval [cause E] -> extended operation with worn belts -> belts thrown/disengaged from sheaves (0V115B) -> Division II fan inoperable; concurrently, Division I CS Chiller trip -> both ventilation trains inoperable beyond TS 3.0.3 allowed time (no actual loss of safety function per evaluation)",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Two independent failure origins converge on the concurrent-inoperability consequence: the Division I CS Chiller trip (unrelated equipment failure, not separately cause-coded) and the Division II fan belt degradation (cause code E). Only the belt-wear/PM-interval chain is CAUSED_BY the coded cause; the chiller trip is modeled as a parallel FailureMode leading to the same shared consequence per rule 5, but has no CAUSED_BY edge since block 13 attributes cause E only to the VI/FAN component. No BACKED_UP_BY edges emitted since narrative states both trains were concurrently inoperable rather than one backing up the other. Docket 05000387 corresponds to Unit 1 per FORM-366 fields, though narrative covers both Units 1 and 2 conditions."
+}

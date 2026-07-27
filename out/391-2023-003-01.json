@@ -1,0 +1,415 @@
+{
+  "ler_number": "391-2023-003-01",
+  "identity": {
+    "accession_number": "ML24060A097",
+    "docket": "05000391",
+    "plant_name": "Watts Bar",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2023-08-04",
+    "report_date": "2024-02-29",
+    "operating_mode": "3",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Automatic Reactor Trip Due to Loss of Main Feedwater Regulating Valve Control"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "X",
+      "system": "JB",
+      "component": "FC",
+      "manufacturer": "FOX",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The exact cause of the DCS component malfunction is unknown. Manufacturer failure analysis testing has been ongoing with inconclusive results. A vulnerability in the design of the SG level DCS can prevent automatic and manual control of SG FW inlet flow. The specific vulnerability has not been identified... the actual failure mode is presently unknown.",
+    "cause_code": "X",
+    "category": "Other",
+    "theme": "Unresolved DCS field bus module malfunction",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 391-2023-003-01",
+      "properties": {},
+      "type": "LER",
+      "key": "391-2023-003-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:391-2023-003-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Watts Bar Unit 2",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000391",
+      "match_key": "Unit:05000391"
+    },
+    {
+      "id": "cause",
+      "display_name": "Other (X)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "X",
+      "category": "Other",
+      "theme": "Unresolved DCS field bus module malfunction",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Other"
+    },
+    {
+      "id": "sys_jb",
+      "display_name": "Distributed Controls System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "control system; site of failure",
+      "match_key": "System:JB"
+    },
+    {
+      "id": "sys_fcv",
+      "display_name": "Feedwater Regulating Valve control",
+      "properties": {
+        "acronym": "FRV/FCV"
+      },
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "sys_ba",
+      "display_name": "Auxiliary Feedwater System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "safety system; performed as designed",
+      "match_key": "System:BA"
+    },
+    {
+      "id": "c_fbm_master",
+      "display_name": "Master Field Bus Module (FBM218)",
+      "properties": {
+        "role": "master"
+      },
+      "type": "Component",
+      "eiis_code": "FC",
+      "identifier": "FBM218 (P/N: P0922VW)",
+      "model": null,
+      "manufacturer_code": "FOX",
+      "inferred_code": false,
+      "match_key": "Component:FC|FBM218 (P/N: P0922VW)"
+    },
+    {
+      "id": "c_fbm_tracker",
+      "display_name": "Tracker Field Bus Module",
+      "properties": {
+        "role": "tracker; system swapped to this module"
+      },
+      "type": "Component",
+      "eiis_code": "FC",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:FC"
+    },
+    {
+      "id": "c_frv_sg2",
+      "display_name": "SG No. 2 Feedwater Regulating Valve",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "SG No. 2 FRV",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:sg-no-2-feedwater-regulating-valve"
+    },
+    {
+      "id": "fm_fbm_fail",
+      "display_name": "DCS field bus module malfunction",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Master FBM failure/vulnerability causing loss of SG FW inlet flow control; exact mechanism unidentified",
+      "match_key": "FailureMode:dcs-field-bus-module-malfunction"
+    },
+    {
+      "id": "fm_frv_oscillate",
+      "display_name": "Main feedwater regulating valve oscillates open/close",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "FBM failure caused main feedwater regulating valve to oscillate open and close",
+      "match_key": "FailureMode:main-feedwater-regulating-valve-oscillates-open-close"
+    },
+    {
+      "id": "fm_sg2_lolo",
+      "display_name": "SG No. 2 low-low level signal",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Loss of FRV control led to SG No. 2 level dropping to low-low level",
+      "match_key": "FailureMode:sg-no-2-low-low-level-signal"
+    },
+    {
+      "id": "cons_trip",
+      "display_name": "Automatic reactor trip followed by turbine trip",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2023-08-04T17:46",
+      "end": null,
+      "duration": null,
+      "tz": "EDT",
+      "match_key": "Consequence:automatic-reactor-trip-followed-by-turbine-trip"
+    },
+    {
+      "id": "ca_fbm_replace",
+      "display_name": "Remove and replace master and tracker FBM; send to vendor for failure analysis",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:remove-and-replace-master-and-tracker-fbm-send-to-vendor-for-failure-analysis"
+    },
+    {
+      "id": "ca_sg_strategy",
+      "display_name": "Implement SG level control strategy preventing total loss of SG inlet flow control",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:implement-sg-level-control-strategy-preventing-total-loss-of-sg-inlet-flow-control"
+    },
+    {
+      "id": "ca_pzr_level_strategy",
+      "display_name": "Implement pressurizer level control strategy preventing total loss of CVCS charging flow control",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:implement-pressurizer-level-control-strategy-preventing-total-loss-of-cvcs-charging-flow-control"
+    },
+    {
+      "id": "ca_pzr_pressure_strategy",
+      "display_name": "Implement pressurizer pressure control strategy preventing total loss of heater/spray control",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:implement-pressurizer-pressure-control-strategy-preventing-total-loss-of-heater-spray-control"
+    },
+    {
+      "id": "mfr_fox",
+      "display_name": "Foxboro",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "FOX",
+      "match_key": "Manufacturer:FOX"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5072",
+      "display_name": "10 CFR 50.72(b)(2)(iv)(B) and 10 CFR 50.72(b)(3)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-2-iv-b-and-10-cfr-50-72-b-3-iv-a"
+    },
+    {
+      "id": "rr_fsar",
+      "display_name": "FSAR Safety Analysis",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:fsar-safety-analysis"
+    },
+    {
+      "id": "ler_prev1",
+      "display_name": "LER 391-2023-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "391-2023-002-00",
+      "stub": true,
+      "title": "Automatic Reactor Trip Due to Main Generator Protection Relay Actuation",
+      "plant": "Watts Bar Nuclear Plant Unit 2",
+      "match_key": "LER:391-2023-002-00"
+    },
+    {
+      "id": "ler_prev2",
+      "display_name": "LER 390-2020-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "390-2020-001-00",
+      "stub": true,
+      "title": "Manual Reactor Trip Due to Lowering Steam Generator Level Caused by a Hand Station Failure",
+      "plant": "Watts Bar Nuclear Plant Unit 1",
+      "match_key": "LER:390-2020-001-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jb",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_fcv",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ba",
+      "evidence": null
+    },
+    {
+      "source": "c_fbm_master",
+      "relation": "PART_OF",
+      "target": "sys_jb",
+      "evidence": null
+    },
+    {
+      "source": "c_fbm_tracker",
+      "relation": "PART_OF",
+      "target": "sys_jb",
+      "evidence": null
+    },
+    {
+      "source": "fm_fbm_fail",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_fbm_fail",
+      "relation": "LEADS_TO",
+      "target": "fm_frv_oscillate",
+      "evidence": null
+    },
+    {
+      "source": "fm_frv_oscillate",
+      "relation": "LEADS_TO",
+      "target": "fm_sg2_lolo",
+      "evidence": null
+    },
+    {
+      "source": "fm_sg2_lolo",
+      "relation": "LEADS_TO",
+      "target": "cons_trip",
+      "evidence": null
+    },
+    {
+      "source": "cons_trip",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_ba",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_fbm_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_sg_strategy",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_pzr_level_strategy",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_pzr_pressure_strategy",
+      "evidence": null
+    },
+    {
+      "source": "c_fbm_master",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_fox",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev1",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev2",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_fsar",
+      "evidence": null
+    }
+  ],
+  "chain": "unidentified DCS field bus module vulnerability [cause X] -> master FBM malfunction -> main feedwater regulating valve oscillates open/close -> SG No.2 low-low level signal -> automatic reactor trip + turbine trip [backup AFW performed as designed]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Manufacturer failure analysis of the replaced FBMs was inconclusive; no specific component failure identified, consistent with cause code X (Other/unknown). Both previous-occurrence LERs are explicitly stated by the licensee to NOT share a similar cause, but SIMILAR_TO edges are still emitted per rule 9 to capture the referenced stub LERs. Plant/unit/reactor_type/nss_vendor filled from narrative since FORM-366 FIELDS left them null."
+}

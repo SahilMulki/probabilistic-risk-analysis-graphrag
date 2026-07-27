@@ -1,0 +1,323 @@
+{
+  "ler_number": "306-2023-001-00",
+  "identity": {
+    "accession_number": "ML23199A216",
+    "docket": "05000306",
+    "plant_name": "Prairie Island",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2023-05-27",
+    "report_date": "2023-07-18",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "inspection",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2023-001-00 for Prairie Island Nuclear Generating Plant Unit 2, 2GT/XFMR Lockout Due To Failure Of Lightning Arrester Caused Unit 2 Reactor Trip"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The cause of the A-Phase lightning arrester failure on 2GT/XFMR was that transformer maintenance procedures did not effectively implement the maintenance strategy for the transformer lightning arresters... all of the probable failure modes would be in line with the degraded watts loss testing results obtained and therefore should have been identified as part of the program trending and inspections under the transformer maintenance procedure.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "maintenance-procedure trending/inspection weakness",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 306-2023-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "306-2023-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:306-2023-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Prairie Island Unit 2",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000306",
+      "match_key": "Unit:05000306"
+    },
+    {
+      "id": "cause",
+      "display_name": "Maintenance-procedure weakness (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "maintenance-procedure trending/inspection weakness",
+      "proximate_text": "transformer maintenance procedures did not effectively implement the maintenance strategy for the transformer lightning arresters",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_xfmr",
+      "display_name": "Main Transformer (2GT/XFMR)",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "XFMR",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:XFMR"
+    },
+    {
+      "id": "sys_ta",
+      "display_name": "Main Turbine",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "TA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:TA"
+    },
+    {
+      "id": "sys_ba",
+      "display_name": "Auxiliary Feedwater",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "actuated during event",
+      "match_key": "System:BA"
+    },
+    {
+      "id": "c_lar",
+      "display_name": "A-Phase Lightning Arrester",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "LAR",
+      "identifier": "A-phase, 2GT/XFMR",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:LAR|A-phase, 2GT/XFMR"
+    },
+    {
+      "id": "fm_procgap",
+      "display_name": "Maintenance procedure failed to effectively implement lightning-arrester maintenance strategy / trending",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Degraded watts loss testing results were not used to identify probable failure modes under the transformer maintenance procedure.",
+      "match_key": "FailureMode:maintenance-procedure-failed-to-effectively-implement-lightning-arrester-maintenance-strategy-trending"
+    },
+    {
+      "id": "fm_lar_fail",
+      "display_name": "A-phase lightning arrester failed / shorted to ground",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Arcing between top and bottom stack of arrester; arrester shorted to ground.",
+      "match_key": "FailureMode:a-phase-lightning-arrester-failed-shorted-to-ground"
+    },
+    {
+      "id": "fm_lockout",
+      "display_name": "Protective relaying actuation causing 2GT/XFMR lockout",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Instantaneous overcurrent and short-to-ground protective relaying correctly actuated, locking out the main transformer.",
+      "match_key": "FailureMode:protective-relaying-actuation-causing-2gt-xfmr-lockout"
+    },
+    {
+      "id": "cons_trip",
+      "display_name": "Unit 2 reactor trip with AFW actuation and Unusual Event declaration",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2023-05-27T18:19",
+      "end": "2023-05-27T23:04",
+      "duration": "4:45",
+      "tz": "CDT",
+      "match_key": "Consequence:unit-2-reactor-trip-with-afw-actuation-and-unusual-event-declaration"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace all three lightning arresters on 2GT/XFMR",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-all-three-lightning-arresters-on-2gt-xfmr"
+    },
+    {
+      "id": "ca_inspect",
+      "display_name": "Perform thermographic, doble, gas-in-oil, and transmission line inspections",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:perform-thermographic-doble-gas-in-oil-and-transmission-line-inspections"
+    },
+    {
+      "id": "ca_failure_analysis",
+      "display_name": "Send failed arrester to third-party lab for failure analysis",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:send-failed-arrester-to-third-party-lab-for-failure-analysis"
+    },
+    {
+      "id": "ca_proc_revise",
+      "display_name": "Revise transformer maintenance procedures for lightning arrester testing/review",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-transformer-maintenance-procedures-for-lightning-arrester-testing-review"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5072_iv_b",
+      "display_name": "10 CFR 50.72(b)(2)(iv)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-2-iv-b"
+    },
+    {
+      "id": "rr_5072_iv_a",
+      "display_name": "10 CFR 50.72(b)(3)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-3-iv-a"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072_iv_b",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072_iv_a",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_xfmr",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ta",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ba",
+      "evidence": null
+    },
+    {
+      "source": "c_lar",
+      "relation": "PART_OF",
+      "target": "sys_xfmr",
+      "evidence": null
+    },
+    {
+      "source": "fm_procgap",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_procgap",
+      "relation": "LEADS_TO",
+      "target": "fm_lar_fail",
+      "evidence": null
+    },
+    {
+      "source": "fm_lar_fail",
+      "relation": "LEADS_TO",
+      "target": "fm_lockout",
+      "evidence": null
+    },
+    {
+      "source": "fm_lockout",
+      "relation": "LEADS_TO",
+      "target": "cons_trip",
+      "evidence": null
+    },
+    {
+      "source": "cons_trip",
+      "relation": "MITIGATED_BY",
+      "target": "sys_ba",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_inspect",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_failure_analysis",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_proc_revise",
+      "evidence": null
+    }
+  ],
+  "chain": "maintenance-procedure trending gap [cause TBD] -> A-phase lightning arrester fails/shorts to ground -> protective relaying trips 2GT/XFMR lockout -> main turbine/reactor trip with AFW actuation [mitigated by AFW steam generator level control]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code and category are TBD/provisional per FORM-366 fields (no code was assigned in block 13, which is empty). Cause node marked provisional=true accordingly. AFW modeled both as an INVOLVES system (actuated) and MITIGATED_BY of the trip consequence since it maintained steam generator level throughout the event. No previous similar events section content provided (narrative section is blank)."
+}

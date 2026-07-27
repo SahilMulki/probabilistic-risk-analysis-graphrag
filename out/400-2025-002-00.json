@@ -1,0 +1,381 @@
+{
+  "ler_number": "400-2025-002-00",
+  "identity": {
+    "accession_number": "ML25363A104",
+    "docket": "05000400",
+    "plant_name": "Shearon Harris",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2025-10-15",
+    "report_date": "2025-12-29",
+    "operating_mode": "2",
+    "power_level": 55,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Incorrect Current Value Used During Power Range Nuclear Instrument Calibration"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The cause of the indication discrepancy was a human performance (HU) error during the performance of MST-I0044 where a 100% current value was used to calibrate span voltage instead of the required 120% current value that should have been used when setting the span setting. ... Technicians failed to use proper human performance tools to ensure excellent outcomes due to complacency from the performer and overconfidence in the performer's proficiency by the peer checker. ... The supervisor exhibited insufficient oversight and engagement because they did not recognize the inherent risks associated with the activity.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "human performance error during calibration procedure (complacency, inadequate peer check, insufficient supervisory oversight)",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 400-2025-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "400-2025-002-00",
+      "stub": false,
+      "title": "Incorrect Current Value Used During Power Range Nuclear Instrument Calibration",
+      "plant": "Shearon Harris Nuclear Power Plant",
+      "match_key": "LER:400-2025-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Shearon Harris Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000400",
+      "match_key": "Unit:05000400"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "human performance error during calibration procedure (complacency, inadequate peer check, insufficient supervisory oversight)",
+      "proximate_text": "The cause of the indication discrepancy was a human performance (HU) error during the performance of MST-I0044 where a 100% current value was used to calibrate span voltage instead of the required 120% current value that should have been used when setting the span setting.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_nis",
+      "display_name": "Nuclear Instrumentation System",
+      "properties": {
+        "note": "Excore nuclear instrumentation; safeguards reactor by monitoring neutron flux and generating trips/alarms"
+      },
+      "type": "System",
+      "eiis_code": "IG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:IG"
+    },
+    {
+      "id": "sys_imod",
+      "display_name": "Instrumentation channels",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "IMOD",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:IMOD"
+    },
+    {
+      "id": "sys_rps",
+      "display_name": "Reactor Protection System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JC"
+    },
+    {
+      "id": "c_ni41",
+      "display_name": "Power Range Nuclear Instrument NI-41",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "NI-41",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:power-range-nuclear-instrument-ni-41"
+    },
+    {
+      "id": "c_ni42",
+      "display_name": "Power Range Nuclear Instrument NI-42",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "NI-42",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:power-range-nuclear-instrument-ni-42"
+    },
+    {
+      "id": "c_ni43",
+      "display_name": "Power Range Nuclear Instrument NI-43",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "NI-43",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:power-range-nuclear-instrument-ni-43"
+    },
+    {
+      "id": "c_ni44",
+      "display_name": "Power Range Nuclear Instrument NI-44",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "NI-44",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:power-range-nuclear-instrument-ni-44"
+    },
+    {
+      "id": "fm_wrong_current",
+      "display_name": "Incorrect 100% current value used for span voltage calibration (should have been 120%)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "During MST-I0044 performance, technicians used a 100% current value to calibrate NI-41 span voltage instead of the required 120% current value.",
+      "match_key": "FailureMode:incorrect-100-current-value-used-for-span-voltage-calibration-should-have-been-120"
+    },
+    {
+      "id": "fm_falsehigh",
+      "display_name": "NI-41 indicating higher flux than other three PRNIs",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "NI-41 upper and lower flux indicated 63-66% versus 52-55% on NI-42, NI-43, NI-44.",
+      "match_key": "FailureMode:ni-41-indicating-higher-flux-than-other-three-prnis"
+    },
+    {
+      "id": "fm_undetected",
+      "display_name": "NI-41 declared operable without knowledge of prior HU error",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "NI-41 was declared operable on 10/16/25 following MST-I0044 without recognizing the calibration error had occurred.",
+      "match_key": "FailureMode:ni-41-declared-operable-without-knowledge-of-prior-hu-error"
+    },
+    {
+      "id": "cons_ts",
+      "display_name": "TS 3.3.1 and TS 3.0.4 noncompliance / NI-41 inoperable condition",
+      "properties": {
+        "note": "Station not in compliance with TS 3.3.1 for PRNIs from Mode 2 entry until post-maintenance operability declared; TS 3.0.4 mode change violation also occurred."
+      },
+      "type": "Consequence",
+      "start": "2025-11-01T15:34",
+      "end": "2025-11-04T07:16",
+      "duration": "approximately 63.7 hours",
+      "tz": null,
+      "match_key": "Consequence:ts-3-3-1-and-ts-3-0-4-noncompliance-ni-41-inoperable-condition"
+    },
+    {
+      "id": "ca_partial_mst",
+      "display_name": "Partial performance of MST-I0044 to install correct current setting and restore NI-41 accuracy",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:partial-performance-of-mst-i0044-to-install-correct-current-setting-and-restore-ni-41-accuracy"
+    },
+    {
+      "id": "ca_procrev",
+      "display_name": "Procedure revision requests to improve NI calibration procedures and eliminate common error traps",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:procedure-revision-requests-to-improve-ni-calibration-procedures-and-eliminate-common-error-traps"
+    },
+    {
+      "id": "ca_standing_order",
+      "display_name": "Standing order issued focused on precise control of NIs",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:standing-order-issued-focused-on-precise-control-of-nis"
+    },
+    {
+      "id": "ca_standdown",
+      "display_name": "Maintenance department stand down highlighting HU tool and verification process lapses",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:maintenance-department-stand-down-highlighting-hu-tool-and-verification-process-lapses"
+    },
+    {
+      "id": "ca_training",
+      "display_name": "Targeted training to reinforce foundational practices",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:targeted-training-to-reinforce-foundational-practices"
+    },
+    {
+      "id": "ca_audit",
+      "display_name": "External audit to evaluate standards",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:external-audit-to-evaluate-standards"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts331",
+      "display_name": "Technical Specification 3.3.1 (Reactor Trip System Instrumentation)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-3-3-1-reactor-trip-system-instrumentation"
+    },
+    {
+      "id": "rr_ts304",
+      "display_name": "Technical Specification 3.0.4 (Mode Changes with Inoperable Equipment)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-3-0-4-mode-changes-with-inoperable-equipment"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_nis",
+      "evidence": null
+    },
+    {
+      "source": "c_ni41",
+      "relation": "PART_OF",
+      "target": "sys_imod",
+      "evidence": null
+    },
+    {
+      "source": "sys_imod",
+      "relation": "PART_OF",
+      "target": "sys_nis",
+      "evidence": null
+    },
+    {
+      "source": "fm_wrong_current",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_wrong_current",
+      "relation": "LEADS_TO",
+      "target": "fm_falsehigh",
+      "evidence": null
+    },
+    {
+      "source": "fm_falsehigh",
+      "relation": "LEADS_TO",
+      "target": "fm_undetected",
+      "evidence": null
+    },
+    {
+      "source": "fm_undetected",
+      "relation": "LEADS_TO",
+      "target": "cons_ts",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_partial_mst",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procrev",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_standing_order",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_standdown",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_training",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_audit",
+      "evidence": null
+    },
+    {
+      "source": "cons_ts",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts331",
+      "evidence": null
+    },
+    {
+      "source": "cons_ts",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts304",
+      "evidence": null
+    }
+  ],
+  "chain": "human performance error [cause TBD] -> incorrect 100% current value used instead of 120% for NI-41 span calibration -> NI-41 indicates falsely high flux vs NI-42/43/44 -> NI-41 declared operable without recognizing HU error -> TS 3.3.1/3.0.4 noncompliance (Mode 2 entry 11/1 1534 to operability restored 11/4 0716)",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code TBD/category provisional per FORM-366 fields (no official cause code assigned in block 13, which is empty). Plant name/unit/reactor type not given in FORM-366 fields but stated explicitly in narrative (Shearon Harris Nuclear Power Plant, Unit 1; PWR inferred from Tavg/turbine first-stage-pressure rod control description). ADS not mentioned in this narrative, not modeled. No previous similar occurrence (explicitly stated none in past three years) so no stub LER/SIMILAR_TO edge created. Systems named only in Safety Analysis design-context passage (PICs, automatic rod control, feedwater regulating bypass valves, turbine first stage pressure) are DESIGN CONTEXT per rule 6 and are not modeled as System/Component nodes, except where directly relevant to the failure chain (NIS, RPS, instrumentation channels)."
+}

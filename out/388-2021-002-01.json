@@ -1,0 +1,358 @@
+{
+  "ler_number": "388-2021-002-01",
+  "identity": {
+    "accession_number": "ML22039A022",
+    "docket": "05000388",
+    "plant_name": "Susquehanna",
+    "unit": 2,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2021-08-30",
+    "report_date": "2022-02-08",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Loss of Secondary Containment due to Failed Differential Pressure Transmitter"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)(C)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "E",
+      "system": "VA",
+      "component": "PDT",
+      "manufacturer": "B384",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The cause of the event was determined to be an age-related failure of Pressure Differential Transmitter (PDT) PDT-27581. The output of PDT-27581 was failed and providing incorrect inputs to the indicators and controllers, which resulted in the loss of Zone 2 D/P.",
+    "cause_code": "E",
+    "category": "Management/QA Deficiency",
+    "theme": "age-related instrument failure",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 388-2021-002-01",
+      "properties": {},
+      "type": "LER",
+      "key": "388-2021-002-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:388-2021-002-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Susquehanna Unit 2",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000388",
+      "match_key": "Unit:05000388"
+    },
+    {
+      "id": "cause",
+      "display_name": "Management/QA Deficiency (E)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "E",
+      "category": "Management/QA Deficiency",
+      "theme": "age-related instrument failure",
+      "proximate_text": "The cause of the event was determined to be an age-related failure of Pressure Differential Transmitter (PDT) PDT-27581. The output of PDT-27581 was failed and providing incorrect inputs to the indicators and controllers, which resulted in the loss of Zone 2 D/P.",
+      "provisional": false,
+      "match_key": "Cause:Management/QA Deficiency"
+    },
+    {
+      "id": "sys_bh",
+      "display_name": "Standby Gas Treatment System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BH",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "secondary containment drawdown system",
+      "match_key": "System:BH"
+    },
+    {
+      "id": "sys_va",
+      "display_name": "Reactor Building Zone 2 Exhaust / Secondary Containment HVAC",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "VA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:VA"
+    },
+    {
+      "id": "c_pdt27581",
+      "display_name": "Pressure Differential Transmitter PDT-27581",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "PDT",
+      "identifier": "PDT-27581",
+      "model": "21PDT2220-0.5",
+      "manufacturer_code": "B384",
+      "inferred_code": false,
+      "match_key": "Component:PDT|PDT-27581"
+    },
+    {
+      "id": "c_pdi27581",
+      "display_name": "SGT Zone 2 Exhaust Circulating Space/Outside D/P Indicator PDI-27581",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "PDI",
+      "identifier": "PDI-27581",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:PDI|PDI-27581"
+    },
+    {
+      "id": "c_pdi_a2",
+      "display_name": "SGT Zone 2 Outside D/P Indicator A2 (PDI-07554A2)",
+      "properties": {
+        "system_display": "BH"
+      },
+      "type": "Component",
+      "eiis_code": "PDI",
+      "identifier": "PDI-07554A2",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:PDI|PDI-07554A2"
+    },
+    {
+      "id": "c_pdi_b2",
+      "display_name": "SGT Zone 2 Outside D/P Indicator B2 (PDI-07554B2)",
+      "properties": {
+        "system_display": "BH"
+      },
+      "type": "Component",
+      "eiis_code": "PDI",
+      "identifier": "PDI-07554B2",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:PDI|PDI-07554B2"
+    },
+    {
+      "id": "fm_pdt_fail",
+      "display_name": "PDT-27581 output failed (age-related)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Transmitter output failed and provided incorrect inputs to indicators and controllers.",
+      "match_key": "FailureMode:pdt-27581-output-failed-age-related"
+    },
+    {
+      "id": "fm_indicator_error",
+      "display_name": "Downscale/stuck indications on PDI-07554A2, PDI-07554B2, and PDI-27581",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Indicators and controllers received incorrect inputs, causing downscale readings on PDI-07554A2 and PDI-07554B2 and a stuck reading on PDI-27581.",
+      "match_key": "FailureMode:downscale-stuck-indications-on-pdi-07554a2-pdi-07554b2-and-pdi-27581"
+    },
+    {
+      "id": "fm_dp_loss",
+      "display_name": "Loss of Zone 2 secondary containment differential pressure",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Resulted in loss of negative D/P (vacuum) in secondary containment Zone 2, evidenced by positive D/P and difficulty opening Reactor Building doors.",
+      "match_key": "FailureMode:loss-of-zone-2-secondary-containment-differential-pressure"
+    },
+    {
+      "id": "cons_loss_sc",
+      "display_name": "Loss of secondary containment / condition prohibited by Technical Specifications",
+      "properties": {
+        "note": "SR 3.6.4.1.1 four-hour allowance exceeded around 08:00; LCO 3.6.4.1 Condition A retroactively determined applicable"
+      },
+      "type": "Consequence",
+      "start": "2021-08-30T04:00",
+      "end": "2021-08-30T09:55",
+      "duration": "~5:55",
+      "tz": null,
+      "match_key": "Consequence:loss-of-secondary-containment-condition-prohibited-by-technical-specifications"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace PDT-27581 and return SGT System to service",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-pdt-27581-and-return-sgt-system-to-service"
+    },
+    {
+      "id": "mfr_brandt",
+      "display_name": "Brandt",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "B384",
+      "match_key": "Manufacturer:B384"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(v)(C)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-c"
+    },
+    {
+      "id": "rr_tslco",
+      "display_name": "TS LCO 3.6.4.1 / SR 3.6.4.1.1",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-lco-3-6-4-1-sr-3-6-4-1-1"
+    },
+    {
+      "id": "ler_prev1",
+      "display_name": "LER 387-2016-006-00",
+      "properties": {},
+      "type": "LER",
+      "key": "387-2016-006-00",
+      "stub": true,
+      "title": "Loss of Secondary Containment Due to Damper Controller Sticking",
+      "plant": "Susquehanna Steam Electric Station",
+      "match_key": "LER:387-2016-006-00"
+    },
+    {
+      "id": "ler_prev2",
+      "display_name": "LER 387-2015-010-01",
+      "properties": {},
+      "type": "LER",
+      "key": "387-2015-010-01",
+      "stub": true,
+      "title": "Supplemental Report to LER-2015-010-00, Loss of Differential Pressure in Zone II of Secondary Containment",
+      "plant": "Susquehanna Steam Electric Station",
+      "match_key": "LER:387-2015-010-01"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_tslco",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_va",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bh",
+      "evidence": null
+    },
+    {
+      "source": "c_pdt27581",
+      "relation": "PART_OF",
+      "target": "sys_va",
+      "evidence": null
+    },
+    {
+      "source": "c_pdi27581",
+      "relation": "PART_OF",
+      "target": "sys_va",
+      "evidence": null
+    },
+    {
+      "source": "c_pdi_a2",
+      "relation": "PART_OF",
+      "target": "sys_bh",
+      "evidence": null
+    },
+    {
+      "source": "c_pdi_b2",
+      "relation": "PART_OF",
+      "target": "sys_bh",
+      "evidence": null
+    },
+    {
+      "source": "fm_pdt_fail",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_pdt_fail",
+      "relation": "LEADS_TO",
+      "target": "fm_indicator_error",
+      "evidence": null
+    },
+    {
+      "source": "fm_indicator_error",
+      "relation": "LEADS_TO",
+      "target": "fm_dp_loss",
+      "evidence": null
+    },
+    {
+      "source": "fm_dp_loss",
+      "relation": "LEADS_TO",
+      "target": "cons_loss_sc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "c_pdt27581",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_brandt",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev1",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev2",
+      "evidence": null
+    }
+  ],
+  "chain": "age-related PDT-27581 transmitter failure [cause E] -> incorrect indicator/controller inputs (downscale/stuck PDIs) -> loss of Zone 2 secondary containment D/P -> loss of secondary containment / TS SR not met, LCO 3.6.4.1 Condition A applicable",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code E (Management/QA Deficiency) governs category per official coding, though narrative frames the proximate cause as an age-related instrument failure; theme captures this nuance. No redundant system exists for secondary containment per the narrative, so no BACKED_UP_BY edge was created. SGT (BH) itself remained capable of drawdown per engineering analysis, but this describes design/analysis capability rather than a stated-operable backup system during the inoperability window, so it is not modeled as BACKED_UP_BY. Previous occurrence keys copied exactly as stated in narrative (leading '1-' unit digit per instructions), though narrative itself used '50-388(387)/...' format."
+}

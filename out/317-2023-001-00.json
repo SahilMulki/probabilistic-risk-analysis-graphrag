@@ -1,0 +1,317 @@
+{
+  "ler_number": "317-2023-001-00",
+  "identity": {
+    "accession_number": "ML23331A300",
+    "docket": "05000317",
+    "plant_name": "Calvert Cliffs",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2023-09-29",
+    "report_date": "2023-11-27",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "inspection",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Condition Prohibited by Technical Specifications due to Failure to Sample Diesel Generator Fuel Oil Storage Tank"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "A",
+      "system": "DC",
+      "component": "TK",
+      "manufacturer": "X999",
+      "reportable": "N"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The direct cause of the event was failure to generate an issue report and failure to notify the Operations Shift Manager for the diesel fuel oil lubricity out of specification condition.",
+    "cause_code": "A",
+    "category": "Personnel Error",
+    "theme": "Missed procedural notification/issue-report step after out-of-spec sample",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 317-2023-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "317-2023-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:317-2023-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Calvert Cliffs Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000317",
+      "match_key": "Unit:05000317"
+    },
+    {
+      "id": "cause",
+      "display_name": "Personnel Error (A)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "A",
+      "category": "Personnel Error",
+      "theme": "Missed procedural notification/issue-report step after out-of-spec sample",
+      "proximate_text": "The direct cause of the event was failure to generate an issue report and failure to notify the Operations Shift Manager for the diesel fuel oil lubricity out of specification condition.",
+      "provisional": false,
+      "match_key": "Cause:Personnel Error"
+    },
+    {
+      "id": "sys_dc",
+      "display_name": "Diesel Generator Fuel Oil Storage System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "DC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:DC"
+    },
+    {
+      "id": "c_1a_fost",
+      "display_name": "1A Fuel Oil Storage Tank (FOST)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "TK",
+      "identifier": "1A",
+      "model": null,
+      "manufacturer_code": "X999",
+      "inferred_code": false,
+      "match_key": "Component:TK|1A"
+    },
+    {
+      "id": "c_11_fost",
+      "display_name": "11 Fuel Oil Storage Tank (FOST)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "TK",
+      "identifier": "11",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:TK|11"
+    },
+    {
+      "id": "c_21_fost",
+      "display_name": "21 Fuel Oil Storage Tank (FOST)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "TK",
+      "identifier": "21",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:TK|21"
+    },
+    {
+      "id": "fm_lubricity_high",
+      "display_name": "Fuel oil lubricity sample exceeded acceptance criteria (614 micro-meters, 1A FOST)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Sample results received 3/25/2022 documented lubricity of 614 micro-meters, above the 520 micro-meter acceptance criterion, an Action Level 2 value.",
+      "match_key": "FailureMode:fuel-oil-lubricity-sample-exceeded-acceptance-criteria-614-micro-meters-1a-fost"
+    },
+    {
+      "id": "fm_no_issue_report",
+      "display_name": "Issue report not generated for Action Level 2 lubricity result",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Per procedure, an Action Level 2 value requires initiation of an issue report; none was generated following the 3/25/2022 result.",
+      "match_key": "FailureMode:issue-report-not-generated-for-action-level-2-lubricity-result"
+    },
+    {
+      "id": "fm_no_notification",
+      "display_name": "Operations Shift Manager not notified",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The Operations Shift Manager was not notified of the out-of-specification lubricity result as required by procedure.",
+      "match_key": "FailureMode:operations-shift-manager-not-notified"
+    },
+    {
+      "id": "fm_ts_action_missed",
+      "display_name": "TS 3.8.3 Condition E required action (restore fuel oil properties within 30 days) not completed",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Required Action E.1 to restore stored fuel oil properties to within limits within a 30-day completion time was not completed because the condition was never identified/tracked.",
+      "match_key": "FailureMode:ts-3-8-3-condition-e-required-action-restore-fuel-oil-properties-within-30-days-not-completed"
+    },
+    {
+      "id": "fm_ts_condition_f_missed",
+      "display_name": "TS 3.8.3 Condition F required action (declare DG inoperable) not completed",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Because Condition E's required action and completion time were not met and not tracked, Condition F's required action to declare the associated DG(s) inoperable (immediate completion time) was also not completed.",
+      "match_key": "FailureMode:ts-3-8-3-condition-f-required-action-declare-dg-inoperable-not-completed"
+    },
+    {
+      "id": "cons_ts_prohibited",
+      "display_name": "Condition prohibited by Technical Specifications (TS 3.8.3 Conditions E and F required actions not met)",
+      "properties": {
+        "note": "No actual nuclear safety consequence; subsequent fuel oil samples were within limits."
+      },
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:condition-prohibited-by-technical-specifications-ts-3-8-3-conditions-e-and-f-required-actions-not-met"
+    },
+    {
+      "id": "ca_sample",
+      "display_name": "Sample 1A FOST and confirm lubricity within acceptable limits",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:sample-1a-fost-and-confirm-lubricity-within-acceptable-limits"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts383",
+      "display_name": "Technical Specification 3.8.3 Diesel Fuel Oil",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-3-8-3-diesel-fuel-oil"
+    },
+    {
+      "id": "rr_nureg1022",
+      "display_name": "NUREG-1022, Revision 3",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "standard/guidance",
+      "match_key": "RegulatoryReference:nureg-1022-revision-3"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts383",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_nureg1022",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_dc",
+      "evidence": null
+    },
+    {
+      "source": "c_1a_fost",
+      "relation": "PART_OF",
+      "target": "sys_dc",
+      "evidence": null
+    },
+    {
+      "source": "c_11_fost",
+      "relation": "PART_OF",
+      "target": "sys_dc",
+      "evidence": null
+    },
+    {
+      "source": "c_21_fost",
+      "relation": "PART_OF",
+      "target": "sys_dc",
+      "evidence": null
+    },
+    {
+      "source": "fm_lubricity_high",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_lubricity_high",
+      "relation": "LEADS_TO",
+      "target": "fm_no_issue_report",
+      "evidence": null
+    },
+    {
+      "source": "fm_lubricity_high",
+      "relation": "LEADS_TO",
+      "target": "fm_no_notification",
+      "evidence": null
+    },
+    {
+      "source": "fm_no_issue_report",
+      "relation": "LEADS_TO",
+      "target": "fm_ts_action_missed",
+      "evidence": null
+    },
+    {
+      "source": "fm_no_notification",
+      "relation": "LEADS_TO",
+      "target": "fm_ts_action_missed",
+      "evidence": null
+    },
+    {
+      "source": "fm_ts_action_missed",
+      "relation": "LEADS_TO",
+      "target": "fm_ts_condition_f_missed",
+      "evidence": null
+    },
+    {
+      "source": "fm_ts_condition_f_missed",
+      "relation": "LEADS_TO",
+      "target": "cons_ts_prohibited",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_sample",
+      "evidence": null
+    }
+  ],
+  "chain": "personnel error [cause A]: no issue report / no OSM notification -> TS 3.8.3 Condition E required action (30-day restoration) not completed -> Condition F required action (declare DG inoperable) not completed -> condition prohibited by Technical Specifications (no actual safety consequence; fuel oil later within limits)",
+  "golden_questions": [
+    "Q1",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Event date in form (2023-09-29) is the NRC inspection report receipt/discovery date documenting the finding, not the original 2022 sampling events; narrative timeline spans 3/8/2022-6/2/2022 with discovery via NRC inspection on 9/29/2023. No prior similar occurrence identified per Section G, so no SIMILAR_TO/stub LER emitted. Manufacturer code X999 (generic/not applicable) not modeled as a Manufacturer node since no specific manufacturer is identified for the tank."
+}

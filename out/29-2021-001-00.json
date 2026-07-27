@@ -1,0 +1,371 @@
+{
+  "ler_number": "29-2021-001-00",
+  "identity": {
+    "accession_number": "ML22038A211",
+    "docket": "05000029",
+    "plant_name": null,
+    "unit": null,
+    "reactor_type": null,
+    "nss_vendor": null,
+    "event_date": "2021-11-19",
+    "report_date": "2021-01-12",
+    "operating_mode": null,
+    "power_level": null,
+    "discovery_context": "inspection",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Licensee Event Report No. 2021-001-00"
+  },
+  "reporting_basis": {
+    "reported_under": [],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": ";",
+      "system": "B",
+      "component": "IA",
+      "manufacturer": "RLY",
+      "reportable": "N"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The most probable cause of the event was due to ISS overconfidence, such that the individual did not eliminate potential distractions while responding to a request from the SAS Operator to review a set of alarms that were received during the November 19, 2021, planned PA entry... and incorrectly informed the SAS Operator that the alarms were associated and consistent with a PA entry",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "supervisory overconfidence / distraction leading to missed alarm and failure to implement compensatory measure",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 029-2021-001-00",
+      "properties": {
+        "match_key": "LER:029-2021-001-00"
+      },
+      "type": "LER",
+      "key": "29-2021-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:29-2021-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Yankee Nuclear Power Station",
+      "properties": {
+        "match_key": "Unit:05000029"
+      },
+      "type": "Unit",
+      "key": "05000029",
+      "match_key": "Unit:05000029"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {
+        "match_key": "Cause:provisional"
+      },
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "supervisory overconfidence / distraction leading to missed alarm and failure to implement compensatory measure",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_ia",
+      "display_name": "Security System",
+      "properties": {
+        "match_key": "System:IA"
+      },
+      "type": "System",
+      "eiis_code": "IA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:IA"
+    },
+    {
+      "id": "c_iob2",
+      "display_name": "Input/Output Board #2",
+      "properties": {
+        "match_key": "Component:RLY|IO-Board-2"
+      },
+      "type": "Component",
+      "eiis_code": "RLY",
+      "identifier": "I/O Board #2",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:RLY|I/O Board #2"
+    },
+    {
+      "id": "c_iob3",
+      "display_name": "Input/Output Board #3",
+      "properties": {
+        "match_key": "Component:RLY|IO-Board-3"
+      },
+      "type": "Component",
+      "eiis_code": "RLY",
+      "identifier": "I/O Board #3",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:RLY|I/O Board #3"
+    },
+    {
+      "id": "fm_distraction",
+      "display_name": "ISS overconfidence / failure to eliminate distractions while reviewing alarms",
+      "properties": {
+        "match_key": "FailureMode:iss-overconfidence-distraction"
+      },
+      "type": "FailureMode",
+      "description": "ISS did not eliminate potential distractions while responding to SAS Operator's request to review alarms received during planned PA entry.",
+      "match_key": "FailureMode:iss-overconfidence-failure-to-eliminate-distractions-while-reviewing-alarms"
+    },
+    {
+      "id": "fm_missed_alarm",
+      "display_name": "ISS missed/misidentified I/O Board #2 lost communication alarm",
+      "properties": {
+        "match_key": "FailureMode:missed-misidentified-alarm"
+      },
+      "type": "FailureMode",
+      "description": "ISS scanned alarms and incorrectly informed SAS Operator that the I/O Board #2 lost communication alarm was expected/associated with the PA entry.",
+      "match_key": "FailureMode:iss-missed-misidentified-i-o-board-2-lost-communication-alarm"
+    },
+    {
+      "id": "fm_ack_wrong",
+      "display_name": "SAS Operator acknowledged alarm as expected personnel entry per incorrect direction",
+      "properties": {
+        "match_key": "FailureMode:sas-operator-acknowledged-incorrectly"
+      },
+      "type": "FailureMode",
+      "description": "SAS Operator complied with ISS's incorrect direction and acknowledged the I/O Board #2 alarm as expected personnel entry, taking no further action.",
+      "match_key": "FailureMode:sas-operator-acknowledged-alarm-as-expected-personnel-entry-per-incorrect-direction"
+    },
+    {
+      "id": "fm_no_compmeasure",
+      "display_name": "Time-sensitive compensatory measure not established",
+      "properties": {
+        "match_key": "FailureMode:compensatory-measure-not-established"
+      },
+      "type": "FailureMode",
+      "description": "Contrary to security procedure requiring a time-sensitive compensatory measure for any I/O Board loss of communication, the compensatory measure was not established following the I/O Board #2 alarm.",
+      "match_key": "FailureMode:time-sensitive-compensatory-measure-not-established"
+    },
+    {
+      "id": "cons_noncompliance",
+      "display_name": "Failure to establish required compensatory measure / safeguards non-compliance",
+      "properties": {
+        "match_key": "Consequence:compensatory-measure-noncompliance"
+      },
+      "type": "Consequence",
+      "start": "2021-11-19T20:10",
+      "end": "2021-11-19T22:54",
+      "duration": "approx 2:44",
+      "tz": "EST",
+      "match_key": "Consequence:failure-to-establish-required-compensatory-measure-safeguards-non-compliance"
+    },
+    {
+      "id": "ca_remediation",
+      "display_name": "Perform remediation training for the individual",
+      "properties": {
+        "match_key": "CorrectiveAction:remediation-training"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:perform-remediation-training-for-the-individual"
+    },
+    {
+      "id": "ca_idp",
+      "display_name": "Develop Individual Development Plan for the individual",
+      "properties": {
+        "match_key": "CorrectiveAction:individual-development-plan"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:develop-individual-development-plan-for-the-individual"
+    },
+    {
+      "id": "ca_presentation",
+      "display_name": "Deliver presentation to security force on expectations, conservative decision-making, procedure use/adherence, teamwork, and advocacy",
+      "properties": {
+        "match_key": "CorrectiveAction:security-force-presentation"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:deliver-presentation-to-security-force-on-expectations-conservative-decision-making-procedure-use-adherence-teamwork-and-advocacy"
+    },
+    {
+      "id": "ca_casestudy",
+      "display_name": "Develop and deliver case study on the event with focus on human performance error prevention tools",
+      "properties": {
+        "match_key": "CorrectiveAction:case-study-hu-tools"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:develop-and-deliver-case-study-on-the-event-with-focus-on-human-performance-error-prevention-tools"
+    },
+    {
+      "id": "rr_appg",
+      "display_name": "10 CFR 73 Appendix G, Section I(c) - Reportable Safeguards Events",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-73-appendix-g-section-i-c"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-73-appendix-g-section-i-c-reportable-safeguards-events"
+    },
+    {
+      "id": "rr_7371b1",
+      "display_name": "10 CFR 73.71(b)(1)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-73-71-b-1"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-73-71-b-1"
+    },
+    {
+      "id": "rr_7371d",
+      "display_name": "10 CFR 73.71(d)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-73-71-d"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-73-71-d"
+    },
+    {
+      "id": "rr_rg562",
+      "display_name": "Regulatory Guide 5.62, Reporting of Safeguards Events",
+      "properties": {
+        "match_key": "RegulatoryReference:rg-5-62"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "standard/guidance",
+      "match_key": "RegulatoryReference:regulatory-guide-5-62-reporting-of-safeguards-events"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_appg",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_7371b1",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_7371d",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_rg562",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ia",
+      "evidence": null
+    },
+    {
+      "source": "c_iob2",
+      "relation": "PART_OF",
+      "target": "sys_ia",
+      "evidence": null
+    },
+    {
+      "source": "c_iob3",
+      "relation": "PART_OF",
+      "target": "sys_ia",
+      "evidence": null
+    },
+    {
+      "source": "fm_distraction",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_distraction",
+      "relation": "LEADS_TO",
+      "target": "fm_missed_alarm",
+      "evidence": null
+    },
+    {
+      "source": "fm_missed_alarm",
+      "relation": "LEADS_TO",
+      "target": "fm_ack_wrong",
+      "evidence": null
+    },
+    {
+      "source": "fm_ack_wrong",
+      "relation": "LEADS_TO",
+      "target": "fm_no_compmeasure",
+      "evidence": null
+    },
+    {
+      "source": "fm_no_compmeasure",
+      "relation": "LEADS_TO",
+      "target": "cons_noncompliance",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_remediation",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_idp",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_presentation",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_casestudy",
+      "evidence": null
+    }
+  ],
+  "chain": "ISS overconfidence/distraction [cause TBD, provisional] -> missed/misidentified I/O Board #2 alarm -> SAS Operator acknowledged alarm per incorrect direction -> time-sensitive compensatory measure not established -> safeguards non-compliance (~2h44m) [no unauthorized intrusion occurred; cameras/remaining PA detection capability remained functional]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Block-13 cause field literally contains ';' in source data — mapped to cause_code TBD/provisional since no coded cause letter was actually provided (form gave cause_code TBD, category provisional, matching this). The event is a security/safeguards LER, not a plant equipment failure; I/O Board loss-of-communication alarms are the triggering equipment condition but the reportable failure is the human/procedural lapse in establishing a compensatory measure. A separate, unaddressed condition report investigates the I/O board hardware failures themselves — not modeled here since narrative explicitly excludes it from this LER's scope. No previous similar occurrence was found (explicitly stated none in 2019-2021), so no SIMILAR_TO stub LER emitted. No manufacturer given for the relay/board components beyond the RLY code itself, so no Manufacturer node emitted (RLY appears to be a component-type code, not a manufacturer code, per EIIS convention 'Security System [IA] - Relay [RLY]')."
+}

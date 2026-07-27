@@ -1,0 +1,393 @@
+{
+  "ler_number": "382-2025-001-00",
+  "identity": {
+    "accession_number": "ML25143A119",
+    "docket": "05000382",
+    "plant_name": "Waterford",
+    "unit": 3,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2025-03-27",
+    "report_date": "2025-05-23",
+    "operating_mode": "1",
+    "power_level": 94,
+    "discovery_context": "inspection",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Inoperability of Startup Transformer 'A' Results in a Condition Prohibited by Technical Specifications Waterford Steam Electric Station, Unit 3 NRC Docket No. 50-382 Renewed Facility Operating License No. NPF-38"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "E",
+      "system": "EA",
+      "component": "XFMR",
+      "manufacturer": "W120",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The direct cause of the inoperability of SUT A was the test port cap not being installed by the vendor after testing was completed. This has been attributed to ineffective usage of error prevention tools and supervisory oversight lacking the required rigor.",
+    "cause_code": "E",
+    "category": "Management/QA Deficiency",
+    "theme": "Vendor procedure gap / inadequate post-job and supervisory quality review",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 382-2025-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "382-2025-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:382-2025-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Waterford Unit 3",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000382",
+      "match_key": "Unit:05000382"
+    },
+    {
+      "id": "cause",
+      "display_name": "Management/QA Deficiency (E)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "E",
+      "category": "Management/QA Deficiency",
+      "theme": "Vendor procedure gap / inadequate post-job and supervisory quality review",
+      "proximate_text": "The direct cause of the inoperability of SUT A was the test port cap not being installed by the vendor after testing was completed. This has been attributed to ineffective usage of error prevention tools and supervisory oversight lacking the required rigor.",
+      "provisional": false,
+      "match_key": "Cause:Management/QA Deficiency"
+    },
+    {
+      "id": "sys_ea",
+      "display_name": "Offsite Power System / Startup Transformer System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "EA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:EA"
+    },
+    {
+      "id": "sys_sutb",
+      "display_name": "Startup Transformer B",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "EA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; operable",
+      "match_key": "System:EA"
+    },
+    {
+      "id": "sys_tedg",
+      "display_name": "Temporary Emergency Diesel Generator",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "backup; operable",
+      "match_key": "System:temporary-emergency-diesel-generator"
+    },
+    {
+      "id": "c_suta",
+      "display_name": "Startup Transformer A (SUT A)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "XFMR",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": "W120",
+      "inferred_code": false,
+      "match_key": "Component:XFMR"
+    },
+    {
+      "id": "c_bushing",
+      "display_name": "'C' phase high-side bushing",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:c-phase-high-side-bushing"
+    },
+    {
+      "id": "c_testport",
+      "display_name": "Bushing test port cap",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:bushing-test-port-cap"
+    },
+    {
+      "id": "c_gasket",
+      "display_name": "Test port gasket",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:test-port-gasket"
+    },
+    {
+      "id": "fm_capmissing",
+      "display_name": "Test port cap not reinstalled after vendor testing",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Following bushing testing completed January 20, 2025, the vendor removed the test port cap for testing but did not reinstall it, and the omission was not caught during job execution, post-job quality review, or FME closeout.",
+      "match_key": "FailureMode:test-port-cap-not-reinstalled-after-vendor-testing"
+    },
+    {
+      "id": "fm_arcing",
+      "display_name": "Arcing in open test port upon energization",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "With the cap missing, SUT A was energized and placed in standby, and arcing occurred at the exposed test port.",
+      "match_key": "FailureMode:arcing-in-open-test-port-upon-energization"
+    },
+    {
+      "id": "fm_gasketfail",
+      "display_name": "Test port gasket failure",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Arcing in the test port eventually caused the gasket to fail, allowing bushing oil level to lower.",
+      "match_key": "FailureMode:test-port-gasket-failure"
+    },
+    {
+      "id": "fm_oilloss",
+      "display_name": "Loss of visible oil level in 'C' phase bushing",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Oil level lowered due to the failed gasket; discovered by operator with no visible oil level on March 27, 2025.",
+      "match_key": "FailureMode:loss-of-visible-oil-level-in-c-phase-bushing"
+    },
+    {
+      "id": "cons_suta",
+      "display_name": "SUT A inoperable / condition prohibited by Technical Specifications",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2025-01-20",
+      "end": "2025-04-03",
+      "duration": "~73 days",
+      "tz": null,
+      "match_key": "Consequence:sut-a-inoperable-condition-prohibited-by-technical-specifications"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replaced 'C' phase bushing",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replaced-c-phase-bushing"
+    },
+    {
+      "id": "ca_procedure",
+      "display_name": "Revised transformer testing procedures to verify test caps installed at conclusion of test",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revised-transformer-testing-procedures-to-verify-test-caps-installed-at-conclusion-of-test"
+    },
+    {
+      "id": "ca_ier",
+      "display_name": "Review effectiveness of vendor oversight recommendations from IER L2-13-53 and L2-21-4",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:review-effectiveness-of-vendor-oversight-recommendations-from-ier-l2-13-53-and-l2-21-4"
+    },
+    {
+      "id": "ca_training",
+      "display_name": "Develop additional training on importance of closeout reviews",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:develop-additional-training-on-importance-of-closeout-reviews"
+    },
+    {
+      "id": "mfr_w120",
+      "display_name": "Manufacturer W120",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "W120",
+      "match_key": "Manufacturer:W120"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts3811",
+      "display_name": "Technical Specification 3.8.1.1 Electrical Power Systems, A.C. Sources",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-3-8-1-1-electrical-power-systems-a-c-sources"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts3811",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ea",
+      "evidence": null
+    },
+    {
+      "source": "c_suta",
+      "relation": "PART_OF",
+      "target": "sys_ea",
+      "evidence": null
+    },
+    {
+      "source": "c_bushing",
+      "relation": "PART_OF",
+      "target": "c_suta",
+      "evidence": null
+    },
+    {
+      "source": "c_testport",
+      "relation": "PART_OF",
+      "target": "c_bushing",
+      "evidence": null
+    },
+    {
+      "source": "c_gasket",
+      "relation": "PART_OF",
+      "target": "c_testport",
+      "evidence": null
+    },
+    {
+      "source": "c_suta",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_w120",
+      "evidence": null
+    },
+    {
+      "source": "fm_capmissing",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_capmissing",
+      "relation": "LEADS_TO",
+      "target": "fm_arcing",
+      "evidence": null
+    },
+    {
+      "source": "fm_arcing",
+      "relation": "LEADS_TO",
+      "target": "fm_gasketfail",
+      "evidence": null
+    },
+    {
+      "source": "fm_gasketfail",
+      "relation": "LEADS_TO",
+      "target": "fm_oilloss",
+      "evidence": null
+    },
+    {
+      "source": "fm_oilloss",
+      "relation": "LEADS_TO",
+      "target": "cons_suta",
+      "evidence": null
+    },
+    {
+      "source": "cons_suta",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_sutb",
+      "evidence": null
+    },
+    {
+      "source": "cons_suta",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_tedg",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procedure",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_ier",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_training",
+      "evidence": null
+    }
+  ],
+  "chain": "ineffective error-prevention tools/supervisory oversight [cause E] -> vendor failed to reinstall test port cap -> arcing at exposed test port -> gasket failure -> bushing oil level loss -> SUT A inoperable / TS-prohibited condition [backups SUT B, Temporary EDG available]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Previous Similar Events section in narrative was blank/absent; no stub LER emitted (rule 9 not triggered). Supplement expected pending vendor bushing testing results, but status field per FORM-366 is 'final' so left as given. SUT B and Temporary EDG explicitly stated to have 'remained operable for the duration' -> modeled as BACKED_UP_BY. TS 3.8.1.1 modeled as RegulatoryReference (license-basis) since it's the specific TS cited as violated/reporting basis context."
+}

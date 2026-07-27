@@ -1,0 +1,129 @@
+{
+  "ler_number": "352-2020-002-00",
+  "identity": {
+    "accession_number": "ML21015A017",
+    "docket": "05000352",
+    "plant_name": "Limerick",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2020-11-16",
+    "report_date": "2021-01-15",
+    "operating_mode": null,
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "re RCIC were not Un-Isolated during Startup Resulting in Technical Specification Violations"
+  },
+  "reporting_basis": {
+    "reported_under": [],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": null,
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": null,
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 352-2020-006-00",
+      "properties": {},
+      "type": "LER",
+      "key": "352-2020-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:352-2020-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Limerick Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000352",
+      "match_key": "Unit:05000352"
+    },
+    {
+      "id": "cause",
+      "display_name": "Cause TBD",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": null,
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_rcic",
+      "display_name": "Reactor Core Isolation Cooling (RCIC)",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BN",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BN"
+    },
+    {
+      "id": "fm_notunisolated",
+      "display_name": "RCIC valves not un-isolated during startup",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "RCIC system valves remained isolated (not returned to operable configuration) during plant startup",
+      "match_key": "FailureMode:rcic-valves-not-un-isolated-during-startup"
+    },
+    {
+      "id": "cons_tsviolation",
+      "display_name": "Technical Specification violation due to RCIC inoperability",
+      "properties": {},
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:technical-specification-violation-due-to-rcic-inoperability"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rcic",
+      "evidence": null
+    },
+    {
+      "source": "fm_notunisolated",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_notunisolated",
+      "relation": "LEADS_TO",
+      "target": "cons_tsviolation",
+      "evidence": null
+    }
+  ],
+  "chain": "cause TBD -> RCIC valves not un-isolated during startup -> Technical Specification violation",
+  "golden_questions": [],
+  "notes": "No FORM-366 block-13 data, no abstract, and no narrative text were provided beyond the title; details are insufficient to identify specific components, failure chain, or corrective actions. Cause code left as TBD/provisional per rule 4 since official code was not supplied. Graph reflects only the minimal information stated in the title."
+}

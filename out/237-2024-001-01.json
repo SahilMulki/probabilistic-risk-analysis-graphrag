@@ -1,0 +1,625 @@
+{
+  "ler_number": "237-2024-001-01",
+  "identity": {
+    "accession_number": "ML25296A231",
+    "docket": "05000237",
+    "plant_name": "Dresden",
+    "unit": 2,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2024-04-30",
+    "report_date": "2025-10-23",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Containment Cool ing Service Water Valve Failure Resulted in a Condition Prohibited by Technical Specifications and Loss of Safety Function"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)",
+      "10 CFR 50.73(a)(2)(v)(B)",
+      "10 CFR 50.73(a)(2)(v)(D)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "B",
+      "system": "Bl",
+      "component": "FD",
+      "manufacturer": "8135",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The root cause of the failures was a cracked weld between the actuator mounting plate and the top of the valve yoke. This allowed the actuator to flex away from the valve body, effectively increasing the stroke length. This degraded condition resulted in over-ranging of the potentiometer.",
+    "cause_code": "B",
+    "category": "Design/Manufacturing/Installation",
+    "theme": "cracked yoke weld causing actuator flex, potentiometer over-range, non-fault-tolerant logic design",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 237-2024-001-01",
+      "properties": {},
+      "type": "LER",
+      "key": "237-2024-001-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:237-2024-001-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Dresden Unit 2",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric",
+        "thermal_power_mwt": "2957"
+      },
+      "type": "Unit",
+      "key": "05000237",
+      "match_key": "Unit:05000237"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Manufacturing/Installation (B)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "B",
+      "category": "Design/Manufacturing/Installation",
+      "theme": "cracked yoke weld causing actuator flex, potentiometer over-range, non-fault-tolerant logic design",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Design/Manufacturing/Installation"
+    },
+    {
+      "id": "sys_bl",
+      "display_name": "Containment Cooling Service Water",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BI",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BI"
+    },
+    {
+      "id": "sys_bo",
+      "display_name": "Suppression Pool Cooling / LPCI",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BO",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected; Division II inoperable",
+      "match_key": "System:BO"
+    },
+    {
+      "id": "sys_nh",
+      "display_name": "Containment (Suppression Pool / Drywell Spray)",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "NH",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:NH"
+    },
+    {
+      "id": "c_hx",
+      "display_name": "Heat Exchanger 'A' Tube Side Discharge Valve",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "2-1501-3A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:heat-exchanger-a-tube-side-discharge-valve"
+    },
+    {
+      "id": "c_pdcv",
+      "display_name": "Tube Side Discharge Valve (PDCV)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "PDCV",
+      "identifier": "2-1501-3A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:PDCV|2-1501-3A"
+    },
+    {
+      "id": "c_fd",
+      "display_name": "Position feedback potentiometer",
+      "properties": {
+        "nomenclature": "Single Turn Potentiometer"
+      },
+      "type": "Component",
+      "eiis_code": "FD",
+      "identifier": null,
+      "model": "5611R1KL.5",
+      "manufacturer_code": "8135",
+      "inferred_code": false,
+      "match_key": "Component:FD"
+    },
+    {
+      "id": "c_rly",
+      "display_name": "Downstream open-permissive relay",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "RLY",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:RLY"
+    },
+    {
+      "id": "c_pdc",
+      "display_name": "Differential Pressure Controller",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "PDC",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:PDC"
+    },
+    {
+      "id": "c_yoke",
+      "display_name": "Valve yoke / actuator mounting plate weld",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:valve-yoke-actuator-mounting-plate-weld"
+    },
+    {
+      "id": "c_bkr",
+      "display_name": "LPCI pump breakers (Division II)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "BKR",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:BKR"
+    },
+    {
+      "id": "fm_weld",
+      "display_name": "Cracked weld between actuator mounting plate and valve yoke",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "A weld performed in 1977 following yoke repair was subject to low-load cyclic fatigue, slowly propagating a crack along the heat-affected zone.",
+      "match_key": "FailureMode:cracked-weld-between-actuator-mounting-plate-and-valve-yoke"
+    },
+    {
+      "id": "fm_flex",
+      "display_name": "Actuator flexed away from valve body, increasing effective stroke length",
+      "properties": {},
+      "type": "FailureMode",
+      "description": null,
+      "match_key": "FailureMode:actuator-flexed-away-from-valve-body-increasing-effective-stroke-length"
+    },
+    {
+      "id": "fm_overrange",
+      "display_name": "Position feedback potentiometer over-ranged into dead-band",
+      "properties": {},
+      "type": "FailureMode",
+      "description": null,
+      "match_key": "FailureMode:position-feedback-potentiometer-over-ranged-into-dead-band"
+    },
+    {
+      "id": "fm_relay",
+      "display_name": "Downstream relay remained open (open permissive not made up)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": null,
+      "match_key": "FailureMode:downstream-relay-remained-open-open-permissive-not-made-up"
+    },
+    {
+      "id": "fm_valvefail",
+      "display_name": "Valve failed to open / respond to controller demand",
+      "properties": {},
+      "type": "FailureMode",
+      "description": null,
+      "match_key": "FailureMode:valve-failed-to-open-respond-to-controller-demand"
+    },
+    {
+      "id": "fm_breakerstest",
+      "display_name": "Division II LPCI pump breakers racked out for test",
+      "properties": {},
+      "type": "FailureMode",
+      "description": null,
+      "match_key": "FailureMode:division-ii-lpci-pump-breakers-racked-out-for-test"
+    },
+    {
+      "id": "cons_lof",
+      "display_name": "Both divisions of Suppression Pool Cooling, Suppression Pool Spray, and Drywell Spray inoperable (loss of safety function)",
+      "properties": {
+        "condition": "prohibited by Technical Specifications"
+      },
+      "type": "Consequence",
+      "start": "2024-04-30T10:07",
+      "end": null,
+      "duration": "3 hours 39 minutes",
+      "tz": null,
+      "match_key": "Consequence:both-divisions-of-suppression-pool-cooling-suppression-pool-spray-and-drywell-spray-inoperable-loss-of-safety-function"
+    },
+    {
+      "id": "ca_adjust",
+      "display_name": "Adjust potentiometer and stroke length for HX 'A' Tube Side Discharge Valve",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:adjust-potentiometer-and-stroke-length-for-hx-a-tube-side-discharge-valve"
+    },
+    {
+      "id": "ca_weldrepair",
+      "display_name": "Repair cracked weld",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:repair-cracked-weld"
+    },
+    {
+      "id": "ca_extent",
+      "display_name": "Extent-of-condition inspections on other three HX Tube Side Discharge Valves",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:extent-of-condition-inspections-on-other-three-hx-tube-side-discharge-valves"
+    },
+    {
+      "id": "ca_compensatory",
+      "display_name": "Compensatory logic verification/validation after each operation; database sheet updates",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:compensatory-logic-verification-validation-after-each-operation-database-sheet-updates"
+    },
+    {
+      "id": "ca_logicmod",
+      "display_name": "Modify valve logic to remove/reduce reliance on position feedback",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:modify-valve-logic-to-remove-reduce-reliance-on-position-feedback"
+    },
+    {
+      "id": "ca_yokereplace",
+      "display_name": "Replace 'A' Tube Side Discharge Valve yoke and mounting plate",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-a-tube-side-discharge-valve-yoke-and-mounting-plate"
+    },
+    {
+      "id": "ca_adjustothers",
+      "display_name": "Adjust other division and Unit 3 HX Tube Side Discharge Valves",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:adjust-other-division-and-unit-3-hx-tube-side-discharge-valves"
+    },
+    {
+      "id": "mfr_8135",
+      "display_name": "Manufacturer 8135",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "8135",
+      "match_key": "Manufacturer:8135"
+    },
+    {
+      "id": "rr_5073ib",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_5073vb",
+      "display_name": "10 CFR 50.73(a)(2)(v)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-b"
+    },
+    {
+      "id": "rr_5073vd",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "rr_ufsar",
+      "display_name": "Dresden UFSAR DBA-LOCA Analysis",
+      "properties": {
+        "type": "analysis-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:dresden-ufsar-dba-loca-analysis"
+    },
+    {
+      "id": "ler_prev1",
+      "display_name": "Dresden Unit 2 - HX 'A' Tube Side Discharge Valve failed to open due to potentiometer (06/03/1977)",
+      "properties": {},
+      "type": "LER",
+      "key": "237-1977-unknown",
+      "stub": true,
+      "title": null,
+      "plant": "Dresden Nuclear Power Station Unit 2",
+      "match_key": "LER:237-1977-unknown"
+    },
+    {
+      "id": "ler_prev2",
+      "display_name": "Dresden Unit 2 - HX 'A' Tube Side Discharge Valve failed to open, unknown causes (12/16/1977)",
+      "properties": {},
+      "type": "LER",
+      "key": "237-1977-unknown-2",
+      "stub": true,
+      "title": null,
+      "plant": "Dresden Nuclear Power Station Unit 2",
+      "match_key": "LER:237-1977-unknown-2"
+    },
+    {
+      "id": "ler_prev3",
+      "display_name": "Dresden Unit 2 - HX 'A' Tube Side Discharge Valve failed to open due to potentiometer (11/21/1983)",
+      "properties": {},
+      "type": "LER",
+      "key": "237-1983-unknown",
+      "stub": true,
+      "title": null,
+      "plant": "Dresden Nuclear Power Station Unit 2",
+      "match_key": "LER:237-1983-unknown"
+    },
+    {
+      "id": "ler_prev4",
+      "display_name": "Dresden Unit 2 - HX 'A' Tube Side Discharge Valve failed to open (02/29/1996)",
+      "properties": {},
+      "type": "LER",
+      "key": "237-1996-unknown",
+      "stub": true,
+      "title": null,
+      "plant": "Dresden Nuclear Power Station Unit 2",
+      "match_key": "LER:237-1996-unknown"
+    },
+    {
+      "id": "ler_prev5",
+      "display_name": "Dresden Unit 2 - HX 'A' Tube Side Discharge Valve failed to operate during CCSW Loop Flow Verification surveillance (11/14/2023)",
+      "properties": {},
+      "type": "LER",
+      "key": "237-2023-unknown",
+      "stub": true,
+      "title": null,
+      "plant": "Dresden Nuclear Power Station Unit 2",
+      "match_key": "LER:237-2023-unknown"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073ib",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073vb",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073vd",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bl",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bo",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_nh",
+      "evidence": null
+    },
+    {
+      "source": "c_fd",
+      "relation": "PART_OF",
+      "target": "c_pdcv",
+      "evidence": null
+    },
+    {
+      "source": "c_yoke",
+      "relation": "PART_OF",
+      "target": "c_pdcv",
+      "evidence": null
+    },
+    {
+      "source": "fm_weld",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_weld",
+      "relation": "LEADS_TO",
+      "target": "fm_flex",
+      "evidence": null
+    },
+    {
+      "source": "fm_flex",
+      "relation": "LEADS_TO",
+      "target": "fm_overrange",
+      "evidence": null
+    },
+    {
+      "source": "fm_overrange",
+      "relation": "LEADS_TO",
+      "target": "fm_relay",
+      "evidence": null
+    },
+    {
+      "source": "fm_relay",
+      "relation": "LEADS_TO",
+      "target": "fm_valvefail",
+      "evidence": null
+    },
+    {
+      "source": "fm_valvefail",
+      "relation": "LEADS_TO",
+      "target": "cons_lof",
+      "evidence": null
+    },
+    {
+      "source": "fm_breakerstest",
+      "relation": "LEADS_TO",
+      "target": "cons_lof",
+      "evidence": null
+    },
+    {
+      "source": "c_hx",
+      "relation": "PART_OF",
+      "target": "sys_bl",
+      "evidence": null
+    },
+    {
+      "source": "c_bkr",
+      "relation": "PART_OF",
+      "target": "sys_bo",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_adjust",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_weldrepair",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_extent",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_compensatory",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_logicmod",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_yokereplace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_adjustothers",
+      "evidence": null
+    },
+    {
+      "source": "c_fd",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_8135",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev1",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev2",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev3",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev4",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev5",
+      "evidence": null
+    }
+  ],
+  "chain": "cracked 1977 yoke weld [cause B] -> actuator flexes away from valve body, stroke length increases -> potentiometer over-ranges into dead-band -> downstream open-permissive relay stays open -> HX 'A' Tube Side Discharge Valve fails to open from MCR -> (parallel: Division II LPCI breakers racked for test) -> both divisions of Suppression Pool Cooling/Spray/Drywell Spray inoperable for 3h39m [no operable ECCS backup asserted; Division I LPCI capable of feeding sprays but CCSW-cooled spray function itself was the lost function]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Root cause is design/manufacturing/installation (cause code B) tied to a 1977 weld defect; the potentiometer over-range and relay failure are proximate mechanical/electrical consequences, not independently caused failure origins, so the chain is linear rather than parallel except for the coincident Division II breaker test outage, which is a separate contemporaneous failure mode leading to the same consequence. No BACKED_UP_BY edge asserted because no system is stated to have remained operable to replace the lost CCSW-cooled containment spray/suppression pool cooling function during the 3h39m window (Division I LPCI could feed sprays but without CCSW cooling, per narrative, so it does not constitute a full backup of the lost safety function). Five previous occurrences referenced only by date, not LER number, in the narrative; stub keys are placeholders built from date since no formal LER numbers were given in text."
+}

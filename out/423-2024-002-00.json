@@ -1,0 +1,400 @@
+{
+  "ler_number": "423-2024-002-00",
+  "identity": {
+    "accession_number": "ML24331A033",
+    "docket": "05000423",
+    "plant_name": "Millstone",
+    "unit": 3,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2024-10-10",
+    "report_date": "2024-11-26",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Door Latch Failure Resulted In Loss Of Safety Function For Secondary Containment Boundary"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)(C)",
+      "10 CFR 50.73(a)(2)(v)(D)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "B",
+      "system": "VF",
+      "component": null,
+      "manufacturer": null,
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "Frequent access and egress through door SF-21-5 lead to loosening of the set screw engagement for the hatch handle. This condition prevented the door from being secured in a closed position, creating a breach in the Secondary Containment boundary.",
+    "cause_code": "B",
+    "category": "Design/Manufacturing/Installation",
+    "theme": "set-screw loosening from repeated door use / latch mechanism design",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 423-2024-002-00",
+      "properties": {
+        "match_key": "LER:423-2024-002-00"
+      },
+      "type": "LER",
+      "key": "423-2024-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:423-2024-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Millstone Unit 3",
+      "properties": {
+        "match_key": "Unit:05000423",
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000423",
+      "match_key": "Unit:05000423"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Manufacturing/Installation (B)",
+      "properties": {
+        "match_key": "Cause:Design-Manufacturing-Installation"
+      },
+      "type": "Cause",
+      "cause_code": "B",
+      "category": "Design/Manufacturing/Installation",
+      "theme": "set-screw loosening from repeated door use / latch mechanism design",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Design/Manufacturing/Installation"
+    },
+    {
+      "id": "sys_vf",
+      "display_name": "Supplemental Leak Collection and Release System",
+      "properties": {
+        "match_key": "System:VF"
+      },
+      "type": "System",
+      "eiis_code": "VF",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "secondary containment boundary function",
+      "match_key": "System:VF"
+    },
+    {
+      "id": "sys_nf",
+      "display_name": "Auxiliary Building Ventilation/Filtration System",
+      "properties": {
+        "match_key": "System:NF"
+      },
+      "type": "System",
+      "eiis_code": "NF",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; operable throughout event",
+      "match_key": "System:NF"
+    },
+    {
+      "id": "c_door",
+      "display_name": "SLCRS Door SF-21-5",
+      "properties": {
+        "match_key": "Component:DR|SF-21-5"
+      },
+      "type": "Component",
+      "eiis_code": "DR",
+      "identifier": "SF-21-5",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:DR|SF-21-5"
+    },
+    {
+      "id": "c_latch",
+      "display_name": "Door latch mechanism (hatch handle set screw)",
+      "properties": {
+        "note": "fabricated on site, no unique EIIS manufacturer code",
+        "match_key": "Component:door-latch-mechanism"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:door-latch-mechanism-hatch-handle-set-screw"
+    },
+    {
+      "id": "fm_setscrew",
+      "display_name": "Set screw engagement loosened from frequent door access/egress",
+      "properties": {
+        "match_key": "FailureMode:set-screw-loosened"
+      },
+      "type": "FailureMode",
+      "description": "Frequent access and egress through door SF-21-5 lead to loosening of the set screw engagement for the hatch handle.",
+      "match_key": "FailureMode:set-screw-engagement-loosened-from-frequent-door-access-egress"
+    },
+    {
+      "id": "fm_latchfell",
+      "display_name": "Door latch fell off",
+      "properties": {
+        "match_key": "FailureMode:latch-fell-off"
+      },
+      "type": "FailureMode",
+      "description": "SLCRS door SF-21-5 latch had fallen off, and the door is latch dependent, so it would not close in the SLCRS air flow direction.",
+      "match_key": "FailureMode:door-latch-fell-off"
+    },
+    {
+      "id": "fm_breach",
+      "display_name": "Secondary containment boundary breached",
+      "properties": {
+        "match_key": "FailureMode:secondary-containment-breach"
+      },
+      "type": "FailureMode",
+      "description": "Door could not be secured in a closed position, creating a breach in the Secondary Containment boundary.",
+      "match_key": "FailureMode:secondary-containment-boundary-breached"
+    },
+    {
+      "id": "cons_inop",
+      "display_name": "Secondary Containment / SLCRS inoperable",
+      "properties": {
+        "match_key": "Consequence:secondary-containment-inoperable"
+      },
+      "type": "Consequence",
+      "start": "2024-10-10T09:02",
+      "end": "2024-10-10T12:00",
+      "duration": "2:58",
+      "tz": null,
+      "match_key": "Consequence:secondary-containment-slcrs-inoperable"
+    },
+    {
+      "id": "ca_repair",
+      "display_name": "Repair latching mechanism and restore Secondary Containment to OPERABLE",
+      "properties": {
+        "match_key": "CorrectiveAction:repair-latching-mechanism"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:repair-latching-mechanism-and-restore-secondary-containment-to-operable"
+    },
+    {
+      "id": "ca_future",
+      "display_name": "Additional corrective actions per station corrective action program",
+      "properties": {
+        "match_key": "CorrectiveAction:additional-corrective-actions"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:additional-corrective-actions-per-station-corrective-action-program"
+    },
+    {
+      "id": "rr_5073c",
+      "display_name": "10 CFR 50.73(a)(2)(v)(C)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-c"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-c"
+    },
+    {
+      "id": "rr_5073d",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "rr_ts3662",
+      "display_name": "Technical Specification 3.6.6.2",
+      "properties": {
+        "match_key": "RegulatoryReference:ts-3-6-6-2"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-3-6-6-2"
+    },
+    {
+      "id": "rr_fsar",
+      "display_name": "FSAR Table 15.0-8",
+      "properties": {
+        "match_key": "RegulatoryReference:fsar-table-15-0-8"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:fsar-table-15-0-8"
+    },
+    {
+      "id": "rr_50_67",
+      "display_name": "10 CFR 50.67",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-67"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:10-cfr-50-67"
+    },
+    {
+      "id": "ler_2024_001",
+      "display_name": "LER 423-2024-001-00",
+      "properties": {
+        "match_key": "LER:3-2024-001-00"
+      },
+      "type": "LER",
+      "key": "423-2024-001-00",
+      "stub": true,
+      "title": "'A' waste disposal building exhaust fan removal created breach in secondary containment boundary",
+      "plant": "Millstone Power Station Unit 3",
+      "match_key": "LER:423-2024-001-00"
+    },
+    {
+      "id": "ler_2020_005",
+      "display_name": "LER 423-2020-005-00",
+      "properties": {
+        "match_key": "LER:3-2020-005-00"
+      },
+      "type": "LER",
+      "key": "423-2020-005-00",
+      "stub": true,
+      "title": "SLCRS Door blocked open rendering secondary containment inoperable",
+      "plant": "Millstone Power Station Unit 3",
+      "match_key": "LER:423-2020-005-00"
+    },
+    {
+      "id": "ler_2017_001",
+      "display_name": "LER 423-2017-001-00",
+      "properties": {
+        "match_key": "LER:3-2017-001-00"
+      },
+      "type": "LER",
+      "key": "423-2017-001-00",
+      "stub": true,
+      "title": "Failure of hydraulic door closer for SLCRS door A-24-4 rendered secondary containment inoperable",
+      "plant": "Millstone Power Station Unit 3",
+      "match_key": "LER:423-2017-001-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073c",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073d",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts3662",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_vf",
+      "evidence": null
+    },
+    {
+      "source": "c_door",
+      "relation": "PART_OF",
+      "target": "sys_vf",
+      "evidence": null
+    },
+    {
+      "source": "fm_setscrew",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_setscrew",
+      "relation": "LEADS_TO",
+      "target": "fm_latchfell",
+      "evidence": null
+    },
+    {
+      "source": "fm_latchfell",
+      "relation": "LEADS_TO",
+      "target": "fm_breach",
+      "evidence": null
+    },
+    {
+      "source": "fm_breach",
+      "relation": "LEADS_TO",
+      "target": "cons_inop",
+      "evidence": null
+    },
+    {
+      "source": "cons_inop",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_nf",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_repair",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_future",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_2024_001",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_2020_005",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_2017_001",
+      "evidence": null
+    }
+  ],
+  "chain": "set screw engagement loosened from frequent door use [cause B] -> door latch fell off -> door could not be secured closed -> secondary containment boundary breached -> SLCRS/secondary containment inoperable (~3h) [backup: auxiliary building filtration operable]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Plant/unit inferred from narrative header (Millstone Power Station Unit 3) and docket 05000423; not present in FORM-366 identity block. Reactor type inferred as PWR (Millstone Unit 3 is a Westinghouse PWR) though not stated in inputs. Auxiliary building filtration system (NF) is explicitly stated operable at time of event, so modeled as BACKED_UP_BY; SLCRS itself has no operable redundant train stated (single train system per narrative), so no second System backup emitted for SLCRS trains. Previous-occurrence LER keys taken exactly as stated in narrative with unit digit prefixed per rule 9."
+}

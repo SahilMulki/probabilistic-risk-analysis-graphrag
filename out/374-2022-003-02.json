@@ -1,0 +1,520 @@
+{
+  "ler_number": "374-2022-003-02",
+  "identity": {
+    "accession_number": "ML23167A076",
+    "docket": "05000374",
+    "plant_name": "La Salle",
+    "unit": 2,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2022-09-26",
+    "report_date": "2023-06-16",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "02",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": ",Manual Scram due to lsophase Bus Duct Fire Followed by 2A RPS Normal Power Supply Trip"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "X",
+      "system": "EF",
+      "component": "RHE",
+      "manufacturer": "0026",
+      "reportable": "Y"
+    },
+    {
+      "cause": "B",
+      "system": "EL",
+      "component": "IPBU",
+      "manufacturer": "D312",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The cause of the isophase bus duct (IPBD) fire was incorrect joint compound having been supplied and subsequently used during the planned maintenance performed during the previous Unit 2 refueling outage in 2021. This resulted in high shunt bolted connection resistance causing overheating in the bolted connections. The overheating resulted in a failure of the IPBD support structure hardware and ignition of the retractable cover neoprene gasket.",
+    "cause_code": "X",
+    "category": "Other",
+    "theme": "incorrect joint compound causing bolted connection overheating",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 374-2022-003-02",
+      "properties": {},
+      "type": "LER",
+      "key": "374-2022-003-02",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:374-2022-003-02"
+    },
+    {
+      "id": "unit",
+      "display_name": "La Salle Unit 2",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000374",
+      "match_key": "Unit:05000374"
+    },
+    {
+      "id": "cause",
+      "display_name": "Other (X)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "X",
+      "category": "Other",
+      "theme": "incorrect joint compound causing bolted connection overheating",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Other"
+    },
+    {
+      "id": "cause_b",
+      "display_name": "Design/Manufacture/Installation/Construction Deficiency (B)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "X",
+      "category": "Other",
+      "theme": "degraded voltage adjustment potentiometer",
+      "proximate_text": "The cause of the 2A RPS Breaker trip was a degraded voltage adjust potentiometer.",
+      "provisional": false,
+      "match_key": "Cause:Other"
+    },
+    {
+      "id": "sys_mp",
+      "display_name": "Main Power",
+      "properties": {
+        "note": "distributes power from Main Generator to off-site transmission network"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:main-power"
+    },
+    {
+      "id": "sys_rps",
+      "display_name": "Reactor Protection System",
+      "properties": {
+        "note": "initiates reactor scram"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:reactor-protection-system"
+    },
+    {
+      "id": "c_ipbd",
+      "display_name": "Isolated phase bus duct",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "GBU",
+      "identifier": "706232",
+      "model": null,
+      "manufacturer_code": "D312",
+      "inferred_code": false,
+      "match_key": "Component:GBU|706232"
+    },
+    {
+      "id": "c_pot",
+      "display_name": "2A RPS Logic MG Set Output Breaker - Voltage Adjustment Potentiometer",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "RHE",
+      "identifier": "RHS500",
+      "model": null,
+      "manufacturer_code": "0026",
+      "inferred_code": false,
+      "match_key": "Component:RHE|RHS500"
+    },
+    {
+      "id": "c_bkr2a",
+      "display_name": "2A RPS normal power supply output breaker",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:2a-rps-normal-power-supply-output-breaker"
+    },
+    {
+      "id": "fm_jointcompound",
+      "display_name": "Incorrect joint compound used in bolted connections",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Incorrect joint compound supplied and used during 2021 refueling outage maintenance",
+      "match_key": "FailureMode:incorrect-joint-compound-used-in-bolted-connections"
+    },
+    {
+      "id": "fm_overheating",
+      "display_name": "High resistance bolted connections causing overheating",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "High shunt bolted connection resistance caused overheating in the bolted connections",
+      "match_key": "FailureMode:high-resistance-bolted-connections-causing-overheating"
+    },
+    {
+      "id": "fm_hwfail",
+      "display_name": "IPBD support structure hardware failure and gasket ignition",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Overheating resulted in failure of the IPBD support structure hardware and ignition of the retractable cover neoprene gasket",
+      "match_key": "FailureMode:ipbd-support-structure-hardware-failure-and-gasket-ignition"
+    },
+    {
+      "id": "fm_potdegraded",
+      "display_name": "Degraded voltage adjust potentiometer",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Degraded voltage adjustment potentiometer on 2A RPS Logic MG Set Output Breaker",
+      "match_key": "FailureMode:degraded-voltage-adjust-potentiometer"
+    },
+    {
+      "id": "fm_2atrip",
+      "display_name": "2A RPS breaker trip on overvoltage",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "2A RPS Breaker normal feed tripped on overvoltage following the manual scram",
+      "match_key": "FailureMode:2a-rps-breaker-trip-on-overvoltage"
+    },
+    {
+      "id": "cons_fire_scram",
+      "display_name": "Isophase bus duct fire and manual reactor scram",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2022-09-26T02:30",
+      "end": "2022-09-26T02:40",
+      "duration": "0:10",
+      "tz": "CDT",
+      "match_key": "Consequence:isophase-bus-duct-fire-and-manual-reactor-scram"
+    },
+    {
+      "id": "cons_rps_loss",
+      "display_name": "Loss of 2A RPS bus normal power / containment isolation actuation",
+      "properties": {
+        "note": "resulted in general containment isolation signals affecting containment isolation valves and MSIVs"
+      },
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:loss-of-2a-rps-bus-normal-power-containment-isolation-actuation"
+    },
+    {
+      "id": "ca_scram",
+      "display_name": "Manually scram Unit 2",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:manually-scram-unit-2"
+    },
+    {
+      "id": "ca_firebrigade",
+      "display_name": "Dispatch fire brigade and extinguish fire",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:dispatch-fire-brigade-and-extinguish-fire"
+    },
+    {
+      "id": "ca_swap",
+      "display_name": "Swap 2A RPS to alternate power supply and restore containment isolations",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:swap-2a-rps-to-alternate-power-supply-and-restore-containment-isolations"
+    },
+    {
+      "id": "ca_potreplace",
+      "display_name": "Replace degraded 2A RPS voltage potentiometer and restore normal power",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-degraded-2a-rps-voltage-potentiometer-and-restore-normal-power"
+    },
+    {
+      "id": "ca_ipbdrepair",
+      "display_name": "Restore damaged IPBD connections and restart Unit 2",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:restore-damaged-ipbd-connections-and-restart-unit-2"
+    },
+    {
+      "id": "ca_weldedconn",
+      "display_name": "Remove incorrect joint compound and replace bolted connections with welded flexible connections on Unit 2",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:remove-incorrect-joint-compound-and-replace-bolted-connections-with-welded-flexible-connections-on-unit-2"
+    },
+    {
+      "id": "ca_thermo",
+      "display_name": "Increase thermographic monitoring of Unit 1 IPBD",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:increase-thermographic-monitoring-of-unit-1-ipbd"
+    },
+    {
+      "id": "ca_supplyfix",
+      "display_name": "Remove incorrect joint compound from the supply system",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:remove-incorrect-joint-compound-from-the-supply-system"
+    },
+    {
+      "id": "mfr_ohmite",
+      "display_name": "Ohmite",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "0026",
+      "match_key": "Manufacturer:0026"
+    },
+    {
+      "id": "mfr_delta",
+      "display_name": "Delta Unibus Corp",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "D312",
+      "match_key": "Manufacturer:D312"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5072",
+      "display_name": "10 CFR 50.72(b)(2)(iv)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-2-iv-b"
+    },
+    {
+      "id": "rr_nei9902",
+      "display_name": "NEI 99-02, Regulatory Assessment Performance Indicator Guideline",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "standard/guidance",
+      "match_key": "RegulatoryReference:nei-99-02-regulatory-assessment-performance-indicator-guideline"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "LER 374-2021-002-01",
+      "properties": {},
+      "type": "LER",
+      "key": "374-2021-002-01",
+      "stub": true,
+      "title": "Reactor Protection System Half Scram due to Motor Generator Set Output Breaker Trip",
+      "plant": "LaSalle County Station Unit 2",
+      "match_key": "LER:374-2021-002-01"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_nei9902",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_mp",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rps",
+      "evidence": null
+    },
+    {
+      "source": "c_ipbd",
+      "relation": "PART_OF",
+      "target": "sys_mp",
+      "evidence": null
+    },
+    {
+      "source": "c_pot",
+      "relation": "PART_OF",
+      "target": "c_bkr2a",
+      "evidence": null
+    },
+    {
+      "source": "fm_jointcompound",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_jointcompound",
+      "relation": "LEADS_TO",
+      "target": "fm_overheating",
+      "evidence": null
+    },
+    {
+      "source": "fm_overheating",
+      "relation": "LEADS_TO",
+      "target": "fm_hwfail",
+      "evidence": null
+    },
+    {
+      "source": "fm_hwfail",
+      "relation": "LEADS_TO",
+      "target": "cons_fire_scram",
+      "evidence": null
+    },
+    {
+      "source": "fm_potdegraded",
+      "relation": "CAUSED_BY",
+      "target": "cause_b",
+      "evidence": null
+    },
+    {
+      "source": "fm_potdegraded",
+      "relation": "LEADS_TO",
+      "target": "fm_2atrip",
+      "evidence": null
+    },
+    {
+      "source": "fm_2atrip",
+      "relation": "LEADS_TO",
+      "target": "cons_rps_loss",
+      "evidence": null
+    },
+    {
+      "source": "cons_fire_scram",
+      "relation": "LEADS_TO",
+      "target": "cons_rps_loss",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_scram",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_firebrigade",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_swap",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_potreplace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_ipbdrepair",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_weldedconn",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_thermo",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_supplyfix",
+      "evidence": null
+    },
+    {
+      "source": "c_pot",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_ohmite",
+      "evidence": null
+    },
+    {
+      "source": "c_ipbd",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_delta",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    }
+  ],
+  "chain": "incorrect joint compound [cause X] -> high resistance bolted connections overheat -> IPBD support hardware fails / gasket ignites -> fire and manual scram -> [parallel] degraded voltage potentiometer [cause B] -> 2A RPS breaker trips on overvoltage -> loss of 2A RPS normal power / containment isolation actuation",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Two independent failure chains reported under one LER: (1) IPBD fire from incorrect joint compound (cause code X/Other per block 13 row 1, though the narrative describes a specific mechanism), leading to manual scram; (2) separately, following the scram, the 2A RPS normal power breaker tripped on overvoltage due to a degraded potentiometer (cause code B, Design/Manufacture/Installation/Construction Deficiency per block 13 row 2). Modeled two Cause nodes since block_13 lists two distinct cause codes for two distinct component failures; FORM-366 top-level cause_code/category (X/Other) governs the primary 'cause' node per rules, with the second cause captured as 'cause_b' for the potentiometer failure chain. RPS trip system independence and MSIV/containment isolation design context mentioned but not modeled as separate systems since not directly involved as backups per rule 6. Previous occurrence LER 374-2021-002-01 captured as stub per rule 9, key copied exactly as stated including leading unit digit."
+}

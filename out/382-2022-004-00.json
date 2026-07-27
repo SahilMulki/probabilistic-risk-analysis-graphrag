@@ -1,0 +1,558 @@
+{
+  "ler_number": "382-2022-004-00",
+  "identity": {
+    "accession_number": "ML22174A429",
+    "docket": "05000382",
+    "plant_name": "Waterford",
+    "unit": 3,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2022-04-24",
+    "report_date": "2022-06-23",
+    "operating_mode": "6",
+    "power_level": 0,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Operation Prohibited by Technical Specifications Due to Inadequate Radiation Monitor Calibration Procedures"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)",
+      "10 CFR 50.73(a)(2)(vii)(D)",
+      "10 CFR 50.73(a)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "D",
+      "system": "IL",
+      "component": "RI",
+      "manufacturer": "G063",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "the vendor incorrectly calculated the engineering conversion factor for ARMIRE5400B during plant construction, and inadequate procedural guidance for vendor oversight was attributed to ARMIRE5400B not having the correct engineering conversion factor installed; the calibration procedure for the containment high range radiation monitors did not require an update to the engineering conversion factor for a new detector, and the main steam line calibration procedure did not include steps to record new ion chamber output dose rate reference values",
+    "cause_code": "D",
+    "category": "Defective Procedure",
+    "theme": "Calibration procedures failed to account for conversion factor/keep-alive source and reference value updates",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 382-2022-004-00",
+      "properties": {
+        "match_key": "LER:382-2022-004-00"
+      },
+      "type": "LER",
+      "key": "382-2022-004-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:382-2022-004-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Waterford Unit 3",
+      "properties": {
+        "match_key": "Unit:05000382",
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000382",
+      "match_key": "Unit:05000382"
+    },
+    {
+      "id": "cause",
+      "display_name": "Defective Procedure (D)",
+      "properties": {
+        "match_key": "Cause:Defective Procedure"
+      },
+      "type": "Cause",
+      "cause_code": "D",
+      "category": "Defective Procedure",
+      "theme": "Calibration procedures failed to account for conversion factor/keep-alive source and reference value updates",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Defective Procedure"
+    },
+    {
+      "id": "sys_il",
+      "display_name": "Containment Radiation Monitoring System",
+      "properties": {
+        "match_key": "System:IL"
+      },
+      "type": "System",
+      "eiis_code": "IL",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:IL"
+    },
+    {
+      "id": "sys_sb",
+      "display_name": "Main Steam System",
+      "properties": {
+        "match_key": "System:SB"
+      },
+      "type": "System",
+      "eiis_code": "SB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SB"
+    },
+    {
+      "id": "c_armire5400b",
+      "display_name": "Containment High Range Radiation Monitor B (ARMIRE5400B)",
+      "properties": {
+        "match_key": "Component:RI|ARMIRE5400B"
+      },
+      "type": "Component",
+      "eiis_code": "RI",
+      "identifier": "ARMIRE5400B",
+      "model": null,
+      "manufacturer_code": "G063",
+      "inferred_code": false,
+      "match_key": "Component:RI|ARMIRE5400B"
+    },
+    {
+      "id": "c_armire5400a",
+      "display_name": "Containment High Range Radiation Monitor A (ARMIRE5400A)",
+      "properties": {
+        "match_key": "Component:RI|ARMIRE5400A",
+        "note": "declared inoperable April 13, 2022; reported under LER 2022-003-00"
+      },
+      "type": "Component",
+      "eiis_code": "RI",
+      "identifier": "ARMIRE5400A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:RI|ARMIRE5400A"
+    },
+    {
+      "id": "c_armire5500a",
+      "display_name": "Main Steam Line High Range Radiation Monitor A (ARMIRE5500A)",
+      "properties": {
+        "match_key": "Component:RI|ARMIRE5500A"
+      },
+      "type": "Component",
+      "eiis_code": "RI",
+      "identifier": "ARMIRE5500A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:RI|ARMIRE5500A"
+    },
+    {
+      "id": "fm_convfactor",
+      "display_name": "Incorrect engineering conversion factor installed in ARMIRE5400B",
+      "properties": {
+        "match_key": "FailureMode:incorrect-conversion-factor-armire5400b"
+      },
+      "type": "FailureMode",
+      "description": "Vendor incorrectly calculated the engineering conversion factor during plant construction; procedure lacked vendor-oversight controls and did not require updating the factor for a new detector.",
+      "match_key": "FailureMode:incorrect-engineering-conversion-factor-installed-in-armire5400b"
+    },
+    {
+      "id": "fm_keepalive",
+      "display_name": "Calibration procedure did not account for keep-alive source dose rate",
+      "properties": {
+        "match_key": "FailureMode:keep-alive-source-not-accounted"
+      },
+      "type": "FailureMode",
+      "description": "Calibration procedure guidance for containment high range radiation monitors omitted keep-alive source dose rate contribution.",
+      "match_key": "FailureMode:calibration-procedure-did-not-account-for-keep-alive-source-dose-rate"
+    },
+    {
+      "id": "fm_5400b_outcal",
+      "display_name": "ARMIRE5400B out of factor-of-2 accuracy tolerance",
+      "properties": {
+        "match_key": "FailureMode:armire5400b-out-of-calibration"
+      },
+      "type": "FailureMode",
+      "description": null,
+      "match_key": "FailureMode:armire5400b-out-of-factor-of-2-accuracy-tolerance"
+    },
+    {
+      "id": "fm_refvalues",
+      "display_name": "Calibration procedure did not include steps to record new ion chamber reference values",
+      "properties": {
+        "match_key": "FailureMode:missing-reference-value-recording-steps"
+      },
+      "type": "FailureMode",
+      "description": "After ARMIRE5500A detector replacement on January 1, 2000, the procedure failed to capture new ion chamber output dose rate reference values for subsequent calibrations.",
+      "match_key": "FailureMode:calibration-procedure-did-not-include-steps-to-record-new-ion-chamber-reference-values"
+    },
+    {
+      "id": "fm_5500a_outcal",
+      "display_name": "ARMIRE5500A exceeded +/-15% calibration tolerance",
+      "properties": {
+        "match_key": "FailureMode:armire5500a-out-of-calibration"
+      },
+      "type": "FailureMode",
+      "description": null,
+      "match_key": "FailureMode:armire5500a-exceeded-15-calibration-tolerance"
+    },
+    {
+      "id": "cons_5400b",
+      "display_name": "ARMIRE5400B declared inoperable / TS non-compliance",
+      "properties": {
+        "match_key": "Consequence:armire5400b-inoperable"
+      },
+      "type": "Consequence",
+      "start": "2019-04-24",
+      "end": "2022-04-24",
+      "duration": "3 years (reportability limit)",
+      "tz": null,
+      "match_key": "Consequence:armire5400b-declared-inoperable-ts-non-compliance"
+    },
+    {
+      "id": "cons_5500a",
+      "display_name": "ARMIRE5500A declared inoperable / TS non-compliance",
+      "properties": {
+        "match_key": "Consequence:armire5500a-inoperable"
+      },
+      "type": "Consequence",
+      "start": "2019-04-30",
+      "end": "2022-04-30",
+      "duration": "3 years (reportability limit)",
+      "tz": null,
+      "match_key": "Consequence:armire5500a-declared-inoperable-ts-non-compliance"
+    },
+    {
+      "id": "cons_dualtrain",
+      "display_name": "Single cause rendered both containment high range radiation monitor channels inoperable",
+      "properties": {
+        "match_key": "Consequence:dual-channel-inoperability"
+      },
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:single-cause-rendered-both-containment-high-range-radiation-monitor-channels-inoperable"
+    },
+    {
+      "id": "ca_procedure_khc",
+      "display_name": "Revise containment high range radiation monitor calibration procedure to account for keep-alive dose rate",
+      "properties": {
+        "match_key": "CorrectiveAction:revise-containment-hrrm-procedure"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-containment-high-range-radiation-monitor-calibration-procedure-to-account-for-keep-alive-dose-rate"
+    },
+    {
+      "id": "ca_calibrate_5400a",
+      "display_name": "Calibrate ARMIRE5400A using revised procedure",
+      "properties": {
+        "match_key": "CorrectiveAction:calibrate-armire5400a"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:calibrate-armire5400a-using-revised-procedure"
+    },
+    {
+      "id": "ca_install_factor",
+      "display_name": "Install correct engineering conversion factor and calibrate ARMIRE5400B",
+      "properties": {
+        "match_key": "CorrectiveAction:install-correct-factor-armire5400b"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:install-correct-engineering-conversion-factor-and-calibrate-armire5400b"
+    },
+    {
+      "id": "ca_procedure_msl",
+      "display_name": "Revise main steam line high range radiation monitor calibration procedure with updated reference dose rates",
+      "properties": {
+        "match_key": "CorrectiveAction:revise-msl-hrrm-procedure"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-main-steam-line-high-range-radiation-monitor-calibration-procedure-with-updated-reference-dose-rates"
+    },
+    {
+      "id": "ca_calibrate_5500a",
+      "display_name": "Calibrate ARMIRE5500A using corrected procedure",
+      "properties": {
+        "match_key": "CorrectiveAction:calibrate-armire5500a"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:calibrate-armire5500a-using-corrected-procedure"
+    },
+    {
+      "id": "ca_vendor_governance",
+      "display_name": "Establish governance procedures controlling acceptance of vendor-supplied documents",
+      "properties": {
+        "match_key": "CorrectiveAction:vendor-document-governance"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:establish-governance-procedures-controlling-acceptance-of-vendor-supplied-documents"
+    },
+    {
+      "id": "mfr_g063",
+      "display_name": "Manufacturer G063",
+      "properties": {
+        "match_key": "Manufacturer:G063"
+      },
+      "type": "Manufacturer",
+      "code": "G063",
+      "match_key": "Manufacturer:G063"
+    },
+    {
+      "id": "rr_5073_ib",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_5073_viid",
+      "display_name": "10 CFR 50.73(a)(2)(vii)(D)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-vii-d"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-vii-d"
+    },
+    {
+      "id": "rr_ts3331",
+      "display_name": "Waterford 3 TS 3.3.3.1 / TS Table 3.3-6",
+      "properties": {
+        "match_key": "RegulatoryReference:ts-3-3-3-1-table-3-3-6"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:waterford-3-ts-3-3-3-1-ts-table-3-3-6"
+    },
+    {
+      "id": "rr_nureg0737",
+      "display_name": "NUREG-0737 and Regulatory Guide 1.97, Revision 3",
+      "properties": {
+        "match_key": "RegulatoryReference:nureg-0737-rg-1-97-rev3"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "standard/guidance",
+      "match_key": "RegulatoryReference:nureg-0737-and-regulatory-guide-1-97-revision-3"
+    },
+    {
+      "id": "ler_2022_001",
+      "display_name": "LER 382-2022-001-00",
+      "properties": {
+        "match_key": "LER:3-2022-001"
+      },
+      "type": "LER",
+      "key": "382-2022-001-00",
+      "stub": true,
+      "title": "Non-compliance with TS 3.3.3.1 Action b and TS Table 3.3-6 Action 27 due to incorrect conversion factors used in three gaseous radiation monitors",
+      "plant": "Waterford Steam Electric Station, Unit 3",
+      "match_key": "LER:382-2022-001-00"
+    },
+    {
+      "id": "ler_2022_003",
+      "display_name": "LER 382-2022-003-00",
+      "properties": {
+        "match_key": "LER:3-2022-003"
+      },
+      "type": "LER",
+      "key": "382-2022-003-00",
+      "stub": true,
+      "title": "Non-compliance with TS 3.3.3.1 Action b and TS Table 3.3-6 Action 27 due to calibration procedure not accounting for keep alive source decay",
+      "plant": "Waterford Steam Electric Station, Unit 3",
+      "match_key": "LER:382-2022-003-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_ib",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_viid",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts3331",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_il",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "c_armire5400b",
+      "relation": "PART_OF",
+      "target": "sys_il",
+      "evidence": null
+    },
+    {
+      "source": "c_armire5400a",
+      "relation": "PART_OF",
+      "target": "sys_il",
+      "evidence": null
+    },
+    {
+      "source": "c_armire5500a",
+      "relation": "PART_OF",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "c_armire5400b",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_g063",
+      "evidence": null
+    },
+    {
+      "source": "fm_convfactor",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_convfactor",
+      "relation": "LEADS_TO",
+      "target": "fm_5400b_outcal",
+      "evidence": null
+    },
+    {
+      "source": "fm_keepalive",
+      "relation": "LEADS_TO",
+      "target": "fm_5400b_outcal",
+      "evidence": null
+    },
+    {
+      "source": "fm_5400b_outcal",
+      "relation": "LEADS_TO",
+      "target": "cons_5400b",
+      "evidence": null
+    },
+    {
+      "source": "fm_5400b_outcal",
+      "relation": "LEADS_TO",
+      "target": "cons_dualtrain",
+      "evidence": null
+    },
+    {
+      "source": "fm_refvalues",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_refvalues",
+      "relation": "LEADS_TO",
+      "target": "fm_5500a_outcal",
+      "evidence": null
+    },
+    {
+      "source": "fm_5500a_outcal",
+      "relation": "LEADS_TO",
+      "target": "cons_5500a",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procedure_khc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_calibrate_5400a",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_install_factor",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procedure_msl",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_calibrate_5500a",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_vendor_governance",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_2022_001",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_2022_003",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_nureg0737",
+      "evidence": null
+    }
+  ],
+  "chain": "vendor conversion-factor error / defective calibration procedure [cause D] -> ARMIRE5400B incorrect conversion factor + keep-alive source not accounted -> ARMIRE5400B out of factor-2 tolerance -> declared inoperable / TS non-compliance since 2019 (dual-channel inoperability with ARMIRE5400A); separately -> ARMIRE5500A missing reference-value recording steps -> out of +/-15% tolerance -> declared inoperable since 2000 [alternate dose-assessment methods available]",
+  "golden_questions": [
+    "Q1",
+    "Q4",
+    "Q5",
+    "Q9"
+  ],
+  "notes": "This LER (382-2022-004-00) describes two related but distinct latent calibration-procedure defects: (1) containment high range radiation monitor ARMIRE5400B incorrect conversion factor + keep-alive omission (common cause with ARMIRE5400A from LER 2022-003-00, triggering 50.73(a)(2)(vii)(D) dual-channel reporting), and (2) main steam line radiation monitor ARMIRE5500A missing reference-value recording steps. Both modeled as parallel failure chains under the same official cause code D. ARMIRE5400A itself is referenced as already reported under stub LER 2022-003-00; only its role in the common-cause consequence is modeled here, not a full duplicate failure chain. No BACKED_UP_BY edges emitted for EALs (procedural mitigations, not systems) but alternate dose-assessment methods for ARMIRE5500A are noted as design/operational context in the consequence's mitigation narrative rather than a System node, since no named backup system was stated as operable."
+}

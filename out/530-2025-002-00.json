@@ -1,0 +1,297 @@
+{
+  "ler_number": "530-2025-002-00",
+  "identity": {
+    "accession_number": "ML26064A231",
+    "docket": "05000530",
+    "plant_name": "Palo Verde",
+    "unit": 3,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2025-12-02",
+    "report_date": "2026-03-05",
+    "operating_mode": "4",
+    "power_level": 0,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Palo Verde Nuclear Generating Station (PVNGS) Unit 3 Docket No. STN 50-530 Licensee Event Report 2025-002-00"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The Service Air Containment Isolation Valve was rendered inoperable due to human performance errors. Prior to entering the modes of applicability this valve should have been identified as open on the mode change checklist. The procedural guidance is information use and, although referenced, this did not ensure recognition of the TS applicability for this valve. This was a procedure use and adherence error.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "procedure use and adherence error / mode change checklist failure",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 3-2025-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "530-2025-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:530-2025-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Palo Verde Unit 3",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000530",
+      "match_key": "Unit:05000530"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "procedure use and adherence error / mode change checklist failure",
+      "proximate_text": "The Service Air Containment Isolation Valve was rendered inoperable due to human performance errors. Prior to entering the modes of applicability this valve should have been identified as open on the mode change checklist. The procedural guidance is information use and, although referenced, this did not ensure recognition of the TS applicability for this valve. This was a procedure use and adherence error.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_lf",
+      "display_name": "Service Air",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "LF",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:LF"
+    },
+    {
+      "id": "sys_ab",
+      "display_name": "Reactor Coolant System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "AB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:AB"
+    },
+    {
+      "id": "c_iso_valve",
+      "display_name": "Service Air Containment Isolation Valve (manual)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": true,
+      "match_key": "Component:ISV"
+    },
+    {
+      "id": "c_check_valve",
+      "display_name": "Check valve (Service Air containment penetration)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:check-valve-service-air-containment-penetration"
+    },
+    {
+      "id": "fm_notidentified",
+      "display_name": "Open valve not identified on mode change checklist",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Prior to entering the modes of applicability, the manual isolation valve should have been identified as open on the mode change checklist but was not.",
+      "match_key": "FailureMode:open-valve-not-identified-on-mode-change-checklist"
+    },
+    {
+      "id": "fm_notclosed",
+      "display_name": "Manual isolation valve not closed/locked per procedure",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The manual isolation valve for Service Air to Containment was not signed as closed and locked per the Locked Valve, Breaker, and Component Tracking procedure.",
+      "match_key": "FailureMode:manual-isolation-valve-not-closed-locked-per-procedure"
+    },
+    {
+      "id": "fm_noadmincontrol",
+      "display_name": "No administrative controls established while valve open in applicable modes",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "During the modes of applicability until the valve was closed, no administrative controls were established for the intermittently open manual containment isolation valve.",
+      "match_key": "FailureMode:no-administrative-controls-established-while-valve-open-in-applicable-modes"
+    },
+    {
+      "id": "cons_ts_violation",
+      "display_name": "TS LCO 3.6.3 Condition A violated / required actions and completion times not met",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2025-11-27T05:18",
+      "end": "2025-12-02T00:08",
+      "duration": "114:50",
+      "tz": "MST",
+      "match_key": "Consequence:ts-lco-3-6-3-condition-a-violated-required-actions-and-completion-times-not-met"
+    },
+    {
+      "id": "ca_close_valve",
+      "display_name": "Close, lock, and independently verify Service Air Containment Isolation Valve",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:close-lock-and-independently-verify-service-air-containment-isolation-valve"
+    },
+    {
+      "id": "ca_briefing",
+      "display_name": "Conduct briefings on procedural adherence with focus on attention to detail",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:conduct-briefings-on-procedural-adherence-with-focus-on-attention-to-detail"
+    },
+    {
+      "id": "ca_training",
+      "display_name": "Additional training on reviewing the Locked Valve Book",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:additional-training-on-reviewing-the-locked-valve-book"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_tsbases",
+      "display_name": "TS Bases Revision 82, Containment Isolation Valves B 3.6.3",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-bases-revision-82-containment-isolation-valves-b-3-6-3"
+    },
+    {
+      "id": "rr_ufsar",
+      "display_name": "UFSAR Chapters 6 and 15",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:ufsar-chapters-6-and-15"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_lf",
+      "evidence": null
+    },
+    {
+      "source": "c_iso_valve",
+      "relation": "PART_OF",
+      "target": "sys_lf",
+      "evidence": null
+    },
+    {
+      "source": "c_check_valve",
+      "relation": "PART_OF",
+      "target": "sys_lf",
+      "evidence": null
+    },
+    {
+      "source": "fm_notidentified",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_notidentified",
+      "relation": "LEADS_TO",
+      "target": "fm_notclosed",
+      "evidence": null
+    },
+    {
+      "source": "fm_notclosed",
+      "relation": "LEADS_TO",
+      "target": "fm_noadmincontrol",
+      "evidence": null
+    },
+    {
+      "source": "fm_noadmincontrol",
+      "relation": "LEADS_TO",
+      "target": "cons_ts_violation",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_close_valve",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_briefing",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_training",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_tsbases",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ufsar",
+      "evidence": null
+    }
+  ],
+  "chain": "procedure use and adherence error [cause TBD] -> open valve not identified on mode change checklist -> valve not signed closed/locked per procedure -> no administrative controls established during applicable modes -> TS LCO 3.6.3 Condition A violated (114h50m)",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code left as TBD/provisional per FORM-366 fields (category also 'provisional'); narrative attributes the event to human performance/procedure use and adherence error but no official cause code letter was assigned in the FORM-366 FIELDS block. No block_13 rows provided. Service Air is isolated from Containment except during shutdown, and no automatic isolation valves exist on this header -- this is design context, not a backup system, so no System node was created for an automatic isolation function. No previous similar events were referenced in the narrative, so no stub LER/SIMILAR_TO edge was created."
+}

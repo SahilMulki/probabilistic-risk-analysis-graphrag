@@ -1,0 +1,488 @@
+{
+  "ler_number": "373-2024-002-00",
+  "identity": {
+    "accession_number": "ML24138A030",
+    "docket": "05000373",
+    "plant_name": "La Salle",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2024-03-25",
+    "report_date": "2024-05-17",
+    "operating_mode": null,
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Reactor Protection System Half Scram due to Motor Generator Set Electric Power Monitoring Assembly Output Breaker Trip"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The EPMA trip card was out of range high for the underfrequency setpoint which caused the 1B RPS MG set EPMA output breaker to trip due to underfrequency, even if there was no underfrequency condition present.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "EPMA trip card setpoint drift",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 373-2024-002-00",
+      "properties": {
+        "match_key": "LER:373-2024-002-00"
+      },
+      "type": "LER",
+      "key": "373-2024-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:373-2024-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "La Salle Unit 1",
+      "properties": {
+        "match_key": "Unit:05000373",
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000373",
+      "match_key": "Unit:05000373"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {
+        "match_key": "Cause:provisional"
+      },
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "EPMA trip card setpoint drift",
+      "proximate_text": "The EPMA trip card was out of range high for the underfrequency setpoint which caused the 1B RPS MG set EPMA output breaker to trip due to underfrequency, even if there was no underfrequency condition present.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_rps",
+      "display_name": "Reactor Protection System",
+      "properties": {
+        "acronym": "RPS",
+        "match_key": "System:reactor-protection-system"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:reactor-protection-system"
+    },
+    {
+      "id": "c_mgset",
+      "display_name": "1B RPS Motor-Generator Set",
+      "properties": {
+        "match_key": "Component:1b-rps-mg-set"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:1b-rps-motor-generator-set"
+    },
+    {
+      "id": "c_epma",
+      "display_name": "1B Electric Power Monitoring Assembly (EPMA)",
+      "properties": {
+        "acronym": "EPMA",
+        "match_key": "Component:1b-epma"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:1b-electric-power-monitoring-assembly-epma"
+    },
+    {
+      "id": "c_bkr",
+      "display_name": "1B RPS MG Set EPMA Output Breaker",
+      "properties": {
+        "cat_id": "23326",
+        "match_key": "Component:1b-rps-mg-set-epma-output-breaker"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "1C71-S003B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:1b-rps-mg-set-epma-output-breaker"
+    },
+    {
+      "id": "c_tripcard",
+      "display_name": "EPMA Trip Card (Electrical Protection Assembly Logic Circuit Board)",
+      "properties": {
+        "match_key": "Component:epma-trip-card"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:epma-trip-card-electrical-protection-assembly-logic-circuit-board"
+    },
+    {
+      "id": "fm_setpoint",
+      "display_name": "EPMA trip card underfrequency setpoint drifted out of range high",
+      "properties": {
+        "match_key": "FailureMode:epma-trip-card-setpoint-drift"
+      },
+      "type": "FailureMode",
+      "description": "Trip card's underfrequency setpoint was out of tolerance, above allowed range.",
+      "match_key": "FailureMode:epma-trip-card-underfrequency-setpoint-drifted-out-of-range-high"
+    },
+    {
+      "id": "fm_spuriustrip",
+      "display_name": "Spurious underfrequency trip signal generated",
+      "properties": {
+        "match_key": "FailureMode:spurious-underfrequency-trip"
+      },
+      "type": "FailureMode",
+      "description": "EPMA trip card produced an underfrequency trip signal despite no actual underfrequency condition (MG set frequency verified ~60 Hz).",
+      "match_key": "FailureMode:spurious-underfrequency-trip-signal-generated"
+    },
+    {
+      "id": "fm_bkrtrip",
+      "display_name": "1B RPS MG set EPMA output breaker tripped",
+      "properties": {
+        "match_key": "FailureMode:1b-epma-breaker-trip"
+      },
+      "type": "FailureMode",
+      "description": "Breaker tripped due to the spurious underfrequency signal, removing power from the 1B RPS bus.",
+      "match_key": "FailureMode:1b-rps-mg-set-epma-output-breaker-tripped"
+    },
+    {
+      "id": "cons_halfscram",
+      "display_name": "Loss of 1B RPS bus power resulting in half-scram and multi-system containment isolations",
+      "properties": {
+        "match_key": "Consequence:1b-rps-bus-loss-half-scram"
+      },
+      "type": "Consequence",
+      "start": "2024-03-25T04:04",
+      "end": null,
+      "duration": null,
+      "tz": "CDT",
+      "match_key": "Consequence:loss-of-1b-rps-bus-power-resulting-in-half-scram-and-multi-system-containment-isolations"
+    },
+    {
+      "id": "sys_altpower",
+      "display_name": "Alternate power supply",
+      "properties": {
+        "non_eiis": true,
+        "match_key": "System:alternate-power-supply-1b-rps-bus"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "backup; operable",
+      "match_key": "System:alternate-power-supply"
+    },
+    {
+      "id": "ca_declare",
+      "display_name": "Declared affected systems inoperable and entered required TS timeclocks/actions",
+      "properties": {
+        "match_key": "CorrectiveAction:declared-inoperable-ts-actions"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:declared-affected-systems-inoperable-and-entered-required-ts-timeclocks-actions"
+    },
+    {
+      "id": "ca_transfer1",
+      "display_name": "Transferred 1B RPS bus to alternate power supply",
+      "properties": {
+        "match_key": "CorrectiveAction:transfer-1b-bus-alternate"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:transferred-1b-rps-bus-to-alternate-power-supply"
+    },
+    {
+      "id": "ca_reset",
+      "display_name": "Reset half-scram and primary containment isolations; exited TS timeclocks/actions",
+      "properties": {
+        "match_key": "CorrectiveAction:reset-half-scram-isolations"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:reset-half-scram-and-primary-containment-isolations-exited-ts-timeclocks-actions"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replaced trip card due to drifting out of tolerance during attempted recalibration",
+      "properties": {
+        "match_key": "CorrectiveAction:replace-trip-card"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replaced-trip-card-due-to-drifting-out-of-tolerance-during-attempted-recalibration"
+    },
+    {
+      "id": "ca_transfer2",
+      "display_name": "Transferred 1B RPS bus back to normal power supply",
+      "properties": {
+        "match_key": "CorrectiveAction:transfer-1b-bus-normal"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:transferred-1b-rps-bus-back-to-normal-power-supply"
+    },
+    {
+      "id": "ca_extent",
+      "display_name": "Reviewed extent of condition for other Unit 1 RPS EPMA trip cards (1A, Unit 2 RPS)",
+      "properties": {
+        "match_key": "CorrectiveAction:extent-of-condition-review"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:reviewed-extent-of-condition-for-other-unit-1-rps-epma-trip-cards-1a-unit-2-rps"
+    },
+    {
+      "id": "ca_offsite",
+      "display_name": "Sent failed EPMA trip card offsite for failure analysis",
+      "properties": {
+        "match_key": "CorrectiveAction:offsite-failure-analysis"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:sent-failed-epma-trip-card-offsite-for-failure-analysis"
+    },
+    {
+      "id": "mfr_ge",
+      "display_name": "General Electric",
+      "properties": {
+        "match_key": "Manufacturer:general-electric"
+      },
+      "type": "Manufacturer",
+      "code": null,
+      "match_key": "Manufacturer:general-electric"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {
+        "type": "reporting-criterion",
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_ts",
+      "display_name": "TS Surveillance Requirement 3.3.8.2.2",
+      "properties": {
+        "type": "license-basis",
+        "match_key": "RegulatoryReference:ts-sr-3-3-8-2-2"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ts-surveillance-requirement-3-3-8-2-2"
+    },
+    {
+      "id": "rr_nei",
+      "display_name": "NEI 99-02, Regulatory Assessment Performance Indicator Guideline",
+      "properties": {
+        "type": "standard/guidance",
+        "match_key": "RegulatoryReference:nei-99-02"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:nei-99-02-regulatory-assessment-performance-indicator-guideline"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "LaSalle Unit 2 LER 2-2021-002-00: 2A RPS MG Set Output Breaker Trip on Overload",
+      "properties": {
+        "unit": 2,
+        "match_key": "LER:2-2021-002"
+      },
+      "type": "LER",
+      "key": "374-2021-002-00",
+      "stub": true,
+      "title": "2A RPS motor generator set output breaker tripped due to overload condition, resulting in loss of 2A RPS bus",
+      "plant": "LaSalle County Station",
+      "match_key": "LER:374-2021-002-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_nei",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rps",
+      "evidence": null
+    },
+    {
+      "source": "c_mgset",
+      "relation": "PART_OF",
+      "target": "sys_rps",
+      "evidence": null
+    },
+    {
+      "source": "c_epma",
+      "relation": "PART_OF",
+      "target": "c_mgset",
+      "evidence": null
+    },
+    {
+      "source": "c_bkr",
+      "relation": "PART_OF",
+      "target": "c_epma",
+      "evidence": null
+    },
+    {
+      "source": "c_tripcard",
+      "relation": "PART_OF",
+      "target": "c_epma",
+      "evidence": null
+    },
+    {
+      "source": "c_bkr",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_ge",
+      "evidence": null
+    },
+    {
+      "source": "fm_setpoint",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_setpoint",
+      "relation": "LEADS_TO",
+      "target": "fm_spuriustrip",
+      "evidence": null
+    },
+    {
+      "source": "fm_spuriustrip",
+      "relation": "LEADS_TO",
+      "target": "fm_bkrtrip",
+      "evidence": null
+    },
+    {
+      "source": "fm_bkrtrip",
+      "relation": "LEADS_TO",
+      "target": "cons_halfscram",
+      "evidence": null
+    },
+    {
+      "source": "cons_halfscram",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_altpower",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_declare",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_transfer1",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_reset",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_transfer2",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_extent",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_offsite",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    }
+  ],
+  "chain": "EPMA trip card underfrequency setpoint drifted out of range high [cause TBD] -> spurious underfrequency trip signal generated (no actual underfrequency present) -> 1B RPS MG set EPMA output breaker tripped -> loss of 1B RPS bus power -> half-scram and multi-system containment isolations [backup: alternate power supply restored bus]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code left TBD/provisional per FORM-366 fields (official code not assigned in header). Narrative attributes root cause to EPMA trip card underfrequency setpoint drift discovered during recalibration attempt; modeled as provisional Cause node. RPS is treated as acronym-only System (no EIIS bracket code given in narrative) so eiis_code left null. Breaker/EPMA/trip card modeled with explicit PART_OF chain per narrative's stated containment ('1B EPMA output breaker', 'EPMA trip card' as part of the assembly). Alternate power supply modeled as non-EIIS backup System since narrative explicitly states bus was transferred to it and restored power during the event. Previous occurrence stub LER keyed as '2-2021-002' per instructions, preserving leading unit digit as stated in report text ('Unit 2 LER 374-2021-002-00') even though its docket differs from this event's."
+}

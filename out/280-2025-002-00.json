@@ -1,0 +1,291 @@
+{
+  "ler_number": "280-2025-002-00",
+  "identity": {
+    "accession_number": "ML25342A007",
+    "docket": "05000280",
+    "plant_name": "Surry",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2025-11-03",
+    "report_date": "2025-12-08",
+    "operating_mode": null,
+    "power_level": 100,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Fault on Transformer Feeder Cable Caused Automatic Start of Emergency Diesel Generator"
+  },
+  "reporting_basis": {
+    "reported_under": [],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "A fault on a splice in the underground feeder cable to the 'A' RSST caused pilot wire lockout actuation and subsequent isolation of power to 1 'J' Emergency Bus.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "underground cable splice fault",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 280-2025-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "280-2025-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:280-2025-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Surry Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000280",
+      "match_key": "Unit:05000280"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "underground cable splice fault",
+      "proximate_text": "A fault on a splice in the underground feeder cable to the 'A' RSST caused pilot wire lockout actuation and subsequent isolation of power to 1 'J' Emergency Bus.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_ea",
+      "display_name": "Reserve Station Service Transformer",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "EA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "involved; isolated during event",
+      "match_key": "System:EA"
+    },
+    {
+      "id": "sys_ek",
+      "display_name": "Emergency Bus / Diesel Generator System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "EK",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "involved",
+      "match_key": "System:EK"
+    },
+    {
+      "id": "c_xfmr",
+      "display_name": "'A' Reserve Station Service Transformer",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "XFMR",
+      "identifier": "A RSST",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:XFMR|A RSST"
+    },
+    {
+      "id": "c_bu",
+      "display_name": "Unit 1 'J' Emergency Bus",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "BU",
+      "identifier": "1J",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:BU|1J"
+    },
+    {
+      "id": "c_dg",
+      "display_name": "#3 Emergency Diesel Generator",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "DG",
+      "identifier": "3",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:DG|3"
+    },
+    {
+      "id": "c_con",
+      "display_name": "Underground cable splice",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "CON",
+      "identifier": "A RSST feeder cable splice",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:CON|A RSST feeder cable splice"
+    },
+    {
+      "id": "fm_fault",
+      "display_name": "Fault at underground cable splice on 'A' RSST feeder cable",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "A fault occurred in the underground cable splice supplying power to the 'A' RSST.",
+      "match_key": "FailureMode:fault-at-underground-cable-splice-on-a-rsst-feeder-cable"
+    },
+    {
+      "id": "fm_lockout",
+      "display_name": "Pilot wire lockout actuation",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The 'A' RSST pilot wire lockout actuated in response to the cable fault, electrically isolating the 'A' RSST.",
+      "match_key": "FailureMode:pilot-wire-lockout-actuation"
+    },
+    {
+      "id": "fm_busloss",
+      "display_name": "Loss of power to Unit 1 'J' Emergency Bus",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Electrical isolation of the 'A' RSST resulted in loss of power to the 1 'J' Emergency Bus.",
+      "match_key": "FailureMode:loss-of-power-to-unit-1-j-emergency-bus"
+    },
+    {
+      "id": "cons_edgstart",
+      "display_name": "Automatic start and loading of #3 EDG onto 1 'J' Emergency Bus",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2025-11-03T12:15",
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:automatic-start-and-loading-of-3-edg-onto-1-j-emergency-bus"
+    },
+    {
+      "id": "ca_repair",
+      "display_name": "Repair faulted underground cable and restore 'A' RSST to service",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:repair-faulted-underground-cable-and-restore-a-rsst-to-service"
+    },
+    {
+      "id": "ca_longterm",
+      "display_name": "Track long-term cause evaluation actions through corrective action program",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:track-long-term-cause-evaluation-actions-through-corrective-action-program"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "Surry Unit 1 LER 2018-002-00: Auto-Start of Emergency Diesel Generators Due to Pilot Wire Lockout on 'C' Reserve Station Service Transformer",
+      "properties": {},
+      "type": "LER",
+      "key": "280-2018-002-00",
+      "stub": true,
+      "title": "Auto-Start of Emergency Diesel Generators Due to Pilot Wire Lockout on 'C' Reserve Station Service Transformer",
+      "plant": "Surry Power Station",
+      "match_key": "LER:280-2018-002-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ea",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ek",
+      "evidence": null
+    },
+    {
+      "source": "c_xfmr",
+      "relation": "PART_OF",
+      "target": "sys_ea",
+      "evidence": null
+    },
+    {
+      "source": "c_bu",
+      "relation": "PART_OF",
+      "target": "sys_ek",
+      "evidence": null
+    },
+    {
+      "source": "c_dg",
+      "relation": "PART_OF",
+      "target": "sys_ek",
+      "evidence": null
+    },
+    {
+      "source": "fm_fault",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_fault",
+      "relation": "LEADS_TO",
+      "target": "fm_lockout",
+      "evidence": null
+    },
+    {
+      "source": "fm_lockout",
+      "relation": "LEADS_TO",
+      "target": "fm_busloss",
+      "evidence": null
+    },
+    {
+      "source": "fm_busloss",
+      "relation": "LEADS_TO",
+      "target": "cons_edgstart",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_repair",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_longterm",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    }
+  ],
+  "chain": "underground cable splice fault [cause TBD] -> pilot wire lockout actuation -> loss of power to 1J Emergency Bus -> automatic start/load of #3 EDG onto 1J bus [backups: dedicated EDGs on H buses, Unit 2 unaffected]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code left TBD/provisional per FORM-366 fields; narrative attributes root cause to a cable splice fault but no official cause code was assigned. Unit 1 was in refueling outage (defueled) at time of event; Unit 2 unaffected, continued at 100% power, and is modeled only via note in consequence context (no separate Unit 2 node created since narrative frames it as unaffected/no operational challenge). #3 EDG is shared between Unit 1 and Unit 2 'J' buses per design; only its role in this event (auto-start/load) is modeled. Dedicated per-unit EDGs for H buses are design-context only (no operability statement during event) and are not modeled as BACKED_UP_BY targets; only the stated 'all systems other than A RSST remained available' supports general availability but no specific backup system is named as engaged, so no BACKED_UP_BY edge asserted beyond noting in chain text."
+}

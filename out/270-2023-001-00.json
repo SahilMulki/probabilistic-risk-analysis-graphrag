@@ -1,0 +1,394 @@
+{
+  "ler_number": "270-2023-001-00",
+  "identity": {
+    "accession_number": "ML24060A312",
+    "docket": "05000270",
+    "plant_name": "Oconee",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2023-04-17",
+    "report_date": "2024-02-29",
+    "operating_mode": null,
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Revision 00 – Inappropriate Procedural Guidance for"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The cause of these events was an error in applicable station procedure guidance which directed entry to TS 3.6.3 Condition C rather than entry to TS 3.6.1 Condition A.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Inadequate procedural guidance for TS condition entry during containment isolation valve maintenance",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 270-2023-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "270-2023-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:270-2023-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Oconee Unit 2",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000270",
+      "match_key": "Unit:05000270"
+    },
+    {
+      "id": "cause",
+      "display_name": "Procedural Guidance Error (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Inadequate procedural guidance for TS condition entry during containment isolation valve maintenance",
+      "proximate_text": "The cause of these events was an error in applicable station procedure guidance which directed entry to TS 3.6.3 Condition C rather than entry to TS 3.6.1 Condition A.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_lpsw",
+      "display_name": "Low Pressure Service Water",
+      "properties": {
+        "note": "shared Unit 1/2 system, three pumps; also coded KG"
+      },
+      "type": "System",
+      "eiis_code": "BI",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BI"
+    },
+    {
+      "id": "sys_rbcu",
+      "display_name": "Reactor Building Cooling Units",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BK",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "engineered safety feature; part of containment heat removal",
+      "match_key": "System:BK"
+    },
+    {
+      "id": "sys_containment",
+      "display_name": "Containment / Reactor Building",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "NH",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "safety-related SSC affected",
+      "match_key": "System:NH"
+    },
+    {
+      "id": "c_2lpsw16",
+      "display_name": "2A RBCU LPSW supply outboard MOV (2LPSW-16)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "V",
+      "identifier": "2LPSW-16",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:V|2LPSW-16"
+    },
+    {
+      "id": "c_2lpsw532",
+      "display_name": "2A RBCU LPSW supply vent valve (2LPSW-532)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "V",
+      "identifier": "2LPSW-532",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:V|2LPSW-532"
+    },
+    {
+      "id": "c_2lpsw18",
+      "display_name": "2A RBCU LPSW return outboard MOV (2LPSW-18)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "V",
+      "identifier": "2LPSW-18",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:V|2LPSW-18"
+    },
+    {
+      "id": "c_2lpsw81",
+      "display_name": "LPSW fill/vent valve (2LPSW-81)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "V",
+      "identifier": "2LPSW-81",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:V|2LPSW-81"
+    },
+    {
+      "id": "fm_procerror",
+      "display_name": "Procedure directed wrong TS condition entry (3.6.3 Condition C instead of 3.6.1 Condition A)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Governing isolation procedure sequence did not recognize that opening the vent valve concurrent with the outboard isolation valve created a direct containment bypass pathway, and directed entry to the wrong Technical Specification condition.",
+      "match_key": "FailureMode:procedure-directed-wrong-ts-condition-entry-3-6-3-condition-c-instead-of-3-6-1-condition-a"
+    },
+    {
+      "id": "fm_bypass",
+      "display_name": "Direct pathway from Reactor Building to environment created via open vent + isolation valve",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Sequencing of valve steps 2 and 3 (and again during restoration) resulted in a direct pathway from the Unit 2 Reactor Building to the environment through the LPSW piping while both an outboard isolation valve and an inboard vent valve were open.",
+      "match_key": "FailureMode:direct-pathway-from-reactor-building-to-environment-created-via-open-vent-isolation-valve"
+    },
+    {
+      "id": "fm_notrecognized",
+      "display_name": "Containment inoperability not recognized/declared",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The station did not recognize the impact to containment operability and the safety-related SSC (containment) was not declared inoperable as part of the planned evolution.",
+      "match_key": "FailureMode:containment-inoperability-not-recognized-declared"
+    },
+    {
+      "id": "cons_containment",
+      "display_name": "Containment isolation function inoperable during RBCU maintenance evolutions",
+      "properties": {},
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": "2A RBCU: <1 hr isolation, <8 hr restoration; 2C RBCU: <1 hr comparable; 2B RBCU leak repair: <3 hr total",
+      "tz": null,
+      "match_key": "Consequence:containment-isolation-function-inoperable-during-rbcu-maintenance-evolutions"
+    },
+    {
+      "id": "ca_hold",
+      "display_name": "Placed LPSW-to-RBCU isolation procedures on technical hold",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:placed-lpsw-to-rbcu-isolation-procedures-on-technical-hold"
+    },
+    {
+      "id": "ca_revise",
+      "display_name": "Develop station procedure revisions for LPSW-to-RBCU isolation to include appropriate TS condition entry guidance",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:develop-station-procedure-revisions-for-lpsw-to-rbcu-isolation-to-include-appropriate-ts-condition-entry-guidance"
+    },
+    {
+      "id": "ca_train",
+      "display_name": "Provide licensed operator training on Containment and Containment Isolation Valve TS (3.6.1 and 3.6.3)",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:provide-licensed-operator-training-on-containment-and-containment-isolation-valve-ts-3-6-1-and-3-6-3"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(v)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v"
+    },
+    {
+      "id": "rr_ts361",
+      "display_name": "Technical Specification 3.6.1 (Containment)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-3-6-1-containment"
+    },
+    {
+      "id": "rr_ts363",
+      "display_name": "Technical Specification 3.6.3 (Containment Isolation Valves)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-3-6-3-containment-isolation-valves"
+    },
+    {
+      "id": "rr_ts365",
+      "display_name": "Technical Specification 3.6.5 (RBCUs)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-3-6-5-rbcus"
+    },
+    {
+      "id": "rr_ts377",
+      "display_name": "Technical Specification 3.7.7 (LPSW)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-3-7-7-lpsw"
+    },
+    {
+      "id": "rr_gl9606",
+      "display_name": "NRC Generic Letter 96-06",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "standard/guidance",
+      "match_key": "RegulatoryReference:nrc-generic-letter-96-06"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_lpsw",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rbcu",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_containment",
+      "evidence": null
+    },
+    {
+      "source": "c_2lpsw16",
+      "relation": "PART_OF",
+      "target": "sys_rbcu",
+      "evidence": null
+    },
+    {
+      "source": "c_2lpsw532",
+      "relation": "PART_OF",
+      "target": "sys_rbcu",
+      "evidence": null
+    },
+    {
+      "source": "c_2lpsw18",
+      "relation": "PART_OF",
+      "target": "sys_rbcu",
+      "evidence": null
+    },
+    {
+      "source": "fm_procerror",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_procerror",
+      "relation": "LEADS_TO",
+      "target": "fm_bypass",
+      "evidence": null
+    },
+    {
+      "source": "fm_bypass",
+      "relation": "LEADS_TO",
+      "target": "fm_notrecognized",
+      "evidence": null
+    },
+    {
+      "source": "fm_notrecognized",
+      "relation": "LEADS_TO",
+      "target": "cons_containment",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_hold",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_revise",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_train",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts361",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts363",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts365",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts377",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_gl9606",
+      "evidence": null
+    }
+  ],
+  "chain": "procedure directs entry to TS 3.6.3 Condition C instead of TS 3.6.1 Condition A [cause TBD] -> vent valve open concurrent with outboard isolation valve creates direct RB-to-environment pathway -> containment inoperability not recognized/declared -> containment isolation function inoperable during 2A/2B/2C RBCU maintenance evolutions",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause_code is TBD/provisional per FORM-366 fields; narrative attributes the event to a procedural guidance error directing the wrong TS condition entry, captured in theme/proximate_text but not used to override the coded cause_code per rule 4. Event recurred at 2A, 2B (leak repair, discovered via extent-of-condition review), and 2C RBCUs; modeled as one representative causal chain per rule 1 since all three share the same underlying procedural cause and consequence pattern (durations captured in Consequence properties). No previous dissimilar LER referenced (CAP review found none), so no SIMILAR_TO edge/stub LER emitted. LPSW also carries KG code per background text but BI used as primary eiis_code per convention of using the first-listed bracket code; RBCU components are containment isolation valves, not merely functionally related, but the narrative describes them by role within the RBCU system, so PART_OF is used cautiously for the valves' association with penetration/piping system, consistent with 'LPSW supply and return piping for each RBCU...forming the inside containment isolation barrier.'"
+}

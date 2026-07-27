@@ -1,0 +1,385 @@
+{
+  "ler_number": "416-2022-003-00",
+  "identity": {
+    "accession_number": "ML23047A547",
+    "docket": "05000416",
+    "plant_name": "Grand Gulf",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2022-12-19",
+    "report_date": "2023-02-16",
+    "operating_mode": "1",
+    "power_level": 78,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Grand Gulf Nuclear Station, Unit 1 Licensee Event Report 2022-003-00, Manual Reactor SCRAM due to trip of the A Reactor Feedwater Pump"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)",
+      "10 CFR 50.73(a)(2)(iv)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "X",
+      "system": "SD",
+      "component": null,
+      "manufacturer": null,
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "Heater Drain Tank (HDT) Level Control Valves were not capable of responding quickly enough to mitigate the HDT level oscillations during the transient caused by Condensate Booster Pump Trip and subsequent Fast Detent. Root Cause: Transients Caused by Condensate Booster Pump Trip have not been adequately analyzed.",
+    "cause_code": "X",
+    "category": "Other",
+    "theme": "Inadequate transient analysis (CFT A calculation) for CBP trip",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 416-2022-003-00",
+      "properties": {},
+      "type": "LER",
+      "key": "416-2022-003-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:416-2022-003-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Grand Gulf Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000416",
+      "match_key": "Unit:05000416"
+    },
+    {
+      "id": "cause",
+      "display_name": "Other (X)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "X",
+      "category": "Other",
+      "theme": "Inadequate transient analysis (CFT A calculation) for CBP trip",
+      "proximate_text": "Heater Drain Tank (HDT) Level Control Valves were not capable of responding quickly enough to mitigate the HDT level oscillations during the transient caused by Condensate Booster Pump Trip and subsequent Fast Detent. Root Cause: Transients Caused by Condensate Booster Pump Trip have not been adequately analyzed.",
+      "provisional": false,
+      "match_key": "Cause:Other"
+    },
+    {
+      "id": "sys_sd",
+      "display_name": "Condensate and Feedwater System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SD",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SD"
+    },
+    {
+      "id": "sys_bg",
+      "display_name": "High Pressure Core Spray",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; operable",
+      "match_key": "System:BG"
+    },
+    {
+      "id": "c_cbp_a",
+      "display_name": "Condensate Booster Pump A",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "SD",
+      "identifier": "CBP A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:SD|CBP A"
+    },
+    {
+      "id": "c_cbp_a_motor",
+      "display_name": "Condensate Booster Pump A Motor",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:condensate-booster-pump-a-motor"
+    },
+    {
+      "id": "c_rfp_a",
+      "display_name": "Reactor Feedwater Pump A",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "RFP A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:reactor-feedwater-pump-a"
+    },
+    {
+      "id": "c_hdt_lcv",
+      "display_name": "Heater Drain Tank Level Control Valves",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:heater-drain-tank-level-control-valves"
+    },
+    {
+      "id": "fm_cbp_trip",
+      "display_name": "Condensate Booster Pump A trips",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "CBP A tripped at 2058, initiating the transient.",
+      "match_key": "FailureMode:condensate-booster-pump-a-trips"
+    },
+    {
+      "id": "fm_hdt_response",
+      "display_name": "HDT Level Control Valves close, constricting feed flow",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Heater Drain Tank Level Control Valves could not respond quickly enough and closed, constricting feed flow during the transient.",
+      "match_key": "FailureMode:hdt-level-control-valves-close-constricting-feed-flow"
+    },
+    {
+      "id": "fm_suction_pressure",
+      "display_name": "RFP A and B suction pressures rapidly lowering",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Following CBP trip, both Reactor Feedwater Pump A and B suction pressures dropped rapidly.",
+      "match_key": "FailureMode:rfp-a-and-b-suction-pressures-rapidly-lowering"
+    },
+    {
+      "id": "fm_rfp_a_trip",
+      "display_name": "Reactor Feedwater Pump A trips on low suction pressure",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "RFP A tripped on low suction pressure at 2101.",
+      "match_key": "FailureMode:reactor-feedwater-pump-a-trips-on-low-suction-pressure"
+    },
+    {
+      "id": "fm_level_drop",
+      "display_name": "Reactor water level lowers due to reduced feed flow",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Reactor water level continued to lower to approximately 17 inches and trending down due to reduced feed flow.",
+      "match_key": "FailureMode:reactor-water-level-lowers-due-to-reduced-feed-flow"
+    },
+    {
+      "id": "cons_scram",
+      "display_name": "Manual reactor SCRAM on low reactor water level",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2022-12-19T21:01",
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:manual-reactor-scram-on-low-reactor-water-level"
+    },
+    {
+      "id": "ca_replace_motor",
+      "display_name": "Replace CBP A Motor",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-cbp-a-motor"
+    },
+    {
+      "id": "ca_capr",
+      "display_name": "Perform modification/analysis of transient effects on feed flow (CAPR)",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:perform-modification-analysis-of-transient-effects-on-feed-flow-capr"
+    },
+    {
+      "id": "rr_5073a2iva",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5073a2ivb",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-b"
+    },
+    {
+      "id": "rr_ufsar",
+      "display_name": "UFSAR Section 10.4.7",
+      "properties": {
+        "type": "analysis-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ufsar-section-10-4-7"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "LER 2020-004-01",
+      "properties": {},
+      "type": "LER",
+      "key": "2020-004-01",
+      "stub": true,
+      "title": "Automatic Reactor SCRAM Due to Reactor Feed Pump Trip",
+      "plant": "Grand Gulf Nuclear Station",
+      "match_key": "LER:2020-004-01"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073a2iva",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073a2ivb",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sd",
+      "evidence": null
+    },
+    {
+      "source": "c_cbp_a",
+      "relation": "PART_OF",
+      "target": "sys_sd",
+      "evidence": null
+    },
+    {
+      "source": "c_hdt_lcv",
+      "relation": "PART_OF",
+      "target": "sys_sd",
+      "evidence": null
+    },
+    {
+      "source": "c_rfp_a",
+      "relation": "PART_OF",
+      "target": "sys_sd",
+      "evidence": null
+    },
+    {
+      "source": "fm_cbp_trip",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_cbp_trip",
+      "relation": "LEADS_TO",
+      "target": "fm_hdt_response",
+      "evidence": null
+    },
+    {
+      "source": "fm_cbp_trip",
+      "relation": "LEADS_TO",
+      "target": "fm_suction_pressure",
+      "evidence": null
+    },
+    {
+      "source": "fm_suction_pressure",
+      "relation": "LEADS_TO",
+      "target": "fm_rfp_a_trip",
+      "evidence": null
+    },
+    {
+      "source": "fm_hdt_response",
+      "relation": "LEADS_TO",
+      "target": "fm_level_drop",
+      "evidence": null
+    },
+    {
+      "source": "fm_rfp_a_trip",
+      "relation": "LEADS_TO",
+      "target": "fm_level_drop",
+      "evidence": null
+    },
+    {
+      "source": "fm_level_drop",
+      "relation": "LEADS_TO",
+      "target": "cons_scram",
+      "evidence": null
+    },
+    {
+      "source": "cons_scram",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_bg",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_motor",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_capr",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ufsar",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    }
+  ],
+  "chain": "CBP A trips [cause X: inadequate transient analysis] -> HDT level control valves close/constrict feed flow & RFP A/B suction pressure drops -> RFP A trips on low suction pressure -> reactor water level lowers -> manual SCRAM on low level [backup: HPCS operable]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code X (Other) governs category; narrative direct/root cause frames this as an analysis-adequacy issue rather than a component hardware failure, so failure modes model the physical transient sequence while the Cause node carries the analytical root cause per the official code. HDT Level Control Valves and RFP explicitly described within Condensate and Feedwater System (SD) narrative context, supporting PART_OF. HPCS explicitly stated to have 'remained operable and was used to feed the reactor' post-SCRAM, supporting BACKED_UP_BY. Safety/Relief Valves and safety-related ECCS mentioned only as general operable/available design-basis context without direct operational involvement in this event chain, so omitted per rule 6 ambiguity guidance except HPCS which was explicitly used."
+}

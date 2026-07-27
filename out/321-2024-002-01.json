@@ -1,0 +1,416 @@
+{
+  "ler_number": "321-2024-002-01",
+  "identity": {
+    "accession_number": "ML24185A259",
+    "docket": "05000321",
+    "plant_name": "Hatch",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2024-02-27",
+    "report_date": "2024-07-03",
+    "operating_mode": null,
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2024-002-01 for Edwin I. Hatch Nuclear Plant, Unit 1 & 2, Incorrectly Installed Temporary Modification Results in Multiple Conditions Prohibited by Plant Technical Specifications"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "A",
+      "system": "VI",
+      "component": "CDU",
+      "manufacturer": "T265",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "the direct cause of the incorrect installation of the temporary PSW modification on the Bravo MCRAC, which rendered it inoperable, was a failure of non-licensed, contract maintenance personnel to use Human Performance (HU) tools to ensure the temporary PSW modification was properly installed per the procedure. Contributing to this, the procedure did not contain adequate steps or guidance for certain aspects of the installation of the temporary PSW modification.",
+    "cause_code": "A",
+    "category": "Personnel Error",
+    "theme": "inadequate HU tool use during temporary modification installation, compounded by procedure gaps",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 321-2024-002-01",
+      "properties": {},
+      "type": "LER",
+      "key": "321-2024-002-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:321-2024-002-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Hatch Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000321",
+      "match_key": "Unit:05000321"
+    },
+    {
+      "id": "cause",
+      "display_name": "Personnel Error (A)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "A",
+      "category": "Personnel Error",
+      "theme": "inadequate HU tool use during temporary modification installation, compounded by procedure gaps",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Personnel Error"
+    },
+    {
+      "id": "sys_vi",
+      "display_name": "Main Control Room Air Conditioning",
+      "properties": {
+        "note": "MCRAC subsystems Alpha/Bravo/Charlie, shared between Unit 1 and Unit 2"
+      },
+      "type": "System",
+      "eiis_code": "VI",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:VI"
+    },
+    {
+      "id": "sys_bi",
+      "display_name": "Plant Service Water",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BI",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "cooling water source for MCRAC; temporary modification installed on this system",
+      "match_key": "System:BI"
+    },
+    {
+      "id": "sys_mcrec",
+      "display_name": "Main Control Room Environmental Control",
+      "properties": {
+        "non_eiis": true,
+        "note": "requires one operable MCRAC subsystem per MCREC subsystem; shared between Unit 1 and Unit 2"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:main-control-room-environmental-control"
+    },
+    {
+      "id": "c_cdu_bravo",
+      "display_name": "Bravo Condensing Unit (CDU)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "CDU",
+      "identifier": "1Z41-B008A/B",
+      "model": "QB-J299-1",
+      "manufacturer_code": "T265",
+      "inferred_code": false,
+      "match_key": "Component:CDU|1Z41-B008A/B"
+    },
+    {
+      "id": "c_cdu_alpha",
+      "display_name": "Alpha Condensing Unit (CDU)",
+      "properties": {
+        "note": "affected by low refrigerant, separate failure"
+      },
+      "type": "Component",
+      "eiis_code": "CDU",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:CDU"
+    },
+    {
+      "id": "fm_hu",
+      "display_name": "Contract maintenance personnel failed to use HU tools during PSW temporary modification installation",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Non-licensed, contract maintenance personnel failed to use Human Performance tools to ensure proper installation per procedure.",
+      "match_key": "FailureMode:contract-maintenance-personnel-failed-to-use-hu-tools-during-psw-temporary-modification-installation"
+    },
+    {
+      "id": "fm_proc",
+      "display_name": "Procedure lacked adequate installation guidance",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Procedure did not contain adequate steps or guidance for certain aspects of the temporary PSW modification installation.",
+      "match_key": "FailureMode:procedure-lacked-adequate-installation-guidance"
+    },
+    {
+      "id": "fm_incorrect_install",
+      "display_name": "Temporary PSW modification incorrectly installed on Bravo MCRAC",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Temporary PSW modification installed on Bravo condensing unit was incorrect, rendering the Bravo MCRAC subsystem inoperable for 29 days.",
+      "match_key": "FailureMode:temporary-psw-modification-incorrectly-installed-on-bravo-mcrac"
+    },
+    {
+      "id": "fm_alpha_refrigerant",
+      "display_name": "Alpha MCRAC low refrigerant",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Alpha MCRAC subsystem inoperable due to low refrigerant, independent of the PSW modification issue, from 1/25/2024 0416 to 2/8/2024 0410.",
+      "match_key": "FailureMode:alpha-mcrac-low-refrigerant"
+    },
+    {
+      "id": "cons_bravo_inop",
+      "display_name": "Bravo MCRAC subsystem inoperable",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2024-01-30T10:20",
+      "end": "2024-02-28T14:41",
+      "duration": "29 days",
+      "tz": null,
+      "match_key": "Consequence:bravo-mcrac-subsystem-inoperable"
+    },
+    {
+      "id": "cons_ts_prohibited",
+      "display_name": "Twelve conditions prohibited by Technical Specifications experienced",
+      "properties": {
+        "note": "Includes failure to enter required MODE 3 within completion times on multiple occasions across Unit 1 and Unit 2, and continued fuel movements in conflict with TS"
+      },
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:twelve-conditions-prohibited-by-technical-specifications-experienced"
+    },
+    {
+      "id": "ca_remove_mod",
+      "display_name": "Remove incorrectly installed temporary PSW modification, restoring Bravo MCRAC operability",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:remove-incorrectly-installed-temporary-psw-modification-restoring-bravo-mcrac-operability"
+    },
+    {
+      "id": "ca_walkdown",
+      "display_name": "Walkdown of other MCRAC subsystems with temporary PSW modification installed",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:walkdown-of-other-mcrac-subsystems-with-temporary-psw-modification-installed"
+    },
+    {
+      "id": "ca_cobra",
+      "display_name": "Add scenario to Craft On-Boarding Ranking Assessment (COBRA) proficiency assessment",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:add-scenario-to-craft-on-boarding-ranking-assessment-cobra-proficiency-assessment"
+    },
+    {
+      "id": "ca_holdpoint",
+      "display_name": "Add SNC Cognizant Person Hold Point/Sign Off to job plan",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:add-snc-cognizant-person-hold-point-sign-off-to-job-plan"
+    },
+    {
+      "id": "ca_procedure",
+      "display_name": "Update procedure with better detailed instructions for temporary PSW modification installation",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:update-procedure-with-better-detailed-instructions-for-temporary-psw-modification-installation"
+    },
+    {
+      "id": "ca_alpha_repair",
+      "display_name": "Check Alpha MCRAC unit for refrigerant leaks and restore proper refrigerant level",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:check-alpha-mcrac-unit-for-refrigerant-leaks-and-restore-proper-refrigerant-level"
+    },
+    {
+      "id": "mfr_trane",
+      "display_name": "Trane",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "T265",
+      "match_key": "Manufacturer:T265"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts_374",
+      "display_name": "TS 3.7.4 (MCREC)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-3-7-4-mcrec"
+    },
+    {
+      "id": "rr_ts_375",
+      "display_name": "TS 3.7.5 (MCRAC)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-3-7-5-mcrac"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts_374",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts_375",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_vi",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bi",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_mcrec",
+      "evidence": null
+    },
+    {
+      "source": "c_cdu_bravo",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_trane",
+      "evidence": null
+    },
+    {
+      "source": "fm_hu",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_hu",
+      "relation": "LEADS_TO",
+      "target": "fm_incorrect_install",
+      "evidence": null
+    },
+    {
+      "source": "fm_proc",
+      "relation": "LEADS_TO",
+      "target": "fm_incorrect_install",
+      "evidence": null
+    },
+    {
+      "source": "fm_incorrect_install",
+      "relation": "LEADS_TO",
+      "target": "cons_bravo_inop",
+      "evidence": null
+    },
+    {
+      "source": "cons_bravo_inop",
+      "relation": "LEADS_TO",
+      "target": "cons_ts_prohibited",
+      "evidence": null
+    },
+    {
+      "source": "fm_alpha_refrigerant",
+      "relation": "LEADS_TO",
+      "target": "cons_ts_prohibited",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_remove_mod",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_walkdown",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_cobra",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_holdpoint",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procedure",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_alpha_repair",
+      "evidence": null
+    }
+  ],
+  "chain": "failure to use HU tools + inadequate procedure guidance [cause A] -> temporary PSW modification incorrectly installed on Bravo MCRAC -> Bravo MCRAC subsystem inoperable (29 days) [concurrent with independent Alpha MCRAC low-refrigerant inoperability] -> twelve TS-prohibited conditions experienced (MODE 3 completion times exceeded; fuel moves continued in conflict with TS)",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Two Units share MCRAC/MCREC systems; treated as one LER anchored to Unit 2 per docket 05000321 (Unit 1 docket would be 05000366, not provided in FORM-366 fields). Alpha MCRAC low-refrigerant failure is a genuinely separate, concurrent failure mode not caused by the personnel-error cause code, but both converge on the shared consequence of multiple TS-prohibited conditions due to overlapping MCRAC/MCREC inoperabilities. No BACKED_UP_BY edges asserted because Charlie MCRAC was itself intermittently inoperable due to tagouts, and Alpha/Charlie operability during the event was not uniformly stated as continuously available. No previous similar events per narrative. PART_OF not asserted for CDU->MCRAC per explicit-only rule (narrative describes it as 'condensing unit of the MCRAC subsystem' which arguably supports containment, but kept conservative given ambiguity of exact phrasing); could be revisited if stricter PART_OF desired."
+}

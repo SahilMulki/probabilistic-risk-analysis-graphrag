@@ -1,0 +1,340 @@
+{
+  "ler_number": "265-2020-003-00",
+  "identity": {
+    "accession_number": "ML20261H588",
+    "docket": "05000265",
+    "plant_name": "Quad Cities",
+    "unit": 2,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2020-07-22",
+    "report_date": "2020-09-17",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Oscillation Power Range Monitors (OPRMs) Count Setpoint Discrepancy Due to Inadequate Instructions"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)(D)",
+      "10 CFR 50.73(a)(2)(i)(B)",
+      "10 CFR 50.73(a)(2)(vii)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "M•oof<ciore•",
+      "system": "R•portobl•",
+      "component": "to",
+      "manufacturer": "IRIS",
+      "reportable": null
+    },
+    {
+      "cause": "D",
+      "system": "IG",
+      "component": "MON",
+      "manufacturer": "A576",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The cause of the incorrect OPRM count setpoint was due to insufficient work package guidance and a lack of verification to ensure that the work instructions contained the proper setpoints.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Inadequate work instructions / procedure guidance",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 265-2020-004-00",
+      "properties": {},
+      "type": "LER",
+      "key": "265-2020-003-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:265-2020-003-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Quad Cities Unit 2",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000265",
+      "match_key": "Unit:05000265"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Procedure Deficiency (D)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Inadequate work instructions / procedure guidance",
+      "proximate_text": "The cause of the incorrect OPRM count setpoint was due to insufficient work package guidance and a lack of verification to ensure that the work instructions contained the proper setpoints.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_ig",
+      "display_name": "Oscillation Power Range Monitor System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "IG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected system",
+      "match_key": "System:IG"
+    },
+    {
+      "id": "c_oprm",
+      "display_name": "OPRM Module (In-core Monitoring)",
+      "properties": {
+        "part_number": "N/A"
+      },
+      "type": "Component",
+      "eiis_code": "MON",
+      "identifier": null,
+      "model": "2001731-102",
+      "manufacturer_code": "A576",
+      "inferred_code": false,
+      "match_key": "Component:MON"
+    },
+    {
+      "id": "c_wo",
+      "display_name": "Work Order for OPRM setpoint update",
+      "properties": {
+        "note": "WO directed amplitude setpoint update only, omitted confirmation count setpoint"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:work-order-for-oprm-setpoint-update"
+    },
+    {
+      "id": "fm_incomplete_wo",
+      "display_name": "Work order lacked instructions to update confirmation count setpoint",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The work order written to update the OPRM setpoints per COLR Rev 13 only directed an update to the amplitude setpoint, with no instructions to update the confirmation count setpoint.",
+      "match_key": "FailureMode:work-order-lacked-instructions-to-update-confirmation-count-setpoint"
+    },
+    {
+      "id": "fm_no_verify",
+      "display_name": "No verification of setpoints against COLR",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Lack of verification to ensure that the work instructions contained the proper setpoints, allowing the discrepancy to go undetected.",
+      "match_key": "FailureMode:no-verification-of-setpoints-against-colr"
+    },
+    {
+      "id": "fm_setpoint_mismatch",
+      "display_name": "OPRM confirmation count setpoint mismatch with COLR",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "As-found OPRM maximum confirmation count setpoint was set at 16 counts to trip instead of the COLR-specified 15 counts.",
+      "match_key": "FailureMode:oprm-confirmation-count-setpoint-mismatch-with-colr"
+    },
+    {
+      "id": "cons_oprm_inop",
+      "display_name": "All Unit 2 OPRMs declared inoperable / TS 3.3.1.3 Conditions A and B entered",
+      "properties": {
+        "note": "Common-cause inoperability of all 4 OPRM trip channels (8 OPRMs); potential loss of thermal-hydraulic instability trip capability"
+      },
+      "type": "Consequence",
+      "start": "2020-07-22T10:30",
+      "end": "2020-07-23T12:10",
+      "duration": "25:40",
+      "tz": "CDT",
+      "match_key": "Consequence:all-unit-2-oprms-declared-inoperable-ts-3-3-1-3-conditions-a-and-b-entered"
+    },
+    {
+      "id": "ca_adjust",
+      "display_name": "Adjust all Unit 2 OPRM setpoints per COLR",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:adjust-all-unit-2-oprm-setpoints-per-colr"
+    },
+    {
+      "id": "ca_revise_proc",
+      "display_name": "Revise maintenance OPRM calibration procedure with more detailed instructions",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-maintenance-oprm-calibration-procedure-with-more-detailed-instructions"
+    },
+    {
+      "id": "ca_verify",
+      "display_name": "Add verification of setpoints against COLR",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:add-verification-of-setpoints-against-colr"
+    },
+    {
+      "id": "mfr_abb",
+      "display_name": "ABB Combustion Engineering",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "A576",
+      "match_key": "Manufacturer:A576"
+    },
+    {
+      "id": "rr_5073v",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "rr_5073i",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_5073vii",
+      "display_name": "10 CFR 50.73(a)(2)(vii)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-vii"
+    },
+    {
+      "id": "rr_ufsar",
+      "display_name": "UFSAR Section 15.4.11.1",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:ufsar-section-15-4-11-1"
+    },
+    {
+      "id": "rr_colr",
+      "display_name": "Quad Cities Unit 2 Core Operating Limits Report (COLR)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:quad-cities-unit-2-core-operating-limits-report-colr"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073v",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073i",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073vii",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ig",
+      "evidence": null
+    },
+    {
+      "source": "c_oprm",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_abb",
+      "evidence": null
+    },
+    {
+      "source": "fm_incomplete_wo",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_incomplete_wo",
+      "relation": "LEADS_TO",
+      "target": "fm_no_verify",
+      "evidence": null
+    },
+    {
+      "source": "fm_no_verify",
+      "relation": "LEADS_TO",
+      "target": "fm_setpoint_mismatch",
+      "evidence": null
+    },
+    {
+      "source": "fm_setpoint_mismatch",
+      "relation": "LEADS_TO",
+      "target": "cons_oprm_inop",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_adjust",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_revise_proc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_verify",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ufsar",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_colr",
+      "evidence": null
+    }
+  ],
+  "chain": "inadequate work instructions [cause D] -> WO omitted confirmation count setpoint update -> no verification of setpoints against COLR -> OPRM count setpoint mismatch (16 vs 15 counts) -> all Unit 2 OPRMs declared inoperable (TS 3.3.1.3 Cond A/B, ~25h40m) [engineering evaluation found sufficient OLMCPR margin, no safety significance]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Block-13 fields in FORM-366 FIELDS were garbled OCR artifacts ('M•oof<ciore•', 'R•portobl•', 'to', 'IRIS'); only the second, coherent row (cause D, system IG, component MON, manufacturer A576, reportable Y) was retained. Official cause_code is D per FORM-366 FIELDS block_13, though the top-level cause_code/category field was listed as TBD/provisional -- category left as 'provisional' string per source since no discrete category label was given beyond 'D'. Previous Occurrences section (E) in the narrative was truncated/garbled ('safety system to become inoperable') with no LER number, plant, or title given, so no stub LER/SIMILAR_TO edge was created per Rule 9's requirement for the cited LER number. Component failure data listed under 'In-core Monitoring' (EIIS MON) manufactured by ABB Combustion Engineering (A576), model 2001731-102. WO and verification lapses modeled as two distinct FailureMode nodes per Rule 5, not merged despite both stemming from the same root cause theme."
+}

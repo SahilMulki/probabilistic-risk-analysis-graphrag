@@ -1,0 +1,329 @@
+{
+  "ler_number": "458-2020-004-00",
+  "identity": {
+    "accession_number": "ML20302A456",
+    "docket": "05000458",
+    "plant_name": "River Bend",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2020-09-03",
+    "report_date": "2020-10-29",
+    "operating_mode": null,
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "I 2020-004-00, “Inadvertent Initiation and Injection of High Pressure Core Spray (HPCS)”"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)(D)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "E",
+      "system": null,
+      "component": null,
+      "manufacturer": null,
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "A trip unit card located on rack Z2 developed an electrical short and caused an amperage spike. This amperage spike caused voltage to lower across rack Z1. Once this voltage lowered beyond a certain point, an invalid Level 2 signal was generated and caused a HPCS actuation.",
+    "cause_code": "E",
+    "category": "Management/QA Deficiency",
+    "theme": "Trip unit card electrical short causing spurious low-level signal",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 458-2020-004-00",
+      "properties": {
+        "match_key": "LER:458-2020-004-00"
+      },
+      "type": "LER",
+      "key": "458-2020-004-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:458-2020-004-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "River Bend Unit 1",
+      "properties": {
+        "match_key": "Unit:05000458",
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000458",
+      "match_key": "Unit:05000458"
+    },
+    {
+      "id": "cause",
+      "display_name": "Management/QA Deficiency (E)",
+      "properties": {
+        "match_key": "Cause:Management/QA Deficiency"
+      },
+      "type": "Cause",
+      "cause_code": "E",
+      "category": "Management/QA Deficiency",
+      "theme": "Trip unit card electrical short causing spurious low-level signal",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Management/QA Deficiency"
+    },
+    {
+      "id": "sys_hpcs",
+      "display_name": "High Pressure Core Spray",
+      "properties": {
+        "acronym": "HPCS",
+        "match_key": "System:high-pressure-core-spray"
+      },
+      "type": "System",
+      "eiis_code": "BG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "spuriously actuated system",
+      "match_key": "System:BG"
+    },
+    {
+      "id": "sys_fwlc",
+      "display_name": "Feed-Water Level Control",
+      "properties": {
+        "acronym": "FWLC",
+        "match_key": "System:feed-water-level-control"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "manually controlled to restore water level",
+      "match_key": "System:feed-water-level-control"
+    },
+    {
+      "id": "sys_div3dg",
+      "display_name": "Division 3 Diesel Generator",
+      "properties": {
+        "match_key": "System:division-3-diesel-generator"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "auto-started with HPCS initiation",
+      "match_key": "System:division-3-diesel-generator"
+    },
+    {
+      "id": "c_card_z2",
+      "display_name": "Trip unit circuit card (rack Z2)",
+      "properties": {
+        "match_key": "Component:trip-unit-card-rack-z2"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "Rack Z2",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:trip-unit-circuit-card-rack-z2"
+    },
+    {
+      "id": "c_rack_z1",
+      "display_name": "Trip unit rack Z1",
+      "properties": {
+        "match_key": "Component:trip-unit-rack-z1"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "Rack Z1",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:trip-unit-rack-z1"
+    },
+    {
+      "id": "c_powersupply",
+      "display_name": "Trip unit rack power supply",
+      "properties": {
+        "match_key": "Component:trip-unit-rack-power-supply"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:trip-unit-rack-power-supply"
+    },
+    {
+      "id": "fm_short",
+      "display_name": "Electrical short in trip unit card (rack Z2)",
+      "properties": {
+        "match_key": "FailureMode:electrical-short-trip-unit-card"
+      },
+      "type": "FailureMode",
+      "description": "A trip unit card located on rack Z2 developed an electrical short and caused an amperage spike.",
+      "match_key": "FailureMode:electrical-short-in-trip-unit-card-rack-z2"
+    },
+    {
+      "id": "fm_voltagedrop",
+      "display_name": "Amperage spike lowers voltage across rack Z1",
+      "properties": {
+        "match_key": "FailureMode:voltage-drop-rack-z1"
+      },
+      "type": "FailureMode",
+      "description": "The amperage spike caused voltage to lower across rack Z1, falling below 22 VDC but remaining above 19 VDC.",
+      "match_key": "FailureMode:amperage-spike-lowers-voltage-across-rack-z1"
+    },
+    {
+      "id": "fm_falsesignal",
+      "display_name": "Invalid Level 2 signal generated",
+      "properties": {
+        "match_key": "FailureMode:invalid-level-2-signal"
+      },
+      "type": "FailureMode",
+      "description": "The lowered voltage was incorrectly interpreted by the reverse-logic trip unit as a low voltage signal from the field, generating a false Level 2 signal.",
+      "match_key": "FailureMode:invalid-level-2-signal-generated"
+    },
+    {
+      "id": "cons_hpcs_inject",
+      "display_name": "HPCS inadvertent initiation and injection into RPV / HPCS rendered inoperable",
+      "properties": {
+        "match_key": "Consequence:hpcs-inadvertent-initiation-injection"
+      },
+      "type": "Consequence",
+      "start": "2020-09-03T20:48",
+      "end": null,
+      "duration": null,
+      "tz": "CT",
+      "match_key": "Consequence:hpcs-inadvertent-initiation-and-injection-into-rpv-hpcs-rendered-inoperable"
+    },
+    {
+      "id": "ca_replace_cards",
+      "display_name": "Replace three failed trip unit cards and power supply",
+      "properties": {
+        "match_key": "CorrectiveAction:replace-trip-unit-cards-power-supply"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-three-failed-trip-unit-cards-and-power-supply"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {
+        "type": "reporting-criterion",
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "ler_prev_2018",
+      "display_name": "LER 2018-002",
+      "properties": {
+        "unit": 1,
+        "match_key": "LER:2018-002"
+      },
+      "type": "LER",
+      "key": "2018-002",
+      "stub": true,
+      "title": "Invalid initiation of High Pressure Core Spray (HPCS) with injection into the reactor vessel during transmitter restoration",
+      "plant": "River Bend Station",
+      "match_key": "LER:2018-002"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_hpcs",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_fwlc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_div3dg",
+      "evidence": null
+    },
+    {
+      "source": "c_card_z2",
+      "relation": "PART_OF",
+      "target": "c_rack_z1",
+      "evidence": null
+    },
+    {
+      "source": "fm_short",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_short",
+      "relation": "LEADS_TO",
+      "target": "fm_voltagedrop",
+      "evidence": null
+    },
+    {
+      "source": "fm_voltagedrop",
+      "relation": "LEADS_TO",
+      "target": "fm_falsesignal",
+      "evidence": null
+    },
+    {
+      "source": "fm_falsesignal",
+      "relation": "LEADS_TO",
+      "target": "cons_hpcs_inject",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_cards",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev_2018",
+      "evidence": null
+    }
+  ],
+  "chain": "electrical short in trip unit card (rack Z2) [cause E] -> amperage spike lowers voltage across rack Z1 -> reverse-logic trip unit misreads low voltage as field signal -> invalid Level 2 signal -> HPCS spuriously initiates and injects into RPV, HPCS rendered inoperable (manually overridden, still available)",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code E (Management/QA Deficiency) per FORM-366 governs category despite narrative describing a purely electrical/hardware failure mechanism (trip unit card short); no explicit personnel/procedural deficiency is described in the narrative text provided. HPCS was manually overridden and rendered inoperable but the narrative states it remained available to mitigate an accident if needed - not modeled as BACKED_UP_BY since no distinct operable backup system is described as active during the inoperability window (RCIC/LPCS/ADS not mentioned). Division 3 DG and FWLC are modeled as INVOLVES since narrative directly describes their operation during the event, not as backups per se."
+}

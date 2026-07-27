@@ -1,0 +1,362 @@
+{
+  "ler_number": "333-2021-002-00",
+  "identity": {
+    "accession_number": "ML22014A173",
+    "docket": "05000333",
+    "plant_name": "FitzPatrick",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2021-11-18",
+    "report_date": "2022-01-14",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "inspection",
+    "status": "final",
+    "revision": "00",
+    "ens_number": "55593",
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Dear Sir or Madam:"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)(D)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The binding was due to dimensional issues that caused chaffing on the sidewall of the contact carrier channel. This chaffing worsened over time until binding started to occur intermittently within 23A-K54.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Component design/manufacturing defect - out-of-tolerance contact channel dimensions causing chaffing and intermittent binding",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 333-2021-002-00",
+      "properties": {
+        "match_key": "LER:333-2021-002-00"
+      },
+      "type": "LER",
+      "key": "333-2021-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:333-2021-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "FitzPatrick Unit 1",
+      "properties": {
+        "match_key": "Unit:05000333",
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000333",
+      "match_key": "Unit:05000333"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (B)",
+      "properties": {
+        "match_key": "Cause:provisional"
+      },
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Component design/manufacturing defect - out-of-tolerance contact channel dimensions causing chaffing and intermittent binding",
+      "proximate_text": "The binding was due to dimensional issues that caused chaffing on the sidewall of the contact carrier channel. This chaffing worsened over time until binding started to occur intermittently within 23A-K54.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_bj",
+      "display_name": "High Pressure Coolant Injection",
+      "properties": {
+        "match_key": "System:BJ"
+      },
+      "type": "System",
+      "eiis_code": "BJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "ECCS subsystem; involved in event",
+      "match_key": "System:BJ"
+    },
+    {
+      "id": "c_mov",
+      "display_name": "HPCI Pump Discharge to Reactor Inboard Isolation Valve 23MOV-19",
+      "properties": {
+        "match_key": "Component:23MOV-19"
+      },
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": "23MOV-19",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": true,
+      "match_key": "Component:ISV|23MOV-19"
+    },
+    {
+      "id": "c_rly",
+      "display_name": "Valve control logic circuit relay 23A-K54",
+      "properties": {
+        "match_key": "Component:RLY|23A-K54"
+      },
+      "type": "Component",
+      "eiis_code": "RLY",
+      "identifier": "23A-K54",
+      "model": "12HGA11A52F",
+      "manufacturer_code": "G080",
+      "inferred_code": false,
+      "match_key": "Component:RLY|23A-K54"
+    },
+    {
+      "id": "fm_dim",
+      "display_name": "Dimensional defect in contact spring channel causing tight fit",
+      "properties": {
+        "match_key": "FailureMode:dimensional-defect-contact-spring-channel"
+      },
+      "type": "FailureMode",
+      "description": "Channel for contacts 3-7 approximately 2.5 to 4.5 mils narrower than the neighboring channel, producing a tighter fit and potential for binding.",
+      "match_key": "FailureMode:dimensional-defect-in-contact-spring-channel-causing-tight-fit"
+    },
+    {
+      "id": "fm_chaffing",
+      "display_name": "Chaffing on channel sidewall worsening over time",
+      "properties": {
+        "match_key": "FailureMode:chaffing-channel-sidewall"
+      },
+      "type": "FailureMode",
+      "description": "Chaffing evident on the sidewall of the channel for contacts 3-7, worsening over time.",
+      "match_key": "FailureMode:chaffing-on-channel-sidewall-worsening-over-time"
+    },
+    {
+      "id": "fm_binding",
+      "display_name": "Intermittent binding of spring leave / contacts 3-7 not closing",
+      "properties": {
+        "match_key": "FailureMode:intermittent-binding-contacts-3-7"
+      },
+      "type": "FailureMode",
+      "description": "Spring leave moved during relay pickup and bound, causing contacts 3-7 to intermittently not close with a visible air gap; reproduced on 4 of 20 trials.",
+      "match_key": "FailureMode:intermittent-binding-of-spring-leave-contacts-3-7-not-closing"
+    },
+    {
+      "id": "fm_relayfail",
+      "display_name": "Relay 23A-K54 failed to actuate",
+      "properties": {
+        "match_key": "FailureMode:relay-23a-k54-failed-to-actuate"
+      },
+      "type": "FailureMode",
+      "description": "Relay 23A-K54 failed to actuate due to contacts 3-7 not closing, preventing signal to open valve.",
+      "match_key": "FailureMode:relay-23a-k54-failed-to-actuate"
+    },
+    {
+      "id": "fm_movfail",
+      "display_name": "23MOV-19 failed to open",
+      "properties": {
+        "match_key": "FailureMode:23mov-19-failed-to-open"
+      },
+      "type": "FailureMode",
+      "description": "HPCI Pump Discharge to Reactor Inboard Isolation Valve 23MOV-19 failed to open during simulated RPV low water level automatic actuation test.",
+      "match_key": "FailureMode:23mov-19-failed-to-open"
+    },
+    {
+      "id": "cons_hpci",
+      "display_name": "HPCI automatic actuation function could have been prevented",
+      "properties": {
+        "match_key": "Consequence:hpci-automatic-actuation-prevented"
+      },
+      "type": "Consequence",
+      "start": "2021-11-18",
+      "end": "2021-11-19",
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:hpci-automatic-actuation-function-could-have-been-prevented"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace relay 23A-K54",
+      "properties": {
+        "match_key": "CorrectiveAction:replace-relay-23a-k54"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-relay-23a-k54"
+    },
+    {
+      "id": "ca_extent",
+      "display_name": "Conduct extent of condition review",
+      "properties": {
+        "match_key": "CorrectiveAction:extent-of-condition-review"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:conduct-extent-of-condition-review"
+    },
+    {
+      "id": "mfr_ge",
+      "display_name": "General Electric",
+      "properties": {
+        "match_key": "Manufacturer:G080"
+      },
+      "type": "Manufacturer",
+      "code": "G080",
+      "match_key": "Manufacturer:G080"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "rr_5072",
+      "display_name": "10 CFR 50.72(b)(3)(v)(D)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-72-b-3-v-d"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-3-v-d"
+    },
+    {
+      "id": "rr_ts",
+      "display_name": "Technical Specification SR 3.5.1.10",
+      "properties": {
+        "match_key": "RegulatoryReference:ts-sr-3-5-1-10"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-sr-3-5-1-10"
+    },
+    {
+      "id": "ler_prior",
+      "display_name": "CR-JAF-2011-05502: GEH Part 21 Report SC-11-09 Relay Defect Evaluation",
+      "properties": {
+        "match_key": "LER:CR-JAF-2011-05502"
+      },
+      "type": "LER",
+      "key": "CR-JAF-2011-05502",
+      "stub": true,
+      "title": "Evaluation of General Electric Hatchi (GEH) Part 21 Report SC-11-09 - defect in relay model 12HGA11A52F",
+      "plant": "James A. FitzPatrick Nuclear Power Plant",
+      "match_key": "LER:CR-JAF-2011-05502"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bj",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "rr_ts",
+      "evidence": null
+    },
+    {
+      "source": "c_mov",
+      "relation": "PART_OF",
+      "target": "sys_bj",
+      "evidence": null
+    },
+    {
+      "source": "fm_dim",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_dim",
+      "relation": "LEADS_TO",
+      "target": "fm_chaffing",
+      "evidence": null
+    },
+    {
+      "source": "fm_chaffing",
+      "relation": "LEADS_TO",
+      "target": "fm_binding",
+      "evidence": null
+    },
+    {
+      "source": "fm_binding",
+      "relation": "LEADS_TO",
+      "target": "fm_relayfail",
+      "evidence": null
+    },
+    {
+      "source": "fm_relayfail",
+      "relation": "LEADS_TO",
+      "target": "fm_movfail",
+      "evidence": null
+    },
+    {
+      "source": "fm_movfail",
+      "relation": "LEADS_TO",
+      "target": "cons_hpci",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_extent",
+      "evidence": null
+    },
+    {
+      "source": "c_rly",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_ge",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prior",
+      "evidence": null
+    }
+  ],
+  "chain": "dimensional defect in contact spring channel [cause B, provisional] -> chaffing on channel sidewall worsens over time -> intermittent binding of spring leave/contacts 3-7 -> relay 23A-K54 fails to actuate -> 23MOV-19 fails to open -> HPCI automatic actuation function could have been prevented [manual actuation unaffected, system remained available]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Form-366 fields provided cause_code 'TBD'/'provisional', but block-13 row explicitly lists cause 'B'; per rule 4 the official code governs the Cause node, so cause_code is set to 'B' from block_13 while category remains 'provisional' since no categorical label was given in FORM-366 FIELDS. Manual actuation of HPCI remained available throughout, so no BACKED_UP_BY edge was created for HPCI itself; no separate backup system (RCIC/ADS) was mentioned in the narrative as operable during this event, so none were modeled. Title field in FORM-366 FIELDS was a boilerplate salutation ('Dear Sir or Madam:'), so a descriptive title was constructed from the abstract/narrative content per rule 4's spirit of using narrative content for accuracy. Previous occurrence CR-JAF-2011-05502 modeled as stub LER per rule 9, using the exact identifier as stated (a condition report reference, not a docket-based LER number, since no LER number was given for the prior event)."
+}

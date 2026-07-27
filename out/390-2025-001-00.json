@@ -1,0 +1,320 @@
+{
+  "ler_number": "390-2025-001-00",
+  "identity": {
+    "accession_number": "ML25062A082",
+    "docket": "05000390",
+    "plant_name": "Watts Bar",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2025-01-04",
+    "report_date": "2025-03-03",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Watts Bar Nuclear Plant, Units 1 and 2 Facility Operating License No. NPF-96 NRC Docket No. 50-390, 50-391"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)(D)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The most likely cause of the A-A MCR chiller trip was a low oil level within the sump due to oil migration to the chiller's evaporator. Oil migrated during low load conditions which produced low compressor discharge pressures and an overall low refrigerant flow velocity. The low sump oil level caused a loss of oil pressure and a subsequent oil failure trip.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Chiller oil migration during low-load operation",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 390-2025-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "390-2025-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:390-2025-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Watts Bar Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000390",
+      "match_key": "Unit:05000390"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Chiller oil migration during low-load operation",
+      "proximate_text": "The most likely cause of the A-A MCR chiller trip was a low oil level within the sump due to oil migration to the chiller's evaporator. Oil migrated during low load conditions which produced low compressor discharge pressures and an overall low refrigerant flow velocity. The low sump oil level caused a loss of oil pressure and a subsequent oil failure trip.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_vi",
+      "display_name": "Control Room Emergency Air Temperature Control System",
+      "properties": {
+        "note": "two independent and redundant trains (A and B)"
+      },
+      "type": "System",
+      "eiis_code": "VI",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:VI"
+    },
+    {
+      "id": "c_aa_chiller",
+      "display_name": "A-A Main Control Room Chiller",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "A-A MCR Chiller",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:a-a-main-control-room-chiller"
+    },
+    {
+      "id": "c_bb_chiller",
+      "display_name": "B-B Main Control Room Chiller",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "B-B MCR Chiller",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:b-b-main-control-room-chiller"
+    },
+    {
+      "id": "c_tcv",
+      "display_name": "Chiller Temperature Control Valve (TCV)",
+      "properties": {
+        "manufacturer": "Metrex"
+      },
+      "type": "Component",
+      "eiis_code": "TCV",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:TCV"
+    },
+    {
+      "id": "fm_bb_outage",
+      "display_name": "B-B MCR chiller removed from service for maintenance outage",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "B train of CREATCS previously declared inoperable for B-B MCR chiller maintenance outage.",
+      "match_key": "FailureMode:b-b-mcr-chiller-removed-from-service-for-maintenance-outage"
+    },
+    {
+      "id": "fm_oil_migration",
+      "display_name": "Oil migration to evaporator during low-load conditions",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Low load conditions produced low compressor discharge pressures and low refrigerant flow velocity, causing oil to migrate to the evaporator.",
+      "match_key": "FailureMode:oil-migration-to-evaporator-during-low-load-conditions"
+    },
+    {
+      "id": "fm_low_oil",
+      "display_name": "Low sump oil level / loss of oil pressure",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Low sump oil level caused a loss of oil pressure.",
+      "match_key": "FailureMode:low-sump-oil-level-loss-of-oil-pressure"
+    },
+    {
+      "id": "fm_aa_trip",
+      "display_name": "A-A MCR chiller tripped on oil failure",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Loss of oil pressure resulted in oil failure trip of the A-A MCR chiller.",
+      "match_key": "FailureMode:a-a-mcr-chiller-tripped-on-oil-failure"
+    },
+    {
+      "id": "cons_both_trains",
+      "display_name": "Both trains of CREATCS simultaneously inoperable",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2025-01-04T08:55:00-05:00",
+      "end": "2025-01-04T14:08:00-05:00",
+      "duration": "5:13",
+      "tz": "EST",
+      "match_key": "Consequence:both-trains-of-creatcs-simultaneously-inoperable"
+    },
+    {
+      "id": "ca_oil_add",
+      "display_name": "Add oil to MCR chiller system and adjust Metrex TCV",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:add-oil-to-mcr-chiller-system-and-adjust-metrex-tcv"
+    },
+    {
+      "id": "ca_rounds",
+      "display_name": "Update operator rounds instructions with new monitoring values",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:update-operator-rounds-instructions-with-new-monitoring-values"
+    },
+    {
+      "id": "ca_pm_revision",
+      "display_name": "Revise chiller preventive maintenance instructions for discharge pressures",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-chiller-preventive-maintenance-instructions-for-discharge-pressures"
+    },
+    {
+      "id": "ca_monitoring",
+      "display_name": "Systems Engineering monitoring of chiller oil levels and discharge pressures",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:systems-engineering-monitoring-of-chiller-oil-levels-and-discharge-pressures"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "WBN LER 391-2025-001-00 - Loss of both trains of CREATCS due to MCR Chiller TCV malfunction",
+      "properties": {},
+      "type": "LER",
+      "key": "391-2025-001-00",
+      "stub": true,
+      "title": "Loss of both trains of CREATCS due to MCR Chiller TCV malfunction",
+      "plant": "Watts Bar Nuclear Plant Unit 2",
+      "match_key": "LER:391-2025-001-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_vi",
+      "evidence": null
+    },
+    {
+      "source": "c_aa_chiller",
+      "relation": "PART_OF",
+      "target": "sys_vi",
+      "evidence": null
+    },
+    {
+      "source": "c_bb_chiller",
+      "relation": "PART_OF",
+      "target": "sys_vi",
+      "evidence": null
+    },
+    {
+      "source": "fm_bb_outage",
+      "relation": "LEADS_TO",
+      "target": "cons_both_trains",
+      "evidence": null
+    },
+    {
+      "source": "fm_oil_migration",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_oil_migration",
+      "relation": "LEADS_TO",
+      "target": "fm_low_oil",
+      "evidence": null
+    },
+    {
+      "source": "fm_low_oil",
+      "relation": "LEADS_TO",
+      "target": "fm_aa_trip",
+      "evidence": null
+    },
+    {
+      "source": "fm_aa_trip",
+      "relation": "LEADS_TO",
+      "target": "cons_both_trains",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_oil_add",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_rounds",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_pm_revision",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_monitoring",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    }
+  ],
+  "chain": "oil migration during low-load conditions [cause TBD] -> low sump oil level / loss of oil pressure -> A-A MCR chiller trips on oil failure -> (combined with B-B chiller already out for maintenance outage) -> both trains of CREATCS simultaneously inoperable (<6 hr, ~5.22 hr for A train restoration)",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code is TBD per FORM-366 fields, so cause node marked provisional despite narrative providing a clear technical cause statement (oil migration). B-B chiller outage is a pre-existing condition/contributing failure mode that combines with the A-A trip to create the reportable consequence, per rule 5's parallel-trigger modeling. No component failed per Section IV.D (N/A), so no Manufacturer node needed. Previous similar LER is for Unit 2 (docket/title as stated in narrative); stub key preserved exactly as written (391-2025-001-00)."
+}

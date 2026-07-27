@@ -1,0 +1,465 @@
+{
+  "ler_number": "498-2020-001-00",
+  "identity": {
+    "accession_number": "ML20143A188",
+    "docket": "05000498",
+    "plant_name": "South Texas",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2020-03-24",
+    "report_date": "2020-05-22",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2020-001-00 for South Texas Project, Units 1 & 2, Automatic Actuation of Emergency Diesel Generators due to Lockout of Switchyard Electrical Bus"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)",
+      "10 CFR 50.73(a)(2)(iv)(B)(8)",
+      "10 CFR 50.73(a)(2)(iv)(B)(7)",
+      "10 CFR 50.73(a)(2)(iv)(B)(6)",
+      "10 CFR 50.73(a)(2)(iv)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "TDSP personnel had less than adequate work practices during the performance of transmission line relay testing for Jones Creek Circuit 18 (Y500/Y510); a test signal was mistakenly injected into an energized (non-isolated) transmission line relay instead of into the intended de-energized (electrically-isolated) relay",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Contractor work-practice / oversight error during relay testing",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 498-2020-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "498-2020-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:498-2020-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "South Texas Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000498",
+      "match_key": "Unit:05000498"
+    },
+    {
+      "id": "cause",
+      "display_name": "Personnel Error (A)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Contractor work-practice / oversight error during relay testing",
+      "proximate_text": "TDSP personnel had less than adequate work practices during the performance of transmission line relay testing for Jones Creek Circuit 18 (Y500/Y510); a test signal was mistakenly injected into an energized (non-isolated) transmission line relay instead of into the intended de-energized (electrically-isolated) relay",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_fk",
+      "display_name": "Switchyard System",
+      "properties": {
+        "note": "345 kV switchyard, south bus differential relay protection"
+      },
+      "type": "System",
+      "eiis_code": "FK",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:FK"
+    },
+    {
+      "id": "sys_offsite",
+      "display_name": "Offsite Electrical Power System",
+      "properties": {
+        "note": "standby transformers, 345kV lines, switchyard buses"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:offsite-electrical-power-system"
+    },
+    {
+      "id": "sys_edg",
+      "display_name": "Emergency Diesel Generator System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "backup; automatically started and restored power",
+      "match_key": "System:emergency-diesel-generator-system"
+    },
+    {
+      "id": "sys_rcfc",
+      "display_name": "Reactor Containment Fan Coolers",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "automatically actuated ESF equipment",
+      "match_key": "System:reactor-containment-fan-coolers"
+    },
+    {
+      "id": "sys_afw",
+      "display_name": "Auxiliary Feedwater System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "automatically actuated ESF equipment; AFW Pump 22",
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "sys_sfp",
+      "display_name": "Spent Fuel Pool Cooling System",
+      "properties": {
+        "note": "SFP Cooling Pumps 1A/1B (Unit 1), 2A (Unit 2)"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:spent-fuel-pool-cooling-system"
+    },
+    {
+      "id": "c_breaker",
+      "display_name": "345 kV Switchyard South Breaker Y550",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "BKR",
+      "identifier": "Y550",
+      "model": "300SFMT63B",
+      "manufacturer_code": "Mitsubishi",
+      "inferred_code": false,
+      "match_key": "Component:BKR|Y550"
+    },
+    {
+      "id": "c_relay_isolated",
+      "display_name": "Transmission line relay Y500/Y510 (intended, electrically-isolated)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "Y500/Y510",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:transmission-line-relay-y500-y510-intended-electrically-isolated"
+    },
+    {
+      "id": "c_relay_nonisolated",
+      "display_name": "Transmission line relay Y540/Y550 (incorrect, non-isolated)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "Y540/Y550",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:transmission-line-relay-y540-y550-incorrect-non-isolated"
+    },
+    {
+      "id": "c_stbytx2",
+      "display_name": "Standby Transformer 2",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:standby-transformer-2"
+    },
+    {
+      "id": "fm_wrongrelay",
+      "display_name": "Test signal injected into incorrect (energized) transmission line relay",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "TDSP personnel injected a test signal into non-isolated relay Y540/Y550 instead of the intended isolated relay Y500/Y510",
+      "match_key": "FailureMode:test-signal-injected-into-incorrect-energized-transmission-line-relay"
+    },
+    {
+      "id": "fm_trip",
+      "display_name": "Breaker failure trip signal initiated to south bus differential relay",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Erroneous test signal caused a Y550 breaker failure trip signal to the south bus differential relay",
+      "match_key": "FailureMode:breaker-failure-trip-signal-initiated-to-south-bus-differential-relay"
+    },
+    {
+      "id": "fm_debus",
+      "display_name": "345 kV south switchyard bus de-energized",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "South bus unexpectedly de-energized, causing loss of power to Standby Transformer 2",
+      "match_key": "FailureMode:345-kv-south-switchyard-bus-de-energized"
+    },
+    {
+      "id": "cons_lop",
+      "display_name": "Partial loss of offsite power to ESF busses / automatic EDG and ESF actuation",
+      "properties": {
+        "detail": "Loss of power to ESF busses E1A, E1C (Unit 1) and E2B (Unit 2); EDGs 11, 13, 22 auto-started; RCFCs and AFW Pump 22 auto-actuated; SFP Cooling Pumps 1B and 2A lost power"
+      },
+      "type": "Consequence",
+      "start": "2020-03-24T10:46",
+      "end": "2020-03-24T21:42",
+      "duration": "10:56",
+      "tz": "CDT",
+      "match_key": "Consequence:partial-loss-of-offsite-power-to-esf-busses-automatic-edg-and-esf-actuation"
+    },
+    {
+      "id": "ca_coordinator",
+      "display_name": "Assign dedicated STP Switchyard Coordinator for oversight of switchyard work",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:assign-dedicated-stp-switchyard-coordinator-for-oversight-of-switchyard-work"
+    },
+    {
+      "id": "ca_procedures",
+      "display_name": "Revise site procedures to expand scope of switchyard work requiring Coordinator oversight",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-site-procedures-to-expand-scope-of-switchyard-work-requiring-coordinator-oversight"
+    },
+    {
+      "id": "mfr_mitsubishi",
+      "display_name": "Mitsubishi",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "Mitsubishi",
+      "match_key": "Manufacturer:Mitsubishi"
+    },
+    {
+      "id": "rr_5073iv_a",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5073iv_b8",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(B)(8)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-b-8"
+    },
+    {
+      "id": "rr_5073iv_b7",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(B)(7)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-b-7"
+    },
+    {
+      "id": "rr_5073iv_b6",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(B)(6)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-b-6"
+    },
+    {
+      "id": "rr_5073iv_b",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-b"
+    },
+    {
+      "id": "rr_ts3811",
+      "display_name": "STP Technical Specification 3.8.1.1",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:stp-technical-specification-3-8-1-1"
+    },
+    {
+      "id": "prev_ler",
+      "display_name": "South Texas Project LER 2010-004-00 (loss of north switchyard electrical bus due to TDSP human performance error)",
+      "properties": {},
+      "type": "LER",
+      "key": "2010-004-00",
+      "stub": true,
+      "title": "Loss of north switchyard electrical bus due to TDSP human performance error and insufficient STP oversight",
+      "plant": "South Texas Project",
+      "match_key": "LER:2010-004-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073iv_a",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073iv_b8",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073iv_b7",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073iv_b6",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073iv_b",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_fk",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_offsite",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_edg",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rcfc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_afw",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sfp",
+      "evidence": null
+    },
+    {
+      "source": "c_breaker",
+      "relation": "PART_OF",
+      "target": "sys_fk",
+      "evidence": null
+    },
+    {
+      "source": "c_breaker",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_mitsubishi",
+      "evidence": null
+    },
+    {
+      "source": "c_stbytx2",
+      "relation": "PART_OF",
+      "target": "sys_offsite",
+      "evidence": null
+    },
+    {
+      "source": "fm_wrongrelay",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_wrongrelay",
+      "relation": "LEADS_TO",
+      "target": "fm_trip",
+      "evidence": null
+    },
+    {
+      "source": "fm_trip",
+      "relation": "LEADS_TO",
+      "target": "fm_debus",
+      "evidence": null
+    },
+    {
+      "source": "fm_debus",
+      "relation": "LEADS_TO",
+      "target": "cons_lop",
+      "evidence": null
+    },
+    {
+      "source": "cons_lop",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_edg",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_coordinator",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procedures",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "prev_ler",
+      "evidence": null
+    }
+  ],
+  "chain": "TDSP work-practice/oversight error [cause A] -> test signal injected into wrong (energized) relay -> Y550 breaker failure trip signal to south bus differential relay -> 345kV south bus de-energized -> loss of power to Standby Transformer 2 / ESF busses E1A, E1C, E2B -> partial LOOP with automatic EDG/RCFC/AFW actuation [backups EDGs 11, 13, 22 auto-started and restored power]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Two units share this docket/report; identity.unit set to 1 per docket 05000498 mapping though event affected both Unit 1 (defueled) and Unit 2 (100% power). Root cause (TDSP work practices) and contributing cause (STP oversight) both described in narrative; cause_code A (Personnel Error) governs per Block 13. SFP cooling pump loss and lost indications (ICS, RM-11, RT-8010B) noted as consequences but not modeled as separate FailureMode nodes since they are parallel effects of the same bus de-energization, captured within the consequence node. Previous similar event 2010-004-00 modeled as stub LER per rule 9."
+}

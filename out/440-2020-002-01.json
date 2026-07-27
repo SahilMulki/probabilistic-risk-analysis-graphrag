@@ -1,0 +1,370 @@
+{
+  "ler_number": "440-2020-002-01",
+  "identity": {
+    "accession_number": "ML21131A168",
+    "docket": "05000440",
+    "plant_name": "Perry",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2020-08-20",
+    "report_date": "2021-05-11",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "operability test",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Perry Nuclear Power Plant"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)(A)",
+      "10 CFR 50.73(a)(2)(v)(D)",
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "A procedure step in the PTI directed the Non-Licensed Operator (NLO) to Unlock and Close the Transfer Line Isolation valve. The NLO unlocked the valve but failed to close the valve. A subsequent step opened the Transfer Line Outboard Containment Isolation valve aligning the discharge of the running transfer pump to the SLC Storage Tank, which caused the Storage Tank to fill with water from the Transfer Tank.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Valve mis-position due to human error during periodic test, compounded by inadequate risk classification of the procedure",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 440-2020-002-01",
+      "properties": {
+        "match_key": "LER:440-2020-002-01"
+      },
+      "type": "LER",
+      "key": "440-2020-002-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:440-2020-002-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Perry Unit 1",
+      "properties": {
+        "match_key": "Unit:05000440",
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000440",
+      "match_key": "Unit:05000440"
+    },
+    {
+      "id": "cause",
+      "display_name": "Personnel Error / Procedural Risk Classification (TBD)",
+      "properties": {
+        "match_key": "Cause:provisional"
+      },
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Valve mis-position due to human error during periodic test, compounded by inadequate risk classification of the procedure",
+      "proximate_text": "A procedure step in the PTI directed the Non-Licensed Operator (NLO) to Unlock and Close the Transfer Line Isolation valve. The NLO unlocked the valve but failed to close the valve. A subsequent step opened the Transfer Line Outboard Containment Isolation valve aligning the discharge of the running transfer pump to the SLC Storage Tank, which caused the Storage Tank to fill with water from the Transfer Tank.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_br",
+      "display_name": "Standby Liquid Control System",
+      "properties": {
+        "match_key": "System:BR"
+      },
+      "type": "System",
+      "eiis_code": "BR",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected/inoperable system",
+      "match_key": "System:BR"
+    },
+    {
+      "id": "sys_aa",
+      "display_name": "Control Rod Drive System",
+      "properties": {
+        "match_key": "System:AA",
+        "note": "referenced in Introduction as the system SLC is an alternate/independent method to; design context"
+      },
+      "type": "System",
+      "eiis_code": "AA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:AA"
+    },
+    {
+      "id": "c_isv",
+      "display_name": "Transfer Line Isolation valve",
+      "properties": {
+        "match_key": "Component:ISV|transfer-line-isolation-valve"
+      },
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:ISV"
+    },
+    {
+      "id": "c_outboard_valve",
+      "display_name": "Transfer Line Outboard Containment Isolation valve",
+      "properties": {
+        "match_key": "Component:transfer-line-outboard-containment-isolation-valve"
+      },
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": true,
+      "match_key": "Component:ISV"
+    },
+    {
+      "id": "c_tk",
+      "display_name": "SLC Storage Tank",
+      "properties": {
+        "match_key": "Component:TK|slc-storage-tank"
+      },
+      "type": "Component",
+      "eiis_code": "TK",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:TK"
+    },
+    {
+      "id": "fm_valve_left_open",
+      "display_name": "Transfer Line Isolation valve left open instead of closed",
+      "properties": {
+        "match_key": "FailureMode:transfer-line-isolation-valve-left-open"
+      },
+      "type": "FailureMode",
+      "description": "NLO unlocked the valve per procedure step but failed to close it, contrary to PTI direction.",
+      "match_key": "FailureMode:transfer-line-isolation-valve-left-open-instead-of-closed"
+    },
+    {
+      "id": "fm_water_addition",
+      "display_name": "Inadvertent addition of demineralized water to SLC Storage Tank",
+      "properties": {
+        "match_key": "FailureMode:inadvertent-water-addition-to-slc-storage-tank"
+      },
+      "type": "FailureMode",
+      "description": "A subsequent step opened the Transfer Line Outboard Containment Isolation valve, aligning the running transfer pump discharge to the SLC Storage Tank, adding approximately 226 gallons of demineralized water to the existing 4872 gallons of boron solution.",
+      "match_key": "FailureMode:inadvertent-addition-of-demineralized-water-to-slc-storage-tank"
+    },
+    {
+      "id": "fm_boron_dilution",
+      "display_name": "SLC boron solution concentration diluted below TS limits",
+      "properties": {
+        "match_key": "FailureMode:slc-boron-concentration-below-ts-limits"
+      },
+      "type": "FailureMode",
+      "description": "Sample of the SLC storage tank boron solution concentration did not meet Technical Specification criteria.",
+      "match_key": "FailureMode:slc-boron-solution-concentration-diluted-below-ts-limits"
+    },
+    {
+      "id": "cons_slc_inop",
+      "display_name": "SLC System declared INOPERABLE (both subsystems)",
+      "properties": {
+        "match_key": "Consequence:slc-system-inoperable",
+        "ts_condition": "TS 3.1.7 Condition B entered for two SLC subsystems inoperable",
+        "note": "Reportable also under 10 CFR 50.73(a)(2)(i)(B) for exceeding LCO completion time"
+      },
+      "type": "Consequence",
+      "start": "2020-08-21T09:53",
+      "end": "2020-08-21T13:07",
+      "duration": "3:14",
+      "tz": null,
+      "match_key": "Consequence:slc-system-declared-inoperable-both-subsystems"
+    },
+    {
+      "id": "ca_procedure",
+      "display_name": "Revise PTI-C41-P0001 to add independent verification step for closure of Transfer Line Isolation valve",
+      "properties": {
+        "match_key": "CorrectiveAction:revise-pti-c41-p0001-independent-verification"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-pti-c41-p0001-to-add-independent-verification-step-for-closure-of-transfer-line-isolation-valve"
+    },
+    {
+      "id": "ca_performance_mgmt",
+      "display_name": "Personnel error addressed through station performance management",
+      "properties": {
+        "match_key": "CorrectiveAction:station-performance-management"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:personnel-error-addressed-through-station-performance-management"
+    },
+    {
+      "id": "rr_5073v_a",
+      "display_name": "10 CFR 50.73(a)(2)(v)(A)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-a",
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-a"
+    },
+    {
+      "id": "rr_5073v_d",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d",
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "rr_5073i_b",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b",
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_reg_guide_1_174",
+      "display_name": "Regulatory Guide 1.174",
+      "properties": {
+        "match_key": "RegulatoryReference:regulatory-guide-1-174",
+        "type": "standard/guidance"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:regulatory-guide-1-174"
+    },
+    {
+      "id": "rr_ts_3_1_7",
+      "display_name": "TS 3.1.7 Condition B",
+      "properties": {
+        "match_key": "RegulatoryReference:ts-3-1-7-condition-b",
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ts-3-1-7-condition-b"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073v_a",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073v_d",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073i_b",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_br",
+      "evidence": null
+    },
+    {
+      "source": "c_isv",
+      "relation": "PART_OF",
+      "target": "sys_br",
+      "evidence": null
+    },
+    {
+      "source": "c_tk",
+      "relation": "PART_OF",
+      "target": "sys_br",
+      "evidence": null
+    },
+    {
+      "source": "fm_valve_left_open",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_valve_left_open",
+      "relation": "LEADS_TO",
+      "target": "fm_water_addition",
+      "evidence": null
+    },
+    {
+      "source": "fm_water_addition",
+      "relation": "LEADS_TO",
+      "target": "fm_boron_dilution",
+      "evidence": null
+    },
+    {
+      "source": "fm_boron_dilution",
+      "relation": "LEADS_TO",
+      "target": "cons_slc_inop",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procedure",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_performance_mgmt",
+      "evidence": null
+    },
+    {
+      "source": "cons_slc_inop",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts_3_1_7",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_reg_guide_1_174",
+      "evidence": null
+    }
+  ],
+  "chain": "human error / valve mis-position [cause TBD, contributing: procedure misclassified as GREEN risk] -> Transfer Line Isolation valve left open -> subsequent step opens Outboard valve, aligning transfer pump discharge to SLC Storage Tank -> ~226 gal demineralized water added -> boron solution concentration diluted below TS limits -> SLC System declared INOPERABLE (both subsystems, ~3h14m) [no backups stated; restored via boron addition and resample]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause_code/category on FORM-366 FIELDS given as 'TBD'/'provisional' with no block_13 rows provided; per Rule 4 these are copied verbatim and the Cause node is marked provisional. Narrative describes both a direct cause (human error / valve mis-position) and a contributing cause (2011 procedural risk classification error, GREEN vs YELLOW risk) — captured in proximate_text/theme but only one Cause node emitted per rule 4. Control Rod Drive System (AA) appears only in Introduction as design/independence context for SLC, not as an involved or failed system, but is included as a System node with a note since it is explicitly named with its EIIS code in the narrative; no edges beyond the node itself assert its involvement in the failure chain. No previous similar events were identified (three-year CR review), so no SIMILAR_TO edge or stub LER node emitted per rule 9's conditional nature. No manufacturer, model, or block_13 data was provided in the source material."
+}

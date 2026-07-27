@@ -1,0 +1,407 @@
+{
+  "ler_number": "416-2023-002-00",
+  "identity": {
+    "accession_number": "ML24044A193",
+    "docket": "05000416",
+    "plant_name": "Grand Gulf",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2023-12-16",
+    "report_date": "2024-02-13",
+    "operating_mode": "1",
+    "power_level": 81,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Grand Gulf Nuclear Station, Unit 1 Licensee Event Report 2023-002-00, Reactor Scram due to Generator Stator Fault to Ground"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)",
+      "10 CFR 50.73(a)(2)(iv)(B)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "Generator Stator fault to ground resulting in a main generator lockout and reactor scram. A root cause was not identified.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "generator stator ground fault",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 416-2023-002-00",
+      "properties": {
+        "match_key": "LER:416-2023-002-00"
+      },
+      "type": "LER",
+      "key": "416-2023-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:416-2023-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Grand Gulf Unit 1",
+      "properties": {
+        "match_key": "Unit:05000416",
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000416",
+      "match_key": "Unit:05000416"
+    },
+    {
+      "id": "cause",
+      "display_name": "Undetermined (TBD)",
+      "properties": {
+        "match_key": "Cause:provisional"
+      },
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "generator stator ground fault",
+      "proximate_text": "Generator Stator fault to ground resulting in a main generator lockout and reactor scram. A root cause was not identified.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_gen",
+      "display_name": "Main Generator",
+      "properties": {
+        "match_key": "System:main-generator"
+      },
+      "type": "System",
+      "eiis_code": "TB",
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:TB"
+    },
+    {
+      "id": "sys_rps",
+      "display_name": "Reactor Protection System",
+      "properties": {
+        "match_key": "System:reactor-protection-system"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "actuated",
+      "match_key": "System:reactor-protection-system"
+    },
+    {
+      "id": "sys_turb",
+      "display_name": "Main Turbine",
+      "properties": {
+        "match_key": "System:main-turbine"
+      },
+      "type": "System",
+      "eiis_code": "TA",
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:TA"
+    },
+    {
+      "id": "c_ngt",
+      "display_name": "Neutral Grounding Transformer",
+      "properties": {
+        "match_key": "Component:neutral-grounding-transformer"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:neutral-grounding-transformer"
+    },
+    {
+      "id": "c_relay",
+      "display_name": "Main Generator Protective Relays (59N Stator Ground Fault)",
+      "properties": {
+        "match_key": "Component:59n-stator-ground-fault-relays"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:main-generator-protective-relays-59n-stator-ground-fault"
+    },
+    {
+      "id": "c_lockout",
+      "display_name": "Main Generator Lockout Relay",
+      "properties": {
+        "match_key": "Component:main-generator-lockout-relay"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:main-generator-lockout-relay"
+    },
+    {
+      "id": "fm_stator",
+      "display_name": "Generator stator fault to ground",
+      "properties": {
+        "match_key": "FailureMode:generator-stator-fault-to-ground"
+      },
+      "type": "FailureMode",
+      "description": "Increase in voltage across secondary of neutral grounding transformer exceeded 59N (90% Stator Ground Fault) trip setpoint",
+      "match_key": "FailureMode:generator-stator-fault-to-ground"
+    },
+    {
+      "id": "fm_lockout",
+      "display_name": "Main generator lockout initiated",
+      "properties": {
+        "match_key": "FailureMode:main-generator-lockout-initiated"
+      },
+      "type": "FailureMode",
+      "description": "All three in-service protective relays tripped after 3-second delay, initiating main generator lockout",
+      "match_key": "FailureMode:main-generator-lockout-initiated"
+    },
+    {
+      "id": "fm_turbtrip",
+      "display_name": "Main turbine trip",
+      "properties": {
+        "match_key": "FailureMode:main-turbine-trip"
+      },
+      "type": "FailureMode",
+      "description": "Generator lockout caused subsequent main turbine trip",
+      "match_key": "FailureMode:main-turbine-trip"
+    },
+    {
+      "id": "cons_scram",
+      "display_name": "Automatic reactor scram / RPS actuation",
+      "properties": {
+        "match_key": "Consequence:automatic-reactor-scram-rps-actuation"
+      },
+      "type": "Consequence",
+      "start": "2023-12-16T03:46",
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:automatic-reactor-scram-rps-actuation"
+    },
+    {
+      "id": "ca_cooldown",
+      "display_name": "Turbine and generator cooldown to allow testing of stator windings, isophase bus, and neutral grounding transformer",
+      "properties": {
+        "match_key": "CorrectiveAction:turbine-generator-cooldown-testing"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:turbine-and-generator-cooldown-to-allow-testing-of-stator-windings-isophase-bus-and-neutral-grounding-transformer"
+    },
+    {
+      "id": "ca_insulation",
+      "display_name": "Insulation resistance testing of main generator terminal voltage components",
+      "properties": {
+        "match_key": "CorrectiveAction:insulation-resistance-testing"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:insulation-resistance-testing-of-main-generator-terminal-voltage-components"
+    },
+    {
+      "id": "ca_pm_bushings",
+      "display_name": "Implement preventative maintenance to clean main generator bushings",
+      "properties": {
+        "match_key": "CorrectiveAction:pm-clean-generator-bushings"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:implement-preventative-maintenance-to-clean-main-generator-bushings"
+    },
+    {
+      "id": "ca_replace_solenoid",
+      "display_name": "Replace seal oil drain regulator tank solenoid contactors",
+      "properties": {
+        "match_key": "CorrectiveAction:replace-solenoid-contactors"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-seal-oil-drain-regulator-tank-solenoid-contactors"
+    },
+    {
+      "id": "rr_5073_iv_a",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5073_iv_b",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(B)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-b"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-b"
+    },
+    {
+      "id": "rr_5072",
+      "display_name": "10 CFR 50.72(b)(2)(iv)(B)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-72-b-2-iv-b"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-2-iv-b"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "LER 2020-003",
+      "properties": {
+        "match_key": "LER:2020-003"
+      },
+      "type": "LER",
+      "key": "2020-003",
+      "stub": true,
+      "title": "Automatic reactor scram due to a main turbine trip",
+      "plant": "Grand Gulf Nuclear Station",
+      "match_key": "LER:2020-003"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_iv_a",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_iv_b",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_gen",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rps",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_turb",
+      "evidence": null
+    },
+    {
+      "source": "c_ngt",
+      "relation": "PART_OF",
+      "target": "sys_gen",
+      "evidence": null
+    },
+    {
+      "source": "c_relay",
+      "relation": "PART_OF",
+      "target": "sys_gen",
+      "evidence": null
+    },
+    {
+      "source": "fm_stator",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_stator",
+      "relation": "LEADS_TO",
+      "target": "fm_lockout",
+      "evidence": null
+    },
+    {
+      "source": "fm_lockout",
+      "relation": "LEADS_TO",
+      "target": "fm_turbtrip",
+      "evidence": null
+    },
+    {
+      "source": "fm_turbtrip",
+      "relation": "LEADS_TO",
+      "target": "cons_scram",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_cooldown",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_insulation",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_pm_bushings",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_solenoid",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    }
+  ],
+  "chain": "generator stator fault to ground [cause TBD, no root cause identified] -> 59N relays trip -> main generator lockout -> main turbine trip -> automatic reactor scram / RPS actuation",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code TBD per form; narrative states 'A root cause was not identified,' so cause node is marked provisional. Reactor type/vendor and plant/unit inferred from known Grand Gulf Unit 1 identity (BWR6, GE) since not populated in FORM-366 fields. RPS, main generator, and main turbine modeled as non-EIIS Systems since no bracket codes given in narrative. Previous similar event LER 2020-003 emitted as stub per rule 9, key copied exactly as stated (no unit digit prefix given in narrative)."
+}

@@ -1,0 +1,317 @@
+{
+  "ler_number": "339-2025-001-01",
+  "identity": {
+    "accession_number": "ML25266A239",
+    "docket": "05000339",
+    "plant_name": "North Anna",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2025-04-04",
+    "report_date": "2025-09-23",
+    "operating_mode": "3",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Reactor Trip Breakers Opened due to High Vubes on 2-RC-P-1B"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "X",
+      "system": "AB",
+      "component": "VE",
+      "manufacturer": "8208",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The proximity vertical probe was damaged, and the probe housing was found filled with water. The cause of the damaged probe due to mechanical contact between the probe and the shaft, and water intrusion is due to the location of the probe housing under the top of the RCP standpipe.",
+    "cause_code": "X",
+    "category": "Other",
+    "theme": "Vibration probe mechanical damage and water intrusion due to standpipe design/location",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 339-2025-001-01",
+      "properties": {},
+      "type": "LER",
+      "key": "339-2025-001-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:339-2025-001-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "North Anna Unit 2",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000339",
+      "match_key": "Unit:05000339"
+    },
+    {
+      "id": "cause",
+      "display_name": "Other (X)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "X",
+      "category": "Other",
+      "theme": "Vibration probe mechanical damage and water intrusion due to standpipe design/location",
+      "proximate_text": "The proximity vertical probe was damaged, and the probe housing was found filled with water. The cause of the damaged probe due to mechanical contact between the probe and the shaft, and water intrusion is due to the location of the probe housing under the top of the RCP standpipe.",
+      "provisional": false,
+      "match_key": "Cause:Other"
+    },
+    {
+      "id": "sys_aa",
+      "display_name": "Reactor Protection System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "AA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:AA"
+    },
+    {
+      "id": "sys_ab",
+      "display_name": "Reactor Coolant System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "AB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:AB"
+    },
+    {
+      "id": "c_trip_bkr",
+      "display_name": "Reactor trip breakers",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "BKR",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:BKR"
+    },
+    {
+      "id": "c_rcp",
+      "display_name": "\"B\" Reactor Coolant Pump (2-RC-P-1B)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "P",
+      "identifier": "2-RC-P-1B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:P|2-RC-P-1B"
+    },
+    {
+      "id": "c_probe",
+      "display_name": "Vertical proximity vibration probe",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "VE",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": "8208",
+      "inferred_code": false,
+      "match_key": "Component:VE"
+    },
+    {
+      "id": "fm_mech_contact",
+      "display_name": "Mechanical contact between probe and shaft damaged probe",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Damage to the proximity vertical probe caused by mechanical contact between the probe and the RCP shaft",
+      "match_key": "FailureMode:mechanical-contact-between-probe-and-shaft-damaged-probe"
+    },
+    {
+      "id": "fm_water_intrusion",
+      "display_name": "Water intrusion into probe housing",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Probe housing located under top of RCP standpipe allowed water intrusion, filling the housing with water",
+      "match_key": "FailureMode:water-intrusion-into-probe-housing"
+    },
+    {
+      "id": "fm_erroneous_signal",
+      "display_name": "Erroneous high vertical vibration indication",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Damaged, wet proximity probe produced an erroneous indication of elevated vertical proximity vibrations exceeding the 20 mils trip criteria",
+      "match_key": "FailureMode:erroneous-high-vertical-vibration-indication"
+    },
+    {
+      "id": "fm_manual_trip",
+      "display_name": "Operators manually opened reactor trip breakers and tripped RCP",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Based on the erroneous vibration indication, operators manually opened the reactor trip breakers and manually tripped the 'B' RCP per procedure",
+      "match_key": "FailureMode:operators-manually-opened-reactor-trip-breakers-and-tripped-rcp"
+    },
+    {
+      "id": "cons_rps",
+      "display_name": "Reactor Protection System actuation / reactor trip breakers opened",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2025-04-04T00:02",
+      "end": "2025-04-04T00:14",
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:reactor-protection-system-actuation-reactor-trip-breakers-opened"
+    },
+    {
+      "id": "ca_replace_probe",
+      "display_name": "Replace proximity vertical probe",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-proximity-vertical-probe"
+    },
+    {
+      "id": "ca_framatome_review",
+      "display_name": "Framatome review of RCP vibration data and rotational health",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:framatome-review-of-rcp-vibration-data-and-rotational-health"
+    },
+    {
+      "id": "ca_standpipe_redesign",
+      "display_name": "Consider new RCP standpipe design with probe mounting above top of standpipe",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:consider-new-rcp-standpipe-design-with-probe-mounting-above-top-of-standpipe"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ab",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_aa",
+      "evidence": null
+    },
+    {
+      "source": "c_trip_bkr",
+      "relation": "PART_OF",
+      "target": "sys_aa",
+      "evidence": null
+    },
+    {
+      "source": "c_rcp",
+      "relation": "PART_OF",
+      "target": "sys_ab",
+      "evidence": null
+    },
+    {
+      "source": "fm_mech_contact",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_mech_contact",
+      "relation": "LEADS_TO",
+      "target": "fm_water_intrusion",
+      "evidence": null
+    },
+    {
+      "source": "fm_water_intrusion",
+      "relation": "LEADS_TO",
+      "target": "fm_erroneous_signal",
+      "evidence": null
+    },
+    {
+      "source": "fm_erroneous_signal",
+      "relation": "LEADS_TO",
+      "target": "fm_manual_trip",
+      "evidence": null
+    },
+    {
+      "source": "fm_manual_trip",
+      "relation": "LEADS_TO",
+      "target": "cons_rps",
+      "evidence": null
+    },
+    {
+      "source": "c_probe",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_probe",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_probe",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_framatome_review",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_standpipe_redesign",
+      "evidence": null
+    }
+  ],
+  "chain": "probe/shaft mechanical contact [cause X] -> water intrusion into probe housing -> erroneous high vertical vibration indication (>20 mils) -> operators manually open reactor trip breakers & trip RCP -> RPS actuation / reactor trip",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "No previous similar occurrence LER referenced; narrative mentions 5 internal condition reports from the same outage with no common cause, but these are not distinct LERs, so no SIMILAR_TO/stub LER node was created. RCP itself was found healthy; failure was isolated to the vibration probe instrumentation. Cause code X (Other) governs category per official coding despite narrative describing a mechanical/design contributing factor."
+}

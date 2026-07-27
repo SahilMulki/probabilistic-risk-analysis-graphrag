@@ -1,0 +1,391 @@
+{
+  "ler_number": "270-2026-001-00",
+  "identity": {
+    "accession_number": "ML26013A295",
+    "docket": "05000270",
+    "plant_name": "Oconee",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2025-11-14",
+    "report_date": "2026-01-13",
+    "operating_mode": "0",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Revision 00 – Loss of AC Power to Unit 2 Main Feeder Buses After Opening Potential Transformer Drawer Resulting in Actuation of Keowee Hydroelectric Units"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "Operations supervision failed to validate the risk of activities dispatched due to a success bias and Operators failed to understand that drawer manipulation could interact with system relaying.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Inadequate risk validation and lack of understanding of equipment interaction (personnel/human performance)",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 270-2025-004-00",
+      "properties": {},
+      "type": "LER",
+      "key": "270-2026-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:270-2026-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Oconee Unit 2",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000270",
+      "match_key": "Unit:05000270"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Inadequate risk validation and lack of understanding of equipment interaction (personnel/human performance)",
+      "proximate_text": "Operations supervision failed to validate the risk of activities dispatched due to a success bias and Operators failed to understand that drawer manipulation could interact with system relaying.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_eb_mfb",
+      "display_name": "Main Feeder Buses",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "EB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:EB"
+    },
+    {
+      "id": "sys_ek_khs",
+      "display_name": "Keowee Hydroelectric Station",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "EK",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:EK"
+    },
+    {
+      "id": "sys_da_sfp",
+      "display_name": "Spent Fuel Pool Cooling",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "DA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:DA"
+    },
+    {
+      "id": "sys_bi_lpsw",
+      "display_name": "Low Pressure Service Water",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BI",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BI"
+    },
+    {
+      "id": "c_pt_drawer",
+      "display_name": "Potential Transformer Drawer",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:potential-transformer-drawer"
+    },
+    {
+      "id": "c_ct2",
+      "display_name": "Unit 2 Startup Transformer (CT-2)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "XFMR",
+      "identifier": "CT-2",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:XFMR|CT-2"
+    },
+    {
+      "id": "c_c_sfp_pump",
+      "display_name": "C Spent Fuel Pool Cooling Pump",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "P",
+      "identifier": "C",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:P|C"
+    },
+    {
+      "id": "c_c_lpsw_pump",
+      "display_name": "C Low Pressure Service Water Pump",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "P",
+      "identifier": "C",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:P|C"
+    },
+    {
+      "id": "fm_drawer_open",
+      "display_name": "AO opened potential transformer drawer during tag verification",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Auxiliary Operator opened a PT drawer to visually confirm clearance tag removal, inadvertently disturbing system relaying.",
+      "match_key": "FailureMode:ao-opened-potential-transformer-drawer-during-tag-verification"
+    },
+    {
+      "id": "fm_low_voltage",
+      "display_name": "Indicated low voltage condition on Unit 2 MFBs",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Drawer manipulation inadvertently caused an indicated low voltage condition on the Unit 2 main feeder buses.",
+      "match_key": "FailureMode:indicated-low-voltage-condition-on-unit-2-mfbs"
+    },
+    {
+      "id": "fm_breaker_open",
+      "display_name": "Unit 2 MFB supply breakers opened",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Breakers supplying the Unit 2 main feeder buses opened in response to the indicated low voltage condition.",
+      "match_key": "FailureMode:unit-2-mfb-supply-breakers-opened"
+    },
+    {
+      "id": "cons_mfb_deenergized",
+      "display_name": "Unit 2 Main Feeder Buses de-energized (~22 seconds)",
+      "properties": {},
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": "22 seconds",
+      "tz": null,
+      "match_key": "Consequence:unit-2-main-feeder-buses-de-energized-22-seconds"
+    },
+    {
+      "id": "cons_khu_start",
+      "display_name": "Keowee Hydroelectric Units 1 and 2 automatically started (valid ECCS/Emergency AC Power actuation)",
+      "properties": {},
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:keowee-hydroelectric-units-1-and-2-automatically-started-valid-eccs-emergency-ac-power-actuation"
+    },
+    {
+      "id": "ca_close_drawer",
+      "display_name": "Drawer closed, restoring alignment to CT-2 and correcting undervoltage condition",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:drawer-closed-restoring-alignment-to-ct-2-and-correcting-undervoltage-condition"
+    },
+    {
+      "id": "ca_aop_actions",
+      "display_name": "Completed Abnormal Operating Procedure actions for recovery from loss of power",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:completed-abnormal-operating-procedure-actions-for-recovery-from-loss-of-power"
+    },
+    {
+      "id": "ca_signage",
+      "display_name": "Proceduralize requirement for signage on fuse drawers and signage usage/expectations",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:proceduralize-requirement-for-signage-on-fuse-drawers-and-signage-usage-expectations"
+    },
+    {
+      "id": "ca_training",
+      "display_name": "Conduct training on operation of potential transformer drawers",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:conduct-training-on-operation-of-potential-transformer-drawers"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5072",
+      "display_name": "10 CFR 50.72(b)(3)(iv)(A) (EN 58041)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-3-iv-a-en-58041"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_eb_mfb",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ek_khs",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_da_sfp",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bi_lpsw",
+      "evidence": null
+    },
+    {
+      "source": "c_ct2",
+      "relation": "PART_OF",
+      "target": "sys_eb_mfb",
+      "evidence": "the Unit 2 Startup Transformer (CT-2) was aligned to supply power to the Unit 2 MFBs"
+    },
+    {
+      "source": "fm_drawer_open",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_drawer_open",
+      "relation": "LEADS_TO",
+      "target": "fm_low_voltage",
+      "evidence": null
+    },
+    {
+      "source": "fm_low_voltage",
+      "relation": "LEADS_TO",
+      "target": "fm_breaker_open",
+      "evidence": null
+    },
+    {
+      "source": "fm_breaker_open",
+      "relation": "LEADS_TO",
+      "target": "cons_mfb_deenergized",
+      "evidence": null
+    },
+    {
+      "source": "cons_mfb_deenergized",
+      "relation": "LEADS_TO",
+      "target": "cons_khu_start",
+      "evidence": null
+    },
+    {
+      "source": "cons_mfb_deenergized",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_ek_khs",
+      "evidence": null
+    },
+    {
+      "source": "c_c_sfp_pump",
+      "relation": "PART_OF",
+      "target": "sys_da_sfp",
+      "evidence": null
+    },
+    {
+      "source": "c_c_lpsw_pump",
+      "relation": "PART_OF",
+      "target": "sys_bi_lpsw",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_close_drawer",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_aop_actions",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_signage",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_training",
+      "evidence": null
+    }
+  ],
+  "chain": "success-bias/lack of understanding [cause TBD] -> AO opens PT drawer during tag verification -> indicated low voltage on Unit 2 MFBs -> MFB supply breakers open -> Unit 2 MFBs de-energized (~22s) -> Keowee Hydroelectric Units 1&2 auto-start [backup KHS]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code is TBD/provisional per FORM-366 fields; category kept 'provisional' though narrative describes clear human-performance causal factors (success bias, lack of understanding of drawer/relay interaction). CT-2 and standby buses/CT-5 remained powered throughout and are design-context/unaffected paths, not modeled as backups since MFB de-energization itself was resolved by breaker reclosure before KHU power reached the bus; KHS is modeled as backup since it actuated as designed per the automatic emergency function. C SFP and C LPSW pumps briefly lost power but were quickly restored; no separate consequence node created for these since narrative treats them as part of the same brief de-energization event."
+}

@@ -1,0 +1,366 @@
+{
+  "ler_number": "220-2021-002-00",
+  "identity": {
+    "accession_number": "ML21327A024",
+    "docket": "05000220",
+    "plant_name": "Nine Mile Point",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2021-09-25",
+    "report_date": "2021-11-19",
+    "operating_mode": null,
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "NMP1 Licensee Event Report 2021-002, Revision 0, Isolation of both Emergency Condensers due to loss of UPS 162A"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "B",
+      "system": "EF",
+      "component": "UJX",
+      "manufacturer": "Ametek",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The cause of this event was determined to be the premature failure of the UPS 162A oscillator board (X2) and/or the sync board (X5).",
+    "cause_code": "B",
+    "category": "Design/Manufacturing/Installation",
+    "theme": "premature UPS circuit board failure",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 220-2021-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "220-2021-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:220-2021-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Nine Mile Point Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000220",
+      "match_key": "Unit:05000220"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Manufacturing/Installation (B)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "B",
+      "category": "Design/Manufacturing/Installation",
+      "theme": "premature UPS circuit board failure",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Design/Manufacturing/Installation"
+    },
+    {
+      "id": "sys_ef",
+      "display_name": "Uninterruptible Power Supply",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "EF",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected system",
+      "match_key": "System:EF"
+    },
+    {
+      "id": "sys_jc",
+      "display_name": "Reactor Protection System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected; bus de-energized/restored",
+      "match_key": "System:JC"
+    },
+    {
+      "id": "sys_bl",
+      "display_name": "Emergency Condenser System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BL",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "isolated; declared inoperable",
+      "match_key": "System:BL"
+    },
+    {
+      "id": "sys_bn",
+      "display_name": "Reactor Water Cleanup",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BN",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "isolated on transient",
+      "match_key": "System:BN"
+    },
+    {
+      "id": "c_ups162a",
+      "display_name": "UPS 162A",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "UJX",
+      "identifier": "162A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:UJX|162A"
+    },
+    {
+      "id": "c_osc",
+      "display_name": "Oscillator board (X2)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "X2",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:oscillator-board-x2"
+    },
+    {
+      "id": "c_sync",
+      "display_name": "Sync board (X5)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "X5",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:sync-board-x5"
+    },
+    {
+      "id": "fm_boardfail",
+      "display_name": "Oscillator/sync board premature failure",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Premature failure of the UPS 162A oscillator board (X2) and/or sync board (X5).",
+      "match_key": "FailureMode:oscillator-sync-board-premature-failure"
+    },
+    {
+      "id": "fm_voltage",
+      "display_name": "Voltage transient on RPS Bus #11",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Board failure created a voltage transient on RPS Bus #11 powered by UPS 162A.",
+      "match_key": "FailureMode:voltage-transient-on-rps-bus-11"
+    },
+    {
+      "id": "fm_isolation",
+      "display_name": "Spurious isolation signals generated",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Voltage transient caused spurious isolation signals to Emergency Condensers and Reactor Water Cleanup.",
+      "match_key": "FailureMode:spurious-isolation-signals-generated"
+    },
+    {
+      "id": "cons_ec",
+      "display_name": "Both Emergency Condensers isolated / inoperable",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2021-09-25T03:41",
+      "end": "2021-09-25T04:29",
+      "duration": "0:48",
+      "tz": null,
+      "match_key": "Consequence:both-emergency-condensers-isolated-inoperable"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace faulted oscillator (X2) and sync (X5) boards",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-faulted-oscillator-x2-and-sync-x5-boards"
+    },
+    {
+      "id": "ca_monitor",
+      "display_name": "Monitor UPS-162A output for several days unloaded to confirm performance",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:monitor-ups-162a-output-for-several-days-unloaded-to-confirm-performance"
+    },
+    {
+      "id": "mfr_ametek",
+      "display_name": "Ametek",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "Ametek",
+      "match_key": "Manufacturer:Ametek"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(v)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-b"
+    },
+    {
+      "id": "rr_5072",
+      "display_name": "10 CFR 50.72(b)(3)(v)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-3-v-b"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "NMP LER 2016-002-00: Isolation of both Emergency Condensers due to loss of UPS 162B",
+      "properties": {},
+      "type": "LER",
+      "key": "2016-002-00",
+      "stub": true,
+      "title": "Isolation of both Emergency Condensers due to loss of UPS 162B",
+      "plant": "Nine Mile Point Unit 1",
+      "match_key": "LER:2016-002-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ef",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bl",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bn",
+      "evidence": null
+    },
+    {
+      "source": "c_osc",
+      "relation": "PART_OF",
+      "target": "c_ups162a",
+      "evidence": null
+    },
+    {
+      "source": "c_sync",
+      "relation": "PART_OF",
+      "target": "c_ups162a",
+      "evidence": null
+    },
+    {
+      "source": "c_ups162a",
+      "relation": "PART_OF",
+      "target": "sys_ef",
+      "evidence": null
+    },
+    {
+      "source": "fm_boardfail",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_boardfail",
+      "relation": "LEADS_TO",
+      "target": "fm_voltage",
+      "evidence": null
+    },
+    {
+      "source": "fm_voltage",
+      "relation": "LEADS_TO",
+      "target": "fm_isolation",
+      "evidence": null
+    },
+    {
+      "source": "fm_isolation",
+      "relation": "LEADS_TO",
+      "target": "cons_ec",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_monitor",
+      "evidence": null
+    },
+    {
+      "source": "c_ups162a",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_ametek",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    }
+  ],
+  "chain": "premature UPS 162A oscillator/sync board failure [cause B] -> voltage transient on RPS Bus #11 -> spurious isolation signals -> both Emergency Condensers isolated/inoperable (48 min) -> restored via bus transfer to I&C Bus 130A",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q9",
+    "Q14"
+  ],
+  "notes": "RWCU isolation and Reactor Building Emergency Ventilation initiation are noted as safety system responses but not modeled as separate FailureModes since they are direct expected responses to the same voltage transient, not a chained failure. No BACKED_UP_BY edge asserted since isolation signals are bypassable/manually overridable by design/procedure rather than an operable backup system being invoked during the inoperability window. Component boards X2/X5 modeled as PART_OF UPS 162A per explicit narrative structure (replaced as a pair within the UPS). Previous LER 2016-002-00 captured as stub per its stated title and cause (capacitor failure + low bypass transfer setpoint), distinct docket details not stated in narrative."
+}

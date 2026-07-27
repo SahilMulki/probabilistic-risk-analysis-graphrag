@@ -1,0 +1,425 @@
+{
+  "ler_number": "25-2024-002-00",
+  "identity": {
+    "accession_number": "ML24250A052",
+    "docket": "05200025",
+    "plant_name": "Vogtle",
+    "unit": 3,
+    "reactor_type": "PWR",
+    "nss_vendor": "Westinghouse",
+    "event_date": "2024-07-08",
+    "report_date": "2024-09-05",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Manual Reactor Protection System and Automatic Safeguards Actuation Due to an Unexpected Change in Position of a Main Feedwater Pump Minimum Flow Control Valve"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "B",
+      "system": "SJ",
+      "component": "FCV",
+      "manufacturer": "V037",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "unexpected change in the MFWP minimum FCV to its fail-safe position due to foreign material inside the valve positioner (Valtek model Logix 3200 MD)",
+    "cause_code": "B",
+    "category": "Design/Manufacturing/Installation",
+    "theme": "foreign material in valve positioner causing unintended fail-safe actuation",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 05200025-2024-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "25-2024-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:25-2024-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Vogtle Unit 3",
+      "properties": {
+        "reactor_type": "PWR",
+        "nss_vendor": "Westinghouse"
+      },
+      "type": "Unit",
+      "key": "05200025",
+      "match_key": "Unit:05200025"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Manufacturing/Installation (B)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "B",
+      "category": "Design/Manufacturing/Installation",
+      "theme": "foreign material in valve positioner causing unintended fail-safe actuation",
+      "proximate_text": "unexpected change in the MFWP minimum FCV to its fail-safe position due to foreign material inside the valve positioner (Valtek model Logix 3200 MD)",
+      "provisional": false,
+      "match_key": "Cause:Design/Manufacturing/Installation"
+    },
+    {
+      "id": "sys_sj",
+      "display_name": "Main Feedwater Pump System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "sys_sb",
+      "display_name": "Steam Generator System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SB"
+    },
+    {
+      "id": "sys_jc",
+      "display_name": "Reactor Protection System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JC"
+    },
+    {
+      "id": "sys_je",
+      "display_name": "Automatic Safeguards Actuation System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JE",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JE"
+    },
+    {
+      "id": "sys_bp",
+      "display_name": "Passive Residual Heat Removal System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BP",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; operable",
+      "match_key": "System:BP"
+    },
+    {
+      "id": "c_fcv",
+      "display_name": "Main Feedwater Pump Minimum Flow Control Valve",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "FCV",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": "V037",
+      "inferred_code": false,
+      "match_key": "Component:FCV"
+    },
+    {
+      "id": "c_positioner",
+      "display_name": "Valve positioner (Valtek Logix 3200 MD)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": "Logix 3200 MD",
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:valve-positioner-valtek-logix-3200-md"
+    },
+    {
+      "id": "c_prhr_hx",
+      "display_name": "Passive Residual Heat Removal Heat Exchanger",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "HX",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:HX"
+    },
+    {
+      "id": "fm_foreign",
+      "display_name": "Foreign material inside valve positioner",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Foreign material inside the FCV positioner caused unintended actuation.",
+      "match_key": "FailureMode:foreign-material-inside-valve-positioner"
+    },
+    {
+      "id": "fm_valveopen",
+      "display_name": "MFWP minimum FCV moved to fail-safe (fully open) position",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The FCV unexpectedly changed from normally closed to fully open, its fail-safe position by design.",
+      "match_key": "FailureMode:mfwp-minimum-fcv-moved-to-fail-safe-fully-open-position"
+    },
+    {
+      "id": "fm_noresponse",
+      "display_name": "Valve did not respond to manual close attempt",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Operators attempted to manually close the valve from the main control room and observed no response.",
+      "match_key": "FailureMode:valve-did-not-respond-to-manual-close-attempt"
+    },
+    {
+      "id": "fm_fwreduction",
+      "display_name": "Reduced feedwater flow to steam generators",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The fully open minimum flow valve caused reduced feedwater flow to the SGs.",
+      "match_key": "FailureMode:reduced-feedwater-flow-to-steam-generators"
+    },
+    {
+      "id": "fm_sglevellow",
+      "display_name": "SG water level fell below administrative critical parameter limit",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Reduced feedwater flow caused SG water level to drop below the limit requiring manual reactor trip.",
+      "match_key": "FailureMode:sg-water-level-fell-below-administrative-critical-parameter-limit"
+    },
+    {
+      "id": "fm_sg2low",
+      "display_name": "SG #2 wide range level dropped below PRHR actuation setpoint",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Following the manual reactor trip, SG #2 wide range water level briefly dropped below the PRHR automatic actuation setpoint.",
+      "match_key": "FailureMode:sg-2-wide-range-level-dropped-below-prhr-actuation-setpoint"
+    },
+    {
+      "id": "fm_rcscooldown",
+      "display_name": "Rapid RCS cooldown from PRHR actuation",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "PRHR actuation caused a rapid cooldown of the reactor coolant, dropping temperature below the safeguards low-temperature actuation setpoint.",
+      "match_key": "FailureMode:rapid-rcs-cooldown-from-prhr-actuation"
+    },
+    {
+      "id": "cons_manualtrip",
+      "display_name": "Manual reactor trip / RPS actuation",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2024-07-08T21:25",
+      "end": null,
+      "duration": null,
+      "tz": "EDT",
+      "match_key": "Consequence:manual-reactor-trip-rps-actuation"
+    },
+    {
+      "id": "cons_safeguards",
+      "display_name": "Automatic safeguards actuation on low RCS temperature",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2024-07-08T21:25",
+      "end": null,
+      "duration": null,
+      "tz": "EDT",
+      "match_key": "Consequence:automatic-safeguards-actuation-on-low-rcs-temperature"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace failed MFWP minimum FCV positioner and perform extent-of-condition review",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-failed-mfwp-minimum-fcv-positioner-and-perform-extent-of-condition-review"
+    },
+    {
+      "id": "ca_designchange",
+      "display_name": "Design change to initiate automatic rapid power reduction upon MFWP minimum FCV failure",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:design-change-to-initiate-automatic-rapid-power-reduction-upon-mfwp-minimum-fcv-failure"
+    },
+    {
+      "id": "mfr_valtek",
+      "display_name": "Valtek",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "V037",
+      "match_key": "Manufacturer:V037"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sj",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_je",
+      "evidence": null
+    },
+    {
+      "source": "c_fcv",
+      "relation": "PART_OF",
+      "target": "sys_sj",
+      "evidence": null
+    },
+    {
+      "source": "c_prhr_hx",
+      "relation": "PART_OF",
+      "target": "sys_bp",
+      "evidence": null
+    },
+    {
+      "source": "fm_foreign",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_foreign",
+      "relation": "LEADS_TO",
+      "target": "fm_valveopen",
+      "evidence": null
+    },
+    {
+      "source": "fm_valveopen",
+      "relation": "LEADS_TO",
+      "target": "fm_noresponse",
+      "evidence": null
+    },
+    {
+      "source": "fm_valveopen",
+      "relation": "LEADS_TO",
+      "target": "fm_fwreduction",
+      "evidence": null
+    },
+    {
+      "source": "fm_fwreduction",
+      "relation": "LEADS_TO",
+      "target": "fm_sglevellow",
+      "evidence": null
+    },
+    {
+      "source": "fm_sglevellow",
+      "relation": "LEADS_TO",
+      "target": "cons_manualtrip",
+      "evidence": null
+    },
+    {
+      "source": "cons_manualtrip",
+      "relation": "LEADS_TO",
+      "target": "fm_sg2low",
+      "evidence": null
+    },
+    {
+      "source": "fm_sg2low",
+      "relation": "LEADS_TO",
+      "target": "fm_rcscooldown",
+      "evidence": null
+    },
+    {
+      "source": "fm_rcscooldown",
+      "relation": "LEADS_TO",
+      "target": "cons_safeguards",
+      "evidence": null
+    },
+    {
+      "source": "cons_manualtrip",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_bp",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_designchange",
+      "evidence": null
+    },
+    {
+      "source": "c_positioner",
+      "relation": "PART_OF",
+      "target": "c_fcv",
+      "evidence": null
+    },
+    {
+      "source": "c_fcv",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_valtek",
+      "evidence": null
+    }
+  ],
+  "chain": "foreign material in valve positioner [cause B] -> MFWP min-flow FCV moves to fail-safe (fully open) -> valve unresponsive to manual close -> feedwater flow to SGs reduced -> SG level falls below critical limit -> manual reactor trip -> SG#2 level drop triggers PRHR actuation -> rapid RCS cooldown -> automatic safeguards actuation on low RCS temp [backup PRHR available]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Docket given as 05200025 in FORM-366 fields (nonstandard 6-digit format for Vogtle Unit 3); copied verbatim per rule. LER number constructed from docket + event year + sequence '002' inferred from accession context '002 1-G' fragment in narrative header; report has no explicit sequence field in FORM-366 FIELDS, so '002' is taken directly from the narrative's embedded LER number fragment. No previous similar events reported (narrative states 'None'), so no SIMILAR_TO edge or stub LER created."
+}

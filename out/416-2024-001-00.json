@@ -1,0 +1,315 @@
+{
+  "ler_number": "416-2024-001-00",
+  "identity": {
+    "accession_number": "ML24087A196",
+    "docket": "05000416",
+    "plant_name": "Grand Gulf",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2024-01-29",
+    "report_date": "2024-03-27",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Grand Gulf Nuclear Station, Unit 1 Licensee Event Report 2024-001-00, High Pressure Core Spray Inoperable due to Minimum Flow Valve Failure to Close"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)(D)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "the actuator motor pinion key had sheared off preventing the valve from actuating. Further investigation determined that the pinion key had not been correctly staked due to inadequate procedure instructions when the actuator motor was replaced in 2010",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "inadequate procedure instructions during 2010 actuator motor replacement",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 416-2024-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "416-2024-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:416-2024-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Grand Gulf Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000416",
+      "match_key": "Unit:05000416"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "inadequate procedure instructions during 2010 actuator motor replacement",
+      "proximate_text": "the actuator motor pinion key had sheared off preventing the valve from actuating. Further investigation determined that the pinion key had not been correctly staked due to inadequate procedure instructions when the actuator motor was replaced in 2010",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_bg",
+      "display_name": "High Pressure Core Spray",
+      "properties": {
+        "note": "ECCS injection system"
+      },
+      "type": "System",
+      "eiis_code": "BG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BG"
+    },
+    {
+      "id": "c_minflow_valve",
+      "display_name": "HPCS minimum flow valve",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:hpcs-minimum-flow-valve"
+    },
+    {
+      "id": "c_actuator_motor",
+      "display_name": "Valve actuator motor",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:valve-actuator-motor"
+    },
+    {
+      "id": "c_pinion_key",
+      "display_name": "Actuator motor pinion key",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:actuator-motor-pinion-key"
+    },
+    {
+      "id": "fm_key_not_staked",
+      "display_name": "Pinion key incorrectly staked during 2010 motor replacement",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Inadequate procedure instructions led to the pinion key not being correctly staked when the actuator motor was replaced in 2010.",
+      "match_key": "FailureMode:pinion-key-incorrectly-staked-during-2010-motor-replacement"
+    },
+    {
+      "id": "fm_key_sheared",
+      "display_name": "Actuator motor pinion key sheared off",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The pinion key sheared off, preventing the actuator from engaging the valve.",
+      "match_key": "FailureMode:actuator-motor-pinion-key-sheared-off"
+    },
+    {
+      "id": "fm_valve_failed_close",
+      "display_name": "HPCS minimum flow valve failed to close",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Valve went from full open indication to dual indication and failed to close as expected during surveillance testing.",
+      "match_key": "FailureMode:hpcs-minimum-flow-valve-failed-to-close"
+    },
+    {
+      "id": "cons_hpcs_inop",
+      "display_name": "HPCS declared inoperable",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2024-01-29T10:05",
+      "end": "2024-01-29T16:20",
+      "duration": "6:15",
+      "tz": "CT",
+      "match_key": "Consequence:hpcs-declared-inoperable"
+    },
+    {
+      "id": "ca_manual_close",
+      "display_name": "Manually closed HPCS minimum flow valve",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:manually-closed-hpcs-minimum-flow-valve"
+    },
+    {
+      "id": "ca_new_key",
+      "display_name": "Installed new motor pinion key using updated work instructions",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:installed-new-motor-pinion-key-using-updated-work-instructions"
+    },
+    {
+      "id": "ca_extent",
+      "display_name": "Develop extent-of-condition inspections of pinion keys on similar valves",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:develop-extent-of-condition-inspections-of-pinion-keys-on-similar-valves"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "rr_5072",
+      "display_name": "10 CFR 50.72(b)(3)(v)(D)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-3-v-d"
+    },
+    {
+      "id": "rr_nei",
+      "display_name": "NEI 99-02 Section 2.2, Mitigating Systems Cornerstone",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "standard/guidance",
+      "match_key": "RegulatoryReference:nei-99-02-section-2-2-mitigating-systems-cornerstone"
+    },
+    {
+      "id": "rr_ts351",
+      "display_name": "Technical Specification 3.5.1, ECCS Operating",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-3-5-1-eccs-operating"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bg",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "rr_nei",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "rr_ts351",
+      "evidence": null
+    },
+    {
+      "source": "c_minflow_valve",
+      "relation": "PART_OF",
+      "target": "sys_bg",
+      "evidence": null
+    },
+    {
+      "source": "fm_key_not_staked",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_key_not_staked",
+      "relation": "LEADS_TO",
+      "target": "fm_key_sheared",
+      "evidence": null
+    },
+    {
+      "source": "fm_key_sheared",
+      "relation": "LEADS_TO",
+      "target": "fm_valve_failed_close",
+      "evidence": null
+    },
+    {
+      "source": "fm_valve_failed_close",
+      "relation": "LEADS_TO",
+      "target": "cons_hpcs_inop",
+      "evidence": null
+    },
+    {
+      "source": "c_pinion_key",
+      "relation": "PART_OF",
+      "target": "c_actuator_motor",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_manual_close",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_new_key",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_extent",
+      "evidence": null
+    }
+  ],
+  "chain": "inadequate procedure instructions during 2010 motor replacement [cause TBD] -> pinion key incorrectly staked -> pinion key sheared off -> HPCS minimum flow valve fails to close -> HPCS declared inoperable (6h15m); manually closed, no backups asserted",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "No Block 13 data provided in FORM-366 FIELDS; official cause code remains TBD/provisional as narrative did not include a coded cause table. No previous similar events reported (narrative states 'None'), so no SIMILAR_TO edge or stub LER emitted. No backup system stated as operable during the inoperability window, so no BACKED_UP_BY edge asserted; engineering evaluation concluded HPCS itself remained able to perform safety functions despite being declared inoperable, but this is a safety-significance statement about the same system, not a distinct backup system."
+}

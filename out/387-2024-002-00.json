@@ -1,0 +1,264 @@
+{
+  "ler_number": "387-2024-002-00",
+  "identity": {
+    "accession_number": "ML24260A227",
+    "docket": "05000387",
+    "plant_name": "Susquehanna",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2024-04-08",
+    "report_date": "2024-09-16",
+    "operating_mode": "5",
+    "power_level": null,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2024-002-00 for Susquehanna Steam Electric Station, B Diesel Generator Inoperable due to Failed Excitation System Linear Reactor"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)",
+      "10 CFR 50.73(a)(2)(v)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "Reporta:e",
+      "system": "to",
+      "component": "IRISII",
+      "manufacturer": "X",
+      "reportable": null
+    }
+  ],
+  "cause": {
+    "proximate_text": "B DG C-phase linear reactor (component 0G501B) failed, rendering the B Diesel Generator inoperable",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Excitation system component failure",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 05000387-2024-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "387-2024-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:387-2024-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Susquehanna Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000387",
+      "match_key": "Unit:05000387"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Excitation system component failure",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_dg",
+      "display_name": "B Diesel Generator",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "EK",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected emergency power system",
+      "match_key": "System:EK"
+    },
+    {
+      "id": "c_linrx",
+      "display_name": "B DG C-phase linear reactor",
+      "properties": {
+        "note": "Since no code for linear reactors exists, a code of \"Linear RX\" was used."
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "0G501B",
+      "model": "CD-1296",
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:b-dg-c-phase-linear-reactor"
+    },
+    {
+      "id": "c_voltreg",
+      "display_name": "B DG voltage regulator",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:b-dg-voltage-regulator"
+    },
+    {
+      "id": "fm_linrx_fail",
+      "display_name": "C-phase linear reactor failed",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The B DG C-phase linear reactor (0G501B) failed.",
+      "match_key": "FailureMode:c-phase-linear-reactor-failed"
+    },
+    {
+      "id": "cons_dg_inop",
+      "display_name": "B Diesel Generator inoperable",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2024-04-08",
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:b-diesel-generator-inoperable"
+    },
+    {
+      "id": "ca_replace_linrx",
+      "display_name": "Replace all three linear reactors and voltage regulator in B DG",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-all-three-linear-reactors-and-voltage-regulator-in-b-dg"
+    },
+    {
+      "id": "ca_redesign_linrx",
+      "display_name": "Update linear reactor design for improved temperature capability / reduced heat generation",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:update-linear-reactor-design-for-improved-temperature-capability-reduced-heat-generation"
+    },
+    {
+      "id": "ca_replace_all",
+      "display_name": "Replace all linear reactors in A, B, C, and D DGs with newly designed reactors",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-all-linear-reactors-in-a-b-c-and-d-dgs-with-newly-designed-reactors"
+    },
+    {
+      "id": "mfr_portee",
+      "display_name": "Portee, Inc.",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": null,
+      "match_key": "Manufacturer:portee-inc"
+    },
+    {
+      "id": "rr_5073i",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_5073v",
+      "display_name": "10 CFR 50.73(a)(2)(v)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073i",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073v",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_dg",
+      "evidence": null
+    },
+    {
+      "source": "c_linrx",
+      "relation": "PART_OF",
+      "target": "sys_dg",
+      "evidence": null
+    },
+    {
+      "source": "fm_linrx_fail",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_linrx_fail",
+      "relation": "LEADS_TO",
+      "target": "cons_dg_inop",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_linrx",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_redesign_linrx",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_all",
+      "evidence": null
+    },
+    {
+      "source": "c_linrx",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_portee",
+      "evidence": null
+    }
+  ],
+  "chain": "linear reactor failure [cause TBD/provisional] -> B DG C-phase linear reactor fails -> B Diesel Generator inoperable",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code is TBD/provisional per FORM-366 fields; narrative gives no explicit root-cause statement beyond the component failure itself, so cause node is marked provisional. Block-13 fields in source input were garbled ('Reporta:e', 'to', 'IRISII'); EIIS system code EK inferred from narrative context (Diesel Generator) since no explicit bracket code was given for the system; linear reactor component explicitly stated to have no EIIS code ('Linear RX' placeholder used by licensee), so eiis_code left null per rule 2. No previous occurrences reported (narrative states 'None')."
+}

@@ -1,0 +1,327 @@
+{
+  "ler_number": "354-22-002-00",
+  "identity": {
+    "accession_number": "ML23018A201",
+    "docket": "05000354",
+    "plant_name": "Hope Creek",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2022-10-28",
+    "report_date": "2023-01-18",
+    "operating_mode": "5",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Inoperable Isolation Actuation Instrumentation Caused by Failure to Remove Electrical Jumper"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The direct cause of this event was human performance error. The technician did not adequately review the completed procedural steps that indicated the jumper was installed.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Failure to remove test jumper / inadequate procedure review",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 354-2022-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "354-22-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:354-22-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Hope Creek Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000354",
+      "match_key": "Unit:05000354"
+    },
+    {
+      "id": "cause",
+      "display_name": "Human Performance Error (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Failure to remove test jumper / inadequate procedure review",
+      "proximate_text": "The direct cause of this event was human performance error. The technician did not adequately review the completed procedural steps that indicated the jumper was installed.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_bo",
+      "display_name": "Residual Heat Removal/Low Pressure Coolant Injection System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BO",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected system; shutdown cooling mode",
+      "match_key": "System:BO"
+    },
+    {
+      "id": "sys_iel",
+      "display_name": "Interlock, Electrical",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "IEL",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "disabled interlock channel",
+      "match_key": "System:IEL"
+    },
+    {
+      "id": "c_jumper",
+      "display_name": "Electrical jumper (test jumper)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:electrical-jumper-test-jumper"
+    },
+    {
+      "id": "c_hv_f008",
+      "display_name": "RHR SDC Valve HV-F008",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "V",
+      "identifier": "HV-F008",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:V|HV-F008"
+    },
+    {
+      "id": "c_hv_f015a",
+      "display_name": "RHR SDC Valve HV-F015A",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "V",
+      "identifier": "HV-F015A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:V|HV-F015A"
+    },
+    {
+      "id": "c_hv_f015b",
+      "display_name": "RHR SDC Valve HV-F015B",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "V",
+      "identifier": "HV-F015B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:V|HV-F015B"
+    },
+    {
+      "id": "fm_review",
+      "display_name": "Technician failed to adequately review completed procedural steps",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The technician did not adequately review the completed procedural steps that indicated the jumper was installed.",
+      "match_key": "FailureMode:technician-failed-to-adequately-review-completed-procedural-steps"
+    },
+    {
+      "id": "fm_jumper_not_removed",
+      "display_name": "Electrical jumper not removed after installation",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Jumper installed October 5, 2022 was not removed on October 10, 2022 as intended, disabling the RHR cut-in permissive interlock.",
+      "match_key": "FailureMode:electrical-jumper-not-removed-after-installation"
+    },
+    {
+      "id": "fm_lco304a_violation",
+      "display_name": "Inadvertent LCO 3.0.4.a entry violation",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "HCGS inadvertently violated LCO 3.0.4.a when entering OPCON 2 on October 28 and OPCON 1 on October 30 with the isolation actuation instrumentation channel inoperable.",
+      "match_key": "FailureMode:inadvertent-lco-3-0-4-a-entry-violation"
+    },
+    {
+      "id": "cons_inoperable",
+      "display_name": "Isolation actuation instrumentation inoperable beyond TS-allowed time",
+      "properties": {
+        "note": "Exceeds time allowed by associated TS actions; discovered during unrelated maintenance"
+      },
+      "type": "Consequence",
+      "start": "2022-10-28",
+      "end": "2022-11-30",
+      "duration": "33 days",
+      "tz": null,
+      "match_key": "Consequence:isolation-actuation-instrumentation-inoperable-beyond-ts-allowed-time"
+    },
+    {
+      "id": "ca_remove_jumper",
+      "display_name": "Remove the jumper",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:remove-the-jumper"
+    },
+    {
+      "id": "ca_performance_mgmt",
+      "display_name": "Performance management for individual(s) involved",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:performance-management-for-individual-s-involved"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_lco332",
+      "display_name": "LCO 3.3.2 Isolation Actuation Instrumentation",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:lco-3-3-2-isolation-actuation-instrumentation"
+    },
+    {
+      "id": "rr_lco304a",
+      "display_name": "LCO 3.0.4.a",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:lco-3-0-4-a"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bo",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_iel",
+      "evidence": null
+    },
+    {
+      "source": "c_hv_f008",
+      "relation": "PART_OF",
+      "target": "sys_bo",
+      "evidence": null
+    },
+    {
+      "source": "c_hv_f015a",
+      "relation": "PART_OF",
+      "target": "sys_bo",
+      "evidence": null
+    },
+    {
+      "source": "c_hv_f015b",
+      "relation": "PART_OF",
+      "target": "sys_bo",
+      "evidence": null
+    },
+    {
+      "source": "fm_review",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_review",
+      "relation": "LEADS_TO",
+      "target": "fm_jumper_not_removed",
+      "evidence": null
+    },
+    {
+      "source": "fm_jumper_not_removed",
+      "relation": "LEADS_TO",
+      "target": "fm_lco304a_violation",
+      "evidence": null
+    },
+    {
+      "source": "fm_lco304a_violation",
+      "relation": "LEADS_TO",
+      "target": "cons_inoperable",
+      "evidence": null
+    },
+    {
+      "source": "cons_inoperable",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_iel",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_remove_jumper",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_performance_mgmt",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_lco332",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_lco304a",
+      "evidence": null
+    }
+  ],
+  "chain": "human performance error [cause TBD] -> technician failed to review completed procedural steps -> electrical jumper left installed disabling RHR cut-in permissive interlock -> inadvertent LCO 3.0.4.a entry violation -> isolation actuation instrumentation inoperable for 33 days (exceeds TS action time) [backup: redundant channel operable throughout; affected SDC valves remained closed]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code officially TBD/provisional in FORM-366 despite narrative clearly stating 'human performance error' as direct cause; category left as provisional per rule 4. Redundant isolation channel modeled as BACKED_UP_BY sys_iel since narrative states the redundant channel 'was operable throughout this event.' No manufacturer, block_13 rows, or previous-occurrence LER stub present in this report (Previous Events section text truncated/incomplete, referencing only 'the corrective action program for the past three years' without a specific LER citation, so no SIMILAR_TO edge or stub LER created)."
+}

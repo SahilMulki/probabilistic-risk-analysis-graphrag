@@ -1,0 +1,254 @@
+{
+  "ler_number": "282-2022-001-00",
+  "identity": {
+    "accession_number": "ML22290A172",
+    "docket": "05000282",
+    "plant_name": "Prairie Island",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2022-08-15",
+    "report_date": "2022-10-17",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2022-001-00 for Prairie Island Nuclear Generating Plant, Units 1 and 2, Fuel Assemblies incorrectly placed in Spent Fuel Pool"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "an incorrect planning date in the software configuration tool used to plan fuel assembly locations led to 29 fuel assemblies being loaded into locations in the Spent Fuel Pool that did not meet the burnup/enrichment/decay requirements of Technical Specification Design Feature 4.3.1.1",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "incorrect planning-tool input data leading to fuel mis-placement",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 282-2022-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "282-2022-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:282-2022-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Prairie Island Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000282",
+      "match_key": "Unit:05000282"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "incorrect planning-tool input data leading to fuel mis-placement",
+      "proximate_text": "an incorrect planning date in the software configuration tool used to plan fuel assembly locations led to 29 fuel assemblies being loaded into locations in the Spent Fuel Pool that did not meet the burnup/enrichment/decay requirements of Technical Specification Design Feature 4.3.1.1",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_sfp",
+      "display_name": "Spent Fuel Pool",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "affected system",
+      "match_key": "System:spent-fuel-pool"
+    },
+    {
+      "id": "c_fuel",
+      "display_name": "Fuel Assemblies (29)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:fuel-assemblies-29"
+    },
+    {
+      "id": "fm_planning_date",
+      "display_name": "Incorrect planning date entered in software configuration tool",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The planning date used by the software configuration tool to determine acceptable SFP storage locations was incorrect.",
+      "match_key": "FailureMode:incorrect-planning-date-entered-in-software-configuration-tool"
+    },
+    {
+      "id": "fm_misload",
+      "display_name": "29 fuel assemblies loaded into non-compliant SFP locations",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Fuel assemblies were placed in Spent Fuel Pool locations that did not satisfy the burnup/enrichment/decay requirements of Technical Specification Design Feature 4.3.1.1.",
+      "match_key": "FailureMode:29-fuel-assemblies-loaded-into-non-compliant-sfp-locations"
+    },
+    {
+      "id": "cons_noncompliance",
+      "display_name": "SFP non-compliance with Technical Specification Design Feature 4.3.1.1 / TS 3.7.17 Action Statement A entered",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2022-08-15",
+      "end": "2022-08-19T10:32",
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:sfp-non-compliance-with-technical-specification-design-feature-4-3-1-1-ts-3-7-17-action-statement-a-entered"
+    },
+    {
+      "id": "ca_move",
+      "display_name": "Move 29 non-complying fuel assemblies to acceptable locations",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:move-29-non-complying-fuel-assemblies-to-acceptable-locations"
+    },
+    {
+      "id": "ca_correct_date",
+      "display_name": "Correct the planning date in the software configuration tool",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:correct-the-planning-date-in-the-software-configuration-tool"
+    },
+    {
+      "id": "ca_procedure",
+      "display_name": "Revise procedures to require explicit verification of planning date, discharge date, burnup, and enrichment",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-procedures-to-require-explicit-verification-of-planning-date-discharge-date-burnup-and-enrichment"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts43",
+      "display_name": "Technical Specification Design Feature 4.3.1.1",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-design-feature-4-3-1-1"
+    },
+    {
+      "id": "rr_ts3717",
+      "display_name": "Technical Specification 3.7.17",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-3-7-17"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sfp",
+      "evidence": null
+    },
+    {
+      "source": "c_fuel",
+      "relation": "PART_OF",
+      "target": "sys_sfp",
+      "evidence": null
+    },
+    {
+      "source": "fm_planning_date",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_planning_date",
+      "relation": "LEADS_TO",
+      "target": "fm_misload",
+      "evidence": null
+    },
+    {
+      "source": "fm_misload",
+      "relation": "LEADS_TO",
+      "target": "cons_noncompliance",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_move",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_correct_date",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procedure",
+      "evidence": null
+    },
+    {
+      "source": "cons_noncompliance",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts43",
+      "evidence": null
+    },
+    {
+      "source": "cons_noncompliance",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts3717",
+      "evidence": null
+    }
+  ],
+  "chain": "incorrect planning date in software configuration tool [cause TBD] -> 29 fuel assemblies loaded into non-compliant SFP locations -> SFP noncompliance with TS Design Feature 4.3.1.1 / TS 3.7.17 Action Statement A entered -> corrected via relocation and TS action statement exited",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code and category are TBD/provisional per FORM-366 fields; narrative provides no official cause code and explicitly states EIIS codes are not applicable since this is not an equipment/component issue, so no System/Component EIIS codes were assigned. No previous similar events were listed in the narrative despite a heading for that section. Safety analysis (boron concentration measurement of 2873 ppm vs required 2030 ppm) confirms no safety limit was exceeded; this is captured as narrative context rather than a modeled node since it is an analysis outcome, not a system/component/failure entity."
+}

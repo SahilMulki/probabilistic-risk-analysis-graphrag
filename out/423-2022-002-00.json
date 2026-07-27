@@ -1,0 +1,290 @@
+{
+  "ler_number": "423-2022-002-00",
+  "identity": {
+    "accession_number": "ML22151A121",
+    "docket": "05000423",
+    "plant_name": "Millstone",
+    "unit": 3,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2022-04-05",
+    "report_date": "2022-05-31",
+    "operating_mode": "1",
+    "power_level": 90,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Two Main Steam Safety Valves Installed in Wring Location Resulting in Failure to Lift within the Technical Specification Acceptance Criteria"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The direct cause of the two safety valves lifting outside of their TS allowed lift settings was that they had been installed in the wrong locations.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Main steam safety valves swapped/installed in wrong steam generator locations during outage",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 423-2022-002-00",
+      "properties": {
+        "match_key": "LER:423-2022-002-00"
+      },
+      "type": "LER",
+      "key": "423-2022-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:423-2022-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Millstone Unit 3",
+      "properties": {
+        "match_key": "Unit:05000423",
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000423",
+      "match_key": "Unit:05000423"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {
+        "match_key": "Cause:provisional"
+      },
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Main steam safety valves swapped/installed in wrong steam generator locations during outage",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_sb",
+      "display_name": "Main Steam",
+      "properties": {
+        "match_key": "System:SB"
+      },
+      "type": "System",
+      "eiis_code": "SB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SB"
+    },
+    {
+      "id": "c_rv22b",
+      "display_name": "Main Steam Safety Valve 3MSS*RV22B",
+      "properties": {
+        "match_key": "Component:RV|3MSS*RV22B"
+      },
+      "type": "Component",
+      "eiis_code": "RV",
+      "identifier": "3MSS*RV22B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:RV|3MSS*RV22B"
+    },
+    {
+      "id": "c_rv26d",
+      "display_name": "Main Steam Safety Valve 3MSS*RV26D",
+      "properties": {
+        "match_key": "Component:RV|3MSS*RV26D"
+      },
+      "type": "Component",
+      "eiis_code": "RV",
+      "identifier": "3MSS*RV26D",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:RV|3MSS*RV26D"
+    },
+    {
+      "id": "c_rv26b",
+      "display_name": "Main Steam Safety Valve 3MSS*RV26B",
+      "properties": {
+        "match_key": "Component:RV|3MSS*RV26B"
+      },
+      "type": "Component",
+      "eiis_code": "RV",
+      "identifier": "3MSS*RV26B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:RV|3MSS*RV26B"
+    },
+    {
+      "id": "fm_misinstall",
+      "display_name": "MSSVs installed in swapped/incorrect steam generator locations",
+      "properties": {
+        "match_key": "FailureMode:mssv-wrong-location"
+      },
+      "type": "FailureMode",
+      "description": "Two safety valves with a set pressure of 1225 psig were installed on the 'B' steam generator, and two with a set pressure of 1185 psig were installed on the 'D' steam generator, contrary to intended locations.",
+      "match_key": "FailureMode:mssvs-installed-in-swapped-incorrect-steam-generator-locations"
+    },
+    {
+      "id": "fm_liftoutside",
+      "display_name": "MSSVs lift outside TS allowed setpoint tolerance",
+      "properties": {
+        "match_key": "FailureMode:mssv-lift-outside-ts"
+      },
+      "type": "FailureMode",
+      "description": "3MSS*RV22B opened at 103.5% of its intended setpoint and 3MSS*RV26D opened at 95% of its expected setpoint, exceeding the +/-3% TS acceptance criteria as tested/installed.",
+      "match_key": "FailureMode:mssvs-lift-outside-ts-allowed-setpoint-tolerance"
+    },
+    {
+      "id": "cons_ts",
+      "display_name": "Operation prohibited by Technical Specifications / MSSV lift setpoints out of TS acceptance criteria",
+      "properties": {
+        "match_key": "Consequence:ts-prohibited-condition"
+      },
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:operation-prohibited-by-technical-specifications-mssv-lift-setpoints-out-of-ts-acceptance-criteria"
+    },
+    {
+      "id": "ca_adjust",
+      "display_name": "Adjust lift settings of 3MSS*RV22B and 3MSS*RV26D and verify with two successive lifts within +/-1% of TS setting",
+      "properties": {
+        "match_key": "CorrectiveAction:adjust-lift-settings"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:adjust-lift-settings-of-3mss-rv22b-and-3mss-rv26d-and-verify-with-two-successive-lifts-within-1-of-ts-setting"
+    },
+    {
+      "id": "ca_cap",
+      "display_name": "Additional corrective action per Corrective Action Program",
+      "properties": {
+        "match_key": "CorrectiveAction:cap-additional-action"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:additional-corrective-action-per-corrective-action-program"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion",
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_fsar15",
+      "display_name": "FSAR Section 15.2",
+      "properties": {
+        "type": "analysis-basis",
+        "match_key": "RegulatoryReference:fsar-section-15-2"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:fsar-section-15-2"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "c_rv22b",
+      "relation": "PART_OF",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "c_rv26d",
+      "relation": "PART_OF",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "c_rv26b",
+      "relation": "PART_OF",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "fm_misinstall",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_misinstall",
+      "relation": "LEADS_TO",
+      "target": "fm_liftoutside",
+      "evidence": null
+    },
+    {
+      "source": "fm_liftoutside",
+      "relation": "LEADS_TO",
+      "target": "cons_ts",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_adjust",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_cap",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_fsar15",
+      "evidence": null
+    }
+  ],
+  "chain": "MSSVs installed in swapped steam generator locations [cause TBD] -> two valves lift outside TS-allowed setpoint tolerance (103.5% / 95%) -> operation prohibited by Technical Specifications -> corrective adjustment of lift settings; verified within +/-1% of TS setting",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Form-366 cause_code/category are TBD/provisional as authoritative; narrative supplies only a direct-cause statement (installation location error) without an official cause code, so provisional=true retained. No prior similar occurrence LER identified — narrative explicitly states 'no prior issues with MSSVs installed in the wrong locations,' so no SIMILAR_TO/stub LER emitted. No manufacturer, EIIS component codes beyond RV/SB given. FSAR Section 15.2 modeled as analysis-basis regulatory reference since narrative explicitly ties safety assessment to it."
+}

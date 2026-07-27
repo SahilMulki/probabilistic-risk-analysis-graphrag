@@ -1,0 +1,346 @@
+{
+  "ler_number": "298-2024-004-00",
+  "identity": {
+    "accession_number": "ML24131A023",
+    "docket": "05000298",
+    "plant_name": "Cooper",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2024-03-11",
+    "report_date": "2024-05-09",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Licensee Event Report No. 2024-004-00 Cooper Nuclear Station, Docket No. 50-298, DPR-46"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)",
+      "10 CFR 50.73(a)(2)(vii)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "the direct cause of the failure to meet the requirement of channel separation comes from the position switches not being mechanically separated due to sharing a common linkage. A causal factor for this was the initial assumption was incorrect that the plant is constructed consistently with the design basis",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "design/construction basis discrepancy - lack of mechanical channel separation",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 298-2024-004-00",
+      "properties": {},
+      "type": "LER",
+      "key": "298-2024-004-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:298-2024-004-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Cooper Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000298",
+      "match_key": "Unit:05000298"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "design/construction basis discrepancy - lack of mechanical channel separation",
+      "proximate_text": "the direct cause of the failure to meet the requirement of channel separation comes from the position switches not being mechanically separated due to sharing a common linkage. A causal factor for this was the initial assumption was incorrect that the plant is constructed consistently with the design basis",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_jc",
+      "display_name": "Reactor Protection System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JC"
+    },
+    {
+      "id": "c_tsv_switch",
+      "display_name": "Turbine Stop Valve position switches (limit switches)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "33",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:33"
+    },
+    {
+      "id": "c_relay",
+      "display_name": "Relay",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "RLY",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:RLY"
+    },
+    {
+      "id": "c_tsv",
+      "display_name": "Turbine Stop Valve",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:turbine-stop-valve"
+    },
+    {
+      "id": "fm_shared_linkage",
+      "display_name": "TSV position switches share a common linkage (all-thread actuation)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The two position switches on each TSV are mechanically connected together via all-thread actuation, precluding true mechanical separation.",
+      "match_key": "FailureMode:tsv-position-switches-share-a-common-linkage-all-thread-actuation"
+    },
+    {
+      "id": "fm_no_sep",
+      "display_name": "Total channel independence not achieved / no mechanical separation",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Determined on March 29, 2024 that channel independence per IEEE-279 was not achieved due to lack of mechanical separation between the two position switches on each TSV.",
+      "match_key": "FailureMode:total-channel-independence-not-achieved-no-mechanical-separation"
+    },
+    {
+      "id": "fm_two_channels_inop",
+      "display_name": "Required channel in both trip systems declared inoperable",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "A required channel in both RPS trip systems for the TSV-Closure function was declared inoperable as a result of the lack of mechanical separation.",
+      "match_key": "FailureMode:required-channel-in-both-trip-systems-declared-inoperable"
+    },
+    {
+      "id": "cons_tsprohibited",
+      "display_name": "TS LCO 3.3.1.1 Conditions A and B entered / condition prohibited by Technical Specifications",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2024-03-29",
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:ts-lco-3-3-1-1-conditions-a-and-b-entered-condition-prohibited-by-technical-specifications"
+    },
+    {
+      "id": "ca_engchange",
+      "display_name": "Resolve channel independence issue via engineering change process",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:resolve-channel-independence-issue-via-engineering-change-process"
+    },
+    {
+      "id": "ca_seminar",
+      "display_name": "Present seminar to engineering personnel on plant-construction-vs-licensing-basis assumption",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:present-seminar-to-engineering-personnel-on-plant-construction-vs-licensing-basis-assumption"
+    },
+    {
+      "id": "ca_noed",
+      "display_name": "Notice of Enforcement Discretion approved for LCO 3.3.1.1 Conditions A and B",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:notice-of-enforcement-discretion-approved-for-lco-3-3-1-1-conditions-a-and-b"
+    },
+    {
+      "id": "ca_lar",
+      "display_name": "TS License Amendment 275 approved adding temporary note to LCO 3.3.1.1 Table 3.3.1.1-1",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:ts-license-amendment-275-approved-adding-temporary-note-to-lco-3-3-1-1-table-3-3-1-1-1"
+    },
+    {
+      "id": "rr_50731",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_50737",
+      "display_name": "10 CFR 50.73(a)(2)(vii)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-vii"
+    },
+    {
+      "id": "rr_ieee279",
+      "display_name": "IEEE-279",
+      "properties": {
+        "type": "standard/guidance"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ieee-279"
+    },
+    {
+      "id": "rr_usar",
+      "display_name": "CNS USAR Chapter VII, Section 2.3.6.4",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:cns-usar-chapter-vii-section-2-3-6-4"
+    },
+    {
+      "id": "rr_lco3311",
+      "display_name": "TS LCO 3.3.1.1",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ts-lco-3-3-1-1"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "LER 298-2024-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "298-2024-001-00",
+      "stub": true,
+      "title": "Inoperable Turbine Stop Valve Limit Switch Causes Condition Prohibited by Technical Specifications",
+      "plant": "Cooper Nuclear Station",
+      "match_key": "LER:298-2024-001-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_50731",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_50737",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jc",
+      "evidence": null
+    },
+    {
+      "source": "c_tsv_switch",
+      "relation": "PART_OF",
+      "target": "c_tsv",
+      "evidence": null
+    },
+    {
+      "source": "fm_shared_linkage",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_shared_linkage",
+      "relation": "LEADS_TO",
+      "target": "fm_no_sep",
+      "evidence": null
+    },
+    {
+      "source": "fm_no_sep",
+      "relation": "LEADS_TO",
+      "target": "fm_two_channels_inop",
+      "evidence": null
+    },
+    {
+      "source": "fm_two_channels_inop",
+      "relation": "LEADS_TO",
+      "target": "cons_tsprohibited",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_engchange",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_seminar",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_noed",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_lar",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    }
+  ],
+  "chain": "position switches share common all-thread linkage [provisional cause] -> total channel independence not achieved (IEEE-279 mechanical separation not met) -> required channel in both RPS trip systems for TSV-Closure declared inoperable -> TS LCO 3.3.1.1 Conditions A/B entered / condition prohibited by TS [mitigated by NOED and TS Amendment 275]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q9",
+    "Q14"
+  ],
+  "notes": "Cause code is TBD/provisional per FORM-366 fields; narrative describes a design/construction-basis discrepancy rather than a classic hardware failure. No component EIIS codes beyond position switch (33) and relay (RLY) were given; TSV and RPV lack explicit codes in narrative bracket form for TSV component itself. Only one previous LER referenced (2024-001-00) despite narrative wording 'the following reportable conditions' (plural) - only one entry given."
+}

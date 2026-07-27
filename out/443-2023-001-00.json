@@ -1,0 +1,325 @@
+{
+  "ler_number": "443-2023-001-00",
+  "identity": {
+    "accession_number": "ML23163A217",
+    "docket": "05000443",
+    "plant_name": "Seabrook",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2023-04-12",
+    "report_date": "2023-06-12",
+    "operating_mode": "6",
+    "power_level": 0,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2023-001-00 for Seabrook Station, Automatic Actuation of 'B' Emergency Diesel Generator Emergency Power Sequencer"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "X",
+      "system": "JE",
+      "component": "PR",
+      "manufacturer": "W120",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "Spurious actuation of the EPS Remote Manual Override (RMO) relays resulted in opening of the Unit Auxiliary Transformer feeder breaker to Bus E6...most likely caused by welding activities being performed in the B Train Essential Switchgear Room. A contributing cause is age related degradation of the B EPS Power Supplies. The electrolytic capacitors were at the end of their service life making the power supplies more susceptible to conducted emissions that were introduced on ground as a result of a welding activity.",
+    "cause_code": "X",
+    "category": "Other",
+    "theme": "Spurious relay actuation induced by welding-related conducted emissions, compounded by aged power supply capacitors",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 443-2023-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "443-2023-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:443-2023-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Seabrook Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000443",
+      "match_key": "Unit:05000443"
+    },
+    {
+      "id": "cause",
+      "display_name": "Other (X)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "X",
+      "category": "Other",
+      "theme": "Spurious relay actuation induced by welding-related conducted emissions, compounded by aged power supply capacitors",
+      "proximate_text": "Spurious actuation of the EPS Remote Manual Override (RMO) relays resulted in opening of the Unit Auxiliary Transformer feeder breaker to Bus E6...most likely caused by welding activities being performed in the B Train Essential Switchgear Room. A contributing cause is age related degradation of the B EPS Power Supplies.",
+      "provisional": false,
+      "match_key": "Cause:Other"
+    },
+    {
+      "id": "sys_je",
+      "display_name": "Emergency Diesel Generator Emergency Power Sequencer",
+      "properties": {
+        "note": "B EDG Emergency Power Sequencer (EPS)"
+      },
+      "type": "System",
+      "eiis_code": "JE",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JE"
+    },
+    {
+      "id": "c_rmo",
+      "display_name": "EPS Remote Manual Override (RMO) relays",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "PR",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:PR"
+    },
+    {
+      "id": "c_pwrsupply",
+      "display_name": "B EPS Power Supplies",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": "W120",
+      "inferred_code": false,
+      "match_key": "Component:b-eps-power-supplies"
+    },
+    {
+      "id": "c_capacitor",
+      "display_name": "Electrolytic capacitors",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:electrolytic-capacitors"
+    },
+    {
+      "id": "c_breaker",
+      "display_name": "Unit Auxiliary Transformer feeder breaker to Bus E6",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:unit-auxiliary-transformer-feeder-breaker-to-bus-e6"
+    },
+    {
+      "id": "fm_capdeg",
+      "display_name": "Electrolytic capacitors at end of service life, increasing susceptibility to conducted emissions",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Age-related degradation of B EPS power supply capacitors made the supplies more susceptible to conducted emissions from welding.",
+      "match_key": "FailureMode:electrolytic-capacitors-at-end-of-service-life-increasing-susceptibility-to-conducted-emissions"
+    },
+    {
+      "id": "fm_weld",
+      "display_name": "Welding-induced conducted emissions on ground",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Welding activities in the B Train Essential Switchgear Room introduced conducted emissions onto ground.",
+      "match_key": "FailureMode:welding-induced-conducted-emissions-on-ground"
+    },
+    {
+      "id": "fm_rmo",
+      "display_name": "Spurious actuation of EPS Remote Manual Override relays",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The conducted emissions caused spurious actuation of the EPS RMO relays.",
+      "match_key": "FailureMode:spurious-actuation-of-eps-remote-manual-override-relays"
+    },
+    {
+      "id": "fm_breakeropen",
+      "display_name": "Unit Auxiliary Transformer feeder breaker to Bus E6 opened",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Spurious RMO actuation caused the feeder breaker to Bus E6 to open.",
+      "match_key": "FailureMode:unit-auxiliary-transformer-feeder-breaker-to-bus-e6-opened"
+    },
+    {
+      "id": "fm_lop",
+      "display_name": "Loss of power to Bus E6",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Opening of the feeder breaker resulted in a loss of power to the B train Emergency Bus E6.",
+      "match_key": "FailureMode:loss-of-power-to-bus-e6"
+    },
+    {
+      "id": "cons_eps",
+      "display_name": "Valid actuation of 'B' EDG Emergency Power Sequencer",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2023-04-12T11:07",
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:valid-actuation-of-b-edg-emergency-power-sequencer"
+    },
+    {
+      "id": "ca_test",
+      "display_name": "Test EPS RMO relays for proper operation",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:test-eps-rmo-relays-for-proper-operation"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace EPS power supplies",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-eps-power-supplies"
+    },
+    {
+      "id": "mfr_w120",
+      "display_name": "Westinghouse (W120)",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "W120",
+      "match_key": "Manufacturer:W120"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_je",
+      "evidence": null
+    },
+    {
+      "source": "c_rmo",
+      "relation": "PART_OF",
+      "target": "sys_je",
+      "evidence": null
+    },
+    {
+      "source": "c_pwrsupply",
+      "relation": "PART_OF",
+      "target": "sys_je",
+      "evidence": null
+    },
+    {
+      "source": "c_capacitor",
+      "relation": "PART_OF",
+      "target": "c_pwrsupply",
+      "evidence": null
+    },
+    {
+      "source": "fm_capdeg",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_capdeg",
+      "relation": "LEADS_TO",
+      "target": "fm_weld",
+      "evidence": null
+    },
+    {
+      "source": "fm_weld",
+      "relation": "LEADS_TO",
+      "target": "fm_rmo",
+      "evidence": null
+    },
+    {
+      "source": "fm_rmo",
+      "relation": "LEADS_TO",
+      "target": "fm_breakeropen",
+      "evidence": null
+    },
+    {
+      "source": "fm_breakeropen",
+      "relation": "LEADS_TO",
+      "target": "fm_lop",
+      "evidence": null
+    },
+    {
+      "source": "fm_lop",
+      "relation": "LEADS_TO",
+      "target": "cons_eps",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_test",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "c_pwrsupply",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_w120",
+      "evidence": null
+    }
+  ],
+  "chain": "aged/degraded EPS power supply capacitors [contributing, cause X] -> welding-induced conducted emissions on ground -> spurious RMO relay actuation -> feeder breaker to Bus E6 opens -> loss of power to Bus E6 -> valid EPS actuation (B EDG did not start; EDG was out for maintenance)",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code X ('Other') governs category per Block 13 despite narrative detailing a specific spurious-actuation/aged-capacitor mechanism; theme captures narrative nuance. B EDG was out of service for maintenance at time of event and did not start, so no EDG-related FailureMode/Consequence modeled beyond EPS actuation itself. No previous similar occurrence found per narrative (10-year review found none) so no SIMILAR_TO edge or stub LER emitted. Power supplies and RMO relays modeled as components of the JE (EPS) system per explicit narrative description; breaker-opening is a functional consequence, not containment, so no PART_OF edge from breaker to any system."
+}

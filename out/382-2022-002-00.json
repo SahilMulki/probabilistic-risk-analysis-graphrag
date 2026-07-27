@@ -1,0 +1,354 @@
+{
+  "ler_number": "382-2022-002-00",
+  "identity": {
+    "accession_number": "ML22133A248",
+    "docket": "05000382",
+    "plant_name": "Waterford",
+    "unit": 3,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2022-03-17",
+    "report_date": "2022-05-13",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Operation Prohibited by Technical Specifications Due to Personnel Error"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)",
+      "10 CFR 50.73(a)(2)(v)(C)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The cause of the human performance error is that the Entergy maintenance technicians performing the limit switch adjustment on HVR-304B misread the controlled wiring diagram due to improper verification practices when identifying the proper limit switch to adjust. Additionally, the post-maintenance testing was inadequate in that it did not verify that HVR-304B would stroke fully open.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "misadjustment of wrong limit switch due to wiring-diagram misread and inadequate post-maintenance test",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 382-2022-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "382-2022-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:382-2022-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Waterford Unit 3",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000382",
+      "match_key": "Unit:05000382"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "misadjustment of wrong limit switch due to wiring-diagram misread and inadequate post-maintenance test",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_vf",
+      "display_name": "Controlled Ventilation Area System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "VF",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected system; Train B inoperable",
+      "match_key": "System:VF"
+    },
+    {
+      "id": "c_flt_b",
+      "display_name": "CVAS Filter Train B",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "FLT",
+      "identifier": "Train B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:FLT|Train B"
+    },
+    {
+      "id": "c_hvr304b",
+      "display_name": "CVAS Filter Train B Inlet Valve HVR-304B",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "PDCV",
+      "identifier": "HVR-304B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:PDCV|HVR-304B"
+    },
+    {
+      "id": "c_zis304b",
+      "display_name": "HVR-304B Open Limit Switch",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "ZIS",
+      "identifier": "HVR-304B open limit switch",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:ZIS|HVR-304B open limit switch"
+    },
+    {
+      "id": "c_flt_a",
+      "display_name": "CVAS Filter Train A",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "FLT",
+      "identifier": "Train A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:FLT|Train A"
+    },
+    {
+      "id": "c_hvr304a",
+      "display_name": "CVAS Filter Train A Inlet Valve HVR-304A",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "PDCV",
+      "identifier": "HVR-304A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:PDCV|HVR-304A"
+    },
+    {
+      "id": "fm_misread",
+      "display_name": "Technicians misread controlled wiring diagram / adjusted wrong limit switch",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Technicians adjusted the HVR-304B open limit switch instead of the intermediate limit switch due to improper verification practices.",
+      "match_key": "FailureMode:technicians-misread-controlled-wiring-diagram-adjusted-wrong-limit-switch"
+    },
+    {
+      "id": "fm_pmt",
+      "display_name": "Inadequate post-maintenance testing",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The functional test performed did not verify that HVR-304B would stroke fully open, failing to catch the incorrect limit switch adjustment.",
+      "match_key": "FailureMode:inadequate-post-maintenance-testing"
+    },
+    {
+      "id": "fm_limitswitch",
+      "display_name": "Open limit switch incorrectly set, preventing further opening",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The open limit switch was set at the intermediate position, preventing HVR-304B from being adjusted further open to compensate for higher filter resistance during a design-basis LOCA.",
+      "match_key": "FailureMode:open-limit-switch-incorrectly-set-preventing-further-opening"
+    },
+    {
+      "id": "fm_trainb_inop",
+      "display_name": "CVAS Train B inoperable",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "CVAS Train B was inoperable for approximately 235 days due to the incorrect limit switch setting, exceeding the TS 3.7.7 allowed outage time.",
+      "match_key": "FailureMode:cvas-train-b-inoperable"
+    },
+    {
+      "id": "cons_ts",
+      "display_name": "Operation prohibited by Technical Specifications / TS 3.7.7 AOT exceeded",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2021-07-26T03:30",
+      "end": "2022-03-18T23:15",
+      "duration": "approximately 235 days",
+      "tz": "CT",
+      "match_key": "Consequence:operation-prohibited-by-technical-specifications-ts-3-7-7-aot-exceeded"
+    },
+    {
+      "id": "cons_bothtrains",
+      "display_name": "Both CVAS trains inoperable concurrently (safety function precluded)",
+      "properties": {},
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": "approximately 94 hours",
+      "tz": null,
+      "match_key": "Consequence:both-cvas-trains-inoperable-concurrently-safety-function-precluded"
+    },
+    {
+      "id": "ca_adjust",
+      "display_name": "Adjust HVR-304B intermediate and open limit switches correctly",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:adjust-hvr-304b-intermediate-and-open-limit-switches-correctly"
+    },
+    {
+      "id": "ca_behavior",
+      "display_name": "Address technician behaviors per performance management program",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:address-technician-behaviors-per-performance-management-program"
+    },
+    {
+      "id": "ca_procedure",
+      "display_name": "Revise MOV maintenance procedure ME-007-008 to test at each of three limit switch positions",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-mov-maintenance-procedure-me-007-008-to-test-at-each-of-three-limit-switch-positions"
+    },
+    {
+      "id": "rr_5073i",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_5073v",
+      "display_name": "10 CFR 50.73(a)(2)(v)(C)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-c"
+    },
+    {
+      "id": "rr_ts377",
+      "display_name": "Technical Specification 3.7.7 (Controlled Ventilation Area System)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-3-7-7-controlled-ventilation-area-system"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073i",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073v",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts377",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_vf",
+      "evidence": null
+    },
+    {
+      "source": "c_flt_b",
+      "relation": "PART_OF",
+      "target": "sys_vf",
+      "evidence": null
+    },
+    {
+      "source": "c_flt_a",
+      "relation": "PART_OF",
+      "target": "sys_vf",
+      "evidence": null
+    },
+    {
+      "source": "fm_misread",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_misread",
+      "relation": "LEADS_TO",
+      "target": "fm_limitswitch",
+      "evidence": null
+    },
+    {
+      "source": "fm_pmt",
+      "relation": "LEADS_TO",
+      "target": "fm_limitswitch",
+      "evidence": null
+    },
+    {
+      "source": "fm_limitswitch",
+      "relation": "LEADS_TO",
+      "target": "fm_trainb_inop",
+      "evidence": null
+    },
+    {
+      "source": "fm_trainb_inop",
+      "relation": "LEADS_TO",
+      "target": "cons_ts",
+      "evidence": null
+    },
+    {
+      "source": "fm_trainb_inop",
+      "relation": "LEADS_TO",
+      "target": "cons_bothtrains",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_adjust",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_behavior",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procedure",
+      "evidence": null
+    }
+  ],
+  "chain": "technicians misread wiring diagram [cause TBD] -> adjusted wrong (open) limit switch + inadequate post-maintenance test -> HVR-304B open limit switch incorrectly set, blocking further opening -> CVAS Train B inoperable for ~235 days -> TS 3.7.7 AOT exceeded / condition that could have prevented safety function (both trains inop ~94 hrs)",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code is TBD/provisional in FORM-366 fields; category left provisional per rule 4. No EIIS code given for CVAS Train A/B as filter subcomponents beyond FLT; HVR-304A is design-context comparison, not an operable backup during the event, so no BACKED_UP_BY edge asserted. Block 13 empty per form fields. No previous similar events per narrative."
+}

@@ -1,0 +1,357 @@
+{
+  "ler_number": "346-2022-002-00",
+  "identity": {
+    "accession_number": "ML23051A019",
+    "docket": "05000346",
+    "plant_name": "Davis-Besse",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2022-12-23",
+    "report_date": "2023-02-20",
+    "operating_mode": "3",
+    "power_level": 87,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Davis-Besse Nuclear Power Station, Unit 1 Docket Number 50-346, License Number NPF-3 Licensee Event Report 2022-002-00"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)",
+      "10 CFR 50.73(a)(2)(i)(A)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The low Intake Forebay level was caused by record low levels in the Western Basin of Lake Erie, which were caused by the sustained strong eastward winds from the winter storm. There were no measures the plant staff could take to arrest the reducing level before the Ultimate Heat Sink level fell below the TS LCO 3.7.9 Condition A required level of 562 feet IGLD.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Extreme weather / seiche lowered lake level below UHS TS limit",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 346-2022-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "346-2022-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:346-2022-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Davis-Besse Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000346",
+      "match_key": "Unit:05000346"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Extreme weather / seiche lowered lake level below UHS TS limit",
+      "proximate_text": "The low Intake Forebay level was caused by record low levels in the Western Basin of Lake Erie, which were caused by the sustained strong eastward winds from the winter storm. There were no measures the plant staff could take to arrest the reducing level before the Ultimate Heat Sink level fell below the TS LCO 3.7.9 Condition A required level of 562 feet IGLD.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_bs",
+      "display_name": "Ultimate Heat Sink",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BS",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BS"
+    },
+    {
+      "id": "sys_bi",
+      "display_name": "Service Water System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BI",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; operable throughout event",
+      "match_key": "System:BI"
+    },
+    {
+      "id": "c_swp",
+      "display_name": "Service Water Pumps",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "BI-P",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:BI-P"
+    },
+    {
+      "id": "c_dieselpumps",
+      "display_name": "Temporary diesel-driven pumps (Lake Erie suction)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:temporary-diesel-driven-pumps-lake-erie-suction"
+    },
+    {
+      "id": "c_flexpumps",
+      "display_name": "FLEX pumps",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:flex-pumps"
+    },
+    {
+      "id": "fm_windstorm",
+      "display_name": "Sustained strong eastward winds over Lake Erie (seiche)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Low-pressure winter storm caused sustained eastward winds transferring lake water from Western Basin to eastern end (seiche phenomenon).",
+      "match_key": "FailureMode:sustained-strong-eastward-winds-over-lake-erie-seiche"
+    },
+    {
+      "id": "fm_lowlevel",
+      "display_name": "Record low Western Basin lake level",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Wind-driven seiche caused record low water levels in Lake Erie's Western Basin near the intake.",
+      "match_key": "FailureMode:record-low-western-basin-lake-level"
+    },
+    {
+      "id": "fm_forebaylow",
+      "display_name": "Intake Forebay level dropped below TS LCO 3.7.9 limit",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Intake Forebay level fell to 562.6 feet IGLD, at or below the required minimum of 562 feet IGLD, triggering UHS inoperability.",
+      "match_key": "FailureMode:intake-forebay-level-dropped-below-ts-lco-3-7-9-limit"
+    },
+    {
+      "id": "cons_uhs_inop",
+      "display_name": "Ultimate Heat Sink declared inoperable / plant shutdown initiated (TS 3.7.9 not met)",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2022-12-23T14:12",
+      "end": "2022-12-24T11:58",
+      "duration": "~22 hours",
+      "tz": null,
+      "match_key": "Consequence:ultimate-heat-sink-declared-inoperable-plant-shutdown-initiated-ts-3-7-9-not-met"
+    },
+    {
+      "id": "ca_encforcement",
+      "display_name": "Received and complied with NRC verbal enforcement discretion; terminated shutdown at 87% power",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:received-and-complied-with-nrc-verbal-enforcement-discretion-terminated-shutdown-at-87-power"
+    },
+    {
+      "id": "ca_dieselpumps",
+      "display_name": "Placed temporary diesel-driven pumps in service to mitigate evaporative losses",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:placed-temporary-diesel-driven-pumps-in-service-to-mitigate-evaporative-losses"
+    },
+    {
+      "id": "ca_monitor",
+      "display_name": "Continued monitoring of Intake Forebay level until sustained recovery above TS limit, then declared UHS operable",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:continued-monitoring-of-intake-forebay-level-until-sustained-recovery-above-ts-limit-then-declared-uhs-operable"
+    },
+    {
+      "id": "ca_none",
+      "display_name": "No additional actions required (one-time severe winter storm event)",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:no-additional-actions-required-one-time-severe-winter-storm-event"
+    },
+    {
+      "id": "rr_5073i_b",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_5073i_a",
+      "display_name": "10 CFR 50.73(a)(2)(i)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-a"
+    },
+    {
+      "id": "rr_5072",
+      "display_name": "10 CFR 50.72(b)(2)(i)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-2-i"
+    },
+    {
+      "id": "rr_ts379",
+      "display_name": "TS LCO 3.7.9 Ultimate Heat Sink",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-lco-3-7-9-ultimate-heat-sink"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073i_b",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073i_a",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts379",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bs",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bi",
+      "evidence": null
+    },
+    {
+      "source": "fm_windstorm",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_windstorm",
+      "relation": "LEADS_TO",
+      "target": "fm_lowlevel",
+      "evidence": null
+    },
+    {
+      "source": "fm_lowlevel",
+      "relation": "LEADS_TO",
+      "target": "fm_forebaylow",
+      "evidence": null
+    },
+    {
+      "source": "fm_forebaylow",
+      "relation": "LEADS_TO",
+      "target": "cons_uhs_inop",
+      "evidence": null
+    },
+    {
+      "source": "cons_uhs_inop",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_bi",
+      "evidence": null
+    },
+    {
+      "source": "cons_uhs_inop",
+      "relation": "BACKED_UP_BY",
+      "target": "c_swp",
+      "evidence": null
+    },
+    {
+      "source": "cons_uhs_inop",
+      "relation": "BACKED_UP_BY",
+      "target": "c_dieselpumps",
+      "evidence": null
+    },
+    {
+      "source": "cons_uhs_inop",
+      "relation": "BACKED_UP_BY",
+      "target": "c_flexpumps",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_encforcement",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_dieselpumps",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_monitor",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_none",
+      "evidence": null
+    }
+  ],
+  "chain": "record winter storm winds [cause TBD] -> sustained eastward winds / seiche -> record low Western Basin lake level -> Intake Forebay level falls below TS 3.7.9 limit -> UHS declared inoperable / shutdown initiated [backups: Service Water Pumps remained available, temporary diesel-driven pumps, FLEX pumps] -> shutdown terminated at 87% power via NRC enforcement discretion; UHS restored operable ~22h later",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code is officially TBD/provisional per FORM-366 fields despite a clear narrative root cause (weather-driven seiche); category kept as 'provisional' per rule 4. Service Water Pumps NPSH remained protected throughout (design basis prevents forebay level below 560 ft IGLD), so no actual loss of safety function occurred; this is modeled as BACKED_UP_BY since the narrative explicitly states pumps 'remained available throughout the event.' No equipment failure occurred -- this is a natural-phenomenon-driven TS LCO exceedance, not a hardware failure chain. No previous similar LERs were found (narrative states none in past three years), so no stub LER/SIMILAR_TO edge is created."
+}

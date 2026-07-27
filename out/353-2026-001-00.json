@@ -1,0 +1,318 @@
+{
+  "ler_number": "353-2026-001-00",
+  "identity": {
+    "accession_number": "ML26127A309",
+    "docket": "05000353",
+    "plant_name": "Limerick",
+    "unit": 2,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2026-03-11",
+    "report_date": "2026-05-07",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": "39324",
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Primary Containment Isolation Valves Invalid Actuation due to Failed Relay"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "B",
+      "system": "IL",
+      "component": "RLY",
+      "manufacturer": "G080",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The cause of the Division 3 Group 6C isolation signal was due to failure of the trip upscale K2 relay in the 2C Reactor Enclosure Refueling Floor Ventilation Exhaust Radiation Monitor. The relay failure was determined to be age-related thermal degradation of the relay solenoid.",
+    "cause_code": "B",
+    "category": "Design/Manufacturing/Installation",
+    "theme": "age-related thermal degradation of relay solenoid",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 353-2026-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "353-2026-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:353-2026-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Limerick Unit 2",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000353",
+      "match_key": "Unit:05000353"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Manufacturing/Installation (B)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "B",
+      "category": "Design/Manufacturing/Installation",
+      "theme": "age-related thermal degradation of relay solenoid",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Design/Manufacturing/Installation"
+    },
+    {
+      "id": "sys_il",
+      "display_name": "Radiation Monitoring System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "IL",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:IL"
+    },
+    {
+      "id": "c_monitor",
+      "display_name": "2C Reactor Enclosure Refueling Floor Ventilation Exhaust Radiation Monitor",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "IL",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:IL"
+    },
+    {
+      "id": "c_switch",
+      "display_name": "2C Reactor Enclosure Vent Radiation Indicating Switch (RISH-026-2K609C)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "RISH-026-2K609C",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:2c-reactor-enclosure-vent-radiation-indicating-switch-rish-026-2k609c"
+    },
+    {
+      "id": "c_relay",
+      "display_name": "K2 relay (radiation trip upscale)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "RLY",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": "G080",
+      "inferred_code": false,
+      "match_key": "Component:RLY"
+    },
+    {
+      "id": "fm_thermal",
+      "display_name": "Age-related thermal degradation of relay solenoid",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "K2 relay solenoid degraded due to age-related thermal degradation.",
+      "match_key": "FailureMode:age-related-thermal-degradation-of-relay-solenoid"
+    },
+    {
+      "id": "fm_relayfail",
+      "display_name": "K2 relay failure (trip upscale)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Trip upscale K2 relay in the 2C Reactor Enclosure Refueling Floor Ventilation Exhaust Radiation Monitor failed, causing indicating switch RISH-026-2K609C to be in the trip position.",
+      "match_key": "FailureMode:k2-relay-failure-trip-upscale"
+    },
+    {
+      "id": "fm_invalidsignal",
+      "display_name": "Invalid Division 3 Group 6C isolation signal",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Invalid isolation signal generated, not in response to actual plant conditions, causing PCIVs to automatically close on the Containment Leak Detector Radiation Monitor and Drywell Hydrogen/Oxygen Analyzer.",
+      "match_key": "FailureMode:invalid-division-3-group-6c-isolation-signal"
+    },
+    {
+      "id": "cons_isolation",
+      "display_name": "Invalid primary containment isolation valve actuations (two occurrences)",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2026-03-11T10:59",
+      "end": "2026-03-11T12:42",
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:invalid-primary-containment-isolation-valve-actuations-two-occurrences"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace and retest K2 relay",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-and-retest-k2-relay"
+    },
+    {
+      "id": "ca_pm",
+      "display_name": "Implement K2 relay preventive maintenance strategy",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:implement-k2-relay-preventive-maintenance-strategy"
+    },
+    {
+      "id": "mfr_ge",
+      "display_name": "General Electric Company",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "G080",
+      "match_key": "Manufacturer:G080"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "ler_prev1",
+      "display_name": "ENS 39324 - October 28, 2002 (Limerick Generating Station, Unit 2)",
+      "properties": {},
+      "type": "LER",
+      "key": "39324",
+      "stub": true,
+      "title": "Previous similar occurrence (ENS 39324, October 28, 2002)",
+      "plant": "Limerick Generating Station",
+      "match_key": "LER:39324"
+    },
+    {
+      "id": "ler_prev2",
+      "display_name": "ENS 44260 - June 03, 2008 (Limerick Generating Station, Unit 2)",
+      "properties": {},
+      "type": "LER",
+      "key": "44260",
+      "stub": true,
+      "title": "Previous similar occurrence (ENS 44260, June 03, 2008)",
+      "plant": "Limerick Generating Station",
+      "match_key": "LER:44260"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_il",
+      "evidence": null
+    },
+    {
+      "source": "c_monitor",
+      "relation": "PART_OF",
+      "target": "sys_il",
+      "evidence": null
+    },
+    {
+      "source": "c_switch",
+      "relation": "PART_OF",
+      "target": "c_monitor",
+      "evidence": null
+    },
+    {
+      "source": "c_relay",
+      "relation": "PART_OF",
+      "target": "c_monitor",
+      "evidence": null
+    },
+    {
+      "source": "c_relay",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_ge",
+      "evidence": null
+    },
+    {
+      "source": "fm_thermal",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_thermal",
+      "relation": "LEADS_TO",
+      "target": "fm_relayfail",
+      "evidence": null
+    },
+    {
+      "source": "fm_relayfail",
+      "relation": "LEADS_TO",
+      "target": "fm_invalidsignal",
+      "evidence": null
+    },
+    {
+      "source": "fm_invalidsignal",
+      "relation": "LEADS_TO",
+      "target": "cons_isolation",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_pm",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev1",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev2",
+      "evidence": null
+    }
+  ],
+  "chain": "age-related thermal degradation of relay solenoid [cause B] -> K2 relay trip-upscale failure -> invalid Division 3 Group 6C isolation signal -> PCIVs automatically close (two occurrences, no actual radiation excursion) -> relay replaced/retested, plant restored",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Two invalid isolation events (10:59 and 12:42 on 2026-03-11) share the same root cause (K2 relay failure); modeled as a single consequence spanning both occurrences since they are the same failure mechanism repeating before repair. Plant name/unit inferred from narrative continuation sheet header (Limerick Generating Station, Unit 2) since FORM-366 identity fields were null. Previous similar occurrences captured as ENS numbers per narrative (no formal LER numbers given) using rule 9's stub convention with key set to the stated ENS identifier."
+}

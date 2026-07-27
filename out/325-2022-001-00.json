@@ -1,0 +1,398 @@
+{
+  "ler_number": "325-2022-001-00",
+  "identity": {
+    "accession_number": "ML22255A164",
+    "docket": "05000325",
+    "plant_name": "Brunswick",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2022-07-15",
+    "report_date": "2022-09-12",
+    "operating_mode": "1",
+    "power_level": 96,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Brunswick Steam Electric Plant, Unit No. 1 Renewed Facility Operating License No. DPR-71 Docket No. 50-325 Licensee Event Report 1-2022-001"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)(D)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "D",
+      "system": "BJ",
+      "component": "FUB",
+      "manufacturer": "J088",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "fuse replacement is not part of the refurbishment instructions, and checking fuse holder tightness is not included in the installation instructions. This allowed the fuse holder to work its way loose over time due to normal handling/inspection/maintenance. Therefore, the cause of this event was determined to be inadequate procedural guidance associated with ensuring tightness of the fuse holder.",
+    "cause_code": "D",
+    "category": "Defective Procedure",
+    "theme": "missing fuse-holder tightness check in maintenance/installation procedure",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 325-2022-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "325-2022-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:325-2022-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Brunswick Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000325",
+      "match_key": "Unit:05000325"
+    },
+    {
+      "id": "cause",
+      "display_name": "Defective Procedure (D)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "D",
+      "category": "Defective Procedure",
+      "theme": "missing fuse-holder tightness check in maintenance/installation procedure",
+      "proximate_text": "fuse replacement is not part of the refurbishment instructions, and checking fuse holder tightness is not included in the installation instructions. This allowed the fuse holder to work its way loose over time due to normal handling/inspection/maintenance. Therefore, the cause of this event was determined to be inadequate procedural guidance associated with ensuring tightness of the fuse holder.",
+      "provisional": false,
+      "match_key": "Cause:Defective Procedure"
+    },
+    {
+      "id": "sys_bj",
+      "display_name": "High Pressure Coolant Injection",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BJ"
+    },
+    {
+      "id": "sys_bn",
+      "display_name": "Reactor Core Isolation Cooling",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BN",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; remained operable",
+      "match_key": "System:BN"
+    },
+    {
+      "id": "sys_ads",
+      "display_name": "Automatic Depressurization System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "backup; remained operable",
+      "match_key": "System:automatic-depressurization-system"
+    },
+    {
+      "id": "c_flowctrl",
+      "display_name": "HPCI Flow Controller",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:hpci-flow-controller"
+    },
+    {
+      "id": "c_lead",
+      "display_name": "Lead (electrical connection) to HPCI flow controller",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:lead-electrical-connection-to-hpci-flow-controller"
+    },
+    {
+      "id": "c_fuseholder",
+      "display_name": "Fuse holder (backside of flow controller)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "FUB",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": "J088",
+      "inferred_code": false,
+      "match_key": "Component:FUB"
+    },
+    {
+      "id": "fm_leadloose",
+      "display_name": "Loose lead to HPCI flow controller",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "A loose lead to the HPCI flow controller was discovered; tightening it restored power, but this could not have caused the loss of power.",
+      "match_key": "FailureMode:loose-lead-to-hpci-flow-controller"
+    },
+    {
+      "id": "fm_fuseloose",
+      "display_name": "Loose fuse holder connection",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "A loose fuse holder connection was identified on the backside of the flow controller during calibration check; fuse holder worked loose over time due to normal handling/inspection/maintenance.",
+      "match_key": "FailureMode:loose-fuse-holder-connection"
+    },
+    {
+      "id": "fm_lossofpower",
+      "display_name": "Loss of power to HPCI flow controller",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "HPCI flow controller found without power during Reactor Operator control board walkdowns.",
+      "match_key": "FailureMode:loss-of-power-to-hpci-flow-controller"
+    },
+    {
+      "id": "cons_hpci",
+      "display_name": "HPCI inoperable",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2022-07-15T20:20",
+      "end": "2022-07-16T12:10",
+      "duration": "15:50",
+      "tz": "EDT",
+      "match_key": "Consequence:hpci-inoperable"
+    },
+    {
+      "id": "ca_secure_fuse",
+      "display_name": "Secure fuse in fuse holder and declare HPCI operable following PMT",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:secure-fuse-in-fuse-holder-and-declare-hpci-operable-following-pmt"
+    },
+    {
+      "id": "ca_u2_extent",
+      "display_name": "Extent-of-condition check: ensure Unit 2 HPCI flow controller fuse holder secured",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:extent-of-condition-check-ensure-unit-2-hpci-flow-controller-fuse-holder-secured"
+    },
+    {
+      "id": "ca_rcic_check",
+      "display_name": "Check Unit 1 and Unit 2 RCIC flow controller fuse holders for tightness",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:check-unit-1-and-unit-2-rcic-flow-controller-fuse-holders-for-tightness"
+    },
+    {
+      "id": "ca_proc_update",
+      "display_name": "Add instructions to maintenance procedure to check fuse holder tightness before returning HPCI/RCIC flow controllers to service",
+      "properties": {
+        "due_date": "2022-11-14"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:add-instructions-to-maintenance-procedure-to-check-fuse-holder-tightness-before-returning-hpci-rcic-flow-controllers-to-service"
+    },
+    {
+      "id": "mfr_j088",
+      "display_name": "Manufacturer J088",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "J088",
+      "match_key": "Manufacturer:J088"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "rr_5072",
+      "display_name": "10 CFR 50.72(b)(3)(v)(D)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-3-v-d"
+    },
+    {
+      "id": "ler_prev1",
+      "display_name": "Event Notification 54116 (HPCI response time not met, EG-R debris binding)",
+      "properties": {},
+      "type": "LER",
+      "key": "EN-54116",
+      "stub": true,
+      "title": "HPCI System inoperability due to required response time not being met during routine testing (turbine overspeed trip caused by momentary failure of Electric Governor - Remote)",
+      "plant": "Brunswick Steam Electric Plant",
+      "match_key": "LER:EN-54116"
+    },
+    {
+      "id": "ler_prev2",
+      "display_name": "Event Notification 55780 (Unit 2 HPCI response time, remote servo sticking) - retracted",
+      "properties": {},
+      "type": "LER",
+      "key": "EN-55780",
+      "stub": true,
+      "title": "Unit 2 HPCI System inoperability following evaluation of routine HPCI surveillance testing data indicating required response time for reaching rated conditions was not met (sluggish/sticking remote servo)",
+      "plant": "Brunswick Steam Electric Plant",
+      "match_key": "LER:EN-55780"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bj",
+      "evidence": null
+    },
+    {
+      "source": "c_flowctrl",
+      "relation": "PART_OF",
+      "target": "sys_bj",
+      "evidence": null
+    },
+    {
+      "source": "c_fuseholder",
+      "relation": "PART_OF",
+      "target": "c_flowctrl",
+      "evidence": null
+    },
+    {
+      "source": "c_lead",
+      "relation": "PART_OF",
+      "target": "c_flowctrl",
+      "evidence": null
+    },
+    {
+      "source": "fm_fuseloose",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_fuseloose",
+      "relation": "LEADS_TO",
+      "target": "fm_lossofpower",
+      "evidence": null
+    },
+    {
+      "source": "fm_leadloose",
+      "relation": "LEADS_TO",
+      "target": "fm_lossofpower",
+      "evidence": null
+    },
+    {
+      "source": "fm_lossofpower",
+      "relation": "LEADS_TO",
+      "target": "cons_hpci",
+      "evidence": null
+    },
+    {
+      "source": "cons_hpci",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_bn",
+      "evidence": null
+    },
+    {
+      "source": "cons_hpci",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_ads",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_secure_fuse",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_u2_extent",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_rcic_check",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_proc_update",
+      "evidence": null
+    },
+    {
+      "source": "c_fuseholder",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_j088",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev1",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev2",
+      "evidence": null
+    }
+  ],
+  "chain": "inadequate procedural guidance re: fuse holder tightness [cause D] -> fuse holder works loose over time -> loose fuse holder connection (parallel: unrelated loose lead found/tightened) -> loss of power to HPCI flow controller -> HPCI inoperable (~15h50m) [backups RCIC, ADS operable]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Two distinct connection issues were found: an initially-discovered loose lead (tightened, restored power at 20:23, but later determined it could not have caused the original loss of power) and a separately-discovered loose fuse holder connection (the actual root cause, per cause code D). Both are modeled as parallel FailureModes leading to loss of power, but only the fuse-holder issue is CAUSED_BY the cause node per the narrative's explicit attribution. RCIC and ADS are stated as having 'remained operable during this event' -> modeled as BACKED_UP_BY. Previous similar events are modeled as stub LERs keyed by their Event Notification numbers since no formal LER numbers were given in the narrative; EN-55780 was retracted but is still referenced as a previous similar event per the narrative."
+}

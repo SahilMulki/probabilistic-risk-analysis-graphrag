@@ -1,0 +1,338 @@
+{
+  "ler_number": "387-2025-002-00",
+  "identity": {
+    "accession_number": "ML25307A312",
+    "docket": "05000387",
+    "plant_name": "Susquehanna",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2025-09-04",
+    "report_date": "2025-11-03",
+    "operating_mode": "1",
+    "power_level": 95,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2025-002-00 for Susquehanna Steam Electric Station, Units 1 & 2, Both Sub-Systems of the Control Room Emergency Outside Air Supply System Impacted by Concurrent, Unrelated Equipment Issues in the Control Structure Heating, Ventilation & Air ....."
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)(C)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "X",
+      "system": "VI",
+      "component": "COMP",
+      "manufacturer": "E232",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "Two separate and independent events occurred concurrently that impacted the CREOAS system... the causes of the inoperability of the 0V103A fan and the 0V117B fan were unrelated and were not within operators' ability to foresee and prevent.",
+    "cause_code": "X",
+    "category": "Other",
+    "theme": "concurrent unrelated equipment failures",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 387-2025-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "387-2025-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:387-2025-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Susquehanna Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000387",
+      "match_key": "Unit:05000387"
+    },
+    {
+      "id": "cause",
+      "display_name": "Other (X)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "X",
+      "category": "Other",
+      "theme": "concurrent unrelated equipment failures",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Other"
+    },
+    {
+      "id": "sys_vi",
+      "display_name": "Control Structure HVAC",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "VI",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:VI"
+    },
+    {
+      "id": "sys_creoas",
+      "display_name": "Control Room Emergency Outside Air Supply",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "system impacted; two sub-systems",
+      "match_key": "System:control-room-emergency-outside-air-supply"
+    },
+    {
+      "id": "c_fan_a",
+      "display_name": "Control Structure HVAC Fan 0V103A",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "FAN",
+      "identifier": "0V103A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:FAN|0V103A"
+    },
+    {
+      "id": "c_fan_b",
+      "display_name": "Control Structure Supply Fan 0V117B",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "FAN",
+      "identifier": "0V117B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:FAN|0V117B"
+    },
+    {
+      "id": "c_hydromotor",
+      "display_name": "0V117B Discharge Damper Hydro Motor",
+      "properties": {
+        "part_number": "NH95G2602F21-57"
+      },
+      "type": "Component",
+      "eiis_code": "COMP",
+      "identifier": "HDM07831B",
+      "model": "Asco ITT NH95",
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:COMP|HDM07831B"
+    },
+    {
+      "id": "c_damper",
+      "display_name": "0V117B Discharge Damper",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "DMP",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:DMP"
+    },
+    {
+      "id": "fm_belts",
+      "display_name": "0V103A fan belt vibration / proactive removal for belt replacement",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "0V103A fan removed from service to replace belts contributing to elevated vibration",
+      "match_key": "FailureMode:0v103a-fan-belt-vibration-proactive-removal-for-belt-replacement"
+    },
+    {
+      "id": "fm_hydromotor_fail",
+      "display_name": "0V117B discharge damper hydro motor failure",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Hydro motor failed with no prior indication of degraded performance, causing damper to close",
+      "match_key": "FailureMode:0v117b-discharge-damper-hydro-motor-failure"
+    },
+    {
+      "id": "fm_damper_closed",
+      "display_name": "0V117B discharge damper closed / reduced air flow",
+      "properties": {},
+      "type": "FailureMode",
+      "description": null,
+      "match_key": "FailureMode:0v117b-discharge-damper-closed-reduced-air-flow"
+    },
+    {
+      "id": "cons_concurrent",
+      "display_name": "Both CREOAS sub-systems concurrently impacted",
+      "properties": {
+        "note": "concurrent inoperability of 0V103A and 0V117B; full 'B' subsystem restoration not until 2025-09-05 ~2111"
+      },
+      "type": "Consequence",
+      "start": "2025-09-04T13:41",
+      "end": "2025-09-04T15:50",
+      "duration": "00:35",
+      "tz": null,
+      "match_key": "Consequence:both-creoas-sub-systems-concurrently-impacted"
+    },
+    {
+      "id": "ca_belts",
+      "display_name": "Replace belts on 0V103A fan",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-belts-on-0v103a-fan"
+    },
+    {
+      "id": "ca_hydromotor",
+      "display_name": "Replace 0V117B discharge damper hydro motor",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-0v117b-discharge-damper-hydro-motor"
+    },
+    {
+      "id": "ca_pmt",
+      "display_name": "Perform post-maintenance testing of both components",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:perform-post-maintenance-testing-of-both-components"
+    },
+    {
+      "id": "mfr_emerson",
+      "display_name": "Emerson Electric Company / Asco ITT",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "E232",
+      "match_key": "Manufacturer:E232"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(v)(C)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-c"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_vi",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_creoas",
+      "evidence": null
+    },
+    {
+      "source": "c_fan_a",
+      "relation": "PART_OF",
+      "target": "sys_vi",
+      "evidence": null
+    },
+    {
+      "source": "c_fan_b",
+      "relation": "PART_OF",
+      "target": "sys_vi",
+      "evidence": null
+    },
+    {
+      "source": "c_damper",
+      "relation": "PART_OF",
+      "target": "c_fan_b",
+      "evidence": null
+    },
+    {
+      "source": "fm_belts",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_hydromotor_fail",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_belts",
+      "relation": "LEADS_TO",
+      "target": "cons_concurrent",
+      "evidence": null
+    },
+    {
+      "source": "fm_hydromotor_fail",
+      "relation": "LEADS_TO",
+      "target": "fm_damper_closed",
+      "evidence": null
+    },
+    {
+      "source": "fm_damper_closed",
+      "relation": "LEADS_TO",
+      "target": "cons_concurrent",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_belts",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_hydromotor",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_pmt",
+      "evidence": null
+    },
+    {
+      "source": "c_hydromotor",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_emerson",
+      "evidence": null
+    }
+  ],
+  "chain": "proactive belt replacement removes 0V103A [A-subsystem] from service -> concurrently, unrelated hydro motor failure closes 0V117B discharge damper [B-subsystem] -> both CREOAS sub-systems concurrently impacted for ~35 min [cause X, two unrelated failures]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code X (Other) reflects that the two failures were independent/unrelated and not foreseeable, per narrative. No actual loss of safety function occurred; not counted as SSFF. Only one true component failure (hydro motor) per LER's own component failure section; belt/vibration issue on 0V103A was proactive maintenance, not a reportable component failure, but is modeled as a contributing FailureMode since it created the concurrent inoperability window. No PART_OF edge from fan to HVAC system inferred beyond explicit EIIS system code mapping; damper PART_OF fan is explicit ('0V117B fan discharge damper hydro motor'). No backups modeled with BACKED_UP_BY since the alternate CREOAS fan/subsystem descriptions (0V101B, floor cooling, 'A' fan capability) appear in a Safety Analysis/design-context passage, not as stated-operable backups during a specific inoperability window of the failed component itself."
+}

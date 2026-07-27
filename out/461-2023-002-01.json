@@ -1,0 +1,368 @@
+{
+  "ler_number": "461-2023-002-01",
+  "identity": {
+    "accession_number": "ML24270A035",
+    "docket": "05000461",
+    "plant_name": "Clinton",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2023-12-19",
+    "report_date": "2024-09-24",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Reactor Core Isolation Cooling Inoperable Prior to Mode Change"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The probable cause of the RCIC Turbine Trip was either: 1. An electrical disturbance on the EG-M resulting from the Transient Test system modification that resulted in a loss of control output to the EG-R; 2. Outage activities (system cooldown and tagout blocking) that resulted in air formation in the RCIC lubricating oil system",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Undetected instrumentation/electrical disturbance combined with maintenance-induced air entrainment in governor lube oil",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 461-2023-TBD",
+      "properties": {},
+      "type": "LER",
+      "key": "461-2023-002-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:461-2023-002-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Clinton Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000461",
+      "match_key": "Unit:05000461"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Undetected instrumentation/electrical disturbance combined with maintenance-induced air entrainment in governor lube oil",
+      "proximate_text": "The probable cause of the RCIC Turbine Trip was either: 1. An electrical disturbance on the EG-M resulting from the Transient Test system modification that resulted in a loss of control output to the EG-R; 2. Outage activities (system cooldown and tagout blocking) that resulted in air formation in the RCIC lubricating oil system",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_rcic",
+      "display_name": "Reactor Core Isolation Cooling (RCIC)",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BN",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected system",
+      "match_key": "System:BN"
+    },
+    {
+      "id": "sys_hpcs",
+      "display_name": "High Pressure Core Spray (HPCS)",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; operable",
+      "match_key": "System:BG"
+    },
+    {
+      "id": "sys_transient_test",
+      "display_name": "Transient Test system",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "trigger source; unrelated data acquisition system",
+      "match_key": "System:transient-test-system"
+    },
+    {
+      "id": "c_egr",
+      "display_name": "Electric Governor - Remote (EG-R)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "EG-R",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:electric-governor-remote-eg-r"
+    },
+    {
+      "id": "c_egm",
+      "display_name": "Electric Governor - Magnetic Pickup (EG-M)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "EG-M",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:electric-governor-magnetic-pickup-eg-m"
+    },
+    {
+      "id": "c_lube",
+      "display_name": "RCIC lubricating oil system",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:rcic-lubricating-oil-system"
+    },
+    {
+      "id": "fm_egm_disturbed",
+      "display_name": "EG-M electrical connections disturbed during Transient Test modification work",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Work on the transient test system disturbed EG-M electrical connections, causing EG-M output to fall to 0% scale, indicating loss of functionality; unrecognized by station personnel at the time.",
+      "match_key": "FailureMode:eg-m-electrical-connections-disturbed-during-transient-test-modification-work"
+    },
+    {
+      "id": "fm_egm_loss",
+      "display_name": "Loss of EG-M control output to EG-R",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "EG-M output loss resulted in loss of control output signal proportional to turbine speed error being sent to the EG-R.",
+      "match_key": "FailureMode:loss-of-eg-m-control-output-to-eg-r"
+    },
+    {
+      "id": "fm_air_entrain",
+      "display_name": "Air entrained in RCIC lubricating oil system",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Various maintenance activities performed on RCIC system between September 11 and October 8, 2023 potentially entrained air in the lubricating oil system, which can cause governor speed and ramp control issues.",
+      "match_key": "FailureMode:air-entrained-in-rcic-lubricating-oil-system"
+    },
+    {
+      "id": "fm_rcic_trip",
+      "display_name": "RCIC turbine tripped on low suction pressure",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "RCIC system tripped on low suction pressure during performance of SR 3.5.3.3 on October 10, 2023.",
+      "match_key": "FailureMode:rcic-turbine-tripped-on-low-suction-pressure"
+    },
+    {
+      "id": "cons_rcic_inop",
+      "display_name": "RCIC system inoperable; TS 3.0.4 prohibited condition entered on unit startup",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2023-10-09T05:14",
+      "end": "2023-10-16T02:51",
+      "duration": "~6 days 21h37m",
+      "tz": "CST",
+      "match_key": "Consequence:rcic-system-inoperable-ts-3-0-4-prohibited-condition-entered-on-unit-startup"
+    },
+    {
+      "id": "ca_egr_replace",
+      "display_name": "Replace and calibrate EG-R per EPRI Terry Turbine Maintenance Guide",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-and-calibrate-eg-r-per-epri-terry-turbine-maintenance-guide"
+    },
+    {
+      "id": "ca_lube_procedure",
+      "display_name": "Update maintenance procedures to expand direction to fill and vent lube oil subsystem following all forms of maintenance",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:update-maintenance-procedures-to-expand-direction-to-fill-and-vent-lube-oil-subsystem-following-all-forms-of-maintenance"
+    },
+    {
+      "id": "ca_egm_calibrate_procedure",
+      "display_name": "Update maintenance procedures to require EG-M calibration following any work affecting the RCIC governor electrical circuit",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:update-maintenance-procedures-to-require-eg-m-calibration-following-any-work-affecting-the-rcic-governor-electrical-circuit"
+    },
+    {
+      "id": "ca_time_delay_mod",
+      "display_name": "Implement BWROG recommendation for 7-second time delay on RCIC low suction pressure trip",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:implement-bwrog-recommendation-for-7-second-time-delay-on-rcic-low-suction-pressure-trip"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts354",
+      "display_name": "TS 3.5.3 RCIC System",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-3-5-3-rcic-system"
+    },
+    {
+      "id": "rr_ts304",
+      "display_name": "TS 3.0.4",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-3-0-4"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts304",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts354",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rcic",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_transient_test",
+      "evidence": null
+    },
+    {
+      "source": "c_egr",
+      "relation": "PART_OF",
+      "target": "sys_rcic",
+      "evidence": null
+    },
+    {
+      "source": "c_egm",
+      "relation": "PART_OF",
+      "target": "sys_rcic",
+      "evidence": null
+    },
+    {
+      "source": "c_lube",
+      "relation": "PART_OF",
+      "target": "sys_rcic",
+      "evidence": null
+    },
+    {
+      "source": "fm_egm_disturbed",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_egm_disturbed",
+      "relation": "LEADS_TO",
+      "target": "fm_egm_loss",
+      "evidence": null
+    },
+    {
+      "source": "fm_egm_loss",
+      "relation": "LEADS_TO",
+      "target": "fm_rcic_trip",
+      "evidence": null
+    },
+    {
+      "source": "fm_air_entrain",
+      "relation": "LEADS_TO",
+      "target": "fm_rcic_trip",
+      "evidence": null
+    },
+    {
+      "source": "fm_rcic_trip",
+      "relation": "LEADS_TO",
+      "target": "cons_rcic_inop",
+      "evidence": null
+    },
+    {
+      "source": "cons_rcic_inop",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_hpcs",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_egr_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_lube_procedure",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_egm_calibrate_procedure",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_time_delay_mod",
+      "evidence": null
+    }
+  ],
+  "chain": "EG-M electrical connections disturbed during Transient Test mod work [cause TBD] -> loss of EG-M control output to EG-R -> (in parallel: air entrained in RCIC lube oil from outage maintenance) -> RCIC turbine trips on low suction pressure -> RCIC inoperable / TS 3.0.4 prohibited condition entered on startup [backup HPCS operable]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code was not provided in FORM-366 FIELDS (TBD/provisional) and the narrative presents two candidate probable causes (EG-M electrical disturbance vs. air entrainment in lube oil) without officially adjudicating between them; both are modeled as parallel failure modes leading to the RCIC trip, consistent with rule 5's guidance on parallel triggers. No block_13 row data was provided. No previous similar occurrences were found per the narrative, so no stub LER/SIMILAR_TO edge was created. HPCS is modeled as BACKED_UP_BY since narrative explicitly states it 'remained operable and therefore able to perform its safety function during the entire period that RCIC was inoperable.' Transient Test system is modeled as a System node (non_eiis) since it directly participates in the failure chain (its modification work disturbed the EG-M), not merely design context."
+}

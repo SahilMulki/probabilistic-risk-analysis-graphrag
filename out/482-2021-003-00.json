@@ -1,0 +1,448 @@
+{
+  "ler_number": "482-2021-003-00",
+  "identity": {
+    "accession_number": "ML21193A078",
+    "docket": "05000482",
+    "plant_name": "Wolf Creek",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2021-05-12",
+    "report_date": "2021-07-12",
+    "operating_mode": "1",
+    "power_level": 8,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": "55252",
+    "ens_date": null,
+    "ens_time": "1441 CDT",
+    "title": "Docket No. 50-482: Licensee Event Report 2021-003-00, “Automatic"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)",
+      "10 CFR 50.73(a)(2)(iv)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "improper utilization of MFRV bypass valves inherent valve curves did not take into consideration system flow characteristics. The result was an inaccurate correlation of feed flow with valve position within the system. This led to a mismatch in feed flow demand and actual feed flow to the steam generators. Due to improper gain settings, the mismatch began to diverge and led to a reactor trip on low steam generator water level.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Design/engineering deficiency in new digital feedwater control tuning",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 482-2021-003-00",
+      "properties": {
+        "match_key": "LER:482-2021-003-00"
+      },
+      "type": "LER",
+      "key": "482-2021-003-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:482-2021-003-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Wolf Creek Unit 1",
+      "properties": {
+        "match_key": "Unit:05000482",
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000482",
+      "match_key": "Unit:05000482"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {
+        "match_key": "Cause:provisional"
+      },
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Design/engineering deficiency in new digital feedwater control tuning",
+      "proximate_text": "improper utilization of MFRV bypass valves inherent valve curves did not take into consideration system flow characteristics. The result was an inaccurate correlation of feed flow with valve position within the system. This led to a mismatch in feed flow demand and actual feed flow to the steam generators. Due to improper gain settings, the mismatch began to diverge and led to a reactor trip on low steam generator water level.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_jb",
+      "display_name": "Feedwater Control System",
+      "properties": {
+        "note": "newly upgraded digital-based Emerson Ovation System, installed during RF24",
+        "match_key": "System:JB"
+      },
+      "type": "System",
+      "eiis_code": "JB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JB"
+    },
+    {
+      "id": "sys_sb",
+      "display_name": "Steam Generator",
+      "properties": {
+        "match_key": "System:SB"
+      },
+      "type": "System",
+      "eiis_code": "SB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SB"
+    },
+    {
+      "id": "c_bypass",
+      "display_name": "MFRV Bypass Valves",
+      "properties": {
+        "match_key": "Component:SJ-V"
+      },
+      "type": "Component",
+      "eiis_code": "SJ-V",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:SJ-V"
+    },
+    {
+      "id": "c_mfrv",
+      "display_name": "Main Feed Regulating Valves (MFRVs)",
+      "properties": {
+        "match_key": "Component:main-feed-regulating-valves"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:main-feed-regulating-valves-mfrvs"
+    },
+    {
+      "id": "c_sgc",
+      "display_name": "'C' Steam Generator",
+      "properties": {
+        "match_key": "Component:SG|C"
+      },
+      "type": "Component",
+      "eiis_code": "SG",
+      "identifier": "C",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:SG|C"
+    },
+    {
+      "id": "fm_curve",
+      "display_name": "Improper MFRV bypass valve curve/gain settings applied during modification",
+      "properties": {
+        "match_key": "FailureMode:improper-bypass-valve-curve-gain-settings"
+      },
+      "type": "FailureMode",
+      "description": "Bypass valve inherent valve curves did not account for system flow characteristics, producing improper gain settings in the new Ovation controller.",
+      "match_key": "FailureMode:improper-mfrv-bypass-valve-curve-gain-settings-applied-during-modification"
+    },
+    {
+      "id": "fm_mismatch",
+      "display_name": "Feed flow demand vs. actual feed flow mismatch",
+      "properties": {
+        "match_key": "FailureMode:feed-flow-demand-mismatch"
+      },
+      "type": "FailureMode",
+      "description": "Inaccurate correlation of feed flow with valve position caused a mismatch between feed flow demand and actual feed flow to the steam generators.",
+      "match_key": "FailureMode:feed-flow-demand-vs-actual-feed-flow-mismatch"
+    },
+    {
+      "id": "fm_oscillation",
+      "display_name": "Steam generator level oscillations diverging",
+      "properties": {
+        "match_key": "FailureMode:sg-level-oscillations-diverging"
+      },
+      "type": "FailureMode",
+      "description": "Mismatch diverged, causing steam generator narrow-range and wide-range level oscillations that increased despite operator manual control actions.",
+      "match_key": "FailureMode:steam-generator-level-oscillations-diverging"
+    },
+    {
+      "id": "fm_lowlevel",
+      "display_name": "'C' steam generator low-low level reached",
+      "properties": {
+        "match_key": "FailureMode:c-sg-low-low-level-reached"
+      },
+      "type": "FailureMode",
+      "description": "'C' steam generator level lowered to 23.5 percent, the low-low steam generator level reactor trip and main feedwater isolation setpoint.",
+      "match_key": "FailureMode:c-steam-generator-low-low-level-reached"
+    },
+    {
+      "id": "cons_trip",
+      "display_name": "Automatic reactor trip with Main Feedwater Isolation and Auxiliary Feedwater Actuation",
+      "properties": {
+        "match_key": "Consequence:automatic-reactor-trip-mfw-isolation-afw-actuation"
+      },
+      "type": "Consequence",
+      "start": "2021-05-12T11:25:00-05:00",
+      "end": null,
+      "duration": null,
+      "tz": "CDT",
+      "match_key": "Consequence:automatic-reactor-trip-with-main-feedwater-isolation-and-auxiliary-feedwater-actuation"
+    },
+    {
+      "id": "ca_e0",
+      "display_name": "Entered EMG E-0, Reactor Trip",
+      "properties": {
+        "match_key": "CorrectiveAction:entered-emg-e-0"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:entered-emg-e-0-reactor-trip"
+    },
+    {
+      "id": "ca_es02",
+      "display_name": "Transitioned to EMG ES-02, Reactor Trip Response",
+      "properties": {
+        "match_key": "CorrectiveAction:transitioned-emg-es-02"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:transitioned-to-emg-es-02-reactor-trip-response"
+    },
+    {
+      "id": "ca_gen00005",
+      "display_name": "Commenced GEN 00-005, Minimum Load to Hot Standby",
+      "properties": {
+        "match_key": "CorrectiveAction:commenced-gen-00-005"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:commenced-gen-00-005-minimum-load-to-hot-standby"
+    },
+    {
+      "id": "ca_tuning",
+      "display_name": "Tuning changes to bypass valve curve and low power controller gain",
+      "properties": {
+        "match_key": "CorrectiveAction:tuning-changes-bypass-valve-curve-gain"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:tuning-changes-to-bypass-valve-curve-and-low-power-controller-gain"
+    },
+    {
+      "id": "ca_jitt",
+      "display_name": "Just-In-Time Training performed prior to May 14 startup",
+      "properties": {
+        "match_key": "CorrectiveAction:jitt-training"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:just-in-time-training-performed-prior-to-may-14-startup"
+    },
+    {
+      "id": "ca_drawing_note",
+      "display_name": "Add note to MFRV bypass valve drawing regarding trim parts changes",
+      "properties": {
+        "match_key": "CorrectiveAction:drawing-note-trim-parts"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:add-note-to-mfrv-bypass-valve-drawing-regarding-trim-parts-changes"
+    },
+    {
+      "id": "ca_lesson_plan",
+      "display_name": "Add objectives to digital engineering qualification lesson plan",
+      "properties": {
+        "match_key": "CorrectiveAction:lesson-plan-digital-engineering"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:add-objectives-to-digital-engineering-qualification-lesson-plan"
+    },
+    {
+      "id": "rr_5073iv_a",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {
+        "type": "reporting-criterion",
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5073iv",
+      "display_name": "10 CFR 50.73(a)(2)(iv)",
+      "properties": {
+        "type": "reporting-criterion",
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "LER 2015-003-00",
+      "properties": {
+        "unit": 1,
+        "match_key": "LER:2015-003-00"
+      },
+      "type": "LER",
+      "key": "2015-003-00",
+      "stub": true,
+      "title": "Reactor trip during feedwater control swap from MFRV bypass valves to MFRVs on high SG level",
+      "plant": "Wolf Creek Generating Station",
+      "match_key": "LER:2015-003-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073iv_a",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073iv",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jb",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "c_bypass",
+      "relation": "PART_OF",
+      "target": "sys_jb",
+      "evidence": null
+    },
+    {
+      "source": "c_mfrv",
+      "relation": "PART_OF",
+      "target": "sys_jb",
+      "evidence": null
+    },
+    {
+      "source": "c_sgc",
+      "relation": "PART_OF",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "fm_curve",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_curve",
+      "relation": "LEADS_TO",
+      "target": "fm_mismatch",
+      "evidence": null
+    },
+    {
+      "source": "fm_mismatch",
+      "relation": "LEADS_TO",
+      "target": "fm_oscillation",
+      "evidence": null
+    },
+    {
+      "source": "fm_oscillation",
+      "relation": "LEADS_TO",
+      "target": "fm_lowlevel",
+      "evidence": null
+    },
+    {
+      "source": "fm_lowlevel",
+      "relation": "LEADS_TO",
+      "target": "cons_trip",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_e0",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_es02",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_gen00005",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_tuning",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_jitt",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_drawing_note",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_lesson_plan",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    }
+  ],
+  "chain": "improper MFRV bypass valve curve/gain settings during 7300 modification [cause TBD] -> feed flow demand/actual mismatch -> diverging SG level oscillations -> 'C' SG low-low level reached -> automatic reactor trip with MFW isolation and AFW actuation",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code is TBD/provisional per Form-366 fields despite a fully articulated narrative cause (design/tuning deficiency in new Ovation feedwater control system valve curves and gains). No block 13 rows were provided. No inoperable SSC or backup system is described as available/operable during the event window, so no BACKED_UP_BY edges are asserted. Previous LER 2015-003-00 referenced as stub node per SIMILAR_TO with its title and plant captured; docket/unit for the stub not stated beyond plant name, so canonicalization is deferred to resolver."
+}

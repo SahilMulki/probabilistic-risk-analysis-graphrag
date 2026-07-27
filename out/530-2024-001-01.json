@@ -1,0 +1,365 @@
+{
+  "ler_number": "530-2024-001-01",
+  "identity": {
+    "accession_number": "ML24234A332",
+    "docket": "05000530",
+    "plant_name": "Palo Verde",
+    "unit": 3,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2024-04-13",
+    "report_date": "2024-08-21",
+    "operating_mode": "6",
+    "power_level": 0,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Palo Verde Nuclear Generating Station (PVNGS) Unit 3"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The direct cause of the event was lack of formality and adequate details in the verbal communications between the Operations and Chemistry departments. The Operations Department and Chemistry Department communications for the LCO required boron samples did not specify all requirements. The apparent cause is that the Chemistry Department procedure did not contain specific sampling requirements necessary to satisfy the required actions of LCO 3.3.12 Condition B.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Inadequate procedure guidance / communication between departments",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 530-2024-001-01",
+      "properties": {},
+      "type": "LER",
+      "key": "530-2024-001-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:530-2024-001-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Palo Verde Unit 3",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000530",
+      "match_key": "Unit:05000530"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Inadequate procedure guidance / communication between departments",
+      "proximate_text": "The direct cause of the event was lack of formality and adequate details in the verbal communications between the Operations and Chemistry departments. The Operations Department and Chemistry Department communications for the LCO required boron samples did not specify all requirements. The apparent cause is that the Chemistry Department procedure did not contain specific sampling requirements necessary to satisfy the required actions of LCO 3.3.12 Condition B.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_ee",
+      "display_name": "Non-Class 125 VDC / Instrument 120 VAC power supply",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "EE",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "primary and alternate power to control room annunciators",
+      "match_key": "System:EE"
+    },
+    {
+      "id": "sys_ib",
+      "display_name": "Control Room Annunciator System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "IB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "annunciator boards 2, 3, 4, 6, and 7",
+      "match_key": "System:IB"
+    },
+    {
+      "id": "sys_ig",
+      "display_name": "Boron Dilution Alarm System (BDAS)",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "IG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "monitors neutron flux, alarms boron dilution event",
+      "match_key": "System:IG"
+    },
+    {
+      "id": "c_board4",
+      "display_name": "Annunciator Board 4",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "IB",
+      "identifier": "Board 4",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:IB|Board 4"
+    },
+    {
+      "id": "fm_altpower_maint",
+      "display_name": "Alternate power supply under planned maintenance while normal supply inoperable",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Planned maintenance performed on alternate power supply while normal power supply was already inoperable",
+      "match_key": "FailureMode:alternate-power-supply-under-planned-maintenance-while-normal-supply-inoperable"
+    },
+    {
+      "id": "fm_annun_loss",
+      "display_name": "Unanticipated loss of power to annunciators on boards 2, 3, 4, 6, and 7",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Loss of power to control room annunciator boards at 1100 on 4/9/2024",
+      "match_key": "FailureMode:unanticipated-loss-of-power-to-annunciators-on-boards-2-3-4-6-and-7"
+    },
+    {
+      "id": "fm_bdas_inop",
+      "display_name": "Both BDAS channels declared inoperable",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Operations declared both channels of BDAS inoperable due to loss of annunciation",
+      "match_key": "FailureMode:both-bdas-channels-declared-inoperable"
+    },
+    {
+      "id": "fm_comm_gap",
+      "display_name": "Incomplete verbal communication of LCO sampling requirements",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Operations Department did not fully communicate sampling requirements to Chemistry Department",
+      "match_key": "FailureMode:incomplete-verbal-communication-of-lco-sampling-requirements"
+    },
+    {
+      "id": "fm_wrong_sample_point",
+      "display_name": "Boron samples obtained from wrong sample point",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Samples obtained from a different sample point than specified in plant procedures for RCS in Shutdown Cooling",
+      "match_key": "FailureMode:boron-samples-obtained-from-wrong-sample-point"
+    },
+    {
+      "id": "fm_no_redundant_sample",
+      "display_name": "Samples not obtained redundantly",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Samples were not obtained redundantly to validate boron concentration as required by TS LCO 3.3.12 Condition B",
+      "match_key": "FailureMode:samples-not-obtained-redundantly"
+    },
+    {
+      "id": "cons_lco_violation",
+      "display_name": "TS LCO 3.3.12 Conditions A and B required actions not met",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2024-04-09T11:00",
+      "end": "2024-04-09T12:33",
+      "duration": "1:33",
+      "tz": "MST",
+      "match_key": "Consequence:ts-lco-3-3-12-conditions-a-and-b-required-actions-not-met"
+    },
+    {
+      "id": "ca_restore_power",
+      "display_name": "Restore power supplies to annunciator panels",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:restore-power-supplies-to-annunciator-panels"
+    },
+    {
+      "id": "ca_brief_staff",
+      "display_name": "Brief Operations and Chemistry staff on communication expectations",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:brief-operations-and-chemistry-staff-on-communication-expectations"
+    },
+    {
+      "id": "ca_chem_procedure",
+      "display_name": "Revise Chemistry Department procedure for sampling locations and critical task info",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-chemistry-department-procedure-for-sampling-locations-and-critical-task-info"
+    },
+    {
+      "id": "ca_ops_procedure",
+      "display_name": "Revise Loss of Annunciators procedure to direct Chemistry guidance",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-loss-of-annunciators-procedure-to-direct-chemistry-guidance"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ufsar",
+      "display_name": "UFSAR Chapter 15, Revision 22",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:ufsar-chapter-15-revision-22"
+    },
+    {
+      "id": "rr_tslco",
+      "display_name": "TS LCO 3.3.12 Conditions A and B",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-lco-3-3-12-conditions-a-and-b"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ig",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ee",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ib",
+      "evidence": null
+    },
+    {
+      "source": "c_board4",
+      "relation": "PART_OF",
+      "target": "sys_ib",
+      "evidence": null
+    },
+    {
+      "source": "fm_altpower_maint",
+      "relation": "LEADS_TO",
+      "target": "fm_annun_loss",
+      "evidence": null
+    },
+    {
+      "source": "fm_annun_loss",
+      "relation": "LEADS_TO",
+      "target": "fm_bdas_inop",
+      "evidence": null
+    },
+    {
+      "source": "fm_bdas_inop",
+      "relation": "LEADS_TO",
+      "target": "cons_lco_violation",
+      "evidence": null
+    },
+    {
+      "source": "fm_comm_gap",
+      "relation": "LEADS_TO",
+      "target": "fm_wrong_sample_point",
+      "evidence": null
+    },
+    {
+      "source": "fm_comm_gap",
+      "relation": "LEADS_TO",
+      "target": "fm_no_redundant_sample",
+      "evidence": null
+    },
+    {
+      "source": "fm_wrong_sample_point",
+      "relation": "LEADS_TO",
+      "target": "cons_lco_violation",
+      "evidence": null
+    },
+    {
+      "source": "fm_no_redundant_sample",
+      "relation": "LEADS_TO",
+      "target": "cons_lco_violation",
+      "evidence": null
+    },
+    {
+      "source": "fm_comm_gap",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_restore_power",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_brief_staff",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_chem_procedure",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_ops_procedure",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_tslco",
+      "evidence": null
+    },
+    {
+      "source": "cons_lco_violation",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ufsar",
+      "evidence": null
+    }
+  ],
+  "chain": "inadequate Chemistry procedure & incomplete Ops-Chemistry communication [cause TBD] -> boron samples taken from wrong sample point / not obtained redundantly -> LCO 3.3.12 Condition B required actions not satisfied; separately, alternate power maintenance while normal power inoperable -> unanticipated annunciator power loss -> both BDAS channels declared inoperable -> TS LCO 3.3.12 Conditions A and B entered/not met",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "This event actually comprises two related but distinct failure threads under one LCO violation: (1) a power-supply maintenance issue causing annunciator/BDAS inoperability (resolved same day, 1100-1233), and (2) a sampling/communication deficiency discovered days later (4/13) that revealed the boron samples taken to satisfy LCO 3.3.12 Condition B were improperly obtained. The official cause code is TBD/provisional per FORM-366 fields, despite narrative providing direct/apparent cause language; category kept as 'provisional' per rule 4. No block_13 data provided in FORM-366 fields (empty array), so none synthesized. No manufacturer, previous similar event, or backup system information stated in narrative (Section 8 blank) -> no SIMILAR_TO edge or stub LER created, no BACKED_UP_BY edges asserted since no operable backup system is named for BDAS during the inoperability window."
+}

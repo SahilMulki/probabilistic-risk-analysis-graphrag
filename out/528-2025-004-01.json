@@ -1,0 +1,368 @@
+{
+  "ler_number": "528-2025-004-01",
+  "identity": {
+    "accession_number": "ML26027A361",
+    "docket": "05000528",
+    "plant_name": "Palo Verde",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2025-04-10",
+    "report_date": "2026-01-27",
+    "operating_mode": null,
+    "power_level": 100,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Palo Verde Nuclear Generating Station (PVNGS) Unit 1 Docket No. STN 50-528 / Renewed License N0. NPF-41 Licensee Event Report 2025-004-01"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "Voltage fluctuations on the EDG (which was out of service on planned maintenance and supplying essential power to essential equipment via a temporary configuration) triggered an undervoltage LOP signal, causing the BOP ESFAS system to initiate a load shed sequence and signal the EDG to start, although the EDG was already running.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "EDG voltage fluctuation causing spurious LOP/ESFAS actuation during planned maintenance configuration",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 528-2025-004-01",
+      "properties": {
+        "match_key": "LER:528-2025-004-01"
+      },
+      "type": "LER",
+      "key": "528-2025-004-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:528-2025-004-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Palo Verde Unit 1",
+      "properties": {
+        "match_key": "Unit:05000528",
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000528",
+      "match_key": "Unit:05000528"
+    },
+    {
+      "id": "cause",
+      "display_name": "Cause TBD",
+      "properties": {
+        "match_key": "Cause:TBD"
+      },
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "EDG voltage fluctuation causing spurious LOP/ESFAS actuation during planned maintenance configuration",
+      "proximate_text": "Voltage fluctuations on the EDG (which was out of service on planned maintenance and supplying essential power to essential equipment via a temporary configuration) triggered an undervoltage LOP signal, causing the BOP ESFAS system to initiate a load shed sequence and signal the EDG to start, although the EDG was already running.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_eb",
+      "display_name": "Class 1E 4.16 kV Bus",
+      "properties": {
+        "match_key": "System:EB"
+      },
+      "type": "System",
+      "eiis_code": "EB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:EB"
+    },
+    {
+      "id": "sys_ek_edg",
+      "display_name": "Emergency Diesel Generator",
+      "properties": {
+        "match_key": "System:EK-EDG"
+      },
+      "type": "System",
+      "eiis_code": "EK",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "standby AC power source",
+      "match_key": "System:EK"
+    },
+    {
+      "id": "sys_ek_offsite",
+      "display_name": "Offsite 525 kV AC Power",
+      "properties": {
+        "match_key": "System:EK-offsite"
+      },
+      "type": "System",
+      "eiis_code": "EK",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "preferred/alternate power source",
+      "match_key": "System:EK"
+    },
+    {
+      "id": "sys_ea",
+      "display_name": "Startup Transformers",
+      "properties": {
+        "match_key": "System:EA"
+      },
+      "type": "System",
+      "eiis_code": "EA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:EA"
+    },
+    {
+      "id": "sys_je",
+      "display_name": "Engineered Safety Features Actuation System",
+      "properties": {
+        "match_key": "System:JE"
+      },
+      "type": "System",
+      "eiis_code": "JE",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JE"
+    },
+    {
+      "id": "fm_maint",
+      "display_name": "EDG and associated 4.16 kV Class 1E bus unavailable due to planned maintenance",
+      "properties": {
+        "match_key": "FailureMode:edg-maintenance-unavailable"
+      },
+      "type": "FailureMode",
+      "description": "Unit 1 EDG was out of service for planned maintenance, requiring alternate temporary power supply configuration to essential equipment.",
+      "match_key": "FailureMode:edg-and-associated-4-16-kv-class-1e-bus-unavailable-due-to-planned-maintenance"
+    },
+    {
+      "id": "fm_voltage",
+      "display_name": "Voltage fluctuations on the EDG",
+      "properties": {
+        "match_key": "FailureMode:edg-voltage-fluctuation"
+      },
+      "type": "FailureMode",
+      "description": "Voltage fluctuations occurred on the EDG while it was providing power to essential equipment, triggering SEIS alarms.",
+      "match_key": "FailureMode:voltage-fluctuations-on-the-edg"
+    },
+    {
+      "id": "fm_lop",
+      "display_name": "Undervoltage LOP signal generated",
+      "properties": {
+        "match_key": "FailureMode:undervoltage-lop-signal"
+      },
+      "type": "FailureMode",
+      "description": "Voltage fluctuation triggered an undervoltage loss-of-power (LOP) signal.",
+      "match_key": "FailureMode:undervoltage-lop-signal-generated"
+    },
+    {
+      "id": "fm_loadshed",
+      "display_name": "BOP ESFAS load shed sequence initiated",
+      "properties": {
+        "match_key": "FailureMode:esfas-load-shed-initiated"
+      },
+      "type": "FailureMode",
+      "description": "The Balance of Plant ESFAS system initiated a load shed sequence and signaled the EDG to start, although the EDG was already running.",
+      "match_key": "FailureMode:bop-esfas-load-shed-sequence-initiated"
+    },
+    {
+      "id": "cons_actuation",
+      "display_name": "Specified system actuation (LOP signal sent to EDG) / EDG emergency stopped and declared inoperable",
+      "properties": {
+        "match_key": "Consequence:specified-system-actuation-lop-edg"
+      },
+      "type": "Consequence",
+      "start": "2025-04-10T06:58",
+      "end": "2025-04-13T04:12",
+      "duration": "approximately 69 hours 14 minutes",
+      "tz": "MST",
+      "match_key": "Consequence:specified-system-actuation-lop-signal-sent-to-edg-edg-emergency-stopped-and-declared-inoperable"
+    },
+    {
+      "id": "ca_aop",
+      "display_name": "Enter abnormal operating procedures for degraded electrical power and restore power via alternate power supply",
+      "properties": {
+        "match_key": "CorrectiveAction:enter-aop-restore-alternate-power"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:enter-abnormal-operating-procedures-for-degraded-electrical-power-and-restore-power-via-alternate-power-supply"
+    },
+    {
+      "id": "ca_surveillance",
+      "display_name": "Complete surveillance testing to declare EDG operable",
+      "properties": {
+        "match_key": "CorrectiveAction:complete-surveillance-testing"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:complete-surveillance-testing-to-declare-edg-operable"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {
+        "type": "reporting-criterion",
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5072b",
+      "display_name": "10 CFR 50.72(b)(3)(iv)(A)",
+      "properties": {
+        "type": "reporting-criterion",
+        "match_key": "RegulatoryReference:10-cfr-50-72-b-3-iv-a"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-3-iv-a"
+    },
+    {
+      "id": "rr_5072a",
+      "display_name": "10 CFR 50.72(a)(1)(i)",
+      "properties": {
+        "type": "reporting-criterion",
+        "match_key": "RegulatoryReference:10-cfr-50-72-a-1-i"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-72-a-1-i"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "LER 50-528/2025-003-00",
+      "properties": {
+        "match_key": "LER:50-528-2025-003-00"
+      },
+      "type": "LER",
+      "key": "50-528/2025-003-00",
+      "stub": true,
+      "title": null,
+      "plant": "Palo Verde Nuclear Generating Station",
+      "match_key": "LER:50-528/2025-003-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072b",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072a",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ek_edg",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_eb",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_je",
+      "evidence": null
+    },
+    {
+      "source": "fm_maint",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_maint",
+      "relation": "LEADS_TO",
+      "target": "fm_voltage",
+      "evidence": null
+    },
+    {
+      "source": "fm_voltage",
+      "relation": "LEADS_TO",
+      "target": "fm_lop",
+      "evidence": null
+    },
+    {
+      "source": "fm_lop",
+      "relation": "LEADS_TO",
+      "target": "fm_loadshed",
+      "evidence": null
+    },
+    {
+      "source": "fm_loadshed",
+      "relation": "LEADS_TO",
+      "target": "cons_actuation",
+      "evidence": null
+    },
+    {
+      "source": "cons_actuation",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_ek_offsite",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_aop",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_surveillance",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    }
+  ],
+  "chain": "EDG out for planned maintenance / temporary power config [cause TBD] -> voltage fluctuations on EDG -> undervoltage LOP signal generated -> BOP ESFAS load shed sequence initiated (spurious EDG start signal while EDG already running) -> specified system actuation / EDG emergency stopped, declared inoperable [backup: offsite power restored via alternate non-Class 1E transformer]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Narrative text has OCR gaps (e.g., 'Unit 1 EDG' truncated, missing timestamps like '07:0'). Cause section (Block 6) is blank in the provided narrative -- no proximate cause statement was given, consistent with cause_code TBD/provisional per FORM-366. Previous similar event referenced is LER 50-528/2025-003-00, modeled as a stub per instructions, though it describes the same EDG maintenance configuration rather than a fully independent prior event -- treated as SIMILAR_TO per explicit reference. Block 13 was empty in FORM-366 fields, consistent with no coded cause/system/component rows provided. EK EIIS code applies to both EDG and offsite/preferred power narrative sections; modeled as two distinct System nodes given differing roles (standby generation vs. offsite preferred source) per event chain relevance."
+}

@@ -1,0 +1,772 @@
+{
+  "ler_number": "373-2024-004-01",
+  "identity": {
+    "accession_number": "ML24235A178",
+    "docket": "05000373",
+    "plant_name": "La Salle",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2024-04-20",
+    "report_date": "2024-08-22",
+    "operating_mode": "5",
+    "power_level": 100,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "01",
+    "ens_number": "57083",
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Supplement to Emergency Diesel Generator Auto-Start and Load due to Loss of System Auxiliary Transformer"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)",
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "X",
+      "system": "FK",
+      "component": "BKR",
+      "manufacturer": "W120",
+      "reportable": "Y"
+    },
+    {
+      "cause": "X",
+      "system": "EB",
+      "component": "BKR",
+      "manufacturer": "1005",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The root cause of OCB 1-13 tripping open was an absence of procedural guidance requiring the switchyard owner to provide the details of their modification testing plan, including work instructions, and the required performance of a quality station review of testing plan / work instructions.",
+    "cause_code": "X",
+    "category": "Other",
+    "theme": "procedural gap in switchyard modification-testing oversight leading to spurious breaker trip",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 373-2024-004-01",
+      "properties": {},
+      "type": "LER",
+      "key": "373-2024-004-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:373-2024-004-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "La Salle Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000373",
+      "match_key": "Unit:05000373"
+    },
+    {
+      "id": "cause",
+      "display_name": "Other (X)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "X",
+      "category": "Other",
+      "theme": "procedural gap in switchyard modification-testing oversight leading to spurious breaker trip",
+      "proximate_text": "The root cause of OCB 1-13 tripping open was an absence of procedural guidance requiring the switchyard owner to provide the details of their modification testing plan, including work instructions, and the required performance of a quality station review of testing plan / work instructions.",
+      "provisional": false,
+      "match_key": "Cause:Other"
+    },
+    {
+      "id": "sys_fk",
+      "display_name": "AC Power System (345 kV Switchyard)",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "FK",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:FK"
+    },
+    {
+      "id": "sys_eb",
+      "display_name": "AC Electrical Power Distribution System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "EB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:EB"
+    },
+    {
+      "id": "sys_edg1",
+      "display_name": "Division 1 Emergency Diesel Generator",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "actuated backup power source",
+      "match_key": "System:division-1-emergency-diesel-generator"
+    },
+    {
+      "id": "sys_edg3",
+      "display_name": "Division 3 Emergency Diesel Generator",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "actuated backup power source",
+      "match_key": "System:division-3-emergency-diesel-generator"
+    },
+    {
+      "id": "sys_rps",
+      "display_name": "Reactor Protection System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:reactor-protection-system"
+    },
+    {
+      "id": "sys_vr",
+      "display_name": "Reactor Building Ventilation System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "VR",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:VR"
+    },
+    {
+      "id": "c_ocb113",
+      "display_name": "345 kV Oil Circuit Breaker 1-13",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "BKR",
+      "identifier": "OSYOCB1-13",
+      "model": null,
+      "manufacturer_code": "W120",
+      "inferred_code": false,
+      "match_key": "Component:BKR|OSYOCB1-13"
+    },
+    {
+      "id": "c_acb1412",
+      "display_name": "Air Circuit Breaker 1412 (Bus Feed from SAT, TR 142)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "BKR",
+      "identifier": "ACB 1412",
+      "model": null,
+      "manufacturer_code": "1005",
+      "inferred_code": false,
+      "match_key": "Component:BKR|ACB 1412"
+    },
+    {
+      "id": "c_moc1412",
+      "display_name": "Mechanism Operated Contacts (MOC) 15 and 16 of ACB 1412",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:mechanism-operated-contacts-moc-15-and-16-of-acb-1412"
+    },
+    {
+      "id": "c_acb1415",
+      "display_name": "Air Circuit Breaker 1415 (Unit 1 UAT feed breaker to bus 141Y)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "BKR",
+      "identifier": "ACB 1415",
+      "model": null,
+      "manufacturer_code": "1005",
+      "inferred_code": false,
+      "match_key": "Component:BKR|ACB 1415"
+    },
+    {
+      "id": "c_tsc1415",
+      "display_name": "TSC switch contacts on ACB 1415",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:tsc-switch-contacts-on-acb-1415"
+    },
+    {
+      "id": "c_mgset1a",
+      "display_name": "1A RPS Motor-Generator Set",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:1a-rps-motor-generator-set"
+    },
+    {
+      "id": "mfr_westinghouse",
+      "display_name": "Westinghouse Electric Company",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "W120",
+      "match_key": "Manufacturer:W120"
+    },
+    {
+      "id": "mfr_ite",
+      "display_name": "ITE Circuit Breaker Limited",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "1005",
+      "match_key": "Manufacturer:1005"
+    },
+    {
+      "id": "fm_ground",
+      "display_name": "Dispatched grounds placed on out-of-service line L0104 with induced voltage present",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Switchyard owner placed dispatched grounds without recognizing induced voltage on out-of-service 345 kV line L0104 from parallel in-service line L0103.",
+      "match_key": "FailureMode:dispatched-grounds-placed-on-out-of-service-line-l0104-with-induced-voltage-present"
+    },
+    {
+      "id": "fm_ocbtrip",
+      "display_name": "OCB 1-13 tripped open on differential current",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "GCB 11-13 closure routed induced voltage to ground via dispatched ground, tripping OCB 1-13 on differential current, losing the Unit 1 SAT.",
+      "match_key": "FailureMode:ocb-1-13-tripped-open-on-differential-current"
+    },
+    {
+      "id": "fm_moc_resistance",
+      "display_name": "Increased resistance across MOC 15/16 of ACB 1412",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Degraded contact resistance across mechanism operated contacts due to lack of periodic verification/cycling per maintenance strategy template.",
+      "match_key": "FailureMode:increased-resistance-across-moc-15-16-of-acb-1412"
+    },
+    {
+      "id": "fm_tsc_open",
+      "display_name": "TSC switch contacts open on ACB 1415",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "TSC switch contacts on ACB 1415 were found open though verified closed when last racked in during L1R20, preventing fast transfer signal.",
+      "match_key": "FailureMode:tsc-switch-contacts-open-on-acb-1415"
+    },
+    {
+      "id": "fm_fasttransfer_fail",
+      "display_name": "Bus 141Y fast transfer from SAT to UAT failed",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Combination of increased MOC resistance and open TSC contacts prevented Bus 141Y from fast transferring from Unit 1 SAT to UAT.",
+      "match_key": "FailureMode:bus-141y-fast-transfer-from-sat-to-uat-failed"
+    },
+    {
+      "id": "fm_loadshed",
+      "display_name": "Load shed and momentary loss of power to Bus 141Y",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Failed fast transfer resulted in load shed of 141Y bus and momentary power loss, with Division 1 EDG auto-starting and loading.",
+      "match_key": "FailureMode:load-shed-and-momentary-loss-of-power-to-bus-141y"
+    },
+    {
+      "id": "fm_rps_loss",
+      "display_name": "Loss of power to 1A RPS motor-generator set",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Momentary loss of power from Bus 141Y resulted in loss of power to the 1A RPS MG set that normally powers 1A RPS.",
+      "match_key": "FailureMode:loss-of-power-to-1a-rps-motor-generator-set"
+    },
+    {
+      "id": "fm_vr_dampers",
+      "display_name": "VR dampers shut unexpectedly during Division 2 fast transfer",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "During fast transfer of ESF Division 2 from SAT to UAT, the 'B' supply and 'A' exhaust reactor building ventilation isolation dampers shut unexpectedly, causing loss of Unit 1 VR and a main steam tunnel high temperature condition.",
+      "match_key": "FailureMode:vr-dampers-shut-unexpectedly-during-division-2-fast-transfer"
+    },
+    {
+      "id": "cons_edg",
+      "display_name": "Valid actuation of Division 1 and Division 3 EDGs (auto-start and load)",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2024-04-20T07:04",
+      "end": null,
+      "duration": null,
+      "tz": "CDT",
+      "match_key": "Consequence:valid-actuation-of-division-1-and-division-3-edgs-auto-start-and-load"
+    },
+    {
+      "id": "cons_halfscram",
+      "display_name": "Invalid RPS 1A half-scram and multi-system isolations",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2024-04-20T07:04",
+      "end": null,
+      "duration": null,
+      "tz": "CDT",
+      "match_key": "Consequence:invalid-rps-1a-half-scram-and-multi-system-isolations"
+    },
+    {
+      "id": "cons_vr_loss",
+      "display_name": "Loss of Unit 1 reactor building ventilation / main steam tunnel high temperature",
+      "properties": {},
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:loss-of-unit-1-reactor-building-ventilation-main-steam-tunnel-high-temperature"
+    },
+    {
+      "id": "ca_tsclock",
+      "display_name": "Entered required TS timeclocks/actions and notified TSO to secure testing",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:entered-required-ts-timeclocks-actions-and-notified-tso-to-secure-testing"
+    },
+    {
+      "id": "ca_transferrps",
+      "display_name": "Transferred 1A RPS bus to alternate power supply, reset half-scram, exited TS actions",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:transferred-1a-rps-bus-to-alternate-power-supply-reset-half-scram-exited-ts-actions"
+    },
+    {
+      "id": "ca_closeocb",
+      "display_name": "Closed OCB 1-13 and reenergized Unit 1 SAT",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:closed-ocb-1-13-and-reenergized-unit-1-sat"
+    },
+    {
+      "id": "ca_transferbuses",
+      "display_name": "Transferred buses 141Y/142Y/143 to Unit 1 SAT; shut down Division 1/3 EDGs; exited TS actions",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:transferred-buses-141y-142y-143-to-unit-1-sat-shut-down-division-1-3-edgs-exited-ts-actions"
+    },
+    {
+      "id": "ca_transferrps_back",
+      "display_name": "Transferred 1A RPS bus back to normal power supply",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:transferred-1a-rps-bus-back-to-normal-power-supply"
+    },
+    {
+      "id": "ca_rack1415",
+      "display_name": "Racked out/in ACB 1415 to close TSC switch contacts",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:racked-out-in-acb-1415-to-close-tsc-switch-contacts"
+    },
+    {
+      "id": "ca_cleanmoc",
+      "display_name": "Cleaned MOC 15/16 on ACB 1412 to reduce resistance",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:cleaned-moc-15-16-on-acb-1412-to-reduce-resistance"
+    },
+    {
+      "id": "ca_devproc",
+      "display_name": "Develop electrical maintenance procedure to check 4kV/6kV switchgear breaker contact alignment for fast transfer logic",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:develop-electrical-maintenance-procedure-to-check-4kv-6kv-switchgear-breaker-contact-alignment-for-fast-transfer-logic"
+    },
+    {
+      "id": "ca_updatestartup",
+      "display_name": "Update normal startup procedure to incorporate new electrical maintenance procedure during bus alignment",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:update-normal-startup-procedure-to-incorporate-new-electrical-maintenance-procedure-during-bus-alignment"
+    },
+    {
+      "id": "ca_revise_swyd",
+      "display_name": "Revise Switchyard Services Agreement procedure to require station quality review of modification testing instructions",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-switchyard-services-agreement-procedure-to-require-station-quality-review-of-modification-testing-instructions"
+    },
+    {
+      "id": "ca_update_pm",
+      "display_name": "Update 4kV/6kV breaker inspection/test procedures for resistance verification or MOC burnishing",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:update-4kv-6kv-breaker-inspection-test-procedures-for-resistance-verification-or-moc-burnishing"
+    },
+    {
+      "id": "ca_expedite_ec",
+      "display_name": "Prioritize and expedite engineering change to remove TSC switches",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:prioritize-and-expedite-engineering-change-to-remove-tsc-switches"
+    },
+    {
+      "id": "ca_failure_analysis",
+      "display_name": "Remove and send TSC switch on ACB 1415 for failure analysis",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:remove-and-send-tsc-switch-on-acb-1415-for-failure-analysis"
+    },
+    {
+      "id": "rr_5072",
+      "display_name": "10 CFR 50.72(b)(3)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-3-iv-a"
+    },
+    {
+      "id": "rr_507334ivA",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_50733iB",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_nei9902",
+      "display_name": "NEI 99-02, Regulatory Assessment Performance Indicator Guideline",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "standard/guidance",
+      "match_key": "RegulatoryReference:nei-99-02-regulatory-assessment-performance-indicator-guideline"
+    },
+    {
+      "id": "ler_stub_2024_002",
+      "display_name": "LER 373-2024-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "373-2024-002-00",
+      "stub": true,
+      "title": "1B RPS MG set EPMA output breaker trip due to underfrequency condition resulting in loss of 1B RPS bus",
+      "plant": "LaSalle County Station Unit 1",
+      "match_key": "LER:373-2024-002-00"
+    },
+    {
+      "id": "ler_stub_2021_002",
+      "display_name": "LER 374-2021-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "374-2021-002-00",
+      "stub": true,
+      "title": "2A RPS motor generator set output breaker tripped due to overload condition resulting in loss of 2A RPS bus",
+      "plant": "LaSalle County Station Unit 2",
+      "match_key": "LER:374-2021-002-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_507334ivA",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_50733iB",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_fk",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_eb",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rps",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_vr",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_edg1",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_edg3",
+      "evidence": null
+    },
+    {
+      "source": "c_ocb113",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_westinghouse",
+      "evidence": null
+    },
+    {
+      "source": "c_acb1412",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_ite",
+      "evidence": null
+    },
+    {
+      "source": "c_acb1415",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_ite",
+      "evidence": null
+    },
+    {
+      "source": "c_moc1412",
+      "relation": "PART_OF",
+      "target": "c_acb1412",
+      "evidence": null
+    },
+    {
+      "source": "c_tsc1415",
+      "relation": "PART_OF",
+      "target": "c_acb1415",
+      "evidence": null
+    },
+    {
+      "source": "fm_ground",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_ground",
+      "relation": "LEADS_TO",
+      "target": "fm_ocbtrip",
+      "evidence": null
+    },
+    {
+      "source": "fm_ocbtrip",
+      "relation": "LEADS_TO",
+      "target": "cons_edg",
+      "evidence": null
+    },
+    {
+      "source": "fm_ocbtrip",
+      "relation": "LEADS_TO",
+      "target": "fm_fasttransfer_fail",
+      "evidence": null
+    },
+    {
+      "source": "fm_moc_resistance",
+      "relation": "LEADS_TO",
+      "target": "fm_fasttransfer_fail",
+      "evidence": null
+    },
+    {
+      "source": "fm_tsc_open",
+      "relation": "LEADS_TO",
+      "target": "fm_fasttransfer_fail",
+      "evidence": null
+    },
+    {
+      "source": "fm_fasttransfer_fail",
+      "relation": "LEADS_TO",
+      "target": "fm_loadshed",
+      "evidence": null
+    },
+    {
+      "source": "fm_fasttransfer_fail",
+      "relation": "LEADS_TO",
+      "target": "fm_vr_dampers",
+      "evidence": null
+    },
+    {
+      "source": "fm_loadshed",
+      "relation": "LEADS_TO",
+      "target": "fm_rps_loss",
+      "evidence": null
+    },
+    {
+      "source": "fm_rps_loss",
+      "relation": "LEADS_TO",
+      "target": "cons_halfscram",
+      "evidence": null
+    },
+    {
+      "source": "fm_vr_dampers",
+      "relation": "LEADS_TO",
+      "target": "cons_vr_loss",
+      "evidence": null
+    },
+    {
+      "source": "fm_loadshed",
+      "relation": "LEADS_TO",
+      "target": "cons_edg",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_tsclock",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_transferrps",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_closeocb",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_transferbuses",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_transferrps_back",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_rack1415",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_cleanmoc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_devproc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_updatestartup",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_revise_swyd",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_update_pm",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_expedite_ec",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_failure_analysis",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_stub_2024_002",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_stub_2021_002",
+      "evidence": null
+    }
+  ],
+  "chain": "procedural gap re: switchyard modification testing oversight [cause X] -> induced voltage grounding error -> OCB 1-13 trips open (loses Unit 1 SAT) -> [in parallel: MOC 15/16 resistance increased + ACB 1415 TSC contacts open] -> Bus 141Y fast transfer fails -> load shed/momentary power loss on 141Y -> Division 1 EDG auto-starts/loads (valid actuation) AND 1A RPS MG set loses power -> RPS 1A half-scram/isolations (invalid actuation); parallel: fast transfer of Division 2 also triggers VR dampers shut -> loss of Unit 1 VR/high steam tunnel temp",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "This report bundles two related but distinct actuation events (EDG auto-start/load, valid; RPS 1A half-scram, invalid) plus a parallel VR ventilation isolation consequence, all stemming from the same OCB 1-13 trip root cause. Cause code X/Other governs per form despite narrative identifying a specific procedural root cause. Block-13 Westinghouse OCB 1-13 (FK/BKR, W120) and ITE ACB (EB/BKR, 1005) rows both modeled. Superseded/appended pages describing a different LaSalle Unit 2 LER (374-2023-002, ACB 1422 MOC misalignment) appear at the end of the provided text as OCR artifact bleed-through from an unrelated report bundle; not modeled as this event's content, since it concerns a separate docket/event with its own LER number 374-2023-002-01, not this event 373-2024-004-01. Only the two explicitly-cited 'Previous Occurrences' (373-2024-002-00 and 374-2021-002-00) are modeled as stub SIMILAR_TO LERs per the instructions in the narrative's Previous Occurrences section."
+}

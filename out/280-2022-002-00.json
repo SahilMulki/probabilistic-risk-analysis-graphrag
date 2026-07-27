@@ -1,0 +1,470 @@
+{
+  "ler_number": "280-2022-002-00",
+  "identity": {
+    "accession_number": "ML22263A429",
+    "docket": "05000280",
+    "plant_name": "Surry",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2022-07-25",
+    "report_date": "2022-09-19",
+    "operating_mode": null,
+    "power_level": 100,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2022-002-00 for Surry Power Station, Units 1 and 2, Failure of Unit 1 Emergency Diesel Generator Results in an Operation or Condition Prohibited by Technical Specifications"
+  },
+  "reporting_basis": {
+    "reported_under": [],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "B",
+      "system": "EK",
+      "component": "DG",
+      "manufacturer": "G080",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "corrosion between the lugs of the field lead that led to the hard ground on one pole of the generator rotor; the failure of the lead caused additional electrical stress on the insulation system of the field that resulted in the first coil on the pole closest to the field connection to fail to ground",
+    "cause_code": "B",
+    "category": "Design/Manufacturing/Installation",
+    "theme": "field-lead connection corrosion leading to generator rotor ground fault",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 280-2022-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "280-2022-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:280-2022-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Surry Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000280",
+      "match_key": "Unit:05000280"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Manufacturing/Installation (B)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "B",
+      "category": "Design/Manufacturing/Installation",
+      "theme": "field-lead connection corrosion leading to generator rotor ground fault",
+      "proximate_text": "corrosion between the lugs of the field lead that led to the hard ground on one pole of the generator rotor; the failure of the lead caused additional electrical stress on the insulation system of the field that resulted in the first coil on the pole closest to the field connection to fail to ground",
+      "provisional": false,
+      "match_key": "Cause:Design/Manufacturing/Installation"
+    },
+    {
+      "id": "sys_ek",
+      "display_name": "Emergency Switchgear Room / Emergency Diesel Generator System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "EK",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:EK"
+    },
+    {
+      "id": "sys_bu1h",
+      "display_name": "Emergency Bus 1H",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BU",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BU"
+    },
+    {
+      "id": "c_edg1",
+      "display_name": "Emergency Diesel Generator 1 (EDG-1)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "DG",
+      "identifier": "EDG-1",
+      "model": null,
+      "manufacturer_code": "G080",
+      "inferred_code": false,
+      "match_key": "Component:DG|EDG-1"
+    },
+    {
+      "id": "c_edg2",
+      "display_name": "Emergency Diesel Generator 2 (EDG-2)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "DG",
+      "identifier": "EDG-2",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:DG|EDG-2"
+    },
+    {
+      "id": "c_edg3",
+      "display_name": "Emergency Diesel Generator 3 / Swing Diesel (EDG-3)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "DG",
+      "identifier": "EDG-3",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:DG|EDG-3"
+    },
+    {
+      "id": "c_exc",
+      "display_name": "Generator exciter",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "EXC",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:EXC"
+    },
+    {
+      "id": "c_fieldlead",
+      "display_name": "Generator field lead / bolted connection to panel wiring",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:generator-field-lead-bolted-connection-to-panel-wiring"
+    },
+    {
+      "id": "c_rotor",
+      "display_name": "Generator rotor (field poles)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": "A-20 style generator",
+      "manufacturer_code": "G080",
+      "inferred_code": false,
+      "match_key": "Component:generator-rotor-field-poles"
+    },
+    {
+      "id": "fm_corrosion",
+      "display_name": "Corrosion between lugs of the field lead",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Corrosion developed between the lugs at the bolted field lead connection point over ~50 years of service.",
+      "match_key": "FailureMode:corrosion-between-lugs-of-the-field-lead"
+    },
+    {
+      "id": "fm_leadfail",
+      "display_name": "Field lead connection failure at bolted joint",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Failure occurred between the generator brush rigging and the panel wiring at the bolted connection point due to corrosion.",
+      "match_key": "FailureMode:field-lead-connection-failure-at-bolted-joint"
+    },
+    {
+      "id": "fm_insulation",
+      "display_name": "Increased electrical stress on field insulation system",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The lead failure caused additional electrical stress on the insulation system of the field.",
+      "match_key": "FailureMode:increased-electrical-stress-on-field-insulation-system"
+    },
+    {
+      "id": "fm_coilground",
+      "display_name": "First coil on pole nearest field connection fails to ground",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The stressed coil on the pole closest to the field connection failed to ground, producing a hard ground on one of eight rotor poles.",
+      "match_key": "FailureMode:first-coil-on-pole-nearest-field-connection-fails-to-ground"
+    },
+    {
+      "id": "fm_partialload",
+      "display_name": "Partial loss of EDG-1 load during surveillance test",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Approximately 20 minutes after reaching full load, EDG-1 experienced a partial loss of load; generator output current above normal for full load, engine sound consistent with decreasing load.",
+      "match_key": "FailureMode:partial-loss-of-edg-1-load-during-surveillance-test"
+    },
+    {
+      "id": "cons_ts_violation",
+      "display_name": "TS 3.16.B.1.a.3 AOT exceeded for Unit 1 and TS 3.0.2 not satisfied for Unit 2 (operation prohibited by Technical Specifications)",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2022-07-18T09:56",
+      "end": "2022-07-26T17:05",
+      "duration": null,
+      "tz": "local",
+      "match_key": "Consequence:ts-3-16-b-1-a-3-aot-exceeded-for-unit-1-and-ts-3-0-2-not-satisfied-for-unit-2-operation-prohibited-by-technical-specifications"
+    },
+    {
+      "id": "ca_replace_gen",
+      "display_name": "Replace EDG-1 generator",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-edg-1-generator"
+    },
+    {
+      "id": "ca_replace_lead",
+      "display_name": "Replace field lead and repair connection",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-field-lead-and-repair-connection"
+    },
+    {
+      "id": "ca_inspect_edg3",
+      "display_name": "Inspect EDG-3 field leads for corrosion and heating",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:inspect-edg-3-field-leads-for-corrosion-and-heating"
+    },
+    {
+      "id": "ca_run_edg2_3",
+      "display_name": "Run EDG-2 and swing EDG-3 within 24 hours to demonstrate operability and rule out common cause failure",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:run-edg-2-and-swing-edg-3-within-24-hours-to-demonstrate-operability-and-rule-out-common-cause-failure"
+    },
+    {
+      "id": "ca_refurb",
+      "display_name": "Refurbish the failed EDG-1 generator",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:refurbish-the-failed-edg-1-generator"
+    },
+    {
+      "id": "ca_inspect_edg2",
+      "display_name": "Inspect EDG-2 field leads for corrosion and heating",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:inspect-edg-2-field-leads-for-corrosion-and-heating"
+    },
+    {
+      "id": "mfr_gm",
+      "display_name": "General Motors / Electro-Motive Division",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "G080",
+      "match_key": "Manufacturer:G080"
+    },
+    {
+      "id": "rr_ts316",
+      "display_name": "TS 3.16.B.1.a.3 (EDG AOT)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-3-16-b-1-a-3-edg-aot"
+    },
+    {
+      "id": "rr_ts302",
+      "display_name": "TS 3.0.2",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-3-0-2"
+    },
+    {
+      "id": "rr_ts613",
+      "display_name": "TS 3.6.1.3",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-3-6-1-3"
+    },
+    {
+      "id": "rr_noed",
+      "display_name": "Notice of Enforcement Discretion (NOED) / NRC Enforcement Manual Appendix F",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "standard/guidance",
+      "match_key": "RegulatoryReference:notice-of-enforcement-discretion-noed-nrc-enforcement-manual-appendix-f"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ek",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts316",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts302",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts613",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_noed",
+      "evidence": null
+    },
+    {
+      "source": "c_edg1",
+      "relation": "PART_OF",
+      "target": "sys_ek",
+      "evidence": null
+    },
+    {
+      "source": "c_exc",
+      "relation": "PART_OF",
+      "target": "c_edg1",
+      "evidence": null
+    },
+    {
+      "source": "c_fieldlead",
+      "relation": "PART_OF",
+      "target": "c_exc",
+      "evidence": null
+    },
+    {
+      "source": "c_rotor",
+      "relation": "PART_OF",
+      "target": "c_edg1",
+      "evidence": null
+    },
+    {
+      "source": "c_edg1",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_gm",
+      "evidence": null
+    },
+    {
+      "source": "fm_corrosion",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_corrosion",
+      "relation": "LEADS_TO",
+      "target": "fm_leadfail",
+      "evidence": null
+    },
+    {
+      "source": "fm_leadfail",
+      "relation": "LEADS_TO",
+      "target": "fm_partialload",
+      "evidence": null
+    },
+    {
+      "source": "fm_leadfail",
+      "relation": "LEADS_TO",
+      "target": "fm_insulation",
+      "evidence": null
+    },
+    {
+      "source": "fm_insulation",
+      "relation": "LEADS_TO",
+      "target": "fm_coilground",
+      "evidence": null
+    },
+    {
+      "source": "fm_coilground",
+      "relation": "LEADS_TO",
+      "target": "cons_ts_violation",
+      "evidence": null
+    },
+    {
+      "source": "fm_partialload",
+      "relation": "LEADS_TO",
+      "target": "cons_ts_violation",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_gen",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_lead",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_inspect_edg3",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_run_edg2_3",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_refurb",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_inspect_edg2",
+      "evidence": null
+    }
+  ],
+  "chain": "corrosion between field-lead lugs [cause B] -> bolted connection failure at brush rigging/panel wiring -> partial loss of EDG-1 load during surveillance test AND increased electrical stress on field insulation -> first coil on nearest pole grounds -> EDG-1 declared inoperable, AOT exceeded -> TS 3.16.B.1.a.3/3.0.2 violation (operation prohibited by Technical Specifications) for ~8 days",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "No EIIS code given for field lead, rotor, or exciter beyond [EXC]; EK used for the emergency switchgear/EDG system per block-13 system code. Common-cause verification runs of EDG-2 and EDG-3 modeled as corrective actions, not BACKED_UP_BY, since EDG-1 supported specific shared loads (AFW cross-tie, filter fans, MCR chiller) rather than being interchangeable with EDG-2/3 for its own bus; no explicit statement that EDG-2/3 remained available to cover EDG-1's specific loads during the outage, so BACKED_UP_BY edges were omitted per rule 6. TS 3.6.1.3 entry noted as regulatory reference tied to AFW cross-tie loss of power source."
+}

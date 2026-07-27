@@ -1,0 +1,462 @@
+{
+  "ler_number": "458-2023-001-01",
+  "identity": {
+    "accession_number": "ML23229A121",
+    "docket": "05000458",
+    "plant_name": "River Bend",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2023-03-24",
+    "report_date": "2023-08-17",
+    "operating_mode": "4",
+    "power_level": null,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "/ 2023-001-01, Ultimate Heat Sink Inoperable due to Boundary Valve Leakage"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)(B)",
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The Root Cause of this event is that RBS did not challenge an assumption regarding the applicability of double isolation on the supply header of SSW. Because of these assumptions, SWP-MOV57A and SWP-MOV57B were not properly characterized by the In-Service Testing program and credit was taken for the isolation capability of check valves in-line with SWP-MOV57A and SWP-MOV57B.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "unchallenged design assumption led to inadequate IST classification of isolation valves",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 458-2023-002-01",
+      "properties": {
+        "match_key": "LER:458-2023-002-01"
+      },
+      "type": "LER",
+      "key": "458-2023-001-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:458-2023-001-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "River Bend Unit 1",
+      "properties": {
+        "match_key": "Unit:05000458",
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000458",
+      "match_key": "Unit:05000458"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {
+        "match_key": "Cause:TBD"
+      },
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "unchallenged design assumption led to inadequate IST classification of isolation valves",
+      "proximate_text": "The Root Cause of this event is that RBS did not challenge an assumption regarding the applicability of double isolation on the supply header of SSW. Because of these assumptions, SWP-MOV57A and SWP-MOV57B were not properly characterized by the In-Service Testing program and credit was taken for the isolation capability of check valves in-line with SWP-MOV57A and SWP-MOV57B.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_bi",
+      "display_name": "Standby Service Water",
+      "properties": {
+        "match_key": "System:BI"
+      },
+      "type": "System",
+      "eiis_code": "BI",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BI"
+    },
+    {
+      "id": "sys_bs",
+      "display_name": "Ultimate Heat Sink",
+      "properties": {
+        "match_key": "System:BS"
+      },
+      "type": "System",
+      "eiis_code": "BS",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BS"
+    },
+    {
+      "id": "c_mov57a",
+      "display_name": "SWP-MOV57A, Service Water Normal Supply Header A Inlet Isolation Valve",
+      "properties": {
+        "match_key": "Component:ISV|SWP-MOV57A"
+      },
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": "SWP-MOV57A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:ISV|SWP-MOV57A"
+    },
+    {
+      "id": "c_mov57b",
+      "display_name": "SWP-MOV57B, Service Water Normal Supply Header B Inlet Isolation Valve",
+      "properties": {
+        "match_key": "Component:ISV|SWP-MOV57B"
+      },
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": "SWP-MOV57B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:ISV|SWP-MOV57B"
+    },
+    {
+      "id": "fm_assumption",
+      "display_name": "Unchallenged assumption on double isolation applicability",
+      "properties": {
+        "match_key": "FailureMode:unchallenged-assumption-double-isolation"
+      },
+      "type": "FailureMode",
+      "description": "RBS did not challenge an assumption regarding the applicability of double isolation on the SSW supply header, taking credit for isolation capability of in-line check valves.",
+      "match_key": "FailureMode:unchallenged-assumption-on-double-isolation-applicability"
+    },
+    {
+      "id": "fm_miscategorized",
+      "display_name": "SWP-MOV57A/B not properly characterized by IST program",
+      "properties": {
+        "match_key": "FailureMode:ist-miscategorization"
+      },
+      "type": "FailureMode",
+      "description": "SWP-MOV57A and SWP-MOV57B were not properly characterized (categorized) by the In-Service Testing program, so seat leakage was never surveilled.",
+      "match_key": "FailureMode:swp-mov57a-b-not-properly-characterized-by-ist-program"
+    },
+    {
+      "id": "fm_leak_a",
+      "display_name": "SWP-MOV57A excessive seat leakage (~30 gpm)",
+      "properties": {
+        "match_key": "FailureMode:mov57a-seat-leakage"
+      },
+      "type": "FailureMode",
+      "description": "Seat leakage test of SWP-MOV57A resulted in a leak rate of approximately 30 gpm, exceeding the 6.9 gpm design basis allowance.",
+      "match_key": "FailureMode:swp-mov57a-excessive-seat-leakage-30-gpm"
+    },
+    {
+      "id": "fm_leak_b",
+      "display_name": "SWP-MOV57B excessive seat leakage (15.5 gpm)",
+      "properties": {
+        "match_key": "FailureMode:mov57b-seat-leakage"
+      },
+      "type": "FailureMode",
+      "description": "Seat leakage test of SWP-MOV57B resulted in a leak rate of 15.5 gpm, exceeding the 6.9 gpm design basis allowance.",
+      "match_key": "FailureMode:swp-mov57b-excessive-seat-leakage-15-5-gpm"
+    },
+    {
+      "id": "cons_uhs",
+      "display_name": "UHS inoperable / could not meet 30-day mission time; TS 3.7.1 prohibited condition",
+      "properties": {
+        "match_key": "Consequence:uhs-inoperable-30-day-mission-time"
+      },
+      "type": "Consequence",
+      "start": "2023-03-24",
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:uhs-inoperable-could-not-meet-30-day-mission-time-ts-3-7-1-prohibited-condition"
+    },
+    {
+      "id": "ca_seals",
+      "display_name": "Replace valve seat seals on SWP-MOV57A",
+      "properties": {
+        "match_key": "CorrectiveAction:replace-seat-seals-mov57a"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-valve-seat-seals-on-swp-mov57a"
+    },
+    {
+      "id": "ca_torque",
+      "display_name": "Adjust closing torque on SWP-MOV57A and SWP-MOV57B",
+      "properties": {
+        "match_key": "CorrectiveAction:adjust-closing-torque"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:adjust-closing-torque-on-swp-mov57a-and-swp-mov57b"
+    },
+    {
+      "id": "ca_rce",
+      "display_name": "Root Cause Evaluation",
+      "properties": {
+        "match_key": "CorrectiveAction:root-cause-evaluation"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:root-cause-evaluation"
+    },
+    {
+      "id": "ca_recat",
+      "display_name": "Re-categorize SWP-MOV57A and SWP-MOV57B to Category A in IST basis documents",
+      "properties": {
+        "match_key": "CorrectiveAction:recategorize-ist-category-a"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:re-categorize-swp-mov57a-and-swp-mov57b-to-category-a-in-ist-basis-documents"
+    },
+    {
+      "id": "ca_surv",
+      "display_name": "Establish surveillance test procedures for leak testing SWP-MOV57A/B per IST basis documents",
+      "properties": {
+        "match_key": "CorrectiveAction:establish-surveillance-procedures"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:establish-surveillance-test-procedures-for-leak-testing-swp-mov57a-b-per-ist-basis-documents"
+    },
+    {
+      "id": "ca_pm",
+      "display_name": "Establish preventative maintenance tasks for internal inspection of SWP-MOV57A/B",
+      "properties": {
+        "match_key": "CorrectiveAction:establish-pm-internal-inspection"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:establish-preventative-maintenance-tasks-for-internal-inspection-of-swp-mov57a-b"
+    },
+    {
+      "id": "ca_eng",
+      "display_name": "Issue Engineering Analysis defining SSW system boundaries, valve classifications, and inventory-maintenance actions",
+      "properties": {
+        "match_key": "CorrectiveAction:engineering-analysis-boundaries"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:issue-engineering-analysis-defining-ssw-system-boundaries-valve-classifications-and-inventory-maintenance-actions"
+    },
+    {
+      "id": "rr_5073v",
+      "display_name": "10 CFR 50.73(a)(2)(v)(B)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-b"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-b"
+    },
+    {
+      "id": "rr_5073i",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts371",
+      "display_name": "Technical Specification 3.7.1 (SSW/UHS Operability)",
+      "properties": {
+        "match_key": "RegulatoryReference:ts-3-7-1"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-3-7-1-ssw-uhs-operability"
+    },
+    {
+      "id": "rr_rg127",
+      "display_name": "Reg Guide 1.27",
+      "properties": {
+        "match_key": "RegulatoryReference:reg-guide-1-27"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "standard/guidance",
+      "match_key": "RegulatoryReference:reg-guide-1-27"
+    },
+    {
+      "id": "rr_usar925",
+      "display_name": "Updated Safety Analysis Report 9.2.5",
+      "properties": {
+        "match_key": "RegulatoryReference:usar-9-2-5"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:updated-safety-analysis-report-9-2-5"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "LER 2014-004-00",
+      "properties": {
+        "unit": 1,
+        "match_key": "LER:2014-004-00"
+      },
+      "type": "LER",
+      "key": "2014-004-00",
+      "stub": true,
+      "title": "UHS water inventory less than accident analysis required amount",
+      "plant": "River Bend Station",
+      "match_key": "LER:2014-004-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073v",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073i",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bi",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bs",
+      "evidence": null
+    },
+    {
+      "source": "c_mov57a",
+      "relation": "PART_OF",
+      "target": "sys_bi",
+      "evidence": null
+    },
+    {
+      "source": "c_mov57b",
+      "relation": "PART_OF",
+      "target": "sys_bi",
+      "evidence": null
+    },
+    {
+      "source": "fm_assumption",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_assumption",
+      "relation": "LEADS_TO",
+      "target": "fm_miscategorized",
+      "evidence": null
+    },
+    {
+      "source": "fm_miscategorized",
+      "relation": "LEADS_TO",
+      "target": "fm_leak_a",
+      "evidence": null
+    },
+    {
+      "source": "fm_miscategorized",
+      "relation": "LEADS_TO",
+      "target": "fm_leak_b",
+      "evidence": null
+    },
+    {
+      "source": "fm_leak_a",
+      "relation": "LEADS_TO",
+      "target": "cons_uhs",
+      "evidence": null
+    },
+    {
+      "source": "fm_leak_b",
+      "relation": "LEADS_TO",
+      "target": "cons_uhs",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_seals",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_torque",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_rce",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_recat",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_surv",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_pm",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_eng",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    }
+  ],
+  "chain": "unchallenged double-isolation assumption [cause TBD] -> SWP-MOV57A/B miscategorized in IST program -> excessive seat leakage past MOV57A (~30 gpm) and MOV57B (15.5 gpm) -> UHS inoperable / could not meet 30-day mission time, TS 3.7.1 prohibited condition",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code TBD in FORM-366 fields is copied verbatim; category 'provisional' per schema default since no official cause code was assigned in the source fields. Both MOV57A and MOV57B leakage failures modeled as parallel FailureMode nodes stemming from the same miscategorization failure, each leading to the same UHS-inoperable consequence per rule 5. No BACKED_UP_BY edges emitted since no operable backup to UHS/SSW is stated as available during the leakage window. In-line check valves are mentioned only as the (mistaken) basis for isolation credit, not as an operable backup system during the event, so no System/Component node created for them. Previous occurrence LER key recorded as stated in narrative ('LER 2014-004-00'), noting the report text shows partial number '201■004-00' due to OCR corruption; used the clearly legible portion per the instructions to copy the LER number exactly as stated."
+}

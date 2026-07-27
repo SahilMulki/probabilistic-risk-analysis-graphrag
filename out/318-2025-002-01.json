@@ -1,0 +1,456 @@
+{
+  "ler_number": "318-2025-002-01",
+  "identity": {
+    "accession_number": "ML26023A162",
+    "docket": "05000318",
+    "plant_name": "Calvert Cliffs",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2025-09-24",
+    "report_date": "2026-01-22",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Condition Prohibited by Technical Specifications due to condition 3.7.12.A Required Restoration Time Exceeded"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The cause of the event was due to human performance issues specifically calculation errors by technicians, due to improper assumptions and mathematical mistakes as required in the STP. There was a failure at the PJB to identify the critical nature of their calculations and how it would affect the LCO condition of the unit.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Human performance / calculation error in surveillance test",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 318-2025-002-01",
+      "properties": {
+        "match_key": "LER:318-2025-002-01"
+      },
+      "type": "LER",
+      "key": "318-2025-002-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:318-2025-002-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Calvert Cliffs Unit 2",
+      "properties": {
+        "match_key": "Unit:05000318",
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000318",
+      "match_key": "Unit:05000318"
+    },
+    {
+      "id": "cause",
+      "display_name": "Human Performance (TBD)",
+      "properties": {
+        "match_key": "Cause:provisional"
+      },
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Human performance / calculation error in surveillance test",
+      "proximate_text": "The cause of the event was due to human performance issues specifically calculation errors by technicians, due to improper assumptions and mathematical mistakes as required in the STP. There was a failure at the PJB to identify the critical nature of their calculations and how it would affect the LCO condition of the unit.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_prevs",
+      "display_name": "Penetration Room Exhaust Ventilation System",
+      "properties": {
+        "match_key": "System:VH"
+      },
+      "type": "System",
+      "eiis_code": "VH",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected system",
+      "match_key": "System:VH"
+    },
+    {
+      "id": "c_filters",
+      "display_name": "21 Penetration Exhaust Filters (HEPA and Charcoal)",
+      "properties": {
+        "match_key": "Component:21-penetration-exhaust-filters"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:21-penetration-exhaust-filters-hepa-and-charcoal"
+    },
+    {
+      "id": "c_trays",
+      "display_name": "Filter trays",
+      "properties": {
+        "match_key": "Component:filter-trays"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:filter-trays"
+    },
+    {
+      "id": "fm_calc_error",
+      "display_name": "Technicians made calculation errors evaluating STP filter test data",
+      "properties": {
+        "match_key": "FailureMode:calculation-error-stp-evaluation"
+      },
+      "type": "FailureMode",
+      "description": "Two I&C technicians independently used improper assumptions and made mathematical errors in evaluating STP flow results, determining the test to be satisfactory when it was not.",
+      "match_key": "FailureMode:technicians-made-calculation-errors-evaluating-stp-filter-test-data"
+    },
+    {
+      "id": "fm_unsat_result_missed",
+      "display_name": "Unsatisfactory STP result not identified for 6 days",
+      "properties": {
+        "match_key": "FailureMode:unsat-result-not-identified"
+      },
+      "type": "FailureMode",
+      "description": "STP performed 9/18/2025 was incorrectly determined satisfactory; the error was not identified until 9/24/2025 at 1100.",
+      "match_key": "FailureMode:unsatisfactory-stp-result-not-identified-for-6-days"
+    },
+    {
+      "id": "fm_restoration_exceeded",
+      "display_name": "TS 3.7.12.A 7-day restoration time exceeded",
+      "properties": {
+        "match_key": "FailureMode:ts-restoration-time-exceeded"
+      },
+      "type": "FailureMode",
+      "description": "Because the unsatisfactory results were not reported until 9/24/2025, the seven-day restoration time required by TS 3.7.12.A (clock started 9/16/2025 when the fan was removed from service) was exceeded.",
+      "match_key": "FailureMode:ts-3-7-12-a-7-day-restoration-time-exceeded"
+    },
+    {
+      "id": "cons_condition_prohibited",
+      "display_name": "Condition prohibited by Technical Specifications / 21 PREVS inoperable beyond allowed restoration time",
+      "properties": {
+        "match_key": "Consequence:condition-prohibited-by-ts"
+      },
+      "type": "Consequence",
+      "start": "2025-09-16",
+      "end": "2025-09-25T10:46",
+      "duration": "approx. 9 days",
+      "tz": null,
+      "match_key": "Consequence:condition-prohibited-by-technical-specifications-21-prevs-inoperable-beyond-allowed-restoration-time"
+    },
+    {
+      "id": "ca_trays_reseated",
+      "display_name": "Remove and reseat all filter trays",
+      "properties": {
+        "match_key": "CorrectiveAction:remove-reseat-filter-trays"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:remove-and-reseat-all-filter-trays"
+    },
+    {
+      "id": "ca_hurb",
+      "display_name": "Conduct prompt investigation and Human Performance Review Board (HURB)",
+      "properties": {
+        "match_key": "CorrectiveAction:hurb-investigation"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:conduct-prompt-investigation-and-human-performance-review-board-hurb"
+    },
+    {
+      "id": "ca_revise_stp",
+      "display_name": "Revise STP 21 Penetration Room Exhaust Filter Test procedure",
+      "properties": {
+        "match_key": "CorrectiveAction:revise-stp-procedure"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-stp-21-penetration-room-exhaust-filter-test-procedure"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_nureg1022",
+      "display_name": "NUREG-1022, Revision 3",
+      "properties": {
+        "match_key": "RegulatoryReference:nureg-1022-rev-3"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "standard/guidance",
+      "match_key": "RegulatoryReference:nureg-1022-revision-3"
+    },
+    {
+      "id": "rr_ts37122",
+      "display_name": "TS 3.7.12.A",
+      "properties": {
+        "match_key": "RegulatoryReference:ts-3-7-12-a"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-3-7-12-a"
+    },
+    {
+      "id": "ler_317_2016_004",
+      "display_name": "LER 317-2016-004-00",
+      "properties": {
+        "match_key": "LER:317-2016-004"
+      },
+      "type": "LER",
+      "key": "317-2016-004-00",
+      "stub": true,
+      "title": "High Energy Line Break Barrier Breeched Due to Human Performance Error Causing Both Service Water Trains to be Inoperable",
+      "plant": "Calvert Cliffs Nuclear Power Plant, Unit 1",
+      "match_key": "LER:317-2016-004-00"
+    },
+    {
+      "id": "ler_317_2018_004",
+      "display_name": "LER 317-2018-004-00",
+      "properties": {
+        "match_key": "LER:317-2018-004"
+      },
+      "type": "LER",
+      "key": "317-2018-004-00",
+      "stub": true,
+      "title": "Unauthorized Unescorted Access to the Protected Area Allowed due to Human Performance Error",
+      "plant": "Calvert Cliffs Nuclear Power Plant, Unit 1",
+      "match_key": "LER:317-2018-004-00"
+    },
+    {
+      "id": "ler_317_2021_001",
+      "display_name": "LER 317-2021-001-00",
+      "properties": {
+        "match_key": "LER:317-2021-001"
+      },
+      "type": "LER",
+      "key": "317-2021-001-00",
+      "stub": true,
+      "title": "1A Diesel Generator Inoperable Due to Potential Transformer Failure",
+      "plant": "Calvert Cliffs Nuclear Power Plant, Unit 1",
+      "match_key": "LER:317-2021-001-00"
+    },
+    {
+      "id": "ler_318_2019_001",
+      "display_name": "LER 318-2019-001-00",
+      "properties": {
+        "match_key": "LER:318-2019-001"
+      },
+      "type": "LER",
+      "key": "318-2019-001-00",
+      "stub": true,
+      "title": "Misapplication of Technical Specification Following Failed Surveillance Resulted in Operation Prohibited by Technical Specifications",
+      "plant": "Calvert Cliffs Nuclear Power Plant, Unit 2",
+      "match_key": "LER:318-2019-001-00"
+    },
+    {
+      "id": "ler_318_2021_004",
+      "display_name": "LER 318-2021-004-00",
+      "properties": {
+        "match_key": "LER:318-2021-004"
+      },
+      "type": "LER",
+      "key": "318-2021-004-00",
+      "stub": true,
+      "title": "Unit 2 Manual Reactor Trip Due to Lowering Steam Generator Levels",
+      "plant": "Calvert Cliffs Nuclear Power Plant, Unit 2",
+      "match_key": "LER:318-2021-004-00"
+    },
+    {
+      "id": "ler_318_2022_002",
+      "display_name": "LER 318-2022-002-00",
+      "properties": {
+        "match_key": "LER:318-2022-002"
+      },
+      "type": "LER",
+      "key": "318-2022-002-00",
+      "stub": true,
+      "title": "Unplanned Safety Injection Actuation Signal due to Human Error",
+      "plant": "Calvert Cliffs Nuclear Power Plant, Unit 2",
+      "match_key": "LER:318-2022-002-00"
+    },
+    {
+      "id": "ler_318_2024_002",
+      "display_name": "LER 318-2024-002-00",
+      "properties": {
+        "match_key": "LER:318-2024-002"
+      },
+      "type": "LER",
+      "key": "318-2024-002-00",
+      "stub": true,
+      "title": "Automatic Reactor Trip Due to Main Turbine Loss of Load",
+      "plant": "Calvert Cliffs Nuclear Power Plant, Unit 2",
+      "match_key": "LER:318-2024-002-00"
+    },
+    {
+      "id": "ler_318_2024_004",
+      "display_name": "LER 318-2024-004-00",
+      "properties": {
+        "match_key": "LER:318-2024-004"
+      },
+      "type": "LER",
+      "key": "318-2024-004-00",
+      "stub": true,
+      "title": "Automatic Reactor Trip Due to Main Turbine Loss of Load",
+      "plant": "Calvert Cliffs Nuclear Power Plant, Unit 2",
+      "match_key": "LER:318-2024-004-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_prevs",
+      "evidence": null
+    },
+    {
+      "source": "c_filters",
+      "relation": "PART_OF",
+      "target": "sys_prevs",
+      "evidence": null
+    },
+    {
+      "source": "fm_calc_error",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_calc_error",
+      "relation": "LEADS_TO",
+      "target": "fm_unsat_result_missed",
+      "evidence": null
+    },
+    {
+      "source": "fm_unsat_result_missed",
+      "relation": "LEADS_TO",
+      "target": "fm_restoration_exceeded",
+      "evidence": null
+    },
+    {
+      "source": "fm_restoration_exceeded",
+      "relation": "LEADS_TO",
+      "target": "cons_condition_prohibited",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_trays_reseated",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_hurb",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_revise_stp",
+      "evidence": null
+    },
+    {
+      "source": "cons_condition_prohibited",
+      "relation": "MITIGATED_BY",
+      "target": "rr_ts37122",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_317_2016_004",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_317_2018_004",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_317_2021_001",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_318_2019_001",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_318_2021_004",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_318_2022_002",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_318_2024_002",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_318_2024_004",
+      "evidence": null
+    }
+  ],
+  "chain": "human performance / calculation errors [cause TBD] -> technicians incorrectly determine STP UNSAT results as satisfactory -> error goes unidentified for 6 days -> TS 3.7.12.A 7-day restoration time exceeded -> condition prohibited by Technical Specifications (21 PREVS inoperable, restored 9/25/2025 1046)",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4"
+  ],
+  "notes": "Official cause_code is TBD/provisional per form fields, despite narrative clearly describing human performance/calculation errors; category kept as 'provisional' per rule 4 authoritative-copy instruction. Filter tray clearance differences discovered during troubleshooting are noted but narrative does not establish them as the root cause of the calculation error, so not modeled as a separate FailureMode in the causal chain -- only as a Component. PREVS design/actuation description (ESFAS/CIS) is design context, not modeled as separate system/edges beyond the System node itself since PREVS is the directly involved system. Many previous-occurrence LERs listed are for Unit 1 (docket 317) vs this Unit 2 (docket 318) event; captured as stubs with plant field noting unit distinction."
+}

@@ -1,0 +1,460 @@
+{
+  "ler_number": "313-2024-002-00",
+  "identity": {
+    "accession_number": "ML25037A301",
+    "docket": "05000313",
+    "plant_name": "Arkansas Nuclear",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2024-12-10",
+    "report_date": "2025-02-06",
+    "operating_mode": "1",
+    "power_level": 67,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Inoperable Containment Isolation Boundary"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)",
+      "10 CFR 50.73(a)(2)(ii)(B)",
+      "10 CFR 50.73(a)(2)(v)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "D",
+      "system": "NH",
+      "component": "PEN",
+      "manufacturer": "8130",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The Root Cause of this event is inadequate procedure quality due to procedures associated with control of containment penetrations and Category E components contained misleading, interpretative, and incomplete information.",
+    "cause_code": "D",
+    "category": "Defective Procedure",
+    "theme": "procedure quality / containment penetration configuration control",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 313-2024-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "313-2024-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:313-2024-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Arkansas Nuclear Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000313",
+      "match_key": "Unit:05000313"
+    },
+    {
+      "id": "cause",
+      "display_name": "Defective Procedure (D)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "D",
+      "category": "Defective Procedure",
+      "theme": "procedure quality / containment penetration configuration control",
+      "proximate_text": "The Root Cause of this event is inadequate procedure quality due to procedures associated with control of containment penetrations and Category E components contained misleading, interpretative, and incomplete information.",
+      "provisional": false,
+      "match_key": "Cause:Defective Procedure"
+    },
+    {
+      "id": "sys_nh",
+      "display_name": "Reactor Building Isolation System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "NH",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "containment isolation boundary",
+      "match_key": "System:NH"
+    },
+    {
+      "id": "c_pen_ba",
+      "display_name": "Breathing Air Penetration (outside/inside isolation valves)",
+      "properties": {
+        "penetration": "Breathing Air"
+      },
+      "type": "Component",
+      "eiis_code": "PEN",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": "8130",
+      "inferred_code": false,
+      "match_key": "Component:PEN"
+    },
+    {
+      "id": "c_valve_ba_out",
+      "display_name": "Breathing Air outside Reactor Building isolation valve",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": true,
+      "match_key": "Component:ISV"
+    },
+    {
+      "id": "c_valve_ba_in",
+      "display_name": "Breathing Air inside Reactor Building isolation valve",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": true,
+      "match_key": "Component:ISV"
+    },
+    {
+      "id": "c_pen_ia",
+      "display_name": "Instrument Air Penetration to Reactor Building Purge Valves",
+      "properties": {
+        "penetration": "Instrument Air"
+      },
+      "type": "Component",
+      "eiis_code": "PEN",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": "8130",
+      "inferred_code": false,
+      "match_key": "Component:PEN"
+    },
+    {
+      "id": "c_valve_ia_out",
+      "display_name": "Instrument Air outside penetration manual valve",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:instrument-air-outside-penetration-manual-valve"
+    },
+    {
+      "id": "c_checkvalve",
+      "display_name": "Breathing Air penetration outside check valve (mitigating)",
+      "properties": {
+        "role": "identified during EOC; provided backup leak mitigation"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:breathing-air-penetration-outside-check-valve-mitigating"
+    },
+    {
+      "id": "fm_procdefect",
+      "display_name": "Procedures contained misleading/incomplete direction on containment penetration and Category E component control",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Root-cause procedural defect for containment penetration/Category E component configuration control",
+      "match_key": "FailureMode:procedures-contained-misleading-incomplete-direction-on-containment-penetration-and-category-e-component-control"
+    },
+    {
+      "id": "fm_hp_lapses",
+      "display_name": "Lapses in Human Performance tools and Operator Fundamentals",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Direct cause: series of human performance lapses that allowed valves to remain open",
+      "match_key": "FailureMode:lapses-in-human-performance-tools-and-operator-fundamentals"
+    },
+    {
+      "id": "fm_ba_open",
+      "display_name": "Breathing Air outside/inside Reactor Building isolation valves left open",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Both valves in the Breathing Air penetration flowpath found open",
+      "match_key": "FailureMode:breathing-air-outside-inside-reactor-building-isolation-valves-left-open"
+    },
+    {
+      "id": "fm_ia_open",
+      "display_name": "Instrument Air outside penetration manual valve left open",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Found open during extent of condition review",
+      "match_key": "FailureMode:instrument-air-outside-penetration-manual-valve-left-open"
+    },
+    {
+      "id": "cons_boundary",
+      "display_name": "Reactor Building containment isolation boundary inoperable / TS-prohibited condition",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2024-12-10T09:30",
+      "end": "2024-12-10T15:41",
+      "duration": "~6h11m",
+      "tz": null,
+      "match_key": "Consequence:reactor-building-containment-isolation-boundary-inoperable-ts-prohibited-condition"
+    },
+    {
+      "id": "ca_close_valves",
+      "display_name": "Closed the open Reactor Building isolation valves in both the Breathing Air and Instrument Air Line to Reactor Building Purge Valves penetrations",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:closed-the-open-reactor-building-isolation-valves-in-both-the-breathing-air-and-instrument-air-line-to-reactor-building-purge-valves-penetrations"
+    },
+    {
+      "id": "ca_closure_sheet",
+      "display_name": "Completed ANO-1 Containment Closure Determination Sheet and verified accessible component positions",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:completed-ano-1-containment-closure-determination-sheet-and-verified-accessible-component-positions"
+    },
+    {
+      "id": "ca_revise_procs",
+      "display_name": "Revise two procedures to improve clarity on containment penetrations and Category E components",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-two-procedures-to-improve-clarity-on-containment-penetrations-and-category-e-components"
+    },
+    {
+      "id": "ca_ops_standards",
+      "display_name": "Corrective action plan to reset/reinforce Operations performance standards and management ownership",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:corrective-action-plan-to-reset-reinforce-operations-performance-standards-and-management-ownership"
+    },
+    {
+      "id": "ca_extent_review",
+      "display_name": "Extent of cause review of additional procedures for misleading/incomplete direction",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:extent-of-cause-review-of-additional-procedures-for-misleading-incomplete-direction"
+    },
+    {
+      "id": "mfr_8130",
+      "display_name": "Manufacturer code 8130",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "8130",
+      "match_key": "Manufacturer:8130"
+    },
+    {
+      "id": "rr_1",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_2",
+      "display_name": "10 CFR 50.73(a)(2)(ii)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-ii-b"
+    },
+    {
+      "id": "rr_3",
+      "display_name": "10 CFR 50.73(a)(2)(v)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v"
+    },
+    {
+      "id": "rr_ts_3_6_1",
+      "display_name": "TS 3.6.1 Reactor Building",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-3-6-1-reactor-building"
+    },
+    {
+      "id": "rr_ts_3_6_3",
+      "display_name": "TS 3.6.3 Reactor Building Isolation Valves",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-3-6-3-reactor-building-isolation-valves"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_1",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_2",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_3",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_nh",
+      "evidence": null
+    },
+    {
+      "source": "c_valve_ba_out",
+      "relation": "PART_OF",
+      "target": "c_pen_ba",
+      "evidence": null
+    },
+    {
+      "source": "c_valve_ba_in",
+      "relation": "PART_OF",
+      "target": "c_pen_ba",
+      "evidence": null
+    },
+    {
+      "source": "c_valve_ia_out",
+      "relation": "PART_OF",
+      "target": "c_pen_ia",
+      "evidence": null
+    },
+    {
+      "source": "c_pen_ba",
+      "relation": "PART_OF",
+      "target": "sys_nh",
+      "evidence": null
+    },
+    {
+      "source": "c_pen_ia",
+      "relation": "PART_OF",
+      "target": "sys_nh",
+      "evidence": null
+    },
+    {
+      "source": "fm_procdefect",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_procdefect",
+      "relation": "LEADS_TO",
+      "target": "fm_hp_lapses",
+      "evidence": null
+    },
+    {
+      "source": "fm_hp_lapses",
+      "relation": "LEADS_TO",
+      "target": "fm_ba_open",
+      "evidence": null
+    },
+    {
+      "source": "fm_hp_lapses",
+      "relation": "LEADS_TO",
+      "target": "fm_ia_open",
+      "evidence": null
+    },
+    {
+      "source": "fm_ba_open",
+      "relation": "LEADS_TO",
+      "target": "cons_boundary",
+      "evidence": null
+    },
+    {
+      "source": "fm_ia_open",
+      "relation": "LEADS_TO",
+      "target": "cons_boundary",
+      "evidence": null
+    },
+    {
+      "source": "cons_boundary",
+      "relation": "BACKED_UP_BY",
+      "target": "c_checkvalve",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_close_valves",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_closure_sheet",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_revise_procs",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_ops_standards",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_extent_review",
+      "evidence": null
+    },
+    {
+      "source": "c_pen_ba",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_8130",
+      "evidence": null
+    },
+    {
+      "source": "c_pen_ia",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_8130",
+      "evidence": null
+    }
+  ],
+  "chain": "defective/misleading procedures for containment penetration and Category E component control [cause D] -> lapses in Human Performance tools and Operator Fundamentals -> Breathing Air inside/outside RB isolation valves left open (and, on extent-of-condition, Instrument Air outside penetration valve left open) -> Reactor Building containment isolation boundary inoperable / TS-prohibited condition [backed up by outside check valve; low risk, no actual loss of safety function]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "No previous similar events reported (narrative states 'None'), so no SIMILAR_TO edge or stub LER node emitted. Two distinct open-valve discoveries (Breathing Air penetration valves, then Instrument Air penetration valve found during extent-of-condition) modeled as parallel FailureMode nodes both leading to the same consequence. Check valve outside containment in the BA flowpath is explicitly stated to have mitigated potential release and is modeled as a backup via BACKED_UP_BY from the consequence, though it is a Component rather than a System backup. IA penetration's inside valve remained operable (closed) throughout, so that penetration's isolation function was preserved via inside valve position, but only the outside manual valve failure is modeled as the FailureMode per narrative wording."
+}

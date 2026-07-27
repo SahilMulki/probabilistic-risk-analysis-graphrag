@@ -1,0 +1,401 @@
+{
+  "ler_number": "265-2022-002-00",
+  "identity": {
+    "accession_number": "ML22244A135",
+    "docket": "05000265",
+    "plant_name": "Quad Cities",
+    "unit": 2,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2022-07-04",
+    "report_date": "2022-09-01",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": "55975",
+    "ens_date": "2022-07-06",
+    "ens_time": "0557 EDT",
+    "title": "Manual Scram Due To Feedwater Regulator Valve Failure Decreasing Reactor Water Level"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "X",
+      "system": "JB",
+      "component": "FSV",
+      "manufacturer": "P070",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "foreign material partially or completely blocking the hydraulic oil flow internal to a servo valve [FSV] associated with the 2A FRV assembly. This caused the FRV to move rapidly from the half open position to the full closed position",
+    "cause_code": "X",
+    "category": "Other",
+    "theme": "foreign material blockage in servo valve hydraulic oil path",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 265-2022-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "265-2022-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:265-2022-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Quad Cities Unit 2",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000265",
+      "match_key": "Unit:05000265"
+    },
+    {
+      "id": "cause",
+      "display_name": "Other (X)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "X",
+      "category": "Other",
+      "theme": "foreign material blockage in servo valve hydraulic oil path",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Other"
+    },
+    {
+      "id": "sys_jb",
+      "display_name": "Feedwater",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JB"
+    },
+    {
+      "id": "sys_eccs",
+      "display_name": "Emergency Core Cooling Systems",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "backup; operable",
+      "match_key": "System:emergency-core-cooling-systems"
+    },
+    {
+      "id": "c_frv_2a",
+      "display_name": "2A Feedwater Regulating Valve",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "FCV",
+      "identifier": "2A FRV",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:FCV|2A FRV"
+    },
+    {
+      "id": "c_frv_2b",
+      "display_name": "2B Feedwater Regulating Valve",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "FCV",
+      "identifier": "2B FRV",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:FCV|2B FRV"
+    },
+    {
+      "id": "c_servo",
+      "display_name": "Servo valve (2A FRV assembly)",
+      "properties": {
+        "nomenclature": "Servo Valve"
+      },
+      "type": "Component",
+      "eiis_code": "FSV",
+      "identifier": null,
+      "model": "DES 1071, 10-S-80/50/7.2",
+      "manufacturer_code": "P070",
+      "inferred_code": false,
+      "match_key": "Component:FSV"
+    },
+    {
+      "id": "fm_foreign",
+      "display_name": "Foreign material blocking servo valve hydraulic oil flow",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Particulate in hydraulic oil (poor fluid quality) and/or parting line deformity in servo end seal ring blocked internal hydraulic oil flow",
+      "match_key": "FailureMode:foreign-material-blocking-servo-valve-hydraulic-oil-flow"
+    },
+    {
+      "id": "fm_frv_closed",
+      "display_name": "2A FRV rapidly moved to full closed and locked up",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "FRV moved rapidly from half open to full closed position and locked up, without first exhibiting position/demand deviation lockup",
+      "match_key": "FailureMode:2a-frv-rapidly-moved-to-full-closed-and-locked-up"
+    },
+    {
+      "id": "fm_single_frv_insufficient",
+      "display_name": "Single FRV incapable of maintaining vessel level at full power",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "2B FRV opened rapidly but a single 14-inch FRV could not pass sufficient flow to maintain vessel level at 100% power",
+      "match_key": "FailureMode:single-frv-incapable-of-maintaining-vessel-level-at-full-power"
+    },
+    {
+      "id": "fm_operator_no_epr",
+      "display_name": "Operators failed to perform emergency power reduction",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Control room operators did not perform an emergency power reduction that could have reduced reactor power within capability of single FRV; unfamiliarity with the failure mechanism prevented timely diagnosis within the ~30 seconds available",
+      "match_key": "FailureMode:operators-failed-to-perform-emergency-power-reduction"
+    },
+    {
+      "id": "cons_level_decrease",
+      "display_name": "Reactor vessel water level decreased to +11 inches scram threshold",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2022-07-04T01:03",
+      "end": "2022-07-04T01:04",
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:reactor-vessel-water-level-decreased-to-11-inches-scram-threshold"
+    },
+    {
+      "id": "cons_scram",
+      "display_name": "Manual reactor scram",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2022-07-04T01:04",
+      "end": null,
+      "duration": null,
+      "tz": "CDT",
+      "match_key": "Consequence:manual-reactor-scram"
+    },
+    {
+      "id": "ca_replace_servo",
+      "display_name": "Replace the 2A FRV servo",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-the-2a-frv-servo"
+    },
+    {
+      "id": "ca_filtering",
+      "display_name": "Initiate additional hydraulic fluid filtering",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:initiate-additional-hydraulic-fluid-filtering"
+    },
+    {
+      "id": "ca_servo_mfr_actions",
+      "display_name": "Evaluate/implement servo manufacturer corrective actions and install new components at next refuel outages if appropriate",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:evaluate-implement-servo-manufacturer-corrective-actions-and-install-new-components-at-next-refuel-outages-if-appropriate"
+    },
+    {
+      "id": "ca_oil_quality",
+      "display_name": "Evaluate/implement hydraulic oil quality improvement actions including PM frequency on oil filter replacement",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:evaluate-implement-hydraulic-oil-quality-improvement-actions-including-pm-frequency-on-oil-filter-replacement"
+    },
+    {
+      "id": "ca_procedure_revision",
+      "display_name": "Revise Abnormal Operating Procedures to prioritize Emergency Power Reduction before manual FRV control",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-abnormal-operating-procedures-to-prioritize-emergency-power-reduction-before-manual-frv-control"
+    },
+    {
+      "id": "mfr_parker",
+      "display_name": "Parker",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "P070",
+      "match_key": "Manufacturer:P070"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_ufsar",
+      "display_name": "UFSAR Chapter 15",
+      "properties": {
+        "type": "analysis-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ufsar-chapter-15"
+    },
+    {
+      "id": "rr_nei",
+      "display_name": "NEI 99-02 Revision 7",
+      "properties": {
+        "type": "standard/guidance"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:nei-99-02-revision-7"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jb",
+      "evidence": null
+    },
+    {
+      "source": "c_frv_2a",
+      "relation": "PART_OF",
+      "target": "sys_jb",
+      "evidence": null
+    },
+    {
+      "source": "c_frv_2b",
+      "relation": "PART_OF",
+      "target": "sys_jb",
+      "evidence": null
+    },
+    {
+      "source": "c_servo",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_parker",
+      "evidence": null
+    },
+    {
+      "source": "fm_foreign",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_foreign",
+      "relation": "LEADS_TO",
+      "target": "fm_frv_closed",
+      "evidence": null
+    },
+    {
+      "source": "fm_frv_closed",
+      "relation": "LEADS_TO",
+      "target": "fm_single_frv_insufficient",
+      "evidence": null
+    },
+    {
+      "source": "fm_frv_closed",
+      "relation": "LEADS_TO",
+      "target": "fm_operator_no_epr",
+      "evidence": null
+    },
+    {
+      "source": "fm_single_frv_insufficient",
+      "relation": "LEADS_TO",
+      "target": "cons_level_decrease",
+      "evidence": null
+    },
+    {
+      "source": "fm_operator_no_epr",
+      "relation": "LEADS_TO",
+      "target": "cons_level_decrease",
+      "evidence": null
+    },
+    {
+      "source": "cons_level_decrease",
+      "relation": "LEADS_TO",
+      "target": "cons_scram",
+      "evidence": null
+    },
+    {
+      "source": "cons_scram",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_eccs",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_servo",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_filtering",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_servo_mfr_actions",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_oil_quality",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procedure_revision",
+      "evidence": null
+    }
+  ],
+  "chain": "foreign material blocks servo valve hydraulic oil flow [cause X] -> 2A FRV rapidly closes and locks up -> single FRV insufficient to maintain vessel level at 100% power (parallel: operators fail to perform emergency power reduction) -> reactor water level decreases to +11in threshold -> manual scram [backup ECCS available for makeup]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Event time in narrative given as 0104 CDT (condition-prior block) vs ENS notification 0557 EDT; form event_date 2022-07-04 used. Cause code X (Other) governs category despite detailed foreign-material root cause narrative; theme captures the servo blockage mechanism. Operator failure to perform emergency power reduction modeled as a parallel contributing FailureMode per narrative's explicit 'additional contributing cause' language, not merged with the servo failure. No previous occurrences identified in station/INPO database review, so no SIMILAR_TO/stub LER emitted. SGTS mention is Safety Impact/design-context narrative (initiated but failed to achieve required flow; vacuum still maintained) -- not part of the causal chain for this scram, so not modeled as System/backup node per rule 6."
+}

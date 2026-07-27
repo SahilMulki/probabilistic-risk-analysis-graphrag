@@ -1,0 +1,276 @@
+{
+  "ler_number": "334-2021-001-00",
+  "identity": {
+    "accession_number": "ML21187A275",
+    "docket": "05000334",
+    "plant_name": "Beaver Valley",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2021-05-08",
+    "report_date": "2021-07-06",
+    "operating_mode": "4",
+    "power_level": null,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Beaver Valley Power Station, Unit No. 1 Docket No. 50-334, License No. DPR-66 LER 2021-001-00"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The direct technical cause was that 1QS-4 was restrained out of NSA per procedure 1OM-13.4.O and not returned to NSA following filling of the loop seal. The root cause was a loss of configuration control of valve 1QS-4 due to human performance errors by the Operations supervisor, who did not meet the requirements of procedure 1/2-ADM-2028, \"Temporary Configuration Control,\" and procedure NOP-OP-1002, \"Conduct of Operations,\" for logging system conditions.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "loss of configuration control / logging failure",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 334-2021-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "334-2021-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:334-2021-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Beaver Valley Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000334",
+      "match_key": "Unit:05000334"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "loss of configuration control / logging failure",
+      "proximate_text": "The direct technical cause was that 1QS-4 was restrained out of NSA per procedure 1OM-13.4.O and not returned to NSA following filling of the loop seal. The root cause was a loss of configuration control of valve 1QS-4 due to human performance errors by the Operations supervisor, who did not meet the requirements of procedure 1/2-ADM-2028, \"Temporary Configuration Control,\" and procedure NOP-OP-1002, \"Conduct of Operations,\" for logging system conditions.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_qs",
+      "display_name": "Quench Spray",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BE",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BE"
+    },
+    {
+      "id": "sys_ci",
+      "display_name": "Containment Isolation",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BD",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BD"
+    },
+    {
+      "id": "c_1qs4",
+      "display_name": "1QS-4 (Train B Quench Spray Pump Discharge Check Valve)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "1QS-4",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:1qs-4-train-b-quench-spray-pump-discharge-check-valve"
+    },
+    {
+      "id": "c_mov101b",
+      "display_name": "MOV-1QS-101B (Train B Outside Containment Isolation Valve)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": "MOV-1QS-101B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": true,
+      "match_key": "Component:ISV|MOV-1QS-101B"
+    },
+    {
+      "id": "fm_restrained",
+      "display_name": "1QS-4 restrained open per procedure 1OM-13.4.O for loop seal fill",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Check valve 1QS-4 restrained open by swing arm to support gravity filling of quench spray loop seal from RWST.",
+      "match_key": "FailureMode:1qs-4-restrained-open-per-procedure-1om-13-4-o-for-loop-seal-fill"
+    },
+    {
+      "id": "fm_nolog",
+      "display_name": "Non-NSA position not logged / working procedure misplaced",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "No log entry made per NOP-OP-1002 documenting the non-NSA position of 1QS-4; working copy of 1OM-13.4.O was misplaced, leading supervisor to assume restoration steps were complete.",
+      "match_key": "FailureMode:non-nsa-position-not-logged-working-procedure-misplaced"
+    },
+    {
+      "id": "fm_notrestored",
+      "display_name": "1QS-4 not returned to NSA prior to mode entry",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Restraint on 1QS-4 was not removed prior to entering a mode of applicability for containment isolation TS LCO 3.6.3.",
+      "match_key": "FailureMode:1qs-4-not-returned-to-nsa-prior-to-mode-entry"
+    },
+    {
+      "id": "cons_inop",
+      "display_name": "Containment penetration inoperable / TS LCO 3.6.3 not met / entered Modes 4 and 3 without meeting LCO 3.0.4",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2021-05-08T03:56",
+      "end": "2021-05-08T15:41",
+      "duration": "11:45",
+      "tz": null,
+      "match_key": "Consequence:containment-penetration-inoperable-ts-lco-3-6-3-not-met-entered-modes-4-and-3-without-meeting-lco-3-0-4"
+    },
+    {
+      "id": "ca_removed",
+      "display_name": "Remove restraint and return 1QS-4 to normal system arrangement",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:remove-restraint-and-return-1qs-4-to-normal-system-arrangement"
+    },
+    {
+      "id": "ca_revise",
+      "display_name": "Revise 1OM-13.4.O to require adding 1QS-3/1QS-4 to containment penetration log when restrained open",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-1om-13-4-o-to-require-adding-1qs-3-1qs-4-to-containment-penetration-log-when-restrained-open"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts363",
+      "display_name": "TS 3.6.3 Containment Isolation Valves",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-3-6-3-containment-isolation-valves"
+    },
+    {
+      "id": "rr_ts304",
+      "display_name": "TS LCO 3.0.4",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-lco-3-0-4"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts363",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts304",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_qs",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ci",
+      "evidence": null
+    },
+    {
+      "source": "fm_restrained",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_restrained",
+      "relation": "LEADS_TO",
+      "target": "fm_nolog",
+      "evidence": null
+    },
+    {
+      "source": "fm_nolog",
+      "relation": "LEADS_TO",
+      "target": "fm_notrestored",
+      "evidence": null
+    },
+    {
+      "source": "fm_notrestored",
+      "relation": "LEADS_TO",
+      "target": "cons_inop",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_removed",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_revise",
+      "evidence": null
+    }
+  ],
+  "chain": "loss of configuration control / logging failure [cause TBD] -> 1QS-4 restrained open for loop seal fill -> non-NSA position not logged / procedure misplaced -> 1QS-4 not returned to NSA before mode entry -> containment penetration inoperable, LCO 3.6.3/3.0.4 not met for 11h45m",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code is TBD/provisional per form-366 fields despite narrative attributing root cause to human performance/configuration control errors; category left as 'provisional' per rule 4. No block_13 data provided in source fields. Quench spray train B remained operable throughout (per narrative) but this refers to the pump system function, not a backup to the containment isolation function itself, so no BACKED_UP_BY edge was asserted for containment isolation. MOV-1QS-101B modeled as component since it is the outside isolation valve for the same penetration and referenced in recovery procedures, not as a backup system. No previous similar events per LER text (three-year review found none) so no stub LER/SIMILAR_TO edge emitted."
+}

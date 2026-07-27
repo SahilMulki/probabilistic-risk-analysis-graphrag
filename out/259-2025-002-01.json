@@ -1,0 +1,388 @@
+{
+  "ler_number": "259-2025-002-01",
+  "identity": {
+    "accession_number": "ML26119A030",
+    "docket": "05000259",
+    "plant_name": "Browns Ferry",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2025-12-17",
+    "report_date": "2026-04-28",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "– Unit 1/2 480V Load Shed"
+  },
+  "reporting_basis": {
+    "reported_under": [],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "the cause was due to the “connect” OPR contact of the 33 Position Switch found not closed, which prevented the load to be shed (simulated) from the CBVB A ... This was due to a failure of the 33 position switch to adequately close the connect contact. ... The contributing cause is that the switch verification section contained in the breaker procedure does not contain steps to verify that the subject breakers tripping circuit's 'connect' OPR contact of the 33 position switch is closed.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "position-switch maladjustment / procedure verification gap",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 259-2025-XXX-01",
+      "properties": {},
+      "type": "LER",
+      "key": "259-2025-002-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:259-2025-002-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Browns Ferry Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000259",
+      "match_key": "Unit:05000259"
+    },
+    {
+      "id": "cause",
+      "display_name": "TBD Cause",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "position-switch maladjustment / procedure verification gap",
+      "proximate_text": "the cause was due to the “connect” OPR contact of the 33 Position Switch found not closed, which prevented the load to be shed (simulated) from the CBVB A ... This was due to a failure of the 33 position switch to adequately close the connect contact. ... The contributing cause is that the switch verification section contained in the breaker procedure does not contain steps to verify that the subject breakers tripping circuit's 'connect' OPR contact of the 33 position switch is closed.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_je",
+      "display_name": "480V Load Shed Logic",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JE",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JE"
+    },
+    {
+      "id": "sys_ec",
+      "display_name": "480V Control Bay Vent Board A",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "EC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:EC"
+    },
+    {
+      "id": "sys_ek",
+      "display_name": "Diesel Generator A",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "EK",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; remained capable of performing safety function",
+      "match_key": "System:EK"
+    },
+    {
+      "id": "c_breaker",
+      "display_name": "480V CBVB A Normal Feeder Breaker",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "BFN-1-BKR-231-0001A/2B",
+      "model": "NLI-LGSB11-NT08N1-EODC-TVA-SR",
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:480v-cbvb-a-normal-feeder-breaker"
+    },
+    {
+      "id": "c_switch",
+      "display_name": "33 Position Switch",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "33",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:33"
+    },
+    {
+      "id": "fm_switch",
+      "display_name": "33 position switch OPR connect contact not closed",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The 33 position switch's OPR (versus TEST) connect contact was found not closed, due to switch maladjustment; the OPR and TEST contacts are mechanically linked/interlocked such that when OPR is open, TEST is closed.",
+      "match_key": "FailureMode:33-position-switch-opr-connect-contact-not-closed"
+    },
+    {
+      "id": "fm_procgap",
+      "display_name": "Breaker procedure lacked OPR contact verification step",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The switch verification section of the breaker procedure did not contain steps to verify that the tripping circuit's connect OPR contact of the 33 position switch is closed, so as-left testing during breaker replacement relied on the mechanically-linked TEST contact reading instead.",
+      "match_key": "FailureMode:breaker-procedure-lacked-opr-contact-verification-step"
+    },
+    {
+      "id": "fm_trip_open",
+      "display_name": "Tripping circuit for CBVB A Normal Feeder Breaker open",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "With the 33 position switch OPR contact open, the tripping circuit for the 480V CBVB A Normal Feeder Breaker was not closed, preventing the breaker from tripping open to shed load.",
+      "match_key": "FailureMode:tripping-circuit-for-cbvb-a-normal-feeder-breaker-open"
+    },
+    {
+      "id": "fm_loadshed_fail",
+      "display_name": "480V Load Shed Logic did not shed CBVB A loads",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Loads on the 480V CBVB A would not have shed on receipt of a loss of offsite power and accident signal from Unit 1 and/or Unit 2.",
+      "match_key": "FailureMode:480v-load-shed-logic-did-not-shed-cbvb-a-loads"
+    },
+    {
+      "id": "cons_lco",
+      "display_name": "480V Load Shed Logic (Div I & II) did not meet TS LCO 3.8.1 / inoperable",
+      "properties": {
+        "note": "Discovered/corrected November 5-7, 2025; past operability evaluation completed December 17, 2025; no DG A overload occurred - DG A remained capable of its safety function"
+      },
+      "type": "Consequence",
+      "start": "2022-11-05",
+      "end": "2025-11-05",
+      "duration": "multiple occurrences over 3 years",
+      "tz": null,
+      "match_key": "Consequence:480v-load-shed-logic-div-i-ii-did-not-meet-ts-lco-3-8-1-inoperable"
+    },
+    {
+      "id": "ca_adjust",
+      "display_name": "Adjust breaker cradle to correct position switch state",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:adjust-breaker-cradle-to-correct-position-switch-state"
+    },
+    {
+      "id": "ca_reperform",
+      "display_name": "Reperform SR 0-SR-3.8.1.8(I) satisfactorily",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:reperform-sr-0-sr-3-8-1-8-i-satisfactorily"
+    },
+    {
+      "id": "ca_procedure",
+      "display_name": "Determine testing points and revise breaker procedures to verify connect 33 OPR contact closed",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:determine-testing-points-and-revise-breaker-procedures-to-verify-connect-33-opr-contact-closed"
+    },
+    {
+      "id": "ca_replace_switch",
+      "display_name": "Replace the subject 33 position switch",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-the-subject-33-position-switch"
+    },
+    {
+      "id": "ca_drawing_note",
+      "display_name": "Identify applicable breaker drawings to add awareness note for credible failure mode",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:identify-applicable-breaker-drawings-to-add-awareness-note-for-credible-failure-mode"
+    },
+    {
+      "id": "ca_revise_drawings",
+      "display_name": "Revise applicable breaker drawings",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-applicable-breaker-drawings"
+    },
+    {
+      "id": "mfr_squared",
+      "display_name": "Square D Services",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": null,
+      "match_key": "Manufacturer:square-d-services"
+    },
+    {
+      "id": "mfr_nli",
+      "display_name": "Nuclear Logistics, Inc.",
+      "properties": {
+        "role": "supplier of breaker part"
+      },
+      "type": "Manufacturer",
+      "code": null,
+      "match_key": "Manufacturer:nuclear-logistics-inc"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts381",
+      "display_name": "TS LCO 3.8.1",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ts-lco-3-8-1"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts381",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_je",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ec",
+      "evidence": null
+    },
+    {
+      "source": "c_switch",
+      "relation": "PART_OF",
+      "target": "c_breaker",
+      "evidence": null
+    },
+    {
+      "source": "fm_switch",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_switch",
+      "relation": "LEADS_TO",
+      "target": "fm_procgap",
+      "evidence": null
+    },
+    {
+      "source": "fm_procgap",
+      "relation": "LEADS_TO",
+      "target": "fm_trip_open",
+      "evidence": null
+    },
+    {
+      "source": "fm_trip_open",
+      "relation": "LEADS_TO",
+      "target": "fm_loadshed_fail",
+      "evidence": null
+    },
+    {
+      "source": "fm_loadshed_fail",
+      "relation": "LEADS_TO",
+      "target": "cons_lco",
+      "evidence": null
+    },
+    {
+      "source": "c_breaker",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_squared",
+      "evidence": null
+    },
+    {
+      "source": "c_breaker",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_nli",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_adjust",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_reperform",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procedure",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_switch",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_drawing_note",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_revise_drawings",
+      "evidence": null
+    }
+  ],
+  "chain": "33 position switch maladjustment (OPR contact not closed) [cause TBD] -> breaker procedure lacked verification step (relies on mechanically-linked TEST contact) -> tripping circuit for CBVB A Normal Feeder Breaker open -> 480V Load Shed Logic fails to shed CBVB A loads on accident signal -> TS LCO 3.8.1 not met (Div I & II inoperable, Nov 2022-Nov 2025) [DG A engineering analysis showed it remained capable of its safety function; no dedicated backup system existed]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "No official cause code was provided in FORM-366 FIELDS (TBD/provisional), so cause node is marked provisional per rule 4. LER number reconstructed from docket/date; exact LER sequence number not present in inputs, so 'XXX' placeholder used pending resolver canonicalization. Unit is ambiguous (event affects both Unit 1 and Unit 2 shared 480V CBVB A/DG A, docket given is 05000259=Unit1); modeled unit as Unit 1 per docket. No previous similar events reported (Section VII), so no SIMILAR_TO edge or stub LER emitted. DG A modeled as System since narrative explicitly discusses its operability/capability during the event window (not pure design-context, since it's directly evaluated as remaining capable), but no BACKED_UP_BY edge asserted per rule 6 since it was not a stated 'operable backup' to a failed system -- it IS the system whose overload was evaluated, not a backup that substituted for a failed function; excluded BACKED_UP_BY per Section V.A explicit statement 'There are no systems or components that could have performed the same function.'"
+}

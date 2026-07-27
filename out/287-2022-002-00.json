@@ -1,0 +1,435 @@
+{
+  "ler_number": "287-2022-002-00",
+  "identity": {
+    "accession_number": "ML22182A501",
+    "docket": "05000287",
+    "plant_name": "Oconee",
+    "unit": 3,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2022-05-06",
+    "report_date": "2022-07-01",
+    "operating_mode": "3",
+    "power_level": 19,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Revision 00 – Automatic Actuation of Emergency"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "a manufacturing deficiency within the Moore I/P transducer resulting in a faulted E/P converter that prevented the 3FDW-44 SFCV from responding to automatic and manual demand inputs",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "vendor manufacturing deficiency in I/P transducer",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 287-2022-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "287-2022-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:287-2022-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Oconee Unit 3",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000287",
+      "match_key": "Unit:05000287"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Manufacturing/Installation/Construction (B)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "vendor manufacturing deficiency in I/P transducer",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_sj",
+      "display_name": "Main Feedwater System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "sys_ba",
+      "display_name": "Emergency Feedwater System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "actuated as designed",
+      "match_key": "System:BA"
+    },
+    {
+      "id": "sys_ja",
+      "display_name": "Integrated Control System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JA"
+    },
+    {
+      "id": "c_sfcv",
+      "display_name": "3B Loop Startup Feedwater Control Valve 3FDW-44",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "FCV",
+      "identifier": "3FDW-44",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:FCV|3FDW-44"
+    },
+    {
+      "id": "c_cnv",
+      "display_name": "Voltage-to-Pneumatic (E/P) Converter",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "CNV",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": "M422",
+      "inferred_code": false,
+      "match_key": "Component:CNV"
+    },
+    {
+      "id": "c_ip",
+      "display_name": "Current-to-Pneumatic (I/P) Transducer",
+      "properties": {
+        "note": "sub-assembly of E/P converter"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:current-to-pneumatic-i-p-transducer"
+    },
+    {
+      "id": "c_block",
+      "display_name": "3FDW-42 (SFCV inlet block valve)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "3FDW-42",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:3fdw-42-sfcv-inlet-block-valve"
+    },
+    {
+      "id": "fm_ip",
+      "display_name": "I/P transducer manufacturing deficiency causing elevated zero condition",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Failed I/P transducer within the E/P converter had an elevated zero condition and would not output less than ~67%.",
+      "match_key": "FailureMode:i-p-transducer-manufacturing-deficiency-causing-elevated-zero-condition"
+    },
+    {
+      "id": "fm_ep",
+      "display_name": "E/P converter faulted, unable to command valve closed",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Faulted E/P converter prevented 3FDW-44 from responding to automatic and manual demand inputs, holding valve at ~67% open minimum.",
+      "match_key": "FailureMode:e-p-converter-faulted-unable-to-command-valve-closed"
+    },
+    {
+      "id": "fm_sfcv",
+      "display_name": "SFCV 3FDW-44 unable to throttle closed",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "3FDW-44 could not be throttled closed below approximately 67%, automatically or manually.",
+      "match_key": "FailureMode:sfcv-3fdw-44-unable-to-throttle-closed"
+    },
+    {
+      "id": "fm_overfill",
+      "display_name": "Excessive feedwater flow causing high 3B SG level",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Malfunctioning SFCV resulted in excessive feedwater flow leading to high level in 3B SG.",
+      "match_key": "FailureMode:excessive-feedwater-flow-causing-high-3b-sg-level"
+    },
+    {
+      "id": "cons_trip",
+      "display_name": "SG overfill protection trip of Main FDW pumps and automatic EFW actuation",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2022-05-06T23:10",
+      "end": null,
+      "duration": null,
+      "tz": "EDT",
+      "match_key": "Consequence:sg-overfill-protection-trip-of-main-fdw-pumps-and-automatic-efw-actuation"
+    },
+    {
+      "id": "ca_replace_ep",
+      "display_name": "Replace 3FDW-44 E/P converter",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-3fdw-44-e-p-converter"
+    },
+    {
+      "id": "ca_vendor_analysis",
+      "display_name": "Send failed I/P transducer to vendor for analysis",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:send-failed-i-p-transducer-to-vendor-for-analysis"
+    },
+    {
+      "id": "ca_extent_replace",
+      "display_name": "Replace SFCV I/P units on Unit 2 and Unit 3 as extent of condition",
+      "properties": {
+        "note": "Unit 2 and 3 replacements completed in most recent outages for each unit"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-sfcv-i-p-units-on-unit-2-and-unit-3-as-extent-of-condition"
+    },
+    {
+      "id": "ca_reliability_eval",
+      "display_name": "Evaluate alternatives to improve reliability of E/P units",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:evaluate-alternatives-to-improve-reliability-of-e-p-units"
+    },
+    {
+      "id": "mfr_moore",
+      "display_name": "Moore",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "M422",
+      "match_key": "Manufacturer:M422"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5072",
+      "display_name": "10 CFR 50.72(b)(3)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-3-iv-a"
+    },
+    {
+      "id": "ler_2018",
+      "display_name": "LER 269-2018-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "269-2018-001-00",
+      "stub": true,
+      "title": "E/P converter failure event",
+      "plant": "Oconee Nuclear Station",
+      "match_key": "LER:269-2018-001-00"
+    },
+    {
+      "id": "ler_2015",
+      "display_name": "LER 287-2015-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "287-2015-001-00",
+      "stub": true,
+      "title": "E/P converter failure event",
+      "plant": "Oconee Nuclear Station",
+      "match_key": "LER:287-2015-001-00"
+    },
+    {
+      "id": "ler_2013",
+      "display_name": "LER 287-2013-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "287-2013-001-00",
+      "stub": true,
+      "title": "E/P converter failure event",
+      "plant": "Oconee Nuclear Station",
+      "match_key": "LER:287-2013-001-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sj",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ba",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ja",
+      "evidence": null
+    },
+    {
+      "source": "c_sfcv",
+      "relation": "PART_OF",
+      "target": "sys_sj",
+      "evidence": null
+    },
+    {
+      "source": "c_ip",
+      "relation": "PART_OF",
+      "target": "c_cnv",
+      "evidence": null
+    },
+    {
+      "source": "fm_ip",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_ip",
+      "relation": "LEADS_TO",
+      "target": "fm_ep",
+      "evidence": null
+    },
+    {
+      "source": "fm_ep",
+      "relation": "LEADS_TO",
+      "target": "fm_sfcv",
+      "evidence": null
+    },
+    {
+      "source": "fm_sfcv",
+      "relation": "LEADS_TO",
+      "target": "fm_overfill",
+      "evidence": null
+    },
+    {
+      "source": "fm_overfill",
+      "relation": "LEADS_TO",
+      "target": "cons_trip",
+      "evidence": null
+    },
+    {
+      "source": "cons_trip",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_ba",
+      "evidence": null
+    },
+    {
+      "source": "c_cnv",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_moore",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_ep",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_vendor_analysis",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_extent_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_reliability_eval",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_2018",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_2015",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_2013",
+      "evidence": null
+    }
+  ],
+  "chain": "Moore I/P transducer manufacturing deficiency [cause B] -> E/P converter faults (elevated zero, min ~67% output) -> 3FDW-44 SFCV cannot throttle closed -> excessive FDW flow / high 3B SG level -> SG overfill protection trips Main FDW pumps -> automatic EFW actuation [backed up by EFW system operating as designed; additional defense-in-depth via cross-tie, PSW, SSF, FLEX]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q9",
+    "Q14"
+  ],
+  "notes": "Plant, unit, reactor type, and NSS vendor were not populated in FORM-366 FIELDS identity block but are stated explicitly in the narrative header (Oconee Nuclear Station Unit 3, docket 05000287, B&W PWR) and are filled accordingly. ENS number/date recovered from narrative (55888, 5/7/2022) since FORM-366 fields left them null. Three prior similar LERs cited as stubs with keys exactly as stated in narrative (269-2018-001, 287-2015-001, 287-2013-001); a fourth related LER was mentioned only in aggregate ('4 related Oconee LERs') without full identification and is not separately stubbed. TBV E/P failure trend (summer 2021) discussed as background/extent-of-condition context, not a separate reportable event, so not modeled as its own LER/consequence. HPI/CB, TBV mentions in Background are design-context only (illustrating similar I/P applications) and not modeled as System nodes since not involved in this event's chain."
+}

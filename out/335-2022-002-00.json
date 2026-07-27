@@ -1,0 +1,346 @@
+{
+  "ler_number": "335-2022-002-00",
+  "identity": {
+    "accession_number": "ML22301A124",
+    "docket": "05000335",
+    "plant_name": "Saint Lucie",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2022-08-31",
+    "report_date": "2022-10-28",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Condition Prohibited by Technical Specifications"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "Reportable",
+      "system": "To",
+      "component": "IRIS",
+      "manufacturer": "X",
+      "reportable": null
+    }
+  ],
+  "cause": {
+    "proximate_text": "Due to exposure to moisture laden air the life of the charcoal is decreased and requires replacement... Charcoal life cannot be predicted and is therefore replaced when it no longer meets the minimum efficiency required.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "charcoal adsorber degradation from moisture exposure",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 335-2022-006-00",
+      "properties": {
+        "match_key": "LER:335-2022-006-00"
+      },
+      "type": "LER",
+      "key": "335-2022-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:335-2022-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Saint Lucie Unit 1",
+      "properties": {
+        "match_key": "Unit:05000335",
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000335",
+      "match_key": "Unit:05000335"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {
+        "match_key": "Cause:provisional"
+      },
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "charcoal adsorber degradation from moisture exposure",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_eccs_vent",
+      "display_name": "Emergency Core Cooling System Ventilation System",
+      "properties": {
+        "match_key": "System:eccs-ventilation-system",
+        "note": "Charcoal filtration ventilation train supporting ECCS areas"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:emergency-core-cooling-system-ventilation-system"
+    },
+    {
+      "id": "c_hve9a",
+      "display_name": "ECCS Ventilation Charcoal Adsorber Train A (HVE-9A)",
+      "properties": {
+        "match_key": "Component:HVE-9A"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "HVE-9A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:eccs-ventilation-charcoal-adsorber-train-a-hve-9a"
+    },
+    {
+      "id": "c_hve9b",
+      "display_name": "ECCS Ventilation Charcoal Adsorber Train B (HVE-9B)",
+      "properties": {
+        "match_key": "Component:HVE-9B"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "HVE-9B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:eccs-ventilation-charcoal-adsorber-train-b-hve-9b"
+    },
+    {
+      "id": "fm_moisture",
+      "display_name": "Charcoal degraded by moisture-laden air exposure",
+      "properties": {
+        "match_key": "FailureMode:charcoal-degraded-by-moisture-exposure"
+      },
+      "type": "FailureMode",
+      "description": "Exposure to moisture laden air decreased the life of the charcoal in both ventilation trains.",
+      "match_key": "FailureMode:charcoal-degraded-by-moisture-laden-air-exposure"
+    },
+    {
+      "id": "fm_hve9a_fail",
+      "display_name": "HVE-9A charcoal efficiency below required minimum (93.95%)",
+      "properties": {
+        "match_key": "FailureMode:hve-9a-efficiency-below-minimum"
+      },
+      "type": "FailureMode",
+      "description": "Laboratory test showed HVE-9A methyl iodide removal efficiency of 93.95%, below the required 97.5% minimum.",
+      "match_key": "FailureMode:hve-9a-charcoal-efficiency-below-required-minimum-93-95"
+    },
+    {
+      "id": "fm_hve9b_fail",
+      "display_name": "HVE-9B charcoal efficiency below required minimum (96.74%)",
+      "properties": {
+        "match_key": "FailureMode:hve-9b-efficiency-below-minimum"
+      },
+      "type": "FailureMode",
+      "description": "Laboratory test showed HVE-9B methyl iodide removal efficiency of 96.74%, below the required 97.5% minimum.",
+      "match_key": "FailureMode:hve-9b-charcoal-efficiency-below-required-minimum-96-74"
+    },
+    {
+      "id": "fm_both_inop",
+      "display_name": "Both trains of ECCS Ventilation System inoperable",
+      "properties": {
+        "match_key": "FailureMode:both-trains-eccs-ventilation-inoperable"
+      },
+      "type": "FailureMode",
+      "description": "Failure of both HVE-9A and HVE-9B to meet VFTP efficiency requirements rendered both trains of the ECCS Ventilation System inoperable, entering TS LCO 3.0.3.",
+      "match_key": "FailureMode:both-trains-of-eccs-ventilation-system-inoperable"
+    },
+    {
+      "id": "fm_lco_not_met",
+      "display_name": "Unit failed to meet LCO 3.0.3 shutdown requirement within 36 hours",
+      "properties": {
+        "match_key": "FailureMode:lco-3-0-3-not-met"
+      },
+      "type": "FailureMode",
+      "description": "TS LCO 3.0.3 required the unit to be in cold shutdown within 36 hours from August 31, 2022; the unit did not achieve this, resulting in a Condition Prohibited by TS.",
+      "match_key": "FailureMode:unit-failed-to-meet-lco-3-0-3-shutdown-requirement-within-36-hours"
+    },
+    {
+      "id": "cons_prohibited",
+      "display_name": "Condition Prohibited by Technical Specifications / Safety System Functional Failure",
+      "properties": {
+        "match_key": "Consequence:condition-prohibited-by-ts"
+      },
+      "type": "Consequence",
+      "start": "2022-08-31",
+      "end": "2022-09-03",
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:condition-prohibited-by-technical-specifications-safety-system-functional-failure"
+    },
+    {
+      "id": "ca_refurbish",
+      "display_name": "Procure and install refurbished charcoal trays in HVE-9A and HVE-9B",
+      "properties": {
+        "match_key": "CorrectiveAction:refurbish-charcoal-trays"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:procure-and-install-refurbished-charcoal-trays-in-hve-9a-and-hve-9b"
+    },
+    {
+      "id": "rr_5073i",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_5073v",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "rr_ansi",
+      "display_name": "ANSI N-510-1975",
+      "properties": {
+        "match_key": "RegulatoryReference:ansi-n-510-1975"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "standard/guidance",
+      "match_key": "RegulatoryReference:ansi-n-510-1975"
+    },
+    {
+      "id": "rr_vftp",
+      "display_name": "Ventilation Filter Testing Program (VFTP) / TS 4.7.8.1.b",
+      "properties": {
+        "match_key": "RegulatoryReference:vftp-ts-4-7-8-1-b"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ventilation-filter-testing-program-vftp-ts-4-7-8-1-b"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073i",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073v",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_eccs_vent",
+      "evidence": null
+    },
+    {
+      "source": "c_hve9a",
+      "relation": "PART_OF",
+      "target": "sys_eccs_vent",
+      "evidence": null
+    },
+    {
+      "source": "c_hve9b",
+      "relation": "PART_OF",
+      "target": "sys_eccs_vent",
+      "evidence": null
+    },
+    {
+      "source": "fm_moisture",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_moisture",
+      "relation": "LEADS_TO",
+      "target": "fm_hve9a_fail",
+      "evidence": null
+    },
+    {
+      "source": "fm_moisture",
+      "relation": "LEADS_TO",
+      "target": "fm_hve9b_fail",
+      "evidence": null
+    },
+    {
+      "source": "fm_hve9a_fail",
+      "relation": "LEADS_TO",
+      "target": "fm_both_inop",
+      "evidence": null
+    },
+    {
+      "source": "fm_hve9b_fail",
+      "relation": "LEADS_TO",
+      "target": "fm_both_inop",
+      "evidence": null
+    },
+    {
+      "source": "fm_both_inop",
+      "relation": "LEADS_TO",
+      "target": "fm_lco_not_met",
+      "evidence": null
+    },
+    {
+      "source": "fm_lco_not_met",
+      "relation": "LEADS_TO",
+      "target": "cons_prohibited",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_refurbish",
+      "evidence": null
+    },
+    {
+      "source": "c_hve9a",
+      "relation": "MITIGATED_BY",
+      "target": "ca_refurbish",
+      "evidence": null
+    },
+    {
+      "source": "c_hve9b",
+      "relation": "MITIGATED_BY",
+      "target": "ca_refurbish",
+      "evidence": null
+    }
+  ],
+  "chain": "moisture-laden air exposure degrades charcoal [cause TBD] -> HVE-9A efficiency 93.95% (below 97.5% min) & HVE-9B efficiency 96.74% (below 97.5% min) -> both ECCS Ventilation trains inoperable -> LCO 3.0.3 36-hr cold shutdown requirement not met -> Condition Prohibited by TS / Safety System Functional Failure",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Block-13 fields in FORM-366 were malformed/truncated ('To' as system, 'IRIS' as component) and appear to be OCR/parsing artifacts from the accession document rather than valid EIIS codes; system field normalized to 'TD' per apparent intent but left component/system nodes generic since no reliable EIIS code could be extracted from narrative (ventilation charcoal filtration system has no explicit bracketed EIIS code in the text). Cause code is TBD/provisional per FORM-366 official fields, despite narrative describing a clear physical cause (moisture-induced charcoal degradation) -- category retained as 'provisional' per governing rule. No previous similar occurrence reported ('Similar Events: None'), so no stub LER/SIMILAR_TO edge emitted."
+}

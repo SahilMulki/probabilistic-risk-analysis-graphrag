@@ -1,0 +1,602 @@
+{
+  "ler_number": "346-2021-001-02",
+  "identity": {
+    "accession_number": "ML24344A257",
+    "docket": "05000346",
+    "plant_name": "Davis-Besse",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2021-02-12",
+    "report_date": "2024-12-09",
+    "operating_mode": "3",
+    "power_level": 100,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "02",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Davis-Besse Nuclear Power Station, Unit 1 Docket Number 50-346, License Number NPF-3 Licensee Event Report 2021-001-02"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)",
+      "10 CFR 50.73(a)(2)(ii)(B)",
+      "10 CFR 50.73(a)(1)",
+      "10 CFR 50.73(a)(2)(v)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "less than adequate incorporation, internalization, and anchoring of operating and in-house experiences as it pertains to the unique design vulnerabilities in the DBNPS DC distribution system; a similar issue occurred in 2010 when a component was installed onto the DC system but was not rated for the conditions present within the system, and those learnings were not anchored into design documents or specifications, resulting in EDG speed switches with components (an MOV rated 170 VDC) not rated for the maximum possible voltage seen on the ungrounded 125 VDC system",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "operating experience not incorporated into DC system design/component selection",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 346-2021-001-02",
+      "properties": {
+        "match_key": "LER:346-2021-001-02"
+      },
+      "type": "LER",
+      "key": "346-2021-001-02",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:346-2021-001-02"
+    },
+    {
+      "id": "unit",
+      "display_name": "Davis-Besse Unit 1",
+      "properties": {
+        "match_key": "Unit:05000346",
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000346",
+      "match_key": "Unit:05000346"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Manufacturing/Construction/Installation (B)",
+      "properties": {
+        "match_key": "Cause:Design-Manufacturing-Construction-Installation"
+      },
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "operating experience not incorporated into DC system design/component selection",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_ek",
+      "display_name": "Emergency Diesel Generator",
+      "properties": {
+        "match_key": "System:EK"
+      },
+      "type": "System",
+      "eiis_code": "EK",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected system",
+      "match_key": "System:EK"
+    },
+    {
+      "id": "sys_ej",
+      "display_name": "DC Electrical Distribution System",
+      "properties": {
+        "match_key": "System:EJ"
+      },
+      "type": "System",
+      "eiis_code": "EJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "involved system; source of ground",
+      "match_key": "System:EJ"
+    },
+    {
+      "id": "sys_je",
+      "display_name": "Safety Features Actuation System",
+      "properties": {
+        "match_key": "System:JE"
+      },
+      "type": "System",
+      "eiis_code": "JE",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "design context",
+      "match_key": "System:JE"
+    },
+    {
+      "id": "sys_bq",
+      "display_name": "High Pressure Injection System",
+      "properties": {
+        "match_key": "System:BQ"
+      },
+      "type": "System",
+      "eiis_code": "BQ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "component source of ground fault",
+      "match_key": "System:BQ"
+    },
+    {
+      "id": "c_speedsw2",
+      "display_name": "EDG 2 Speed Switch",
+      "properties": {
+        "match_key": "Component:ST|EDG2"
+      },
+      "type": "Component",
+      "eiis_code": "ST",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": "D283",
+      "inferred_code": false,
+      "match_key": "Component:ST"
+    },
+    {
+      "id": "c_mov",
+      "display_name": "Metal Oxide Varistor (MOV) on speed switch auxiliary circuit board",
+      "properties": {
+        "rating": "170 VDC continuous max",
+        "match_key": "Component:mov-varistor"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:metal-oxide-varistor-mov-on-speed-switch-auxiliary-circuit-board"
+    },
+    {
+      "id": "c_dcmcc2",
+      "display_name": "Direct Current Motor Control Center (DCMCC) 2",
+      "properties": {
+        "match_key": "Component:EJ-MCC|DCMCC2"
+      },
+      "type": "Component",
+      "eiis_code": "MCC",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:MCC"
+    },
+    {
+      "id": "c_bkr",
+      "display_name": "Breaker for High Pressure Injection Pump 2 DC oil pump motor",
+      "properties": {
+        "match_key": "Component:BQ-BKR"
+      },
+      "type": "Component",
+      "eiis_code": "BKR",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:BKR"
+    },
+    {
+      "id": "fm_oe",
+      "display_name": "Operating experience from 2010 DC-system rating issue not anchored into design documents",
+      "properties": {
+        "match_key": "FailureMode:oe-not-anchored"
+      },
+      "type": "FailureMode",
+      "description": "Prior similar DC-system component rating failure (2010) not incorporated into specifications/design criteria",
+      "match_key": "FailureMode:operating-experience-from-2010-dc-system-rating-issue-not-anchored-into-design-documents"
+    },
+    {
+      "id": "fm_unratedmov",
+      "display_name": "Speed switch MOV not rated for maximum possible DC system voltage",
+      "properties": {
+        "match_key": "FailureMode:mov-underrated"
+      },
+      "type": "FailureMode",
+      "description": "New speed switch design installed October 2019 used MOV rated 170 VDC continuous while ground detector arrangement could expose it to +200 VDC to ground",
+      "match_key": "FailureMode:speed-switch-mov-not-rated-for-maximum-possible-dc-system-voltage"
+    },
+    {
+      "id": "fm_hardground",
+      "display_name": "Hard ground on DCMCC 2",
+      "properties": {
+        "match_key": "FailureMode:hard-ground-dcmcc2"
+      },
+      "type": "FailureMode",
+      "description": "Hard ground received on DC Motor Control Center 2 on August 25, 2020",
+      "match_key": "FailureMode:hard-ground-on-dcmcc-2"
+    },
+    {
+      "id": "fm_oscground",
+      "display_name": "Ground switched to oscillating ground",
+      "properties": {
+        "match_key": "FailureMode:oscillating-ground"
+      },
+      "type": "FailureMode",
+      "description": "Opening breaker for HPI Pump 2 DC oil pump motor on Sept 1, 2020 changed hard ground to oscillating ground",
+      "match_key": "FailureMode:ground-switched-to-oscillating-ground"
+    },
+    {
+      "id": "fm_overvoltage",
+      "display_name": "MOV subjected to overvoltage condition",
+      "properties": {
+        "match_key": "FailureMode:mov-overvoltage"
+      },
+      "type": "FailureMode",
+      "description": "Positive 125 VDC terminal of speed switch saw +200 VDC to ground due to ground detector arrangement combined with system grounds, decreasing MOV life",
+      "match_key": "FailureMode:mov-subjected-to-overvoltage-condition"
+    },
+    {
+      "id": "fm_speedswfail",
+      "display_name": "EDG 2 speed switch internal component shorted / overheating damage",
+      "properties": {
+        "match_key": "FailureMode:speed-switch-failed"
+      },
+      "type": "FailureMode",
+      "description": "Shorted component within speed switch, internal overheating damage identified at input power section",
+      "match_key": "FailureMode:edg-2-speed-switch-internal-component-shorted-overheating-damage"
+    },
+    {
+      "id": "fm_failstostart",
+      "display_name": "EDG 2 fails to start / locks out",
+      "properties": {
+        "match_key": "FailureMode:edg2-fails-to-start"
+      },
+      "type": "FailureMode",
+      "description": "EDG 2 locked out on failure to start during two idle start attempts on September 4, 2020",
+      "match_key": "FailureMode:edg-2-fails-to-start-locks-out"
+    },
+    {
+      "id": "cons_edginop",
+      "display_name": "EDG 2 inoperable / unavailable, LCO 3.8.1 action time not met",
+      "properties": {
+        "match_key": "Consequence:edg2-inoperable"
+      },
+      "type": "Consequence",
+      "start": "2020-09-01T15:00",
+      "end": "2020-09-07T18:00",
+      "duration": "~6 days",
+      "tz": null,
+      "match_key": "Consequence:edg-2-inoperable-unavailable-lco-3-8-1-action-time-not-met"
+    },
+    {
+      "id": "cons_unanalyzed",
+      "display_name": "Unanalyzed condition: postulated DC ground (fire/HELB) could adversely affect both EDG speed switches",
+      "properties": {
+        "match_key": "Consequence:unanalyzed-condition-both-edgs"
+      },
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:unanalyzed-condition-postulated-dc-ground-fire-helb-could-adversely-affect-both-edg-speed-switches"
+    },
+    {
+      "id": "ca_repairground",
+      "display_name": "Repair damaged wire causing ground on HPI Pump 2 DC oil pump motor",
+      "properties": {
+        "match_key": "CorrectiveAction:repair-ground-wire"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:repair-damaged-wire-causing-ground-on-hpi-pump-2-dc-oil-pump-motor"
+    },
+    {
+      "id": "ca_replaceswitch2020",
+      "display_name": "Install replacement speed switch (same model) and complete post-maintenance testing",
+      "properties": {
+        "match_key": "CorrectiveAction:replace-speed-switch-2020"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:install-replacement-speed-switch-same-model-and-complete-post-maintenance-testing"
+    },
+    {
+      "id": "ca_standingorder",
+      "display_name": "Issue Standing Order to operators for identifying grounds affecting EDG speed switches",
+      "properties": {
+        "match_key": "CorrectiveAction:standing-order"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:issue-standing-order-to-operators-for-identifying-grounds-affecting-edg-speed-switches"
+    },
+    {
+      "id": "ca_replaceswitches2022",
+      "display_name": "Replace EDG 1 and 2 speed switches with new model using external power supply capable of withstanding full DC ground detection system voltage",
+      "properties": {
+        "match_key": "CorrectiveAction:replace-switches-2022"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-edg-1-and-2-speed-switches-with-new-model-using-external-power-supply-capable-of-withstanding-full-dc-ground-detection-system-voltage"
+    },
+    {
+      "id": "ca_designdocs",
+      "display_name": "Add DC system voltage-to-ground configuration to Design Criteria Manual and DC system specifications/descriptions",
+      "properties": {
+        "match_key": "CorrectiveAction:update-design-criteria-manual"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:add-dc-system-voltage-to-ground-configuration-to-design-criteria-manual-and-dc-system-specifications-descriptions"
+    },
+    {
+      "id": "mfr_d283",
+      "display_name": "Speed Switch Manufacturer (D283)",
+      "properties": {
+        "match_key": "Manufacturer:D283"
+      },
+      "type": "Manufacturer",
+      "code": "D283",
+      "match_key": "Manufacturer:D283"
+    },
+    {
+      "id": "rr_5073_i_B",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-B"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_5073_ii_B",
+      "display_name": "10 CFR 50.73(a)(2)(ii)(B)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-ii-B"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-ii-b"
+    },
+    {
+      "id": "rr_5073_a1",
+      "display_name": "10 CFR 50.73(a)(1)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-1"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-1"
+    },
+    {
+      "id": "rr_5073_v",
+      "display_name": "10 CFR 50.73(a)(2)(v)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v"
+    },
+    {
+      "id": "rr_ufsar",
+      "display_name": "UFSAR Section 15.2.9",
+      "properties": {
+        "match_key": "RegulatoryReference:ufsar-15-2-9"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:ufsar-section-15-2-9"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "LER 2010-003",
+      "properties": {
+        "match_key": "LER:2010-003"
+      },
+      "type": "LER",
+      "key": "2010-003",
+      "stub": true,
+      "title": "Auxiliary Feedwater inoperable longer than allowed by TS LCO due to ground in DC system not adequately prioritized for identification and repair",
+      "plant": "Davis-Besse Nuclear Power Station",
+      "match_key": "LER:2010-003"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_i_B",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_ii_B",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_a1",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_v",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ek",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ej",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bq",
+      "evidence": null
+    },
+    {
+      "source": "c_speedsw2",
+      "relation": "PART_OF",
+      "target": "sys_ek",
+      "evidence": null
+    },
+    {
+      "source": "c_mov",
+      "relation": "PART_OF",
+      "target": "c_speedsw2",
+      "evidence": null
+    },
+    {
+      "source": "c_dcmcc2",
+      "relation": "PART_OF",
+      "target": "sys_ej",
+      "evidence": null
+    },
+    {
+      "source": "c_speedsw2",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_d283",
+      "evidence": null
+    },
+    {
+      "source": "fm_oe",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_oe",
+      "relation": "LEADS_TO",
+      "target": "fm_unratedmov",
+      "evidence": null
+    },
+    {
+      "source": "fm_hardground",
+      "relation": "LEADS_TO",
+      "target": "fm_oscground",
+      "evidence": null
+    },
+    {
+      "source": "fm_unratedmov",
+      "relation": "LEADS_TO",
+      "target": "fm_overvoltage",
+      "evidence": null
+    },
+    {
+      "source": "fm_hardground",
+      "relation": "LEADS_TO",
+      "target": "fm_overvoltage",
+      "evidence": null
+    },
+    {
+      "source": "fm_oscground",
+      "relation": "LEADS_TO",
+      "target": "fm_overvoltage",
+      "evidence": null
+    },
+    {
+      "source": "fm_overvoltage",
+      "relation": "LEADS_TO",
+      "target": "fm_speedswfail",
+      "evidence": null
+    },
+    {
+      "source": "fm_speedswfail",
+      "relation": "LEADS_TO",
+      "target": "fm_failstostart",
+      "evidence": null
+    },
+    {
+      "source": "fm_failstostart",
+      "relation": "LEADS_TO",
+      "target": "cons_edginop",
+      "evidence": null
+    },
+    {
+      "source": "fm_unratedmov",
+      "relation": "LEADS_TO",
+      "target": "cons_unanalyzed",
+      "evidence": null
+    },
+    {
+      "source": "c_bkr",
+      "relation": "LEADS_TO",
+      "target": "fm_oscground",
+      "evidence": "opening breaker for HPI Pump 2 DC oil pump motor switched hard ground to oscillating ground"
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_repairground",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replaceswitch2020",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_standingorder",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replaceswitches2022",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_designdocs",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ufsar",
+      "evidence": null
+    }
+  ],
+  "chain": "OE not anchored [cause B] -> EDG speed switch MOV underrated for max DC voltage -> (parallel: hard ground on DCMCC2 -> oscillating ground via breaker opening) -> MOV overvoltage exposure -> speed switch internal short/overheating damage -> EDG 2 fails to start/locks out -> EDG 2 inoperable ~6 days (also -> unanalyzed condition: fire/HELB ground could affect both EDGs) [no backup asserted; redundant train 1 equipment remained Operable]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Two-part event/reportability: initial EDG 2 failure-to-start (Sept 2020) determined retroactively (Feb 12, 2021) to have existed prior to test start, triggering 50.73(a)(2)(i)(B); a later (Oct 10, 2024) review identified an additional unanalyzed-condition failure mechanism (fire/HELB-induced ground on negative bus could affect both EDG speed switches regardless of other grounds), triggering 50.73(a)(2)(ii)(B) and this Rev 02. Event_date field carries the Feb 12, 2021 determination date per FORM-366; underlying EDG failure occurred Sept 2020. Cause code B (Design) governs despite narrative's heavy 'operating experience'/root-cause language, per rule 4. SBODG explicitly uses a separate 125VDC system and was unaffected -- not modeled as a backup since it is design-context only and not stated operable/available during this specific inoperability window for EDG 2. Breaker-to-ground-state edge modeled as LEADS_TO (functional/causal) rather than PART_OF, consistent with breaker/valve precedent in rule 7."
+}

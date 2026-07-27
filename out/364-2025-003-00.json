@@ -1,0 +1,373 @@
+{
+  "ler_number": "364-2025-003-00",
+  "identity": {
+    "accession_number": "ML25230A239",
+    "docket": "05000364",
+    "plant_name": "Farley",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2025-06-19",
+    "report_date": "2025-08-18",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Automatic Reactor Trip Due to Low Steam Generator Level"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)",
+      "10 CFR 50.73(a)(2)(iv)(A)",
+      "10 CFR 50.73(a)(2)(iv)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "the newly installed 2A FCV was assembled by the vendor using incorrect torque values for the actuator top hat casing nuts, and the internal diaphragm nut was found hand-tight instead of 400 foot-pounds, as required. Improper torquing resulted in a tear in the internal diaphragm...Improper torquing was determined to be caused by inadequate oversight to ensure enhanced procurement requirements.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "vendor assembly error / inadequate procurement oversight",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 364-2025-003-00",
+      "properties": {},
+      "type": "LER",
+      "key": "364-2025-003-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:364-2025-003-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Farley Unit 2",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000364",
+      "match_key": "Unit:05000364"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "vendor assembly error / inadequate procurement oversight",
+      "proximate_text": "the newly installed 2A FCV was assembled by the vendor using incorrect torque values for the actuator top hat casing nuts, and the internal diaphragm nut was found hand-tight instead of 400 foot-pounds, as required. Improper torquing resulted in a tear in the internal diaphragm...Improper torquing was determined to be caused by inadequate oversight to ensure enhanced procurement requirements.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_ab",
+      "display_name": "Steam Generator",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "AB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:AB"
+    },
+    {
+      "id": "sys_sj",
+      "display_name": "Feedwater",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "sys_ig",
+      "display_name": "Reactor Protection System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "IG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:IG"
+    },
+    {
+      "id": "sys_ba",
+      "display_name": "Auxiliary Feedwater",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "automatically actuated system",
+      "match_key": "System:BA"
+    },
+    {
+      "id": "c_fcv",
+      "display_name": "2A Feedwater Flow Control Valve",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "FCV",
+      "identifier": "2A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:FCV|2A"
+    },
+    {
+      "id": "c_actuator",
+      "display_name": "FCV Actuator",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": "667-80",
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:fcv-actuator"
+    },
+    {
+      "id": "c_diaphragm",
+      "display_name": "Actuator internal diaphragm",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:actuator-internal-diaphragm"
+    },
+    {
+      "id": "fm_torque",
+      "display_name": "Actuator top hat casing nuts / diaphragm nut incorrectly torqued (hand-tight instead of 400 ft-lb)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Vendor assembled the 2A FCV actuator using incorrect torque values; internal diaphragm nut found hand-tight instead of the required 400 foot-pounds.",
+      "match_key": "FailureMode:actuator-top-hat-casing-nuts-diaphragm-nut-incorrectly-torqued-hand-tight-instead-of-400-ft-lb"
+    },
+    {
+      "id": "fm_tear",
+      "display_name": "Internal diaphragm torn",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Improper torquing resulted in a tear in the internal diaphragm.",
+      "match_key": "FailureMode:internal-diaphragm-torn"
+    },
+    {
+      "id": "fm_valveclosed",
+      "display_name": "2A FCV failed closed on loss of air",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Diaphragm tear caused the valve to fail closed on a loss of air.",
+      "match_key": "FailureMode:2a-fcv-failed-closed-on-loss-of-air"
+    },
+    {
+      "id": "cons_lowlevel",
+      "display_name": "Low water level in 'A' Steam Generator leading to automatic reactor trip",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2025-06-19T20:27",
+      "end": null,
+      "duration": null,
+      "tz": "CDT",
+      "match_key": "Consequence:low-water-level-in-a-steam-generator-leading-to-automatic-reactor-trip"
+    },
+    {
+      "id": "ca_rebuild",
+      "display_name": "Rebuild and reinstall 2A FCV actuator with correct as-left torque values",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:rebuild-and-reinstall-2a-fcv-actuator-with-correct-as-left-torque-values"
+    },
+    {
+      "id": "ca_observe",
+      "display_name": "Increase observations of new item request forms",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:increase-observations-of-new-item-request-forms"
+    },
+    {
+      "id": "ca_procedure",
+      "display_name": "Revise procedures to specify oversight responsibilities",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-procedures-to-specify-oversight-responsibilities"
+    },
+    {
+      "id": "mfr_fisher",
+      "display_name": "Fisher",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": null,
+      "match_key": "Manufacturer:fisher"
+    },
+    {
+      "id": "rr_5073a2",
+      "display_name": "10 CFR 50.73(a)(2)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2"
+    },
+    {
+      "id": "rr_5073a2iva",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5073a2ivb",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-b"
+    },
+    {
+      "id": "rr_ufsar",
+      "display_name": "UFSAR Chapter 15",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:ufsar-chapter-15"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073a2",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073a2iva",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073a2ivb",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sj",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ab",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ig",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ba",
+      "evidence": null
+    },
+    {
+      "source": "c_fcv",
+      "relation": "PART_OF",
+      "target": "sys_sj",
+      "evidence": null
+    },
+    {
+      "source": "c_diaphragm",
+      "relation": "PART_OF",
+      "target": "c_actuator",
+      "evidence": null
+    },
+    {
+      "source": "c_actuator",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_fisher",
+      "evidence": null
+    },
+    {
+      "source": "fm_torque",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_torque",
+      "relation": "LEADS_TO",
+      "target": "fm_tear",
+      "evidence": null
+    },
+    {
+      "source": "fm_tear",
+      "relation": "LEADS_TO",
+      "target": "fm_valveclosed",
+      "evidence": null
+    },
+    {
+      "source": "fm_valveclosed",
+      "relation": "LEADS_TO",
+      "target": "cons_lowlevel",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_rebuild",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_observe",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procedure",
+      "evidence": null
+    }
+  ],
+  "chain": "inadequate procurement oversight [cause TBD] -> actuator top hat/diaphragm nut mis-torqued -> internal diaphragm torn -> 2A FCV fails closed on loss of air -> low 'A' SG water level -> automatic reactor trip / AFW & RPS actuation",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code and category left TBD/provisional per FORM-366 fields, though narrative describes vendor assembly/torque error attributed to inadequate procurement oversight. No previous similar events reported in last ten years, so no SIMILAR_TO stub LER created. Reactor type inferred as PWR from steam generator/AFW terminology typical of Farley plant."
+}

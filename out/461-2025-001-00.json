@@ -1,0 +1,303 @@
+{
+  "ler_number": "461-2025-001-00",
+  "identity": {
+    "accession_number": "ML25321A460",
+    "docket": "05000461",
+    "plant_name": "Clinton",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2025-09-13",
+    "report_date": "2025-11-12",
+    "operating_mode": "5",
+    "power_level": null,
+    "discovery_context": "inspection",
+    "status": "supplement-expected",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "MSIV B21-F022D Limit Switch Failed Testing"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "B",
+      "system": "SB",
+      "component": "ZS",
+      "manufacturer": "N007",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "Additional failure analysis is being performed to determine the cause of the limit switch failure. A supplemental LER will be sent when the analysis is completed.",
+    "cause_code": "B",
+    "category": "Design/Manufacturing/Installation",
+    "theme": "Limit switch failure to change state during channel calibration; root cause pending supplemental analysis",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 461-2025-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "461-2025-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:461-2025-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Clinton Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000461",
+      "match_key": "Unit:05000461"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Manufacturing/Installation (B)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "B",
+      "category": "Design/Manufacturing/Installation",
+      "theme": "Limit switch failure to change state during channel calibration; root cause pending supplemental analysis",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Design/Manufacturing/Installation"
+    },
+    {
+      "id": "sys_sb",
+      "display_name": "Reactor Protection System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected; MSIV-Closure trip logic input",
+      "match_key": "System:SB"
+    },
+    {
+      "id": "c_msiv",
+      "display_name": "Main Steam Line 'D' Inboard Isolation Valve 1B21-F022D",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": "1B21-F022D",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": true,
+      "match_key": "Component:ISV|1B21-F022D"
+    },
+    {
+      "id": "c_ls5",
+      "display_name": "Limit Switch #5 (LS-5), Division 4 channel",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "ZS",
+      "identifier": "LS-5",
+      "model": null,
+      "manufacturer_code": "N007",
+      "inferred_code": false,
+      "match_key": "Component:ZS|LS-5"
+    },
+    {
+      "id": "c_ls3",
+      "display_name": "Limit Switch #3 (LS-3), spare switch",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "ZS",
+      "identifier": "LS-3",
+      "model": null,
+      "manufacturer_code": "N007",
+      "inferred_code": false,
+      "match_key": "Component:ZS|LS-3"
+    },
+    {
+      "id": "fm_ls5fail",
+      "display_name": "LS-5 failed to issue trip signal to RPS during channel functional test",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "During March 10, 2024 MSIV Channel Functional testing, LS-5 (Division 4 channel) on 1B21-F022D failed to issue a trip signal to RPS.",
+      "match_key": "FailureMode:ls-5-failed-to-issue-trip-signal-to-rps-during-channel-functional-test"
+    },
+    {
+      "id": "fm_calmethod",
+      "display_name": "Post-maintenance operability determination relied on historical data/engineering changes rather than physical channel calibration",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "NRC inspection team challenged the methodology used to declare 1B21-F022D MSIV-Closure TS function operable after LS-3 was substituted for LS-5, questioning whether it satisfied channel calibration requirements.",
+      "match_key": "FailureMode:post-maintenance-operability-determination-relied-on-historical-data-engineering-changes-rather-than-physical-channel-calibration"
+    },
+    {
+      "id": "fm_ls3fail",
+      "display_name": "LS-3 failed to change state during channel calibration",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "On September 13, 2025, during performance of SR 3.3.1.1.13 channel calibration, 1B21-F022D LS-3 failed to change state; no as-found setpoint measurement obtained, as-found calibration failed.",
+      "match_key": "FailureMode:ls-3-failed-to-change-state-during-channel-calibration"
+    },
+    {
+      "id": "cons_inop",
+      "display_name": "1B21-F022D MSIV-Closure TS function considered inoperable beyond LCO 3.3.1.1 Condition G allowed time",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2025-09-13T03:30",
+      "end": null,
+      "duration": null,
+      "tz": "CST",
+      "match_key": "Consequence:1b21-f022d-msiv-closure-ts-function-considered-inoperable-beyond-lco-3-3-1-1-condition-g-allowed-time"
+    },
+    {
+      "id": "ca_restore",
+      "display_name": "Remove temporary configuration change, restore LS-5 to provide MSIV-Closure TS function, perform channel calibration on as-left configuration",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:remove-temporary-configuration-change-restore-ls-5-to-provide-msiv-closure-ts-function-perform-channel-calibration-on-as-left-configuration"
+    },
+    {
+      "id": "mfr_n007",
+      "display_name": "Manufacturer N007",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "N007",
+      "match_key": "Manufacturer:N007"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_nureg1022",
+      "display_name": "NUREG-1022",
+      "properties": {
+        "type": "standard/guidance"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:nureg-1022"
+    },
+    {
+      "id": "rr_sr303",
+      "display_name": "TS SR 3.0.3",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ts-sr-3-0-3"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "c_ls5",
+      "relation": "PART_OF",
+      "target": "c_msiv",
+      "evidence": null
+    },
+    {
+      "source": "c_ls3",
+      "relation": "PART_OF",
+      "target": "c_msiv",
+      "evidence": null
+    },
+    {
+      "source": "c_ls5",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_n007",
+      "evidence": null
+    },
+    {
+      "source": "c_ls3",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_n007",
+      "evidence": null
+    },
+    {
+      "source": "fm_ls5fail",
+      "relation": "LEADS_TO",
+      "target": "fm_calmethod",
+      "evidence": null
+    },
+    {
+      "source": "fm_calmethod",
+      "relation": "LEADS_TO",
+      "target": "fm_ls3fail",
+      "evidence": null
+    },
+    {
+      "source": "fm_ls3fail",
+      "relation": "LEADS_TO",
+      "target": "cons_inop",
+      "evidence": null
+    },
+    {
+      "source": "fm_ls5fail",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_restore",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_nureg1022",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_sr303",
+      "evidence": null
+    }
+  ],
+  "chain": "LS-5 fails to issue trip signal (Div 4) [cause B, provisional] -> LS-3 substituted via temporary config change, operability declared using historical-data-based calibration methodology (later challenged by NRC) -> LS-3 fails to change state during formal channel calibration -> 1B21-F022D MSIV-Closure TS function inoperable beyond LCO allowed time [backups: 7 other MSIV position switches remained operable]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Root cause of LS-3/LS-5 failures is explicitly TBD pending supplemental LER and failure analysis; cause_code B and category Design/Manufacturing/Installation are copied verbatim from FORM-366 fields per rule 4, with provisional=true set because the narrative itself states the cause analysis is incomplete. The other seven MSIV position switches are described as remaining operable during the event and are treated as design/functional-redundancy context rather than a modeled BACKED_UP_BY System node, since they are position switches on other valves within the same RPS logic rather than a distinct backup system; no System node created for them per rule 6's spirit (they are not a separate named system). Manufacturer code N007 not resolvable to a name from the text; left as generic node per no-invention rule."
+}

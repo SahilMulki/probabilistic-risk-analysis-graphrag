@@ -1,0 +1,435 @@
+{
+  "ler_number": "445-2025-002-01",
+  "identity": {
+    "accession_number": "ML26127A016",
+    "docket": "05000445",
+    "plant_name": "Comanche Peak",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2025-10-30",
+    "report_date": "2026-05-07",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2025-002-01 for Comanche Peak, Pressure Transmitter Inoperable for a Duration Prohibited by TS due to Excessive Signal Drift"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)",
+      "10 CFR 50.73(a)(2)(v)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "B",
+      "system": "JC",
+      "component": "PT",
+      "manufacturer": "1204",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "the cause of the component failure was concluded to be an issue of drifting and/or zero shifts associated with Barton Transmitter Model 763. Additionally, personnel failures to adhere to site procedures resulted in the transmitter failure remaining undetected",
+    "cause_code": "B",
+    "category": "Design/Manufacturing/Installation",
+    "theme": "Instrument drift design susceptibility compounded by missed procedural evaluations",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 445-2025-002-01",
+      "properties": {},
+      "type": "LER",
+      "key": "445-2025-002-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:445-2025-002-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Comanche Peak Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000445",
+      "match_key": "Unit:05000445"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Manufacturing/Installation (B)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "B",
+      "category": "Design/Manufacturing/Installation",
+      "theme": "Instrument drift design susceptibility compounded by missed procedural evaluations",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Design/Manufacturing/Installation"
+    },
+    {
+      "id": "sys_jc",
+      "display_name": "Reactor Trip System / Pressurizer Pressure Instrumentation",
+      "properties": {
+        "note": "Pressurizer Pressure Transmitter channel, RTS/ESFAS input"
+      },
+      "type": "System",
+      "eiis_code": "JC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JC"
+    },
+    {
+      "id": "c_pt0458",
+      "display_name": "Pressurizer Pressure Transmitter 1-PT-0458",
+      "properties": {
+        "serial_numbers": [
+          "452",
+          "449"
+        ],
+        "location": "Pressurizer pressure channel, Unit 1"
+      },
+      "type": "Component",
+      "eiis_code": "PT",
+      "identifier": "1-PT-0458",
+      "model": "763",
+      "manufacturer_code": "1204",
+      "inferred_code": false,
+      "match_key": "Component:PT|1-PT-0458"
+    },
+    {
+      "id": "c_pt0455a",
+      "display_name": "Pressurizer Pressure Transmitter 1-PT-0455A",
+      "properties": {
+        "role": "operable redundant channel"
+      },
+      "type": "Component",
+      "eiis_code": "PT",
+      "identifier": "1-PT-0455A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:PT|1-PT-0455A"
+    },
+    {
+      "id": "c_pt0456",
+      "display_name": "Pressurizer Pressure Transmitter 1-PT-0456",
+      "properties": {
+        "role": "operable redundant channel"
+      },
+      "type": "Component",
+      "eiis_code": "PT",
+      "identifier": "1-PT-0456",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:PT|1-PT-0456"
+    },
+    {
+      "id": "c_pt0457",
+      "display_name": "Pressurizer Pressure Transmitter 1-PT-0457",
+      "properties": {
+        "role": "operable redundant channel"
+      },
+      "type": "Component",
+      "eiis_code": "PT",
+      "identifier": "1-PT-0457",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:PT|1-PT-0457"
+    },
+    {
+      "id": "fm_design",
+      "display_name": "Barton Model 763 transmitter susceptible to drift/zero shift",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Design/manufacturing characteristic of the Barton 763 transmitter model causing non-conservative signal drift and zero shifts",
+      "match_key": "FailureMode:barton-model-763-transmitter-susceptible-to-drift-zero-shift"
+    },
+    {
+      "id": "fm_drift",
+      "display_name": "1-PT-0458 exceeded allowable calibration range (signal drift)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "1-PT-0458 exhibited ~60 mV drift beyond the +/-60 mV allowable range, corresponding to a 20 psig pressure signal offset",
+      "match_key": "FailureMode:1-pt-0458-exceeded-allowable-calibration-range-signal-drift"
+    },
+    {
+      "id": "fm_procfail",
+      "display_name": "Personnel failure to adhere to procedures for evaluating as-found drift",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Engineering evaluations were not requested when as-found data exceeded allowable value, or were performed using misapplied acceptance criteria from Operations Shiftly surveillances, allowing the failure to remain undetected",
+      "match_key": "FailureMode:personnel-failure-to-adhere-to-procedures-for-evaluating-as-found-drift"
+    },
+    {
+      "id": "cons_inop",
+      "display_name": "1-PT-0458 inoperable beyond TS-allowed completion time",
+      "properties": {
+        "periods": [
+          "2024-07-12 to 2024-07-29",
+          "2025-02-19 to 2025-04-20",
+          "2025-10-22 to 2025-10-30"
+        ]
+      },
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:1-pt-0458-inoperable-beyond-ts-allowed-completion-time"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace 1-PT-0458 transmitter",
+      "properties": {
+        "date": "2025-11-12"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-1-pt-0458-transmitter"
+    },
+    {
+      "id": "ca_recal",
+      "display_name": "Re-calibrate transmitter within calibration band and return to service",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:re-calibrate-transmitter-within-calibration-band-and-return-to-service"
+    },
+    {
+      "id": "ca_training",
+      "display_name": "Training for Operations, Engineering, and Maintenance on TS Allowable Value exceedance requirements",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:training-for-operations-engineering-and-maintenance-on-ts-allowable-value-exceedance-requirements"
+    },
+    {
+      "id": "mfr_barton",
+      "display_name": "Barton / WEC",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "1204",
+      "match_key": "Manufacturer:1204"
+    },
+    {
+      "id": "rr_5073i",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_5073v",
+      "display_name": "10 CFR 50.73(a)(2)(v)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v"
+    },
+    {
+      "id": "rr_pra",
+      "display_name": "PRA Internal Events Model (CDF/LERF evaluation)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:pra-internal-events-model-cdf-lerf-evaluation"
+    },
+    {
+      "id": "ler_cr2023008549",
+      "display_name": "CR-2023-008549 (SG 1-03 Narrow Range Level channel 1-L-0537 exceeded allowable value)",
+      "properties": {},
+      "type": "LER",
+      "key": "CR-2023-008549",
+      "stub": true,
+      "title": "Steam Generator 1-03 Narrow Range Level channel exceeded allowable value",
+      "plant": "Comanche Peak Unit 1",
+      "match_key": "LER:CR-2023-008549"
+    },
+    {
+      "id": "ler_liquidradwaste",
+      "display_name": "CR-2023-005307/007185, CR-2024-002136 (Liquid Radwaste Effluent Line X-FB-5288 exceeded allowable range)",
+      "properties": {},
+      "type": "LER",
+      "key": "CR-2023-005307",
+      "stub": true,
+      "title": "Liquid Radwaste Effluent Line bistable X-FB-5288 exceeded allowable range",
+      "plant": "Comanche Peak Unit 1",
+      "match_key": "LER:CR-2023-005307"
+    },
+    {
+      "id": "ler_cr2025000393",
+      "display_name": "CR-2025-000393 (SG 1-01 AFW Flow Loop Transmitter 1-FT-24638 exceeded allowable value)",
+      "properties": {},
+      "type": "LER",
+      "key": "CR-2025-000393",
+      "stub": true,
+      "title": "Steam Generator 1-01 Auxiliary Feedwater Flow Loop transmitter exceeded allowable value",
+      "plant": "Comanche Peak Unit 1",
+      "match_key": "LER:CR-2025-000393"
+    },
+    {
+      "id": "ler_tr2023003072",
+      "display_name": "TR-2023-003072 (CVCS Alternate Shutdown Square Root Multiplier Card 2-FY-0121A exceeded allowable range)",
+      "properties": {},
+      "type": "LER",
+      "key": "TR-2023-003072",
+      "stub": true,
+      "title": "CVCS Alternate Shutdown System Square Root Multiplier Card exceeded allowable range",
+      "plant": "Comanche Peak Unit 2",
+      "match_key": "LER:TR-2023-003072"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073i",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073v",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_pt0458",
+      "evidence": null
+    },
+    {
+      "source": "fm_design",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_design",
+      "relation": "LEADS_TO",
+      "target": "fm_drift",
+      "evidence": null
+    },
+    {
+      "source": "fm_drift",
+      "relation": "LEADS_TO",
+      "target": "fm_procfail",
+      "evidence": null
+    },
+    {
+      "source": "fm_procfail",
+      "relation": "LEADS_TO",
+      "target": "cons_inop",
+      "evidence": null
+    },
+    {
+      "source": "cons_inop",
+      "relation": "BACKED_UP_BY",
+      "target": "c_pt0455a",
+      "evidence": null
+    },
+    {
+      "source": "cons_inop",
+      "relation": "BACKED_UP_BY",
+      "target": "c_pt0456",
+      "evidence": null
+    },
+    {
+      "source": "cons_inop",
+      "relation": "BACKED_UP_BY",
+      "target": "c_pt0457",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_recal",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_training",
+      "evidence": null
+    },
+    {
+      "source": "c_pt0458",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_barton",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_pra",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_cr2023008549",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_liquidradwaste",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_cr2025000393",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_tr2023003072",
+      "evidence": null
+    }
+  ],
+  "chain": "Barton Model 763 design susceptibility to drift/zero-shift [cause B] -> 1-PT-0458 signal drift exceeds allowable range -> personnel failed to request/properly perform engineering evaluation of as-found drift -> transmitter inoperable beyond TS completion time (3 discrete periods 2024-2025) [backups 1-PT-0455A, 1-PT-0456, 1-PT-0457 operable, 2-of-4 coincidence logic maintained]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code B (Design/Manufacturing/Installation) governs category despite substantial procedural/personnel-failure narrative content; theme captures both drift-design and missed-evaluation angles. Two physical transmitter units (S/N 452 removed April 2025, S/N 449 removed Nov 2025) occupied the 1-PT-0458 location across the three inoperability windows; both modeled as one Component node representing the tag/location per narrative's continuous treatment of '1-PT-0458' as the failing channel. Previous similar events are CAP condition reports (CR-/TR- prefixed), not NRC LERs, but modeled as stub LER nodes per rule 9 since they are the referenced 'previous similar occurrence' records; their stub keys are copied verbatim as stated (CR-/TR- numbers) rather than invented docket-based LER numbers. RTS/ESFAS design-context systems (solid state protection system, reactor trip switchgear) not modeled since narrative describes them only for architecture/context, not as involved/backup components."
+}

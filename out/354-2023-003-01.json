@@ -1,0 +1,348 @@
+{
+  "ler_number": "354-2023-003-01",
+  "identity": {
+    "accession_number": "ML24079A283",
+    "docket": "05000354",
+    "plant_name": "Hope Creek",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2023-12-14",
+    "report_date": "2024-03-19",
+    "operating_mode": "1",
+    "power_level": 90,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Hope Creek Generating Station Renewed Facility Operating License No. NPF-57 Docket No. 50-354"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The direct cause of the full open #4 TCV was foreign material exclusion (FME) practices were not implemented correctly by the work groups... The human performance related cause of this event was inadequate adherence to applicable administrative tools and processes. Vendor information was acted upon without employing a formal decision-making process.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "FME control breakdown / inadequate procedure adherence during online repair",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 354-2023-003-01",
+      "properties": {},
+      "type": "LER",
+      "key": "354-2023-003-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:354-2023-003-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Hope Creek Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000354",
+      "match_key": "Unit:05000354"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "FME control breakdown / inadequate procedure adherence during online repair",
+      "proximate_text": "The direct cause of the full open #4 TCV was foreign material exclusion (FME) practices were not implemented correctly by the work groups... The human performance related cause of this event was inadequate adherence to applicable administrative tools and processes. Vendor information was acted upon without employing a formal decision-making process.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_tg",
+      "display_name": "Turbine Control Valve / Electro-Hydraulic Control System (EHC)",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "TG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:TG"
+    },
+    {
+      "id": "sys_rps",
+      "display_name": "Reactor Protection System",
+      "properties": {
+        "note": "actuated automatically on APRM high neutron flux"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:reactor-protection-system"
+    },
+    {
+      "id": "c_tcv4",
+      "display_name": "#4 Turbine Control Valve (TCV)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "TCV-4",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:4-turbine-control-valve-tcv"
+    },
+    {
+      "id": "c_servo",
+      "display_name": "Servo valve (#4 TCV)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:servo-valve-4-tcv"
+    },
+    {
+      "id": "c_oring",
+      "display_name": "Servo o-rings",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:servo-o-rings"
+    },
+    {
+      "id": "c_fas",
+      "display_name": "Fast-Acting Solenoid (FAS) valve / oil supply tubing",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:fast-acting-solenoid-fas-valve-oil-supply-tubing"
+    },
+    {
+      "id": "c_shutoff",
+      "display_name": "Shutoff valve (#4 TCV)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:shutoff-valve-4-tcv"
+    },
+    {
+      "id": "fm_fme",
+      "display_name": "Foreign material entered during leak repair and damaged servo o-rings",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Foreign material exclusion (FME) practices not implemented correctly by work groups during FAS oil supply tubing repair.",
+      "match_key": "FailureMode:foreign-material-entered-during-leak-repair-and-damaged-servo-o-rings"
+    },
+    {
+      "id": "fm_tcvopen",
+      "display_name": "#4 TCV went full open despite closed demand signal",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Damaged servo o-rings caused #4 TCV to fail full open despite receiving a closed demand signal.",
+      "match_key": "FailureMode:4-tcv-went-full-open-despite-closed-demand-signal"
+    },
+    {
+      "id": "fm_manualclose",
+      "display_name": "Manual FAS manipulation caused rapid valve closure",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Operators manually acted to close #4 TCV; valve unexpectedly closed in approximately one second.",
+      "match_key": "FailureMode:manual-fas-manipulation-caused-rapid-valve-closure"
+    },
+    {
+      "id": "fm_scram",
+      "display_name": "Rapid #4 TCV closure caused reactor scram on APRM high neutron flux",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Fast closure of the #4 TCV resulted in automatic RPS actuation due to high APRM neutron flux.",
+      "match_key": "FailureMode:rapid-4-tcv-closure-caused-reactor-scram-on-aprm-high-neutron-flux"
+    },
+    {
+      "id": "cons_scram",
+      "display_name": "Automatic reactor scram / RPS actuation, all control rods fully inserted",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2023-12-14",
+      "end": "2023-12-14",
+      "duration": null,
+      "tz": "EST",
+      "match_key": "Consequence:automatic-reactor-scram-rps-actuation-all-control-rods-fully-inserted"
+    },
+    {
+      "id": "ca_repair",
+      "display_name": "Repair #4 TCV by replacing servo valve, FAS valve, and shutoff valve; resynchronize generator",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:repair-4-tcv-by-replacing-servo-valve-fas-valve-and-shutoff-valve-resynchronize-generator"
+    },
+    {
+      "id": "ca_procrevise",
+      "display_name": "Revise applicable EHC procedures involving manual FAS valve manipulations while on-line",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-applicable-ehc-procedures-involving-manual-fas-valve-manipulations-while-on-line"
+    },
+    {
+      "id": "ca_training",
+      "display_name": "Conduct training on station duty team roles/responsibilities during emergent issue response",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:conduct-training-on-station-duty-team-roles-responsibilities-during-emergent-issue-response"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5072",
+      "display_name": "10 CFR 50.72(b)(2)(iv)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-2-iv-b"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_tg",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rps",
+      "evidence": null
+    },
+    {
+      "source": "c_tcv4",
+      "relation": "PART_OF",
+      "target": "sys_tg",
+      "evidence": null
+    },
+    {
+      "source": "c_servo",
+      "relation": "PART_OF",
+      "target": "c_tcv4",
+      "evidence": null
+    },
+    {
+      "source": "c_oring",
+      "relation": "PART_OF",
+      "target": "c_servo",
+      "evidence": null
+    },
+    {
+      "source": "fm_fme",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_fme",
+      "relation": "LEADS_TO",
+      "target": "fm_tcvopen",
+      "evidence": null
+    },
+    {
+      "source": "fm_tcvopen",
+      "relation": "LEADS_TO",
+      "target": "fm_manualclose",
+      "evidence": null
+    },
+    {
+      "source": "fm_manualclose",
+      "relation": "LEADS_TO",
+      "target": "fm_scram",
+      "evidence": null
+    },
+    {
+      "source": "fm_scram",
+      "relation": "LEADS_TO",
+      "target": "cons_scram",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_repair",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procrevise",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_training",
+      "evidence": null
+    }
+  ],
+  "chain": "inadequate FME practices / procedure adherence [cause TBD] -> foreign material damages servo o-rings -> #4 TCV fails full open -> manual FAS manipulation causes rapid valve closure -> RPS actuation on APRM high neutron flux -> reactor scram, all rods inserted",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "No official cause code was provided in FORM-366 fields (TBD/provisional); category left as provisional per rule 4. No block_13 rows were provided in the form fields. No previous similar occurrence LER was cited in the narrative ('no previous events at HCGS in the last three years where the #4 TCV caused a reactor scram') so no stub LER/SIMILAR_TO edge was created. No manufacturer information was given for components, so no Manufacturer node/edge was created. ADS/ECCS backups not modeled since narrative states no ECCS actuations occurred (not a backup scenario, event was a scram not an ECCS-need event)."
+}

@@ -1,0 +1,351 @@
+{
+  "ler_number": "296-2024-001-00",
+  "identity": {
+    "accession_number": "ML24113A201",
+    "docket": "05000296",
+    "plant_name": "Browns Ferry",
+    "unit": 3,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2024-02-21",
+    "report_date": "2024-04-22",
+    "operating_mode": "5",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "– Primary Containment Isolation Valve Inoperable due to Incorrect Motor Operated Valve Setup"
+  },
+  "reporting_basis": {
+    "reported_under": [],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The cause of this condition is a legacy issue related to the close control wiring scheme for 3-FCV-001-0055 and failure to identify this valve as being susceptible to the SQN NCV CR 1603101 during the extent of condition review.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "legacy MOV close-control wiring design deficiency missed during extent-of-condition review",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 296-2024-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "296-2024-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:296-2024-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Browns Ferry Unit 3",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000296",
+      "match_key": "Unit:05000296"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "legacy MOV close-control wiring design deficiency missed during extent-of-condition review",
+      "proximate_text": "The cause of this condition is a legacy issue related to the close control wiring scheme for 3-FCV-001-0055 and failure to identify this valve as being susceptible to the SQN NCV CR 1603101 during the extent of condition review.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_jm",
+      "display_name": "Primary Containment Isolation System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JM",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "system involved; PCIV function",
+      "match_key": "System:JM"
+    },
+    {
+      "id": "sys_bj",
+      "display_name": "High-Pressure Coolant Injection System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "maintenance driver for valve openings",
+      "match_key": "System:BJ"
+    },
+    {
+      "id": "sys_bn",
+      "display_name": "Reactor Core Isolation Cooling System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BN",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "maintenance driver for valve openings",
+      "match_key": "System:BN"
+    },
+    {
+      "id": "c_fcv55",
+      "display_name": "Inboard Main Steam Drain Line PCIV 3-FCV-001-0055 (MOV)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "FCV",
+      "identifier": "3-FCV-001-0055",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:FCV|3-FCV-001-0055"
+    },
+    {
+      "id": "c_fcv56",
+      "display_name": "Outboard Main Steam Drain Line PCIV 3-FCV-001-0056 (MOV)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "FCV",
+      "identifier": "3-FCV-001-0056",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:FCV|3-FCV-001-0056"
+    },
+    {
+      "id": "c_torqsw",
+      "display_name": "Close torque switch",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:close-torque-switch"
+    },
+    {
+      "id": "c_bypls",
+      "display_name": "Close torque switch bypass limit switch (LS-16)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "LS-16",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:close-torque-switch-bypass-limit-switch-ls-16"
+    },
+    {
+      "id": "fm_wiring",
+      "display_name": "Close control circuit setup on torque switch control (legacy wiring scheme)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "As-left torque switch setting on 3-FCV-001-0055 resulted in negative margin; MOV close circuit effectively on torque switch control instead of limit switch control.",
+      "match_key": "FailureMode:close-control-circuit-setup-on-torque-switch-control-legacy-wiring-scheme"
+    },
+    {
+      "id": "fm_extent",
+      "display_name": "Failure to identify valve susceptibility during extent-of-condition review",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "SQN NCV CR 1603101 extent-of-condition review at BFN in 2020 failed to identify 3-FCV-001-0055 as susceptible because the torque switch and bypass limit switch were not identified in the MOV Program Database.",
+      "match_key": "FailureMode:failure-to-identify-valve-susceptibility-during-extent-of-condition-review"
+    },
+    {
+      "id": "fm_notclose",
+      "display_name": "PCIV may not fully close/seal under design basis differential pressure",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "If differential pressure across the valve was great enough to cause the torque switch to open prior to the limit switch opening, the valve might not fully close or seal hard enough to prevent seat leakage.",
+      "match_key": "FailureMode:pciv-may-not-fully-close-seal-under-design-basis-differential-pressure"
+    },
+    {
+      "id": "cons_pciv",
+      "display_name": "PCIV 3-FCV-001-0055 inoperable; TS 3.6.1.3 Actions and TS 3.0.4 not complied with",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2014-03-16T04:08",
+      "end": "2024-03-01T00:00",
+      "duration": "approximately 10 years (identified 2024-02-21)",
+      "tz": "Central Time",
+      "match_key": "Consequence:pciv-3-fcv-001-0055-inoperable-ts-3-6-1-3-actions-and-ts-3-0-4-not-complied-with"
+    },
+    {
+      "id": "ca_ecp",
+      "display_name": "ECP BFN-24-012: remove close torque switch and LS-16 from control circuit; use LS-8 as close limit switch",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:ecp-bfn-24-012-remove-close-torque-switch-and-ls-16-from-control-circuit-use-ls-8-as-close-limit-switch"
+    },
+    {
+      "id": "ca_fleetreview",
+      "display_name": "Fleet-wide review of MOV Program valves for extent of condition",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:fleet-wide-review-of-mov-program-valves-for-extent-of-condition"
+    },
+    {
+      "id": "rr_ts3613",
+      "display_name": "Technical Specification 3.6.1.3, Primary Containment Isolation Valves",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:technical-specification-3-6-1-3-primary-containment-isolation-valves"
+    },
+    {
+      "id": "rr_ts304",
+      "display_name": "Technical Specification 3.0.4",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:technical-specification-3-0-4"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "ler_sqn",
+      "display_name": "Sequoyah Nuclear Plant NCV CR 1603101 - MOV Testing Issue",
+      "properties": {},
+      "type": "LER",
+      "key": "SQN-NCV-CR-1603101",
+      "stub": true,
+      "title": "Non-Cited Violation related to MOV function testing at Sequoyah Nuclear Plant",
+      "plant": "Sequoyah Nuclear Plant",
+      "match_key": "LER:SQN-NCV-CR-1603101"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts3613",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts304",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jm",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_fcv55",
+      "evidence": null
+    },
+    {
+      "source": "c_torqsw",
+      "relation": "PART_OF",
+      "target": "c_fcv55",
+      "evidence": null
+    },
+    {
+      "source": "c_bypls",
+      "relation": "PART_OF",
+      "target": "c_fcv55",
+      "evidence": null
+    },
+    {
+      "source": "fm_wiring",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_wiring",
+      "relation": "LEADS_TO",
+      "target": "fm_extent",
+      "evidence": null
+    },
+    {
+      "source": "fm_extent",
+      "relation": "LEADS_TO",
+      "target": "fm_notclose",
+      "evidence": null
+    },
+    {
+      "source": "fm_notclose",
+      "relation": "LEADS_TO",
+      "target": "cons_pciv",
+      "evidence": null
+    },
+    {
+      "source": "cons_pciv",
+      "relation": "BACKED_UP_BY",
+      "target": "c_fcv56",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_ecp",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_fleetreview",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_sqn",
+      "evidence": null
+    }
+  ],
+  "chain": "legacy close-control wiring scheme (torque switch control instead of limit switch) [cause TBD] -> not identified during 2020 SQN NCV extent-of-condition review -> PCIV 3-FCV-001-0055 may not fully close/seal under DBA differential pressure -> PCIV inoperable, TS 3.6.1.3/3.0.4 violations [backup: redundant outboard PCIV 3-FCV-001-0056 remained operable]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause_code/category not provided in FORM-366 FIELDS (TBD/provisional) despite narrative describing a clear human-performance/design legacy issue; per rules the official code governs and is copied verbatim. Previous similar event is at a different plant (Sequoyah), captured as SIMILAR_TO stub LER per rule 9, using the CR number as the closest available identifier since no LER number was given for the referenced NCV. 3-FCV-001-0056 modeled as a Component (not System) since it is the redundant valve, not a new system; BACKED_UP_BY edge from Consequence to Component reflects the redundant valve backup. HPCI/RCIC systems mentioned only as reasons for periodic valve openings (maintenance context), not as failure-chain participants or as operable backups performing the isolation function -- retained as System nodes per INVOLVES since the event narrative ties their maintenance activities directly to the valve's open/closed history relevant to the single-point-vulnerability analysis."
+}

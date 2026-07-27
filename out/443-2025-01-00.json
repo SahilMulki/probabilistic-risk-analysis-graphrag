@@ -1,0 +1,370 @@
+{
+  "ler_number": "443-2025-01-00",
+  "identity": {
+    "accession_number": "ML25258A204",
+    "docket": "05000443",
+    "plant_name": "Seabrook",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2025-05-31",
+    "report_date": "2025-09-15",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2025-01-00 for Seabrook Station, Erratic Potentiometer Caused Upper Detector Flux Deviation Which Exceeded Technical Specification Allowed Outage Time"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The cause of the event was an erratic gain potentiometer in the Channel 1 Upper Flux signal, [EIIS: JC], which affects the input to the Channel 1 OTDT set point calculation. This was not immediately recognized as the cause of the channel drift; therefore, it was not recognized that the input to the OTDT function was adversely impacted by the condition.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "component degradation misdiagnosed, leading to extended TS non-compliance",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 443-2025-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "443-2025-01-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:443-2025-01-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Seabrook Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000443",
+      "match_key": "Unit:05000443"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "component degradation misdiagnosed, leading to extended TS non-compliance",
+      "proximate_text": "The cause of the event was an erratic gain potentiometer in the Channel 1 Upper Flux signal, [EIIS: JC], which affects the input to the Channel 1 OTDT set point calculation. This was not immediately recognized as the cause of the channel drift; therefore, it was not recognized that the input to the OTDT function was adversely impacted by the condition.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_jc_ch1",
+      "display_name": "Nuclear Instrumentation System - Power Range Channel 1 / OTDT",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected protection channel",
+      "match_key": "System:JC"
+    },
+    {
+      "id": "sys_jc_ch4",
+      "display_name": "Nuclear Instrumentation System - Power Range Channel 4 / OTDT",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "concurrently inoperable protection channel",
+      "match_key": "System:JC"
+    },
+    {
+      "id": "c_pot_ch1",
+      "display_name": "Channel 1 gain potentiometer (Upper Flux signal)",
+      "properties": {
+        "location": "upstream of isolation amplifier to station computer"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:channel-1-gain-potentiometer-upper-flux-signal"
+    },
+    {
+      "id": "c_isoamp_ch1",
+      "display_name": "Channel 1 isolation amplifier",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:channel-1-isolation-amplifier"
+    },
+    {
+      "id": "c_pwrsupply_ch4",
+      "display_name": "Channel 4 protection cabinet power supply",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:channel-4-protection-cabinet-power-supply"
+    },
+    {
+      "id": "c_circuitcard_ch4",
+      "display_name": "Channel 4 OTDT protection circuit card",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:channel-4-otdt-protection-circuit-card"
+    },
+    {
+      "id": "fm_pot_erratic",
+      "display_name": "Erratic gain potentiometer causing upper detector signal drift",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Erratic gain potentiometer upstream of the isolation amplifier caused drift in the Channel 1 upper flux signal to the station computer.",
+      "match_key": "FailureMode:erratic-gain-potentiometer-causing-upper-detector-signal-drift"
+    },
+    {
+      "id": "fm_isoamp_drift",
+      "display_name": "Isolation amplifier drift (initially misdiagnosed cause)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Initial troubleshooting attributed drift to the isolation amplifier; the amplifier was replaced but the alarm recurred, indicating the true cause was upstream.",
+      "match_key": "FailureMode:isolation-amplifier-drift-initially-misdiagnosed-cause"
+    },
+    {
+      "id": "fm_otdt_ch1_inop",
+      "display_name": "Channel 1 OTDT function inoperable, undetected",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Erratic potentiometer affected the upper flux input to the OTDT protection channel, rendering Channel 1 OTDT inoperable from 5/31/2025 through 7/15/2025 without being recognized or placed in trip within the TS allowed outage time.",
+      "match_key": "FailureMode:channel-1-otdt-function-inoperable-undetected"
+    },
+    {
+      "id": "fm_ch4_pwrsupply_fail",
+      "display_name": "Channel 4 protection cabinet power supply failure",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Separate, unrelated failure of the Channel 4 protection cabinet power supply on 6/19/2025.",
+      "match_key": "FailureMode:channel-4-protection-cabinet-power-supply-failure"
+    },
+    {
+      "id": "fm_ch4_card_fail",
+      "display_name": "Channel 4 OTDT circuit card failure",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The power supply failure resulted in failure of a circuit card in the Channel 4 OTDT protection circuit, rendering Channel 4 OTDT inoperable from 6/19/2025 through 6/20/2025 (~20 hours).",
+      "match_key": "FailureMode:channel-4-otdt-circuit-card-failure"
+    },
+    {
+      "id": "cons_lt3ch",
+      "display_name": "Fewer than 3 required OTDT protection channels operable - condition prohibited by TS",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2025-06-19",
+      "end": "2025-06-20",
+      "duration": "approximately 20 hours (overlap period)",
+      "tz": null,
+      "match_key": "Consequence:fewer-than-3-required-otdt-protection-channels-operable-condition-prohibited-by-ts"
+    },
+    {
+      "id": "ca_wipe_pot",
+      "display_name": "Wipe erratic potentiometer per vendor recommendations and restore Channel 1 OTDT",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:wipe-erratic-potentiometer-per-vendor-recommendations-and-restore-channel-1-otdt"
+    },
+    {
+      "id": "ca_replace_card",
+      "display_name": "Replace failed Channel 4 OTDT circuit card and return channel to service",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-failed-channel-4-otdt-circuit-card-and-return-channel-to-service"
+    },
+    {
+      "id": "ca_extent_condition",
+      "display_name": "Perform extent of condition review on remaining NI channel potentiometers",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:perform-extent-of-condition-review-on-remaining-ni-channel-potentiometers"
+    },
+    {
+      "id": "ca_oe_capture",
+      "display_name": "Capture knowledge and operating experience in site procedures",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:capture-knowledge-and-operating-experience-in-site-procedures"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts_3_3_1",
+      "display_name": "Seabrook TS Table 3.3-1 Action 6A",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:seabrook-ts-table-3-3-1-action-6a"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts_3_3_1",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jc_ch1",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jc_ch4",
+      "evidence": null
+    },
+    {
+      "source": "fm_pot_erratic",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_pot_erratic",
+      "relation": "LEADS_TO",
+      "target": "fm_isoamp_drift",
+      "evidence": null
+    },
+    {
+      "source": "fm_isoamp_drift",
+      "relation": "LEADS_TO",
+      "target": "fm_otdt_ch1_inop",
+      "evidence": null
+    },
+    {
+      "source": "fm_ch4_pwrsupply_fail",
+      "relation": "LEADS_TO",
+      "target": "fm_ch4_card_fail",
+      "evidence": null
+    },
+    {
+      "source": "fm_otdt_ch1_inop",
+      "relation": "LEADS_TO",
+      "target": "cons_lt3ch",
+      "evidence": null
+    },
+    {
+      "source": "fm_ch4_card_fail",
+      "relation": "LEADS_TO",
+      "target": "cons_lt3ch",
+      "evidence": null
+    },
+    {
+      "source": "c_pot_ch1",
+      "relation": "PART_OF",
+      "target": "sys_jc_ch1",
+      "evidence": null
+    },
+    {
+      "source": "c_isoamp_ch1",
+      "relation": "PART_OF",
+      "target": "sys_jc_ch1",
+      "evidence": null
+    },
+    {
+      "source": "c_pwrsupply_ch4",
+      "relation": "PART_OF",
+      "target": "sys_jc_ch4",
+      "evidence": null
+    },
+    {
+      "source": "c_circuitcard_ch4",
+      "relation": "PART_OF",
+      "target": "sys_jc_ch4",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_wipe_pot",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_card",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_extent_condition",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_oe_capture",
+      "evidence": null
+    }
+  ],
+  "chain": "erratic gain potentiometer [cause TBD] -> misdiagnosed as isolation amplifier drift -> Channel 1 OTDT function inoperable undetected (5/31-7/15/2025), in parallel Channel 4 power supply fails -> Channel 4 OTDT circuit card fails (6/19-6/20/2025) -> fewer than 3 required OTDT channels operable, condition prohibited by TS [backups Channels 2 and 3 remained available]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code left TBD/provisional per FORM-366 fields (official code not provided). Two independent failure origins converge on the same consequence: the Channel 1 potentiometer/OTDT misdiagnosis chain, and the separate Channel 4 power supply/circuit card failure. Only one CAUSED_BY edge is emitted, from the origin of the primary (Channel 1) chain, per rule 5; the Channel 4 failure chain leads directly to the shared consequence without its own CAUSED_BY since the official cause statement centers on the potentiometer. No similar prior LER identified in narrative, so no stub LER/SIMILAR_TO edge emitted per rule 9 (only emit when a specific prior event is referenced)."
+}

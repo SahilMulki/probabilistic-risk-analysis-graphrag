@@ -1,0 +1,335 @@
+{
+  "ler_number": "287-2020-001-00",
+  "identity": {
+    "accession_number": "ML20161A404",
+    "docket": "05000287",
+    "plant_name": "Oconee",
+    "unit": 3,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2020-04-10",
+    "report_date": "2020-06-09",
+    "operating_mode": null,
+    "power_level": 32,
+    "discovery_context": "inspection",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Revision 00- Unit 3 Manual Reactor Trip Due to Reaching Feedwater Heater Level Limit in Operating Procedure"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "the unit trip was due to an overly restrictive heater level limit placed in the operating procedure that did not account for the various heater levels that occur during power reductions",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "overly restrictive procedural limit",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 287-2020-001-00",
+      "properties": {
+        "match_key": "LER:287-2020-001-00"
+      },
+      "type": "LER",
+      "key": "287-2020-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:287-2020-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Oconee Unit 3",
+      "properties": {
+        "match_key": "Unit:05000287",
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000287",
+      "match_key": "Unit:05000287"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {
+        "match_key": "Cause:provisional"
+      },
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "overly restrictive procedural limit",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_hx",
+      "display_name": "Feedwater Heaters",
+      "properties": {
+        "match_key": "System:HX"
+      },
+      "type": "System",
+      "eiis_code": "HX",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:HX"
+    },
+    {
+      "id": "sys_sd_sj",
+      "display_name": "Condensate/Feedwater System",
+      "properties": {
+        "match_key": "System:SD-SJ"
+      },
+      "type": "System",
+      "eiis_code": "SD/SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SD/SJ"
+    },
+    {
+      "id": "c_3f1",
+      "display_name": "3F1 Feedwater Heater",
+      "properties": {
+        "match_key": "Component:HX|3F1"
+      },
+      "type": "Component",
+      "eiis_code": "HX",
+      "identifier": "3F1",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:HX|3F1"
+    },
+    {
+      "id": "fm_proc_limit",
+      "display_name": "Overly restrictive 'F' heater level limit in operating procedure",
+      "properties": {
+        "match_key": "FailureMode:overly-restrictive-f-heater-level-limit"
+      },
+      "type": "FailureMode",
+      "description": "Operating procedure trip setpoint (>= 14 inches) for 'F' Feedwater Heaters did not account for normal level variation during power reductions",
+      "match_key": "FailureMode:overly-restrictive-f-heater-level-limit-in-operating-procedure"
+    },
+    {
+      "id": "fm_level_indication",
+      "display_name": "3F1 heater level reached procedural trip limit without an actual tube leak",
+      "properties": {
+        "match_key": "FailureMode:3f1-level-reached-trip-limit-no-leak"
+      },
+      "type": "FailureMode",
+      "description": "3F1 heater level indicated >= 14 inches, meeting the procedural criterion suggestive of a large tube leak; subsequent investigation found no tube leak",
+      "match_key": "FailureMode:3f1-heater-level-reached-procedural-trip-limit-without-an-actual-tube-leak"
+    },
+    {
+      "id": "cons_trip",
+      "display_name": "Manual reactor trip from 32% power",
+      "properties": {
+        "match_key": "Consequence:manual-reactor-trip-32-percent"
+      },
+      "type": "Consequence",
+      "start": "2020-04-10T21:25",
+      "end": null,
+      "duration": null,
+      "tz": "EDT",
+      "match_key": "Consequence:manual-reactor-trip-from-32-power"
+    },
+    {
+      "id": "ca_pressure_test",
+      "display_name": "Performed pressure test on 3F1 heater tubes, no thru-wall leak found",
+      "properties": {
+        "match_key": "CorrectiveAction:pressure-test-3f1-tubes"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:performed-pressure-test-on-3f1-heater-tubes-no-thru-wall-leak-found"
+    },
+    {
+      "id": "ca_calibrate",
+      "display_name": "Calibrated 3F1 level control valve and level transmitter",
+      "properties": {
+        "match_key": "CorrectiveAction:calibrate-3f1-level-control-valve-transmitter"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:calibrated-3f1-level-control-valve-and-level-transmitter"
+    },
+    {
+      "id": "ca_visual_inspect",
+      "display_name": "Visual inspection of piping downstream of 3F1 level control valve",
+      "properties": {
+        "match_key": "CorrectiveAction:visual-inspection-downstream-piping"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:visual-inspection-of-piping-downstream-of-3f1-level-control-valve"
+    },
+    {
+      "id": "ca_revise_u3_proc",
+      "display_name": "Revised Unit 3 operating procedure trip guidance for 'F' heater level",
+      "properties": {
+        "match_key": "CorrectiveAction:revise-unit-3-procedure"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revised-unit-3-operating-procedure-trip-guidance-for-f-heater-level"
+    },
+    {
+      "id": "ca_revise_u12_proc",
+      "display_name": "Revise Units 1 and 2 operating procedures consistent with Unit 3 changes",
+      "properties": {
+        "match_key": "CorrectiveAction:revise-units-1-2-procedures"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-units-1-and-2-operating-procedures-consistent-with-unit-3-changes"
+    },
+    {
+      "id": "ca_complete_rce",
+      "display_name": "Complete Root Cause Evaluation and implement identified corrective actions",
+      "properties": {
+        "match_key": "CorrectiveAction:complete-rce"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:complete-root-cause-evaluation-and-implement-identified-corrective-actions"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5072",
+      "display_name": "10 CFR 50.72(b)(2)(iv)(B)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-72-b-2-iv-b"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-2-iv-b"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_hx",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sd_sj",
+      "evidence": null
+    },
+    {
+      "source": "c_3f1",
+      "relation": "PART_OF",
+      "target": "sys_hx",
+      "evidence": null
+    },
+    {
+      "source": "fm_proc_limit",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_proc_limit",
+      "relation": "LEADS_TO",
+      "target": "fm_level_indication",
+      "evidence": null
+    },
+    {
+      "source": "fm_level_indication",
+      "relation": "LEADS_TO",
+      "target": "cons_trip",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_pressure_test",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_calibrate",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_visual_inspect",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_revise_u3_proc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_revise_u12_proc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_complete_rce",
+      "evidence": null
+    }
+  ],
+  "chain": "overly restrictive 'F' heater level limit in operating procedure [cause TBD/provisional] -> 3F1 heater level reached procedural trip limit without an actual tube leak -> manual reactor trip from 32% power",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code and category are officially TBD/provisional per FORM-366 FIELDS; root cause evaluation was ongoing at time of report. No component failure occurred - the level rise was real but was not caused by a tube leak; the trip was driven by procedural conservatism, not equipment malfunction. Block 13 is empty (N/A) consistent with no reportable component failure. Extraction check valves and Units 1/2 status are design-context/background only and were not modeled as System nodes since they did not participate in the failure chain."
+}

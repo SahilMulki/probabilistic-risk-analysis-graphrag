@@ -1,0 +1,421 @@
+{
+  "ler_number": "265-2022-001-00",
+  "identity": {
+    "accession_number": "ML22140A128",
+    "docket": "05000265",
+    "plant_name": "Quad Cities",
+    "unit": 2,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2022-03-21",
+    "report_date": "2022-05-20",
+    "operating_mode": "4",
+    "power_level": 0,
+    "discovery_context": "inspection",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Electromatic Relief Valve 3B Did Not Actuate Due to Incorrectly Oriented Plunger Well Plastic Guides"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "D",
+      "system": "SB",
+      "component": "[SI",
+      "manufacturer": "No",
+      "reportable": null
+    }
+  ],
+  "cause": {
+    "proximate_text": "The cause of the failure was unclear vendor guidance and insufficient procedural guidance regarding orientation for the installation of the internal plunger well plastic guides. The internal plunger well plastic guides were found to be incorrectly installed in the 2-0203-3B ERV actuator, which caused actuator binding. Contributing to the failure was that the upper guide bracket did not have proper straightness and was found warped.",
+    "cause_code": "D",
+    "category": "Defective Procedure",
+    "theme": "Unclear vendor/procedural guidance on plunger well guide orientation during actuator rebuild",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 265-2022-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "265-2022-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:265-2022-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Quad Cities Unit 2",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000265",
+      "match_key": "Unit:05000265"
+    },
+    {
+      "id": "cause",
+      "display_name": "Defective Procedure (D)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "D",
+      "category": "Defective Procedure",
+      "theme": "Unclear vendor/procedural guidance on plunger well guide orientation during actuator rebuild",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Defective Procedure"
+    },
+    {
+      "id": "sys_sb",
+      "display_name": "Automatic Depressurization System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "system involved in event",
+      "match_key": "System:SB"
+    },
+    {
+      "id": "c_erv3b",
+      "display_name": "Electromatic Relief Valve 2-0203-3B",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "SB",
+      "identifier": "2-0203-3B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:SB|2-0203-3B"
+    },
+    {
+      "id": "c_actuator",
+      "display_name": "ERV 3B Solenoid Actuator",
+      "properties": {
+        "manufacturer": "General Electric"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": "36282632G001",
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:erv-3b-solenoid-actuator"
+    },
+    {
+      "id": "c_guide_bracket",
+      "display_name": "Upper guide bracket",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:upper-guide-bracket"
+    },
+    {
+      "id": "c_plunger",
+      "display_name": "Plunger / plunger well plastic guides",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:plunger-plunger-well-plastic-guides"
+    },
+    {
+      "id": "fm_guide_orientation",
+      "display_name": "Plunger well plastic guides incorrectly installed/oriented",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Internal plunger well plastic guides found incorrectly installed in the 2-0203-3B ERV actuator due to unclear vendor guidance and insufficient procedural guidance on orientation.",
+      "match_key": "FailureMode:plunger-well-plastic-guides-incorrectly-installed-oriented"
+    },
+    {
+      "id": "fm_bracket_warp",
+      "display_name": "Upper guide bracket warped / out of straightness",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Upper guide bracket did not have proper straightness and was found warped, resulting in plunger legs being out-of-squareness and increased friction with the plunger well.",
+      "match_key": "FailureMode:upper-guide-bracket-warped-out-of-straightness"
+    },
+    {
+      "id": "fm_binding",
+      "display_name": "Actuator binding",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Combination of incorrectly installed plastic guides and warped guide bracket caused significant binding of the actuator.",
+      "match_key": "FailureMode:actuator-binding"
+    },
+    {
+      "id": "fm_solenoid_burnout",
+      "display_name": "Solenoid actuator burnt out",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Initial assessment found the solenoid actuator burnt out concurrent with significant binding of the actuator.",
+      "match_key": "FailureMode:solenoid-actuator-burnt-out"
+    },
+    {
+      "id": "fm_erv_no_actuate",
+      "display_name": "ERV 3B failed to actuate",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "2-0203-3B Electromatic Relief Valve failed to actuate during TS SR 3.5.1.10 stroke test.",
+      "match_key": "FailureMode:erv-3b-failed-to-actuate"
+    },
+    {
+      "id": "cons_ads_inop",
+      "display_name": "ADS valve 2-0203-3B inoperable for entire refueling cycle",
+      "properties": {
+        "note": "TS 3.5.1 Condition H allows 14 days inoperable; ERV was inoperable for the entire cycle"
+      },
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:ads-valve-2-0203-3b-inoperable-for-entire-refueling-cycle"
+    },
+    {
+      "id": "ca_procedure_rev11",
+      "display_name": "Revise site maintenance rebuild procedure for straightness, matched assembly, and plastic guide orientation",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-site-maintenance-rebuild-procedure-for-straightness-matched-assembly-and-plastic-guide-orientation"
+    },
+    {
+      "id": "ca_replace_3b",
+      "display_name": "Replace 3B ERV and actuator; successfully tested during Q2R26",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-3b-erv-and-actuator-successfully-tested-during-q2r26"
+    },
+    {
+      "id": "ca_inspect_unit2_ervs",
+      "display_name": "Inspect all other Unit 2 ERVs for similar condition; successfully tested during Q2R26",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:inspect-all-other-unit-2-ervs-for-similar-condition-successfully-tested-during-q2r26"
+    },
+    {
+      "id": "ca_review_procedure",
+      "display_name": "Review and enhance site maintenance ERV rebuild procedure with manufacturer review",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:review-and-enhance-site-maintenance-erv-rebuild-procedure-with-manufacturer-review"
+    },
+    {
+      "id": "mfr_ge",
+      "display_name": "General Electric",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": null,
+      "match_key": "Manufacturer:general-electric"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts351",
+      "display_name": "TS 3.5.1 Condition H / SR 3.5.1.10",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ts-3-5-1-condition-h-sr-3-5-1-10"
+    },
+    {
+      "id": "rr_ufsar",
+      "display_name": "UFSAR 6.3.3.1.4",
+      "properties": {
+        "type": "analysis-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ufsar-6-3-3-1-4"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "LER 265/2020-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "265/2020-002-00",
+      "stub": true,
+      "title": "Electromatic Relief Valve 3D Did Not Actuate Due to Out of Specification Plunger",
+      "plant": "Quad Cities Nuclear Power Station Unit 2",
+      "match_key": "LER:265/2020-002-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "c_erv3b",
+      "relation": "PART_OF",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "c_actuator",
+      "relation": "PART_OF",
+      "target": "c_erv3b",
+      "evidence": null
+    },
+    {
+      "source": "c_guide_bracket",
+      "relation": "PART_OF",
+      "target": "c_actuator",
+      "evidence": null
+    },
+    {
+      "source": "c_plunger",
+      "relation": "PART_OF",
+      "target": "c_actuator",
+      "evidence": null
+    },
+    {
+      "source": "fm_guide_orientation",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_guide_orientation",
+      "relation": "LEADS_TO",
+      "target": "fm_binding",
+      "evidence": null
+    },
+    {
+      "source": "fm_bracket_warp",
+      "relation": "LEADS_TO",
+      "target": "fm_binding",
+      "evidence": null
+    },
+    {
+      "source": "fm_binding",
+      "relation": "LEADS_TO",
+      "target": "fm_solenoid_burnout",
+      "evidence": null
+    },
+    {
+      "source": "fm_binding",
+      "relation": "LEADS_TO",
+      "target": "fm_erv_no_actuate",
+      "evidence": null
+    },
+    {
+      "source": "fm_solenoid_burnout",
+      "relation": "LEADS_TO",
+      "target": "fm_erv_no_actuate",
+      "evidence": null
+    },
+    {
+      "source": "fm_erv_no_actuate",
+      "relation": "LEADS_TO",
+      "target": "cons_ads_inop",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procedure_rev11",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_3b",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_inspect_unit2_ervs",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_review_procedure",
+      "evidence": null
+    },
+    {
+      "source": "c_actuator",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_ge",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts351",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ufsar",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    }
+  ],
+  "chain": "unclear vendor/procedural guidance on plastic guide orientation [cause D] -> plunger well plastic guides incorrectly installed + upper guide bracket warped -> actuator binding -> solenoid burnout / ERV 3B fails to actuate -> ADS valve 2-0203-3B inoperable for entire cycle (no BACKED_UP_BY; four of five ADS valves credited, engineering evaluation found design/licensing bases still met)",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Not an SSFF per engineering evaluation (4-of-5 ADS valves credited in LOCA analysis); event is an MRFF. No BACKED_UP_BY edges emitted since the other ADS valves are described as design-basis redundancy for the ADS function, not a stated-operable backup system distinct from the ADS itself. Previous occurrence LER 265/2020-002-00 involved ERV 3D with a different root cause (out-of-spec plunger) despite similar bent/warped guide bracket contributing factor; captured as stub with key exactly as stated in narrative."
+}

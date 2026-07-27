@@ -1,0 +1,410 @@
+{
+  "ler_number": "458-2022-004-01",
+  "identity": {
+    "accession_number": "ML23319A436",
+    "docket": "05000458",
+    "plant_name": "River Bend",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2022-09-19",
+    "report_date": "2023-11-15",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "operability test",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "/ 2022-004-01, High Pressure Core Spray Inoperable due to Transformer Failure"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)(D)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "B",
+      "system": "EB",
+      "component": "XFMR",
+      "manufacturer": "G080",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "the root cause for the HPCS Transformer failure was a cable to bus bar connection design that was susceptible to degradation from routine maintenance...The configuration did not provide a provision for installing a backing wrench to prevent the threaded studs from rotating when the connection nuts are being loosened or tightened. Torsional forces were being applied to the brazed stud connections each time the connection was disassembled and reassembled.",
+    "cause_code": "B",
+    "category": "Design/Manufacturing/Installation",
+    "theme": "Transformer bus connection design susceptible to maintenance-induced degradation",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 458-2022-004-01",
+      "properties": {},
+      "type": "LER",
+      "key": "458-2022-004-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:458-2022-004-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "River Bend Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000458",
+      "match_key": "Unit:05000458"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Manufacturing/Installation (B)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "B",
+      "category": "Design/Manufacturing/Installation",
+      "theme": "Transformer bus connection design susceptible to maintenance-induced degradation",
+      "proximate_text": "the root cause for the HPCS Transformer failure was a cable to bus bar connection design that was susceptible to degradation from routine maintenance...Torsional forces were being applied to the brazed stud connections each time the connection was disassembled and reassembled.",
+      "provisional": false,
+      "match_key": "Cause:Design/Manufacturing/Installation"
+    },
+    {
+      "id": "sys_bg",
+      "display_name": "High Pressure Core Spray System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BG"
+    },
+    {
+      "id": "sys_eb",
+      "display_name": "Division III 480 VAC Switchgear power distribution",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "EB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:EB"
+    },
+    {
+      "id": "sys_bn",
+      "display_name": "Reactor Core Isolation Cooling",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BN",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; operable",
+      "match_key": "System:BN"
+    },
+    {
+      "id": "sys_ads",
+      "display_name": "Automatic Depressurization System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "backup; operable",
+      "match_key": "System:automatic-depressurization-system"
+    },
+    {
+      "id": "sys_swp",
+      "display_name": "Standby Service Water System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "P",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected; pump 2C inoperable",
+      "match_key": "System:P"
+    },
+    {
+      "id": "sys_dg3",
+      "display_name": "Division III Diesel Generator",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "DG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:DG"
+    },
+    {
+      "id": "c_xfmr",
+      "display_name": "E22-S003 HPCS Transformer",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "XFMR",
+      "identifier": "E22-S003",
+      "model": null,
+      "manufacturer_code": "G080",
+      "inferred_code": false,
+      "match_key": "Component:XFMR|E22-S003"
+    },
+    {
+      "id": "c_swgr",
+      "display_name": "E22-S002 Division III 480 VAC Switchgear",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "SWGR",
+      "identifier": "E22-S002",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:SWGR|E22-S002"
+    },
+    {
+      "id": "fm_brazedstud",
+      "display_name": "Brazed threaded stud connection to secondary bus bar degraded from repeated maintenance disassembly",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "No backing wrench provision allowed torsional forces on brazed brass studs during routine maintenance testing disassembly/reassembly, degrading the connection over time.",
+      "match_key": "FailureMode:brazed-threaded-stud-connection-to-secondary-bus-bar-degraded-from-repeated-maintenance-disassembly"
+    },
+    {
+      "id": "fm_openfault",
+      "display_name": "Open circuit fault at secondary bus brazed connection",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Separation of the threaded stud at the secondary bus brazed connection caused an open circuit fault, damaging the transformer.",
+      "match_key": "FailureMode:open-circuit-fault-at-secondary-bus-brazed-connection"
+    },
+    {
+      "id": "fm_xfmrfail",
+      "display_name": "HPCS Transformer failed / damaged",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "E22-S003 HPCS Transformer was damaged, requiring replacement.",
+      "match_key": "FailureMode:hpcs-transformer-failed-damaged"
+    },
+    {
+      "id": "fm_swgrloss",
+      "display_name": "Loss of power to Division III 480 VAC switchgear",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Transformer failure caused a loss of power to E22-S002, Division III 480 VAC switchgear.",
+      "match_key": "FailureMode:loss-of-power-to-division-iii-480-vac-switchgear"
+    },
+    {
+      "id": "cons_hpci",
+      "display_name": "HPCS inoperable / loss of initiation capability",
+      "properties": {
+        "note": "TS 3.8.9 Condition E entered; 14-day TS LCO shutdown action statement due to HPCS inoperability; SWP-P2C also declared inoperable"
+      },
+      "type": "Consequence",
+      "start": "2022-09-19T01:32",
+      "end": null,
+      "duration": null,
+      "tz": "CDT",
+      "match_key": "Consequence:hpcs-inoperable-loss-of-initiation-capability"
+    },
+    {
+      "id": "ca_tempxfmr",
+      "display_name": "Install temporary replacement transformer with bolted bus connection",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:install-temporary-replacement-transformer-with-bolted-bus-connection"
+    },
+    {
+      "id": "ca_permxfmr",
+      "display_name": "Complete procurement and installation of permanent replacement HPCS transformer",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:complete-procurement-and-installation-of-permanent-replacement-hpcs-transformer"
+    },
+    {
+      "id": "ca_designspec",
+      "display_name": "Update Design Specification to require bolted, accessible transformer terminations on low and high voltage sides",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:update-design-specification-to-require-bolted-accessible-transformer-terminations-on-low-and-high-voltage-sides"
+    },
+    {
+      "id": "mfr_g080",
+      "display_name": "Manufacturer G080",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "G080",
+      "match_key": "Manufacturer:G080"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "rr_ufsar",
+      "display_name": "RBS UFSAR",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:rbs-ufsar"
+    },
+    {
+      "id": "rr_5046",
+      "display_name": "10 CFR 50.46",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:10-cfr-50-46"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bg",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_eb",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_dg3",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_swp",
+      "evidence": null
+    },
+    {
+      "source": "c_xfmr",
+      "relation": "PART_OF",
+      "target": "sys_eb",
+      "evidence": null
+    },
+    {
+      "source": "c_swgr",
+      "relation": "PART_OF",
+      "target": "sys_eb",
+      "evidence": null
+    },
+    {
+      "source": "fm_brazedstud",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_brazedstud",
+      "relation": "LEADS_TO",
+      "target": "fm_openfault",
+      "evidence": null
+    },
+    {
+      "source": "fm_openfault",
+      "relation": "LEADS_TO",
+      "target": "fm_xfmrfail",
+      "evidence": null
+    },
+    {
+      "source": "fm_xfmrfail",
+      "relation": "LEADS_TO",
+      "target": "fm_swgrloss",
+      "evidence": null
+    },
+    {
+      "source": "fm_swgrloss",
+      "relation": "LEADS_TO",
+      "target": "cons_hpci",
+      "evidence": null
+    },
+    {
+      "source": "cons_hpci",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_bn",
+      "evidence": null
+    },
+    {
+      "source": "cons_hpci",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_ads",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_tempxfmr",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_permxfmr",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_designspec",
+      "evidence": null
+    },
+    {
+      "source": "c_xfmr",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_g080",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ufsar",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5046",
+      "evidence": null
+    }
+  ],
+  "chain": "brazed bus-stud connection design lacked backing-wrench provision [cause B] -> torsional degradation of brazed stud connection over repeated maintenance -> open circuit fault at secondary bus connection -> HPCS transformer damaged -> loss of power to Division III 480 VAC switchgear -> HPCS inoperable / loss of initiation capability [backups RCIC, ADS, Division 1/2 ECCS available]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Standby Service Water Pump 2C (SWP-P2C) was also declared inoperable due to the same Division III power loss but is treated as a co-affected system rather than part of the HPCS causal chain, since the narrative does not detail its failure mechanism. Division 1 and Division 2 ECCS trains and ADS were stated operable and met 10 CFR 50.46 performance criteria while HPCS was out of service; RCIC was verified operable per the narrative and is modeled as a stated-operable backup along with ADS. No previous similar events were reported."
+}

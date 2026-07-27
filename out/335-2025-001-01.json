@@ -1,0 +1,282 @@
+{
+  "ler_number": "335-2025-001-01",
+  "identity": {
+    "accession_number": "ML25099A035",
+    "docket": "05000335",
+    "plant_name": "Saint Lucie",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2025-01-27",
+    "report_date": "2025-04-08",
+    "operating_mode": null,
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2025-001-01 for St. Lucie Unit 1, Safety Injection Tank Above Technical Specifications Limit"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "X",
+      "system": "BQ/BP",
+      "component": "LT",
+      "manufacturer": null,
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The 1A1 SIT LT-3321 circuit card failed causing inaccurate SIT level indication.",
+    "cause_code": "X",
+    "category": "Other",
+    "theme": "level transmitter circuit card failure",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 335-2025-001-01",
+      "properties": {},
+      "type": "LER",
+      "key": "335-2025-001-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:335-2025-001-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Saint Lucie Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000335",
+      "match_key": "Unit:05000335"
+    },
+    {
+      "id": "cause",
+      "display_name": "Other (X)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "X",
+      "category": "Other",
+      "theme": "level transmitter circuit card failure",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Other"
+    },
+    {
+      "id": "sys_sit",
+      "display_name": "Safety Injection Tank System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BQ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BQ"
+    },
+    {
+      "id": "c_sit1a",
+      "display_name": "1A1 Safety Injection Tank",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "1A1",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:1a1-safety-injection-tank"
+    },
+    {
+      "id": "c_lt3321",
+      "display_name": "Level Transmitter LT-3321",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "LT",
+      "identifier": "LT-3321",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:LT|LT-3321"
+    },
+    {
+      "id": "c_card",
+      "display_name": "LT-3321 circuit card",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:lt-3321-circuit-card"
+    },
+    {
+      "id": "fm_card_fail",
+      "display_name": "LT-3321 circuit card failed",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Circuit card in the level transmitter failed, causing inaccurate level indication.",
+      "match_key": "FailureMode:lt-3321-circuit-card-failed"
+    },
+    {
+      "id": "fm_erratic_level",
+      "display_name": "1A1 SIT indicated level became erratic",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Erratic level indication rendered 1A1 SIT inoperable.",
+      "match_key": "FailureMode:1a1-sit-indicated-level-became-erratic"
+    },
+    {
+      "id": "fm_overfill",
+      "display_name": "SIT level indicated 100.8% after calibration, exceeding TS limit",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "After circuit card replacement and calibration, level indicated 100.8%, above the TS Surveillance Requirement Limit of 1170 ft3.",
+      "match_key": "FailureMode:sit-level-indicated-100-8-after-calibration-exceeding-ts-limit"
+    },
+    {
+      "id": "cons_tslimit",
+      "display_name": "1A1 SIT volume above Technical Specification limit / TSAS 3.5.1 Action B entry",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2025-01-27",
+      "end": "2025-01-27",
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:1a1-sit-volume-above-technical-specification-limit-tsas-3-5-1-action-b-entry"
+    },
+    {
+      "id": "ca_replace_card",
+      "display_name": "Replace and calibrate LT-3321 circuit card",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-and-calibrate-lt-3321-circuit-card"
+    },
+    {
+      "id": "ca_lower_level",
+      "display_name": "Reduce 1A1 SIT water volume from 100.8% to 94.2% indicated level",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:reduce-1a1-sit-water-volume-from-100-8-to-94-2-indicated-level"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_tsas351",
+      "display_name": "Technical Specification Action Statement 3.5.1, Action B",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-action-statement-3-5-1-action-b"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_sit1a",
+      "evidence": null
+    },
+    {
+      "source": "c_lt3321",
+      "relation": "PART_OF",
+      "target": "sys_sit",
+      "evidence": null
+    },
+    {
+      "source": "c_card",
+      "relation": "PART_OF",
+      "target": "c_lt3321",
+      "evidence": null
+    },
+    {
+      "source": "fm_card_fail",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_card_fail",
+      "relation": "LEADS_TO",
+      "target": "fm_erratic_level",
+      "evidence": null
+    },
+    {
+      "source": "fm_erratic_level",
+      "relation": "LEADS_TO",
+      "target": "fm_overfill",
+      "evidence": null
+    },
+    {
+      "source": "fm_overfill",
+      "relation": "LEADS_TO",
+      "target": "cons_tslimit",
+      "evidence": null
+    },
+    {
+      "source": "cons_tslimit",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_card",
+      "evidence": null
+    },
+    {
+      "source": "cons_tslimit",
+      "relation": "MITIGATED_BY",
+      "target": "ca_lower_level",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_tsas351",
+      "evidence": null
+    }
+  ],
+  "chain": "LT-3321 circuit card fails [cause X] -> 1A1 SIT level indication becomes erratic -> after recalibration level indicates 100.8%, exceeding TS volume limit -> TSAS 3.5.1 Action B entry / reportable event -> corrected by circuit card replacement/calibration and volume reduction",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4"
+  ],
+  "notes": "Cause code X (Other) governs category per official coding despite a clearly identified component failure (circuit card). No stub LER emitted for SIMILAR_TO since narrative states a 5-year review found no similar events with the same cause. Block 13 system listed as BQ/BP (SIT/SI systems); modeled primary SIT system as BQ. LIA-3321 (level indicating alarm) mentioned only in describing the Jan 8 precursor observation and not modeled as a separate failure node since it is not itself a failure mode, just an indicator reading that appeared normal."
+}

@@ -1,0 +1,584 @@
+{
+  "ler_number": "270-2024-001-00",
+  "identity": {
+    "accession_number": "ML24354A312",
+    "docket": "05000270",
+    "plant_name": "Oconee",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2024-10-28",
+    "report_date": "2024-12-19",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "inspection",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Revision 00 – Common Cause Inoperability of"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)(D)",
+      "10 CFR 50.73(a)(2)(vii)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "B",
+      "system": "ED",
+      "component": "IEL",
+      "manufacturer": "B455",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "a legacy internal wiring issue in breaker cubicle 1X6-6C...a lugged termination on the backside of the secondary disconnect was oriented such that the lug and conductor was physically tensioned across the lugged termination of another conductor...during removal of a portion of the 1X6-6C secondary disconnect, this legacy wiring issue resulted in the inadvertent completion of the MCC 1XR feeder breaker interlock circuit when some exposed conductor strands contacted",
+    "cause_code": "B",
+    "category": "Design/Manufacturing/Installation",
+    "theme": "latent wiring installation defect exposed during maintenance",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 270-2024-005-00",
+      "properties": {
+        "match_key": "LER:270-2024-005-00"
+      },
+      "type": "LER",
+      "key": "270-2024-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:270-2024-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Oconee Unit 2",
+      "properties": {
+        "match_key": "Unit:05000270",
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000270",
+      "match_key": "Unit:05000270"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Manufacturing/Installation (B)",
+      "properties": {
+        "match_key": "Cause:Design/Manufacturing/Installation"
+      },
+      "type": "Cause",
+      "cause_code": "B",
+      "category": "Design/Manufacturing/Installation",
+      "theme": "latent wiring installation defect exposed during maintenance",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Design/Manufacturing/Installation"
+    },
+    {
+      "id": "sys_crvs",
+      "display_name": "Control Room Ventilation System",
+      "properties": {
+        "acronym": "CRVS",
+        "match_key": "System:control-room-ventilation-system"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:control-room-ventilation-system"
+    },
+    {
+      "id": "sys_vi",
+      "display_name": "Outside Air Booster Fan trains",
+      "properties": {
+        "match_key": "System:VI"
+      },
+      "type": "System",
+      "eiis_code": "VI",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:VI"
+    },
+    {
+      "id": "sys_ed",
+      "display_name": "Electrical Distribution System",
+      "properties": {
+        "match_key": "System:ED"
+      },
+      "type": "System",
+      "eiis_code": "ED",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "power supply to MCC 1XR and downstream loads",
+      "match_key": "System:ED"
+    },
+    {
+      "id": "c_bkr_1x6",
+      "display_name": "Breaker cubicle 1X6-6C (MCC 1XR alternate feeder breaker)",
+      "properties": {
+        "match_key": "Component:IEL|1X6-6C"
+      },
+      "type": "Component",
+      "eiis_code": "IEL",
+      "identifier": "1X6-6C",
+      "model": null,
+      "manufacturer_code": "B455",
+      "inferred_code": false,
+      "match_key": "Component:IEL|1X6-6C"
+    },
+    {
+      "id": "c_secdisc",
+      "display_name": "Secondary disconnect in cubicle 1X6-6C",
+      "properties": {
+        "match_key": "Component:secondary-disconnect-1x6-6c"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:secondary-disconnect-in-cubicle-1x6-6c"
+    },
+    {
+      "id": "c_bkr_1x7",
+      "display_name": "Breaker 1X7-4D (MCC 1XR normal supply breaker)",
+      "properties": {
+        "match_key": "Component:breaker-1x7-4d"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "1X7-4D",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:breaker-1x7-4d-mcc-1xr-normal-supply-breaker"
+    },
+    {
+      "id": "c_mcc_1xr",
+      "display_name": "MCC 1XR",
+      "properties": {
+        "match_key": "Component:mcc-1xr"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "1XR",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:mcc-1xr"
+    },
+    {
+      "id": "c_pb_1kg",
+      "display_name": "Panelboard 1KG",
+      "properties": {
+        "match_key": "Component:panelboard-1kg"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "1KG",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:panelboard-1kg"
+    },
+    {
+      "id": "c_damper_a",
+      "display_name": "Motor-operated inlet damper, Unit 1&2 A CRVS OABF train",
+      "properties": {
+        "match_key": "Component:mov-inlet-damper-a-train"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:motor-operated-inlet-damper-unit-1-2-a-crvs-oabf-train"
+    },
+    {
+      "id": "c_damper_b",
+      "display_name": "Motor-operated inlet damper, Unit 1&2 B CRVS OABF train",
+      "properties": {
+        "match_key": "Component:mov-inlet-damper-b-train"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:motor-operated-inlet-damper-unit-1-2-b-crvs-oabf-train"
+    },
+    {
+      "id": "c_fan_a",
+      "display_name": "Unit 1&2 A CRVS Outside Air Booster Fan",
+      "properties": {
+        "match_key": "Component:oabf-a-fan"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:unit-1-2-a-crvs-outside-air-booster-fan"
+    },
+    {
+      "id": "fm_wiring",
+      "display_name": "Legacy wiring defect in secondary disconnect (tensioned lugged conductor)",
+      "properties": {
+        "match_key": "FailureMode:legacy-wiring-defect-secondary-disconnect"
+      },
+      "type": "FailureMode",
+      "description": "Lugged termination oriented such that conductor was physically tensioned across another conductor's lugged termination, hidden on backside of secondary disconnect.",
+      "match_key": "FailureMode:legacy-wiring-defect-in-secondary-disconnect-tensioned-lugged-conductor"
+    },
+    {
+      "id": "fm_interlock",
+      "display_name": "Inadvertent completion of feeder breaker interlock circuit",
+      "properties": {
+        "match_key": "FailureMode:inadvertent-interlock-completion"
+      },
+      "type": "FailureMode",
+      "description": "During manipulation of secondary disconnect for PM, exposed conductor strands contacted, inadvertently completing the interlock circuit.",
+      "match_key": "FailureMode:inadvertent-completion-of-feeder-breaker-interlock-circuit"
+    },
+    {
+      "id": "fm_bkrtrip",
+      "display_name": "Normal feeder breaker 1X7-4D trips open",
+      "properties": {
+        "match_key": "FailureMode:breaker-1x7-4d-trip"
+      },
+      "type": "FailureMode",
+      "description": "Interlock actuation caused MCC 1XR normal supply breaker 1X7-4D to trip open.",
+      "match_key": "FailureMode:normal-feeder-breaker-1x7-4d-trips-open"
+    },
+    {
+      "id": "fm_mccloss",
+      "display_name": "Loss of power to MCC 1XR",
+      "properties": {
+        "match_key": "FailureMode:mcc-1xr-power-loss"
+      },
+      "type": "FailureMode",
+      "description": "With the alternate feeder already out of service for PM and the normal feeder tripped, MCC 1XR lost power.",
+      "match_key": "FailureMode:loss-of-power-to-mcc-1xr"
+    },
+    {
+      "id": "fm_fanaloss",
+      "display_name": "Loss of power to Unit 1&2 A CRVS OABF",
+      "properties": {
+        "match_key": "FailureMode:oabf-a-power-loss"
+      },
+      "type": "FailureMode",
+      "description": "Loss of MCC 1XR power directly de-energized the A train OABF fan.",
+      "match_key": "FailureMode:loss-of-power-to-unit-1-2-a-crvs-oabf"
+    },
+    {
+      "id": "fm_pbloss",
+      "display_name": "Loss of power to panelboard 1KG",
+      "properties": {
+        "match_key": "FailureMode:panelboard-1kg-power-loss"
+      },
+      "type": "FailureMode",
+      "description": "Loss of MCC 1XR power removed power from downstream panelboard 1KG, which feeds both trains' inlet dampers.",
+      "match_key": "FailureMode:loss-of-power-to-panelboard-1kg"
+    },
+    {
+      "id": "fm_damperloss",
+      "display_name": "Loss of power to both A and B train motor-operated inlet dampers",
+      "properties": {
+        "match_key": "FailureMode:both-dampers-power-loss"
+      },
+      "type": "FailureMode",
+      "description": "Loss of power to panelboard 1KG de-energized the normally-closed motor-operated inlet dampers for both A and B CRVS OABF trains.",
+      "match_key": "FailureMode:loss-of-power-to-both-a-and-b-train-motor-operated-inlet-dampers"
+    },
+    {
+      "id": "cons_crvs",
+      "display_name": "Both trains of CRVS Outside Air Booster Fans rendered inoperable (common cause), unable to supply filtered makeup air to control room",
+      "properties": {
+        "match_key": "Consequence:crvs-oabf-common-cause-inoperable"
+      },
+      "type": "Consequence",
+      "start": "2024-10-28T05:33",
+      "end": "2024-10-28T10:59",
+      "duration": "5:26",
+      "tz": null,
+      "match_key": "Consequence:both-trains-of-crvs-outside-air-booster-fans-rendered-inoperable-common-cause-unable-to-supply-filtered-makeup-air-to-control-room"
+    },
+    {
+      "id": "ca_repair",
+      "display_name": "Repaired legacy wiring issue on secondary disconnect in 1X6-6C cubicle",
+      "properties": {
+        "match_key": "CorrectiveAction:repair-legacy-wiring-1x6-6c"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:repaired-legacy-wiring-issue-on-secondary-disconnect-in-1x6-6c-cubicle"
+    },
+    {
+      "id": "ca_restore",
+      "display_name": "Returned both Unit 1&2 CRVS OABF trains to operable by restoring MCC 1XR to normal alignment",
+      "properties": {
+        "match_key": "CorrectiveAction:restore-mcc-1xr-alignment"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:returned-both-unit-1-2-crvs-oabf-trains-to-operable-by-restoring-mcc-1xr-to-normal-alignment"
+    },
+    {
+      "id": "ca_procedure",
+      "display_name": "Revise MCC secondary disconnect maintenance procedure to prevent unintended interlock actuation",
+      "properties": {
+        "match_key": "CorrectiveAction:revise-mcc-secondary-disconnect-procedure"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-mcc-secondary-disconnect-maintenance-procedure-to-prevent-unintended-interlock-actuation"
+    },
+    {
+      "id": "ca_ec_separate",
+      "display_name": "Develop and implement Engineering Change to separate power supplies for the motor-operated inlet dampers of Unit 1&2 CRVS OABF trains",
+      "properties": {
+        "match_key": "CorrectiveAction:ec-separate-damper-power-supplies"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:develop-and-implement-engineering-change-to-separate-power-supplies-for-the-motor-operated-inlet-dampers-of-unit-1-2-crvs-oabf-trains"
+    },
+    {
+      "id": "mfr_b455",
+      "display_name": "Manufacturer B455",
+      "properties": {
+        "match_key": "Manufacturer:B455"
+      },
+      "type": "Manufacturer",
+      "code": "B455",
+      "match_key": "Manufacturer:B455"
+    },
+    {
+      "id": "rr_5073v",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {
+        "type": "reporting-criterion",
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "rr_5073vii",
+      "display_name": "10 CFR 50.73(a)(2)(vii)",
+      "properties": {
+        "type": "reporting-criterion",
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-vii"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-vii"
+    },
+    {
+      "id": "rr_5072",
+      "display_name": "10 CFR 50.72(b)(3)(v)(D)",
+      "properties": {
+        "type": "reporting-criterion",
+        "match_key": "RegulatoryReference:10-cfr-50-72-b-3-v-d"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-3-v-d"
+    },
+    {
+      "id": "rr_ts379",
+      "display_name": "Technical Specification 3.7.9",
+      "properties": {
+        "type": "license-basis",
+        "match_key": "RegulatoryReference:ts-3-7-9"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:technical-specification-3-7-9"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073v",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073vii",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts379",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_crvs",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_vi",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ed",
+      "evidence": null
+    },
+    {
+      "source": "c_secdisc",
+      "relation": "PART_OF",
+      "target": "c_bkr_1x6",
+      "evidence": null
+    },
+    {
+      "source": "c_damper_a",
+      "relation": "PART_OF",
+      "target": "sys_vi",
+      "evidence": null
+    },
+    {
+      "source": "c_damper_b",
+      "relation": "PART_OF",
+      "target": "sys_vi",
+      "evidence": null
+    },
+    {
+      "source": "c_fan_a",
+      "relation": "PART_OF",
+      "target": "sys_vi",
+      "evidence": null
+    },
+    {
+      "source": "fm_wiring",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_wiring",
+      "relation": "LEADS_TO",
+      "target": "fm_interlock",
+      "evidence": null
+    },
+    {
+      "source": "fm_interlock",
+      "relation": "LEADS_TO",
+      "target": "fm_bkrtrip",
+      "evidence": null
+    },
+    {
+      "source": "fm_bkrtrip",
+      "relation": "LEADS_TO",
+      "target": "fm_mccloss",
+      "evidence": null
+    },
+    {
+      "source": "fm_mccloss",
+      "relation": "LEADS_TO",
+      "target": "fm_fanaloss",
+      "evidence": null
+    },
+    {
+      "source": "fm_mccloss",
+      "relation": "LEADS_TO",
+      "target": "fm_pbloss",
+      "evidence": null
+    },
+    {
+      "source": "fm_pbloss",
+      "relation": "LEADS_TO",
+      "target": "fm_damperloss",
+      "evidence": null
+    },
+    {
+      "source": "fm_fanaloss",
+      "relation": "LEADS_TO",
+      "target": "cons_crvs",
+      "evidence": null
+    },
+    {
+      "source": "fm_damperloss",
+      "relation": "LEADS_TO",
+      "target": "cons_crvs",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_repair",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_restore",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procedure",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_ec_separate",
+      "evidence": null
+    },
+    {
+      "source": "c_bkr_1x6",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_b455",
+      "evidence": null
+    }
+  ],
+  "chain": "legacy wiring defect in secondary disconnect [cause B] -> maintenance manipulation inadvertently completes interlock circuit -> normal feeder breaker 1X7-4D trips -> MCC 1XR loses power (alternate feeder already out for PM) -> loss of power to A train fan AND panelboard 1KG -> loss of power to both A and B train inlet dampers -> both CRVS OABF trains common-cause inoperable (5h26m) [B train restored by manually failing damper open]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Common-cause event: single legacy wiring defect combined with a concurrent, unrelated planned maintenance outage of the alternate feeder (1X6) produced simultaneous loss of both OABF trains via a shared downstream panelboard (1KG) feeding both trains' dampers. No PART_OF asserted from breaker/MCC/panelboard to sys_ed since these are power-supply/functional relationships, not stated containment, except secondary disconnect explicitly described as part of breaker cubicle 1X6-6C. ADS/other ECCS not applicable to this non-ECCS ventilation event."
+}

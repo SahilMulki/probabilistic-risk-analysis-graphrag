@@ -1,0 +1,401 @@
+{
+  "ler_number": "423-2022-003-00",
+  "identity": {
+    "accession_number": "ML23301A009",
+    "docket": "05000423",
+    "plant_name": "Millstone",
+    "unit": 3,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2022-10-06",
+    "report_date": "2023-10-28",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2022-003-00 for Millstone Power Station Unit 3 re Gas Void in the Emergency Core Cooling System Resulted In a Condition Prohibited By Technical Specifications"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "Most likely source of gas voids in this section of pipe was determined to be inadequate guidance in the operating procedures used to perform filling and venting activities during system restorations.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "inadequate procedural guidance for fill/vent activities",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 423-2022-003-00",
+      "properties": {},
+      "type": "LER",
+      "key": "423-2022-003-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:423-2022-003-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Millstone Unit 3",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000423",
+      "match_key": "Unit:05000423"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "inadequate procedural guidance for fill/vent activities",
+      "proximate_text": "Most likely source of gas voids in this section of pipe was determined to be inadequate guidance in the operating procedures used to perform filling and venting activities during system restorations.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_rhr",
+      "display_name": "Residual Heat Removal",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BO",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "ECCS train, involved",
+      "match_key": "System:BO"
+    },
+    {
+      "id": "sys_chs",
+      "display_name": "Chemical and Volume Control / Charging System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "ECCS subsystem, involved",
+      "match_key": "System:chemical-and-volume-control-charging-system"
+    },
+    {
+      "id": "sys_sih",
+      "display_name": "Safety Injection System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BP",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "ECCS subsystem, involved",
+      "match_key": "System:BP"
+    },
+    {
+      "id": "sys_rss",
+      "display_name": "Containment Recirculation Spray System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "ECCS subsystem, involved",
+      "match_key": "System:containment-recirculation-spray-system"
+    },
+    {
+      "id": "c_pipe",
+      "display_name": "Low Pressure SI to Charging Pump Suction Line 3-SIL-008-14-2",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "3-SIL-008-14-2",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:low-pressure-si-to-charging-pump-suction-line-3-sil-008-14-2"
+    },
+    {
+      "id": "c_calc",
+      "display_name": "Void Volume Calculation 14-ENG-04518M3 (MP3 GL2008-01 Pump Suction Side Gas Void Allowable Volume Using Westinghouse Simplified Equation Method)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "14-ENG-04518M3",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:void-volume-calculation-14-eng-04518m3-mp3-gl2008-01-pump-suction-side-gas-void-allowable-volume-using-westinghouse-simplified-equation-method"
+    },
+    {
+      "id": "fm_procguidance",
+      "display_name": "Inadequate procedural guidance for filling and venting during system restoration",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Operating procedures lacked adequate guidance for filling/venting activities, allowing gas voids to accumulate in ECCS piping.",
+      "match_key": "FailureMode:inadequate-procedural-guidance-for-filling-and-venting-during-system-restoration"
+    },
+    {
+      "id": "fm_gasvoid",
+      "display_name": "Gas void accumulated in RHR suction piping exceeding acceptance criteria",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "UT measurement at Point 10 on line 3-SIL-008-14-2 identified a gas void greater than the acceptance criteria.",
+      "match_key": "FailureMode:gas-void-accumulated-in-rhr-suction-piping-exceeding-acceptance-criteria"
+    },
+    {
+      "id": "fm_calcerror",
+      "display_name": "Non-conservative pressure input in void volume calculation",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Calculation 14-ENG-04518M3 used an incorrect, non-conservative pressure value, reducing the allowable void size acceptance criteria and masking the true unacceptability of the as-found void.",
+      "match_key": "FailureMode:non-conservative-pressure-input-in-void-volume-calculation"
+    },
+    {
+      "id": "fm_procinsufficient",
+      "display_name": "Single-point UT measurement procedure insufficient to characterize void volume",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Prior to October 17, 2022, SP 3610A.3 directed a single UT measurement at Point 10, which did not fully characterize the void volume in the line.",
+      "match_key": "FailureMode:single-point-ut-measurement-procedure-insufficient-to-characterize-void-volume"
+    },
+    {
+      "id": "cons_tsviolation",
+      "display_name": "ECCS train inoperable / condition prohibited by Technical Specifications",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2022-05-18",
+      "end": "2022-10-17T14:41",
+      "duration": "approx. 5 months",
+      "tz": null,
+      "match_key": "Consequence:eccs-train-inoperable-condition-prohibited-by-technical-specifications"
+    },
+    {
+      "id": "ca_vent",
+      "display_name": "Vent entire length of pipe to remove gas voids",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:vent-entire-length-of-pipe-to-remove-gas-voids"
+    },
+    {
+      "id": "ca_ut",
+      "display_name": "Perform UT measurements at multiple locations to verify voids within limits",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:perform-ut-measurements-at-multiple-locations-to-verify-voids-within-limits"
+    },
+    {
+      "id": "ca_procenhance",
+      "display_name": "Enhance operating procedures with instructions for filling/venting line and verifying ECCS piping full of water",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:enhance-operating-procedures-with-instructions-for-filling-venting-line-and-verifying-eccs-piping-full-of-water"
+    },
+    {
+      "id": "ca_sprevise",
+      "display_name": "Revise SP 3610A.3 to include additional UT locations to fully characterize void volume",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-sp-3610a-3-to-include-additional-ut-locations-to-fully-characterize-void-volume"
+    },
+    {
+      "id": "ca_cap",
+      "display_name": "Additional corrective actions per station corrective action program",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:additional-corrective-actions-per-station-corrective-action-program"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts352",
+      "display_name": "Technical Specification 3.5.2 ECCS Subsystems - Tavg Greater Than or Equal to 350F",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:technical-specification-3-5-2-eccs-subsystems-tavg-greater-than-or-equal-to-350f"
+    },
+    {
+      "id": "rr_5046",
+      "display_name": "10 CFR 50.46",
+      "properties": {
+        "type": "analysis-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-46"
+    },
+    {
+      "id": "rr_fsar1565",
+      "display_name": "FSAR Section 15.6.5",
+      "properties": {
+        "type": "analysis-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:fsar-section-15-6-5"
+    },
+    {
+      "id": "rr_fsar621",
+      "display_name": "FSAR Section 6.2.1",
+      "properties": {
+        "type": "analysis-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:fsar-section-6-2-1"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts352",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rhr",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_chs",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sih",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rss",
+      "evidence": null
+    },
+    {
+      "source": "fm_procguidance",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_procguidance",
+      "relation": "LEADS_TO",
+      "target": "fm_gasvoid",
+      "evidence": null
+    },
+    {
+      "source": "fm_procguidance",
+      "relation": "LEADS_TO",
+      "target": "fm_procinsufficient",
+      "evidence": null
+    },
+    {
+      "source": "fm_gasvoid",
+      "relation": "LEADS_TO",
+      "target": "fm_calcerror",
+      "evidence": null
+    },
+    {
+      "source": "fm_procinsufficient",
+      "relation": "LEADS_TO",
+      "target": "fm_calcerror",
+      "evidence": null
+    },
+    {
+      "source": "fm_calcerror",
+      "relation": "LEADS_TO",
+      "target": "cons_tsviolation",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_vent",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_ut",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procenhance",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_sprevise",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_cap",
+      "evidence": null
+    },
+    {
+      "source": "rr_5046",
+      "relation": "REVISES",
+      "target": "rr_fsar1565",
+      "evidence": null
+    }
+  ],
+  "chain": "inadequate procedural guidance for fill/vent activities [cause TBD] -> gas void accumulates in RHR suction piping beyond acceptance criteria -> non-conservative pressure input in void volume calculation masks true unacceptability -> single-point UT procedure fails to fully characterize void -> ECCS train inoperable, TS condition prohibited (May 18, 2022 - Oct 17, 2022)",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code is TBD/provisional per FORM-366 fields, despite narrative giving a specific proximate cause statement (inadequate operating procedure guidance for filling/venting). Modeled fm_gasvoid and fm_procinsufficient as parallel downstream effects of the root procedural-guidance failure, both converging on the calculation-error failure mode which, once corrected, revealed the true multi-month TS violation. RHR/CHS/SIH/RSS are ECCS subsystems explicitly involved in the event (not backups - no BACKED_UP_BY edges asserted since no alternate system substituted for the affected train; EOP 35 ES-1.3 cold leg recirculation contingency is described as design/analysis context, not an operable backup during this actual event, so not modeled as a System node). No EIIS codes given in narrative (explicitly 'None'), so component/system eiis_code fields left null throughout. No previous similar occurrence LER referenced (narrative states none in last 5 years), so no stub LER/SIMILAR_TO edge emitted."
+}

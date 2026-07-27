@@ -1,0 +1,357 @@
+{
+  "ler_number": "250-2020-001-00",
+  "identity": {
+    "accession_number": "ML20177A143",
+    "docket": "05000250",
+    "plant_name": "Turkey Point",
+    "unit": 3,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2020-05-07",
+    "report_date": "2020-06-24",
+    "operating_mode": "3",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Technical Specification Action Not Taken for Unrecognized Inoperable Reactor Protection System (RPS) and Engineered Safety Feature Actuation System (ESFAS) Instrument Channel Functional Units"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)",
+      "10 CFR 50.73(a)(2)(v)(D)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "A technical error in the shutdown calibration procedure caused an incorrect streaming constant to be installed for one RCS hot leg RTD, resulting in an inaccurate Tave input to the Eagle 21 Channel II ESFAS functions. The inaccurate Tave value caused a setpoint calculation error during the subsequent 100% power calibration, causing the Eagle 21 Channel II OTDT and OPDT RPS setpoints to exceed the allowable values described in Tech Specs.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "procedure error during shutdown calibration led to erroneous streaming constant",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 250-2020-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "250-2020-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:250-2020-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Turkey Point Unit 3",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000250",
+      "match_key": "Unit:05000250"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "procedure error during shutdown calibration led to erroneous streaming constant",
+      "proximate_text": "A technical error in the shutdown calibration procedure caused an incorrect streaming constant to be installed for one RCS hot leg RTD, resulting in an inaccurate Tave input to the Eagle 21 Channel II ESFAS functions. The inaccurate Tave value caused a setpoint calculation error during the subsequent 100% power calibration, causing the Eagle 21 Channel II OTDT and OPDT RPS setpoints to exceed the allowable values described in Tech Specs.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_jc",
+      "display_name": "Eagle 21 Channel II Process Protection System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected instrument channel",
+      "match_key": "System:JC"
+    },
+    {
+      "id": "sys_ab",
+      "display_name": "Reactor Coolant System (RCS)",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "AB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "hot leg RTD host system",
+      "match_key": "System:AB"
+    },
+    {
+      "id": "c_rtd",
+      "display_name": "RCS hot leg RTD",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "TE",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:TE"
+    },
+    {
+      "id": "c_cha",
+      "display_name": "Eagle 21 Channel II Functional Units (temperature calculation channel)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "CHA",
+      "identifier": "Channel II",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:CHA|Channel II"
+    },
+    {
+      "id": "fm_procerror",
+      "display_name": "Calibration procedure technical error",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Shutdown calibration procedure contained a technical error causing an incorrect streaming constant to be uploaded to the Eagle 21 Channel II processor.",
+      "match_key": "FailureMode:calibration-procedure-technical-error"
+    },
+    {
+      "id": "fm_streamconst",
+      "display_name": "Incorrect streaming constant uploaded to RTD input",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Inaccurate streaming constant installed for RCS hot leg RTD, affecting Tave/RCS temperature calculations for Eagle 21 Channel II.",
+      "match_key": "FailureMode:incorrect-streaming-constant-uploaded-to-rtd-input"
+    },
+    {
+      "id": "fm_esfas_inop",
+      "display_name": "ESFAS Functional Units inoperable (undetected)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Three ESFAS Functional Units (1f, 4d, 8b) rendered inoperable from Mode 3 entry until first 100% power calibration on 5/6/2020, without TS actions taken.",
+      "match_key": "FailureMode:esfas-functional-units-inoperable-undetected"
+    },
+    {
+      "id": "fm_setpoint_error",
+      "display_name": "Erroneous OTDT/OPDT setpoint constants installed at 100% power calibration",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Because of the inaccurate Tave input, inaccurate OTDT and OPDT setpoint constants were installed during the 100% power calibration.",
+      "match_key": "FailureMode:erroneous-otdt-opdt-setpoint-constants-installed-at-100-power-calibration"
+    },
+    {
+      "id": "fm_rps_inop",
+      "display_name": "RPS OTDT/OPDT functions inoperable (undetected)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "OTDT and OPDT RPS allowable setpoints in TS Table 2.2-1 were exceeded, rendering the OTDT and OPDT RPS functions inoperable from 5/6 15:00 until discovery on 5/7 11:25.",
+      "match_key": "FailureMode:rps-otdt-opdt-functions-inoperable-undetected"
+    },
+    {
+      "id": "cons_tsas",
+      "display_name": "TS Action Statements not met / TSAS AOTs exceeded for unrecognized inoperable RPS and ESFAS functional units",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2020-04-21T04:37",
+      "end": "2020-05-07T21:07",
+      "duration": "variable per functional unit; up to ~15 days",
+      "tz": null,
+      "match_key": "Consequence:ts-action-statements-not-met-tsas-aots-exceeded-for-unrecognized-inoperable-rps-and-esfas-functional-units"
+    },
+    {
+      "id": "cons_lossoffunction",
+      "display_name": "Loss of safety function for 3 ESFAS Functional Units",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2020-04-21T04:37",
+      "end": "2020-05-06T10:35",
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:loss-of-safety-function-for-3-esfas-functional-units"
+    },
+    {
+      "id": "ca_correct_constant",
+      "display_name": "Install correct streaming constant for Eagle 21 Channel II RCS hot leg RTD",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:install-correct-streaming-constant-for-eagle-21-channel-ii-rcs-hot-leg-rtd"
+    },
+    {
+      "id": "ca_revise_procedure",
+      "display_name": "Revise and correct calibration procedure",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-and-correct-calibration-procedure"
+    },
+    {
+      "id": "rr_5073i",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_5073v",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "rr_ts",
+      "display_name": "Technical Specifications Tables 2.2-1, 3.3-1, 3.3-2",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specifications-tables-2-2-1-3-3-1-3-3-2"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "LER 2016-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "2016-001-00",
+      "stub": true,
+      "title": "Incorrect calibration coefficient installed for Channel III RCS RTD, adversely affecting Channel III OTDT and OPDT RPS setpoints",
+      "plant": "Turkey Point Unit 4",
+      "match_key": "LER:2016-001-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073i",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073v",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ab",
+      "evidence": null
+    },
+    {
+      "source": "c_rtd",
+      "relation": "PART_OF",
+      "target": "sys_ab",
+      "evidence": null
+    },
+    {
+      "source": "c_cha",
+      "relation": "PART_OF",
+      "target": "sys_jc",
+      "evidence": null
+    },
+    {
+      "source": "fm_procerror",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_procerror",
+      "relation": "LEADS_TO",
+      "target": "fm_streamconst",
+      "evidence": null
+    },
+    {
+      "source": "fm_streamconst",
+      "relation": "LEADS_TO",
+      "target": "fm_esfas_inop",
+      "evidence": null
+    },
+    {
+      "source": "fm_streamconst",
+      "relation": "LEADS_TO",
+      "target": "fm_setpoint_error",
+      "evidence": null
+    },
+    {
+      "source": "fm_setpoint_error",
+      "relation": "LEADS_TO",
+      "target": "fm_rps_inop",
+      "evidence": null
+    },
+    {
+      "source": "fm_esfas_inop",
+      "relation": "LEADS_TO",
+      "target": "cons_lossoffunction",
+      "evidence": null
+    },
+    {
+      "source": "fm_esfas_inop",
+      "relation": "LEADS_TO",
+      "target": "cons_tsas",
+      "evidence": null
+    },
+    {
+      "source": "fm_rps_inop",
+      "relation": "LEADS_TO",
+      "target": "cons_tsas",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_correct_constant",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_revise_procedure",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    }
+  ],
+  "chain": "calibration procedure technical error [cause TBD] -> incorrect streaming constant uploaded for RCS hot leg RTD -> ESFAS Functional Units inoperable (undetected) & erroneous OTDT/OPDT setpoint constants installed -> RPS OTDT/OPDT functions inoperable (undetected) -> TSAS AOTs exceeded / loss of safety function for 3 ESFAS FUs [no backups asserted; redundant channels I & III remained operable for RPS minimum-channel requirement]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code left TBD/provisional per FORM-366 authoritative field despite narrative describing a clear procedure-error root cause; category kept as 'provisional' per rule 4. Channels I and III are mentioned as remaining operable/available for RPS OTDT/OPDT functions during the affected period, satisfying the minimum-channel requirement, but the narrative frames this as continued compliance with RPS minimum channel count rather than a stated backup system per se; no explicit BACKED_UP_BY system node created since Channels I/III are redundant channels of the same Eagle 21 system, not a distinct backup system. FAILED COMPONENTS IDENTIFIED: None per report -> block_13 left empty. SIMILAR_TO LER stub key preserved exactly as stated ('2016-001-00') per instructions, not the current report's plant docket."
+}

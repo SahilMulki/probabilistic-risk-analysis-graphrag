@@ -1,0 +1,373 @@
+{
+  "ler_number": "458-2026-001-00",
+  "identity": {
+    "accession_number": "ML26096A457",
+    "docket": "05000458",
+    "plant_name": "River Bend",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2026-02-03",
+    "report_date": "2026-04-06",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "operability test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "/ 2026-001-00, Loss of Division III Electrical Bus Due to Breaker Trip"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "B",
+      "system": "BS",
+      "component": "PMP",
+      "manufacturer": "H127",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The direct cause of this event was the failure of the terminal lead (T-Lead) connection that directly led to a motor fault on SWP-P2C.",
+    "cause_code": "B",
+    "category": "Design/Manufacturing/Installation",
+    "theme": "T-Lead termination connection failure causing motor fault",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 05000458-2026-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "458-2026-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:458-2026-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "River Bend Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000458",
+      "match_key": "Unit:05000458"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Manufacturing/Installation (B)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "B",
+      "category": "Design/Manufacturing/Installation",
+      "theme": "T-Lead termination connection failure causing motor fault",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Design/Manufacturing/Installation"
+    },
+    {
+      "id": "sys_bs",
+      "display_name": "Standby Service Water",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BS",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected system; Division I",
+      "match_key": "System:BS"
+    },
+    {
+      "id": "sys_ea",
+      "display_name": "AC Electrical Distribution (4.16 KV bus)",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "EA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected; Division III 4.16 KV bus",
+      "match_key": "System:EA"
+    },
+    {
+      "id": "sys_ek",
+      "display_name": "Emergency Diesel Generator",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "EK",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; operable, started and provided power",
+      "match_key": "System:EK"
+    },
+    {
+      "id": "c_pump",
+      "display_name": "High Pressure Core Spray Diesel Generator Service Water Pump (SWP-P2C)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "PMP",
+      "identifier": "SWP-P2C",
+      "model": null,
+      "manufacturer_code": "H127",
+      "inferred_code": false,
+      "match_key": "Component:PMP|SWP-P2C"
+    },
+    {
+      "id": "c_breaker",
+      "display_name": "Division III 4.16 KV Bus Supply Breaker (E22-ACB04)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "EA",
+      "identifier": "E22-ACB04",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:EA|E22-ACB04"
+    },
+    {
+      "id": "c_tlead",
+      "display_name": "Terminal Lead (T-Lead) connection",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:terminal-lead-t-lead-connection"
+    },
+    {
+      "id": "c_termbox",
+      "display_name": "Termination box",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:termination-box"
+    },
+    {
+      "id": "fm_tlead",
+      "display_name": "T-Lead connection failure",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Failure of the terminal lead connection in the termination box",
+      "match_key": "FailureMode:t-lead-connection-failure"
+    },
+    {
+      "id": "fm_motorfault",
+      "display_name": "Motor fault on SWP-P2C",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "T-Lead failure directly led to a motor fault on SWP-P2C",
+      "match_key": "FailureMode:motor-fault-on-swp-p2c"
+    },
+    {
+      "id": "fm_pumptrip",
+      "display_name": "Pump fault, trip, and lockout of SWP-P2C",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "SWP-P2C faulted, tripped, and locked out during surveillance",
+      "match_key": "FailureMode:pump-fault-trip-and-lockout-of-swp-p2c"
+    },
+    {
+      "id": "fm_breakertrip",
+      "display_name": "Division III 4.16 KV bus supply breaker trip and lockout",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Pump fault caused normal Division III 4.16 KV bus supply breaker (E22-ACB04) to trip and lock out",
+      "match_key": "FailureMode:division-iii-4-16-kv-bus-supply-breaker-trip-and-lockout"
+    },
+    {
+      "id": "cons_bus",
+      "display_name": "Loss of offsite power to Division III 4.16 KV bus / EDG emergency actuation",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2026-02-03T23:38",
+      "end": null,
+      "duration": null,
+      "tz": "CST",
+      "match_key": "Consequence:loss-of-offsite-power-to-division-iii-4-16-kv-bus-edg-emergency-actuation"
+    },
+    {
+      "id": "cons_swp",
+      "display_name": "SWP-P2C inoperable / reduction in Division I Standby Service Water safety margin",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2026-02-03T23:38",
+      "end": "2026-02-07T17:01",
+      "duration": null,
+      "tz": "CST",
+      "match_key": "Consequence:swp-p2c-inoperable-reduction-in-division-i-standby-service-water-safety-margin"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace termination box containing T-Lead connections",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-termination-box-containing-t-lead-connections"
+    },
+    {
+      "id": "ca_baker",
+      "display_name": "Perform Baker testing on all safety-related motors in same classification",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:perform-baker-testing-on-all-safety-related-motors-in-same-classification"
+    },
+    {
+      "id": "mfr_h127",
+      "display_name": "Manufacturer H127",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "H127",
+      "match_key": "Manufacturer:H127"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5072",
+      "display_name": "10 CFR 50.72(b)(3)(iv)(A)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-3-iv-a"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bs",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ea",
+      "evidence": null
+    },
+    {
+      "source": "c_pump",
+      "relation": "PART_OF",
+      "target": "sys_bs",
+      "evidence": null
+    },
+    {
+      "source": "c_tlead",
+      "relation": "PART_OF",
+      "target": "c_termbox",
+      "evidence": null
+    },
+    {
+      "source": "fm_tlead",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_tlead",
+      "relation": "LEADS_TO",
+      "target": "fm_motorfault",
+      "evidence": null
+    },
+    {
+      "source": "fm_motorfault",
+      "relation": "LEADS_TO",
+      "target": "fm_pumptrip",
+      "evidence": null
+    },
+    {
+      "source": "fm_pumptrip",
+      "relation": "LEADS_TO",
+      "target": "fm_breakertrip",
+      "evidence": null
+    },
+    {
+      "source": "fm_breakertrip",
+      "relation": "LEADS_TO",
+      "target": "cons_bus",
+      "evidence": null
+    },
+    {
+      "source": "fm_pumptrip",
+      "relation": "LEADS_TO",
+      "target": "cons_swp",
+      "evidence": null
+    },
+    {
+      "source": "cons_bus",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_ek",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_baker",
+      "evidence": null
+    },
+    {
+      "source": "c_pump",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_h127",
+      "evidence": null
+    }
+  ],
+  "chain": "T-Lead connection failure [cause B] -> motor fault on SWP-P2C -> pump fault/trip/lockout -> Division III bus supply breaker trip and lockout -> loss of offsite power to Division III 4.16 KV bus [backup: Division III EDG] ; pump trip also -> SWP-P2C inoperable / reduced Division I SW margin (restored 2026-02-07)",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Plant identified from narrative as River Bend Station, Unit 1 (docket 05000458); form fields left plant_name/unit/reactor_type null so filled from narrative. EDG (EK) modeled as backup since narrative states it started, synced, and provided emergency power as designed during the event -- explicitly operable during the window. No previous occurrences reported, so no SIMILAR_TO edge/stub LER emitted."
+}

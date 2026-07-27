@@ -1,0 +1,478 @@
+{
+  "ler_number": "414-2024-001-00",
+  "identity": {
+    "accession_number": "ML24064A190",
+    "docket": "05000414",
+    "plant_name": "Catawba",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2024-01-02",
+    "report_date": "2024-03-04",
+    "operating_mode": "3",
+    "power_level": 100,
+    "discovery_context": "inspection",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Duke Energy Carolinas, LLC Catawba Nuclear Station, Units 1 and 2 Docket Nos. 50-413, 50-414 Licensee Event Report (LER) 2024-001-00"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(1)",
+      "10 CFR 50.73(a)(2)(i)(B)",
+      "10 CFR 50.73(a)(2)(v)(A)",
+      "10 CFR 50.73(a)(2)(i)(8)",
+      "10 CFR 50.73(a)(2)(v)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "8",
+      "system": "VJ",
+      "component": "TC",
+      "manufacturer": "L321",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The cause of the degraded 2A1 Emergency Ventilation Fan Damper Controller was determined to be faulty internal wiring...internal wiring and soldering quality issues associated with the temperature transmitter for the 2A1 Emergency Ventilation Fan Damper Controller",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "component manufacturing/quality defect (faulty wiring/soldering)",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 414-2024-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "414-2024-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:414-2024-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Catawba Unit 2",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000414",
+      "match_key": "Unit:05000414"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "component manufacturing/quality defect (faulty wiring/soldering)",
+      "proximate_text": "The cause of the degraded 2A1 Emergency Ventilation Fan Damper Controller was determined to be faulty internal wiring...internal wiring and soldering quality issues associated with the temperature transmitter for the 2A1 Emergency Ventilation Fan Damper Controller",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_ek",
+      "display_name": "Diesel Generator",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "EK",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "onsite standby AC power source",
+      "match_key": "System:EK"
+    },
+    {
+      "id": "sys_vj",
+      "display_name": "Diesel Building Ventilation System (VD)",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "VJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "maintains DG room temperature limits",
+      "match_key": "System:VJ"
+    },
+    {
+      "id": "c_damper",
+      "display_name": "2A1 Emergency Ventilation Fan Damper Controller",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "TC",
+      "identifier": "2A1",
+      "model": null,
+      "manufacturer_code": "L321",
+      "inferred_code": false,
+      "match_key": "Component:TC|2A1"
+    },
+    {
+      "id": "c_fan2a1",
+      "display_name": "2A1 Emergency Ventilation Fan",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "2A1",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:2a1-emergency-ventilation-fan"
+    },
+    {
+      "id": "c_fan2a2",
+      "display_name": "2A2 Emergency Ventilation Fan",
+      "properties": {
+        "status_at_event": "out of service for maintenance"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "2A2",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:2a2-emergency-ventilation-fan"
+    },
+    {
+      "id": "c_dg2a",
+      "display_name": "2A Emergency Diesel Generator",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "2A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:2a-emergency-diesel-generator"
+    },
+    {
+      "id": "fm_wiring",
+      "display_name": "Faulty internal wiring/soldering in temperature transmitter",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Internal wiring and soldering quality issues associated with the temperature transmitter for the 2A1 Emergency Ventilation Fan Damper Controller",
+      "match_key": "FailureMode:faulty-internal-wiring-soldering-in-temperature-transmitter"
+    },
+    {
+      "id": "fm_damperfail",
+      "display_name": "2A1 Damper Controller failed",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Damper controller failed and did not allow normal outside air circulation into the DG room",
+      "match_key": "FailureMode:2a1-damper-controller-failed"
+    },
+    {
+      "id": "fm_fan2a2oos",
+      "display_name": "2A2 Emergency Ventilation Fan out of service",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "2A2 Emergency Ventilation Fan was out of service in support of maintenance activities",
+      "match_key": "FailureMode:2a2-emergency-ventilation-fan-out-of-service"
+    },
+    {
+      "id": "fm_roomtemp",
+      "display_name": "2A DG room temperature increased to off-normal level",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Room temperatures increased to an off-normal level less than the alarm setpoint due to loss of ventilation",
+      "match_key": "FailureMode:2a-dg-room-temperature-increased-to-off-normal-level"
+    },
+    {
+      "id": "cons_dg_inop",
+      "display_name": "2A DG declared inoperable; TS 3.8.1 Completion Times exceeded",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2023-12-05",
+      "end": "2024-01-02",
+      "duration": "approximately 28 days",
+      "tz": null,
+      "match_key": "Consequence:2a-dg-declared-inoperable-ts-3-8-1-completion-times-exceeded"
+    },
+    {
+      "id": "cons_shared_inop",
+      "display_name": "A Train CRAVS and CRACWS declared inoperable; LCO 3.0.3 entry required",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2023-12-17T19:43",
+      "end": "2023-12-19T20:57",
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:a-train-cravs-and-cracws-declared-inoperable-lco-3-0-3-entry-required"
+    },
+    {
+      "id": "ca_repair",
+      "display_name": "Repaired and returned 2A1 damper controller to service",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:repaired-and-returned-2a1-damper-controller-to-service"
+    },
+    {
+      "id": "ca_fanreturn",
+      "display_name": "Returned the 2A2 VD fan to service",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:returned-the-2a2-vd-fan-to-service"
+    },
+    {
+      "id": "ca_dedication",
+      "display_name": "Evaluate improvements to commercial grade dedication process for damper controllers",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:evaluate-improvements-to-commercial-grade-dedication-process-for-damper-controllers"
+    },
+    {
+      "id": "mfr_l321",
+      "display_name": "Manufacturer L321",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "L321",
+      "match_key": "Manufacturer:L321"
+    },
+    {
+      "id": "rr_5073a1",
+      "display_name": "10 CFR 50.73(a)(1)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-1"
+    },
+    {
+      "id": "rr_5073a2iB",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_5073a2vA",
+      "display_name": "10 CFR 50.73(a)(2)(v)(A)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-a"
+    },
+    {
+      "id": "rr_5073a2i8",
+      "display_name": "10 CFR 50.73(a)(2)(i)(8)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-8"
+    },
+    {
+      "id": "rr_5073a2v",
+      "display_name": "10 CFR 50.73(a)(2)(v)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v"
+    },
+    {
+      "id": "rr_ts381",
+      "display_name": "TS 3.8.1 Diesel Generators",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ts-3-8-1-diesel-generators"
+    },
+    {
+      "id": "rr_ts3710",
+      "display_name": "TS 3.7.10 Control Room Area Ventilation System",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ts-3-7-10-control-room-area-ventilation-system"
+    },
+    {
+      "id": "rr_ts3711",
+      "display_name": "TS 3.7.11 Control Room Area Chilled Water System",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ts-3-7-11-control-room-area-chilled-water-system"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073a1",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073a2iB",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073a2vA",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073a2i8",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073a2v",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ek",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_vj",
+      "evidence": null
+    },
+    {
+      "source": "c_damper",
+      "relation": "PART_OF",
+      "target": "sys_vj",
+      "evidence": null
+    },
+    {
+      "source": "c_fan2a1",
+      "relation": "PART_OF",
+      "target": "sys_vj",
+      "evidence": null
+    },
+    {
+      "source": "c_fan2a2",
+      "relation": "PART_OF",
+      "target": "sys_vj",
+      "evidence": null
+    },
+    {
+      "source": "c_damper",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_l321",
+      "evidence": null
+    },
+    {
+      "source": "fm_wiring",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_wiring",
+      "relation": "LEADS_TO",
+      "target": "fm_damperfail",
+      "evidence": null
+    },
+    {
+      "source": "fm_damperfail",
+      "relation": "LEADS_TO",
+      "target": "fm_roomtemp",
+      "evidence": null
+    },
+    {
+      "source": "fm_fan2a2oos",
+      "relation": "LEADS_TO",
+      "target": "fm_roomtemp",
+      "evidence": null
+    },
+    {
+      "source": "fm_roomtemp",
+      "relation": "LEADS_TO",
+      "target": "cons_dg_inop",
+      "evidence": null
+    },
+    {
+      "source": "cons_dg_inop",
+      "relation": "LEADS_TO",
+      "target": "cons_shared_inop",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_repair",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_fanreturn",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_dedication",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts381",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts3710",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts3711",
+      "evidence": null
+    }
+  ],
+  "chain": "faulty internal wiring/soldering in temperature transmitter [cause TBD] -> 2A1 damper controller fails -> (combined with 2A2 fan out of service) -> DG room ventilation degraded -> 2A DG room temperature rises to off-normal level -> 2A DG declared inoperable (Dec 5, 2023 - Jan 2, 2024) exceeding TS 3.8.1 Completion Times -> A Train CRAVS/CRACWS also declared inoperable during concurrent maintenance window, requiring LCO 3.0.3 entry",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause_code in FORM-366 fields was given as 'TBD' with category 'provisional', so retained as such per Rule 4 despite narrative identifying a specific root cause (wiring/soldering quality defect) — theme captures this. Block-13 cause value '8' appears to be an OCR artifact of the LCO condition letter 'B'/'D' rather than an actual cause code letter (A-E/X), consistent with the TBD/provisional coding. DG, ESPS, SSF, and offsite power via SATA are described only in Safety Analysis / Background as design-context defense-in-depth measures, not stated as operable backups during the specific 2A DG inoperability window in a BACKED_UP_BY sense tied to this failure chain, so no BACKED_UP_BY edges were asserted per Rule 6. No previous similar occurrences were identified by licensee, so no stub LER/SIMILAR_TO edge emitted."
+}

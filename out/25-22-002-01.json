@@ -1,0 +1,316 @@
+{
+  "ler_number": "25-22-002-01",
+  "identity": {
+    "accession_number": "ML23034A235",
+    "docket": "05200025",
+    "plant_name": "Vogtle",
+    "unit": 3,
+    "reactor_type": "PWR",
+    "nss_vendor": "Westinghouse",
+    "event_date": "2022-10-23",
+    "report_date": "2023-02-03",
+    "operating_mode": "6",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Automatic Depressurization System Stage 4 Flow Paths Inoperable During Mode 6 with Upper Internals in Place Due to Inadequate Work Processes"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)",
+      "10 CFR 50.73(a)(2)(v)(D)",
+      "10 CFR 50.73(a)(2)(vii)(D)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The root cause of this event was determined to be inadequate work processes. Procedures did not include a step to check CIM configuration prior to mode changes and procedural guidance was not in place to identify CIM status as part of TS compliance verification. Additionally, maintenance work control documents did not address restoration of the CIMs.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Inadequate work processes / procedure gap on configuration control restoration",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 05200025-2022-002-01",
+      "properties": {},
+      "type": "LER",
+      "key": "25-22-002-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:25-22-002-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Vogtle Unit 3",
+      "properties": {
+        "reactor_type": "PWR",
+        "nss_vendor": "Westinghouse"
+      },
+      "type": "Unit",
+      "key": "05200025",
+      "match_key": "Unit:05200025"
+    },
+    {
+      "id": "cause",
+      "display_name": "Inadequate Work Processes (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Inadequate work processes / procedure gap on configuration control restoration",
+      "proximate_text": "The root cause of this event was determined to be inadequate work processes. Procedures did not include a step to check CIM configuration prior to mode changes and procedural guidance was not in place to identify CIM status as part of TS compliance verification. Additionally, maintenance work control documents did not address restoration of the CIMs.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_ads",
+      "display_name": "Automatic Depressurization System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "system rendered inoperable",
+      "match_key": "System:automatic-depressurization-system"
+    },
+    {
+      "id": "sys_ab",
+      "display_name": "ADS Stage 4 Squib Valve System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "AB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "involved system for squib valves",
+      "match_key": "System:AB"
+    },
+    {
+      "id": "sys_das",
+      "display_name": "Diverse Actuation System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "manual actuation backup, available under alternate conditions",
+      "match_key": "System:diverse-actuation-system"
+    },
+    {
+      "id": "c_squib",
+      "display_name": "ADS Stage 4 Squib Valve",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "AB/V",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:AB/V"
+    },
+    {
+      "id": "c_cim",
+      "display_name": "Component Interface Module (CIM)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "JE/IMOD",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:JE/IMOD"
+    },
+    {
+      "id": "fm_local",
+      "display_name": "CIMs left in 'local' control after actuator cartridge installation",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "CIMs had been placed in local control for installation of ADS Stage 4 squib valve actuator cartridges and were not restored to remote before mode change.",
+      "match_key": "FailureMode:cims-left-in-local-control-after-actuator-cartridge-installation"
+    },
+    {
+      "id": "fm_noverify",
+      "display_name": "No procedural step to verify CIM configuration before mode change",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Procedures did not include a step to check CIM configuration prior to mode changes and no guidance to verify CIM status as part of TS compliance verification.",
+      "match_key": "FailureMode:no-procedural-step-to-verify-cim-configuration-before-mode-change"
+    },
+    {
+      "id": "fm_prohibited",
+      "display_name": "Unit entered TS-applicable Mode 6 condition with CIMs still in local control",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Upper internals placed on October 22, 2022 at 1430 hours, putting unit in TS 3.4.13 applicability while CIMs remained in local control, rendering all ADS Stage 4 flow paths inoperable.",
+      "match_key": "FailureMode:unit-entered-ts-applicable-mode-6-condition-with-cims-still-in-local-control"
+    },
+    {
+      "id": "cons_inop",
+      "display_name": "All ADS Stage 4 flow paths inoperable / condition prohibited by TS",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2022-10-22T14:30",
+      "end": "2022-10-23T04:47",
+      "duration": "~14:17",
+      "tz": "EDT",
+      "match_key": "Consequence:all-ads-stage-4-flow-paths-inoperable-condition-prohibited-by-ts"
+    },
+    {
+      "id": "ca_gop301",
+      "display_name": "Revise mode change checklist procedure GOP-301 to check CIM configuration prior to mode entry",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-mode-change-checklist-procedure-gop-301-to-check-cim-configuration-prior-to-mode-entry"
+    },
+    {
+      "id": "ca_reinforce",
+      "display_name": "Reinforce with Planning and Procedure writers the importance of restoring configuration control",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:reinforce-with-planning-and-procedure-writers-the-importance-of-restoring-configuration-control"
+    },
+    {
+      "id": "rr_5073i",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_5073v",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "rr_5073vii",
+      "display_name": "10 CFR 50.73(a)(2)(vii)(D)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-vii-d"
+    },
+    {
+      "id": "rr_ts3413",
+      "display_name": "Technical Specification 3.4.13",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-3-4-13"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073i",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073v",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073vii",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ads",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ab",
+      "evidence": null
+    },
+    {
+      "source": "c_squib",
+      "relation": "PART_OF",
+      "target": "sys_ab",
+      "evidence": null
+    },
+    {
+      "source": "fm_local",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_local",
+      "relation": "LEADS_TO",
+      "target": "fm_noverify",
+      "evidence": null
+    },
+    {
+      "source": "fm_noverify",
+      "relation": "LEADS_TO",
+      "target": "fm_prohibited",
+      "evidence": null
+    },
+    {
+      "source": "fm_prohibited",
+      "relation": "LEADS_TO",
+      "target": "cons_inop",
+      "evidence": null
+    },
+    {
+      "source": "cons_inop",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_das",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_gop301",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_reinforce",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts3413",
+      "evidence": null
+    }
+  ],
+  "chain": "inadequate work processes [cause TBD] -> CIMs left in local control after actuator cartridge installation -> no procedural step to verify CIM configuration before mode change -> unit enters TS-applicable Mode 6 condition with CIMs still local -> all ADS Stage 4 flow paths inoperable / TS-prohibited condition [backup: DAS manual actuation available under alternate conditions]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code is TBD/provisional per FORM-366; narrative calls it 'inadequate work processes' root cause but no formal A-E code assigned. No prior similar events reported (narrative states 'None'), so no SIMILAR_TO edge or stub LER node emitted. DAS is not an EIIS system per narrative context and is stated as available under alternate conditions (decay heat present), so modeled as BACKED_UP_BY per rule 6, though note it was not actually needed since no decay heat was present. CIM->PART_OF ADS Stage 4 flow path relationship not explicit in text as containment, so no PART_OF edge for c_cim."
+}

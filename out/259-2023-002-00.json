@@ -1,0 +1,404 @@
+{
+  "ler_number": "259-2023-002-00",
+  "identity": {
+    "accession_number": "ML23200A238",
+    "docket": "05000259",
+    "plant_name": "Browns Ferry",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2023-05-20",
+    "report_date": "2023-07-17",
+    "operating_mode": "1",
+    "power_level": 80,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "– Full Reactor Scram due to an"
+  },
+  "reporting_basis": {
+    "reported_under": [],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "the BFN Unit 1 OPRM SCRAM occurred as a result of the sensitivity of the CDA trip during off-normal plant conditions not being embedded into TVA processes or procedures, thus preventing development of appropriate risk elimination or mitigation actions",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "procedure/process gap regarding CDA trip sensitivity during TCV testing",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 259-2023-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "259-2023-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:259-2023-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Browns Ferry Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000259",
+      "match_key": "Unit:05000259"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "procedure/process gap regarding CDA trip sensitivity during TCV testing",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_jc",
+      "display_name": "Reactor Protection System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "actuated",
+      "match_key": "System:JC"
+    },
+    {
+      "id": "sys_ehc",
+      "display_name": "Turbine Electro-Hydraulic Control System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:turbine-electro-hydraulic-control-system"
+    },
+    {
+      "id": "sys_oprm",
+      "display_name": "Oscillating Power Range Monitor",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "instability detection and trip",
+      "match_key": "System:oscillating-power-range-monitor"
+    },
+    {
+      "id": "c_tcv",
+      "display_name": "Turbine Control Valves (TCVs)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "TCVs (3 open during test)",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:turbine-control-valves-tcvs"
+    },
+    {
+      "id": "c_lvdt",
+      "display_name": "Redundant 'B' LVDTs (Alliance)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "ECP BFN-20-1688-01",
+      "model": "Alliance (vs. original GE Kavlico)",
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:redundant-b-lvdts-alliance"
+    },
+    {
+      "id": "fm_wiring",
+      "display_name": "Internal manufacturer wiring errors in redundant LVDTs",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "LVDTs of a different manufacturer/style (Alliance vs. GE Kavlico) had internal wiring errors causing discrepancies in indicated valve position",
+      "match_key": "FailureMode:internal-manufacturer-wiring-errors-in-redundant-lvdts"
+    },
+    {
+      "id": "fm_position",
+      "display_name": "TCV position indication discrepancy",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Discrepancies in indicated valve position caused three TCVs that remained open to operate in an unstable region of the valve curve",
+      "match_key": "FailureMode:tcv-position-indication-discrepancy"
+    },
+    {
+      "id": "fm_oscillation",
+      "display_name": "TCV oscillations / control system instability",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Control system instabilities manifested as TCV oscillations, causing reactor pressure swings and reactor power fluctuations",
+      "match_key": "FailureMode:tcv-oscillations-control-system-instability"
+    },
+    {
+      "id": "fm_oprmtrip",
+      "display_name": "OPRM CDA trip actuated",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "OPRM CDA algorithm detected the power oscillations (within its 1.2-4s period detection range) and generated a trip signal",
+      "match_key": "FailureMode:oprm-cda-trip-actuated"
+    },
+    {
+      "id": "cons_scram",
+      "display_name": "Automatic full reactor scram",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2023-05-20T03:15",
+      "end": null,
+      "duration": null,
+      "tz": "CDT",
+      "match_key": "Consequence:automatic-full-reactor-scram"
+    },
+    {
+      "id": "ca_3wire",
+      "display_name": "Three-wire modification of LVDTs (ECP BFN-20-1688-04)",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:three-wire-modification-of-lvdts-ecp-bfn-20-1688-04"
+    },
+    {
+      "id": "ca_calibrate",
+      "display_name": "Calibrate TCV LVDTs under hot conditions during F110",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:calibrate-tcv-lvdts-under-hot-conditions-during-f110"
+    },
+    {
+      "id": "ca_powerlevel_u1",
+      "display_name": "Revise 1-SR-3.3.1.1.8(9) to lower max test power from 84% to 72%",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-1-sr-3-3-1-1-8-9-to-lower-max-test-power-from-84-to-72"
+    },
+    {
+      "id": "ca_eoc_u2",
+      "display_name": "Extent-of-condition review for Unit 2 TCV test power level",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:extent-of-condition-review-for-unit-2-tcv-test-power-level"
+    },
+    {
+      "id": "ca_u3_mod",
+      "display_name": "Unit 3 LVDT modification (scheduled March 2024)",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:unit-3-lvdt-modification-scheduled-march-2024"
+    },
+    {
+      "id": "ca_revise_2sr",
+      "display_name": "Revise 2-SR-3.3.1.1.8(9) test power/valve position specification",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-2-sr-3-3-1-1-8-9-test-power-valve-position-specification"
+    },
+    {
+      "id": "ca_revise_3sr",
+      "display_name": "Revise 3-SR-3.3.1.1.8(9) test power/valve position specification",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-3-sr-3-3-1-1-8-9-test-power-valve-position-specification"
+    },
+    {
+      "id": "ca_revise_ti464",
+      "display_name": "Revise 0-TI-464 Reactivity Control Plan Development and Implementation for OPRM trip enabled region awareness",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-0-ti-464-reactivity-control-plan-development-and-implementation-for-oprm-trip-enabled-region-awareness"
+    },
+    {
+      "id": "ca_revise_7047",
+      "display_name": "Revise Design Criteria BFN-50-7047 (EHC) to add OPRM interrelationship details",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-design-criteria-bfn-50-7047-ehc-to-add-oprm-interrelationship-details"
+    },
+    {
+      "id": "ca_revise_7092",
+      "display_name": "Revise Design Criteria BFN-50-7092 (Neutron Monitoring Systems) to add OPRM algorithm details",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-design-criteria-bfn-50-7092-neutron-monitoring-systems-to-add-oprm-algorithm-details"
+    },
+    {
+      "id": "rr_50_73",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_50_73",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_oprm",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ehc",
+      "evidence": null
+    },
+    {
+      "source": "fm_wiring",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_wiring",
+      "relation": "LEADS_TO",
+      "target": "fm_position",
+      "evidence": null
+    },
+    {
+      "source": "fm_position",
+      "relation": "LEADS_TO",
+      "target": "fm_oscillation",
+      "evidence": null
+    },
+    {
+      "source": "fm_oscillation",
+      "relation": "LEADS_TO",
+      "target": "fm_oprmtrip",
+      "evidence": null
+    },
+    {
+      "source": "fm_oprmtrip",
+      "relation": "LEADS_TO",
+      "target": "cons_scram",
+      "evidence": null
+    },
+    {
+      "source": "c_lvdt",
+      "relation": "PART_OF",
+      "target": "c_tcv",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_3wire",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_calibrate",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_powerlevel_u1",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_eoc_u2",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_u3_mod",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_revise_2sr",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_revise_3sr",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_revise_ti464",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_revise_7047",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_revise_7092",
+      "evidence": null
+    }
+  ],
+  "chain": "internal LVDT wiring errors [cause TBD, provisional] -> TCV position indication discrepancy -> TCV oscillations/control instability -> OPRM CDA trip -> automatic full reactor scram",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code is TBD/provisional on FORM-366 despite a detailed narrative root cause; cause node marked provisional per rule 4. Title in FORM-366 fields was truncated ('Full Reactor Scram due to an'); completed using narrative content. No SSCs were inoperable at event start and no component failed per se (LVDT wiring errors are described as a manufacturing defect discovered via the event, modeled as the origin FailureMode). RPS (JC) is the actuated system per reporting criterion; OPRM and EHC are non-EIIS systems directly involved in the failure chain, not design-context mentions. No BACKED_UP_BY edges — DIDA algorithms (PBA/GRBA/ABA) are described as backup detection methods to CDA but not stated as operable backups to the failed function itself (they are part of the same OPRM trip system, not an independent system backup to the consequence). Previous-occurrence search found no similar events, so no SIMILAR_TO edge/stub LER emitted per rule 9 (nothing to reference)."
+}

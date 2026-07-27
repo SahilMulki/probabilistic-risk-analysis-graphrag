@@ -1,0 +1,352 @@
+{
+  "ler_number": "336-2023-002-00",
+  "identity": {
+    "accession_number": "ML23243B033",
+    "docket": "05000336",
+    "plant_name": "Millstone",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2023-07-06",
+    "report_date": "2023-08-31",
+    "operating_mode": "1",
+    "power_level": 86,
+    "discovery_context": "inspection",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Failed Check Valve Resulted in an Unanalyzed Condition"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(ii)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The direct cause of the valve failure was mechanical damage to the disc bolt caused by check valve chatter.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "check valve chatter-induced mechanical fatigue/damage",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 336-2023-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "336-2023-002-00",
+      "stub": false,
+      "title": "Failed Check Valve Resulted in an Unanalyzed Condition",
+      "plant": null,
+      "match_key": "LER:336-2023-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Millstone Unit 2",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000336",
+      "match_key": "Unit:05000336"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "check valve chatter-induced mechanical fatigue/damage",
+      "proximate_text": "The direct cause of the valve failure was mechanical damage to the disc bolt caused by check valve chatter.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_sb",
+      "display_name": "Main Steam",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SB"
+    },
+    {
+      "id": "sys_afw",
+      "display_name": "Turbine Driven Auxiliary Feedwater",
+      "properties": {
+        "note": "TDAFW pump system; acronym only, no bracket code given"
+      },
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "sys_mdafw",
+      "display_name": "Motor Driven Auxiliary Feedwater",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; operable",
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "c_ms4b",
+      "display_name": "TDAFW Pump Steam Supply Check Valve 2-MS-4B",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "V",
+      "identifier": "2-MS-4B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:V|2-MS-4B"
+    },
+    {
+      "id": "c_ms4a",
+      "display_name": "TDAFW Pump Steam Supply Check Valve 2-MS-4A",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "V",
+      "identifier": "2-MS-4A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:V|2-MS-4A"
+    },
+    {
+      "id": "c_ms202",
+      "display_name": "Steam Supply Stop Valve 2-MS-202",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "V",
+      "identifier": "2-MS-202",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:V|2-MS-202"
+    },
+    {
+      "id": "c_discbolt",
+      "display_name": "Disc bolt (2-MS-4B)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:disc-bolt-2-ms-4b"
+    },
+    {
+      "id": "fm_chatter",
+      "display_name": "Check valve chatter on 2-MS-4B",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Valve disc chattering observed during power ascension, caused by turbulent flow conditions in main steam piping.",
+      "match_key": "FailureMode:check-valve-chatter-on-2-ms-4b"
+    },
+    {
+      "id": "fm_boltfail",
+      "display_name": "Disc bolt mechanically failed",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Disc bolt holding disc to swing arm failed due to chatter-induced mechanical damage; disc found separated, sitting inside valve body.",
+      "match_key": "FailureMode:disc-bolt-mechanically-failed"
+    },
+    {
+      "id": "fm_valvefail",
+      "display_name": "2-MS-4B unable to prevent reverse flow",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "With disc separated from swing arm, check valve could not perform its safety function to prevent reverse flow in event of MSLB upstream of MSIVs.",
+      "match_key": "FailureMode:2-ms-4b-unable-to-prevent-reverse-flow"
+    },
+    {
+      "id": "cons_unanalyzed",
+      "display_name": "Plant in unanalyzed condition (MSLB containment overpressure scenario)",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2023-07-06T09:38",
+      "end": "2023-07-06T12:06",
+      "duration": "2:28",
+      "tz": null,
+      "match_key": "Consequence:plant-in-unanalyzed-condition-mslb-containment-overpressure-scenario"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace 2-MS-4B swing disk check valve with normally open nozzle check valve",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-2-ms-4b-swing-disk-check-valve-with-normally-open-nozzle-check-valve"
+    },
+    {
+      "id": "ca_cap",
+      "display_name": "Additional corrective actions per station corrective action program",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:additional-corrective-actions-per-station-corrective-action-program"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(ii)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-ii-b"
+    },
+    {
+      "id": "rr_fsar",
+      "display_name": "FSAR Section 14.8.2",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:fsar-section-14-8-2"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "LER 2021-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "2021-002-00",
+      "stub": true,
+      "title": "2-MS-4B valve disc found separated from disc arm during valve overhaul",
+      "plant": "Millstone Power Station Unit 2",
+      "match_key": "LER:2021-002-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_afw",
+      "evidence": null
+    },
+    {
+      "source": "c_ms4b",
+      "relation": "PART_OF",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "c_ms4a",
+      "relation": "PART_OF",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "c_ms202",
+      "relation": "PART_OF",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "c_discbolt",
+      "relation": "PART_OF",
+      "target": "c_ms4b",
+      "evidence": null
+    },
+    {
+      "source": "fm_chatter",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_chatter",
+      "relation": "LEADS_TO",
+      "target": "fm_boltfail",
+      "evidence": null
+    },
+    {
+      "source": "fm_boltfail",
+      "relation": "LEADS_TO",
+      "target": "fm_valvefail",
+      "evidence": null
+    },
+    {
+      "source": "fm_valvefail",
+      "relation": "LEADS_TO",
+      "target": "cons_unanalyzed",
+      "evidence": null
+    },
+    {
+      "source": "cons_unanalyzed",
+      "relation": "BACKED_UP_BY",
+      "target": "c_ms4a",
+      "evidence": null
+    },
+    {
+      "source": "cons_unanalyzed",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_mdafw",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_cap",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_fsar",
+      "evidence": null
+    }
+  ],
+  "chain": "check valve chatter [provisional cause] -> disc bolt mechanically fails -> disc separates from swing arm -> 2-MS-4B unable to prevent reverse flow -> plant in unanalyzed condition (MSLB containment overpressure risk) [backups: 2-MS-4A flow path, motor driven AFW pumps]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause_code is TBD/provisional per FORM-366 fields, despite narrative stating a direct cause (chatter-induced disc bolt mechanical damage) — per rule 4, category/code are copied verbatim from FORM-366, not re-derived. This is a repeat failure of the same valve (see LER 2021-002-00 stub, previous occurrence of chatter-induced disc separation). 2-MS-4A is modeled as a Component (not System) since it is the specific redundant steam flow path stated as available; motor-driven AFW pumps are stated as adequate substitute for RCS decay heat removal in the MSLB scenario, so modeled as an operable backup System. TDAFW acronym given only as full name/acronym in narrative (no bracket code) per rule 2."
+}

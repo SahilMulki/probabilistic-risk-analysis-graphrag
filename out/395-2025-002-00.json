@@ -1,0 +1,139 @@
+{
+  "ler_number": "395-2025-002-00",
+  "identity": {
+    "accession_number": "ML25268A017",
+    "docket": "05000395",
+    "plant_name": "Summer",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2025-08-11",
+    "report_date": "2025-09-24",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2025-002-00 for Virgil C. Summer Nuclear Station, Unit 1 (VCSNS), Automatic Actuation of an Emergency Diesel Generator"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": null,
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": null,
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 395-2025-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "395-2025-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:395-2025-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Summer Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000395",
+      "match_key": "Unit:05000395"
+    },
+    {
+      "id": "cause",
+      "display_name": "Cause TBD",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": null,
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_edg",
+      "display_name": "Emergency Diesel Generator",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:emergency-diesel-generator"
+    },
+    {
+      "id": "fm_actuation",
+      "display_name": "Automatic actuation of Emergency Diesel Generator",
+      "properties": {},
+      "type": "FailureMode",
+      "description": null,
+      "match_key": "FailureMode:automatic-actuation-of-emergency-diesel-generator"
+    },
+    {
+      "id": "cons_actuation",
+      "display_name": "Automatic EDG actuation (reportable event)",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2025-08-11",
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:automatic-edg-actuation-reportable-event"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_edg",
+      "evidence": null
+    },
+    {
+      "source": "fm_actuation",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_actuation",
+      "relation": "LEADS_TO",
+      "target": "cons_actuation",
+      "evidence": null
+    }
+  ],
+  "chain": "cause TBD -> automatic EDG actuation -> reportable event (no narrative provided)",
+  "golden_questions": [
+    "Q1",
+    "Q3"
+  ],
+  "notes": "No narrative text was provided in the input (366A section empty); only FORM-366 header fields and title were available. Cause code and category remain TBD/provisional per source data. No component, backup, or corrective-action detail could be extracted without narrative text."
+}

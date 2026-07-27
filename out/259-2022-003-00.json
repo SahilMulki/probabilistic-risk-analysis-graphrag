@@ -1,0 +1,505 @@
+{
+  "ler_number": "259-2022-003-00",
+  "identity": {
+    "accession_number": "ML23037A992",
+    "docket": "05000259",
+    "plant_name": "Browns Ferry",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2022-12-06",
+    "report_date": "2023-02-06",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "– Main Steam Relief Valves Lift"
+  },
+  "reporting_basis": {
+    "reported_under": [],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "B",
+      "system": "SB",
+      "component": "RV",
+      "manufacturer": "T020",
+      "reportable": "N"
+    }
+  ],
+  "cause": {
+    "proximate_text": "MSRVs BFN-1-PCV-001-0019 and BFN-1-PCV-001-0179 failed due to corrosion bonding to the valve seats and non-quantifiable leakage known as simmering...Simmering valves result in mechanical setpoint drift and is generally the result of low stellite in the seat.",
+    "cause_code": "B",
+    "category": "Design/Manufacturing/Installation",
+    "theme": "Low-stellite seat corrosion bonding causing MSRV setpoint drift",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 259-2022-003-00",
+      "properties": {
+        "match_key": "LER:259-2022-003-00"
+      },
+      "type": "LER",
+      "key": "259-2022-003-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:259-2022-003-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Browns Ferry Unit 1",
+      "properties": {
+        "match_key": "Unit:05000259",
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000259",
+      "match_key": "Unit:05000259"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Manufacturing/Installation (B)",
+      "properties": {
+        "match_key": "Cause:Design/Manufacturing/Installation"
+      },
+      "type": "Cause",
+      "cause_code": "B",
+      "category": "Design/Manufacturing/Installation",
+      "theme": "Low-stellite seat corrosion bonding causing MSRV setpoint drift",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Design/Manufacturing/Installation"
+    },
+    {
+      "id": "sys_sb",
+      "display_name": "Main Steam Relief/Safety Valve System",
+      "properties": {
+        "match_key": "System:SB"
+      },
+      "type": "System",
+      "eiis_code": "SB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SB"
+    },
+    {
+      "id": "sys_msrv_logic",
+      "display_name": "MSRV Automatic Actuation Logic",
+      "properties": {
+        "non_eiis": true,
+        "match_key": "System:msrv-automatic-actuation-logic"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "backup; operable",
+      "match_key": "System:msrv-automatic-actuation-logic"
+    },
+    {
+      "id": "c_rv1",
+      "display_name": "MSRV BFN-1-PCV-001-0019",
+      "properties": {
+        "setpoint_psig": 1135,
+        "test_result_psig": 1203,
+        "difference_percent": 5.99,
+        "match_key": "Component:RV|BFN-1-PCV-001-0019"
+      },
+      "type": "Component",
+      "eiis_code": "RV",
+      "identifier": "BFN-1-PCV-001-0019",
+      "model": "7567F",
+      "manufacturer_code": "T020",
+      "inferred_code": false,
+      "match_key": "Component:RV|BFN-1-PCV-001-0019"
+    },
+    {
+      "id": "c_rv2",
+      "display_name": "MSRV BFN-1-PCV-001-0179",
+      "properties": {
+        "setpoint_psig": 1155,
+        "test_result_psig": 1190,
+        "difference_percent": 3.03,
+        "match_key": "Component:RV|BFN-1-PCV-001-0179"
+      },
+      "type": "Component",
+      "eiis_code": "RV",
+      "identifier": "BFN-1-PCV-001-0179",
+      "model": "7567F",
+      "manufacturer_code": "T020",
+      "inferred_code": false,
+      "match_key": "Component:RV|BFN-1-PCV-001-0179"
+    },
+    {
+      "id": "fm_corrosion",
+      "display_name": "Corrosion bonding of pilot valve to seat (simmering)",
+      "properties": {
+        "match_key": "FailureMode:corrosion-bonding-simmering"
+      },
+      "type": "FailureMode",
+      "description": "Low stellite in seat leads to corrosion bonding and non-quantifiable leakage (simmering).",
+      "match_key": "FailureMode:corrosion-bonding-of-pilot-valve-to-seat-simmering"
+    },
+    {
+      "id": "fm_setpoint_drift",
+      "display_name": "Mechanical setpoint drift of MSRV pilot valves",
+      "properties": {
+        "match_key": "FailureMode:mechanical-setpoint-drift"
+      },
+      "type": "FailureMode",
+      "description": "Force required to break corrosion bond crystal structure alters mechanical setpoint of the pilot valve.",
+      "match_key": "FailureMode:mechanical-setpoint-drift-of-msrv-pilot-valves"
+    },
+    {
+      "id": "fm_out_of_band",
+      "display_name": "As-found lift setpoints outside +/-3% TS band",
+      "properties": {
+        "match_key": "FailureMode:as-found-lift-outside-band"
+      },
+      "type": "FailureMode",
+      "description": "Two MSRVs found outside +/-3% of setpoint values required by TS 3.4.3.",
+      "match_key": "FailureMode:as-found-lift-setpoints-outside-3-ts-band"
+    },
+    {
+      "id": "cons_ts",
+      "display_name": "Prohibited condition per Technical Specification 3.4.3 (indeterminate duration)",
+      "properties": {
+        "match_key": "Consequence:ts-prohibited-condition"
+      },
+      "type": "Consequence",
+      "start": null,
+      "end": "2022-12-06",
+      "duration": "indeterminate",
+      "tz": null,
+      "match_key": "Consequence:prohibited-condition-per-technical-specification-3-4-3-indeterminate-duration"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace all thirteen MSRV pilot valves with refurbished valves during U1R14",
+      "properties": {
+        "match_key": "CorrectiveAction:replace-msrv-pilot-valves"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-all-thirteen-msrv-pilot-valves-with-refurbished-valves-during-u1r14"
+    },
+    {
+      "id": "ca_bworg",
+      "display_name": "Incorporate BWROG corrective actions for platinum coating adhesion to correct setpoint drift",
+      "properties": {
+        "match_key": "CorrectiveAction:bworg-platinum-coating-fix"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:incorporate-bwrog-corrective-actions-for-platinum-coating-adhesion-to-correct-setpoint-drift"
+    },
+    {
+      "id": "ca_seat_rebuild",
+      "display_name": "Perform pilot seat rebuilds on valves with low stellite in seat",
+      "properties": {
+        "match_key": "CorrectiveAction:pilot-seat-rebuilds"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:perform-pilot-seat-rebuilds-on-valves-with-low-stellite-in-seat"
+    },
+    {
+      "id": "mfr_targetrock",
+      "display_name": "Target Rock Corporation",
+      "properties": {
+        "match_key": "Manufacturer:T020"
+      },
+      "type": "Manufacturer",
+      "code": "T020",
+      "match_key": "Manufacturer:T020"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts343",
+      "display_name": "TS 3.4.3 / SR 3.4.3.1",
+      "properties": {
+        "match_key": "RegulatoryReference:ts-3-4-3"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-3-4-3-sr-3-4-3-1"
+    },
+    {
+      "id": "rr_ts304",
+      "display_name": "TS LCO 3.0.4",
+      "properties": {
+        "match_key": "RegulatoryReference:ts-lco-3-0-4"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-lco-3-0-4"
+    },
+    {
+      "id": "ler_prev_1",
+      "display_name": "LER 296-2022-001-00",
+      "properties": {
+        "match_key": "LER:3-2022-001-00"
+      },
+      "type": "LER",
+      "key": "296-2022-001-00",
+      "stub": true,
+      "title": "MSRV lift settings outside TS required setpoints",
+      "plant": "Browns Ferry Unit 3",
+      "match_key": "LER:296-2022-001-00"
+    },
+    {
+      "id": "ler_prev_2",
+      "display_name": "LER 260-2021-002-00",
+      "properties": {
+        "match_key": "LER:2-2021-002-00"
+      },
+      "type": "LER",
+      "key": "260-2021-002-00",
+      "stub": true,
+      "title": "MSRV lift settings outside TS required setpoints; platinum coating flaking noted",
+      "plant": "Browns Ferry Unit 2",
+      "match_key": "LER:260-2021-002-00"
+    },
+    {
+      "id": "ler_prev_3",
+      "display_name": "LER 259-2020-003-01",
+      "properties": {
+        "match_key": "LER:1-2020-003-01"
+      },
+      "type": "LER",
+      "key": "259-2020-003-01",
+      "stub": true,
+      "title": "MSRV lift settings outside TS required setpoints",
+      "plant": "Browns Ferry Unit 1",
+      "match_key": "LER:259-2020-003-01"
+    },
+    {
+      "id": "ler_prev_4",
+      "display_name": "LER 296-2020-002-00",
+      "properties": {
+        "match_key": "LER:3-2020-002-00"
+      },
+      "type": "LER",
+      "key": "296-2020-002-00",
+      "stub": true,
+      "title": "MSRV lift settings outside TS required setpoints",
+      "plant": "Browns Ferry Unit 3",
+      "match_key": "LER:296-2020-002-00"
+    },
+    {
+      "id": "ler_prev_5",
+      "display_name": "LER 260-2019-002-00",
+      "properties": {
+        "match_key": "LER:2-2019-002-00"
+      },
+      "type": "LER",
+      "key": "260-2019-002-00",
+      "stub": true,
+      "title": "MSRV lift settings outside TS required setpoints",
+      "plant": "Browns Ferry Unit 2",
+      "match_key": "LER:260-2019-002-00"
+    },
+    {
+      "id": "ler_prev_6",
+      "display_name": "LER 259-2018-007-00",
+      "properties": {
+        "match_key": "LER:1-2018-007-00"
+      },
+      "type": "LER",
+      "key": "259-2018-007-00",
+      "stub": true,
+      "title": "MSRV lift settings outside TS required setpoints",
+      "plant": "Browns Ferry Unit 1",
+      "match_key": "LER:259-2018-007-00"
+    },
+    {
+      "id": "ler_prev_7",
+      "display_name": "LER 296-2018-004-00",
+      "properties": {
+        "match_key": "LER:3-2018-004-00"
+      },
+      "type": "LER",
+      "key": "296-2018-004-00",
+      "stub": true,
+      "title": "MSRV lift settings outside TS required setpoints",
+      "plant": "Browns Ferry Unit 3",
+      "match_key": "LER:296-2018-004-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_rv1",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_rv2",
+      "evidence": null
+    },
+    {
+      "source": "c_rv1",
+      "relation": "PART_OF",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "c_rv2",
+      "relation": "PART_OF",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "c_rv1",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_targetrock",
+      "evidence": null
+    },
+    {
+      "source": "c_rv2",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_targetrock",
+      "evidence": null
+    },
+    {
+      "source": "fm_corrosion",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_corrosion",
+      "relation": "LEADS_TO",
+      "target": "fm_setpoint_drift",
+      "evidence": null
+    },
+    {
+      "source": "fm_setpoint_drift",
+      "relation": "LEADS_TO",
+      "target": "fm_out_of_band",
+      "evidence": null
+    },
+    {
+      "source": "fm_out_of_band",
+      "relation": "LEADS_TO",
+      "target": "cons_ts",
+      "evidence": null
+    },
+    {
+      "source": "cons_ts",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_msrv_logic",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_bworg",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_seat_rebuild",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev_1",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev_2",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev_3",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev_4",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev_5",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev_6",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev_7",
+      "evidence": null
+    }
+  ],
+  "chain": "low stellite in seat / corrosion bonding [cause B] -> mechanical setpoint drift -> as-found lift setpoints outside +/-3% TS band -> TS 3.4.3 prohibited condition (indeterminate duration) [backup: MSRV Automatic Actuation Logic operable]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Two MSRVs (PCV-001-0019, PCV-001-0179) found out of TS band during post-outage bench testing; valves remained capable of performing safety function throughout, no automatic/manual safety system responses occurred, and no SSC inoperability contributed to the event. Event is a TS-prohibited-condition report (50.73(a)(2)(i)(B)), not an equipment operability loss; consequence modeled as regulatory/TS noncompliance rather than a system-inoperable window. MSRV Automatic Actuation Logic is explicitly described as providing defense-in-depth during a pressure transient (not stated as 'operable throughout event' in the strict BACKED_UP_BY sense, but narrative frames it as an available independent function) - retained per analysis section language. Seven previous similar LERs listed; only titles/plant/unit inferred from cycle references, exact report titles not given verbatim in narrative."
+}

@@ -1,0 +1,386 @@
+{
+  "ler_number": "458-2023-002-01",
+  "identity": {
+    "accession_number": "ML23256A200",
+    "docket": "05000458",
+    "plant_name": "River Bend",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2023-02-12",
+    "report_date": "2023-09-13",
+    "operating_mode": "4",
+    "power_level": 0,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "/ 2023-002-01, Division I and II Diesel Generators Inoperable due to Exceeding Load Sequence Times"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)",
+      "10 CFR 50.73(a)(2)(v)(A)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "X",
+      "system": "EK",
+      "component": null,
+      "manufacturer": null,
+      "reportable": null
+    }
+  ],
+  "cause": {
+    "proximate_text": "This event was caused by an error that was introduced during a modification to the HVK-CHL1(A)(B)(C)(D) control logic. ... A bypass timer in the analog logic was not replicated in the new digital logic. ... the low chiller condenser flow signal was capable of causing the chiller start sequence to reset resulting in an extended chiller start sequence.",
+    "cause_code": "X",
+    "category": "Other",
+    "theme": "digital control logic modification omitted bypass timer function",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 05000458-2023-002-01",
+      "properties": {},
+      "type": "LER",
+      "key": "458-2023-002-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:458-2023-002-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "River Bend Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000458",
+      "match_key": "Unit:05000458"
+    },
+    {
+      "id": "cause",
+      "display_name": "Other (X)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "X",
+      "category": "Other",
+      "theme": "digital control logic modification omitted bypass timer function",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Other"
+    },
+    {
+      "id": "sys_ek",
+      "display_name": "Standby Diesel Generators",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "EK",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected safety system",
+      "match_key": "System:EK"
+    },
+    {
+      "id": "sys_km",
+      "display_name": "Control Building Chilled Water System (HVK)",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "KM",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "root-cause equipment",
+      "match_key": "System:KM"
+    },
+    {
+      "id": "c_chl1a",
+      "display_name": "Control Building Chiller HVK-CHL1A",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "KM",
+      "identifier": "HVK-CHL1A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:KM|HVK-CHL1A"
+    },
+    {
+      "id": "c_chl1b",
+      "display_name": "Control Building Chiller HVK-CHL1B",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "KM",
+      "identifier": "HVK-CHL1B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:KM|HVK-CHL1B"
+    },
+    {
+      "id": "c_chl1c",
+      "display_name": "Control Building Chiller HVK-CHL1C",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "KM",
+      "identifier": "HVK-CHL1C",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:KM|HVK-CHL1C"
+    },
+    {
+      "id": "c_chl1d",
+      "display_name": "Control Building Chiller HVK-CHL1D",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "KM",
+      "identifier": "HVK-CHL1D",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:KM|HVK-CHL1D"
+    },
+    {
+      "id": "fm_bypass_omit",
+      "display_name": "Bypass timer for low condenser water flow signal not replicated in digital control logic",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "During 2014/2020 analog-to-digital control logic modification, the bypass timer that blocked a low chiller condenser water flow signal during the chiller start sequence was omitted.",
+      "match_key": "FailureMode:bypass-timer-for-low-condenser-water-flow-signal-not-replicated-in-digital-control-logic"
+    },
+    {
+      "id": "fm_reset",
+      "display_name": "Low chiller condenser flow signal causes chiller start sequence reset",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Because the low water flow signal was no longer blocked, it was capable of resetting the chiller start sequence, extending the start time.",
+      "match_key": "FailureMode:low-chiller-condenser-flow-signal-causes-chiller-start-sequence-reset"
+    },
+    {
+      "id": "fm_seqtime",
+      "display_name": "HVK chiller load sequence time exceeds Technical Specification acceptance criteria",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "HVK-CHL1B load sequence time of 237.1 seconds and HVK-CHL1D load sequence time of 241 seconds, exceeding the TS SR 3.8.1.18 acceptance criteria of 180.9 to 221.1 seconds.",
+      "match_key": "FailureMode:hvk-chiller-load-sequence-time-exceeds-technical-specification-acceptance-criteria"
+    },
+    {
+      "id": "cons_dg_inop",
+      "display_name": "Division I and II Diesel Generators declared inoperable",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2023-02-12",
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:division-i-and-ii-diesel-generators-declared-inoperable"
+    },
+    {
+      "id": "ca_moda",
+      "display_name": "Modify HVK-CHL1A start logic per EC-95152 (WO 594333-01)",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:modify-hvk-chl1a-start-logic-per-ec-95152-wo-594333-01"
+    },
+    {
+      "id": "ca_modb",
+      "display_name": "Modify HVK-CHL1B start logic per EC-95151 (WO 594334-01)",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:modify-hvk-chl1b-start-logic-per-ec-95151-wo-594334-01"
+    },
+    {
+      "id": "ca_modc",
+      "display_name": "Modify HVK-CHL1C start logic per EC-95153 (WO 594335-01)",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:modify-hvk-chl1c-start-logic-per-ec-95153-wo-594335-01"
+    },
+    {
+      "id": "ca_modd",
+      "display_name": "Modify HVK-CHL1D start logic per EC-95150 (WO 594336-01)",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:modify-hvk-chl1d-start-logic-per-ec-95150-wo-594336-01"
+    },
+    {
+      "id": "rr_5073i",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_5073v",
+      "display_name": "10 CFR 50.73(a)(2)(v)(A)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-a"
+    },
+    {
+      "id": "rr_ts3818",
+      "display_name": "TS SR 3.8.1.18",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ts-sr-3-8-1-18"
+    },
+    {
+      "id": "rr_e192",
+      "display_name": "Calculation E-192, Standby Diesel Generator Loading Calculation",
+      "properties": {
+        "type": "analysis-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:calculation-e-192-standby-diesel-generator-loading-calculation"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073i",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073v",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ek",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_km",
+      "evidence": null
+    },
+    {
+      "source": "c_chl1a",
+      "relation": "PART_OF",
+      "target": "sys_km",
+      "evidence": null
+    },
+    {
+      "source": "c_chl1b",
+      "relation": "PART_OF",
+      "target": "sys_km",
+      "evidence": null
+    },
+    {
+      "source": "c_chl1c",
+      "relation": "PART_OF",
+      "target": "sys_km",
+      "evidence": null
+    },
+    {
+      "source": "c_chl1d",
+      "relation": "PART_OF",
+      "target": "sys_km",
+      "evidence": null
+    },
+    {
+      "source": "fm_bypass_omit",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_bypass_omit",
+      "relation": "LEADS_TO",
+      "target": "fm_reset",
+      "evidence": null
+    },
+    {
+      "source": "fm_reset",
+      "relation": "LEADS_TO",
+      "target": "fm_seqtime",
+      "evidence": null
+    },
+    {
+      "source": "fm_seqtime",
+      "relation": "LEADS_TO",
+      "target": "cons_dg_inop",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_moda",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_modb",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_modc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_modd",
+      "evidence": null
+    },
+    {
+      "source": "cons_dg_inop",
+      "relation": "MITIGATED_BY",
+      "target": "rr_e192",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts3818",
+      "evidence": null
+    }
+  ],
+  "chain": "digital control logic modification omitted bypass timer [cause X] -> low chiller condenser flow signal resets chiller start sequence -> HVK chiller load sequence time exceeds TS SR 3.8.1.18 acceptance criteria -> Division I and II Diesel Generators declared inoperable [analysis: DG loading sequence unaffected, no SSFF]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "No previous similar occurrences were identified in the narrative ('None.'), so no stub LER/SIMILAR_TO edge is emitted. Cause code X (Other) governs category per official coding despite narrative describing a design/modification deficiency; theme captures the digital-logic omission. HVK chillers are part of the Control Building Chilled Water System supplying both CBAC divisions; DG loading calculation (E-192) is cited as engineering analysis supporting continued DG capability, modeled as a RegulatoryReference (analysis-basis) linked via MITIGATED_BY to reflect its role in resolving/limiting the consequence rather than as a backup system per se. No distinct backup system is named as operable during the event window, so no BACKED_UP_BY edge is asserted."
+}

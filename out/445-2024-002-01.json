@@ -1,0 +1,343 @@
+{
+  "ler_number": "445-2024-002-01",
+  "identity": {
+    "accession_number": "ML24277A774",
+    "docket": "05000445",
+    "plant_name": "Comanche Peak",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2024-04-03",
+    "report_date": "2024-10-03",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Comanche Peak Nuclear Power Plant (CPNPP) Docket No. 50-445"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)",
+      "10 CFR 50.73(a)(2)(v)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "This failure was caused by inadequate design of the HVPS. The original HVPS for Gamma Metrics had an overvoltage trip setpoint of 1140 VDC, whereas, the replacement HVPS has an overvoltage trip setpoint of 1053 VDC with additional protection circuits. This was not identified in the equivalency evaluation for the replacement.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "inadequate design/equivalency evaluation of replacement power supply",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 445-2024-002-01",
+      "properties": {},
+      "type": "LER",
+      "key": "445-2024-002-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:445-2024-002-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Comanche Peak Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000445",
+      "match_key": "Unit:05000445"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "inadequate design/equivalency evaluation of replacement power supply",
+      "proximate_text": "This failure was caused by inadequate design of the HVPS. The original HVPS for Gamma Metrics had an overvoltage trip setpoint of 1140 VDC, whereas, the replacement HVPS has an overvoltage trip setpoint of 1053 VDC with additional protection circuits. This was not identified in the equivalency evaluation for the replacement.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_remote_shutdown",
+      "display_name": "Remote Shutdown System",
+      "properties": {
+        "note": "TS 3.3.4"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:remote-shutdown-system"
+    },
+    {
+      "id": "sys_gamma_metrics",
+      "display_name": "Neutron Flux Monitoring System (Gamma Metrics)",
+      "properties": {
+        "secondary_eiis": "MON"
+      },
+      "type": "System",
+      "eiis_code": "IG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "neutron flux monitor at Remote Shutdown panel",
+      "match_key": "System:IG"
+    },
+    {
+      "id": "c_hvps",
+      "display_name": "High Voltage Power Supply (HVPS)",
+      "properties": {
+        "unit": "Unit 1",
+        "note": "replaced during 2017 (Train B) and 2020 (Train A) refueling outages"
+      },
+      "type": "Component",
+      "eiis_code": "JX",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:JX"
+    },
+    {
+      "id": "c_edg_breaker",
+      "display_name": "Emergency Diesel Generator (EDG) breaker",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:emergency-diesel-generator-edg-breaker"
+    },
+    {
+      "id": "fm_design",
+      "display_name": "Replacement HVPS overvoltage trip setpoint lowered without identifying design difference",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Replacement HVPS had overvoltage trip setpoint of 1053 VDC with additional protection circuits vs. original 1140 VDC; difference not identified in equivalency evaluation.",
+      "match_key": "FailureMode:replacement-hvps-overvoltage-trip-setpoint-lowered-without-identifying-design-difference"
+    },
+    {
+      "id": "fm_voltage_spike",
+      "display_name": "Voltage spikes on power restoration from 6.9kV Safety Bus loss / EDG breaker closure",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Voltage spikes occur when the 6.9kV bus is lost and the EDG breaker closes, cycling in approximately 6 seconds on Unit 1.",
+      "match_key": "FailureMode:voltage-spikes-on-power-restoration-from-6-9kv-safety-bus-loss-edg-breaker-closure"
+    },
+    {
+      "id": "fm_hvps_trip",
+      "display_name": "HVPS overvoltage protection trip",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Unit 1 HVPS cannot sustain the shorter power-cycling event, resulting in an overvoltage protection trip.",
+      "match_key": "FailureMode:hvps-overvoltage-protection-trip"
+    },
+    {
+      "id": "fm_gamma_trip",
+      "display_name": "Gamma Metrics trip / loss of neutron flux indication",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Gamma Metrics not reliable and trips during power restoration from any loss of the 6.9kV Safety Bus, occurring during ITS in 2020, 2022, and 2023 refueling outages.",
+      "match_key": "FailureMode:gamma-metrics-trip-loss-of-neutron-flux-indication"
+    },
+    {
+      "id": "cons_ts_violation",
+      "display_name": "Remote Shutdown System TS 3.3.4 inoperability / TS violation",
+      "properties": {
+        "note": "Condition existed longer than 30-day TS allowed outage time; discovered/evaluated April 3, 2024; declared operable April 18, 2024 via temporary modification"
+      },
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:remote-shutdown-system-ts-3-3-4-inoperability-ts-violation"
+    },
+    {
+      "id": "ca_procedure",
+      "display_name": "Revise procedures for operators to manually reset breakers following station blackout to restore Gamma Metrics power",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-procedures-for-operators-to-manually-reset-breakers-following-station-blackout-to-restore-gamma-metrics-power"
+    },
+    {
+      "id": "ca_tempmod",
+      "display_name": "Install temporary modification adding 30-second delay to HVPS power restoration",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:install-temporary-modification-adding-30-second-delay-to-hvps-power-restoration"
+    },
+    {
+      "id": "ca_permanent",
+      "display_name": "Create and implement permanent modification to correct Gamma Metrics HVPS issue",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:create-and-implement-permanent-modification-to-correct-gamma-metrics-hvps-issue"
+    },
+    {
+      "id": "rr_5073_i_B",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_5073_v",
+      "display_name": "10 CFR 50.73(a)(2)(v)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v"
+    },
+    {
+      "id": "rr_ts_3_3_4",
+      "display_name": "Technical Specification 3.3.4 (Remote Shutdown System)",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:technical-specification-3-3-4-remote-shutdown-system"
+    },
+    {
+      "id": "rr_fsar",
+      "display_name": "FSAR Chapters 6, 7, and 15",
+      "properties": {
+        "type": "analysis-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:fsar-chapters-6-7-and-15"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_i_B",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_v",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts_3_3_4",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_remote_shutdown",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_gamma_metrics",
+      "evidence": null
+    },
+    {
+      "source": "sys_gamma_metrics",
+      "relation": "PART_OF",
+      "target": "sys_remote_shutdown",
+      "evidence": null
+    },
+    {
+      "source": "fm_design",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_design",
+      "relation": "LEADS_TO",
+      "target": "fm_hvps_trip",
+      "evidence": null
+    },
+    {
+      "source": "fm_voltage_spike",
+      "relation": "LEADS_TO",
+      "target": "fm_hvps_trip",
+      "evidence": null
+    },
+    {
+      "source": "fm_hvps_trip",
+      "relation": "LEADS_TO",
+      "target": "fm_gamma_trip",
+      "evidence": null
+    },
+    {
+      "source": "fm_gamma_trip",
+      "relation": "LEADS_TO",
+      "target": "cons_ts_violation",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procedure",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_tempmod",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_permanent",
+      "evidence": null
+    },
+    {
+      "source": "c_hvps",
+      "relation": "PART_OF",
+      "target": "sys_gamma_metrics",
+      "evidence": null
+    }
+  ],
+  "chain": "inadequate design/equivalency evaluation of replacement HVPS [cause TBD] -> replacement HVPS overvoltage setpoint difference undetected -> voltage spike during 6.9kV bus power restoration/EDG breaker closure -> HVPS overvoltage protection trip -> Gamma Metrics trips -> Remote Shutdown System TS 3.3.4 inoperability (>30 days)",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code remains TBD/provisional per FORM-366 fields, despite detailed narrative attributing the failure to an inadequate equivalency evaluation during HVPS replacement. Gamma Metrics recurring trip had occurred in 2020, 2022, and 2023 outages before being formally evaluated as a TS violation on 2024-04-03; narrative states no previous *similar* TS-reportable events despite the repeat trips. Unit 2 Gamma Metrics unaffected (design difference specific to Unit 1 HVPS replacement). No manufacturer codes or block 13 rows were provided in FORM-366 fields."
+}

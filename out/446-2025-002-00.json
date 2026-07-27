@@ -1,0 +1,349 @@
+{
+  "ler_number": "446-2025-002-00",
+  "identity": {
+    "accession_number": "ML25287A021",
+    "docket": "05000446",
+    "plant_name": "Comanche Peak",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2025-08-14",
+    "report_date": "2025-10-14",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "inspection",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Comanche Peak Nuclear Power Plant (CPNPP) Docket No. 50-446"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)",
+      "10 CFR 50.73(a)(2)(v)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": null,
+      "system": null,
+      "component": null,
+      "manufacturer": null,
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "the inlet fitting on the foul gas check valve of Safety Chiller 2-06 failed resulting in the refrigerant leak. The degradation of the inlet fitting is associated with the copper material not withstanding factors like vibration or mechanical stress and thermal cycling over time",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "component degradation / material fatigue",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 446-2025-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "446-2025-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:446-2025-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Comanche Peak Unit 2",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000446",
+      "match_key": "Unit:05000446"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "component degradation / material fatigue",
+      "proximate_text": "the inlet fitting on the foul gas check valve of Safety Chiller 2-06 failed resulting in the refrigerant leak. The degradation of the inlet fitting is associated with the copper material not withstanding factors like vibration or mechanical stress and thermal cycling over time",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_km",
+      "display_name": "Safety Chilled Water System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "KM",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "Train B chiller involved; Train A operable backup",
+      "match_key": "System:KM"
+    },
+    {
+      "id": "c_chiller",
+      "display_name": "Safety Chiller 2-06",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "KM",
+      "identifier": "2-06",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:KM|2-06"
+    },
+    {
+      "id": "c_ckv",
+      "display_name": "Foul gas check valve",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "CKV",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:CKV"
+    },
+    {
+      "id": "c_fitting",
+      "display_name": "Foul gas check valve inlet fitting",
+      "properties": {
+        "material": "Copper"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "Part No. 925983",
+      "model": null,
+      "manufacturer_code": "Mueller Industries",
+      "inferred_code": false,
+      "match_key": "Component:foul-gas-check-valve-inlet-fitting"
+    },
+    {
+      "id": "fm_fitting_degrade",
+      "display_name": "Inlet fitting degraded due to vibration/mechanical stress and thermal cycling fatigue",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Copper inlet fitting on foul gas check valve degraded over time due to vibration, mechanical stress, and thermal cycling fatigue",
+      "match_key": "FailureMode:inlet-fitting-degraded-due-to-vibration-mechanical-stress-and-thermal-cycling-fatigue"
+    },
+    {
+      "id": "fm_leak",
+      "display_name": "Refrigerant leak from failed inlet fitting",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Degraded inlet fitting failed, causing refrigerant (R-11) leak",
+      "match_key": "FailureMode:refrigerant-leak-from-failed-inlet-fitting"
+    },
+    {
+      "id": "fm_masked",
+      "display_name": "Leak masked by purge system fill/drain cycling",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Initial leak on August 14, 2025 was masked by the purge system cycling through the fill and drain cycle, delaying identification of the failed component",
+      "match_key": "FailureMode:leak-masked-by-purge-system-fill-drain-cycling"
+    },
+    {
+      "id": "fm_lowpressure_trip",
+      "display_name": "Chiller tripped on low refrigerant pressure",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Safety Chiller 2-06 automatically tripped due to low refrigerant pressure on August 14, 2025",
+      "match_key": "FailureMode:chiller-tripped-on-low-refrigerant-pressure"
+    },
+    {
+      "id": "cons_inop",
+      "display_name": "Train B Safety Chiller 2-06 inoperable",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2025-08-14T21:25",
+      "end": "2025-08-27T01:38",
+      "duration": "293:00",
+      "tz": "Central",
+      "match_key": "Consequence:train-b-safety-chiller-2-06-inoperable"
+    },
+    {
+      "id": "ca_replace_fitting",
+      "display_name": "Replace foul gas check valve inlet fitting",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-foul-gas-check-valve-inlet-fitting"
+    },
+    {
+      "id": "ca_monitoring",
+      "display_name": "Update low refrigerant pressure monitoring specification to 8-12 inches of mercury in operating procedures",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:update-low-refrigerant-pressure-monitoring-specification-to-8-12-inches-of-mercury-in-operating-procedures"
+    },
+    {
+      "id": "ca_dcn",
+      "display_name": "Design Change Notice to replace remaining copper valves/fittings with stainless steel on all safety chiller units",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:design-change-notice-to-replace-remaining-copper-valves-fittings-with-stainless-steel-on-all-safety-chiller-units"
+    },
+    {
+      "id": "mfr_mueller",
+      "display_name": "Mueller Industries",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": null,
+      "match_key": "Manufacturer:mueller-industries"
+    },
+    {
+      "id": "rr_5073i",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_5073v",
+      "display_name": "10 CFR 50.73(a)(2)(v)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v"
+    },
+    {
+      "id": "rr_ts3719",
+      "display_name": "Technical Specification LCO 3.7.19",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-lco-3-7-19"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073i",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073v",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts3719",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_km",
+      "evidence": null
+    },
+    {
+      "source": "c_chiller",
+      "relation": "PART_OF",
+      "target": "sys_km",
+      "evidence": null
+    },
+    {
+      "source": "fm_fitting_degrade",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_fitting_degrade",
+      "relation": "LEADS_TO",
+      "target": "fm_leak",
+      "evidence": null
+    },
+    {
+      "source": "fm_leak",
+      "relation": "LEADS_TO",
+      "target": "fm_lowpressure_trip",
+      "evidence": null
+    },
+    {
+      "source": "fm_leak",
+      "relation": "LEADS_TO",
+      "target": "fm_masked",
+      "evidence": null
+    },
+    {
+      "source": "fm_lowpressure_trip",
+      "relation": "LEADS_TO",
+      "target": "cons_inop",
+      "evidence": null
+    },
+    {
+      "source": "fm_masked",
+      "relation": "LEADS_TO",
+      "target": "cons_inop",
+      "evidence": null
+    },
+    {
+      "source": "cons_inop",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_km",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_fitting",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_monitoring",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_dcn",
+      "evidence": null
+    },
+    {
+      "source": "c_fitting",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_mueller",
+      "evidence": null
+    },
+    {
+      "source": "c_fitting",
+      "relation": "PART_OF",
+      "target": "c_ckv",
+      "evidence": null
+    }
+  ],
+  "chain": "copper inlet fitting degrades from vibration/mechanical stress and thermal cycling fatigue [cause TBD] -> refrigerant leak develops -> leak masked by purge system fill/drain cycling (delays detection) -> chiller trips on low refrigerant pressure -> Train B Safety Chiller 2-06 inoperable for 293 hours [backup Train A Safety Chiller 2-05 operable throughout]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code not provided in FORM-366 FIELDS (TBD/provisional per rule 4). Two LCO entry/exit periods (Aug 14-15 and Aug 24-27) were determined by Past Operability review to stem from the same underlying failed inlet fitting; modeled as a single continuous inoperability window (293 hours total, per narrative Section III.B) rather than two separate consequence nodes, consistent with the licensee's own aggregation. Note the narrative's Block 13 system code text is garbled ('D NUMBER NO. ~-I 002 1- 0'); LER number reconstructed as 446-2025-002-00 from docket 05000446 and event/report dates context. Unit 2 Train A Safety Chiller 2-05 was explicitly stated as 'remained operable throughout the duration of this event' but is the redundant train of the same CHS system rather than a distinct backup system, so it is represented via the sys_km System node with a role annotation rather than a separate System node. Similar-events section references only generic CAP trending, not a specific prior LER number, so no stub LER/SIMILAR_TO edge was created (per rule 9, only explicit referenced LER numbers are stubbed)."
+}

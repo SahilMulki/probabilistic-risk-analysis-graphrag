@@ -1,0 +1,415 @@
+{
+  "ler_number": "280-2022-003-00",
+  "identity": {
+    "accession_number": "ML22316A021",
+    "docket": "05000280",
+    "plant_name": "Surry",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2022-09-15",
+    "report_date": "2022-11-11",
+    "operating_mode": null,
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2022-003-00 for Surry Power Station Unit 1, Loss of Emergency Switchgear Room Cooling Due to Use of Incorrect Air Handler Fan V-Belts"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)",
+      "10 CFR 50.73(a)(2)(v)(A)",
+      "10 CFR 50.73(a)(2)(vii)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The cause of this event was that the V-belt vendor sent a different variant of the BX-99 V-belt ordered (Torq Titan vs. the Grip Notch V-belt expected) and these V-belts were inadvertently accepted and installed at the station. Contributing to this cause was that there were missed opportunities to recognize that the new V-belts were not the same design as the V-belts being replaced.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "vendor substitution of replacement part not caught by receipt inspection",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 280-2022-003-00",
+      "properties": {},
+      "type": "LER",
+      "key": "280-2022-003-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:280-2022-003-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Surry Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000280",
+      "match_key": "Unit:05000280"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "vendor substitution of replacement part not caught by receipt inspection",
+      "proximate_text": "The cause of this event was that the V-belt vendor sent a different variant of the BX-99 V-belt ordered (Torq Titan vs. the Grip Notch V-belt expected) and these V-belts were inadvertently accepted and installed at the station. Contributing to this cause was that there were missed opportunities to recognize that the new V-belts were not the same design as the V-belts being replaced.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_vk",
+      "display_name": "Main Control Room/Emergency Switchgear Room Ventilation",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "VK",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected system",
+      "match_key": "System:VK"
+    },
+    {
+      "id": "sys_acu",
+      "display_name": "MCR and ESGR Air Conditioning System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "ACU",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected system",
+      "match_key": "System:ACU"
+    },
+    {
+      "id": "c_ahu7",
+      "display_name": "Air Handling Unit 1-VS-AC-7",
+      "properties": {
+        "power_source": "1H bus"
+      },
+      "type": "Component",
+      "eiis_code": "AHU",
+      "identifier": "1-VS-AC-7",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:AHU|1-VS-AC-7"
+    },
+    {
+      "id": "c_ahu6",
+      "display_name": "Air Handling Unit 1-VS-AC-6",
+      "properties": {
+        "power_source": "1J bus"
+      },
+      "type": "Component",
+      "eiis_code": "AHU",
+      "identifier": "1-VS-AC-6",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:AHU|1-VS-AC-6"
+    },
+    {
+      "id": "c_fan",
+      "display_name": "AHU Fan",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "FAN",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:FAN"
+    },
+    {
+      "id": "c_belt",
+      "display_name": "Browning BX-99 Torq Titan V-belt",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "BX-99",
+      "model": "Torq Titan",
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:browning-bx-99-torq-titan-v-belt"
+    },
+    {
+      "id": "c_chiller",
+      "display_name": "Chillers (1-VS-E-4A through 4E)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "CHU",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:CHU"
+    },
+    {
+      "id": "fm_vendor_sub",
+      "display_name": "Vendor substituted V-belt line without notifying station",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Vendor discontinued Grip Notch line and shipped Torq Titan belts under same PO part number without required notification.",
+      "match_key": "FailureMode:vendor-substituted-v-belt-line-without-notifying-station"
+    },
+    {
+      "id": "fm_receipt_fail",
+      "display_name": "Receipt inspection failed to detect belt design difference",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Belts were inspected against PO dimensional acceptance criteria, accepted, and stocked despite differing belt profile.",
+      "match_key": "FailureMode:receipt-inspection-failed-to-detect-belt-design-difference"
+    },
+    {
+      "id": "fm_belt_fail",
+      "display_name": "Torq Titan V-belts repeatedly failed/came off sheaves",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Torq Titan belts installed on 1-VS-AC-6 and 1-VS-AC-7 slipped, slapped, and came off sheaves on multiple occasions.",
+      "match_key": "FailureMode:torq-titan-v-belts-repeatedly-failed-came-off-sheaves"
+    },
+    {
+      "id": "cons_ac7_inop",
+      "display_name": "1-VS-AC-7 (ESGR cooling train) inoperable",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2022-07-29",
+      "end": "2022-09-19",
+      "duration": "~52 days",
+      "tz": null,
+      "match_key": "Consequence:1-vs-ac-7-esgr-cooling-train-inoperable"
+    },
+    {
+      "id": "cons_both_inop",
+      "display_name": "Both ESGR cooling trains inoperable / loss of safety function",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2022-09-15",
+      "end": "2022-09-19",
+      "duration": "4 days",
+      "tz": null,
+      "match_key": "Consequence:both-esgr-cooling-trains-inoperable-loss-of-safety-function"
+    },
+    {
+      "id": "ca_replace_belts",
+      "display_name": "Replace Torq Titan belts with Grip Notch belts",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-torq-titan-belts-with-grip-notch-belts"
+    },
+    {
+      "id": "ca_extent",
+      "display_name": "Extent-of-condition review of Torq Titan belt usage in other safety-related A/C applications",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:extent-of-condition-review-of-torq-titan-belt-usage-in-other-safety-related-a-c-applications"
+    },
+    {
+      "id": "ca_procurement_docs",
+      "display_name": "Enhance procurement documents (e.g., pictures) to confirm parts received match parts ordered",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:enhance-procurement-documents-e-g-pictures-to-confirm-parts-received-match-parts-ordered"
+    },
+    {
+      "id": "ca_reinforce_expectations",
+      "display_name": "Reinforce expectations on comparing parts before acceptance/installation",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:reinforce-expectations-on-comparing-parts-before-acceptance-installation"
+    },
+    {
+      "id": "ca_alt_mfr",
+      "display_name": "Pursue replacement V-belts from a different manufacturer",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:pursue-replacement-v-belts-from-a-different-manufacturer"
+    },
+    {
+      "id": "mfr_browning",
+      "display_name": "Browning MFG/Emerson Power Transmission",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": null,
+      "match_key": "Manufacturer:browning-mfg-emerson-power-transmission"
+    },
+    {
+      "id": "rr_5073i",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_5073v",
+      "display_name": "10 CFR 50.73(a)(2)(v)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-a"
+    },
+    {
+      "id": "rr_5073vii",
+      "display_name": "10 CFR 50.73(a)(2)(vii)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-vii"
+    },
+    {
+      "id": "rr_ts",
+      "display_name": "Technical Specification 3.23(A)(2)(a)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-3-23-a-2-a"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073i",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073v",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073vii",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_vk",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_acu",
+      "evidence": null
+    },
+    {
+      "source": "c_ahu7",
+      "relation": "PART_OF",
+      "target": "sys_acu",
+      "evidence": null
+    },
+    {
+      "source": "c_ahu6",
+      "relation": "PART_OF",
+      "target": "sys_acu",
+      "evidence": null
+    },
+    {
+      "source": "c_belt",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_browning",
+      "evidence": null
+    },
+    {
+      "source": "fm_vendor_sub",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_vendor_sub",
+      "relation": "LEADS_TO",
+      "target": "fm_receipt_fail",
+      "evidence": null
+    },
+    {
+      "source": "fm_receipt_fail",
+      "relation": "LEADS_TO",
+      "target": "fm_belt_fail",
+      "evidence": null
+    },
+    {
+      "source": "fm_belt_fail",
+      "relation": "LEADS_TO",
+      "target": "cons_ac7_inop",
+      "evidence": null
+    },
+    {
+      "source": "fm_belt_fail",
+      "relation": "LEADS_TO",
+      "target": "cons_both_inop",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_belts",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_extent",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procurement_docs",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_reinforce_expectations",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_alt_mfr",
+      "evidence": null
+    }
+  ],
+  "chain": "vendor substituted V-belt line without notification [cause TBD] -> receipt inspection failed to detect design difference -> Torq Titan belts repeatedly slip/fail on sheaves -> 1-VS-AC-7 inoperable (7/29-9/19) -> both ESGR cooling trains inoperable 9/15-9/19 (loss of safety function, common-cause failure) [no operable backup train during 4-day overlap]",
+  "golden_questions": [],
+  "notes": "Cause code TBD in form; category left provisional per rule 4. No Block 13 rows provided in form fields, so left empty. ADS not applicable to this event. Chillers (CHU) mentioned only as design-context power/cooling-water supply detail, not directly implicated in failure chain, but included as Component since the report describes their specific arrangement; could be considered borderline design-context. Two 4-day and ~52-day inoperability windows both from same root failure mode captured as two Consequence nodes reflecting the two distinct reportable conditions (single-train loss vs. dual-train loss)."
+}

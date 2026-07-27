@@ -1,0 +1,205 @@
+{
+  "ler_number": "281-2020-001-00",
+  "identity": {
+    "accession_number": "ML21027A120",
+    "docket": "05000281",
+    "plant_name": "Surry",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2020-08-04",
+    "report_date": "2020-10-01",
+    "operating_mode": null,
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2020-001-00 for Surry Power Station Unit 2, Loss of Containment Cooling Affecting Partial Pressure Indication"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(vii)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "D",
+      "system": "KM",
+      "component": "MO",
+      "manufacturer": "E232",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "Defective procedure resulted in loss of containment cooling affecting partial pressure indication",
+    "cause_code": "D",
+    "category": "Defective Procedure",
+    "theme": "procedural inadequacy affecting containment cooling / partial pressure indication",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 281-2020-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "281-2020-001-00",
+      "stub": false,
+      "title": "LER 2020-001-00 for Surry Power Station Unit 2, Loss of Containment Cooling Affecting Partial Pressure Indication",
+      "plant": "Surry Power Station",
+      "match_key": "LER:281-2020-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Surry Unit 2",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000281",
+      "match_key": "Unit:05000281"
+    },
+    {
+      "id": "cause",
+      "display_name": "Defective Procedure (D)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "D",
+      "category": "Defective Procedure",
+      "theme": "procedural inadequacy affecting containment cooling / partial pressure indication",
+      "proximate_text": "Defective procedure resulted in loss of containment cooling affecting partial pressure indication",
+      "provisional": false,
+      "match_key": "Cause:Defective Procedure"
+    },
+    {
+      "id": "sys_km",
+      "display_name": "Containment Cooling System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "KM",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:KM"
+    },
+    {
+      "id": "c_mo",
+      "display_name": "Motor-Operated Valve",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "MO",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": "E232",
+      "inferred_code": false,
+      "match_key": "Component:MO"
+    },
+    {
+      "id": "fm_proc",
+      "display_name": "Defective procedure led to improper valve/component manipulation",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "A defective procedure governing containment cooling equipment resulted in a loss of containment cooling function.",
+      "match_key": "FailureMode:defective-procedure-led-to-improper-valve-component-manipulation"
+    },
+    {
+      "id": "fm_loss_cc",
+      "display_name": "Loss of containment cooling",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Containment cooling function was lost as a result of the procedural deficiency.",
+      "match_key": "FailureMode:loss-of-containment-cooling"
+    },
+    {
+      "id": "cons_pp",
+      "display_name": "Partial pressure indication affected due to loss of containment cooling",
+      "properties": {},
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:partial-pressure-indication-affected-due-to-loss-of-containment-cooling"
+    },
+    {
+      "id": "mfr_e232",
+      "display_name": "Manufacturer E232",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "E232",
+      "match_key": "Manufacturer:E232"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(vii)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-vii"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_km",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_mo",
+      "evidence": null
+    },
+    {
+      "source": "c_mo",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_e232",
+      "evidence": null
+    },
+    {
+      "source": "fm_proc",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_proc",
+      "relation": "LEADS_TO",
+      "target": "fm_loss_cc",
+      "evidence": null
+    },
+    {
+      "source": "fm_loss_cc",
+      "relation": "LEADS_TO",
+      "target": "cons_pp",
+      "evidence": null
+    }
+  ],
+  "chain": "defective procedure [cause D] -> improper handling of containment cooling component -> loss of containment cooling -> partial pressure indication affected",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Narrative text was not provided (empty 366A field); extraction relies solely on FORM-366 fields and title. Detailed component identifiers, timing, corrective actions, and backup systems could not be determined without narrative content. No previous-occurrence LER referenced. No corrective actions could be identified from available inputs."
+}

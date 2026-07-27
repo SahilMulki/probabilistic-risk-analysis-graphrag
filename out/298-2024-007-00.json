@@ -1,0 +1,308 @@
+{
+  "ler_number": "298-2024-007-00",
+  "identity": {
+    "accession_number": "ML24366A126",
+    "docket": "05000298",
+    "plant_name": "Cooper",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2024-11-03",
+    "report_date": "2024-12-31",
+    "operating_mode": "1",
+    "power_level": 18,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Licensee Event Report No. 2024-007-00 Cooper Nuclear Station, Docket No. 50-298, Renewed License No. DPR-46"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The direct cause of the failed SRV surveillance test was caused by a damaged and separated flex hose extending from the SRV71B tailpipe to MS-PS-300B.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "damaged/disconnected instrument flex hose of unknown origin",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 298-2024-007-00",
+      "properties": {},
+      "type": "LER",
+      "key": "298-2024-007-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:298-2024-007-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Cooper Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000298",
+      "match_key": "Unit:05000298"
+    },
+    {
+      "id": "cause",
+      "display_name": "Unknown/Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "damaged/disconnected instrument flex hose of unknown origin",
+      "proximate_text": "The direct cause of the failed SRV surveillance test was caused by a damaged and separated flex hose extending from the SRV71B tailpipe to MS-PS-300B.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_rv",
+      "display_name": "Safety Relief Valves",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "RV",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "involved; pressure relief system",
+      "match_key": "System:RV"
+    },
+    {
+      "id": "sys_sb",
+      "display_name": "Main Steam Lines",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "location context",
+      "match_key": "System:SB"
+    },
+    {
+      "id": "c_srv71b",
+      "display_name": "Safety Relief Valve SRV71B",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "RV",
+      "identifier": "SRV71B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:RV|SRV71B"
+    },
+    {
+      "id": "c_pswitch",
+      "display_name": "Pressure Switch MS-PS-300B",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "MS-PS-300B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:pressure-switch-ms-ps-300b"
+    },
+    {
+      "id": "c_flexhose",
+      "display_name": "Flex hose (SRV71B tailpipe to MS-PS-300B)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:flex-hose-srv71b-tailpipe-to-ms-ps-300b"
+    },
+    {
+      "id": "c_tailpipe",
+      "display_name": "SRV71B tailpipe connection port",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:srv71b-tailpipe-connection-port"
+    },
+    {
+      "id": "fm_hosedamage",
+      "display_name": "Flex hose threaded connections and tailpipe connection port damaged",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The threaded connections of the flex hose and the connection port on the SRV71B tailpipe were found damaged.",
+      "match_key": "FailureMode:flex-hose-threaded-connections-and-tailpipe-connection-port-damaged"
+    },
+    {
+      "id": "fm_hosedisconnect",
+      "display_name": "Flex hose disconnected from tailpipe",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Flex hose was disconnected and was laying on top of the SRV71B tailpipe, preventing pressure switch actuation.",
+      "match_key": "FailureMode:flex-hose-disconnected-from-tailpipe"
+    },
+    {
+      "id": "fm_switchfail",
+      "display_name": "Pressure switch MS-PS-300B failed to actuate",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Pressure switch MS-PS-300B did not actuate when SRV71B was taken to the OPEN position during surveillance testing.",
+      "match_key": "FailureMode:pressure-switch-ms-ps-300b-failed-to-actuate"
+    },
+    {
+      "id": "cons_inop",
+      "display_name": "MS-PS-300B declared inoperable / TS LCO 3.0.4 violation",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2024-11-03",
+      "end": "2024-11-04",
+      "duration": "~1 day",
+      "tz": null,
+      "match_key": "Consequence:ms-ps-300b-declared-inoperable-ts-lco-3-0-4-violation"
+    },
+    {
+      "id": "ca_repair",
+      "display_name": "Repair flex hose and SRV71B tailpipe connection port",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:repair-flex-hose-and-srv71b-tailpipe-connection-port"
+    },
+    {
+      "id": "ca_retest",
+      "display_name": "Perform satisfactory surveillance testing and declare MS-PS-300B operational",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:perform-satisfactory-surveillance-testing-and-declare-ms-ps-300b-operational"
+    },
+    {
+      "id": "ca_extent",
+      "display_name": "Extent of condition review",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:extent-of-condition-review"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_tslco",
+      "display_name": "TS Limiting Condition for Operation 3.0.4",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-limiting-condition-for-operation-3-0-4"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_tslco",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rv",
+      "evidence": null
+    },
+    {
+      "source": "c_srv71b",
+      "relation": "PART_OF",
+      "target": "sys_rv",
+      "evidence": null
+    },
+    {
+      "source": "c_pswitch",
+      "relation": "PART_OF",
+      "target": "c_srv71b",
+      "evidence": "Each SRV is equipped with a pressure switch mounted in its discharge tailpipe."
+    },
+    {
+      "source": "fm_hosedisconnect",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_hosedisconnect",
+      "relation": "LEADS_TO",
+      "target": "fm_hosedamage",
+      "evidence": null
+    },
+    {
+      "source": "fm_hosedisconnect",
+      "relation": "LEADS_TO",
+      "target": "fm_switchfail",
+      "evidence": null
+    },
+    {
+      "source": "fm_switchfail",
+      "relation": "LEADS_TO",
+      "target": "cons_inop",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_repair",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_retest",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_extent",
+      "evidence": null
+    }
+  ],
+  "chain": "unknown/provisional cause [TBD] -> flex hose disconnected from tailpipe -> flex hose/tailpipe connection damage -> pressure switch MS-PS-300B fails to actuate -> MS-PS-300B declared inoperable / TS LCO 3.0.4 violation (SRV71B itself confirmed fully open via bypass valve response and tailpipe temperature rise)",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code remains TBD/provisional per FORM-366 despite narrative attributing direct cause to the damaged/disconnected flex hose; root cause of the physical damage itself is stated as unknown/undocumented. SRV71B's actual safety function (opening) was unaffected; only the OPEN-position indication to the Control Room via MS-PS-300B was lost. No SIMILAR_TO edge emitted: narrative states no previous occurrences of a similar failure were found in the last three years. No BACKED_UP_BY edges: no operable backup instrumentation stated for MS-PS-300B during the inoperable window; turbine bypass valve response was used only for confirmation, not modeled as a backup system."
+}

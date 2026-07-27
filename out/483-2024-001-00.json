@@ -1,0 +1,462 @@
+{
+  "ler_number": "483-2024-001-00",
+  "identity": {
+    "accession_number": "ML24095A326",
+    "docket": "05000483",
+    "plant_name": "Callaway",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2024-01-05",
+    "report_date": "2024-04-04",
+    "operating_mode": null,
+    "power_level": 0,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": "56968",
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Reactor Trip Due to Turbine Trip"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)",
+      "10 CFR 50.73(a)(2)(iv)(B)",
+      "10 CFR 50.73(a)(2)(iv)(B)(6)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "1",
+      "system": "I",
+      "component": "I",
+      "manufacturer": "B",
+      "reportable": null
+    }
+  ],
+  "cause": {
+    "proximate_text": "a failure of the C-phase surge capacitor downstream of low-side \"X\" winding of the unit auxiliary transformer (UAT) occurred, which led to main generator protection logic (386-1/G and 486-1/U lockout relays) being actuated, resulting in a turbine trip",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "electrical component failure - surge capacitor",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 483-2024-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "483-2024-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:483-2024-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Callaway Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000483",
+      "match_key": "Unit:05000483"
+    },
+    {
+      "id": "cause",
+      "display_name": "TBD (provisional)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "electrical component failure - surge capacitor",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_rps",
+      "display_name": "Reactor Protection System / Reactor Trip System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:reactor-protection-system-reactor-trip-system"
+    },
+    {
+      "id": "sys_afw",
+      "display_name": "Auxiliary Feedwater System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "automatically actuated after reactor trip",
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "sys_turbine",
+      "display_name": "Main Turbine/Generator",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "TA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:TA"
+    },
+    {
+      "id": "sys_uat",
+      "display_name": "Unit Auxiliary Transformer",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:unit-auxiliary-transformer"
+    },
+    {
+      "id": "c_surgecap_b",
+      "display_name": "C-phase surge capacitor MA05B",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "MA05B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:c-phase-surge-capacitor-ma05b"
+    },
+    {
+      "id": "c_surgecap_a",
+      "display_name": "Surge capacitor MA05A",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "MA05A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:surge-capacitor-ma05a"
+    },
+    {
+      "id": "c_lockout_g",
+      "display_name": "Main generator protection lockout relay 386-1/G",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "386-1/G",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:main-generator-protection-lockout-relay-386-1-g"
+    },
+    {
+      "id": "c_lockout_u",
+      "display_name": "Main generator protection lockout relay 486-1/U",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "486-1/U",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:main-generator-protection-lockout-relay-486-1-u"
+    },
+    {
+      "id": "c_fwiv",
+      "display_name": "Feedwater isolation valve (position indication issue)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": true,
+      "match_key": "Component:ISV"
+    },
+    {
+      "id": "fm_capfail",
+      "display_name": "C-phase surge capacitor MA05B failure",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Failure of C-phase surge capacitor downstream of low-side 'X' winding of the UAT",
+      "match_key": "FailureMode:c-phase-surge-capacitor-ma05b-failure"
+    },
+    {
+      "id": "fm_lockout",
+      "display_name": "Main generator protection logic actuation (lockout relays)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "386-1/G and 486-1/U lockout relays actuated in response to surge capacitor failure",
+      "match_key": "FailureMode:main-generator-protection-logic-actuation-lockout-relays"
+    },
+    {
+      "id": "fm_turbinetrip",
+      "display_name": "Turbine trip",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Turbine trip annunciated as Unit Trip Turbine Trip, generator output breakers opened",
+      "match_key": "FailureMode:turbine-trip"
+    },
+    {
+      "id": "fm_fwiv_indication",
+      "display_name": "Feedwater isolation valve position indication issue",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Position indication issue on one feedwater isolation valve during AFW actuation; valve confirmed closed",
+      "match_key": "FailureMode:feedwater-isolation-valve-position-indication-issue"
+    },
+    {
+      "id": "cons_reactortrip",
+      "display_name": "Automatic reactor trip",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2024-02-15T02:47",
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:automatic-reactor-trip"
+    },
+    {
+      "id": "cons_afwactuation",
+      "display_name": "Automatic auxiliary feedwater system actuation",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2024-02-15T02:47",
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:automatic-auxiliary-feedwater-system-actuation"
+    },
+    {
+      "id": "ca_replace_caps",
+      "display_name": "Replace and power factor test MA05A and MA05B surge capacitors (6 total)",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-and-power-factor-test-ma05a-and-ma05b-surge-capacitors-6-total"
+    },
+    {
+      "id": "ca_lab_analysis",
+      "display_name": "Send failed capacitor to laboratory for failure analysis",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:send-failed-capacitor-to-laboratory-for-failure-analysis"
+    },
+    {
+      "id": "rr_5073_iv_a",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5073_iv_b",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-b"
+    },
+    {
+      "id": "rr_5073_iv_b6",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(B)(6)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-b-6"
+    },
+    {
+      "id": "ler_2013_008",
+      "display_name": "Callaway Plant Unit 1 LER 2013-008 - Electrical faults causing isophase bus/main generator neutral connection box damage, generator trip, reactor trip",
+      "properties": {},
+      "type": "LER",
+      "key": "2013-008",
+      "stub": true,
+      "title": "Electrical faults caused damage to isophase bus in auxiliary transformer and main generator neutral connection box, causing generator trip and subsequent reactor trip",
+      "plant": "Callaway Plant Unit 1",
+      "match_key": "LER:2013-008"
+    },
+    {
+      "id": "ler_2014_006",
+      "display_name": "Callaway Plant Unit 1 LER 2014-006 - Turbine trip due to main generator excitation transformer ground fault",
+      "properties": {},
+      "type": "LER",
+      "key": "2014-006",
+      "stub": true,
+      "title": "Turbine trip occurred when main generator excitation transformer faulted to ground, resulting in reactor trip",
+      "plant": "Callaway Plant Unit 1",
+      "match_key": "LER:2014-006"
+    },
+    {
+      "id": "ler_2020_006",
+      "display_name": "Callaway Plant Unit 1 LER 2020-006 - Main generator fault leading to turbine trip and reactor trip",
+      "properties": {},
+      "type": "LER",
+      "key": "2020-006",
+      "stub": true,
+      "title": "Main generator fault occurred that led to a turbine trip and reactor trip",
+      "plant": "Callaway Plant Unit 1",
+      "match_key": "LER:2020-006"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_iv_a",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_iv_b",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_iv_b6",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rps",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_afw",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_turbine",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_uat",
+      "evidence": null
+    },
+    {
+      "source": "c_surgecap_b",
+      "relation": "PART_OF",
+      "target": "sys_uat",
+      "evidence": null
+    },
+    {
+      "source": "c_lockout_g",
+      "relation": "PART_OF",
+      "target": "sys_turbine",
+      "evidence": null
+    },
+    {
+      "source": "c_lockout_u",
+      "relation": "PART_OF",
+      "target": "sys_turbine",
+      "evidence": null
+    },
+    {
+      "source": "fm_capfail",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_capfail",
+      "relation": "LEADS_TO",
+      "target": "fm_lockout",
+      "evidence": null
+    },
+    {
+      "source": "fm_lockout",
+      "relation": "LEADS_TO",
+      "target": "fm_turbinetrip",
+      "evidence": null
+    },
+    {
+      "source": "fm_turbinetrip",
+      "relation": "LEADS_TO",
+      "target": "cons_reactortrip",
+      "evidence": null
+    },
+    {
+      "source": "cons_reactortrip",
+      "relation": "LEADS_TO",
+      "target": "cons_afwactuation",
+      "evidence": null
+    },
+    {
+      "source": "cons_afwactuation",
+      "relation": "LEADS_TO",
+      "target": "fm_fwiv_indication",
+      "evidence": null
+    },
+    {
+      "source": "c_fwiv",
+      "relation": "PART_OF",
+      "target": "sys_afw",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_caps",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_lab_analysis",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_2013_008",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_2014_006",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_2020_006",
+      "evidence": null
+    }
+  ],
+  "chain": "C-phase surge capacitor MA05B failure [cause TBD] -> main generator protection lockout relays (386-1/G, 486-1/U) actuate -> turbine trip -> automatic reactor trip -> automatic AFW actuation -> feedwater isolation valve position indication issue (valve confirmed closed)",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code left TBD/provisional per FORM-366 fields (block 13 cause listed as '1', not one of the standard A-E codes, so treated as TBD). Event date in form (2024-01-05) conflicts with narrative event date (2024-02-15 0247); narrative timestamp used for consequence timing since it is the authoritative detailed account. Turbine trip and reactor trip are treated as sequential FailureMode/Consequence nodes per narrative description ('a reactor trip immediately occurred in response to the turbine trip'). Feedwater isolation valve indication issue modeled as a parallel failure mode discovered during the AFW actuation, not part of the main causal chain to reactor trip. No ECCS/backup systems named as operable-during-event backups in this narrative, so no BACKED_UP_BY edges emitted."
+}

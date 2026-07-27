@@ -1,0 +1,325 @@
+{
+  "ler_number": "296-2026-001-00",
+  "identity": {
+    "accession_number": "ML26112A069",
+    "docket": "05000296",
+    "plant_name": "Browns Ferry",
+    "unit": 3,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2026-02-23",
+    "report_date": "2026-04-22",
+    "operating_mode": "5",
+    "power_level": 0,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Main Steam Isolation Valve Inoperable due to Poppet Valve Scale Buildup"
+  },
+  "reporting_basis": {
+    "reported_under": [],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The most likely cause of the failure of the poppet valve to seat was scale buildup of roughly an eight-inch area on the main poppet seat which is indicative of an improper seating surface between the main poppet and seat interface. The internal pilot seat also had a leak of three drops per minute which would have contributed to the high LLRT found during the as-found testing.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "scale buildup causing poor valve seating",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 296-2026-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "296-2026-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:296-2026-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Browns Ferry Unit 3",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000296",
+      "match_key": "Unit:05000296"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "scale buildup causing poor valve seating",
+      "proximate_text": "The most likely cause of the failure of the poppet valve to seat was scale buildup of roughly an eight-inch area on the main poppet seat which is indicative of an improper seating surface between the main poppet and seat interface. The internal pilot seat also had a leak of three drops per minute which would have contributed to the high LLRT found during the as-found testing.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_sb",
+      "display_name": "Main Steam",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SB"
+    },
+    {
+      "id": "c_msiv_c_outbd",
+      "display_name": "'C' Outboard Main Steam Isolation Valve (MSIV)",
+      "properties": {
+        "manufacturer": "Atwood and Morrill Company Inc.",
+        "valve_type": "flow control valve"
+      },
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": "Penetration X-7C",
+      "model": "20851-H-26",
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:ISV|Penetration X-7C"
+    },
+    {
+      "id": "c_msiv_c_inbd",
+      "display_name": "'C' Inboard MSIV",
+      "properties": {
+        "role": "backup; remained operable"
+      },
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:ISV"
+    },
+    {
+      "id": "c_poppet",
+      "display_name": "Main poppet / poppet seat",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:main-poppet-poppet-seat"
+    },
+    {
+      "id": "c_pilot",
+      "display_name": "Internal pilot / pilot seat",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:internal-pilot-pilot-seat"
+    },
+    {
+      "id": "fm_scale",
+      "display_name": "Scale buildup on main poppet seat",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Scale buildup of roughly an eight-inch area on the main poppet seat, indicative of an improper seating surface between the main poppet and seat interface.",
+      "match_key": "FailureMode:scale-buildup-on-main-poppet-seat"
+    },
+    {
+      "id": "fm_poppetseat",
+      "display_name": "Poppet fails to seat correctly against valve surface",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Scaling on the valve caused poor seating of the poppet to valve surface.",
+      "match_key": "FailureMode:poppet-fails-to-seat-correctly-against-valve-surface"
+    },
+    {
+      "id": "fm_pilotleak",
+      "display_name": "Pilot-to-poppet connection leak",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Leak discovered through the pilot to poppet connection; internal pilot seat leaked at three drops per minute, contributing to the high LLRT result.",
+      "match_key": "FailureMode:pilot-to-poppet-connection-leak"
+    },
+    {
+      "id": "cons_llrt",
+      "display_name": "MSIV LLRT exceeded As-Found limit / MSIV inoperable",
+      "properties": {
+        "as_found_limit_scfh": 100,
+        "final_leakage_scfh": 208.65
+      },
+      "type": "Consequence",
+      "start": "2026-02-23",
+      "end": "2026-03-11",
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:msiv-llrt-exceeded-as-found-limit-msiv-inoperable"
+    },
+    {
+      "id": "ca_refurb",
+      "display_name": "Disassemble, refurbish, reassemble, and retest the valve",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:disassemble-refurbish-reassemble-and-retest-the-valve"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_tslco3613",
+      "display_name": "TS LCO 3.6.1.3 Primary Containment Isolation Valves",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ts-lco-3-6-1-3-primary-containment-isolation-valves"
+    },
+    {
+      "id": "rr_tslco3304",
+      "display_name": "TS LCO 3.0.4",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ts-lco-3-0-4"
+    },
+    {
+      "id": "mfr_atwood",
+      "display_name": "Atwood and Morrill Company Inc.",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": null,
+      "match_key": "Manufacturer:atwood-and-morrill-company-inc"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_tslco3613",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_tslco3304",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "c_msiv_c_outbd",
+      "relation": "PART_OF",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "c_poppet",
+      "relation": "PART_OF",
+      "target": "c_msiv_c_outbd",
+      "evidence": null
+    },
+    {
+      "source": "c_pilot",
+      "relation": "PART_OF",
+      "target": "c_msiv_c_outbd",
+      "evidence": null
+    },
+    {
+      "source": "c_msiv_c_outbd",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_atwood",
+      "evidence": null
+    },
+    {
+      "source": "fm_scale",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_scale",
+      "relation": "LEADS_TO",
+      "target": "fm_poppetseat",
+      "evidence": null
+    },
+    {
+      "source": "fm_scale",
+      "relation": "LEADS_TO",
+      "target": "fm_pilotleak",
+      "evidence": null
+    },
+    {
+      "source": "fm_poppetseat",
+      "relation": "LEADS_TO",
+      "target": "cons_llrt",
+      "evidence": null
+    },
+    {
+      "source": "fm_pilotleak",
+      "relation": "LEADS_TO",
+      "target": "cons_llrt",
+      "evidence": null
+    },
+    {
+      "source": "cons_llrt",
+      "relation": "BACKED_UP_BY",
+      "target": "c_msiv_c_inbd",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_refurb",
+      "evidence": null
+    }
+  ],
+  "chain": "scale buildup on main poppet seat [cause TBD] -> poppet fails to seat correctly -> pilot-to-poppet connection leak (in parallel) -> MSIV LLRT exceeds limit / MSIV inoperable [backup: 'C' Inboard MSIV operable]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code not provided in FORM-366 FIELDS (TBD/provisional) despite narrative identifying scale buildup as most likely cause; cause node marked provisional per rule 4. TS 3.0.4 violation noted as basis for prohibited-condition reporting criterion, in addition to LCO 3.6.1.3. No block_13 data provided in source fields. 'C' Inboard MSIV modeled as backup component (stated to remain operable) rather than a System node since it is a specific valve, not a system-level backup."
+}

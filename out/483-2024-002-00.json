@@ -1,0 +1,439 @@
+{
+  "ler_number": "483-2024-002-00",
+  "identity": {
+    "accession_number": "ML24275A213",
+    "docket": "05000483",
+    "plant_name": "Callaway",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2024-07-17",
+    "report_date": "2024-10-01",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Concurrent Inoperability of Control Room Air Conditioning System Train and Opposite Train Emergency Diesel Generator Results in Condition Prohibited by Technical Specifications Limiting ....."
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)",
+      "10 CFR 50.73(a)(2)(v)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "B",
+      "system": "GK",
+      "component": "CMP",
+      "manufacturer": "C008",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "the oil pump drive segments installed in the CRACS units did not undergo a post-manufacturing hardening process, which allowed for an accelerated wear rate when placed in an operating unit",
+    "cause_code": "B",
+    "category": "Design/Manufacturing/Installation",
+    "theme": "un-hardened oil pump drive segment causing accelerated compressor wear",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 483-2024-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "483-2024-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:483-2024-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Callaway Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000483",
+      "match_key": "Unit:05000483"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Manufacturing/Installation (B)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "B",
+      "category": "Design/Manufacturing/Installation",
+      "theme": "un-hardened oil pump drive segment causing accelerated compressor wear",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Design/Manufacturing/Installation"
+    },
+    {
+      "id": "sys_gk",
+      "display_name": "Control Room Air Conditioning System",
+      "properties": {
+        "note": "two independent, redundant trains (A and B)"
+      },
+      "type": "System",
+      "eiis_code": "VI",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:VI"
+    },
+    {
+      "id": "sys_edg",
+      "display_name": "Emergency Diesel Generator",
+      "properties": {
+        "note": "EDG train B out of service for planned maintenance"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:emergency-diesel-generator"
+    },
+    {
+      "id": "sys_crevs",
+      "display_name": "Control Room Emergency Ventilation System (CREVS)",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "VI",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:VI"
+    },
+    {
+      "id": "c_compA",
+      "display_name": "CRACS Train A Compressor",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "CMP",
+      "identifier": "Train A",
+      "model": null,
+      "manufacturer_code": "C008",
+      "inferred_code": false,
+      "match_key": "Component:CMP|Train A"
+    },
+    {
+      "id": "c_compB",
+      "display_name": "CRACS Train B Compressor",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "CMP",
+      "identifier": "Train B",
+      "model": null,
+      "manufacturer_code": "C008",
+      "inferred_code": false,
+      "match_key": "Component:CMP|Train B"
+    },
+    {
+      "id": "c_drivesegA",
+      "display_name": "Oil Pump Drive Segment (Train A Compressor)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:oil-pump-drive-segment-train-a-compressor"
+    },
+    {
+      "id": "fm_hardening",
+      "display_name": "Oil pump drive segment lacked post-manufacturing hardening process",
+      "properties": {},
+      "type": "FailureMode",
+      "description": null,
+      "match_key": "FailureMode:oil-pump-drive-segment-lacked-post-manufacturing-hardening-process"
+    },
+    {
+      "id": "fm_wear",
+      "display_name": "Accelerated wear of oil pump drive segment in Train A compressor",
+      "properties": {},
+      "type": "FailureMode",
+      "description": null,
+      "match_key": "FailureMode:accelerated-wear-of-oil-pump-drive-segment-in-train-a-compressor"
+    },
+    {
+      "id": "fm_cracsA_inop",
+      "display_name": "CRACS Train A determined incapable of 30-day mission time (inoperable, retroactive) as of June 29, 2024",
+      "properties": {},
+      "type": "FailureMode",
+      "description": null,
+      "match_key": "FailureMode:cracs-train-a-determined-incapable-of-30-day-mission-time-inoperable-retroactive-as-of-june-29-2024"
+    },
+    {
+      "id": "fm_edgB_outage",
+      "display_name": "EDG Train B out of service for planned maintenance",
+      "properties": {},
+      "type": "FailureMode",
+      "description": null,
+      "match_key": "FailureMode:edg-train-b-out-of-service-for-planned-maintenance"
+    },
+    {
+      "id": "fm_cracsB_declared_inop",
+      "display_name": "CRACS Train B required to be declared inoperable per TS LCO 3.8.1 Required Action B.2",
+      "properties": {},
+      "type": "FailureMode",
+      "description": null,
+      "match_key": "FailureMode:cracs-train-b-required-to-be-declared-inoperable-per-ts-lco-3-8-1-required-action-b-2"
+    },
+    {
+      "id": "cons_bothinop",
+      "display_name": "Both CRACS trains concurrently inoperable, condition prohibited by TS (LCO 3.0.3/3.8.1 shutdown requirements not met)",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2024-07-09T03:30",
+      "end": "2024-07-18T16:22",
+      "duration": "~225:52",
+      "tz": null,
+      "match_key": "Consequence:both-cracs-trains-concurrently-inoperable-condition-prohibited-by-ts-lco-3-0-3-3-8-1-shutdown-requirements-not-met"
+    },
+    {
+      "id": "ca_replaceA",
+      "display_name": "Replace oil pump drive segment in CRACS Train A with hardened segment",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-oil-pump-drive-segment-in-cracs-train-a-with-hardened-segment"
+    },
+    {
+      "id": "ca_replaceB",
+      "display_name": "Replace oil pump drive segment in CRACS Train B with hardened segment",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-oil-pump-drive-segment-in-cracs-train-b-with-hardened-segment"
+    },
+    {
+      "id": "ca_replace1EAC_A",
+      "display_name": "Replace oil pump drive segment in Class 1E AC Train A",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-oil-pump-drive-segment-in-class-1e-ac-train-a"
+    },
+    {
+      "id": "ca_replace1EAC_B",
+      "display_name": "Replace oil pump drive segment in Class 1E AC Train B",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-oil-pump-drive-segment-in-class-1e-ac-train-b"
+    },
+    {
+      "id": "mfr_carrier",
+      "display_name": "Carrier",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "C008",
+      "match_key": "Manufacturer:C008"
+    },
+    {
+      "id": "rr_5073i",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_5073v",
+      "display_name": "10 CFR 50.73(a)(2)(v)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v"
+    },
+    {
+      "id": "rr_ts3711",
+      "display_name": "TS LCO 3.7.11 Control Room Air Conditioning System",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-lco-3-7-11-control-room-air-conditioning-system"
+    },
+    {
+      "id": "rr_ts381",
+      "display_name": "TS LCO 3.8.1 AC Sources - Operating",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-lco-3-8-1-ac-sources-operating"
+    },
+    {
+      "id": "prev_ler",
+      "display_name": "Callaway CRACS Train B Oil Pump Drive Segment Failure (May 26, 2024, not reportable)",
+      "properties": {},
+      "type": "LER",
+      "key": "1-2024-XXX",
+      "stub": true,
+      "title": "Inoperability of CRACS train B due to oil pump drive segment failure",
+      "plant": "Callaway Plant",
+      "match_key": "LER:1-2024-XXX"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073i",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073v",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_gk",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_edg",
+      "evidence": null
+    },
+    {
+      "source": "c_compA",
+      "relation": "PART_OF",
+      "target": "sys_gk",
+      "evidence": null
+    },
+    {
+      "source": "c_compB",
+      "relation": "PART_OF",
+      "target": "sys_gk",
+      "evidence": null
+    },
+    {
+      "source": "c_drivesegA",
+      "relation": "PART_OF",
+      "target": "c_compA",
+      "evidence": null
+    },
+    {
+      "source": "fm_hardening",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_hardening",
+      "relation": "LEADS_TO",
+      "target": "fm_wear",
+      "evidence": null
+    },
+    {
+      "source": "fm_wear",
+      "relation": "LEADS_TO",
+      "target": "fm_cracsA_inop",
+      "evidence": null
+    },
+    {
+      "source": "fm_edgB_outage",
+      "relation": "LEADS_TO",
+      "target": "fm_cracsB_declared_inop",
+      "evidence": null
+    },
+    {
+      "source": "fm_cracsA_inop",
+      "relation": "LEADS_TO",
+      "target": "cons_bothinop",
+      "evidence": null
+    },
+    {
+      "source": "fm_cracsB_declared_inop",
+      "relation": "LEADS_TO",
+      "target": "cons_bothinop",
+      "evidence": null
+    },
+    {
+      "source": "c_compA",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_carrier",
+      "evidence": null
+    },
+    {
+      "source": "c_compB",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_carrier",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replaceA",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replaceB",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace1EAC_A",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace1EAC_B",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts3711",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts381",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "prev_ler",
+      "evidence": null
+    }
+  ],
+  "chain": "un-hardened oil pump drive segment [cause B] -> accelerated wear of Train A compressor drive segment -> CRACS Train A retroactively determined incapable of 30-day mission (since June 29, 2024) [concurrent: EDG Train B planned maintenance outage -> CRACS Train B declared inoperable per TS 3.8.1 Required Action B.2] -> both CRACS trains concurrently inoperable, TS shutdown requirements not met (07/09 0330 - 07/18 1622) [no actual safety impact; offsite power remained available to CRACS Train B]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Two parallel failure paths converge on the same consequence: (1) a material/hardening defect causing wear-driven loss of CRACS Train A's 30-day mission capability, discovered retroactively via engineering review after a parts-issue notice from Carrier; (2) planned EDG Train B maintenance triggering TS 3.8.1 Required Action B.2, which required CRACS Train B (support-system relationship) to also be declared inoperable, even though it remained physically capable (offsite power available). The event was reported under 50.73(a)(2)(i)(B) for the prohibited-condition/LCO 3.0.3 violation; NUREG-1022 guidance cited to explain why 50.73(a)(2)(v) does NOT apply (single-failure-assumption carve-out), but the field code lists both criteria, so both are recorded as REPORTED_UNDER per the authoritative FORM-366 field. Previous similar event (May 26, 2024 CRACS Train B failure) is described only narratively without a formal LER number, so a stub LER node uses a placeholder key; downstream resolver should treat with caution given no true LER number was stated in text (only a date-described event). System GK/CMP/C008 codes taken verbatim from block 13; EIIS bracket code for CRACS/CREVS in text reads '[EIIS:VI]' (interpreted as VI, though may be a scanning artifact of 'VI' due to OCR — copied literally as given)."
+}

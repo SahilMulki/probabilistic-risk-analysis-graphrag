@@ -1,0 +1,314 @@
+{
+  "ler_number": "336-2023-001-00",
+  "identity": {
+    "accession_number": "ML23188A132",
+    "docket": "05000336",
+    "plant_name": "Millstone",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2023-05-09",
+    "report_date": "2023-07-07",
+    "operating_mode": "6",
+    "power_level": null,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Structural Integrity Of \"A\" Train Service Water Header Piping Could Not Be Demonstrated Causing The Unit To Operate In A Condition Prohibited By Technical Specifications"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The cause of degradation was internal liner failure which allowed seawater to come in contact with ductile cast iron piping and led to corrosion. Additionally, previous internal inspections on this piping did not identify this potential failure mode.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "internal liner failure leading to seawater-induced corrosion of ductile cast iron piping, undetected by prior inspections",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 336-2023-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "336-2023-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:336-2023-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Millstone Unit 2",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000336",
+      "match_key": "Unit:05000336"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "internal liner failure leading to seawater-induced corrosion of ductile cast iron piping, undetected by prior inspections",
+      "proximate_text": "The cause of degradation was internal liner failure which allowed seawater to come in contact with ductile cast iron piping and led to corrosion. Additionally, previous internal inspections on this piping did not identify this potential failure mode.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_bi",
+      "display_name": "Essential Service Water System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BI",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "Train A degraded; Train B available",
+      "match_key": "System:BI"
+    },
+    {
+      "id": "sys_bi_b",
+      "display_name": "Essential Service Water System - Train B",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BI",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; operable train",
+      "match_key": "System:BI"
+    },
+    {
+      "id": "c_pipe",
+      "display_name": "24\"-KE-1 Ductile Cast-Iron Service Water Header Piping (Train A)",
+      "properties": {
+        "location": "adjacent to gland ring at bell and spigot joint"
+      },
+      "type": "Component",
+      "eiis_code": "PSP",
+      "identifier": "24\"-KE-1",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:PSP|24\"-KE-1"
+    },
+    {
+      "id": "c_liner",
+      "display_name": "Internal pipe liner",
+      "properties": {
+        "note": "internal liner intended to prevent contact between seawater and cast iron; also masked external leakage"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:internal-pipe-liner"
+    },
+    {
+      "id": "fm_liner_fail",
+      "display_name": "Internal liner failure",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Internal liner in the Train A service water header piping failed, allowing seawater to contact the ductile cast iron pipe wall.",
+      "match_key": "FailureMode:internal-liner-failure"
+    },
+    {
+      "id": "fm_corrosion",
+      "display_name": "Corrosion of ductile cast iron piping",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Seawater contact with exposed cast iron led to corrosion developing over time.",
+      "match_key": "FailureMode:corrosion-of-ductile-cast-iron-piping"
+    },
+    {
+      "id": "fm_throughwall",
+      "display_name": "Through-wall piping flaw develops",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Corrosion progressed to a through-wall flaw (~6 dpm leak) in the 24\"-KE-1 piping, masked externally by the liner.",
+      "match_key": "FailureMode:through-wall-piping-flaw-develops"
+    },
+    {
+      "id": "fm_inspect_miss",
+      "display_name": "Previous internal inspections failed to detect liner/piping degradation",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Previous internal inspections on this piping did not identify this potential failure mode, allowing the degradation to go undetected across the operating cycle.",
+      "match_key": "FailureMode:previous-internal-inspections-failed-to-detect-liner-piping-degradation"
+    },
+    {
+      "id": "cons_structural",
+      "display_name": "Structural integrity of 'A' Train Service Water header piping could not be demonstrated; unit operated in a condition prohibited by Technical Specifications",
+      "properties": {
+        "note": "Loss of structural integrity existed longer than the 72-hour TS allowed outage time; no actual leakage/safety consequence occurred; low potential safety significance"
+      },
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:structural-integrity-of-a-train-service-water-header-piping-could-not-be-demonstrated-unit-operated-in-a-condition-prohibited-by-technical-specifications"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace degraded portion of piping",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-degraded-portion-of-piping"
+    },
+    {
+      "id": "ca_eval",
+      "display_name": "Evaluate identification and remediation methods for this class of lined piping",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:evaluate-identification-and-remediation-methods-for-this-class-of-lined-piping"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts3741",
+      "display_name": "Technical Specification 3.7.4.1 (Service Water Loops OPERABLE)",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:technical-specification-3-7-4-1-service-water-loops-operable"
+    },
+    {
+      "id": "rr_trm3410",
+      "display_name": "Technical Requirement Manual (TRM) 3.4.10 (Structural Integrity)",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:technical-requirement-manual-trm-3-4-10-structural-integrity"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts3741",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_trm3410",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bi",
+      "evidence": null
+    },
+    {
+      "source": "c_pipe",
+      "relation": "PART_OF",
+      "target": "sys_bi",
+      "evidence": null
+    },
+    {
+      "source": "c_liner",
+      "relation": "PART_OF",
+      "target": "c_pipe",
+      "evidence": null
+    },
+    {
+      "source": "fm_liner_fail",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_liner_fail",
+      "relation": "LEADS_TO",
+      "target": "fm_corrosion",
+      "evidence": null
+    },
+    {
+      "source": "fm_corrosion",
+      "relation": "LEADS_TO",
+      "target": "fm_throughwall",
+      "evidence": null
+    },
+    {
+      "source": "fm_inspect_miss",
+      "relation": "LEADS_TO",
+      "target": "fm_throughwall",
+      "evidence": null
+    },
+    {
+      "source": "fm_throughwall",
+      "relation": "LEADS_TO",
+      "target": "cons_structural",
+      "evidence": null
+    },
+    {
+      "source": "cons_structural",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_bi_b",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_eval",
+      "evidence": null
+    }
+  ],
+  "chain": "internal liner failure [cause TBD] -> seawater contacts cast iron -> corrosion develops over operating cycle -> through-wall flaw (masked by liner; undetected by prior inspections) -> structural integrity of 'A' Train Service Water header piping cannot be demonstrated / TS-prohibited operating condition [backup: 'B' Train Service Water available]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause_code and category are TBD/provisional per FORM-366 fields; block_13 has no explicit cause/system/component/manufacturer/reportable rows in source, so a single row was synthesized from the EIIS codes listed in the narrative (BI, PSP) with cause/manufacturer/reportable left null. No previous similar occurrence LER is cited (narrative explicitly states none in the last 3 years), so no stub LER/SIMILAR_TO edge was created. Liner failure and inadequate inspection are modeled as two distinct contributing failure modes both leading to the through-wall flaw, per the narrative's two-part cause statement."
+}

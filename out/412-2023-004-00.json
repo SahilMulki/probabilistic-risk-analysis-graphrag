@@ -1,0 +1,436 @@
+{
+  "ler_number": "412-2023-004-00",
+  "identity": {
+    "accession_number": "ML23251A141",
+    "docket": "05000412",
+    "plant_name": "Beaver Valley",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2023-07-12",
+    "report_date": "2023-09-08",
+    "operating_mode": "3",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Beaver Valley Power Station, Unit No. 2 Docket No. 50-412, License No. NPF-73 LER 2023-004-00"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)",
+      "10 CFR 50.73(a)(2)(v)(A)",
+      "10 CFR 50.73(a)(2)(v)(D)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The most likely direct cause of the event is the loose packing nut on the fuel injection line to the No. 11 cylinder. The contributing cause is there are no preventative maintenance instructions for the injector high pressure fuel oil lines that would identify an unrecognized loose packing nut.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "loose fuel injector packing nut / missing PM instructions",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 412-2023-004-00",
+      "properties": {},
+      "type": "LER",
+      "key": "412-2023-004-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:412-2023-004-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Beaver Valley Unit 2",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000412",
+      "match_key": "Unit:05000412"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "loose fuel injector packing nut / missing PM instructions",
+      "proximate_text": "The most likely direct cause of the event is the loose packing nut on the fuel injection line to the No. 11 cylinder. The contributing cause is there are no preventative maintenance instructions for the injector high pressure fuel oil lines that would identify an unrecognized loose packing nut.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_ek",
+      "display_name": "Emergency Diesel Generator",
+      "properties": {
+        "note": "Train A and Train B EDGs power respective emergency buses"
+      },
+      "type": "System",
+      "eiis_code": "EK",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:EK"
+    },
+    {
+      "id": "sys_la",
+      "display_name": "Lube Oil System",
+      "properties": {
+        "note": "includes Rocker Arm LO System"
+      },
+      "type": "System",
+      "eiis_code": "LA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:LA"
+    },
+    {
+      "id": "sys_dc",
+      "display_name": "Fuel Oil System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "DC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:DC"
+    },
+    {
+      "id": "c_22edg",
+      "display_name": "2-2 EDG",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "EK",
+      "identifier": "2-2",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:EK|2-2"
+    },
+    {
+      "id": "c_21edg",
+      "display_name": "2-1 EDG",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "EK",
+      "identifier": "2-1",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:EK|2-1"
+    },
+    {
+      "id": "c_rockerlo",
+      "display_name": "Rocker Arm LO Reservoir",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:rocker-arm-lo-reservoir"
+    },
+    {
+      "id": "c_packingnut",
+      "display_name": "Fuel injection line packing nut, cylinder No. 11",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "cylinder No. 11",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:fuel-injection-line-packing-nut-cylinder-no-11"
+    },
+    {
+      "id": "fm_loosenut",
+      "display_name": "Packing nut on cylinder No. 11 fuel injection line found loose",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Loose packing nut allowed fuel oil leakage into the Rocker Arm LO System",
+      "match_key": "FailureMode:packing-nut-on-cylinder-no-11-fuel-injection-line-found-loose"
+    },
+    {
+      "id": "fm_fueldilution",
+      "display_name": "Fuel oil leakage contaminated Rocker Arm LO System",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Fuel oil intrusion diluted lube oil, degrading required viscosity above 6.17% contamination threshold",
+      "match_key": "FailureMode:fuel-oil-leakage-contaminated-rocker-arm-lo-system"
+    },
+    {
+      "id": "fm_edginop",
+      "display_name": "2-2 EDG unable to meet 30-day mission time",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Calculated leak rate of 0.082%/hour meant EDG could not sustain required mission time before exceeding dilution limit",
+      "match_key": "FailureMode:2-2-edg-unable-to-meet-30-day-mission-time"
+    },
+    {
+      "id": "cons_edginop",
+      "display_name": "2-2 EDG declared Inoperable",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2023-04-10",
+      "end": "2023-07-15T06:15",
+      "duration": "approximately 3 months",
+      "tz": null,
+      "match_key": "Consequence:2-2-edg-declared-inoperable"
+    },
+    {
+      "id": "cons_lossoffunction",
+      "display_name": "Concurrent Inoperability of both EDGs (2-1 and 2-2) during Mode 6, loss of AC source safety function",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2023-04-24",
+      "end": "2023-05-04",
+      "duration": "approximately 10 days",
+      "tz": null,
+      "match_key": "Consequence:concurrent-inoperability-of-both-edgs-2-1-and-2-2-during-mode-6-loss-of-ac-source-safety-function"
+    },
+    {
+      "id": "ca_tighten",
+      "display_name": "Tighten packing nut on No. 11 cylinder fuel injection line",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:tighten-packing-nut-on-no-11-cylinder-fuel-injection-line"
+    },
+    {
+      "id": "ca_compensatory",
+      "display_name": "Implement compensatory measures to maintain Rocker Arm LO viscosity",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:implement-compensatory-measures-to-maintain-rocker-arm-lo-viscosity"
+    },
+    {
+      "id": "ca_permrepair",
+      "display_name": "Perform permanent repair if leakage increases beyond 0.11%/hour",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:perform-permanent-repair-if-leakage-increases-beyond-0-11-hour"
+    },
+    {
+      "id": "ca_procrevise",
+      "display_name": "Revise maintenance procedures to check tightness of fuel oil packing nuts",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-maintenance-procedures-to-check-tightness-of-fuel-oil-packing-nuts"
+    },
+    {
+      "id": "ca_orings",
+      "display_name": "Replace high-pressure fuel oil line O-rings and packing on 2-1 and 2-2 EDGs",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-high-pressure-fuel-oil-line-o-rings-and-packing-on-2-1-and-2-2-edgs"
+    },
+    {
+      "id": "rr_5073i",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_5073va",
+      "display_name": "10 CFR 50.73(a)(2)(v)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-a"
+    },
+    {
+      "id": "rr_5073vd",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "rr_ts381",
+      "display_name": "Technical Specification LCO 3.8.1, AC Sources – Operating",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-lco-3-8-1-ac-sources-operating"
+    },
+    {
+      "id": "rr_ts382",
+      "display_name": "Technical Specification LCO 3.8.2, AC Sources – Shutdown",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-lco-3-8-2-ac-sources-shutdown"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "LER 2022-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "2022-001-00",
+      "stub": true,
+      "title": "Condition Prohibited by Technical Specifications and Loss of Safety Function - 2-2 EDG LO degraded viscosity due to fuel oil intrusion",
+      "plant": "Beaver Valley Power Station Unit 2",
+      "match_key": "LER:2022-001-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073i",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073va",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073vd",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ek",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_la",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_dc",
+      "evidence": null
+    },
+    {
+      "source": "c_22edg",
+      "relation": "PART_OF",
+      "target": "sys_ek",
+      "evidence": null
+    },
+    {
+      "source": "c_21edg",
+      "relation": "PART_OF",
+      "target": "sys_ek",
+      "evidence": null
+    },
+    {
+      "source": "c_rockerlo",
+      "relation": "PART_OF",
+      "target": "sys_la",
+      "evidence": null
+    },
+    {
+      "source": "fm_loosenut",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_loosenut",
+      "relation": "LEADS_TO",
+      "target": "fm_fueldilution",
+      "evidence": null
+    },
+    {
+      "source": "fm_fueldilution",
+      "relation": "LEADS_TO",
+      "target": "fm_edginop",
+      "evidence": null
+    },
+    {
+      "source": "fm_edginop",
+      "relation": "LEADS_TO",
+      "target": "cons_edginop",
+      "evidence": null
+    },
+    {
+      "source": "cons_edginop",
+      "relation": "LEADS_TO",
+      "target": "cons_lossoffunction",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_tighten",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_compensatory",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_permrepair",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procrevise",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_orings",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    }
+  ],
+  "chain": "loose packing nut on No. 11 cylinder fuel injection line [cause TBD] -> fuel oil leaks into Rocker Arm LO System -> LO viscosity degrades / dilution approaches 6.17% limit -> 2-2 EDG can't meet 30-day mission time -> 2-2 EDG declared Inoperable (~3 months) -> concurrent 2-1 EDG inoperability in Mode 6 creates loss of safety function window",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code left TBD per FORM-366 fields (block_13 empty, cause_code TBD, category provisional). Narrative identifies direct cause (loose packing nut) and contributing cause (missing PM instructions) but no official cause code letter was provided in the form fields, so cause node is provisional. Rocker Arm LO System is treated as part of the broader Lube Oil System [LA] per narrative description. Previous similar LER 2022-001-00 captured as stub per explicit narrative reference; cause noted as unrelated despite similarity in effect (fuel oil intrusion into LO)."
+}

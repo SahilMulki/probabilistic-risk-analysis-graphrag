@@ -1,0 +1,543 @@
+{
+  "ler_number": "389-2021-001-00",
+  "identity": {
+    "accession_number": "ML21069A341",
+    "docket": "05000389",
+    "plant_name": "Saint Lucie",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2021-01-20",
+    "report_date": "2021-03-10",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2021-001-00 for St. Lucie Unit 2, Automatic Reactor Trip Due to a Breaker Failure on the 2B2 480V Motor Control Center"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "B",
+      "system": "EC",
+      "component": "BKR",
+      "manufacturer": "S345",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "legacy drawings for the undervoltage relay assemblies in the control element drive mechanism control system (CEDMCS) did not conform to St. Lucie Unit 2 train and channel design conventions such that design details including power supply assignments were not clearly defined... The legacy issue from 1983 resulted in inadvertently mis-assigning of power from two of the four undervoltage relays to the incorrect train of power during the rod control system modification in 2019.",
+    "cause_code": "B",
+    "category": "Design/Manufacturing/Installation",
+    "theme": "Legacy drawing/design nonconformance leading to mis-assigned power train",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 389-2021-001-00",
+      "properties": {
+        "match_key": "LER:389-2021-001-00"
+      },
+      "type": "LER",
+      "key": "389-2021-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:389-2021-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Saint Lucie Unit 2",
+      "properties": {
+        "match_key": "Unit:05000389",
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000389",
+      "match_key": "Unit:05000389"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Manufacturing/Installation (B)",
+      "properties": {
+        "match_key": "Cause:Design/Manufacturing/Installation"
+      },
+      "type": "Cause",
+      "cause_code": "B",
+      "category": "Design/Manufacturing/Installation",
+      "theme": "Legacy drawing/design nonconformance leading to mis-assigned power train",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Design/Manufacturing/Installation"
+    },
+    {
+      "id": "sys_ec",
+      "display_name": "480V Motor Control Center",
+      "properties": {
+        "match_key": "System:EC"
+      },
+      "type": "System",
+      "eiis_code": "EC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:EC"
+    },
+    {
+      "id": "sys_dtt",
+      "display_name": "Diverse Turbine Trip",
+      "properties": {
+        "match_key": "System:diverse-turbine-trip"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:diverse-turbine-trip"
+    },
+    {
+      "id": "sys_cedmcs",
+      "display_name": "Control Element Drive Mechanism Control System",
+      "properties": {
+        "match_key": "System:cedmcs"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:control-element-drive-mechanism-control-system"
+    },
+    {
+      "id": "sys_rps",
+      "display_name": "Reactor Protection System",
+      "properties": {
+        "match_key": "System:reactor-protection-system"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "actuated during event",
+      "match_key": "System:reactor-protection-system"
+    },
+    {
+      "id": "sys_ba",
+      "display_name": "Auxiliary Feedwater",
+      "properties": {
+        "match_key": "System:BA"
+      },
+      "type": "System",
+      "eiis_code": "BA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "actuated post-trip",
+      "match_key": "System:BA"
+    },
+    {
+      "id": "sys_sj",
+      "display_name": "Main Feedwater",
+      "properties": {
+        "match_key": "System:SJ"
+      },
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "available throughout event",
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "c_bkr",
+      "display_name": "Feeder Breaker to 480V MCC 2B2 (2-40404)",
+      "properties": {
+        "breaker_sn": "064091040005",
+        "match_key": "Component:BKR|2-40404"
+      },
+      "type": "Component",
+      "eiis_code": "BKR",
+      "identifier": "2-40404",
+      "model": "NT08N1",
+      "manufacturer_code": "S345",
+      "inferred_code": false,
+      "match_key": "Component:BKR|2-40404"
+    },
+    {
+      "id": "c_trip",
+      "display_name": "Micrologic 5.0A Trip Unit",
+      "properties": {
+        "sensor_plug_rating": "400A",
+        "rating_plug_type": "Type A",
+        "match_key": "Component:micrologic-trip-unit"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "0429027",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:micrologic-5-0a-trip-unit"
+    },
+    {
+      "id": "c_uvrelay",
+      "display_name": "Undervoltage relay assemblies (DTT)",
+      "properties": {
+        "match_key": "Component:undervoltage-relay-assemblies"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:undervoltage-relay-assemblies-dtt"
+    },
+    {
+      "id": "c_2amfp_recirc",
+      "display_name": "2A Main Feedwater Pump Recirculation Valve (manually isolated, solenoid failed)",
+      "properties": {
+        "match_key": "Component:2a-mfp-recirc-valve"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:2a-main-feedwater-pump-recirculation-valve-manually-isolated-solenoid-failed"
+    },
+    {
+      "id": "c_2bmfrv",
+      "display_name": "2B Main Feedwater Regulating Valve (seat leakage)",
+      "properties": {
+        "match_key": "Component:2b-mfrv"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:2b-main-feedwater-regulating-valve-seat-leakage"
+    },
+    {
+      "id": "fm_drawing",
+      "display_name": "Legacy drawings not updated to standardized train/channel conventions",
+      "properties": {
+        "match_key": "FailureMode:legacy-drawing-nonconformance"
+      },
+      "type": "FailureMode",
+      "description": "1983 design change did not update drawings to clearly define power supply assignments for undervoltage relay assemblies",
+      "match_key": "FailureMode:legacy-drawings-not-updated-to-standardized-train-channel-conventions"
+    },
+    {
+      "id": "fm_misassign",
+      "display_name": "Two of four undervoltage relays mis-assigned to incorrect power train",
+      "properties": {
+        "match_key": "FailureMode:uv-relay-misassignment"
+      },
+      "type": "FailureMode",
+      "description": "During 2019 rod control system modification, two undervoltage relays were inadvertently assigned to the incorrect train of power due to unclear legacy drawings",
+      "match_key": "FailureMode:two-of-four-undervoltage-relays-mis-assigned-to-incorrect-power-train"
+    },
+    {
+      "id": "fm_bkrfail",
+      "display_name": "480V breaker (2-40404) failure due to micrologic trip device defect",
+      "properties": {
+        "match_key": "FailureMode:breaker-trip-device-defect"
+      },
+      "type": "FailureMode",
+      "description": "Forensic analysis determined the failure of the 480V non-safety-related breaker was due to a micrologic trip device defect",
+      "match_key": "FailureMode:480v-breaker-2-40404-failure-due-to-micrologic-trip-device-defect"
+    },
+    {
+      "id": "fm_mccdeenerg",
+      "display_name": "MCC 2B2 unexpectedly deenergized",
+      "properties": {
+        "match_key": "FailureMode:mcc-deenergized"
+      },
+      "type": "FailureMode",
+      "description": "Breaker failure caused unexpected deenergization of 480V MCC 2B2",
+      "match_key": "FailureMode:mcc-2b2-unexpectedly-deenergized"
+    },
+    {
+      "id": "fm_uvtrip",
+      "display_name": "Two of four DTT undervoltage relays deenergized to failed condition",
+      "properties": {
+        "match_key": "FailureMode:dtt-uv-relays-deenergized"
+      },
+      "type": "FailureMode",
+      "description": "Deenergization created an unexpected trip path for actuation via the DTT undervoltage relays that were mis-assigned to that power train",
+      "match_key": "FailureMode:two-of-four-dtt-undervoltage-relays-deenergized-to-failed-condition"
+    },
+    {
+      "id": "cons_trip",
+      "display_name": "Automatic reactor trip on RPS Loss of Load actuation",
+      "properties": {
+        "match_key": "Consequence:automatic-reactor-trip"
+      },
+      "type": "Consequence",
+      "start": "2021-01-20T18:22",
+      "end": null,
+      "duration": null,
+      "tz": "EST",
+      "match_key": "Consequence:automatic-reactor-trip-on-rps-loss-of-load-actuation"
+    },
+    {
+      "id": "cons_afas",
+      "display_name": "Automatic AFAS-1 actuation on low 2A steam generator level",
+      "properties": {
+        "match_key": "Consequence:afas-actuation"
+      },
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:automatic-afas-1-actuation-on-low-2a-steam-generator-level"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace failed breaker",
+      "properties": {
+        "match_key": "CorrectiveAction:replace-failed-breaker"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-failed-breaker"
+    },
+    {
+      "id": "ca_correctfield",
+      "display_name": "Correct field configuration of DTT relay power supplies",
+      "properties": {
+        "match_key": "CorrectiveAction:correct-dtt-power-supply-configuration"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:correct-field-configuration-of-dtt-relay-power-supplies"
+    },
+    {
+      "id": "ca_drawings",
+      "display_name": "Improve CEDMCS drawings to clearly define UV relay assembly power supply assignments",
+      "properties": {
+        "match_key": "CorrectiveAction:improve-cedmcs-drawings"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:improve-cedmcs-drawings-to-clearly-define-uv-relay-assembly-power-supply-assignments"
+    },
+    {
+      "id": "mfr_schneider",
+      "display_name": "Schneider Electric (Square D / NLI)",
+      "properties": {
+        "match_key": "Manufacturer:S345"
+      },
+      "type": "Manufacturer",
+      "code": "S345",
+      "match_key": "Manufacturer:S345"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {
+        "type": "reporting-criterion",
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_ufsar73",
+      "display_name": "UFSAR Table 7.3-12",
+      "properties": {
+        "type": "analysis-basis",
+        "match_key": "RegulatoryReference:ufsar-table-7-3-12"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ufsar-table-7-3-12"
+    },
+    {
+      "id": "ler_stub_1987",
+      "display_name": "LER 389-1987-004-00",
+      "properties": {
+        "match_key": "LER:389-1987-004"
+      },
+      "type": "LER",
+      "key": "389-1987-004-00",
+      "stub": true,
+      "title": "Personnel Error Causes Loss of Load Center Resulting in a Reactor Trip",
+      "plant": "St. Lucie Unit 2",
+      "match_key": "LER:389-1987-004-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ec",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_dtt",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_cedmcs",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rps",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ba",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sj",
+      "evidence": null
+    },
+    {
+      "source": "c_bkr",
+      "relation": "PART_OF",
+      "target": "sys_ec",
+      "evidence": null
+    },
+    {
+      "source": "c_trip",
+      "relation": "PART_OF",
+      "target": "c_bkr",
+      "evidence": null
+    },
+    {
+      "source": "c_uvrelay",
+      "relation": "PART_OF",
+      "target": "sys_dtt",
+      "evidence": null
+    },
+    {
+      "source": "c_bkr",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_schneider",
+      "evidence": null
+    },
+    {
+      "source": "fm_drawing",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_drawing",
+      "relation": "LEADS_TO",
+      "target": "fm_misassign",
+      "evidence": null
+    },
+    {
+      "source": "fm_misassign",
+      "relation": "LEADS_TO",
+      "target": "fm_uvtrip",
+      "evidence": null
+    },
+    {
+      "source": "fm_bkrfail",
+      "relation": "LEADS_TO",
+      "target": "fm_mccdeenerg",
+      "evidence": null
+    },
+    {
+      "source": "fm_mccdeenerg",
+      "relation": "LEADS_TO",
+      "target": "fm_uvtrip",
+      "evidence": null
+    },
+    {
+      "source": "fm_uvtrip",
+      "relation": "LEADS_TO",
+      "target": "cons_trip",
+      "evidence": null
+    },
+    {
+      "source": "cons_trip",
+      "relation": "LEADS_TO",
+      "target": "cons_afas",
+      "evidence": null
+    },
+    {
+      "source": "cons_afas",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_sj",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_correctfield",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_drawings",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_stub_1987",
+      "evidence": null
+    }
+  ],
+  "chain": "legacy drawing nonconformance (1983) [cause B] -> UV relay power train mis-assigned (2019 mod) -> [in parallel: 480V breaker micrologic trip defect -> MCC 2B2 deenergized] -> both converge -> two DTT undervoltage relays deenergize to failed condition -> unexpected trip path -> automatic reactor trip on RPS Loss of Load -> AFAS-1 actuation on low SG level [backup: main feedwater available throughout]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Two independent failure origins converge on the same downstream failure mode (fm_uvtrip): the legacy drawing/mis-assignment chain (root cause, code B) and the physically separate breaker micrologic trip-device defect (proximate hardware failure causing MCC deenergization). Both are necessary conditions for the unexpected trip path per the narrative ('breaker failure caused two of the four undervoltage relays...to deenergize...creating an unexpected trip path'), so fm_bkrfail/fm_mccdeenerg and fm_misassign both LEADS_TO fm_uvtrip. Only fm_drawing (origin of the officially coded root cause) has a CAUSED_BY edge to the Cause node per rule 5. 2A MFW pump trip on low flow (due to manually isolated recirc valve) and 2B MFRV seat leakage are described as contributing to the safety-significance discussion of AFAS timing, but are secondary design-context/analysis details, not part of the main causal chain to the trip itself; modeled as components only, not chained. Auxiliary feedwater (BA) is modeled as an actuated system per event description, not as a stated BACKED_UP_BY target since it itself actuated (is part of the consequence chain), whereas main feedwater (SJ) explicitly 'was always immediately available throughout this event' -> backup edge."
+}

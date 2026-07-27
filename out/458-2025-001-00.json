@@ -1,0 +1,396 @@
+{
+  "ler_number": "458-2025-001-00",
+  "identity": {
+    "accession_number": "ML25156A246",
+    "docket": "05000458",
+    "plant_name": "River Bend",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2025-04-08",
+    "report_date": "2025-06-05",
+    "operating_mode": "1",
+    "power_level": 81,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Licensee Event Report, 50-458/2025-001-00, Human Performance Error Results in Manual Reactor Trip"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)",
+      "10 CFR 50.73(a)(2)(iv)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The direct cause of a loss of normal service water was the result of non-licensed operators failing to close SWP-V3302 (SWP-MOV55A block valve) prior to post maintenance testing. During post maintenance testing, maintenance personnel requested Operations to open SWP-MOV55A, Standby Cooling Tower Division 1 Return Isolation Valve, as the valve opened all normal service water pumps received a low-pressure lockout condition due to an open flow path to the Standby Cooling Tower.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Human performance error during equipment protection tagout / pre-job brief inadequacy",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 50-458/2025-001-00",
+      "properties": {
+        "match_key": "LER:50-458/2025-001-00"
+      },
+      "type": "LER",
+      "key": "458-2025-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:458-2025-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "River Bend Unit 1",
+      "properties": {
+        "match_key": "Unit:05000458",
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000458",
+      "match_key": "Unit:05000458"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {
+        "match_key": "Cause:provisional"
+      },
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Human performance error during equipment protection tagout / pre-job brief inadequacy",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_bl",
+      "display_name": "Normal Service Water",
+      "properties": {
+        "match_key": "System:BI"
+      },
+      "type": "System",
+      "eiis_code": "BI",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected system",
+      "match_key": "System:BI"
+    },
+    {
+      "id": "sys_swsw",
+      "display_name": "Standby Service Water",
+      "properties": {
+        "match_key": "System:standby-service-water"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "backup; initiated as expected",
+      "match_key": "System:standby-service-water"
+    },
+    {
+      "id": "c_swpv3302",
+      "display_name": "SWP-V3302 (SWP-MOV55A block valve)",
+      "properties": {
+        "match_key": "Component:SHV|SWP-V3302"
+      },
+      "type": "Component",
+      "eiis_code": "SHV",
+      "identifier": "SWP-V3302",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:SHV|SWP-V3302"
+    },
+    {
+      "id": "c_mov55a",
+      "display_name": "SWP-MOV55A, Standby Cooling Tower Division 1 Return Isolation Valve",
+      "properties": {
+        "match_key": "Component:ISV|SWP-MOV55A"
+      },
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": "SWP-MOV55A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:ISV|SWP-MOV55A"
+    },
+    {
+      "id": "c_swpumps",
+      "display_name": "Normal Service Water Pumps",
+      "properties": {
+        "match_key": "Component:P|normal-service-water-pumps"
+      },
+      "type": "Component",
+      "eiis_code": "P",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:P"
+    },
+    {
+      "id": "fm_blockvalve_notclosed",
+      "display_name": "Non-licensed operators failed to close SWP-V3302 block valve prior to post maintenance testing",
+      "properties": {
+        "match_key": "FailureMode:block-valve-not-closed"
+      },
+      "type": "FailureMode",
+      "description": "Human performance error / inadequate tagout verification practices",
+      "match_key": "FailureMode:non-licensed-operators-failed-to-close-swp-v3302-block-valve-prior-to-post-maintenance-testing"
+    },
+    {
+      "id": "fm_openflowpath",
+      "display_name": "SWP-MOV55A opened creating flow path to Standby Cooling Tower",
+      "properties": {
+        "match_key": "FailureMode:open-flow-path-standby-cooling-tower"
+      },
+      "type": "FailureMode",
+      "description": "Valve opened per maintenance request while block valve was open, creating unintended flow path",
+      "match_key": "FailureMode:swp-mov55a-opened-creating-flow-path-to-standby-cooling-tower"
+    },
+    {
+      "id": "fm_lowpressurelockout",
+      "display_name": "Normal service water pumps low-pressure lockout",
+      "properties": {
+        "match_key": "FailureMode:low-pressure-lockout"
+      },
+      "type": "FailureMode",
+      "description": "All normal service water pumps received low-pressure lockout condition",
+      "match_key": "FailureMode:normal-service-water-pumps-low-pressure-lockout"
+    },
+    {
+      "id": "fm_lossofsw",
+      "display_name": "Total loss of normal service water",
+      "properties": {
+        "match_key": "FailureMode:loss-of-normal-service-water"
+      },
+      "type": "FailureMode",
+      "description": null,
+      "match_key": "FailureMode:total-loss-of-normal-service-water"
+    },
+    {
+      "id": "cons_trip",
+      "display_name": "Manual reactor trip / uncomplicated reactor trip response",
+      "properties": {
+        "match_key": "Consequence:manual-reactor-trip"
+      },
+      "type": "Consequence",
+      "start": "2025-04-08T16:07",
+      "end": null,
+      "duration": null,
+      "tz": "CDT",
+      "match_key": "Consequence:manual-reactor-trip-uncomplicated-reactor-trip-response"
+    },
+    {
+      "id": "cons_swrestored",
+      "display_name": "Normal service water restored",
+      "properties": {
+        "match_key": "Consequence:normal-service-water-restored"
+      },
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": "37 minutes",
+      "tz": null,
+      "match_key": "Consequence:normal-service-water-restored"
+    },
+    {
+      "id": "ca_perfmgmt",
+      "display_name": "Performance management actions taken with operators involved",
+      "properties": {
+        "match_key": "CorrectiveAction:performance-management-actions"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:performance-management-actions-taken-with-operators-involved"
+    },
+    {
+      "id": "ca_blitz",
+      "display_name": "Operations Shift Managers perform standards reset blitz",
+      "properties": {
+        "match_key": "CorrectiveAction:standards-reset-blitz"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:operations-shift-managers-perform-standards-reset-blitz"
+    },
+    {
+      "id": "ca_simverify",
+      "display_name": "Create and implement verification challenge activity utilizing simulator for non-licensed individuals",
+      "properties": {
+        "match_key": "CorrectiveAction:sim-verification-challenge"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:create-and-implement-verification-challenge-activity-utilizing-simulator-for-non-licensed-individuals"
+    },
+    {
+      "id": "ca_srostandards",
+      "display_name": "Operations Management standards reset with SROs on quizzing during reverse briefs/pre-job briefs",
+      "properties": {
+        "match_key": "CorrectiveAction:sro-standards-reset-quizzing"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:operations-management-standards-reset-with-sros-on-quizzing-during-reverse-briefs-pre-job-briefs"
+    },
+    {
+      "id": "rr_5073_iv_a",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {
+        "type": "reporting-criterion",
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5073_iv_b",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(B)",
+      "properties": {
+        "type": "reporting-criterion",
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-b"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-b"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_iv_a",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_iv_b",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bl",
+      "evidence": null
+    },
+    {
+      "source": "c_swpv3302",
+      "relation": "PART_OF",
+      "target": "sys_bl",
+      "evidence": null
+    },
+    {
+      "source": "c_mov55a",
+      "relation": "PART_OF",
+      "target": "sys_bl",
+      "evidence": null
+    },
+    {
+      "source": "c_swpumps",
+      "relation": "PART_OF",
+      "target": "sys_bl",
+      "evidence": null
+    },
+    {
+      "source": "fm_blockvalve_notclosed",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_blockvalve_notclosed",
+      "relation": "LEADS_TO",
+      "target": "fm_openflowpath",
+      "evidence": null
+    },
+    {
+      "source": "fm_openflowpath",
+      "relation": "LEADS_TO",
+      "target": "fm_lowpressurelockout",
+      "evidence": null
+    },
+    {
+      "source": "fm_lowpressurelockout",
+      "relation": "LEADS_TO",
+      "target": "fm_lossofsw",
+      "evidence": null
+    },
+    {
+      "source": "fm_lossofsw",
+      "relation": "LEADS_TO",
+      "target": "cons_trip",
+      "evidence": null
+    },
+    {
+      "source": "cons_trip",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_swsw",
+      "evidence": null
+    },
+    {
+      "source": "fm_lossofsw",
+      "relation": "LEADS_TO",
+      "target": "cons_swrestored",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_perfmgmt",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_blitz",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_simverify",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_srostandards",
+      "evidence": null
+    }
+  ],
+  "chain": "non-licensed operators failed to close SWP-V3302 block valve before post-maintenance testing -> SWP-MOV55A opened creating flow path to Standby Cooling Tower -> normal service water pumps low-pressure lockout -> total loss of normal service water -> manual reactor trip [backup Standby Service Water initiated; normal service water restored in 37 min]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code left TBD per FORM-366 (not provided); narrative attributes event to human performance/tagout verification failure and inadequate pre-job brief, captured in theme. EIIS code rendered as 'Bl' in source text but interpreted as 'BI' (Normal Service Water system bracket code) per standard EIIS nomenclature; left as given surface form where ambiguous. Previous Occurrences section in narrative is truncated/garbled ('trip.') with no LER number or plant/unit given, so no stub LER node was created per rule 9 (insufficient citation to populate required fields). Standby Cooling Tower mentioned only as flow-path destination, not modeled as a System node since it is not itself involved as an actor beyond causing the lockout condition already captured via failure-mode chain."
+}

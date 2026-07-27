@@ -1,0 +1,369 @@
+{
+  "ler_number": "440-2021-002-00",
+  "identity": {
+    "accession_number": "ML21216A344",
+    "docket": "05000440",
+    "plant_name": "Perry",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2021-06-17",
+    "report_date": "2021-08-04",
+    "operating_mode": null,
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Perry Nuclear Power Plant"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The issues raised in SC 21-04 are a direct result of the follow-on investigation actions resulting from GEH letter SC 20-05... GEH observed that meta-stable flow conditions can occur in the bundles near the 2 beam locations... GEH notified site personnel... that there was an issue with how the core monitoring software (3DMONICORE) calculated flow through fuel bundles in the 2 beam locations... This potential problem would cause 3DMONICORE to underestimate bundle fraction limiting critical power ratio (FLCPR).",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "vendor software/analysis error underestimating MCPR margin at IRM/SRM dry-tube bundle locations",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 440-2021-005-00",
+      "properties": {
+        "match_key": "LER:440-2021-005-00"
+      },
+      "type": "LER",
+      "key": "440-2021-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:440-2021-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Perry Unit 1",
+      "properties": {
+        "match_key": "Unit:05000440",
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000440",
+      "match_key": "Unit:05000440"
+    },
+    {
+      "id": "cause",
+      "display_name": "TBD",
+      "properties": {
+        "match_key": "Cause:provisional"
+      },
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "vendor software/analysis error underestimating MCPR margin at IRM/SRM dry-tube bundle locations",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_core_monitor",
+      "display_name": "Core Monitoring System (3DMONICORE)",
+      "properties": {
+        "match_key": "System:core-monitoring-system-3dmonicore"
+      },
+      "type": "System",
+      "eiis_code": "IG",
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:IG"
+    },
+    {
+      "id": "sys_rx_core",
+      "display_name": "Reactor Core / Fuel",
+      "properties": {
+        "match_key": "System:reactor-core-fuel"
+      },
+      "type": "System",
+      "eiis_code": "AC",
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:AC"
+    },
+    {
+      "id": "c_orifice",
+      "display_name": "Fuel Support Side Entry Orifice",
+      "properties": {
+        "match_key": "Component:fuel-support-side-entry-orifice"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:fuel-support-side-entry-orifice"
+    },
+    {
+      "id": "c_drytube",
+      "display_name": "IRM/SRM Dry Tube (2 beam locations)",
+      "properties": {
+        "match_key": "Component:irm-srm-dry-tube-2-beam-locations"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:irm-srm-dry-tube-2-beam-locations"
+    },
+    {
+      "id": "fm_flowgeom",
+      "display_name": "Meta-stable flow condition in bundles near 2 beam locations",
+      "properties": {
+        "match_key": "FailureMode:meta-stable-flow-condition-in-bundles-near-2-beam-locations"
+      },
+      "type": "FailureMode",
+      "description": "Flow geometry below the core plate at IRM/SRM dry tube locations causes meta-stable flow conditions in neighboring fuel bundles.",
+      "match_key": "FailureMode:meta-stable-flow-condition-in-bundles-near-2-beam-locations"
+    },
+    {
+      "id": "fm_flcpr_underest",
+      "display_name": "3DMONICORE underestimates bundle FLCPR at 2 beam locations",
+      "properties": {
+        "match_key": "FailureMode:3dmonicore-underestimates-bundle-flcpr-at-2-beam-locations"
+      },
+      "type": "FailureMode",
+      "description": "Core monitoring software incorrectly calculates flow through fuel bundles at the 2 beam locations, underestimating bundle fraction limiting critical power ratio (FLCPR).",
+      "match_key": "FailureMode:3dmonicore-underestimates-bundle-flcpr-at-2-beam-locations"
+    },
+    {
+      "id": "fm_mflcpr_exceed",
+      "display_name": "MFLCPR exceeded 1.0 for greater than six hours (Cycle 18, 7 instances)",
+      "properties": {
+        "match_key": "FailureMode:mflcpr-exceeded-1-0-for-greater-than-six-hours-cycle-18-7-instances"
+      },
+      "type": "FailureMode",
+      "description": "Historical review found seven instances during Cycle 18 (April 2019-March 2021) where corrected MFLCPR (per SC 21-04) was greater than 1.0 for more than six hours without corrective action, as required by TS 3.2.2.",
+      "match_key": "FailureMode:mflcpr-exceeded-1-0-for-greater-than-six-hours-cycle-18-7-instances"
+    },
+    {
+      "id": "cons_ts_noncompliance",
+      "display_name": "TS 3.2.2 MCPR limit not met during Cycle 18 operations",
+      "properties": {
+        "match_key": "Consequence:ts-3-2-2-mcpr-limit-not-met-during-cycle-18-operations"
+      },
+      "type": "Consequence",
+      "start": "2019-04",
+      "end": "2021-03",
+      "duration": "seven instances >6 hours each across Cycle 18",
+      "tz": null,
+      "match_key": "Consequence:ts-3-2-2-mcpr-limit-not-met-during-cycle-18-operations"
+    },
+    {
+      "id": "ca_colr",
+      "display_name": "Update Cycle 19 Core Operating Limits Report and associated documents for SC 21-04 Rev 1",
+      "properties": {
+        "match_key": "CorrectiveAction:update-cycle-19-core-operating-limits-report-and-associated-documents-for-sc-21-04-rev-1"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:update-cycle-19-core-operating-limits-report-and-associated-documents-for-sc-21-04-rev-1"
+    },
+    {
+      "id": "ca_tlf",
+      "display_name": "Update Thermal Limit Files for SC 21-04 Rev 1",
+      "properties": {
+        "match_key": "CorrectiveAction:update-thermal-limit-files-for-sc-21-04-rev-1"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:update-thermal-limit-files-for-sc-21-04-rev-1"
+    },
+    {
+      "id": "ca_admin_limit",
+      "display_name": "Implement administrative MFLCPR limit of <=0.950",
+      "properties": {
+        "match_key": "CorrectiveAction:implement-administrative-mflcpr-limit-of-0-950"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:implement-administrative-mflcpr-limit-of-0-950"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_part21",
+      "display_name": "10 CFR 21.21(a)(2) / 21.21(b)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-21-21-a-2-21-21-b"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-21-21-a-2-21-21-b"
+    },
+    {
+      "id": "rr_ts322",
+      "display_name": "TS 3.2.2 Minimum Critical Power Ratio (MCPR)",
+      "properties": {
+        "match_key": "RegulatoryReference:ts-3-2-2-minimum-critical-power-ratio-mcpr"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-3-2-2-minimum-critical-power-ratio-mcpr"
+    },
+    {
+      "id": "rr_sc2104",
+      "display_name": "GEH Safety Communication SC 21-04 Rev 1",
+      "properties": {
+        "match_key": "RegulatoryReference:geh-safety-communication-sc-21-04-rev-1"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "standard/guidance",
+      "match_key": "RegulatoryReference:geh-safety-communication-sc-21-04-rev-1"
+    },
+    {
+      "id": "rr_sc2005",
+      "display_name": "GEH Safety Communication SC 20-05 Rev 0",
+      "properties": {
+        "match_key": "RegulatoryReference:geh-safety-communication-sc-20-05-rev-0"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "standard/guidance",
+      "match_key": "RegulatoryReference:geh-safety-communication-sc-20-05-rev-0"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_part21",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_core_monitor",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rx_core",
+      "evidence": null
+    },
+    {
+      "source": "c_drytube",
+      "relation": "PART_OF",
+      "target": "sys_rx_core",
+      "evidence": null
+    },
+    {
+      "source": "c_orifice",
+      "relation": "PART_OF",
+      "target": "sys_rx_core",
+      "evidence": null
+    },
+    {
+      "source": "fm_flowgeom",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_flowgeom",
+      "relation": "LEADS_TO",
+      "target": "fm_flcpr_underest",
+      "evidence": null
+    },
+    {
+      "source": "fm_flcpr_underest",
+      "relation": "LEADS_TO",
+      "target": "fm_mflcpr_exceed",
+      "evidence": null
+    },
+    {
+      "source": "fm_mflcpr_exceed",
+      "relation": "LEADS_TO",
+      "target": "cons_ts_noncompliance",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_admin_limit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_colr",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_tlf",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts322",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_sc2104",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_sc2005",
+      "evidence": null
+    }
+  ],
+  "chain": "meta-stable flow at 2 beam locations (IRM/SRM dry tubes) [cause TBD, GEH SC 20-05 follow-on discovery] -> 3DMONICORE underestimates bundle FLCPR -> MFLCPR exceeded 1.0 for >6 hrs (7 instances, Cycle 18) -> TS 3.2.2 MCPR limit not met [corrective: 0.950 administrative MFLCPR limit implemented, COLR/Thermal Limit Files to be updated]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "This LER reports a historical/retrospective non-compliance discovered via a 3-year MFLCPR review triggered by GEH Part 21 evaluation (SC 21-04 Rev 1), not a discrete equipment failure event. No block_13 EIIS component/system codes were provided in FORM-366 fields (empty array) and none are given in narrative as bracketed codes, so no eiis_code values were assigned; core monitoring system and fuel/core components are modeled as non-EIIS. Cause code remains TBD/provisional per FORM-366 fields since no official cause code was assigned in the source; category is 'provisional' pending resolution. 'Previous Similar Events' section states no similar LERs were identified, so no stub LER/SIMILAR_TO edge is emitted per that explicit statement. No manufacturer, breaker, or physical component failure applies here; GEH is referenced as the vendor issuing the safety communications but not modeled as a Manufacturer node since no manufactured component/failure attribution is being made (context is analytical/software, not a physical part supply chain)."
+}

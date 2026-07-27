@@ -1,0 +1,266 @@
+{
+  "ler_number": "387-2021-001-00",
+  "identity": {
+    "accession_number": "ML21126A316",
+    "docket": "05000387",
+    "plant_name": "Susquehanna",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2021-03-09",
+    "report_date": "2021-05-06",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2021-001-00 for Susquehanna Steam Electri Station, Unplanned lnoperability of the High Pressure Coolant Injection (HPCI) System due to a Primary Containment Isolation (PCIV) Valve Failure to Stroke Full Closed On-demand due to an Intermittent Break"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "I",
+      "system": "I",
+      "component": "I",
+      "manufacturer": "I",
+      "reportable": null
+    }
+  ],
+  "cause": {
+    "proximate_text": "HPCI Turbine Exhaust Vacuum Breaker valve HV155F079 failed to stroke full closed on-demand due to an intermittent break",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "PCIV failure to stroke closed",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 387-2021-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "387-2021-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:387-2021-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Susquehanna Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000387",
+      "match_key": "Unit:05000387"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "PCIV failure to stroke closed",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_bj",
+      "display_name": "High Pressure Coolant Injection",
+      "properties": {
+        "note": "steam-driven ECCS; open function unaffected"
+      },
+      "type": "System",
+      "eiis_code": "BJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BJ"
+    },
+    {
+      "id": "c_hv079",
+      "display_name": "HPCI Turbine Exhaust Inboard Vacuum Breaker Valve HV155F079",
+      "properties": {
+        "valve_type": "3\" Flex Wedge Gate Valve",
+        "actuator_size": "SMB-000"
+      },
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": "HV155F079",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:ISV|HV155F079"
+    },
+    {
+      "id": "c_hv075",
+      "display_name": "HPCI Turbine Exhaust Outboard Vacuum Breaker Valve HV155F075",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": "HV155F075",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:ISV|HV155F075"
+    },
+    {
+      "id": "c_hs15579",
+      "display_name": "Hand switch HS15579",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "HS15579",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:hand-switch-hs15579"
+    },
+    {
+      "id": "fm_intermittent",
+      "display_name": "Intermittent break",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Intermittent break causing valve failure to stroke full closed on-demand",
+      "match_key": "FailureMode:intermittent-break"
+    },
+    {
+      "id": "fm_valvefail",
+      "display_name": "HV155F079 failed to stroke full closed on-demand",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Inboard vacuum breaker valve HV155F079 failed to stroke full closed during surveillance test",
+      "match_key": "FailureMode:hv155f079-failed-to-stroke-full-closed-on-demand"
+    },
+    {
+      "id": "cons_hpci",
+      "display_name": "HPCI declared inoperable due to PCIV valve failure to close",
+      "properties": {
+        "note": "Containment isolation function was still met via outboard valve HV155F075; not counted as SSFF"
+      },
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:hpci-declared-inoperable-due-to-pciv-valve-failure-to-close"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace HPCI Turbine Exhaust Vacuum Breaker inboard isolation valve hand switch (HS15579)",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-hpci-turbine-exhaust-vacuum-breaker-inboard-isolation-valve-hand-switch-hs15579"
+    },
+    {
+      "id": "mfr_anchor",
+      "display_name": "Anchor Darling",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": null,
+      "match_key": "Manufacturer:anchor-darling"
+    },
+    {
+      "id": "mfr_limitorque",
+      "display_name": "Limitorque Corporation",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": null,
+      "match_key": "Manufacturer:limitorque-corporation"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(v)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bj",
+      "evidence": null
+    },
+    {
+      "source": "fm_intermittent",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_intermittent",
+      "relation": "LEADS_TO",
+      "target": "fm_valvefail",
+      "evidence": null
+    },
+    {
+      "source": "fm_valvefail",
+      "relation": "LEADS_TO",
+      "target": "cons_hpci",
+      "evidence": null
+    },
+    {
+      "source": "cons_hpci",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "c_hv079",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_anchor",
+      "evidence": null
+    },
+    {
+      "source": "c_hv079",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_limitorque",
+      "evidence": null
+    }
+  ],
+  "chain": "intermittent break [cause TBD] -> HV155F079 fails to stroke full closed on-demand -> HPCI declared inoperable (containment isolation still achieved via outboard valve HV155F075)",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Block-13 fields are placeholder 'I' values from the form and cause_code is TBD in FORM-366 FIELDS; cause node marked provisional per rule 4. Outboard valve HV155F075 successfully stroked closed and is described as having performed the containment isolation function during the same demand -- modeled as a Component involved in the event rather than a BACKED_UP_BY System, since containment isolation is a valve-level redundancy, not a system backup for HPCI operability. No previous occurrences reported (narrative states 'None'), so no SIMILAR_TO/stub LER emitted."
+}

@@ -1,0 +1,622 @@
+{
+  "ler_number": "498-2024-002-01",
+  "identity": {
+    "accession_number": "ML24179A341",
+    "docket": "05000498",
+    "plant_name": "South Texas",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2024-03-10",
+    "report_date": "2024-06-27",
+    "operating_mode": null,
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Two Essential Chilled Water Trains Inoperable Resulting in a Condition That Could Have Prevented Fulfillment of a Safety Function"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)(D)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The original design allowed pipe geometry that resulted in two shortcomings when combined with the aluminum-bronze pipe material...led to higher erosion rates and eventually a pinhole through-wall leak. / The cause of the Essential Chilled Water 'B' train inoperability was indeterminate.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Design/material erosion (ECW) and indeterminate chiller temperature-control excursion",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 498-2024-002-01",
+      "properties": {},
+      "type": "LER",
+      "key": "498-2024-002-01",
+      "stub": false,
+      "title": "Two Essential Chilled Water Trains Inoperable Resulting in a Condition That Could Have Prevented Fulfillment of a Safety Function",
+      "plant": "South Texas Project",
+      "match_key": "LER:498-2024-002-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "South Texas Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000498",
+      "match_key": "Unit:05000498"
+    },
+    {
+      "id": "cause",
+      "display_name": "TBD (provisional)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Design/material erosion (ECW) and indeterminate chiller temperature-control excursion",
+      "proximate_text": "The original design allowed pipe geometry that resulted in two shortcomings when combined with the aluminum-bronze pipe material...led to higher erosion rates and eventually a pinhole through-wall leak. / The cause of the Essential Chilled Water 'B' train inoperability was indeterminate.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_ecw",
+      "display_name": "Essential Cooling Water",
+      "properties": {
+        "train": "C"
+      },
+      "type": "System",
+      "eiis_code": "BI",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BI"
+    },
+    {
+      "id": "sys_echw",
+      "display_name": "Essential Chilled Water",
+      "properties": {
+        "train": "B"
+      },
+      "type": "System",
+      "eiis_code": "KM",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:KM"
+    },
+    {
+      "id": "sys_esf_dg",
+      "display_name": "Engineered Safety Feature Diesel Generator",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "cascaded inoperable via ECW Train C",
+      "match_key": "System:engineered-safety-feature-diesel-generator"
+    },
+    {
+      "id": "sys_rhr",
+      "display_name": "Residual Heat Removal",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BO",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "cascaded inoperable via ECW Train C",
+      "match_key": "System:BO"
+    },
+    {
+      "id": "sys_ccw",
+      "display_name": "Component Cooling Water",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "CC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "cascaded inoperable via ECW Train C",
+      "match_key": "System:CC"
+    },
+    {
+      "id": "sys_cs",
+      "display_name": "Containment Spray",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BE",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "cascaded inoperable via both ECW Train C and Essential Chiller 12B",
+      "match_key": "System:BE"
+    },
+    {
+      "id": "sys_rcfc",
+      "display_name": "Reactor Containment Fan Coolers",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "cascaded inoperable via ECW Train C",
+      "match_key": "System:reactor-containment-fan-coolers"
+    },
+    {
+      "id": "sys_cre_hvac",
+      "display_name": "Control Room Envelope HVAC",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "cascaded inoperable via both ECW Train C and Essential Chiller 12B",
+      "match_key": "System:control-room-envelope-hvac"
+    },
+    {
+      "id": "sys_eccs",
+      "display_name": "Emergency Core Cooling System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "cascaded inoperable via both ECW Train C and Essential Chiller 12B",
+      "match_key": "System:emergency-core-cooling-system"
+    },
+    {
+      "id": "sys_epen_hvac",
+      "display_name": "Electrical Penetrations HVAC",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "cascaded inoperable via Essential Chiller 12B",
+      "match_key": "System:electrical-penetrations-hvac"
+    },
+    {
+      "id": "c_pump1c",
+      "display_name": "Essential Cooling Water Pump 1C",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "1C",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:essential-cooling-water-pump-1c"
+    },
+    {
+      "id": "c_ventpipe",
+      "display_name": "Pipe (Spool) - discharge vent line",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "PSP",
+      "identifier": null,
+      "model": "3-inch Schedule 40 Al-Brz Pipe",
+      "manufacturer_code": "S280",
+      "inferred_code": false,
+      "match_key": "Component:PSP"
+    },
+    {
+      "id": "c_chiller12b",
+      "display_name": "Essential Chiller 12B",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "CHU",
+      "identifier": "12B",
+      "model": "OTK5C1-IMCS-R11",
+      "manufacturer_code": "Y018",
+      "inferred_code": false,
+      "match_key": "Component:CHU|12B"
+    },
+    {
+      "id": "c_tempsensor",
+      "display_name": "Temperature sensor (Essential Chiller temperature control loop)",
+      "properties": {
+        "note": "found via subsequent digital chart recorder trending to perform erratically; not confirmed cause of this event"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:temperature-sensor-essential-chiller-temperature-control-loop"
+    },
+    {
+      "id": "c_tcm_relay",
+      "display_name": "Relay inside TCM",
+      "properties": {
+        "note": "chattered to point of permanent damage; identified in later monitoring, not confirmed cause of this event"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:relay-inside-tcm"
+    },
+    {
+      "id": "fm_erosion",
+      "display_name": "Erosion of aluminum-bronze vent line from flow impingement",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Sharp 90-degree turn and small pipe diameters caused high flow velocity and direct impingement, eroding the Al-Brz vent line material.",
+      "match_key": "FailureMode:erosion-of-aluminum-bronze-vent-line-from-flow-impingement"
+    },
+    {
+      "id": "fm_pinhole",
+      "display_name": "Pinhole through-wall leak on ECW Pump 1C discharge vent line",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Erosion progressed to a through-wall pinhole leak on the discharge vent line.",
+      "match_key": "FailureMode:pinhole-through-wall-leak-on-ecw-pump-1c-discharge-vent-line"
+    },
+    {
+      "id": "fm_chiller_tempctrl",
+      "display_name": "Essential Chiller 12B temperature control loop failed to operate properly",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Temperature control loop failed to maintain leaving water temperature below required maximum; root cause indeterminate.",
+      "match_key": "FailureMode:essential-chiller-12b-temperature-control-loop-failed-to-operate-properly"
+    },
+    {
+      "id": "cons_ecw_c_inop",
+      "display_name": "Essential Cooling Water Train C inoperable (with cascaded systems)",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2024-03-09T21:26",
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:essential-cooling-water-train-c-inoperable-with-cascaded-systems"
+    },
+    {
+      "id": "cons_echw_b_inop",
+      "display_name": "Essential Chilled Water Train B inoperable (with cascaded systems)",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2024-03-10T02:53",
+      "end": "2024-03-10T03:40",
+      "duration": "0:47",
+      "tz": null,
+      "match_key": "Consequence:essential-chilled-water-train-b-inoperable-with-cascaded-systems"
+    },
+    {
+      "id": "cons_two_train",
+      "display_name": "Two of three accident-mitigation safety trains inoperable simultaneously; condition could have prevented fulfillment of a safety function",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2024-03-10T02:53",
+      "end": "2024-03-10T03:40",
+      "duration": "0:47",
+      "tz": null,
+      "match_key": "Consequence:two-of-three-accident-mitigation-safety-trains-inoperable-simultaneously-condition-could-have-prevented-fulfillment-of-a-safety-function"
+    },
+    {
+      "id": "ca_repair_vent",
+      "display_name": "Repair Essential Cooling Water Pump 1C discharge vent line",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:repair-essential-cooling-water-pump-1c-discharge-vent-line"
+    },
+    {
+      "id": "ca_replace_vents",
+      "display_name": "Replace all other ECW pump vent lines with like-for-like pipe spools (extent of condition)",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-all-other-ecw-pump-vent-lines-with-like-for-like-pipe-spools-extent-of-condition"
+    },
+    {
+      "id": "ca_eval_design_mod",
+      "display_name": "Evaluate design modification to pipe geometry and materials",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:evaluate-design-modification-to-pipe-geometry-and-materials"
+    },
+    {
+      "id": "ca_temp_mod_chiller",
+      "display_name": "Install temporary modification on Essential Chiller 12B for additional monitoring",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:install-temporary-modification-on-essential-chiller-12b-for-additional-monitoring"
+    },
+    {
+      "id": "ca_chart_recorders",
+      "display_name": "Install digital chart recorders at all Essential Chillers",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:install-digital-chart-recorders-at-all-essential-chillers"
+    },
+    {
+      "id": "mfr_swfab",
+      "display_name": "Southwest Fabricating and Welding Company",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "S280",
+      "match_key": "Manufacturer:S280"
+    },
+    {
+      "id": "mfr_york",
+      "display_name": "York Division of Borg-Warner",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "Y018",
+      "match_key": "Manufacturer:Y018"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "ler_prev1",
+      "display_name": "LER 2023-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "2023-001-00",
+      "stub": true,
+      "title": "Two Essential Chilled Water Trains Inoperable Resulting in a Condition That Could Have Prevented Fulfillment of a Safety Function",
+      "plant": "South Texas Project",
+      "match_key": "LER:2023-001-00"
+    },
+    {
+      "id": "ler_prev2",
+      "display_name": "LER 2023-003-00",
+      "properties": {},
+      "type": "LER",
+      "key": "2023-003-00",
+      "stub": true,
+      "title": "Two Essential Chilled Water Trains Inoperable Resulting in a Condition That Could Have Prevented Fulfillment of a Safety Function",
+      "plant": "South Texas Project",
+      "match_key": "LER:2023-003-00"
+    },
+    {
+      "id": "ler_prev3",
+      "display_name": "LER 2023-004-00",
+      "properties": {},
+      "type": "LER",
+      "key": "2023-004-00",
+      "stub": true,
+      "title": "Condition Prohibited by Technical Specifications Due to Inoperable Train of Essential Chilled Water",
+      "plant": "South Texas Project",
+      "match_key": "LER:2023-004-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ecw",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_echw",
+      "evidence": null
+    },
+    {
+      "source": "c_pump1c",
+      "relation": "PART_OF",
+      "target": "sys_ecw",
+      "evidence": null
+    },
+    {
+      "source": "c_ventpipe",
+      "relation": "PART_OF",
+      "target": "c_pump1c",
+      "evidence": null
+    },
+    {
+      "source": "c_chiller12b",
+      "relation": "PART_OF",
+      "target": "sys_echw",
+      "evidence": null
+    },
+    {
+      "source": "c_ventpipe",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_swfab",
+      "evidence": null
+    },
+    {
+      "source": "c_chiller12b",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_york",
+      "evidence": null
+    },
+    {
+      "source": "fm_erosion",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_erosion",
+      "relation": "LEADS_TO",
+      "target": "fm_pinhole",
+      "evidence": null
+    },
+    {
+      "source": "fm_pinhole",
+      "relation": "LEADS_TO",
+      "target": "cons_ecw_c_inop",
+      "evidence": null
+    },
+    {
+      "source": "fm_chiller_tempctrl",
+      "relation": "LEADS_TO",
+      "target": "cons_echw_b_inop",
+      "evidence": null
+    },
+    {
+      "source": "cons_ecw_c_inop",
+      "relation": "LEADS_TO",
+      "target": "cons_two_train",
+      "evidence": null
+    },
+    {
+      "source": "cons_echw_b_inop",
+      "relation": "LEADS_TO",
+      "target": "cons_two_train",
+      "evidence": null
+    },
+    {
+      "source": "cons_ecw_c_inop",
+      "relation": "INVOLVES",
+      "target": "sys_esf_dg",
+      "evidence": null
+    },
+    {
+      "source": "cons_ecw_c_inop",
+      "relation": "INVOLVES",
+      "target": "sys_rhr",
+      "evidence": null
+    },
+    {
+      "source": "cons_ecw_c_inop",
+      "relation": "INVOLVES",
+      "target": "sys_ccw",
+      "evidence": null
+    },
+    {
+      "source": "cons_ecw_c_inop",
+      "relation": "INVOLVES",
+      "target": "sys_cs",
+      "evidence": null
+    },
+    {
+      "source": "cons_ecw_c_inop",
+      "relation": "INVOLVES",
+      "target": "sys_rcfc",
+      "evidence": null
+    },
+    {
+      "source": "cons_ecw_c_inop",
+      "relation": "INVOLVES",
+      "target": "sys_cre_hvac",
+      "evidence": null
+    },
+    {
+      "source": "cons_ecw_c_inop",
+      "relation": "INVOLVES",
+      "target": "sys_eccs",
+      "evidence": null
+    },
+    {
+      "source": "cons_echw_b_inop",
+      "relation": "INVOLVES",
+      "target": "sys_eccs",
+      "evidence": null
+    },
+    {
+      "source": "cons_echw_b_inop",
+      "relation": "INVOLVES",
+      "target": "sys_cre_hvac",
+      "evidence": null
+    },
+    {
+      "source": "cons_echw_b_inop",
+      "relation": "INVOLVES",
+      "target": "sys_cs",
+      "evidence": null
+    },
+    {
+      "source": "cons_echw_b_inop",
+      "relation": "INVOLVES",
+      "target": "sys_epen_hvac",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_repair_vent",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_vents",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_eval_design_mod",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_temp_mod_chiller",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_chart_recorders",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev1",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev2",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev3",
+      "evidence": null
+    }
+  ],
+  "chain": "pipe geometry/material design shortcoming [cause TBD] -> erosion of Al-Brz vent line -> pinhole through-wall leak -> ECW Train C inoperable (cascades ESF DG, RHR, CCW, CS, RCFC, CRE HVAC, ECCS); separately -> Essential Chiller 12B temp control loop malfunction (indeterminate cause) -> Essential Chilled Water Train B inoperable (cascades ECCS, CRE HVAC, CS, Electrical Penetrations HVAC) -> two of three safety trains inoperable simultaneously (47 min), condition could have prevented fulfillment of a safety function",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Two parallel, independent failure chains converge on the same reportable consequence (two-train inoperability window). Official cause_code is TBD/provisional per FORM-366 fields; narrative gives a design/material erosion mechanism for ECW Train C and an explicitly indeterminate cause for Essential Chilled Water Train B (the temperature sensor/relay TCM damage findings came from later monitoring installed as a corrective action and were not confirmed as the cause of this specific event, so they are captured as related but not asserted in the causal chain). No backups are asserted since narrative does not state an operable/available backup system during the two-train inoperable window (in fact this is the reportable condition itself: only one train remained). Previous-occurrence LER keys copied exactly as stated in narrative (no leading unit digit given in source text)."
+}

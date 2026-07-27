@@ -1,0 +1,334 @@
+{
+  "ler_number": "454-2022-001-00",
+  "identity": {
+    "accession_number": "ML22252A138",
+    "docket": "05000454",
+    "plant_name": "Byron",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2022-07-12",
+    "report_date": "2022-09-09",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Licensee Event Report (LER) No. 454-2022-001-00 \"OB Control Room Ventilation Supply Fan Failed to Start due to Erroneous Position Indication from the Closed Limit Switch for Charcoal Deluge Valve Interlock"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The cause of the OB VC supply fan to not start was the limit switch operating lever had rolled under the limit switch finger which made the 0FP432B valve appear to be in the intermediate or open position causing the supply fan shunt trip coil to remain energized... There were inadequate margins in the length of the limit switch operating levers to be made up with the limit switch finger.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "inadequate design margin in limit switch operating lever length",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 454-2022-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "454-2022-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:454-2022-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Byron Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000454",
+      "match_key": "Unit:05000454"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "inadequate design margin in limit switch operating lever length",
+      "proximate_text": "The cause of the OB VC supply fan to not start was the limit switch operating lever had rolled under the limit switch finger which made the 0FP432B valve appear to be in the intermediate or open position causing the supply fan shunt trip coil to remain energized... There were inadequate margins in the length of the limit switch operating levers to be made up with the limit switch finger.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_vc",
+      "display_name": "Control Room Ventilation",
+      "properties": {
+        "note": "OB train supply fan system"
+      },
+      "type": "System",
+      "eiis_code": "VI",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:VI"
+    },
+    {
+      "id": "sys_fp",
+      "display_name": "Fire Protection",
+      "properties": {
+        "note": "FP surveillance cycled the deluge valve"
+      },
+      "type": "System",
+      "eiis_code": "KP",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:KP"
+    },
+    {
+      "id": "c_fan",
+      "display_name": "OB Control Room Ventilation Supply Fan 0VC01CB",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "0VC01CB",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:ob-control-room-ventilation-supply-fan-0vc01cb"
+    },
+    {
+      "id": "c_valve",
+      "display_name": "OB VC Recirculation Charcoal Deluge Valve 0FP432B",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "0FP432B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:ob-vc-recirculation-charcoal-deluge-valve-0fp432b"
+    },
+    {
+      "id": "c_limitswitch",
+      "display_name": "Closed Limit Switch 0ZS-FP432B-A",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "0ZS-FP432B-A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:closed-limit-switch-0zs-fp432b-a"
+    },
+    {
+      "id": "c_lever",
+      "display_name": "Limit Switch Operating Lever",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": "NAMCO EL Series Operating Levers, Series EA 170, Part EL010-53338",
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:limit-switch-operating-lever"
+    },
+    {
+      "id": "c_shunttrip",
+      "display_name": "Supply Fan Shunt Trip Coil",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:supply-fan-shunt-trip-coil"
+    },
+    {
+      "id": "fm_lever",
+      "display_name": "Limit switch operating lever rolled under limit switch finger",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Operating lever length inadequate margin, allowing it to roll under the limit switch finger, mimicking intermediate/open valve position despite valve being closed.",
+      "match_key": "FailureMode:limit-switch-operating-lever-rolled-under-limit-switch-finger"
+    },
+    {
+      "id": "fm_erroneous_indication",
+      "display_name": "Erroneous closed-limit-switch position indication",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Limit switch indicated deluge valve was not closed (intermediate/open) when it was actually closed.",
+      "match_key": "FailureMode:erroneous-closed-limit-switch-position-indication"
+    },
+    {
+      "id": "fm_shunttrip",
+      "display_name": "Supply fan shunt trip coil energized",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Per control logic, non-closed indication energized the shunt trip coil, preventing the supply fan breaker from remaining closed after a start command.",
+      "match_key": "FailureMode:supply-fan-shunt-trip-coil-energized"
+    },
+    {
+      "id": "fm_fantrip",
+      "display_name": "OB VC supply fan failed to start / tripped immediately",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Fan breaker could not remain closed after start command, causing immediate trip.",
+      "match_key": "FailureMode:ob-vc-supply-fan-failed-to-start-tripped-immediately"
+    },
+    {
+      "id": "cons_vc",
+      "display_name": "OB train VC inoperable",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2022-07-12T03:24",
+      "end": "2022-07-12T19:48",
+      "duration": "16:24",
+      "tz": "CDT",
+      "match_key": "Consequence:ob-train-vc-inoperable"
+    },
+    {
+      "id": "ca_adjust",
+      "display_name": "Adjust actuator arm and limit switch to properly make up closed limit",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:adjust-actuator-arm-and-limit-switch-to-properly-make-up-closed-limit"
+    },
+    {
+      "id": "ca_replace_levers",
+      "display_name": "Replace operating levers on OB VC recirculation charcoal deluge valves with same part",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-operating-levers-on-ob-vc-recirculation-charcoal-deluge-valves-with-same-part"
+    },
+    {
+      "id": "mfr_namco",
+      "display_name": "NAMCO",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": null,
+      "match_key": "Manufacturer:namco"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_vc",
+      "evidence": null
+    },
+    {
+      "source": "c_fan",
+      "relation": "PART_OF",
+      "target": "sys_vc",
+      "evidence": null
+    },
+    {
+      "source": "c_valve",
+      "relation": "PART_OF",
+      "target": "sys_vc",
+      "evidence": null
+    },
+    {
+      "source": "c_limitswitch",
+      "relation": "PART_OF",
+      "target": "c_valve",
+      "evidence": null
+    },
+    {
+      "source": "c_lever",
+      "relation": "PART_OF",
+      "target": "c_limitswitch",
+      "evidence": null
+    },
+    {
+      "source": "fm_lever",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_lever",
+      "relation": "LEADS_TO",
+      "target": "fm_erroneous_indication",
+      "evidence": null
+    },
+    {
+      "source": "fm_erroneous_indication",
+      "relation": "LEADS_TO",
+      "target": "fm_shunttrip",
+      "evidence": null
+    },
+    {
+      "source": "fm_shunttrip",
+      "relation": "LEADS_TO",
+      "target": "fm_fantrip",
+      "evidence": null
+    },
+    {
+      "source": "fm_fantrip",
+      "relation": "LEADS_TO",
+      "target": "cons_vc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_adjust",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_levers",
+      "evidence": null
+    },
+    {
+      "source": "c_lever",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_namco",
+      "evidence": null
+    }
+  ],
+  "chain": "inadequate margin in limit switch operating lever length [cause TBD] -> lever rolls under limit switch finger -> erroneous non-closed indication for deluge valve -> shunt trip coil energized -> OB VC supply fan trips/fails to start -> OB VC train inoperable (16h24m) [backup 0A VC train remained operable]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code was TBD/provisional in FORM-366 fields; narrative attributes the failure to inadequate design margin in the limit switch operating lever length rather than a discrete personnel-error or maintenance lapse, so cause is modeled as provisional per rule 4. Component Failure Data table (NAMCO EL Series Operating Levers, Series EA 170, part EL010-53338) mapped to the operating lever component and its manufacturer. Redundant 0A VC train explicitly stated to have remained operable throughout the event window (May 23 - July 12, 2022), so modeled as a design-context redundant train rather than a BACKED_UP_BY system node, since it is not a distinct EIIS system but the sister train of the same VC system; omitted separate System node to avoid duplicating sys_vc."
+}

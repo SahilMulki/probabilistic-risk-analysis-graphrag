@@ -1,0 +1,395 @@
+{
+  "ler_number": "366-2020-001-00",
+  "identity": {
+    "accession_number": "ML20062F391",
+    "docket": "05000366",
+    "plant_name": "Hatch",
+    "unit": 2,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2020-01-04",
+    "report_date": "2020-03-02",
+    "operating_mode": null,
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Primary Containment Penetration Exceeded Maximum Allowable Primary Containment Leakage Rate (La)"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)",
+      "10 CFR 50.73(a)(2)(v)(C)",
+      "10 CFR 50.73(a)(2)(ii)(A)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The cause of the PCIV failures cannot be confirmed until valve disassembly. During a planned outage, the PCIVs will be repaired and returned to operable status.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Unknown valve degradation pending disassembly",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 366-2020-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "366-2020-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:366-2020-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Hatch Unit 2",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000366",
+      "match_key": "Unit:05000366"
+    },
+    {
+      "id": "cause",
+      "display_name": "Unknown (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Unknown valve degradation pending disassembly",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_bb",
+      "display_name": "Drywell Ventilation / Primary Containment",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BB"
+    },
+    {
+      "id": "sys_isv",
+      "display_name": "Isolation Valve System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:isolation-valve-system"
+    },
+    {
+      "id": "sys_sbgt",
+      "display_name": "Standby Gas Treatment",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BH",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BH"
+    },
+    {
+      "id": "c_inboard",
+      "display_name": "Drywell Ventilation Penetration Inboard Isolation Valve",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "F130",
+      "identifier": "2T48F319",
+      "model": "9220",
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:F130|2T48F319"
+    },
+    {
+      "id": "c_outboard",
+      "display_name": "Drywell Ventilation Penetration Outboard Isolation Valve",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "F130",
+      "identifier": "2T48F320",
+      "model": "9220",
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:F130|2T48F320"
+    },
+    {
+      "id": "c_downstream",
+      "display_name": "Downstream isolation valves (ISV)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:downstream-isolation-valves-isv"
+    },
+    {
+      "id": "fm_inboard_leak",
+      "display_name": "Inboard PCIV leakage past seal",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Leakage past drywell ventilation penetration inboard isolation valve",
+      "match_key": "FailureMode:inboard-pciv-leakage-past-seal"
+    },
+    {
+      "id": "fm_outboard_leak",
+      "display_name": "Outboard PCIV leakage past seal",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Leakage past drywell ventilation penetration outboard isolation valve",
+      "match_key": "FailureMode:outboard-pciv-leakage-past-seal"
+    },
+    {
+      "id": "fm_la_exceeded",
+      "display_name": "Penetration failed to maintain primary containment integrity",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Combined leakage past both PCIVs caused maximum allowable leakage rate (La) to be exceeded under postulated accident conditions",
+      "match_key": "FailureMode:penetration-failed-to-maintain-primary-containment-integrity"
+    },
+    {
+      "id": "cons_containment",
+      "display_name": "Primary containment inoperable / La exceeded",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2020-01-04T11:09",
+      "end": null,
+      "duration": null,
+      "tz": "EST",
+      "match_key": "Consequence:primary-containment-inoperable-la-exceeded"
+    },
+    {
+      "id": "ca_isolate",
+      "display_name": "Close and deactivate downstream isolation valves to isolate leaking penetration",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:close-and-deactivate-downstream-isolation-valves-to-isolate-leaking-penetration"
+    },
+    {
+      "id": "ca_repair",
+      "display_name": "Repair and return PCIVs to operable status during planned outage",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:repair-and-return-pcivs-to-operable-status-during-planned-outage"
+    },
+    {
+      "id": "mfr_fisher",
+      "display_name": "Fisher Controls Company",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": null,
+      "match_key": "Manufacturer:fisher-controls-company"
+    },
+    {
+      "id": "rr_5073_i_B",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_5073_v_C",
+      "display_name": "10 CFR 50.73(a)(2)(v)(C)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-c"
+    },
+    {
+      "id": "rr_5073_ii_A",
+      "display_name": "10 CFR 50.73(a)(2)(ii)(A)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-ii-a"
+    },
+    {
+      "id": "rr_appj",
+      "display_name": "10 CFR 50 Appendix J",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-appendix-j"
+    },
+    {
+      "id": "rr_nei",
+      "display_name": "NEI 99-02 (Safety System Functional Failure)",
+      "properties": {
+        "type": "standard/guidance"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:nei-99-02-safety-system-functional-failure"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "Previous LLRT failures of same drywell ventilation penetration PCIVs (Feb 2017)",
+      "properties": {},
+      "type": "LER",
+      "key": "2-2017-XXX",
+      "stub": true,
+      "title": "Drywell ventilation penetration inboard and outboard isolation valves failed LLRT",
+      "plant": "Edwin I. Hatch Nuclear Plant Unit 2",
+      "match_key": "LER:2-2017-XXX"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_i_B",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_v_C",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_ii_A",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_appj",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_nei",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bb",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_isv",
+      "evidence": null
+    },
+    {
+      "source": "c_inboard",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_fisher",
+      "evidence": null
+    },
+    {
+      "source": "c_outboard",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_fisher",
+      "evidence": null
+    },
+    {
+      "source": "fm_inboard_leak",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_inboard_leak",
+      "relation": "LEADS_TO",
+      "target": "fm_la_exceeded",
+      "evidence": null
+    },
+    {
+      "source": "fm_outboard_leak",
+      "relation": "LEADS_TO",
+      "target": "fm_la_exceeded",
+      "evidence": null
+    },
+    {
+      "source": "fm_la_exceeded",
+      "relation": "LEADS_TO",
+      "target": "cons_containment",
+      "evidence": null
+    },
+    {
+      "source": "cons_containment",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_sbgt",
+      "evidence": null
+    },
+    {
+      "source": "cons_containment",
+      "relation": "MITIGATED_BY",
+      "target": "ca_isolate",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_isolate",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_repair",
+      "evidence": null
+    },
+    {
+      "source": "c_downstream",
+      "relation": "PART_OF",
+      "target": "sys_isv",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    }
+  ],
+  "chain": "unknown PCIV degradation [cause TBD] -> inboard PCIV leakage + outboard PCIV leakage (parallel) -> penetration fails to maintain containment integrity (La exceeded) -> primary containment inoperable [backups: downstream ISVs closed, SBGT filtration on release path]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code TBD/provisional per FORM-366 (actual cause deferred to valve disassembly during planned outage). Block 13 system/component code BB/F130 taken from form; narrative identifies specific components as drywell ventilation penetration inboard/outboard isolation valves (Fisher Controls Model 9220, MPL 2T48F319/2T48F320). Downstream ISVs were closed/deactivated as compensatory action, not a pre-existing operable backup system per se, but modeled as a mitigating action; SBGT is cited as a defense-in-depth design feature for any actual leakage release path and is modeled as BACKED_UP_BY per explicit statement it would filter leakage. Previous similar occurrence (Feb 2017 LLRT failures of same PCIVs) modeled as stub LER; no LER number given in narrative so a placeholder key format matching plant/unit/year convention is used since exact LER number not stated -- flagged for resolver review."
+}

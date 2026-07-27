@@ -1,0 +1,365 @@
+{
+  "ler_number": "316-2022-001-00",
+  "identity": {
+    "accession_number": "ML23004A205",
+    "docket": "05000316",
+    "plant_name": "D.C. Cook",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2022-11-10",
+    "report_date": "2023-01-04",
+    "operating_mode": null,
+    "power_level": 44,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Automatic Reactor Trip Due to Steam Generator High-High Level"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "A preliminary root cause of the oscillations was the organization's failure to recognize the effects of digital positioner tuning on Unit 2 feedwater regulating valves which resulted in system instabilities.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "digital feedwater regulating valve positioner tuning not understood",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 316-2022-999-00",
+      "properties": {},
+      "type": "LER",
+      "key": "316-2022-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:316-2022-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "D.C. Cook Unit 2",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000316",
+      "match_key": "Unit:05000316"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "digital feedwater regulating valve positioner tuning not understood",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_sg",
+      "display_name": "Steam Generator",
+      "properties": {
+        "note": "#3 Steam Generator, EIIS [SB][SG]"
+      },
+      "type": "System",
+      "eiis_code": "SB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SB"
+    },
+    {
+      "id": "sys_afw",
+      "display_name": "Auxiliary Feedwater System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "actuated; operated properly",
+      "match_key": "System:BA"
+    },
+    {
+      "id": "sys_cond",
+      "display_name": "Condenser Steam Dump System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JI",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "used for decay heat removal; operated as expected",
+      "match_key": "System:JI"
+    },
+    {
+      "id": "sys_fw",
+      "display_name": "Main Feedwater System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "sys_rps",
+      "display_name": "Reactor Protection System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JG"
+    },
+    {
+      "id": "c_mfp_east",
+      "display_name": "East Main Feed Pump (2-PP-1E)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "P",
+      "identifier": "2-PP-1E",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:P|2-PP-1E"
+    },
+    {
+      "id": "c_sg_level",
+      "display_name": "SG Water Level Indication",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "L",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:L"
+    },
+    {
+      "id": "c_fw_regvalve",
+      "display_name": "Feedwater Regulating Valve Controller",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "FCO",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:FCO"
+    },
+    {
+      "id": "c_sg3",
+      "display_name": "Number 3 Steam Generator (2-OME-3-3)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "SG",
+      "identifier": "2-OME-3-3",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:SG|2-OME-3-3"
+    },
+    {
+      "id": "fm_tuning",
+      "display_name": "Digital positioner tuning effects not recognized",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Organization failed to recognize the effects of digital positioner tuning on Unit 2 feedwater regulating valves, resulting in system instabilities.",
+      "match_key": "FailureMode:digital-positioner-tuning-effects-not-recognized"
+    },
+    {
+      "id": "fm_oscillation",
+      "display_name": "Unrecoverable feedwater system oscillations during power ascension",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Operating one Main Feed Pump in manual DP mode at lower than program DP, combined with digital control/system configuration issues, resulted in unrecoverable feedwater oscillations and SG level swings.",
+      "match_key": "FailureMode:unrecoverable-feedwater-system-oscillations-during-power-ascension"
+    },
+    {
+      "id": "fm_sglevel",
+      "display_name": "#3 SG level rose to high-high trip setpoint",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "SG level rapidly increased and could not be controlled, reaching the 67% high-high reactor trip setpoint in the #3 SG.",
+      "match_key": "FailureMode:3-sg-level-rose-to-high-high-trip-setpoint"
+    },
+    {
+      "id": "cons_trip",
+      "display_name": "Automatic reactor trip with RPS and AFW actuation",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2022-11-10T07:44",
+      "end": null,
+      "duration": null,
+      "tz": "local",
+      "match_key": "Consequence:automatic-reactor-trip-with-rps-and-afw-actuation"
+    },
+    {
+      "id": "ca_speedcontrol",
+      "display_name": "Direct operation of Main Feed Pumps in speed control at higher DP during power ascension",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:direct-operation-of-main-feed-pumps-in-speed-control-at-higher-dp-during-power-ascension"
+    },
+    {
+      "id": "ca_tuning",
+      "display_name": "Adjust digital tuning of feedwater regulating valve positioners",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:adjust-digital-tuning-of-feedwater-regulating-valve-positioners"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5072b2",
+      "display_name": "10 CFR 50.72(b)(2)(iv)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-2-iv-b"
+    },
+    {
+      "id": "rr_5072b3",
+      "display_name": "10 CFR 50.72(b)(3)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-3-iv-a"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072b2",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072b3",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sg",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_fw",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_afw",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rps",
+      "evidence": null
+    },
+    {
+      "source": "c_sg3",
+      "relation": "PART_OF",
+      "target": "sys_sg",
+      "evidence": null
+    },
+    {
+      "source": "fm_tuning",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_tuning",
+      "relation": "LEADS_TO",
+      "target": "fm_oscillation",
+      "evidence": null
+    },
+    {
+      "source": "fm_oscillation",
+      "relation": "LEADS_TO",
+      "target": "fm_sglevel",
+      "evidence": null
+    },
+    {
+      "source": "fm_sglevel",
+      "relation": "LEADS_TO",
+      "target": "cons_trip",
+      "evidence": null
+    },
+    {
+      "source": "cons_trip",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_afw",
+      "evidence": null
+    },
+    {
+      "source": "cons_trip",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_cond",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_speedcontrol",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_tuning",
+      "evidence": null
+    }
+  ],
+  "chain": "digital positioner tuning effects not recognized [cause TBD] -> unrecoverable feedwater oscillations during power ascension -> #3 SG level rises to high-high setpoint -> automatic reactor trip with RPS/AFW actuation [backups AFW, Condenser Steam Dump operated as expected]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code is TBD/provisional per FORM-366 fields; a root cause evaluation was ongoing at submittal, with a supplement expected if causes/corrective actions differ. Component section explicitly states no component failures contributed to the event, so no hardware FailureMode nodes were created for valves/pumps themselves — the failure chain is organizational/operational (positioner tuning misunderstanding -> pump operating mode -> oscillations -> high level trip). AFW and Condenser Steam Dump are modeled as backups since narrative states they 'started as required and operated properly' / 'operated as expected' during the event. RPS modeled as involved system due to its actuation being the reporting basis. Docket-only LER number used since FORM-366 did not supply the sequential LER number; ler_number field synthesized as 316-2022-999-00 placeholder pattern (docket-year) per available data — actual sequence number not provided in inputs."
+}

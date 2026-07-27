@@ -1,0 +1,370 @@
+{
+  "ler_number": "395-2024-002-01",
+  "identity": {
+    "accession_number": "ML25028A244",
+    "docket": "05000395",
+    "plant_name": "Summer",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2024-08-20",
+    "report_date": "2025-01-28",
+    "operating_mode": null,
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Loss of Control Room Emergency Filtration System"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)",
+      "10 CFR 50.73(a)(2)(v)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "A",
+      "system": "VI",
+      "component": "DMP",
+      "manufacturer": "B038",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "Knowledge gap by the shift manager in understanding what made A train of CREFS inoperable and that both trains being inoperable led to entry into TS 3.0.3; shift management failed to engage additional resources when questioned on operability of the CREFS with the 'A' CRVS Damper (XDP0022A) stuck open; inaccurate risk perception when performing STP-454.002",
+    "cause_code": "A",
+    "category": "Personnel Error",
+    "theme": "operability knowledge gap / inadequate risk screening of cross-train surveillance",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 395-2024-002-01",
+      "properties": {},
+      "type": "LER",
+      "key": "395-2024-002-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:395-2024-002-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Summer Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000395",
+      "match_key": "Unit:05000395"
+    },
+    {
+      "id": "cause",
+      "display_name": "Personnel Error (A)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "A",
+      "category": "Personnel Error",
+      "theme": "operability knowledge gap / inadequate risk screening of cross-train surveillance",
+      "proximate_text": "Knowledge gap by the shift manager in understanding what made A train of CREFS inoperable and that both trains being inoperable led to entry into TS 3.0.3; shift management failed to engage additional resources when questioned on operability of the CREFS with the 'A' CRVS Damper (XDP0022A) stuck open; inaccurate risk perception when performing STP-454.002",
+      "provisional": false,
+      "match_key": "Cause:Personnel Error"
+    },
+    {
+      "id": "sys_vi",
+      "display_name": "Control Room Emergency Filtration System (CREFS)",
+      "properties": {
+        "note": "control room ventilation/emergency filtration system, two trains A and B"
+      },
+      "type": "System",
+      "eiis_code": "VI",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:VI"
+    },
+    {
+      "id": "c_damper",
+      "display_name": "Control Room Air Handling Unit A Control Damper (XDP0022A)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "DMP",
+      "identifier": "XDP0022A",
+      "model": null,
+      "manufacturer_code": "B038",
+      "inferred_code": false,
+      "match_key": "Component:DMP|XDP0022A"
+    },
+    {
+      "id": "mfr_bahnsen",
+      "display_name": "Bahnsen",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "B038",
+      "match_key": "Manufacturer:B038"
+    },
+    {
+      "id": "fm_knowledge_gap",
+      "display_name": "Shift manager knowledge gap on CREFS operability impact",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Knowledge gap by the shift manager in understanding what made A train of CREFS inoperable and that both trains being inoperable led to entry into TS 3.0.3",
+      "match_key": "FailureMode:shift-manager-knowledge-gap-on-crefs-operability-impact"
+    },
+    {
+      "id": "fm_no_escalation",
+      "display_name": "Shift management failed to engage additional resources",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Shift management failed to engage additional resources when questioned on operability of the CREFS with the 'A' CRVS Damper (XDP0022A) stuck open",
+      "match_key": "FailureMode:shift-management-failed-to-engage-additional-resources"
+    },
+    {
+      "id": "fm_risk_perception",
+      "display_name": "Inaccurate risk perception performing surveillance",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Inaccurate risk perception when performing STP-454.002 with cross-train operations on CREFS",
+      "match_key": "FailureMode:inaccurate-risk-perception-performing-surveillance"
+    },
+    {
+      "id": "fm_damper_fail",
+      "display_name": "Control Damper XDP0022A failed to close upon demand",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "At 1015 EDT, XDP0022A failed to close upon demand during surveillance test, rendering A train CREFS inoperable",
+      "match_key": "FailureMode:control-damper-xdp0022a-failed-to-close-upon-demand"
+    },
+    {
+      "id": "cons_crefs",
+      "display_name": "Both trains of CREFS inoperable / loss of control room emergency filtration capability",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2024-08-20T10:15",
+      "end": "2024-08-20T21:07",
+      "duration": "10:52",
+      "tz": "EDT",
+      "match_key": "Consequence:both-trains-of-crefs-inoperable-loss-of-control-room-emergency-filtration-capability"
+    },
+    {
+      "id": "ca_screen_stp",
+      "display_name": "Screen STP-454.002 for operational risk using WM-AA-301",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:screen-stp-454-002-for-operational-risk-using-wm-aa-301"
+    },
+    {
+      "id": "ca_identify_surveillances",
+      "display_name": "Identify other CREFS surveillances not screened appropriately for operational risk",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:identify-other-crefs-surveillances-not-screened-appropriately-for-operational-risk"
+    },
+    {
+      "id": "ca_gap_analysis",
+      "display_name": "Perform performance gap analysis of CREFS operability/reportability knowledge",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:perform-performance-gap-analysis-of-crefs-operability-reportability-knowledge"
+    },
+    {
+      "id": "ca_reinstitute_checklist",
+      "display_name": "Re-institute emergent items checklist from OAP-100.2",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:re-institute-emergent-items-checklist-from-oap-100-2"
+    },
+    {
+      "id": "ca_feedback_wmaa301",
+      "display_name": "Submit procedure feedback to WM-AA-301 on cross-train operational risk",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:submit-procedure-feedback-to-wm-aa-301-on-cross-train-operational-risk"
+    },
+    {
+      "id": "ca_review_procedures",
+      "display_name": "Review control room ventilation procedures for similar vulnerabilities",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:review-control-room-ventilation-procedures-for-similar-vulnerabilities"
+    },
+    {
+      "id": "ca_coach_sm",
+      "display_name": "Coach relief shift manager on knowledge gap of stuck damper effect on CREFS operability",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:coach-relief-shift-manager-on-knowledge-gap-of-stuck-damper-effect-on-crefs-operability"
+    },
+    {
+      "id": "ca_distribute_info",
+      "display_name": "Distribute event information site-wide via department clock reset",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:distribute-event-information-site-wide-via-department-clock-reset"
+    },
+    {
+      "id": "rr_5073_i_B",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_5073_v",
+      "display_name": "10 CFR 50.73(a)(2)(v)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v"
+    },
+    {
+      "id": "rr_ts303",
+      "display_name": "Technical Specification 3.0.3",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-3-0-3"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_i_B",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_v",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_vi",
+      "evidence": null
+    },
+    {
+      "source": "c_damper",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_bahnsen",
+      "evidence": null
+    },
+    {
+      "source": "fm_knowledge_gap",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_knowledge_gap",
+      "relation": "LEADS_TO",
+      "target": "fm_no_escalation",
+      "evidence": null
+    },
+    {
+      "source": "fm_no_escalation",
+      "relation": "LEADS_TO",
+      "target": "fm_risk_perception",
+      "evidence": null
+    },
+    {
+      "source": "fm_risk_perception",
+      "relation": "LEADS_TO",
+      "target": "fm_damper_fail",
+      "evidence": null
+    },
+    {
+      "source": "fm_damper_fail",
+      "relation": "LEADS_TO",
+      "target": "cons_crefs",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_screen_stp",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_identify_surveillances",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_gap_analysis",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_reinstitute_checklist",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_feedback_wmaa301",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_review_procedures",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_coach_sm",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_distribute_info",
+      "evidence": null
+    }
+  ],
+  "chain": "knowledge gap re: CREFS operability [cause A] -> failure to engage additional resources -> inaccurate risk perception during cross-train surveillance -> Control Damper XDP0022A failed to close on demand -> A train CREFS inoperable while B train out for maintenance -> both trains of CREFS inoperable / loss of control room emergency filtration capability (10h52m) [no operable backup train available during window]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Narrative attributes cause to three related personnel-error factors (knowledge gap, failure to escalate, inaccurate risk perception during surveillance planning); modeled as three sequential FailureMode nodes preceding the physical damper failure, consistent with cause_code A (Personnel Error) governing category. B train CREFS was out for planned maintenance (not an available operable backup) so no BACKED_UP_BY edge is asserted; both trains were simultaneously unavailable during the event window, which is the core reportable safety consequence."
+}

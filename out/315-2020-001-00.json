@@ -1,0 +1,303 @@
+{
+  "ler_number": "315-2020-001-00",
+  "identity": {
+    "accession_number": "ML20353A109",
+    "docket": "05000315",
+    "plant_name": "D.C. Cook",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2020-10-12",
+    "report_date": "2020-12-09",
+    "operating_mode": "5",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Containment Closure Requirements Not Met During Refueling Operations"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)",
+      "10 CFR 50.73(a)(2)(1)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "D",
+      "system": "NH",
+      "component": "AL",
+      "manufacturer": "Trentec",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "lack of procedural guidance for verifying containment closure capability of the equalization valves in Operations procedures",
+    "cause_code": "D",
+    "category": "Defective Procedure",
+    "theme": "Missing procedural verification step for equalization valve reinstallation",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 315-2020-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "315-2020-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:315-2020-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "D.C. Cook Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000315",
+      "match_key": "Unit:05000315"
+    },
+    {
+      "id": "cause",
+      "display_name": "Defective Procedure (D)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "D",
+      "category": "Defective Procedure",
+      "theme": "Missing procedural verification step for equalization valve reinstallation",
+      "proximate_text": "lack of procedural guidance for verifying containment closure capability of the equalization valves in Operations procedures",
+      "provisional": false,
+      "match_key": "Cause:Defective Procedure"
+    },
+    {
+      "id": "sys_nh",
+      "display_name": "Containment",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "NH",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:NH"
+    },
+    {
+      "id": "c_airlock",
+      "display_name": "Unit 1 Containment 612 Elevation Personnel Airlock Assembly",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "AL",
+      "identifier": "612 Elevation Personnel Airlock",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:AL|612 Elevation Personnel Airlock"
+    },
+    {
+      "id": "c_eqvalves",
+      "display_name": "Personnel Airlock equalization valves",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": "Trentec",
+      "inferred_code": false,
+      "match_key": "Component:personnel-airlock-equalization-valves"
+    },
+    {
+      "id": "mfr_trentec",
+      "display_name": "Trentec",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "Trentec",
+      "match_key": "Manufacturer:Trentec"
+    },
+    {
+      "id": "fm_removed",
+      "display_name": "Equalization valves removed for PM and not reinstalled",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "MTM removed the airlock equalization valve assemblies on 10/2/2020 for PM/Barrel Test work; work stopped due to hardware questions; valves not reinstalled until 10/12/2020 at 20:00.",
+      "match_key": "FailureMode:equalization-valves-removed-for-pm-and-not-reinstalled"
+    },
+    {
+      "id": "fm_procgap",
+      "display_name": "Refueling Integrity data sheet lacks equalization valve verification",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "1-OHP-4030-127-041, Refueling Integrity, Data Sheet 2, does not include guidance to verify status of the equalization valves, though it verifies other Airlock/Hatch penetration status prior to fuel movement.",
+      "match_key": "FailureMode:refueling-integrity-data-sheet-lacks-equalization-valve-verification"
+    },
+    {
+      "id": "fm_penopen",
+      "display_name": "Containment penetration not closed during irradiated fuel movement",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "A Containment Penetration (equalization valves) providing direct path from Containment atmosphere to outside atmosphere was not closed by a manual/automatic isolation valve, blind flange, or equivalent during fuel movement, in violation of TS LCO 3.9.3.",
+      "match_key": "FailureMode:containment-penetration-not-closed-during-irradiated-fuel-movement"
+    },
+    {
+      "id": "cons_ts",
+      "display_name": "TS LCO 3.9.3 Condition A not met / Containment closure requirement violated during irradiated fuel movement",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2020-10-04T16:16",
+      "end": "2020-10-06T14:44",
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:ts-lco-3-9-3-condition-a-not-met-containment-closure-requirement-violated-during-irradiated-fuel-movement"
+    },
+    {
+      "id": "ca_reinstall",
+      "display_name": "Reinstall equalization valves (at discovery)",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:reinstall-equalization-valves-at-discovery"
+    },
+    {
+      "id": "ca_rev_refuel",
+      "display_name": "Revise Refueling Integrity procedures (1-OHP-4030-127-041, 2-OHP-4030-227-041) to verify equalizing valves installed and intact",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-refueling-integrity-procedures-1-ohp-4030-127-041-2-ohp-4030-227-041-to-verify-equalizing-valves-installed-and-intact"
+    },
+    {
+      "id": "ca_rev_ci",
+      "display_name": "Revise Containment Isolation procedures (1-OHP-4030-114-010, 2-OHP-4030-214-010) to verify equalizing valves installed and intact",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-containment-isolation-procedures-1-ohp-4030-114-010-2-ohp-4030-214-010-to-verify-equalizing-valves-installed-and-intact"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts393",
+      "display_name": "TS LCO 3.9.3",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-lco-3-9-3"
+    },
+    {
+      "id": "rr_ufsar142",
+      "display_name": "UFSAR Section 14.2.1.5/14.2.1.6",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:ufsar-section-14-2-1-5-14-2-1-6"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts393",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_nh",
+      "evidence": null
+    },
+    {
+      "source": "c_airlock",
+      "relation": "PART_OF",
+      "target": "sys_nh",
+      "evidence": null
+    },
+    {
+      "source": "c_eqvalves",
+      "relation": "PART_OF",
+      "target": "c_airlock",
+      "evidence": null
+    },
+    {
+      "source": "c_eqvalves",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_trentec",
+      "evidence": null
+    },
+    {
+      "source": "fm_procgap",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_procgap",
+      "relation": "LEADS_TO",
+      "target": "fm_removed",
+      "evidence": null
+    },
+    {
+      "source": "fm_removed",
+      "relation": "LEADS_TO",
+      "target": "fm_penopen",
+      "evidence": null
+    },
+    {
+      "source": "fm_penopen",
+      "relation": "LEADS_TO",
+      "target": "cons_ts",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_reinstall",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_rev_refuel",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_rev_ci",
+      "evidence": null
+    }
+  ],
+  "chain": "lack of procedural guidance for verifying equalization valve status [cause D] -> equalization valves removed for PM and not reinstalled -> Refueling Integrity data sheet lacks equalization valve check -> containment penetration left open during irradiated fuel movement -> TS LCO 3.9.3 Condition A not met (10/4 16:16 - 10/6 14:44)",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "No radiological/nuclear/industrial safety consequence occurred; FHA analysis does not credit Containment Isolation so RG 1.183/50.67 criteria unaffected. No BACKED_UP_BY relationships apply - this is a procedural/administrative event, not an equipment failure with redundant backup systems. Previous similar events review found none in past five years, so no stub LER/SIMILAR_TO edge is emitted. Block-13 system code NH interpreted as Containment; component code AL as Airlock per narrative bracket tags."
+}

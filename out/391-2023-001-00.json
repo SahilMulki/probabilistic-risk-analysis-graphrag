@@ -1,0 +1,388 @@
+{
+  "ler_number": "391-2023-001-00",
+  "identity": {
+    "accession_number": "ML23201A109",
+    "docket": "05000391",
+    "plant_name": "Watts Bar",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2023-05-25",
+    "report_date": "2023-07-20",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Unanalyzed Condition Related to . Loss of the 2A Emergency Diesel Generator During a Postulated Appendix R Fire"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(ii)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The cause is a legacy design issue which failed to recognize the Normal and Alternate Feeders share the same breaker on the associated 480V shutdown board (2-BD-212-A1-A and 2-BD-212-A2-A). Design Change 54192 issued in 2010 during Unit 2 completion rerouted and wrapped the Normal Feeder but did not include the Alternate Feeder.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "legacy Appendix R design/analysis error",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 391-2023-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "391-2023-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:391-2023-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Watts Bar Unit 2",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000391",
+      "match_key": "Unit:05000391"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "legacy Appendix R design/analysis error",
+      "proximate_text": "The cause is a legacy design issue which failed to recognize the Normal and Alternate Feeders share the same breaker on the associated 480V shutdown board (2-BD-212-A1-A and 2-BD-212-A2-A). Design Change 54192 issued in 2010 during Unit 2 completion rerouted and wrapped the Normal Feeder but did not include the Alternate Feeder.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_dg",
+      "display_name": "Emergency Diesel Generator",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "DG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "credited fire-safe-shutdown AC power source, lost",
+      "match_key": "System:DG"
+    },
+    {
+      "id": "sys_swgr",
+      "display_name": "480V Diesel Auxiliary Board Switchgear",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SWGR",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "480V Diesel Auxiliary Boards 2A1-A and 2A2-A",
+      "match_key": "System:SWGR"
+    },
+    {
+      "id": "sys_afwp",
+      "display_name": "Turbine Driven Auxiliary Feedwater Pump",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "P",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup cooling; battery-powered valving",
+      "match_key": "System:P"
+    },
+    {
+      "id": "c_cable_normal",
+      "display_name": "Normal Feeder Cable",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "CBL",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:CBL"
+    },
+    {
+      "id": "c_cable_alt",
+      "display_name": "Alternate Feeder Cable",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "CBL",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:CBL"
+    },
+    {
+      "id": "c_breaker",
+      "display_name": "Common breaker on 480V shutdown board (2-BD-212-A001-A / 2-BD-212-A002-A)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "2-BD-212-A001-A / 2-BD-212-A002-A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:common-breaker-on-480v-shutdown-board-2-bd-212-a001-a-2-bd-212-a002-a"
+    },
+    {
+      "id": "c_mcc",
+      "display_name": "480V Diesel Auxiliary Boards (2-MCC-215-A001-A and 2-MCC-215-A002-A)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "SWGR",
+      "identifier": "2-MCC-215-A001-A / 2-MCC-215-A002-A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:SWGR|2-MCC-215-A001-A / 2-MCC-215-A002-A"
+    },
+    {
+      "id": "fm_design",
+      "display_name": "Fire barrier resolution incorrectly applied only to Alternate Feeder Cable, leaving it unprotected in fire area 737-A1B",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Design Change 54192 (2010) rerouted/wrapped the Normal Feeder but did not include the Alternate Feeder, failing to recognize both feeders share a common breaker.",
+      "match_key": "FailureMode:fire-barrier-resolution-incorrectly-applied-only-to-alternate-feeder-cable-leaving-it-unprotected-in-fire-area-737-a1b"
+    },
+    {
+      "id": "fm_sharedbreaker",
+      "display_name": "Unprotected Alternate Feeder Cable exposes shared breaker to fire-induced short to ground",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "A fire in area 737-A1B could fault the unprotected alternate cable, tripping the common breaker shared with the Normal Feeder.",
+      "match_key": "FailureMode:unprotected-alternate-feeder-cable-exposes-shared-breaker-to-fire-induced-short-to-ground"
+    },
+    {
+      "id": "fm_lossboards",
+      "display_name": "Loss of 480V Diesel Auxiliary Boards 2A1-A and 2A2-A",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Common breaker trip on ground fault results in loss of the 480V Diesel Auxiliary Boards.",
+      "match_key": "FailureMode:loss-of-480v-diesel-auxiliary-boards-2a1-a-and-2a2-a"
+    },
+    {
+      "id": "fm_lossedg",
+      "display_name": "Loss of 2A Emergency Diesel Generator",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Loss of the 480V Diesel Auxiliary Boards results in loss of the 2A EDG, the credited power source for fire safe shutdown in this area.",
+      "match_key": "FailureMode:loss-of-2a-emergency-diesel-generator"
+    },
+    {
+      "id": "cons_unanalyzed",
+      "display_name": "Unanalyzed condition: Unit 2 without credited onsite AC power source during postulated Appendix R fire",
+      "properties": {
+        "note": "plant response would be similar to a station blackout; several hours available to align FLEX DG"
+      },
+      "type": "Consequence",
+      "start": "2010",
+      "end": "2023-06-10T13:38",
+      "duration": null,
+      "tz": "EDT",
+      "match_key": "Consequence:unanalyzed-condition-unit-2-without-credited-onsite-ac-power-source-during-postulated-appendix-r-fire"
+    },
+    {
+      "id": "ca_firewatch",
+      "display_name": "Institute fire watch pending correction",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:institute-fire-watch-pending-correction"
+    },
+    {
+      "id": "ca_moddisconnect",
+      "display_name": "Implement Design Change WBN-23-034 disconnecting Alternate Feeder Cable from 480V Shutdown Board",
+      "properties": {
+        "work_order": "123783604",
+        "date": "2023-06-10"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:implement-design-change-wbn-23-034-disconnecting-alternate-feeder-cable-from-480v-shutdown-board"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(ii)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-ii-b"
+    },
+    {
+      "id": "ler_390_2013_005",
+      "display_name": "LER 390-2013-005-00",
+      "properties": {},
+      "type": "LER",
+      "key": "390-2013-005-00",
+      "stub": true,
+      "title": null,
+      "plant": "Watts Bar Nuclear Plant",
+      "match_key": "LER:390-2013-005-00"
+    },
+    {
+      "id": "ler_390_2014_004",
+      "display_name": "LER 390-2014-004-02",
+      "properties": {},
+      "type": "LER",
+      "key": "390-2014-004-02",
+      "stub": true,
+      "title": null,
+      "plant": "Watts Bar Nuclear Plant",
+      "match_key": "LER:390-2014-004-02"
+    },
+    {
+      "id": "ler_390_2015_002",
+      "display_name": "LER 390-2015-002-01",
+      "properties": {},
+      "type": "LER",
+      "key": "390-2015-002-01",
+      "stub": true,
+      "title": null,
+      "plant": "Watts Bar Nuclear Plant",
+      "match_key": "LER:390-2015-002-01"
+    },
+    {
+      "id": "ler_390_2015_004",
+      "display_name": "LER 390-2015-004-01",
+      "properties": {},
+      "type": "LER",
+      "key": "390-2015-004-01",
+      "stub": true,
+      "title": null,
+      "plant": "Watts Bar Nuclear Plant",
+      "match_key": "LER:390-2015-004-01"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_dg",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_swgr",
+      "evidence": null
+    },
+    {
+      "source": "c_breaker",
+      "relation": "PART_OF",
+      "target": "sys_swgr",
+      "evidence": null
+    },
+    {
+      "source": "c_mcc",
+      "relation": "PART_OF",
+      "target": "sys_swgr",
+      "evidence": null
+    },
+    {
+      "source": "fm_design",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_design",
+      "relation": "LEADS_TO",
+      "target": "fm_sharedbreaker",
+      "evidence": null
+    },
+    {
+      "source": "fm_sharedbreaker",
+      "relation": "LEADS_TO",
+      "target": "fm_lossboards",
+      "evidence": null
+    },
+    {
+      "source": "fm_lossboards",
+      "relation": "LEADS_TO",
+      "target": "fm_lossedg",
+      "evidence": null
+    },
+    {
+      "source": "fm_lossedg",
+      "relation": "LEADS_TO",
+      "target": "cons_unanalyzed",
+      "evidence": null
+    },
+    {
+      "source": "cons_unanalyzed",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_afwp",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_firewatch",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_moddisconnect",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_390_2013_005",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_390_2014_004",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_390_2015_002",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_390_2015_004",
+      "evidence": null
+    }
+  ],
+  "chain": "legacy design/analysis error (2010 DC 54192) [cause TBD] -> alternate feeder cable left unprotected in fire area 737-A1B -> fire-induced short to ground trips shared breaker -> loss of 480V Diesel Auxiliary Boards 2A1-A/2A2-A -> loss of 2A EDG -> unanalyzed condition resembling station blackout [backup: TDAFWP, battery power, FLEX DG available within hours]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause_code/category are TBD/provisional per FORM-366 fields, copied verbatim even though the narrative clearly attributes the issue to a legacy design/analysis deficiency (theme captures this). No component failed during the event (Section D: N/A) — this is a discovered unanalyzed design condition, not a hardware failure, so FailureMode nodes represent the logical/design defect chain rather than physical component breakdowns. TDAFWP asserted as backup because Section V states cooling 'is provided by' it and batteries/FLEX DG could support safe shutdown for hours — treated as stated-available capability, not mere design-basis narration. Previous similar LERs are for Unit 1 (same site, docket 390) and are emitted as stubs per instructions, using unit digit from the report exactly as stated."
+}

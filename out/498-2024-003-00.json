@@ -1,0 +1,461 @@
+{
+  "ler_number": "498-2024-003-00",
+  "identity": {
+    "accession_number": "ML24183A174",
+    "docket": "05000498",
+    "plant_name": "South Texas",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2024-05-06",
+    "report_date": "2024-07-01",
+    "operating_mode": "3",
+    "power_level": 100,
+    "discovery_context": "operability test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Condition Prohibited by Technical Specifications and Potential Loss of Safety Function Due to Inoperable Low Head Safety Injection Pump"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)",
+      "10 CFR 50.73(a)(2)(v)(D)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The cause of the event was determined to be an error by the vendor when the washer was introduced into the breaker prior to shipping to STP.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "vendor-introduced foreign material during manufacture",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 498-2024-003-00",
+      "properties": {
+        "match_key": "LER:498-2024-003-00"
+      },
+      "type": "LER",
+      "key": "498-2024-003-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:498-2024-003-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "South Texas Unit 1",
+      "properties": {
+        "match_key": "Unit:05000498",
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000498",
+      "match_key": "Unit:05000498"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {
+        "match_key": "Cause:provisional"
+      },
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "vendor-introduced foreign material during manufacture",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_bp",
+      "display_name": "Residual Heat Removal/Low Pressure Safety Injection System",
+      "properties": {
+        "match_key": "System:BP"
+      },
+      "type": "System",
+      "eiis_code": "BP",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "LHSI train; affected system",
+      "match_key": "System:BP"
+    },
+    {
+      "id": "sys_hhsi",
+      "display_name": "High Head Safety Injection",
+      "properties": {
+        "match_key": "System:high-head-safety-injection"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "ECCS train, part of Train A rendered inoperable",
+      "match_key": "System:high-head-safety-injection"
+    },
+    {
+      "id": "sys_css",
+      "display_name": "Containment Spray System",
+      "properties": {
+        "match_key": "System:containment-spray-system"
+      },
+      "type": "System",
+      "eiis_code": "BE",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected via cubicle cooler fans not starting",
+      "match_key": "System:BE"
+    },
+    {
+      "id": "c_pump",
+      "display_name": "LHSI Pump 1A",
+      "properties": {
+        "match_key": "Component:P|1A"
+      },
+      "type": "Component",
+      "eiis_code": "P",
+      "identifier": "1A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:P|1A"
+    },
+    {
+      "id": "c_breaker",
+      "display_name": "LHSI Pump 1A Breaker",
+      "properties": {
+        "match_key": "Component:BKR|1A"
+      },
+      "type": "Component",
+      "eiis_code": "BKR",
+      "identifier": null,
+      "model": "5HKR-250-1200-58",
+      "manufacturer_code": "S125",
+      "inferred_code": false,
+      "match_key": "Component:BKR"
+    },
+    {
+      "id": "c_washer",
+      "display_name": "Unrestrained washer on support plate above 'A' phase vacuum interrupter",
+      "properties": {
+        "match_key": "Component:unrestrained-washer"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:unrestrained-washer-on-support-plate-above-a-phase-vacuum-interrupter"
+    },
+    {
+      "id": "fm_fm_intro",
+      "display_name": "Foreign material (washer) introduced into breaker during manufacture",
+      "properties": {
+        "match_key": "FailureMode:foreign-material-introduced"
+      },
+      "type": "FailureMode",
+      "description": "Vendor error introduced an unrestrained washer into the breaker prior to shipment; not detected by receipt or pre-installation inspections.",
+      "match_key": "FailureMode:foreign-material-washer-introduced-into-breaker-during-manufacture"
+    },
+    {
+      "id": "fm_seismic",
+      "display_name": "Seismic qualification of breaker degraded",
+      "properties": {
+        "match_key": "FailureMode:seismic-qualification-degraded"
+      },
+      "type": "FailureMode",
+      "description": "Presence of the washer adversely impacted the seismic qualification of the breaker.",
+      "match_key": "FailureMode:seismic-qualification-of-breaker-degraded"
+    },
+    {
+      "id": "fm_binding",
+      "display_name": "Breaker mechanical binding / closed-position latch failure",
+      "properties": {
+        "match_key": "FailureMode:mechanical-binding-latch-failure"
+      },
+      "type": "FailureMode",
+      "description": "Most likely cause of breaker failure to close was mechanical binding or failure of the closed position latch, both potentially caused by the washer.",
+      "match_key": "FailureMode:breaker-mechanical-binding-closed-position-latch-failure"
+    },
+    {
+      "id": "fm_breaker_fail",
+      "display_name": "Breaker failed to fully close",
+      "properties": {
+        "match_key": "FailureMode:breaker-failed-to-close"
+      },
+      "type": "FailureMode",
+      "description": "Washer prevented the breaker from fully closing; circuit to energize LHSI pump 1A was not completed.",
+      "match_key": "FailureMode:breaker-failed-to-fully-close"
+    },
+    {
+      "id": "fm_pump_fail",
+      "display_name": "LHSI Pump 1A failed to start",
+      "properties": {
+        "match_key": "FailureMode:lhsi-pump-failed-to-start"
+      },
+      "type": "FailureMode",
+      "description": "On 04/21/2024, LHSI Pump 1A failed to start during RHR valve operability test; red light never illuminated, brief thump heard, no shaft rotation observed.",
+      "match_key": "FailureMode:lhsi-pump-1a-failed-to-start"
+    },
+    {
+      "id": "cons_inop",
+      "display_name": "LHSI Pump 1A / Train A ECCS inoperable; TS 3.5.2 not entered; potential loss of safety function",
+      "properties": {
+        "match_key": "Consequence:lhsi-pump-inoperable-ts-violation"
+      },
+      "type": "Consequence",
+      "start": "2023-04-04T23:17",
+      "end": "2024-04-25T03:41",
+      "duration": "386 days 0:24",
+      "tz": "CDT",
+      "match_key": "Consequence:lhsi-pump-1a-train-a-eccs-inoperable-ts-3-5-2-not-entered-potential-loss-of-safety-function"
+    },
+    {
+      "id": "ca_extent",
+      "display_name": "Extent of Condition review on all 4.16kV safety related breakers procured under PO 264203",
+      "properties": {
+        "match_key": "CorrectiveAction:extent-of-condition-review"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:extent-of-condition-review-on-all-4-16kv-safety-related-breakers-procured-under-po-264203"
+    },
+    {
+      "id": "ca_fmi_a9",
+      "display_name": "Foreign material inspection of breaker A2PKSG0E1A9",
+      "properties": {
+        "match_key": "CorrectiveAction:fmi-breaker-a9"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:foreign-material-inspection-of-breaker-a2pksg0e1a9"
+    },
+    {
+      "id": "ca_fmi_a10",
+      "display_name": "Foreign material inspection of breaker A2PKSG0E1A10",
+      "properties": {
+        "match_key": "CorrectiveAction:fmi-breaker-a10"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:foreign-material-inspection-of-breaker-a2pksg0e1a10"
+    },
+    {
+      "id": "mfr_siemens",
+      "display_name": "Siemens",
+      "properties": {
+        "match_key": "Manufacturer:S125"
+      },
+      "type": "Manufacturer",
+      "code": "S125",
+      "match_key": "Manufacturer:S125"
+    },
+    {
+      "id": "rr_5073i",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion",
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_5073v",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {
+        "type": "reporting-criterion",
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "rr_ts352",
+      "display_name": "TS 3.5.2 (ECCS)",
+      "properties": {
+        "type": "license-basis",
+        "match_key": "RegulatoryReference:ts-3-5-2"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ts-3-5-2-eccs"
+    },
+    {
+      "id": "rr_crmp",
+      "display_name": "Configuration Risk Management Program",
+      "properties": {
+        "type": "standard/guidance",
+        "match_key": "RegulatoryReference:crmp"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:configuration-risk-management-program"
+    },
+    {
+      "id": "rr_rg1174",
+      "display_name": "Regulatory Guide 1.174",
+      "properties": {
+        "type": "standard/guidance",
+        "match_key": "RegulatoryReference:rg-1-174"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:regulatory-guide-1-174"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073i",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073v",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts352",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_crmp",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_rg1174",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bp",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_hhsi",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_css",
+      "evidence": null
+    },
+    {
+      "source": "c_pump",
+      "relation": "PART_OF",
+      "target": "sys_bp",
+      "evidence": null
+    },
+    {
+      "source": "fm_fm_intro",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_fm_intro",
+      "relation": "LEADS_TO",
+      "target": "fm_seismic",
+      "evidence": null
+    },
+    {
+      "source": "fm_fm_intro",
+      "relation": "LEADS_TO",
+      "target": "fm_binding",
+      "evidence": null
+    },
+    {
+      "source": "fm_binding",
+      "relation": "LEADS_TO",
+      "target": "fm_breaker_fail",
+      "evidence": null
+    },
+    {
+      "source": "fm_breaker_fail",
+      "relation": "LEADS_TO",
+      "target": "fm_pump_fail",
+      "evidence": null
+    },
+    {
+      "source": "fm_pump_fail",
+      "relation": "LEADS_TO",
+      "target": "cons_inop",
+      "evidence": null
+    },
+    {
+      "source": "fm_seismic",
+      "relation": "LEADS_TO",
+      "target": "cons_inop",
+      "evidence": null
+    },
+    {
+      "source": "c_washer",
+      "relation": "PART_OF",
+      "target": "c_breaker",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_extent",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_fmi_a9",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_fmi_a10",
+      "evidence": null
+    },
+    {
+      "source": "c_breaker",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_siemens",
+      "evidence": null
+    }
+  ],
+  "chain": "vendor error introduces foreign material (unrestrained washer) into breaker [cause TBD] -> seismic qualification degraded / mechanical binding or closed-position latch failure -> breaker fails to fully close -> LHSI Pump 1A fails to start -> Train A ECCS/LHSI inoperable for 386 days, TS 3.5.2 not entered, potential loss of safety function",
+  "golden_questions": [
+    "Q1",
+    "Q4",
+    "Q9",
+    "Q14"
+  ],
+  "notes": "Cause code officially TBD/provisional per FORM-366 fields, despite narrative clearly attributing root cause to vendor error (foreign material introduced during manufacture) per rule 4/9's instruction to copy code verbatim. No block_13 cause code was given in FORM-366 fields; only system/component/manufacturer were populated. No previous similar events were cited in Section VI (blank), so no stub LER/SIMILAR_TO edge emitted. HHSI and CSS modeled as involved systems because their cubicle cooler fans failed to start as part of the Train A inoperability, not as backups (no BACKED_UP_BY edges emitted, since no operable backup ECCS train is stated to have covered this specific window - risk assessment explicitly quantifies the vulnerability during the outage rather than describing an active backup)."
+}

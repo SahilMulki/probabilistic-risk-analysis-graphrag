@@ -1,0 +1,250 @@
+{
+  "ler_number": "389-2024-001-00",
+  "identity": {
+    "accession_number": "ML24044A167",
+    "docket": "05000389",
+    "plant_name": "Saint Lucie",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2023-12-15",
+    "report_date": "2024-02-13",
+    "operating_mode": "3",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Safety Injection Tank Vent Through Wall Leakage"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(ii)(A)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "B",
+      "system": "BQ",
+      "component": "PSF",
+      "manufacturer": null,
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The cause of the leak was stresses resulting in fatigue crack initiation and propagation. These stresses were related to internal pressure within the piping, bending stresses related to the vent valve weight and its mounting arrangement, and system vibration.",
+    "cause_code": "B",
+    "category": "Design/Manufacturing/Installation",
+    "theme": "Fatigue crack from vent valve weight/mounting bending stress plus vibration",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 389-2023-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "389-2024-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:389-2024-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Saint Lucie Unit 2",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000389",
+      "match_key": "Unit:05000389"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Manufacturing/Installation (B)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "B",
+      "category": "Design/Manufacturing/Installation",
+      "theme": "Fatigue crack from vent valve weight/mounting bending stress plus vibration",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Design/Manufacturing/Installation"
+    },
+    {
+      "id": "sys_bq",
+      "display_name": "Safety Injection Tank System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BQ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected system",
+      "match_key": "System:BQ"
+    },
+    {
+      "id": "c_sit",
+      "display_name": "Safety Injection Tank 2A2",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "SIT 2A2",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:safety-injection-tank-2a2"
+    },
+    {
+      "id": "c_piping",
+      "display_name": "SIT 2A2 outlet valve piping segment SI-227",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "PSF",
+      "identifier": "SI-227",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:PSF|SI-227"
+    },
+    {
+      "id": "c_ventvalve",
+      "display_name": "Vent valve (welded connection to SI-227)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:vent-valve-welded-connection-to-si-227"
+    },
+    {
+      "id": "fm_stress",
+      "display_name": "Combined stresses on vent valve weld (internal pressure, bending, vibration)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Internal pressure within the piping, bending stresses from vent valve weight and mounting arrangement, and system vibration acting on the welded connection",
+      "match_key": "FailureMode:combined-stresses-on-vent-valve-weld-internal-pressure-bending-vibration"
+    },
+    {
+      "id": "fm_fatigue",
+      "display_name": "Fatigue crack initiation and propagation",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Fatigue crack initiated and propagated at the vent valve welded connection",
+      "match_key": "FailureMode:fatigue-crack-initiation-and-propagation"
+    },
+    {
+      "id": "fm_throughwall",
+      "display_name": "Through-wall flaw at vent valve weld",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Crack propagated through the wall of the RCPB piping at the welded vent valve connection",
+      "match_key": "FailureMode:through-wall-flaw-at-vent-valve-weld"
+    },
+    {
+      "id": "cons_leak",
+      "display_name": "RCPB through-wall leakage / Degraded Condition",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2023-12-15",
+      "end": "2023-12-16",
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:rcpb-through-wall-leakage-degraded-condition"
+    },
+    {
+      "id": "ca_repair",
+      "display_name": "Repair SI-227 leaking connection",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:repair-si-227-leaking-connection"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(ii)(A)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-ii-a"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bq",
+      "evidence": null
+    },
+    {
+      "source": "c_sit",
+      "relation": "PART_OF",
+      "target": "sys_bq",
+      "evidence": null
+    },
+    {
+      "source": "c_piping",
+      "relation": "PART_OF",
+      "target": "sys_bq",
+      "evidence": null
+    },
+    {
+      "source": "fm_stress",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_stress",
+      "relation": "LEADS_TO",
+      "target": "fm_fatigue",
+      "evidence": null
+    },
+    {
+      "source": "fm_fatigue",
+      "relation": "LEADS_TO",
+      "target": "fm_throughwall",
+      "evidence": null
+    },
+    {
+      "source": "fm_throughwall",
+      "relation": "LEADS_TO",
+      "target": "cons_leak",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_repair",
+      "evidence": null
+    }
+  ],
+  "chain": "internal pressure + bending stress from vent valve weight/mounting + system vibration [cause B] -> fatigue crack initiation/propagation -> through-wall flaw at vent valve weld -> SIT vent leakage / Degraded Condition -> repaired same day",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "No SSFF; no SSCs inoperable at event start. No previous similar events identified in 5-year review, so no SIMILAR_TO edge/stub LER created. Component/system codes for piping (PSF) and system (BQ) taken from block 13 form fields since narrative does not restate EIIS brackets. Vent valve modeled as separate component from piping segment since narrative distinguishes 'welded connection of a vent valve' from the piping segment itself."
+}

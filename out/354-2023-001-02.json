@@ -1,0 +1,409 @@
+{
+  "ler_number": "354-2023-001-02",
+  "identity": {
+    "accession_number": "ML23269A205",
+    "docket": "05000354",
+    "plant_name": "Hope Creek",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2023-04-30",
+    "report_date": "2023-09-25",
+    "operating_mode": null,
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "02",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Technical Specification Required Shutdown due to Declaring the Suppression Chamber and Primary Containment Inoperable"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(A)",
+      "10 CFR 50.73(a)(2)(ii)",
+      "10 CFR 50.73(a)(2)(v)(D)",
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "torus-to-drywell vacuum breaker 'A' was not set appropriately to prevent mechanical interference from its associated Limit Switches or Closing Magnet Assemblies. This prevented the vacuum breaker from fully seating. Root cause: failure to assess a first-call preventive maintenance (PM) on torus-to-drywell vacuum breakers as high risk, so outage work management processes did not establish readiness milestones, appropriate readiness challenges, and effective risk management actions.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "PM risk-classification / outage work management weakness",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 354-2023-001-02",
+      "properties": {},
+      "type": "LER",
+      "key": "354-2023-001-02",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:354-2023-001-02"
+    },
+    {
+      "id": "unit",
+      "display_name": "Hope Creek Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000354",
+      "match_key": "Unit:05000354"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "PM risk-classification / outage work management weakness",
+      "proximate_text": "torus-to-drywell vacuum breaker 'A' was not set appropriately to prevent mechanical interference from its associated Limit Switches or Closing Magnet Assemblies. This prevented the vacuum breaker from fully seating. Root cause: failure to assess a first-call preventive maintenance (PM) on torus-to-drywell vacuum breakers as high risk, so outage work management processes did not establish readiness milestones, appropriate readiness challenges, and effective risk management actions.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_containment",
+      "display_name": "Primary Containment",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:primary-containment"
+    },
+    {
+      "id": "sys_suppression",
+      "display_name": "Suppression Chamber",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:suppression-chamber"
+    },
+    {
+      "id": "c_vb_a",
+      "display_name": "Torus-to-Drywell Vacuum Breaker 'A'",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:torus-to-drywell-vacuum-breaker-a"
+    },
+    {
+      "id": "c_limitswitch",
+      "display_name": "Limit Switches (vacuum breaker)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:limit-switches-vacuum-breaker"
+    },
+    {
+      "id": "c_closingmagnet",
+      "display_name": "Closing Magnet Assemblies (vacuum breaker)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:closing-magnet-assemblies-vacuum-breaker"
+    },
+    {
+      "id": "fm_pm_risk",
+      "display_name": "PM on vacuum breakers not assessed as high risk",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Outage work management processes did not establish readiness milestones, readiness challenges, or effective risk management actions for the first-call PM on torus-to-drywell vacuum breakers.",
+      "match_key": "FailureMode:pm-on-vacuum-breakers-not-assessed-as-high-risk"
+    },
+    {
+      "id": "fm_vb_misset",
+      "display_name": "Vacuum breaker 'A' not set to prevent mechanical interference",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Limit switches or closing magnet assemblies mechanically interfered with vacuum breaker 'A', preventing it from fully seating.",
+      "match_key": "FailureMode:vacuum-breaker-a-not-set-to-prevent-mechanical-interference"
+    },
+    {
+      "id": "fm_vb_bypass",
+      "display_name": "Vacuum breaker fails to fully seat / drywell-to-torus bypass leakage",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Vacuum breaker not fully seating caused unacceptable drywell-to-torus bypass leakage, preventing establishment of test conditions for SR 4.6.2.1.f.",
+      "match_key": "FailureMode:vacuum-breaker-fails-to-fully-seat-drywell-to-torus-bypass-leakage"
+    },
+    {
+      "id": "fm_misdiagnosis",
+      "display_name": "Condition misdiagnosed on discovery",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The condition was first identified and misdiagnosed on October 18, 2022, allowing continued operation in a condition prohibited by TS for roughly six months.",
+      "match_key": "FailureMode:condition-misdiagnosed-on-discovery"
+    },
+    {
+      "id": "cons_inop",
+      "display_name": "Primary containment and suppression chamber declared inoperable; TS-required shutdown",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2023-04-30",
+      "end": "2023-05-06",
+      "duration": "~6 days",
+      "tz": null,
+      "match_key": "Consequence:primary-containment-and-suppression-chamber-declared-inoperable-ts-required-shutdown"
+    },
+    {
+      "id": "ca_repair",
+      "display_name": "Identify and repair bypass leakage through vacuum breaker; complete SR 4.6.2.1.f; return to power",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:identify-and-repair-bypass-leakage-through-vacuum-breaker-complete-sr-4-6-2-1-f-return-to-power"
+    },
+    {
+      "id": "ca_procedures",
+      "display_name": "Improve procedures to better define and identify high-risk and non-recoverable work",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:improve-procedures-to-better-define-and-identify-high-risk-and-non-recoverable-work"
+    },
+    {
+      "id": "ca_reassess_risk",
+      "display_name": "Reassess risk classification of all eight torus-to-drywell vacuum breaker PMs",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:reassess-risk-classification-of-all-eight-torus-to-drywell-vacuum-breaker-pms"
+    },
+    {
+      "id": "ca_extent",
+      "display_name": "Complete extent-of-condition review for similar work",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:complete-extent-of-condition-review-for-similar-work"
+    },
+    {
+      "id": "ca_contributing",
+      "display_name": "Resolve contributing causes via procedure enhancements, station expectations, and fleet-wide communications",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:resolve-contributing-causes-via-procedure-enhancements-station-expectations-and-fleet-wide-communications"
+    },
+    {
+      "id": "rr_5073ia",
+      "display_name": "10 CFR 50.73(a)(2)(i)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-a"
+    },
+    {
+      "id": "rr_5073ii",
+      "display_name": "10 CFR 50.73(a)(2)(ii)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-ii"
+    },
+    {
+      "id": "rr_5073vD",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "rr_5073ib",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_lco3011",
+      "display_name": "LCO 3.6.1.1",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:lco-3-6-1-1"
+    },
+    {
+      "id": "rr_lco3021",
+      "display_name": "LCO 3.6.2.1",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:lco-3-6-2-1"
+    },
+    {
+      "id": "rr_lco304",
+      "display_name": "LCO 3.0.4",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:lco-3-0-4"
+    },
+    {
+      "id": "rr_nei9902",
+      "display_name": "NEI 99-02 Rev 7",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "standard/guidance",
+      "match_key": "RegulatoryReference:nei-99-02-rev-7"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073ia",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073ii",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073vD",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073ib",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_containment",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_suppression",
+      "evidence": null
+    },
+    {
+      "source": "fm_pm_risk",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_pm_risk",
+      "relation": "LEADS_TO",
+      "target": "fm_vb_misset",
+      "evidence": null
+    },
+    {
+      "source": "fm_vb_misset",
+      "relation": "LEADS_TO",
+      "target": "fm_vb_bypass",
+      "evidence": null
+    },
+    {
+      "source": "fm_vb_bypass",
+      "relation": "LEADS_TO",
+      "target": "fm_misdiagnosis",
+      "evidence": null
+    },
+    {
+      "source": "fm_misdiagnosis",
+      "relation": "LEADS_TO",
+      "target": "cons_inop",
+      "evidence": null
+    },
+    {
+      "source": "c_limitswitch",
+      "relation": "PART_OF",
+      "target": "c_vb_a",
+      "evidence": null
+    },
+    {
+      "source": "c_closingmagnet",
+      "relation": "PART_OF",
+      "target": "c_vb_a",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_repair",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procedures",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_reassess_risk",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_extent",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_contributing",
+      "evidence": null
+    }
+  ],
+  "chain": "PM on vacuum breakers not assessed as high risk [cause TBD] -> vacuum breaker 'A' mechanically interfered/not set properly -> vacuum breaker fails to fully seat / bypass leakage -> condition misdiagnosed for ~6 months -> primary containment & suppression chamber declared inoperable, TS-required shutdown",
+  "golden_questions": [
+    "Q1",
+    "Q2",
+    "Q9",
+    "Q14"
+  ],
+  "notes": "Official cause code left TBD by NRC form (category 'provisional'); narrative attributes direct cause to vacuum breaker mechanical interference and root cause to PM risk-classification failure -- theme captures this without overriding the TBD code. No backups modeled: engineering analysis found containment/suppression chamber safety functions were not degraded, but no operable alternate system is named as a backup during the inoperability window. No manufacturer, model, or EIIS bracket codes given in narrative for containment/vacuum-breaker equipment, so eiis_code left null throughout. Previous Events section is truncated/incomplete in source text ('...action program for the past three years.') with no specific prior LER identified, so no stub LER/SIMILAR_TO edge created per rule 9 (nothing citable)."
+}

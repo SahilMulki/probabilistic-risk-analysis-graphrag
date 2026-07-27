@@ -1,0 +1,100 @@
+{
+  "ler_number": "321-2022-001-00",
+  "identity": {
+    "accession_number": "ML22049B535",
+    "docket": "05000321",
+    "plant_name": "Hatch",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2021-12-29",
+    "report_date": "2022-02-18",
+    "operating_mode": null,
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Manual Reactor Scram due to Reactor Pressure Perturbations"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": null,
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": null,
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 321-2021-006-00",
+      "properties": {},
+      "type": "LER",
+      "key": "321-2022-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:321-2022-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Hatch Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000321",
+      "match_key": "Unit:05000321"
+    },
+    {
+      "id": "cause",
+      "display_name": "Unknown (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": null,
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "cons_scram",
+      "display_name": "Manual reactor scram due to reactor pressure perturbations",
+      "properties": {},
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:manual-reactor-scram-due-to-reactor-pressure-perturbations"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "cons_scram",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    }
+  ],
+  "chain": "unknown cause [TBD] -> reactor pressure perturbations -> manual reactor scram",
+  "golden_questions": [],
+  "notes": "No narrative (366A) text was provided, so no component/system/failure-mode chain could be extracted beyond the header data. Cause code is TBD per form fields; category set to provisional and cause node marked provisional. Consequence node captures the scram event per the title; no backups, corrective actions, or regulatory reference nodes could be populated without narrative text."
+}

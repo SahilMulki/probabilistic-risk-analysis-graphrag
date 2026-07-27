@@ -1,0 +1,298 @@
+{
+  "ler_number": "382-2020-002-00",
+  "identity": {
+    "accession_number": "ML20297A536",
+    "docket": "05000382",
+    "plant_name": "Waterford",
+    "unit": 3,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2020-08-24",
+    "report_date": "2020-10-23",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Licensee Event Report (LER) 2020-002-00 Violation of Technical Specification 3.4.5.1 (Reactor Coolant System Leakage Detection Instrumentation) Due to Personnel Error"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "A",
+      "system": "IL",
+      "component": "RI",
+      "manufacturer": "G063/General",
+      "reportable": null
+    }
+  ],
+  "cause": {
+    "proximate_text": "the vendor incorrectly calculated particulate channel engineering conversion factors during plant construction (Causal Factor 1) and there was lack of vendor oversight when the engineering conversion factors were developed (Causal Factor 2)",
+    "cause_code": "A",
+    "category": "Personnel Error",
+    "theme": "vendor calculation error with inadequate oversight",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 382-2020-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "382-2020-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:382-2020-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Waterford Unit 3",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000382",
+      "match_key": "Unit:05000382"
+    },
+    {
+      "id": "cause",
+      "display_name": "Personnel Error (A)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "A",
+      "category": "Personnel Error",
+      "theme": "vendor calculation error with inadequate oversight",
+      "proximate_text": "the vendor incorrectly calculated particulate channel engineering conversion factors during plant construction (Causal Factor 1) and there was lack of vendor oversight when the engineering conversion factors were developed (Causal Factor 2)",
+      "provisional": false,
+      "match_key": "Cause:Personnel Error"
+    },
+    {
+      "id": "sys_il",
+      "display_name": "Radiation Monitoring System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "IL",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "leak detection instrumentation",
+      "match_key": "System:IL"
+    },
+    {
+      "id": "sys_ab",
+      "display_name": "Reactor Coolant System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "AB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:AB"
+    },
+    {
+      "id": "c_ri",
+      "display_name": "Containment Atmospheric Monitor Particulate Channel",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "RI",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": "G063/General",
+      "inferred_code": false,
+      "match_key": "Component:RI"
+    },
+    {
+      "id": "fm_vendor_calc",
+      "display_name": "Vendor incorrectly calculated engineering conversion factor",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Vendor incorrectly calculated particulate channel engineering conversion factors during plant construction, not using the correct methodology listed in the radiation monitoring database manual.",
+      "match_key": "FailureMode:vendor-incorrectly-calculated-engineering-conversion-factor"
+    },
+    {
+      "id": "fm_no_oversight",
+      "display_name": "Lack of vendor oversight",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Oversight of the vendor by Waterford 3 personnel was not rigorous when the engineering conversion factors were developed and accepted.",
+      "match_key": "FailureMode:lack-of-vendor-oversight"
+    },
+    {
+      "id": "fm_incorrect_factor_installed",
+      "display_name": "Incorrect, nonconservative conversion factor installed and used",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Incorrect factor provided to Waterford 3 upon acceptance of each monitor in 1984 and used at inception of radiation monitor system database in 1985; did not account for filter speed, flow rate, and flow-rate conversion factor.",
+      "match_key": "FailureMode:incorrect-nonconservative-conversion-factor-installed-and-used"
+    },
+    {
+      "id": "fm_undetected_latent",
+      "display_name": "Latent undetected condition since installation",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Condition had existed since installation during plant construction phase, prior to startup, and remained undetected until identified during review for a planned modification.",
+      "match_key": "FailureMode:latent-undetected-condition-since-installation"
+    },
+    {
+      "id": "cons_inoperable",
+      "display_name": "Containment atmospheric monitor particulate channel inoperable / TS 3.4.5.1 violation exceeding allowed outage time",
+      "properties": {
+        "detail": "Instrument's inability to detect a 1 gpm leak rendered it incapable of performing its TS 3.4.5.1 function; inoperability duration since installation exceeded the 30-day allowed outage time."
+      },
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:containment-atmospheric-monitor-particulate-channel-inoperable-ts-3-4-5-1-violation-exceeding-allowed-outage-time"
+    },
+    {
+      "id": "ca_revise_factor",
+      "display_name": "Revise conversion factor values for containment atmospheric monitor particulate channel",
+      "properties": {
+        "date": "2020-09-10"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-conversion-factor-values-for-containment-atmospheric-monitor-particulate-channel"
+    },
+    {
+      "id": "ca_revise_setpoints",
+      "display_name": "Revise alert and alarm setpoints for fixed filter mode conversion factor",
+      "properties": {
+        "date": "2020-10-19"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-alert-and-alarm-setpoints-for-fixed-filter-mode-conversion-factor"
+    },
+    {
+      "id": "mfr_general",
+      "display_name": "General",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "G063",
+      "match_key": "Manufacturer:G063"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts3451",
+      "display_name": "Technical Specification 3.4.5.1 - Leakage Detection Instrumentation",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-3-4-5-1-leakage-detection-instrumentation"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts3451",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_il",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ab",
+      "evidence": null
+    },
+    {
+      "source": "c_ri",
+      "relation": "PART_OF",
+      "target": "sys_il",
+      "evidence": null
+    },
+    {
+      "source": "c_ri",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_general",
+      "evidence": null
+    },
+    {
+      "source": "fm_vendor_calc",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_vendor_calc",
+      "relation": "LEADS_TO",
+      "target": "fm_incorrect_factor_installed",
+      "evidence": null
+    },
+    {
+      "source": "fm_no_oversight",
+      "relation": "LEADS_TO",
+      "target": "fm_incorrect_factor_installed",
+      "evidence": null
+    },
+    {
+      "source": "fm_incorrect_factor_installed",
+      "relation": "LEADS_TO",
+      "target": "fm_undetected_latent",
+      "evidence": null
+    },
+    {
+      "source": "fm_undetected_latent",
+      "relation": "LEADS_TO",
+      "target": "cons_inoperable",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_revise_factor",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_revise_setpoints",
+      "evidence": null
+    }
+  ],
+  "chain": "vendor incorrectly calculated conversion factor [cause A] + lack of vendor oversight -> incorrect nonconservative factor installed/used since 1984-1985 -> latent undetected condition since original installation -> containment atmospheric monitor particulate channel inoperable, TS 3.4.5.1 30-day AOT exceeded [alternative leak-detection indications available: containment sump level, sump weir flow, gaseous/iodine/particulate levels, pressurizer/RDT/quench tank/VCT levels]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Alternative leak-detection indications (sump level, weir flow, other gaseous/iodine monitors, pressurizer/RDT/quench tank/VCT levels) are described only as generally available/existing multiple alternative monitoring methods in the Safety Evaluation, not explicitly stated as an operable backup system during the inoperability window in the sense of a modeled System node; treated as narrative context rather than BACKED_UP_BY edges since no discrete System node is warranted for these generic indications. No previous occurrences were found applicable (OE search of 7 condition reports, none applicable) so no SIMILAR_TO stub LER was created. Latent condition dated to original 1980-1985 vendor calibration/acceptance, predating plant startup; event discovered in 2020 during modification review."
+}

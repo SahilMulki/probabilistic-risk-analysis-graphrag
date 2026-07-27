@@ -1,0 +1,462 @@
+{
+  "ler_number": "333-2023-003-00",
+  "identity": {
+    "accession_number": "ML23174A067",
+    "docket": "05000333",
+    "plant_name": "FitzPatrick",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2023-04-24",
+    "report_date": "2023-06-23",
+    "operating_mode": "3",
+    "power_level": 100,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Dear Sir or Madam:"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)",
+      "10 CFR 50.73(a)(2)(v)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "An error during the conversion of procedure ST-9AB to a new format led to the incorrect table with a lower fuel oil quantity to be included which caused invalid surveillance test performances.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "procedure conversion/format error",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 333-2023-003-00",
+      "properties": {},
+      "type": "LER",
+      "key": "333-2023-003-00",
+      "stub": false,
+      "title": "EDG 'B' Subsystem Fuel Oil Surveillance Test Procedure Error Resulting in Operation Prohibited by Technical Specifications",
+      "plant": "James A. FitzPatrick Nuclear Power Plant",
+      "match_key": "LER:333-2023-003-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "FitzPatrick Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000333",
+      "match_key": "Unit:05000333"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "procedure conversion/format error",
+      "proximate_text": "An error during the conversion of procedure ST-9AB to a new format led to the incorrect table with a lower fuel oil quantity to be included which caused invalid surveillance test performances.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_ek",
+      "display_name": "Emergency Onsite Power Supply System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "EK",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:EK"
+    },
+    {
+      "id": "sys_dg_b",
+      "display_name": "Emergency Diesel Generator 'B' Subsystem",
+      "properties": {
+        "note": "affected subsystem"
+      },
+      "type": "System",
+      "eiis_code": "DG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:DG"
+    },
+    {
+      "id": "sys_dg_a",
+      "display_name": "Emergency Diesel Generator 'A' Subsystem",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "DG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "unaffected by procedure error; overlapping maintenance/testing periods created dual inoperability",
+      "match_key": "System:DG"
+    },
+    {
+      "id": "sys_de",
+      "display_name": "Fuel Oil Storage and Transfer System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "DE",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:DE"
+    },
+    {
+      "id": "c_tk6b",
+      "display_name": "Diesel Fuel Oil Storage Tank 93TK-6B",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "93TK-6B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:diesel-fuel-oil-storage-tank-93tk-6b"
+    },
+    {
+      "id": "c_tk6d",
+      "display_name": "Diesel Fuel Oil Storage Tank 93TK-6D",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "93TK-6D",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:diesel-fuel-oil-storage-tank-93tk-6d"
+    },
+    {
+      "id": "c_st9ab",
+      "display_name": "Surveillance Test Procedure ST-9AB (EDG System B Fuel/Lube Oil Monthly Test)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "ST-9AB",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:surveillance-test-procedure-st-9ab-edg-system-b-fuel-lube-oil-monthly-test"
+    },
+    {
+      "id": "fm_procerror",
+      "display_name": "Fuel oil supply tables swapped in ST-9AB during electronic conversion",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The 6-day and 7-day EDG Fuel Oil Supply tables from TS Bases 3.8.3 were swapped when ST-9AB was converted to electronic format (Revision 9, November 18, 2021).",
+      "match_key": "FailureMode:fuel-oil-supply-tables-swapped-in-st-9ab-during-electronic-conversion"
+    },
+    {
+      "id": "fm_invalid_test",
+      "display_name": "Invalid surveillance test performances of SR 3.8.3.1",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Using the incorrect table, ST-9AB acceptance criteria improperly reflected a 6-day rather than 7-day minimum fuel oil quantity, causing multiple SR 3.8.3.1 performances to pass when they should have failed.",
+      "match_key": "FailureMode:invalid-surveillance-test-performances-of-sr-3-8-3-1"
+    },
+    {
+      "id": "fm_sr_notmet",
+      "display_name": "SR 3.8.3.1 not met for 'B' EDG subsystem (multiple periods 2021-2023)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Retrospective review found the 7-day fuel oil supply requirement was not met for the 'B' EDG subsystem during three periods between June 2022 and April 2023, though supply always exceeded 6 days.",
+      "match_key": "FailureMode:sr-3-8-3-1-not-met-for-b-edg-subsystem-multiple-periods-2021-2023"
+    },
+    {
+      "id": "fm_lco_exceeded",
+      "display_name": "'B' EDG subsystem inoperable beyond TS-allowed restoration time",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "LCO 3.8.3 Action A 48-hour restoration was exceeded, requiring the associated EDG to be declared inoperable per Condition F, exceeding TS 3.8.1 allowed outage time.",
+      "match_key": "FailureMode:b-edg-subsystem-inoperable-beyond-ts-allowed-restoration-time"
+    },
+    {
+      "id": "cons_tsviolation",
+      "display_name": "Operation prohibited by Technical Specifications (10 CFR 50.73(a)(2)(i)(B))",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2022-06-20",
+      "end": "2023-04-25T09:13",
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:operation-prohibited-by-technical-specifications-10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "cons_safetyfunction",
+      "display_name": "Condition that could have prevented fulfillment of EDG safety function (10 CFR 50.73(a)(2)(v)(A))",
+      "properties": {
+        "note": "Coincidence of 'B' subsystem low fuel oil periods with 'A' subsystem maintenance/testing rendered both subsystems potentially inoperable simultaneously."
+      },
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:condition-that-could-have-prevented-fulfillment-of-edg-safety-function-10-cfr-50-73-a-2-v-a"
+    },
+    {
+      "id": "ca_restore_fuel",
+      "display_name": "Fuel oil restored to greater than 7-day minimum level",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:fuel-oil-restored-to-greater-than-7-day-minimum-level"
+    },
+    {
+      "id": "ca_revise_st9ab",
+      "display_name": "Revise ST-9AB to correct minimum fuel oil level tables",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-st-9ab-to-correct-minimum-fuel-oil-level-tables"
+    },
+    {
+      "id": "ca_eng_eval",
+      "display_name": "Engineering evaluation for safety function impact",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:engineering-evaluation-for-safety-function-impact"
+    },
+    {
+      "id": "ca_extent_review",
+      "display_name": "Extent of condition review of digital procedure conversions",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:extent-of-condition-review-of-digital-procedure-conversions"
+    },
+    {
+      "id": "ca_update_ap0201",
+      "display_name": "Update AP-02.01 Procedure Writing Manual to include quality checklist",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:update-ap-02-01-procedure-writing-manual-to-include-quality-checklist"
+    },
+    {
+      "id": "rr_5073i",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_5073v",
+      "display_name": "10 CFR 50.73(a)(2)(v)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-a"
+    },
+    {
+      "id": "rr_sr38031",
+      "display_name": "TS Surveillance Requirement 3.8.3.1",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-surveillance-requirement-3-8-3-1"
+    },
+    {
+      "id": "rr_lco383",
+      "display_name": "TS LCO 3.8.3",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-lco-3-8-3"
+    },
+    {
+      "id": "rr_ts381",
+      "display_name": "TS 3.8.1",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-3-8-1"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073i",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073v",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_dg_b",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_de",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ek",
+      "evidence": null
+    },
+    {
+      "source": "sys_dg_b",
+      "relation": "PART_OF",
+      "target": "sys_ek",
+      "evidence": null
+    },
+    {
+      "source": "sys_dg_a",
+      "relation": "PART_OF",
+      "target": "sys_ek",
+      "evidence": null
+    },
+    {
+      "source": "c_tk6b",
+      "relation": "PART_OF",
+      "target": "sys_dg_b",
+      "evidence": null
+    },
+    {
+      "source": "c_tk6d",
+      "relation": "PART_OF",
+      "target": "sys_dg_b",
+      "evidence": null
+    },
+    {
+      "source": "fm_procerror",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_procerror",
+      "relation": "LEADS_TO",
+      "target": "fm_invalid_test",
+      "evidence": null
+    },
+    {
+      "source": "fm_invalid_test",
+      "relation": "LEADS_TO",
+      "target": "fm_sr_notmet",
+      "evidence": null
+    },
+    {
+      "source": "fm_sr_notmet",
+      "relation": "LEADS_TO",
+      "target": "fm_lco_exceeded",
+      "evidence": null
+    },
+    {
+      "source": "fm_lco_exceeded",
+      "relation": "LEADS_TO",
+      "target": "cons_tsviolation",
+      "evidence": null
+    },
+    {
+      "source": "fm_sr_notmet",
+      "relation": "LEADS_TO",
+      "target": "cons_safetyfunction",
+      "evidence": null
+    },
+    {
+      "source": "cons_tsviolation",
+      "relation": "MITIGATED_BY",
+      "target": "ca_restore_fuel",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_restore_fuel",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_revise_st9ab",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_eng_eval",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_extent_review",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_update_ap0201",
+      "evidence": null
+    },
+    {
+      "source": "c_st9ab",
+      "relation": "PART_OF",
+      "target": "sys_dg_b",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_sr38031",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_lco383",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts381",
+      "evidence": null
+    }
+  ],
+  "chain": "procedure conversion error swapped 6-day/7-day fuel tables [cause TBD] -> invalid ST-9AB surveillance performances -> SR 3.8.3.1 not met for 'B' EDG subsystem (multiple periods) -> LCO 3.8.3 restoration time exceeded -> operation prohibited by TS / potential loss of EDG safety function [93TK-6A/6C FOSTs and offsite power remained operable]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "No block-13 component failure rows were provided (empty array) and official cause_code/category remain TBD/provisional per FORM-366 fields; narrative attributes the error to an administrative/procedure-conversion mistake but no coded cause category was given, so cause node kept provisional per rule 4. Title synthesized from abstract/narrative content since form-366 title field contained boilerplate ('Dear Sir or Madam:'). Unit inferred as 1 (JAF is single-unit plant) since FORM-366 unit field was null. 93TK-6A/6C and offsite power are mentioned only as remaining operable/available during the event window, satisfying BACKED_UP_BY criteria, though modeled as consequence-level context rather than formal backup edges beyond what's stated for TS purposes; no distinct System node created for offsite power per rule 6 minimalism (not a modeled ECCS/EDG participant, only referenced qualitatively) -- omitted rather than force-fit due to ambiguity of formal role change over the affected period."
+}

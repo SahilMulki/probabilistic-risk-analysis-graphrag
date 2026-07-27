@@ -1,0 +1,348 @@
+{
+  "ler_number": "457-2020-001-00",
+  "identity": {
+    "accession_number": "ML20164A226",
+    "docket": "05000457",
+    "plant_name": "Braidwood",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2020-04-15",
+    "report_date": "2020-06-12",
+    "operating_mode": null,
+    "power_level": null,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "- Three Main Steam Safety Valves Failed Setpoint Testing"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)",
+      "10 CFR 50.73(a)(2)(vii)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "a governing document had not been established to formalize best practices for testing and setpoint adjustment of MSSVs. This allowed for gaps in both site and vendor activities where either very large adjustments or multiple back to back adjustments were made with insufficient stabilization lifts in between. This pre-disposed the valves to larger drift levels over their service time.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "missing governing document for MSSV testing/setpoint adjustment best practices",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 457-2020-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "457-2020-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:457-2020-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Braidwood Unit 2",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000457",
+      "match_key": "Unit:05000457"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "missing governing document for MSSV testing/setpoint adjustment best practices",
+      "proximate_text": "a governing document had not been established to formalize best practices for testing and setpoint adjustment of MSSVs. This allowed for gaps in both site and vendor activities where either very large adjustments or multiple back to back adjustments were made with insufficient stabilization lifts in between. This pre-disposed the valves to larger drift levels over their service time.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_sb",
+      "display_name": "Main Steam Safety Valves",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SB"
+    },
+    {
+      "id": "c_2ms016a",
+      "display_name": "MSSV 2MS016A",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "RV",
+      "identifier": "2MS016A",
+      "model": null,
+      "manufacturer_code": "0243",
+      "inferred_code": false,
+      "match_key": "Component:RV|2MS016A"
+    },
+    {
+      "id": "c_2ms014b",
+      "display_name": "MSSV 2MS014B",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "RV",
+      "identifier": "2MS014B",
+      "model": null,
+      "manufacturer_code": "0243",
+      "inferred_code": false,
+      "match_key": "Component:RV|2MS014B"
+    },
+    {
+      "id": "c_2ms016c",
+      "display_name": "MSSV 2MS016C",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "RV",
+      "identifier": "2MS016C",
+      "model": null,
+      "manufacturer_code": "0243",
+      "inferred_code": false,
+      "match_key": "Component:RV|2MS016C"
+    },
+    {
+      "id": "fm_gap",
+      "display_name": "Gaps in site and vendor testing/adjustment activities",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Very large adjustments or multiple back-to-back adjustments made with insufficient stabilization lifts in between, due to lack of a governing document.",
+      "match_key": "FailureMode:gaps-in-site-and-vendor-testing-adjustment-activities"
+    },
+    {
+      "id": "fm_drift",
+      "display_name": "MSSV setpoint drift beyond TS limit",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Valves predisposed to larger drift levels over their service time, resulting in as-found setpoints exceeding the +/-3% TS allowance.",
+      "match_key": "FailureMode:mssv-setpoint-drift-beyond-ts-limit"
+    },
+    {
+      "id": "cons_inop",
+      "display_name": "Three MSSVs found inoperable during setpoint testing / TS LCO entered",
+      "properties": {
+        "values": "2MS016A +4.18%, 2MS014B +3.9%, 2MS016C +3.13%"
+      },
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:three-mssvs-found-inoperable-during-setpoint-testing-ts-lco-entered"
+    },
+    {
+      "id": "ca_adjust",
+      "display_name": "Adjust 2MS016A, 2MS014B, 2MS016C to acceptable values during testing",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:adjust-2ms016a-2ms014b-2ms016c-to-acceptable-values-during-testing"
+    },
+    {
+      "id": "ca_rebuild",
+      "display_name": "Rebuild MSSV 2MS016A",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:rebuild-mssv-2ms016a"
+    },
+    {
+      "id": "ca_schedule",
+      "display_name": "Schedule 2MS014B and 2MS016C into next refueling outage",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:schedule-2ms014b-and-2ms016c-into-next-refueling-outage"
+    },
+    {
+      "id": "ca_bestpractice",
+      "display_name": "Incorporate best practices into appropriate processes",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:incorporate-best-practices-into-appropriate-processes"
+    },
+    {
+      "id": "mfr_dresser",
+      "display_name": "Dresser",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "0243",
+      "match_key": "Manufacturer:0243"
+    },
+    {
+      "id": "rr_507i",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_507vii",
+      "display_name": "10 CFR 50.73(a)(2)(vii)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-vii"
+    },
+    {
+      "id": "rr_ts371",
+      "display_name": "Technical Specification 3.7.1, Main Steam Safety Valves",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-3-7-1-main-steam-safety-valves"
+    },
+    {
+      "id": "rr_ufsar15",
+      "display_name": "UFSAR Chapter 15",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:ufsar-chapter-15"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_507i",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_507vii",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts371",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_2ms016a",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_2ms014b",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_2ms016c",
+      "evidence": null
+    },
+    {
+      "source": "fm_gap",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_gap",
+      "relation": "LEADS_TO",
+      "target": "fm_drift",
+      "evidence": null
+    },
+    {
+      "source": "fm_drift",
+      "relation": "LEADS_TO",
+      "target": "cons_inop",
+      "evidence": null
+    },
+    {
+      "source": "cons_inop",
+      "relation": "MITIGATED_BY",
+      "target": "ca_adjust",
+      "evidence": null
+    },
+    {
+      "source": "cons_inop",
+      "relation": "MITIGATED_BY",
+      "target": "ca_rebuild",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_schedule",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_bestpractice",
+      "evidence": null
+    },
+    {
+      "source": "c_2ms016a",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_dresser",
+      "evidence": null
+    },
+    {
+      "source": "c_2ms014b",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_dresser",
+      "evidence": null
+    },
+    {
+      "source": "c_2ms016c",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_dresser",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ufsar15",
+      "evidence": null
+    }
+  ],
+  "chain": "no governing document for MSSV testing/setpoint best practices [cause TBD] -> gaps in site/vendor adjustment activities (large/back-to-back adjustments, insufficient stabilization) -> MSSV setpoint drift beyond TS +/-3% -> three MSSVs (2MS016A, 2MS014B, 2MS016C) found inoperable during setpoint testing, TS LCO entered -> valves adjusted/rebuilt, declared operable",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code and category are TBD/provisional per form fields, despite block 13 listing cause code 'D' (Personnel Error family) for the RV component row; per rule 4 the form-level cause_code/category govern and are copied verbatim as TBD/provisional, with proximate_text/theme drawn from narrative. Event affects Unit 2 (form docket/title reference Unit 2 despite 'Unit 1' label appearing once in section A header, which appears to be a typo in the source document; narrative and abstract consistently reference Braidwood Unit 2 05000457). No previous occurrences reported (Section F blank) so no SIMILAR_TO/stub LER emitted. No backup systems stated operable during the inoperability window relevant to MSSV function, so no BACKED_UP_BY edges emitted."
+}

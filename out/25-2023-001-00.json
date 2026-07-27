@@ -1,0 +1,234 @@
+{
+  "ler_number": "25-2023-001-00",
+  "identity": {
+    "accession_number": "ML23073A380",
+    "docket": "05200025",
+    "plant_name": "Vogtle",
+    "unit": 3,
+    "reactor_type": "PWR",
+    "nss_vendor": "Westinghouse",
+    "event_date": "2023-01-14",
+    "report_date": "2023-03-14",
+    "operating_mode": "3",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Manual Actuation of Reactor Protection System During Mode 3 Due to an Inadequate Procedure Step"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The procedure 3-AOP-202 required a manual actuation of the RPS, when responding to low gland steam pressure, without first checking status of the reactor trip breakers. Since the reactor trip breakers were already open, the procedurally directed reactor trip was an unnecessary RPS actuation.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "inadequate procedure step",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 05200025-2023-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "25-2023-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:25-2023-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Vogtle Unit 3",
+      "properties": {
+        "reactor_type": "PWR",
+        "nss_vendor": "Westinghouse"
+      },
+      "type": "Unit",
+      "key": "05200025",
+      "match_key": "Unit:05200025"
+    },
+    {
+      "id": "cause",
+      "display_name": "Inadequate Procedure Step (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "inadequate procedure step",
+      "proximate_text": "The procedure 3-AOP-202 required a manual actuation of the RPS, when responding to low gland steam pressure, without first checking status of the reactor trip breakers. Since the reactor trip breakers were already open, the procedurally directed reactor trip was an unnecessary RPS actuation.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_jc",
+      "display_name": "Reactor Protection System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JC"
+    },
+    {
+      "id": "sys_tc",
+      "display_name": "Gland Steam System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "TC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:TC"
+    },
+    {
+      "id": "c_procedure",
+      "display_name": "AOP 3-AOP-202 \"Condensate System Malfunctions\"",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:aop-3-aop-202-condensate-system-malfunctions"
+    },
+    {
+      "id": "c_trip_breakers",
+      "display_name": "Reactor trip breakers",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:reactor-trip-breakers"
+    },
+    {
+      "id": "fm_pressure_transient",
+      "display_name": "Gland steam system pressure transient during pre-criticality testing",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "A gland steam system pressure transient occurred during pre-criticality testing.",
+      "match_key": "FailureMode:gland-steam-system-pressure-transient-during-pre-criticality-testing"
+    },
+    {
+      "id": "fm_inadequate_step",
+      "display_name": "Procedure step did not require checking reactor trip breaker status",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "AOP 3-AOP-202 required manual RPS actuation for low gland steam pressure without first checking whether the reactor trip breakers were already open.",
+      "match_key": "FailureMode:procedure-step-did-not-require-checking-reactor-trip-breaker-status"
+    },
+    {
+      "id": "fm_unnecessary_trip",
+      "display_name": "Unnecessary manual RPS actuation directed",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Since the reactor trip breakers were already open, the procedurally directed reactor trip was an unnecessary RPS actuation.",
+      "match_key": "FailureMode:unnecessary-manual-rps-actuation-directed"
+    },
+    {
+      "id": "cons_rps",
+      "display_name": "Manual actuation of Reactor Protection System",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2023-01-14T07:21:00",
+      "end": null,
+      "duration": null,
+      "tz": "EST",
+      "match_key": "Consequence:manual-actuation-of-reactor-protection-system"
+    },
+    {
+      "id": "ca_revise_proc",
+      "display_name": "Revise 3-AOP-202 to require checking reactor trip breakers are not open prior to manually tripping reactor for gland steam pressure below AOP limit",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-3-aop-202-to-require-checking-reactor-trip-breakers-are-not-open-prior-to-manually-tripping-reactor-for-gland-steam-pressure-below-aop-limit"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_tc",
+      "evidence": null
+    },
+    {
+      "source": "fm_pressure_transient",
+      "relation": "LEADS_TO",
+      "target": "fm_unnecessary_trip",
+      "evidence": null
+    },
+    {
+      "source": "fm_inadequate_step",
+      "relation": "LEADS_TO",
+      "target": "fm_unnecessary_trip",
+      "evidence": null
+    },
+    {
+      "source": "fm_inadequate_step",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_unnecessary_trip",
+      "relation": "LEADS_TO",
+      "target": "cons_rps",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_revise_proc",
+      "evidence": null
+    }
+  ],
+  "chain": "inadequate procedure step [cause TBD] -> gland steam pressure transient + procedure not checking trip breaker status -> procedurally directed unnecessary reactor trip -> manual RPS actuation",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code left TBD/provisional per FORM-366 fields (no official code provided). Reactor trip breakers were already open when the trip was manually initiated, so RPS actuation had no actual safety consequence (no fuel in core, no decay heat). No equipment failure occurred; this is a purely procedural/human-performance event. No previous similar events noted in narrative, so no SIMILAR_TO edge or stub LER created. Docket 05200025 mapped as Unit key per identity fields provided."
+}

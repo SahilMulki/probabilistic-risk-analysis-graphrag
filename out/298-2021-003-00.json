@@ -1,0 +1,296 @@
+{
+  "ler_number": "298-2021-003-00",
+  "identity": {
+    "accession_number": "ML21361A084",
+    "docket": "05000298",
+    "plant_name": "Cooper",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2021-10-28",
+    "report_date": "2021-12-27",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Licensee Event Report No. 2021-003-00"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)",
+      "10 CFR 50.73(a)(2)(v)(D)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "B",
+      "system": "BJ",
+      "component": "PDS",
+      "manufacturer": "1204",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "a shift in setpoint due to the initial over-range experienced by the newly installed FIS during HPCI pump testing on September 14, 2021...the initial shift in setpoint due to over-range operation is a previously unpublished characteristic of Barton switches that has not been identified in any Vendor literature or Industry Operating Experience",
+    "cause_code": "B",
+    "category": "Design/Manufacturing/Installation",
+    "theme": "unidentified vendor instrument characteristic causing setpoint drift on first over-range",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 298-2021-003-00",
+      "properties": {},
+      "type": "LER",
+      "key": "298-2021-003-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:298-2021-003-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Cooper Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000298",
+      "match_key": "Unit:05000298"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Manufacturing/Installation (B)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "B",
+      "category": "Design/Manufacturing/Installation",
+      "theme": "unidentified vendor instrument characteristic causing setpoint drift on first over-range",
+      "proximate_text": "a shift in setpoint due to the initial over-range experienced by the newly installed FIS during HPCI pump testing on September 14, 2021...the initial shift in setpoint due to over-range operation is a previously unpublished characteristic of Barton switches that has not been identified in any Vendor literature or Industry Operating Experience",
+      "provisional": false,
+      "match_key": "Cause:Design/Manufacturing/Installation"
+    },
+    {
+      "id": "sys_bj",
+      "display_name": "High Pressure Coolant Injection",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BJ"
+    },
+    {
+      "id": "c_fis78",
+      "display_name": "HPCI Minimum Flow Instrument / Flow Indicating Switch (HPCI-FIS-78)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "PDS",
+      "identifier": "HPCI-FIS-78",
+      "model": "Barton 289A",
+      "manufacturer_code": "1204",
+      "inferred_code": false,
+      "match_key": "Component:PDS|HPCI-FIS-78"
+    },
+    {
+      "id": "c_pump",
+      "display_name": "HPCI Pump",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "P",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:P"
+    },
+    {
+      "id": "c_minflowvalve",
+      "display_name": "HPCI Minimum Flow (Bypass) Line Valve",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "V",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:V"
+    },
+    {
+      "id": "fm_overrange",
+      "display_name": "FIS DPU bellows took inelastic set on first over-range during pump testing",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "On Sept 14, 2021, HPCI pump testing over-ranged the newly installed Barton 289A FIS for the first time, causing the DPU bellows to take an inelastic set and shift the setpoint.",
+      "match_key": "FailureMode:fis-dpu-bellows-took-inelastic-set-on-first-over-range-during-pump-testing"
+    },
+    {
+      "id": "fm_setpointshift",
+      "display_name": "HPCI-FIS-78 Switch #1 setpoint shifted below Technical Specification AV",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Switch #1 failed to trip prior to exceeding the AV of >= 490 gpm, tripping instead at 473.5 gpm decreasing during the October 28, 2021 calibration.",
+      "match_key": "FailureMode:hpci-fis-78-switch-1-setpoint-shifted-below-technical-specification-av"
+    },
+    {
+      "id": "cons_tsviolation",
+      "display_name": "TS LCO 3.3.5.1 Function 3.f condition prohibited by plant TS / potential loss of HPCI safety function",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2021-10-28T12:08",
+      "end": "2021-10-29",
+      "duration": null,
+      "tz": "Central",
+      "match_key": "Consequence:ts-lco-3-3-5-1-function-3-f-condition-prohibited-by-plant-ts-potential-loss-of-hpci-safety-function"
+    },
+    {
+      "id": "ca_calibrate",
+      "display_name": "Calibrate HPCI-FIS-78 and verify setpoint stability via over-range simulation",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:calibrate-hpci-fis-78-and-verify-setpoint-stability-via-over-range-simulation"
+    },
+    {
+      "id": "ca_procrevise",
+      "display_name": "Revise I&C calibration procedure to over-range new Barton DPU switches during setup",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-i-c-calibration-procedure-to-over-range-new-barton-dpu-switches-during-setup"
+    },
+    {
+      "id": "ca_vendormanual",
+      "display_name": "Update Barton 289A vendor manual (VM 1733) with over-range setpoint-shift information",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:update-barton-289a-vendor-manual-vm-1733-with-over-range-setpoint-shift-information"
+    },
+    {
+      "id": "mfr_cameron",
+      "display_name": "Cameron (Barton)",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "1204",
+      "match_key": "Manufacturer:1204"
+    },
+    {
+      "id": "rr_5073i",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_5073v",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "rr_tslco",
+      "display_name": "Technical Specifications LCO 3.3.5.1, Function 3.f (HPCI Pump Discharge Flow-Low Bypass)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specifications-lco-3-3-5-1-function-3-f-hpci-pump-discharge-flow-low-bypass"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073i",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073v",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_tslco",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bj",
+      "evidence": null
+    },
+    {
+      "source": "c_fis78",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_cameron",
+      "evidence": null
+    },
+    {
+      "source": "fm_overrange",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_overrange",
+      "relation": "LEADS_TO",
+      "target": "fm_setpointshift",
+      "evidence": null
+    },
+    {
+      "source": "fm_setpointshift",
+      "relation": "LEADS_TO",
+      "target": "cons_tsviolation",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_calibrate",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procrevise",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_vendormanual",
+      "evidence": null
+    }
+  ],
+  "chain": "Barton 289A FIS DPU bellows take inelastic set on first over-range during Sept 14 pump test [cause B] -> HPCI-FIS-78 Switch #1 setpoint shifts below TS AV (trips at 473.5 gpm vs required >=490 gpm) -> TS LCO 3.3.5.1 condition prohibited by plant TS / potential loss of HPCI minimum-flow protective function (engineering review found no actual loss of safety function)",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "No previous similar occurrences reported ('PREVIOUS EVENTS: None'), so no stub LER/SIMILAR_TO edge created. HPCI pump and minimum flow valve are described in Background as design context for the instrument's function but are directly involved components in the failure description, so Component nodes were created for them without asserting PART_OF (functional relationship only, no explicit containment statement). No backup systems (RCIC/ADS) are mentioned in this narrative since HPCI itself did not actually lose its safety function -- engineering review concluded the As-Found value would not have prevented HPCI from performing its function, so no BACKED_UP_BY edges were created."
+}

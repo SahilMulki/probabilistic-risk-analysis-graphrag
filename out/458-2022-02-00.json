@@ -1,0 +1,352 @@
+{
+  "ler_number": "458-2022-02-00",
+  "identity": {
+    "accession_number": "ML22160A397",
+    "docket": "05000458",
+    "plant_name": "River Bend",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2022-04-13",
+    "report_date": "2022-06-09",
+    "operating_mode": null,
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "/ 2022-02-00, \"Condition Prohibited by Technical Specifications due to Reactor Scram and Turbine Trip Level 8 Trip Setpoint Deviation"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "When the level 8 trip setpoints were originally determined for RBS, the setpoints were not evaluated to consider drift and uncertainty to ensure the reactor scram would occur before or simultaneously with the turbine trip to maintain alignment with the current safety analysis. RBS did not adequately incorporate fleet operating experience from Grand Gulf Nuclear Station (GGNS) when it was originally identified in CR-GGNS-2000-1810.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Setpoint design analysis did not account for instrument drift/uncertainty; failure to incorporate fleet OE",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 458-2022-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "458-2022-02-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:458-2022-02-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "River Bend Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000458",
+      "match_key": "Unit:05000458"
+    },
+    {
+      "id": "cause",
+      "display_name": "TBD (provisional)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Setpoint design analysis did not account for instrument drift/uncertainty; failure to incorporate fleet OE",
+      "proximate_text": "When the level 8 trip setpoints were originally determined for RBS, the setpoints were not evaluated to consider drift and uncertainty to ensure the reactor scram would occur before or simultaneously with the turbine trip to maintain alignment with the current safety analysis. RBS did not adequately incorporate fleet operating experience from Grand Gulf Nuclear Station (GGNS) when it was originally identified in CR-GGNS-2000-1810.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_rpv_level",
+      "display_name": "Reactor Pressure Vessel Level 8 Instrumentation",
+      "properties": {
+        "note": "RPV level 8 instrumentation loops; separate sets for reactor scram and turbine trip"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:reactor-pressure-vessel-level-8-instrumentation"
+    },
+    {
+      "id": "c_lt_scram",
+      "display_name": "Level 8 Reactor Scram Level Transmitters (LT)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:level-8-reactor-scram-level-transmitters-lt"
+    },
+    {
+      "id": "c_lt_turbtrip",
+      "display_name": "Level 8 Turbine Trip Level Transmitters (LT)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:level-8-turbine-trip-level-transmitters-lt"
+    },
+    {
+      "id": "fm_setpoint_design",
+      "display_name": "Level 8 setpoints not evaluated for drift/uncertainty at original design",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Original setpoint determination for reactor scram and turbine trip level 8 trips did not account for instrument drift and uncertainty, failing to ensure scram occurs before or simultaneous with turbine trip.",
+      "match_key": "FailureMode:level-8-setpoints-not-evaluated-for-drift-uncertainty-at-original-design"
+    },
+    {
+      "id": "fm_oe_not_incorporated",
+      "display_name": "Fleet operating experience from Grand Gulf not adequately incorporated",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "RBS did not adequately incorporate fleet OE from GGNS (CR-GGNS-2000-1810) that originally identified this level 8 setpoint issue.",
+      "match_key": "FailureMode:fleet-operating-experience-from-grand-gulf-not-adequately-incorporated"
+    },
+    {
+      "id": "fm_setpoint_deviation",
+      "display_name": "Level 8 reactor scram / turbine trip setpoint deviation between transmitter sets",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Separate transmitter sets for reactor scram (NTSP 51.0 in.) and turbine trip (NTSP 50.7 in.) can each drift independently, creating potential for turbine trip to occur prior to or simultaneous with level 8 reactor scram, contrary to accident analysis assumption of simultaneous actuation.",
+      "match_key": "FailureMode:level-8-reactor-scram-turbine-trip-setpoint-deviation-between-transmitter-sets"
+    },
+    {
+      "id": "fm_olmcpr_penalty",
+      "display_name": "OLMCPR penalty applied due to re-evaluated FWCF transient",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Re-evaluation of the Feedwater Controller Failure transient at rated power for Cycle 22, assuming turbine trip occurs before level 8 reactor scram, resulted in GNF recommending a 0.05 OLMCPR penalty.",
+      "match_key": "FailureMode:olmcpr-penalty-applied-due-to-re-evaluated-fwcf-transient"
+    },
+    {
+      "id": "fm_olmcpr_exceeded",
+      "display_name": "OLMCPR limits exceeded beyond TS 3.2.2 allowed time (past operability evaluation)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Past operability evaluation covering July 15, 2018 - July 15, 2021, applying penalties from SC 21-04 and the level 8 issue concurrently, concluded OLMCPR limits were exceeded for longer than allowed by Technical Specification 3.2.2 on multiple dates in Cycle 20 and Cycle 21.",
+      "match_key": "FailureMode:olmcpr-limits-exceeded-beyond-ts-3-2-2-allowed-time-past-operability-evaluation"
+    },
+    {
+      "id": "cons_ts_prohibited",
+      "display_name": "Condition prohibited by Technical Specifications (TS 3.2.2 OLMCPR time limit exceeded)",
+      "properties": {},
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:condition-prohibited-by-technical-specifications-ts-3-2-2-olmcpr-time-limit-exceeded"
+    },
+    {
+      "id": "ca_admin_limits",
+      "display_name": "Applied vendor-recommended administrative limits to OLMCPR",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:applied-vendor-recommended-administrative-limits-to-olmcpr"
+    },
+    {
+      "id": "ca_wo_created",
+      "display_name": "Work order 569699 created to adjust level 8 turbine trip setpoint",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:work-order-569699-created-to-adjust-level-8-turbine-trip-setpoint"
+    },
+    {
+      "id": "ca_wo_outage",
+      "display_name": "Work order 569699 added to outage worklist and tracked in corrective action process",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:work-order-569699-added-to-outage-worklist-and-tracked-in-corrective-action-process"
+    },
+    {
+      "id": "ca_oe_bulletin",
+      "display_name": "Issue OE Bulletin reinforcing behaviors for handling fleet/industry operating experience",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:issue-oe-bulletin-reinforcing-behaviors-for-handling-fleet-industry-operating-experience"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts322",
+      "display_name": "Technical Specification 3.2.2",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-3-2-2"
+    },
+    {
+      "id": "ler_prev_ggns",
+      "display_name": "Grand Gulf Nuclear Station CR-GGNS-2000-1810 (level 8 setpoint issue)",
+      "properties": {},
+      "type": "LER",
+      "key": "CR-GGNS-2000-1810",
+      "stub": true,
+      "title": "Level 8 setpoint issue originally identified at Grand Gulf Nuclear Station",
+      "plant": "Grand Gulf Nuclear Station",
+      "match_key": "LER:CR-GGNS-2000-1810"
+    },
+    {
+      "id": "ler_prev_rbs21004",
+      "display_name": "RBS LER 2021-004 (referenced re: Safety Communication 21-04 OLMCPR penalty)",
+      "properties": {},
+      "type": "LER",
+      "key": "458-2021-004-00",
+      "stub": true,
+      "title": "Safety Communication 21-04 related OLMCPR penalty",
+      "plant": "River Bend Station",
+      "match_key": "LER:458-2021-004-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts322",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rpv_level",
+      "evidence": null
+    },
+    {
+      "source": "c_lt_scram",
+      "relation": "PART_OF",
+      "target": "sys_rpv_level",
+      "evidence": null
+    },
+    {
+      "source": "c_lt_turbtrip",
+      "relation": "PART_OF",
+      "target": "sys_rpv_level",
+      "evidence": null
+    },
+    {
+      "source": "fm_setpoint_design",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_setpoint_design",
+      "relation": "LEADS_TO",
+      "target": "fm_setpoint_deviation",
+      "evidence": null
+    },
+    {
+      "source": "fm_oe_not_incorporated",
+      "relation": "LEADS_TO",
+      "target": "fm_setpoint_deviation",
+      "evidence": null
+    },
+    {
+      "source": "fm_setpoint_deviation",
+      "relation": "LEADS_TO",
+      "target": "fm_olmcpr_penalty",
+      "evidence": null
+    },
+    {
+      "source": "fm_olmcpr_penalty",
+      "relation": "LEADS_TO",
+      "target": "fm_olmcpr_exceeded",
+      "evidence": null
+    },
+    {
+      "source": "fm_olmcpr_exceeded",
+      "relation": "LEADS_TO",
+      "target": "cons_ts_prohibited",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_admin_limits",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_wo_created",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_wo_outage",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_oe_bulletin",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev_ggns",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev_rbs21004",
+      "evidence": null
+    }
+  ],
+  "chain": "level 8 setpoints not evaluated for drift/uncertainty at design [cause TBD] + fleet OE from GGNS not incorporated -> independent drift creates scram/turbine-trip setpoint deviation -> FWCF re-evaluation drives 0.05 OLMCPR penalty -> past operability review finds OLMCPR exceeded beyond TS 3.2.2 allowed time (Cycles 20-21) -> condition prohibited by Technical Specifications",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code is TBD/provisional per FORM-366; category left as 'provisional' per authoritative field even though narrative describes a clear design/setpoint-analysis and OE-incorporation deficiency (captured in theme/proximate_text). No SLMCPR violation or fuel damage occurred; event is a TS-prohibited-condition report (retroactive discovery via past operability evaluation), not an equipment failure event, hence no System/Component 'failure' per se -- modeled the level 8 instrumentation and its setpoint deviation as the technical failure chain. Previous similar event citations: GGNS CR-2000-1810 (original identification of the level 8 issue) and RBS LER 2021-004 (SC 21-04 penalty) are both referenced as related prior occurrences; GGNS item is a condition report, not a formal LER number, but is modeled as a stub LER node per the instructions for a referenced prior occurrence given the schema's SIMILAR_TO/stub mechanism has no separate node type for CRs. No block_13 rows provided in FORM-366 fields (empty)."
+}

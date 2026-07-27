@@ -1,0 +1,409 @@
+{
+  "ler_number": "298-2024-005-00",
+  "identity": {
+    "accession_number": "ML24134A267",
+    "docket": "05000298",
+    "plant_name": "Cooper",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2024-03-13",
+    "report_date": "2024-05-13",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Licensee Event Report No. 2024-005-00 Cooper Nuclear Station, Docket No. 50-298, DPR-46"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)",
+      "10 CFR 50.73(a)(2)(v)(D)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The cause of the event was the installation and mounting of the new model pressure switch was not in accordance with the vendor mounting recommendations and the seismic test report, resulting in a shift in calibration which changed the setpoint outside of the acceptable range.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "improper component installation/mounting per vendor and seismic requirements",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 298-2024-005-00",
+      "properties": {
+        "match_key": "LER:298-2024-005-00"
+      },
+      "type": "LER",
+      "key": "298-2024-005-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:298-2024-005-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Cooper Unit 1",
+      "properties": {
+        "match_key": "Unit:05000298",
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000298",
+      "match_key": "Unit:05000298"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {
+        "match_key": "Cause:provisional"
+      },
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "improper component installation/mounting per vendor and seismic requirements",
+      "proximate_text": "The cause of the event was the installation and mounting of the new model pressure switch was not in accordance with the vendor mounting recommendations and the seismic test report, resulting in a shift in calibration which changed the setpoint outside of the acceptable range.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_bj",
+      "display_name": "High Pressure Coolant Injection",
+      "properties": {
+        "match_key": "System:BJ"
+      },
+      "type": "System",
+      "eiis_code": "BJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected system",
+      "match_key": "System:BJ"
+    },
+    {
+      "id": "sys_rpv",
+      "display_name": "Reactor Coolant Pressure Boundary / Reactor Vessel",
+      "properties": {
+        "note": "design context - not modeled further",
+        "match_key": "System:RPV"
+      },
+      "type": "System",
+      "eiis_code": "RPV",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:RPV"
+    },
+    {
+      "id": "c_ps2787",
+      "display_name": "HPCI Pressure Switch HPCI-PS-2787",
+      "properties": {
+        "match_key": "Component:HPCI-PS-2787"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "HPCI-PS-2787",
+      "model": "9012-ACW-22 / 9012G",
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:hpci-pressure-switch-hpci-ps-2787"
+    },
+    {
+      "id": "c_mount",
+      "display_name": "Pressure switch mounting hardware/screws",
+      "properties": {
+        "match_key": "Component:mounting-hardware"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:pressure-switch-mounting-hardware-screws"
+    },
+    {
+      "id": "c_pad",
+      "display_name": "Rubber vibration pad",
+      "properties": {
+        "match_key": "Component:rubber-vibration-pad"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:rubber-vibration-pad"
+    },
+    {
+      "id": "fm_pad_reused",
+      "display_name": "Rubber vibration pad not removed / reused during installation",
+      "properties": {
+        "match_key": "FailureMode:pad-reused"
+      },
+      "type": "FailureMode",
+      "description": "The rubber vibration pad located between the switch body and mounting plate was not removed prior to installation in 2023 and 2024, contrary to vendor/seismic test report requirements.",
+      "match_key": "FailureMode:rubber-vibration-pad-not-removed-reused-during-installation"
+    },
+    {
+      "id": "fm_torque",
+      "display_name": "Mounting screw torque not specified/controlled",
+      "properties": {
+        "match_key": "FailureMode:torque-uncontrolled"
+      },
+      "type": "FailureMode",
+      "description": "Work documents for the 2023 replacement did not specify a torque value for the mounting screws, and the seismic test report mounting requirements were not followed.",
+      "match_key": "FailureMode:mounting-screw-torque-not-specified-controlled"
+    },
+    {
+      "id": "fm_calshift",
+      "display_name": "Pressure switch calibration/setpoint shift",
+      "properties": {
+        "match_key": "FailureMode:calibration-shift"
+      },
+      "type": "FailureMode",
+      "description": "Tightness of mounting screws and presence of the vibration pad drastically affected switch calibration, shifting the setpoint outside acceptable tolerance.",
+      "match_key": "FailureMode:pressure-switch-calibration-setpoint-shift"
+    },
+    {
+      "id": "fm_oos",
+      "display_name": "HPCI-PS-2787 setpoint found out of calibration tolerance",
+      "properties": {
+        "match_key": "FailureMode:setpoint-out-of-tolerance"
+      },
+      "type": "FailureMode",
+      "description": "Setpoint found at 47.12 psi against a required tolerance of greater than or equal to 85 psi; after replacement, still out of tolerance at 44.7/32.4 psi.",
+      "match_key": "FailureMode:hpci-ps-2787-setpoint-found-out-of-calibration-tolerance"
+    },
+    {
+      "id": "cons_hpci",
+      "display_name": "HPCI inoperable / TS 3.5.1 LCO entered",
+      "properties": {
+        "match_key": "Consequence:hpci-inoperable"
+      },
+      "type": "Consequence",
+      "start": "2024-03-11T22:29",
+      "end": "2024-03-15T00:00",
+      "duration": "approximately 3 days 2 hours",
+      "tz": null,
+      "match_key": "Consequence:hpci-inoperable-ts-3-5-1-lco-entered"
+    },
+    {
+      "id": "ca_guidance",
+      "display_name": "Revise guidance documents to include installation and seismic testing configuration requirements for pressure switch",
+      "properties": {
+        "match_key": "CorrectiveAction:revise-guidance-documents"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-guidance-documents-to-include-installation-and-seismic-testing-configuration-requirements-for-pressure-switch"
+    },
+    {
+      "id": "ca_removepad",
+      "display_name": "Remove rubber vibration pad and apply proper torque to mounting hardware",
+      "properties": {
+        "match_key": "CorrectiveAction:remove-pad-apply-torque"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:remove-rubber-vibration-pad-and-apply-proper-torque-to-mounting-hardware"
+    },
+    {
+      "id": "rr_5073i",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_5073v",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "rr_ts351",
+      "display_name": "Technical Specification 3.5.1",
+      "properties": {
+        "match_key": "RegulatoryReference:ts-3-5-1"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-3-5-1"
+    },
+    {
+      "id": "ler_2024003",
+      "display_name": "LER 2024-003-00",
+      "properties": {
+        "match_key": "LER:2024-003-00"
+      },
+      "type": "LER",
+      "key": "2024-003-00",
+      "stub": true,
+      "title": "HPCI declared inoperable due to drain line piping steam leak",
+      "plant": "Cooper Nuclear Station",
+      "match_key": "LER:2024-003-00"
+    },
+    {
+      "id": "ler_2022003",
+      "display_name": "LER 2022-003-00",
+      "properties": {
+        "match_key": "LER:2022-003-00"
+      },
+      "type": "LER",
+      "key": "2022-003-00",
+      "stub": true,
+      "title": "Inadvertent HPCI injection into the RPV during HPCI beginning of cycle surveillance testing",
+      "plant": "Cooper Nuclear Station",
+      "match_key": "LER:2022-003-00"
+    },
+    {
+      "id": "ler_2021003",
+      "display_name": "LER 2021-003-00",
+      "properties": {
+        "match_key": "LER:2021-003-00"
+      },
+      "type": "LER",
+      "key": "2021-003-00",
+      "stub": true,
+      "title": "During surveillance testing, HPCI flow indicating switch, HPCI-FIS-78, failed to trip prior to exceeding the TS 3.3.5.1 function for HPCI pump discharge flow-low (bypass)",
+      "plant": "Cooper Nuclear Station",
+      "match_key": "LER:2021-003-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073i",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073v",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bj",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_ps2787",
+      "evidence": null
+    },
+    {
+      "source": "c_ps2787",
+      "relation": "PART_OF",
+      "target": "sys_bj",
+      "evidence": null
+    },
+    {
+      "source": "fm_torque",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_torque",
+      "relation": "LEADS_TO",
+      "target": "fm_pad_reused",
+      "evidence": null
+    },
+    {
+      "source": "fm_pad_reused",
+      "relation": "LEADS_TO",
+      "target": "fm_calshift",
+      "evidence": null
+    },
+    {
+      "source": "fm_torque",
+      "relation": "LEADS_TO",
+      "target": "fm_calshift",
+      "evidence": null
+    },
+    {
+      "source": "fm_calshift",
+      "relation": "LEADS_TO",
+      "target": "fm_oos",
+      "evidence": null
+    },
+    {
+      "source": "fm_oos",
+      "relation": "LEADS_TO",
+      "target": "cons_hpci",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_removepad",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_guidance",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REVISES",
+      "target": "ler_2024003",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_2024003",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_2022003",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_2021003",
+      "evidence": null
+    }
+  ],
+  "chain": "improper mounting/torque control not per vendor & seismic report [cause TBD] -> vibration pad not removed / mounting screws not torqued per spec -> pressure switch calibration/setpoint shift -> HPCI-PS-2787 setpoint out of tolerance -> HPCI inoperable / TS 3.5.1 LCO entered [no stated operable backup]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code left TBD/provisional per FORM-366 fields (block 13 empty, cause_code TBD). No BACKED_UP_BY edges emitted: narrative does not state that another ECCS system was operable/available during this HPCI inoperability window (LPCI/Core Spray are mentioned only in Background/design-context passage). REVISES edge to LER 2024-003-00 added because narrative lists it among 'the following conditions related to HPCI have been reported' and its event date (April 22, 2024) postdates this report's event but predates this report's issue date, and both concern HPCI inoperability; modeled as SIMILAR_TO plus informational REVISES was reconsidered -- actually removing REVISES since no explicit revision relationship is stated; kept SIMILAR_TO only per rule 9. RPV noted as design-context system, not further modeled beyond a placeholder for completeness of narrative context; no edges beyond none. Rubber pad and mounting hardware modeled as Components since they are explicitly discussed as physical items in the failure chain, not merely descriptive."
+}

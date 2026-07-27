@@ -1,0 +1,397 @@
+{
+  "ler_number": "341-2025-001-00",
+  "identity": {
+    "accession_number": "ML25226A116",
+    "docket": "05000341",
+    "plant_name": "Fermi",
+    "unit": 2,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2025-06-17",
+    "report_date": "2025-08-14",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "supplement-expected",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2025-001-00 for Fermi 2 Power Plant, Division 1 Transformer 64 Load Tap Changer Failure Potentially Prohibited by Technical Specifications and Potential Loss of Safety Function"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)(D)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "X",
+      "system": "EB",
+      "component": "TTC",
+      "manufacturer": "G080",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The LTC failed due to a failed time-delay relay within the LTC controls.",
+    "cause_code": "X",
+    "category": "Other",
+    "theme": "failed time-delay relay in load tap changer controls",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 341-2025-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "341-2025-001-00",
+      "stub": false,
+      "title": null,
+      "plant": "Fermi 2",
+      "match_key": "LER:341-2025-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Fermi Unit 2",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000341",
+      "match_key": "Unit:05000341"
+    },
+    {
+      "id": "cause",
+      "display_name": "Other (X)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "X",
+      "category": "Other",
+      "theme": "failed time-delay relay in load tap changer controls",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Other"
+    },
+    {
+      "id": "sys_eb",
+      "display_name": "Division 1 4160V AC Electrical Power Distribution System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "EB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected safety-related distribution system",
+      "match_key": "System:EB"
+    },
+    {
+      "id": "sys_ka",
+      "display_name": "Circulating Water System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "KA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "triggering load; pump start",
+      "match_key": "System:KA"
+    },
+    {
+      "id": "c_xfmr64",
+      "display_name": "Station Service Transformer (SST) 64",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "XFMR",
+      "identifier": "Maximo Location Number R1200S002",
+      "model": null,
+      "manufacturer_code": "G080",
+      "inferred_code": false,
+      "match_key": "Component:XFMR|Maximo Location Number R1200S002"
+    },
+    {
+      "id": "c_ltc",
+      "display_name": "Load Tap Changer (LTC)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "TTC",
+      "identifier": null,
+      "model": "LR-65",
+      "manufacturer_code": "G080",
+      "inferred_code": false,
+      "match_key": "Component:TTC"
+    },
+    {
+      "id": "c_tdc",
+      "display_name": "Time-delay closing relay",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "TDC",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:TDC"
+    },
+    {
+      "id": "c_bus",
+      "display_name": "Division I Bus",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "BU",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:BU"
+    },
+    {
+      "id": "c_pump4",
+      "display_name": "Circulating Water Pump #4",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "P",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:P"
+    },
+    {
+      "id": "fm_relay",
+      "display_name": "Time-delay closing relay failed",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Diagnostics revealed a failed time-delay closing relay in the LTC circuitry",
+      "match_key": "FailureMode:time-delay-closing-relay-failed"
+    },
+    {
+      "id": "fm_ltc",
+      "display_name": "LTC failed to automatically tap / non-functional",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "LTC in automatic mode would not automatically tap to control voltage, requiring manual operation",
+      "match_key": "FailureMode:ltc-failed-to-automatically-tap-non-functional"
+    },
+    {
+      "id": "fm_lowvoltage",
+      "display_name": "Bus low voltage condition / out of operability band",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Division I Bus voltage dropped outside required 122-to-124-meter volt operability band after Circulating Water Pump #4 start",
+      "match_key": "FailureMode:bus-low-voltage-condition-out-of-operability-band"
+    },
+    {
+      "id": "cons_inop",
+      "display_name": "Buses 64B and 64C potentially inoperable / TS 3.8.1 offsite circuit condition potentially prohibited by Technical Specifications and potential loss of safety function",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2025-06-17T17:55",
+      "end": "2025-06-19T19:32",
+      "duration": null,
+      "tz": "EPT",
+      "match_key": "Consequence:buses-64b-and-64c-potentially-inoperable-ts-3-8-1-offsite-circuit-condition-potentially-prohibited-by-technical-specifications-and-potential-loss-of-safety-function"
+    },
+    {
+      "id": "ca_replace_relay",
+      "display_name": "Replace and test failed time-delay relay",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-and-test-failed-time-delay-relay"
+    },
+    {
+      "id": "ca_auto_restore",
+      "display_name": "Return LTC to AUTO mode following relay replacement",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:return-ltc-to-auto-mode-following-relay-replacement"
+    },
+    {
+      "id": "ca_cap",
+      "display_name": "Address procedural and human performance gaps via Corrective Action Program",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:address-procedural-and-human-performance-gaps-via-corrective-action-program"
+    },
+    {
+      "id": "mfr_ge",
+      "display_name": "General Electric",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "G080",
+      "match_key": "Manufacturer:G080"
+    },
+    {
+      "id": "rr_5073v",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "rr_5073i",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts381",
+      "display_name": "Technical Specification 3.8.1 AC Sources - Operating",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-3-8-1-ac-sources-operating"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "CR-2024-39536 - SST 64 LTC failed to maintain voltage automatically (5/13/24)",
+      "properties": {},
+      "type": "LER",
+      "key": "CR-2024-39536",
+      "stub": true,
+      "title": "SST 64 LTC did not maintain voltage automatically; operators manually increased voltage from approximately 119V to 121V",
+      "plant": "Fermi 2",
+      "match_key": "LER:CR-2024-39536"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073v",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073i",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_eb",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ka",
+      "evidence": null
+    },
+    {
+      "source": "c_ltc",
+      "relation": "PART_OF",
+      "target": "c_xfmr64",
+      "evidence": null
+    },
+    {
+      "source": "c_tdc",
+      "relation": "PART_OF",
+      "target": "c_ltc",
+      "evidence": null
+    },
+    {
+      "source": "c_pump4",
+      "relation": "PART_OF",
+      "target": "sys_ka",
+      "evidence": null
+    },
+    {
+      "source": "fm_relay",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_relay",
+      "relation": "LEADS_TO",
+      "target": "fm_ltc",
+      "evidence": null
+    },
+    {
+      "source": "fm_ltc",
+      "relation": "LEADS_TO",
+      "target": "fm_lowvoltage",
+      "evidence": null
+    },
+    {
+      "source": "fm_lowvoltage",
+      "relation": "LEADS_TO",
+      "target": "cons_inop",
+      "evidence": null
+    },
+    {
+      "source": "cons_inop",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_relay",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_relay",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_auto_restore",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_cap",
+      "evidence": null
+    },
+    {
+      "source": "c_xfmr64",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_ge",
+      "evidence": null
+    },
+    {
+      "source": "c_ltc",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_ge",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts381",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    }
+  ],
+  "chain": "failed time-delay closing relay [cause X, Other] -> LTC fails to automatically tap -> Division I bus voltage drops outside operability band after CW Pump #4 start -> Buses 64B/64C potentially inoperable, TS 3.8.1 condition / potential loss of safety function -> corrective: relay replaced, LTC returned to AUTO",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code X (Other) governs category despite narrative pointing to a specific failed time-delay relay; the LER explicitly attributes cause to the relay failure, so proximate_text and theme capture that mechanism while category stays 'Other' per official code. Report is supplement-expected: investigation into duration/timing of the voltage excursion and potential loss-of-safety-function determination pending. Unit inferred as 2 (Fermi 2) though FORM-366 unit field was null; docket 05000341 corresponds to Fermi 2. No backup systems stated as operable during this event (redundant Division 2 train not discussed as backing up during the excursion), so no BACKED_UP_BY edges emitted. Previous occurrence captured as CR-2024-39536 per instructions, though it is a Condition Report reference rather than a formal LER; stub node created as directed by rule 9 using the exact identifier given in the text."
+}

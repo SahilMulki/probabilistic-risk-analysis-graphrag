@@ -1,0 +1,345 @@
+{
+  "ler_number": "317-2024-003-00",
+  "identity": {
+    "accession_number": "ML24250A179",
+    "docket": "05000317",
+    "plant_name": "Calvert Cliffs",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2024-07-08",
+    "report_date": "2024-09-06",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "operability test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2024-003-00 for Calvert Cliffs Nuclear Power Plant, Units 1 and 2, 1A Diesel Generator Inoperable Due to Potential Transformer Failure"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "B",
+      "system": "EK",
+      "component": "XPT",
+      "manufacturer": "G090",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The direct cause of the Potential Transformer failure is attributed to age-related degradation of the winding insulation causing turn-to-turn shorts on the primary and secondary winding.",
+    "cause_code": "B",
+    "category": "Design/Manufacturing/Installation",
+    "theme": "age-related insulation degradation of potential transformer",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 317-2024-003-00",
+      "properties": {},
+      "type": "LER",
+      "key": "317-2024-003-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:317-2024-003-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Calvert Cliffs Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000317",
+      "match_key": "Unit:05000317"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Manufacturing/Installation (B)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "B",
+      "category": "Design/Manufacturing/Installation",
+      "theme": "age-related insulation degradation of potential transformer",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Design/Manufacturing/Installation"
+    },
+    {
+      "id": "sys_ek",
+      "display_name": "1A Emergency Diesel Generator support system",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "EK",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "EDG electrical protection/control support",
+      "match_key": "System:EK"
+    },
+    {
+      "id": "c_pt",
+      "display_name": "Potential Transformer (PT-1)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "XPT",
+      "identifier": "PT-1",
+      "model": null,
+      "manufacturer_code": "G090",
+      "inferred_code": false,
+      "match_key": "Component:XPT|PT-1"
+    },
+    {
+      "id": "c_fuse",
+      "display_name": "Upstream primary-side fuse on PT-1",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:upstream-primary-side-fuse-on-pt-1"
+    },
+    {
+      "id": "c_uvrelay",
+      "display_name": "127-1 Undervoltage Relay",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "127-1",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:127-1-undervoltage-relay"
+    },
+    {
+      "id": "c_ocrelay",
+      "display_name": "127/151 Voltage-Restraint Overcurrent Relay (IFCV type)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "127/151",
+      "model": "IFCV",
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:127-151-voltage-restraint-overcurrent-relay-ifcv-type"
+    },
+    {
+      "id": "c_breaker",
+      "display_name": "1A EDG Output Breaker 152-1703",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "152-1703",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:1a-edg-output-breaker-152-1703"
+    },
+    {
+      "id": "fm_insulation",
+      "display_name": "Winding insulation degradation causing turn-to-turn shorts",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Age-related degradation of PT winding insulation caused turn-to-turn shorts on primary and secondary windings.",
+      "match_key": "FailureMode:winding-insulation-degradation-causing-turn-to-turn-shorts"
+    },
+    {
+      "id": "fm_overcurrent",
+      "display_name": "Increased primary-side current overheats upstream fuse",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Turn-to-turn shorts increased primary-side current needed to maintain secondary voltage, overheating the upstream primary fuse.",
+      "match_key": "FailureMode:increased-primary-side-current-overheats-upstream-fuse"
+    },
+    {
+      "id": "fm_voltageloss",
+      "display_name": "Loss of voltage to 127-1 UV relay and 127/151 OC relay",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Downstream loss of voltage caused the 1A EDG alarm via the UV relay and affected the voltage-restraint overcurrent relay pickup.",
+      "match_key": "FailureMode:loss-of-voltage-to-127-1-uv-relay-and-127-151-oc-relay"
+    },
+    {
+      "id": "fm_ocrelay_impact",
+      "display_name": "Voltage-restraint overcurrent relay pickup amperage affected",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Loss of 'A' phase voltage impacted pickup amperage of the 127/151 relay, potentially tripping the EDG output breaker during an accident scenario.",
+      "match_key": "FailureMode:voltage-restraint-overcurrent-relay-pickup-amperage-affected"
+    },
+    {
+      "id": "fm_opdetgap",
+      "display_name": "Gaps in operability determination / lack of independent review",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Contributing cause: gaps in determining the operability impact and a lack of independence during the initial operability determination, delaying declaration of inoperability.",
+      "match_key": "FailureMode:gaps-in-operability-determination-lack-of-independent-review"
+    },
+    {
+      "id": "cons_edginop",
+      "display_name": "1A EDG declared inoperable / TS Conditions exceeded",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2024-07-02T02:00",
+      "end": "2024-07-11T04:18",
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:1a-edg-declared-inoperable-ts-conditions-exceeded"
+    },
+    {
+      "id": "ca_replace_pt",
+      "display_name": "Replace potential transformer PT-1",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-potential-transformer-pt-1"
+    },
+    {
+      "id": "ca_training",
+      "display_name": "Training, observations, and procedure changes addressing human performance factors",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:training-observations-and-procedure-changes-addressing-human-performance-factors"
+    },
+    {
+      "id": "mfr_g090",
+      "display_name": "Manufacturer G090",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "G090",
+      "match_key": "Manufacturer:G090"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_nureg1022",
+      "display_name": "NUREG-1022, Revision 3",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "standard/guidance",
+      "match_key": "RegulatoryReference:nureg-1022-revision-3"
+    },
+    {
+      "id": "rr_ts3811",
+      "display_name": "TS Condition 3.8.1.B / 3.8.1.E",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-condition-3-8-1-b-3-8-1-e"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_nureg1022",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts3811",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ek",
+      "evidence": null
+    },
+    {
+      "source": "c_pt",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_g090",
+      "evidence": null
+    },
+    {
+      "source": "fm_insulation",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_insulation",
+      "relation": "LEADS_TO",
+      "target": "fm_overcurrent",
+      "evidence": null
+    },
+    {
+      "source": "fm_overcurrent",
+      "relation": "LEADS_TO",
+      "target": "fm_voltageloss",
+      "evidence": null
+    },
+    {
+      "source": "fm_voltageloss",
+      "relation": "LEADS_TO",
+      "target": "fm_ocrelay_impact",
+      "evidence": null
+    },
+    {
+      "source": "fm_ocrelay_impact",
+      "relation": "LEADS_TO",
+      "target": "cons_edginop",
+      "evidence": null
+    },
+    {
+      "source": "fm_opdetgap",
+      "relation": "LEADS_TO",
+      "target": "cons_edginop",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_pt",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_training",
+      "evidence": null
+    }
+  ],
+  "chain": "age-related winding insulation degradation [cause B] -> turn-to-turn shorts increase primary current -> upstream fuse overheats -> loss of voltage to UV relay & voltage-restraint OC relay -> OC relay pickup amperage affected -> 1A EDG inoperable (delayed declaration due to operability-determination gaps) [PT replaced 7/11/24, EDG restored operable]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "EDG output breaker 152-1703 and PT-1/relays are functionally related but no explicit containment language justifying PART_OF; modeled as separate Component nodes in the causal chain via LEADS_TO instead. No backup/BACKED_UP_BY edges asserted: narrative does not state another EDG or system was confirmed operable/available during this specific inoperability window (train redundancy implied by plant design but not explicitly stated as operable backup during event). Contributing cause (operability determination gaps) modeled as a parallel FailureMode leading to the same Consequence, since it delayed declaration rather than causing the PT failure itself. Previous occurrences section explicitly states no similar prior PT failures were found, so no SIMILAR_TO/stub LER was created per that negative finding."
+}

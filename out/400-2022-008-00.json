@@ -1,0 +1,387 @@
+{
+  "ler_number": "400-2022-008-00",
+  "identity": {
+    "accession_number": "ML22353A591",
+    "docket": "05000400",
+    "plant_name": "Shearon Harris",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2022-10-30",
+    "report_date": "2022-12-19",
+    "operating_mode": "3",
+    "power_level": 0,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Automatic Actuation of Auxiliary Feedwater System"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The cause of the 'B' MFP failure to start was an open limit switch alignment deficiency on the 'B' MFP recirculation line condenser isolation valve. Misalignment of the limit switch prevented meeting the start permissive for the 'B' MFP. Start permissive verification checks were not required to be completed in accordance with procedural guidance prior to starting the 'B' MFP.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "procedural guidance gap allowed uncorrected limit-switch misalignment to prevent MFP start permissive",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 400-2022-008-00",
+      "properties": {},
+      "type": "LER",
+      "key": "400-2022-008-00",
+      "stub": false,
+      "title": "Automatic Actuation of Auxiliary Feedwater System",
+      "plant": "Shearon Harris Nuclear Power Plant",
+      "match_key": "LER:400-2022-008-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Shearon Harris Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000400",
+      "match_key": "Unit:05000400"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "procedural guidance gap allowed uncorrected limit-switch misalignment to prevent MFP start permissive",
+      "proximate_text": "The cause of the 'B' MFP failure to start was an open limit switch alignment deficiency on the 'B' MFP recirculation line condenser isolation valve. Misalignment of the limit switch prevented meeting the start permissive for the 'B' MFP. Start permissive verification checks were not required to be completed in accordance with procedural guidance prior to starting the 'B' MFP.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_ba",
+      "display_name": "Auxiliary Feedwater",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "actuated system; ESFAS function",
+      "match_key": "System:BA"
+    },
+    {
+      "id": "sys_sj",
+      "display_name": "Main Feedwater",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "unavailable, prompted AFW actuation",
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "sys_bu",
+      "display_name": "Electrical Auxiliary Bus",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BU",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BU"
+    },
+    {
+      "id": "sys_je",
+      "display_name": "Engineered Safety Features Actuation System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JE",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JE"
+    },
+    {
+      "id": "c_amfp",
+      "display_name": "'A' Main Feedwater Pump",
+      "properties": {
+        "note": "removed from service due to bus clearance"
+      },
+      "type": "Component",
+      "eiis_code": "SJ",
+      "identifier": "A MFP",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:SJ|A MFP"
+    },
+    {
+      "id": "c_bmfp",
+      "display_name": "'B' Main Feedwater Pump",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "SJ",
+      "identifier": "B MFP",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:SJ|B MFP"
+    },
+    {
+      "id": "c_bmfp_bkr",
+      "display_name": "'B' MFP breaker",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "B MFP breaker",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:b-mfp-breaker"
+    },
+    {
+      "id": "c_isv",
+      "display_name": "'B' MFP recirculation line condenser isolation valve",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": "B MFP recirc line COND ISV",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:ISV|B MFP recirc line COND ISV"
+    },
+    {
+      "id": "c_limitswitch",
+      "display_name": "Limit switch (on B MFP recirc line COND ISV)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "33",
+      "identifier": "B MFP recirc ISV limit switch",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:33|B MFP recirc ISV limit switch"
+    },
+    {
+      "id": "c_amdafw",
+      "display_name": "'A' Motor-Driven Auxiliary Feedwater Pump",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "BA",
+      "identifier": "A MDAFW Pump",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:BA|A MDAFW Pump"
+    },
+    {
+      "id": "c_bmdafw",
+      "display_name": "'B' Motor-Driven Auxiliary Feedwater Pump",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "BA",
+      "identifier": "B MDAFW Pump",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:BA|B MDAFW Pump"
+    },
+    {
+      "id": "c_fcv",
+      "display_name": "MDAFW Flow Control Valves",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "BA",
+      "identifier": "MDAFW FCVs",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:BA|MDAFW FCVs"
+    },
+    {
+      "id": "fm_limitswitch",
+      "display_name": "Limit switch alignment deficiency (open) on B MFP recirc ISV",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Open limit switch alignment deficiency prevented meeting the start permissive for the 'B' MFP.",
+      "match_key": "FailureMode:limit-switch-alignment-deficiency-open-on-b-mfp-recirc-isv"
+    },
+    {
+      "id": "fm_startpermissive",
+      "display_name": "B MFP start permissive not met",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Misalignment of the limit switch prevented meeting the start permissive for the 'B' MFP; verification checks not required by procedure.",
+      "match_key": "FailureMode:b-mfp-start-permissive-not-met"
+    },
+    {
+      "id": "fm_bkr_notclose",
+      "display_name": "'B' MFP breaker did not close",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The 'B' MFP switch was taken to start and the 'B' MFP breaker did not close.",
+      "match_key": "FailureMode:b-mfp-breaker-did-not-close"
+    },
+    {
+      "id": "cons_lastmfp",
+      "display_name": "Loss of last running MFP condition / valid AFW actuation signal",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2022-10-30T20:57",
+      "end": null,
+      "duration": null,
+      "tz": "EDT",
+      "match_key": "Consequence:loss-of-last-running-mfp-condition-valid-afw-actuation-signal"
+    },
+    {
+      "id": "cons_afwact",
+      "display_name": "Automatic actuation of AFW system",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2022-10-30T20:57",
+      "end": null,
+      "duration": null,
+      "tz": "EDT",
+      "match_key": "Consequence:automatic-actuation-of-afw-system"
+    },
+    {
+      "id": "ca_adjust",
+      "display_name": "Adjust deficient limit switch on B MFP recirc line condenser isolation valve for proper alignment",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:adjust-deficient-limit-switch-on-b-mfp-recirc-line-condenser-isolation-valve-for-proper-alignment"
+    },
+    {
+      "id": "ca_procedure",
+      "display_name": "Revise procedural guidance to require start permissive verification checks prior to starting a MFP",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-procedural-guidance-to-require-start-permissive-verification-checks-prior-to-starting-a-mfp"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ba",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sj",
+      "evidence": null
+    },
+    {
+      "source": "c_isv",
+      "relation": "PART_OF",
+      "target": "c_bmfp",
+      "evidence": null
+    },
+    {
+      "source": "c_limitswitch",
+      "relation": "PART_OF",
+      "target": "c_isv",
+      "evidence": null
+    },
+    {
+      "source": "fm_limitswitch",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_limitswitch",
+      "relation": "LEADS_TO",
+      "target": "fm_startpermissive",
+      "evidence": null
+    },
+    {
+      "source": "fm_startpermissive",
+      "relation": "LEADS_TO",
+      "target": "fm_bkr_notclose",
+      "evidence": null
+    },
+    {
+      "source": "fm_bkr_notclose",
+      "relation": "LEADS_TO",
+      "target": "cons_lastmfp",
+      "evidence": null
+    },
+    {
+      "source": "cons_lastmfp",
+      "relation": "LEADS_TO",
+      "target": "cons_afwact",
+      "evidence": null
+    },
+    {
+      "source": "cons_afwact",
+      "relation": "BACKED_UP_BY",
+      "target": "c_amdafw",
+      "evidence": null
+    },
+    {
+      "source": "cons_afwact",
+      "relation": "BACKED_UP_BY",
+      "target": "c_bmdafw",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_adjust",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procedure",
+      "evidence": null
+    }
+  ],
+  "chain": "limit switch alignment deficiency on B MFP recirc line COND ISV [cause TBD] -> B MFP start permissive not met -> B MFP breaker did not close -> loss of last running MFP -> automatic AFW actuation [backups: A & B MDAFW pumps already in service]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code is TBD/provisional per FORM-366 fields; narrative attributes the failure to a limit-switch alignment deficiency compounded by a procedural gap (start permissive verification not required), but no formal cause code/category was assigned in the source data. The 'A' MFP being under clearance is background context (not itself a failure in the chain) that set up reliance on the 'B' MFP. No previous similar occurrence (explicitly stated none in past three years), so no SIMILAR_TO edge or stub LER emitted."
+}

@@ -1,0 +1,325 @@
+{
+  "ler_number": "445-2020-001-00",
+  "identity": {
+    "accession_number": "ML21041A178",
+    "docket": "05000445",
+    "plant_name": "Comanche Peak",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2020-12-16",
+    "report_date": "2021-02-10",
+    "operating_mode": "1",
+    "power_level": 50,
+    "discovery_context": "inspection",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Comanche Peak Nuclear Power Plant (CPNPP) Docket No. 50-445 Main Feedwater Pump Failure To Trip Licensee Event Report 445/1-2020-001-00"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(vii)",
+      "10 CFR 50.73(a)(2)(v)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "A definitive cause for the inability to trip MFP 1A was not identified. Inspection of MFP 1A trip oil system did not identify a component failure.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "undetermined MFP trip oil pressure failure",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 445/1-2020-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "445-2020-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:445-2020-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Comanche Peak Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000445",
+      "match_key": "Unit:05000445"
+    },
+    {
+      "id": "cause",
+      "display_name": "Undetermined (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "undetermined MFP trip oil pressure failure",
+      "proximate_text": "A definitive cause for the inability to trip MFP 1A was not identified. Inspection of MFP 1A trip oil system did not identify a component failure.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_esfas",
+      "display_name": "Engineered Safety Feature Actuation System Instrumentation",
+      "properties": {
+        "note": "ESFAS Function 6.g, Trip of all Main Feedwater Pumps"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:engineered-safety-feature-actuation-system-instrumentation"
+    },
+    {
+      "id": "sys_mfp",
+      "display_name": "Main Feedwater Pump trip oil system",
+      "properties": {
+        "note": "non-safety system providing trip signal input"
+      },
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "sys_mdafw",
+      "display_name": "Motor-Driven Auxiliary Feedwater Pumps",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; manually started",
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "c_mfp1a",
+      "display_name": "Main Feedwater Pump 1A (MFP 1A)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "MFP 1A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:main-feedwater-pump-1a-mfp-1a"
+    },
+    {
+      "id": "c_sv13",
+      "display_name": "Lockout solenoid valve SV-13",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "SV-13",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:lockout-solenoid-valve-sv-13"
+    },
+    {
+      "id": "fm_notrip_remote",
+      "display_name": "MFP 1A failed to trip from main control room push-button",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Trip oil pressure did not lower when remote trip push-button was depressed",
+      "match_key": "FailureMode:mfp-1a-failed-to-trip-from-main-control-room-push-button"
+    },
+    {
+      "id": "fm_notrip_local",
+      "display_name": "MFP 1A failed to trip locally at the pump",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Trip oil pressure did not lower when local trip was attempted",
+      "match_key": "FailureMode:mfp-1a-failed-to-trip-locally-at-the-pump"
+    },
+    {
+      "id": "fm_esfas_input",
+      "display_name": "One of two ESFAS Function 6.g trip inputs unavailable",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Non-safety MFP trip oil circuit failed to provide one of two trip inputs required for MDAFWP automatic start, though the actual ESFAS instrumentation circuit did not fail",
+      "match_key": "FailureMode:one-of-two-esfas-function-6-g-trip-inputs-unavailable"
+    },
+    {
+      "id": "cons_inop",
+      "display_name": "ESFAS Function 6.g input inoperable / MDAFWP auto-start input unavailable",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2020-10-10T09:45:00",
+      "end": "2020-10-10T10:03:00",
+      "duration": "approximately 18 minutes",
+      "tz": null,
+      "match_key": "Consequence:esfas-function-6-g-input-inoperable-mdafwp-auto-start-input-unavailable"
+    },
+    {
+      "id": "ca_design_mod",
+      "display_name": "Design modification to MFP seal water system to minimize water intrusion into oil system",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:design-modification-to-mfp-seal-water-system-to-minimize-water-intrusion-into-oil-system"
+    },
+    {
+      "id": "ca_sv13_replace",
+      "display_name": "Replace lockout solenoid valve SV-13",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-lockout-solenoid-valve-sv-13"
+    },
+    {
+      "id": "ca_pm_cycle",
+      "display_name": "New preventative maintenance action to cycle SV-13 quarterly until water intrusion corrected",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:new-preventative-maintenance-action-to-cycle-sv-13-quarterly-until-water-intrusion-corrected"
+    },
+    {
+      "id": "rr_5073vii",
+      "display_name": "10 CFR 50.73(a)(2)(vii)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-vii"
+    },
+    {
+      "id": "rr_5073v",
+      "display_name": "10 CFR 50.73(a)(2)(v)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v"
+    },
+    {
+      "id": "rr_ts332",
+      "display_name": "Technical Specification 3.3.2 ESFAS Instrumentation",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-3-3-2-esfas-instrumentation"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073vii",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073v",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_mfp",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_esfas",
+      "evidence": null
+    },
+    {
+      "source": "c_mfp1a",
+      "relation": "PART_OF",
+      "target": "sys_mfp",
+      "evidence": null
+    },
+    {
+      "source": "fm_notrip_remote",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_notrip_remote",
+      "relation": "LEADS_TO",
+      "target": "fm_notrip_local",
+      "evidence": null
+    },
+    {
+      "source": "fm_notrip_local",
+      "relation": "LEADS_TO",
+      "target": "fm_esfas_input",
+      "evidence": null
+    },
+    {
+      "source": "fm_esfas_input",
+      "relation": "LEADS_TO",
+      "target": "cons_inop",
+      "evidence": null
+    },
+    {
+      "source": "cons_inop",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_mdafw",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_design_mod",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_sv13_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_pm_cycle",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_mdafw",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts332",
+      "evidence": null
+    }
+  ],
+  "chain": "undetermined cause [TBD] -> MFP 1A fails to trip remotely -> MFP 1A fails to trip locally -> one of two ESFAS Function 6.g trip inputs unavailable -> ESFAS instrumentation input inoperable (~18 min) [operators manually tripped MFP 1A via steam supply valve closure and manual oil pressure lowering; MDAFWPs manually started]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "No component failure was identified despite extensive inspection/teardown; cause code officially TBD/provisional per form fields, so category set to 'provisional' verbatim. Failure involved a non-safety trip oil system whose loss of pressure input affected the safety-related ESFAS 2-of-2 logic (Function 6.g), triggering the (a)(2)(vii) common-cause reporting criterion; evaluated as not meeting SSFF definition under (a)(2)(v). No previous similar events reported (none to link via SIMILAR_TO)."
+}

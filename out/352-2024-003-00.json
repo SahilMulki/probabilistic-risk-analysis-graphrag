@@ -1,0 +1,451 @@
+{
+  "ler_number": "352-2024-003-00",
+  "identity": {
+    "accession_number": "ML24170A772",
+    "docket": "05000352",
+    "plant_name": "Limerick",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2024-04-22",
+    "report_date": "2024-06-18",
+    "operating_mode": "4",
+    "power_level": null,
+    "discovery_context": "inspection",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Core Operating Limits Report Thermal Limits Exceeded"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The cause of the spacer relocation was determined to be the mis-oriented water rod in the fuel bundle GGK123. Mis-orientation of the water rod would have occurred during fuel bundle fabrication. The mis-orientation caused the spacers to not be locked into position, causing them to propagate up the bundle due to hydraulic force during normal operation.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "fuel fabrication defect - mis-oriented water rod",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 352-2024-003-00",
+      "properties": {},
+      "type": "LER",
+      "key": "352-2024-003-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:352-2024-003-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Limerick Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000352",
+      "match_key": "Unit:05000352"
+    },
+    {
+      "id": "cause",
+      "display_name": "Fuel fabrication defect (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "fuel fabrication defect - mis-oriented water rod",
+      "proximate_text": "The cause of the spacer relocation was determined to be the mis-oriented water rod in the fuel bundle GGK123. Mis-orientation of the water rod would have occurred during fuel bundle fabrication. The mis-orientation caused the spacers to not be locked into position, causing them to propagate up the bundle due to hydraulic force during normal operation.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_ac",
+      "display_name": "Reactor Core Systems",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "AC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:AC"
+    },
+    {
+      "id": "c_bundle",
+      "display_name": "Unit 1 Fuel Bundle GGK123",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "ROD",
+      "identifier": "GGK123",
+      "model": null,
+      "manufacturer_code": "G080",
+      "inferred_code": false,
+      "match_key": "Component:ROD|GGK123"
+    },
+    {
+      "id": "c_waterrod",
+      "display_name": "Water rod",
+      "properties": {
+        "note": "component of GNF3 fuel bundle"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:water-rod"
+    },
+    {
+      "id": "c_spacers",
+      "display_name": "Fuel bundle spacers",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:fuel-bundle-spacers"
+    },
+    {
+      "id": "fm_misorient",
+      "display_name": "Water rod mis-oriented during fabrication",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Mis-orientation of the water rod occurred during fuel bundle fabrication.",
+      "match_key": "FailureMode:water-rod-mis-oriented-during-fabrication"
+    },
+    {
+      "id": "fm_spacerunlock",
+      "display_name": "Spacers not locked into position",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Mis-orientation caused the spacers to not be locked into position.",
+      "match_key": "FailureMode:spacers-not-locked-into-position"
+    },
+    {
+      "id": "fm_spacermigrate",
+      "display_name": "Spacers propagated up the bundle",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Spacers propagated up the bundle due to hydraulic force during normal operation, collocating below the upper tie plate.",
+      "match_key": "FailureMode:spacers-propagated-up-the-bundle"
+    },
+    {
+      "id": "fm_mcprviolation",
+      "display_name": "Operating Limit MCPR exceeded limits",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Evaluation determined the Operating Limit MCPR exceeded limits set by TS 3.2.3 for the previous cycle (Unit 1 Cycle 20).",
+      "match_key": "FailureMode:operating-limit-mcpr-exceeded-limits"
+    },
+    {
+      "id": "cons_ts",
+      "display_name": "TS LCO 3.2.3 MCPR requirements not met / restoration and power reduction times exceeded",
+      "properties": {
+        "note": "Two-hour MCPR restoration requirement and four-hour power reduction requirement were exceeded because the condition was conservatively assumed to have existed for most of the operating cycle. Reported under 10 CFR 50.73(a)(2)(i)(B) as condition prohibited by Technical Specifications."
+      },
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:ts-lco-3-2-3-mcpr-requirements-not-met-restoration-and-power-reduction-times-exceeded"
+    },
+    {
+      "id": "ca_offgas",
+      "display_name": "Verified no plant off-gas signatures indicative of leaking fuel rods",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:verified-no-plant-off-gas-signatures-indicative-of-leaking-fuel-rods"
+    },
+    {
+      "id": "ca_visual",
+      "display_name": "Performed full length peripheral visual inspection of de-channeled fuel bundle GGK123",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:performed-full-length-peripheral-visual-inspection-of-de-channeled-fuel-bundle-ggk123"
+    },
+    {
+      "id": "ca_evaluate",
+      "display_name": "Evaluated impact to APLHGR, LHGR, and MCPR limits",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:evaluated-impact-to-aplhgr-lhgr-and-mcpr-limits"
+    },
+    {
+      "id": "ca_discharge",
+      "display_name": "Permanently discharged fuel bundle GGK123 to spent fuel pool",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:permanently-discharged-fuel-bundle-ggk123-to-spent-fuel-pool"
+    },
+    {
+      "id": "ca_inspect_population",
+      "display_name": "Completed inspection of remaining 267 fuel bundles in susceptible population",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:completed-inspection-of-remaining-267-fuel-bundles-in-susceptible-population"
+    },
+    {
+      "id": "ca_unit2check",
+      "display_name": "Confirmed no impact to Unit 2 (no susceptible bundles)",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:confirmed-no-impact-to-unit-2-no-susceptible-bundles"
+    },
+    {
+      "id": "ca_lasercheck",
+      "display_name": "GNF implemented in-process laser check on water rod tab orientation",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:gnf-implemented-in-process-laser-check-on-water-rod-tab-orientation"
+    },
+    {
+      "id": "ca_qualifyinspectors",
+      "display_name": "GNF removed Quality at the Source process and reintroduced Qualify Inspectors at bundle assembly tables",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:gnf-removed-quality-at-the-source-process-and-reintroduced-qualify-inspectors-at-bundle-assembly-tables"
+    },
+    {
+      "id": "ca_finalinspection",
+      "display_name": "GNF added tab orientation check at final inspection",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:gnf-added-tab-orientation-check-at-final-inspection"
+    },
+    {
+      "id": "ca_receiptinspection",
+      "display_name": "Enhanced new fuel receipt inspection procedures to confirm proper water rod orientation on GNF3 bundles",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:enhanced-new-fuel-receipt-inspection-procedures-to-confirm-proper-water-rod-orientation-on-gnf3-bundles"
+    },
+    {
+      "id": "mfr_gnf",
+      "display_name": "Global Nuclear Fuel",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "G080",
+      "match_key": "Manufacturer:G080"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts323",
+      "display_name": "TS LCO 3.2.3 MCPR",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ts-lco-3-2-3-mcpr"
+    },
+    {
+      "id": "rr_ts212",
+      "display_name": "TS 2.1.2 Safety Limit MCPR",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ts-2-1-2-safety-limit-mcpr"
+    },
+    {
+      "id": "rr_part21",
+      "display_name": "10 CFR Part 21 communication SC 22-04 (GNF)",
+      "properties": {
+        "type": "standard/guidance"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-part-21-communication-sc-22-04-gnf"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts323",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ac",
+      "evidence": null
+    },
+    {
+      "source": "c_bundle",
+      "relation": "PART_OF",
+      "target": "sys_ac",
+      "evidence": null
+    },
+    {
+      "source": "c_waterrod",
+      "relation": "PART_OF",
+      "target": "c_bundle",
+      "evidence": null
+    },
+    {
+      "source": "c_spacers",
+      "relation": "PART_OF",
+      "target": "c_bundle",
+      "evidence": null
+    },
+    {
+      "source": "c_bundle",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_gnf",
+      "evidence": null
+    },
+    {
+      "source": "fm_misorient",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_misorient",
+      "relation": "LEADS_TO",
+      "target": "fm_spacerunlock",
+      "evidence": null
+    },
+    {
+      "source": "fm_spacerunlock",
+      "relation": "LEADS_TO",
+      "target": "fm_spacermigrate",
+      "evidence": null
+    },
+    {
+      "source": "fm_spacermigrate",
+      "relation": "LEADS_TO",
+      "target": "fm_mcprviolation",
+      "evidence": null
+    },
+    {
+      "source": "fm_mcprviolation",
+      "relation": "LEADS_TO",
+      "target": "cons_ts",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_offgas",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_visual",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_evaluate",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_discharge",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_inspect_population",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_unit2check",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_lasercheck",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_qualifyinspectors",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_finalinspection",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_receiptinspection",
+      "evidence": null
+    }
+  ],
+  "chain": "water rod mis-oriented during fabrication [cause TBD] -> spacers not locked into position -> spacers propagate up bundle (collocate below upper tie plate) -> Operating Limit MCPR exceeds TS 3.2.3 limits for prior cycle -> TS LCO 3.2.3 restoration/power-reduction time requirements exceeded (reportable condition; no actual safety consequence, Safety Limit MCPR never violated)",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4"
+  ],
+  "notes": "Cause code left TBD/provisional per FORM-366 fields (no official code assigned). Discovery was via planned in-core fuel inspection responding to GNF 10 CFR Part 21 communication, not a routine surveillance test; mapped discovery_context to 'inspection' per form fields. No systems were reported as inoperable/backed-up in this event (fuel/thermal-limits issue, not equipment failure), so no BACKED_UP_BY edges apply. 'Previous Occurrences' section explicitly states none, so no SIMILAR_TO/stub LER emitted."
+}

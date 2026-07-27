@@ -1,0 +1,345 @@
+{
+  "ler_number": "482-2025-001-00",
+  "identity": {
+    "accession_number": "ML25351A282",
+    "docket": "05000482",
+    "plant_name": "Wolf Creek",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2025-10-20",
+    "report_date": "2025-12-17",
+    "operating_mode": "6",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Docket No. 50-482: Licensee Event Report 2025-001-00, “Improperly"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "personnel did not ensure that all requirements of the breach permit program were being met due to proficiency gaps which allowed the CBE integrity to be affected by having 2 doors in the CBE boundary to be breached during the movement of irradiated fuel assemblies",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "breach permit program proficiency gaps",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 482-2025-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "482-2025-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:482-2025-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Wolf Creek Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000482",
+      "match_key": "Unit:05000482"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "breach permit program proficiency gaps",
+      "proximate_text": "personnel did not ensure that all requirements of the breach permit program were being met due to proficiency gaps which allowed the CBE integrity to be affected by having 2 doors in the CBE boundary to be breached during the movement of irradiated fuel assemblies",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_vi",
+      "display_name": "Control Room Emergency Ventilation System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "VI",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "involved; remained operable throughout event",
+      "match_key": "System:VI"
+    },
+    {
+      "id": "sys_cbe",
+      "display_name": "Control Building Envelope boundary",
+      "properties": {
+        "non_eiis": true
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "boundary rendered inoperable",
+      "match_key": "System:control-building-envelope-boundary"
+    },
+    {
+      "id": "sys_cre",
+      "display_name": "Control Room Envelope boundary",
+      "properties": {
+        "non_eiis": true
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "remained operable; positive pressure maintained",
+      "match_key": "System:control-room-envelope-boundary"
+    },
+    {
+      "id": "c_door31011",
+      "display_name": "Door 31011",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "DR",
+      "identifier": "31011",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:DR|31011"
+    },
+    {
+      "id": "c_door33012",
+      "display_name": "Door 33012",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "DR",
+      "identifier": "33012",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:DR|33012"
+    },
+    {
+      "id": "fm_door31011_open",
+      "display_name": "Door 31011 tied open with no active breach permit",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Door 31011 was used for access to room 3101 and tied open with no active breach permit authorizing it, during fuel movement.",
+      "match_key": "FailureMode:door-31011-tied-open-with-no-active-breach-permit"
+    },
+    {
+      "id": "fm_door33012_open",
+      "display_name": "Door 33012 inactive leaf opened outside briefed breach permit scope",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Breach permit for door 33012 covered only the active door's fire-barrier function, but the inactive door leaf (affecting other barrier functions) was also opened to allow traffic, an unbriefed condition approved without WCSRO interaction.",
+      "match_key": "FailureMode:door-33012-inactive-leaf-opened-outside-briefed-breach-permit-scope"
+    },
+    {
+      "id": "fm_cbe_inop",
+      "display_name": "Both CBE boundary doors open simultaneously",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Doors 31011 and 33012 were open at the same time from approximately 0906 to 0919, rendering the CBE boundary inoperable since more than a single barrier was breached.",
+      "match_key": "FailureMode:both-cbe-boundary-doors-open-simultaneously"
+    },
+    {
+      "id": "cons_ts",
+      "display_name": "CBE boundary inoperable during movement of irradiated fuel assemblies / TS 3.7.10 LCO violation",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2025-10-20T09:06",
+      "end": "2025-10-20T09:19",
+      "duration": "13 minutes",
+      "tz": null,
+      "match_key": "Consequence:cbe-boundary-inoperable-during-movement-of-irradiated-fuel-assemblies-ts-3-7-10-lco-violation"
+    },
+    {
+      "id": "ca_close_doors",
+      "display_name": "Immediately close doors 31011 and 33012 upon discovery",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:immediately-close-doors-31011-and-33012-upon-discovery"
+    },
+    {
+      "id": "ca_rebrief",
+      "display_name": "Re-brief Security and Work Control personnel on TS requirements during fuel movement",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:re-brief-security-and-work-control-personnel-on-ts-requirements-during-fuel-movement"
+    },
+    {
+      "id": "ca_review_protocols",
+      "display_name": "Review and reinforce breach permit protocols and work control coordination",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:review-and-reinforce-breach-permit-protocols-and-work-control-coordination"
+    },
+    {
+      "id": "ca_training",
+      "display_name": "Create training request on breach authorization procedure and WCRE-35",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:create-training-request-on-breach-authorization-procedure-and-wcre-35"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts3710",
+      "display_name": "TS 3.7.10 (CREVS / CRE / CBE boundaries)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-3-7-10-crevs-cre-cbe-boundaries"
+    },
+    {
+      "id": "rr_wcre35",
+      "display_name": "WCRE-35, Boundary Matrix",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "standard/guidance",
+      "match_key": "RegulatoryReference:wcre-35-boundary-matrix"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts3710",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_wcre35",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_vi",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_cbe",
+      "evidence": null
+    },
+    {
+      "source": "c_door31011",
+      "relation": "PART_OF",
+      "target": "sys_cbe",
+      "evidence": null
+    },
+    {
+      "source": "c_door33012",
+      "relation": "PART_OF",
+      "target": "sys_cbe",
+      "evidence": null
+    },
+    {
+      "source": "fm_door31011_open",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_door31011_open",
+      "relation": "LEADS_TO",
+      "target": "fm_cbe_inop",
+      "evidence": null
+    },
+    {
+      "source": "fm_door33012_open",
+      "relation": "LEADS_TO",
+      "target": "fm_cbe_inop",
+      "evidence": null
+    },
+    {
+      "source": "fm_cbe_inop",
+      "relation": "LEADS_TO",
+      "target": "cons_ts",
+      "evidence": null
+    },
+    {
+      "source": "cons_ts",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_vi",
+      "evidence": null
+    },
+    {
+      "source": "cons_ts",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_cre",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_close_doors",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_rebrief",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_review_protocols",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_training",
+      "evidence": null
+    }
+  ],
+  "chain": "breach permit program proficiency gaps [cause TBD] -> door 31011 tied open without active breach permit -> (in parallel) door 33012 inactive leaf opened outside briefed scope -> both CBE boundary doors open simultaneously -> CBE boundary inoperable during fuel movement / TS 3.7.10 violation [backups CREVS remained functional, CRE positive pressure maintained]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "No block-13 rows or EIIS component/system codes for CBE/CRE boundaries were provided in the source (non-EIIS conceptual boundaries per plant CRE Habitability Program); modeled as non_eiis System nodes. CREVS (VI) itself was not the failed component — it remained operable throughout and is modeled as involved plus a backup consequence mitigator. Cause code left TBD/provisional per FORM-366 fields since no official cause code was given despite a clear personnel-error narrative theme."
+}

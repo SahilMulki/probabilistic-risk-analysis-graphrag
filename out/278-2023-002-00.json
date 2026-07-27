@@ -1,0 +1,413 @@
+{
+  "ler_number": "278-2023-002-00",
+  "identity": {
+    "accession_number": "ML23348A260",
+    "docket": "05000278",
+    "plant_name": "Peach Bottom",
+    "unit": 3,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2023-10-16",
+    "report_date": "2023-12-14",
+    "operating_mode": "3",
+    "power_level": null,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Licensee Event Report (LER) 2023-002-00 Main Steam Isolation Valves Stroke Times Exceed Technical Specification Limit"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "X",
+      "system": "SB",
+      "component": "ISV",
+      "manufacturer": "A585",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The cause of the slow stroke time was attributed to drift in the valve dashpot. ... The cause of this condition was attributed to delayed actuation, likely due to debris or contamination in the solenoid valve.",
+    "cause_code": "X",
+    "category": "Other",
+    "theme": "MSIV dashpot drift and solenoid contamination causing slow stroke times",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 278-2023-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "278-2023-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:278-2023-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Peach Bottom Unit 3",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000278",
+      "match_key": "Unit:05000278"
+    },
+    {
+      "id": "cause",
+      "display_name": "Other (X)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "X",
+      "category": "Other",
+      "theme": "MSIV dashpot drift and solenoid contamination causing slow stroke times",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Other"
+    },
+    {
+      "id": "sys_sb",
+      "display_name": "Main Steam",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SB"
+    },
+    {
+      "id": "c_msiv_a_out",
+      "display_name": "A Main Steam Line Outboard Isolation Valve",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": "AO-3-01A-086A",
+      "model": "20851-H",
+      "manufacturer_code": "A585",
+      "inferred_code": false,
+      "match_key": "Component:ISV|AO-3-01A-086A"
+    },
+    {
+      "id": "c_msiv_b_in",
+      "display_name": "B Main Steam Line Inboard Isolation Valve",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": "AO-3-01A-080B",
+      "model": "20851-H",
+      "manufacturer_code": "A585",
+      "inferred_code": false,
+      "match_key": "Component:ISV|AO-3-01A-080B"
+    },
+    {
+      "id": "c_msiv_b_out",
+      "display_name": "B Main Steam Line Outboard Isolation Valve",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:ISV"
+    },
+    {
+      "id": "c_dashpot",
+      "display_name": "Hydraulic dashpot / speed control assembly",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:hydraulic-dashpot-speed-control-assembly"
+    },
+    {
+      "id": "c_solenoid",
+      "display_name": "Solenoid valve",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:solenoid-valve"
+    },
+    {
+      "id": "fm_dashpot_drift",
+      "display_name": "Dashpot drift on A Outboard MSIV",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Drift in the valve dashpot caused slow stroke time of 6.2 seconds, exceeding the 5-second TS limit.",
+      "match_key": "FailureMode:dashpot-drift-on-a-outboard-msiv"
+    },
+    {
+      "id": "fm_solenoid_contam",
+      "display_name": "Delayed solenoid actuation on B Inboard MSIV",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Delayed actuation, likely due to debris or contamination in the solenoid valve, caused slow stroke time of 5.1 seconds.",
+      "match_key": "FailureMode:delayed-solenoid-actuation-on-b-inboard-msiv"
+    },
+    {
+      "id": "fm_b_out_slow",
+      "display_name": "B Outboard MSIV slow stroke (non-repeatable)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "B Outboard MSIV stroked in 5.5 seconds but this could not be replicated in subsequent testing; not included in reportable scope.",
+      "match_key": "FailureMode:b-outboard-msiv-slow-stroke-non-repeatable"
+    },
+    {
+      "id": "cons_tslimit",
+      "display_name": "MSIV stroke times exceeded Technical Specification limit / condition prohibited by TS",
+      "properties": {
+        "note": "No actual or potential safety consequence; stroke times remained within UFSAR analyzed 10-second closure time bound."
+      },
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:msiv-stroke-times-exceeded-technical-specification-limit-condition-prohibited-by-ts"
+    },
+    {
+      "id": "ca_stroketime",
+      "display_name": "Perform follow-up stroke timing and adjustments (dashpot/exhaust restrictor tuning) for affected MSIVs",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:perform-follow-up-stroke-timing-and-adjustments-dashpot-exhaust-restrictor-tuning-for-affected-msivs"
+    },
+    {
+      "id": "ca_cap_eval",
+      "display_name": "Enter valve performance into Corrective Action Program for evaluation of test performance and evaluation methodology",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:enter-valve-performance-into-corrective-action-program-for-evaluation-of-test-performance-and-evaluation-methodology"
+    },
+    {
+      "id": "mfr_am",
+      "display_name": "Atwood and Morrill",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "A585",
+      "match_key": "Manufacturer:A585"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts_sr",
+      "display_name": "Technical Specification SR 3.6.1.3.9",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-sr-3-6-1-3-9"
+    },
+    {
+      "id": "rr_ufsar",
+      "display_name": "Updated Final Safety Analysis Report (UFSAR) MSIV closure time analysis",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:updated-final-safety-analysis-report-ufsar-msiv-closure-time-analysis"
+    },
+    {
+      "id": "ler_stub_1",
+      "display_name": "Peach Bottom Unit 3 LER 3-2009-007: MSIV stroked below minimum allowable stroke time due to dashpot oil leakage",
+      "properties": {},
+      "type": "LER",
+      "key": "278-2009-007-00",
+      "stub": true,
+      "title": null,
+      "plant": "Peach Bottom Atomic Power Station Unit 3",
+      "match_key": "LER:278-2009-007-00"
+    },
+    {
+      "id": "ler_stub_2",
+      "display_name": "Peach Bottom Unit 3 LER 3-1998-003: MSIV stroked outside the acceptance range",
+      "properties": {},
+      "type": "LER",
+      "key": "278-1998-003-00",
+      "stub": true,
+      "title": null,
+      "plant": "Peach Bottom Atomic Power Station Unit 3",
+      "match_key": "LER:278-1998-003-00"
+    },
+    {
+      "id": "ler_stub_3",
+      "display_name": "Peach Bottom Unit 2 LER 2-1983-025: MSIV stroked above maximum allowable stroke time due to insufficient flow through dashpot needle valve",
+      "properties": {},
+      "type": "LER",
+      "key": "277-1983-025-00",
+      "stub": true,
+      "title": null,
+      "plant": "Peach Bottom Atomic Power Station Unit 2",
+      "match_key": "LER:277-1983-025-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "c_msiv_a_out",
+      "relation": "PART_OF",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "c_msiv_b_in",
+      "relation": "PART_OF",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "c_msiv_b_out",
+      "relation": "PART_OF",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "c_dashpot",
+      "relation": "PART_OF",
+      "target": "c_msiv_a_out",
+      "evidence": null
+    },
+    {
+      "source": "c_solenoid",
+      "relation": "PART_OF",
+      "target": "c_msiv_b_in",
+      "evidence": null
+    },
+    {
+      "source": "fm_dashpot_drift",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_solenoid_contam",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_dashpot_drift",
+      "relation": "LEADS_TO",
+      "target": "cons_tslimit",
+      "evidence": null
+    },
+    {
+      "source": "fm_solenoid_contam",
+      "relation": "LEADS_TO",
+      "target": "cons_tslimit",
+      "evidence": null
+    },
+    {
+      "source": "fm_b_out_slow",
+      "relation": "LEADS_TO",
+      "target": "cons_tslimit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_stroketime",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_cap_eval",
+      "evidence": null
+    },
+    {
+      "source": "c_msiv_a_out",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_am",
+      "evidence": null
+    },
+    {
+      "source": "c_msiv_b_in",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_am",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts_sr",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ufsar",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_stub_1",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_stub_2",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_stub_3",
+      "evidence": null
+    }
+  ],
+  "chain": "dashpot drift [cause X] -> A Outboard MSIV stroke time 6.2s (exceeds 5s TS limit) -> TS-prohibited condition; separately, solenoid contamination -> B Inboard MSIV stroke time 5.1s -> TS-prohibited condition [no safety consequence; UFSAR bound of 10s not exceeded]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Two parallel, physically distinct failure modes (A Outboard MSIV dashpot drift; B Inboard MSIV solenoid contamination) both trace to the official cause code X (Other) per Block 13, since the form does not differentiate causes per valve. B Outboard MSIV's 5.5s stroke was not repeatable and has no firm evidence of pre-existing before discovery, so it is explicitly excluded from reportable scope but is still modeled as a FailureMode per its narrative mention, without a CAUSED_BY edge to the Cause node (no attributed root cause given). No BACKED_UP_BY edges: MSIVs are the isolation valves themselves, no backup system stated. ADS/other ECCS not mentioned; not modeled per design-context rule."
+}

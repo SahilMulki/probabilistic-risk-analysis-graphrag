@@ -1,0 +1,410 @@
+{
+  "ler_number": "423-2022-001-00",
+  "identity": {
+    "accession_number": "ML22088A024",
+    "docket": "05000423",
+    "plant_name": "Millstone",
+    "unit": 3,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2022-01-26",
+    "report_date": "2022-03-24",
+    "operating_mode": null,
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Emergency Core Cooling and Reactor Plant Component Cooling Water Systems Inoperable for Time Greater Than Allowed by Technical Specifications"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The damaged motor was replaced with a spare motor from the warehouse. A like-for-like fan hub and blade assembly was used to replace the damaged hub and blade assembly.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Fan motor and hub/blade assembly damage causing exhaust fan inoperability",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 423-2022-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "423-2022-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:423-2022-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Millstone Unit 3",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000423",
+      "match_key": "Unit:05000423"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Fan motor and hub/blade assembly damage causing exhaust fan inoperability",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_vf",
+      "display_name": "Auxiliary Building Environmental Control System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "VF",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:VF"
+    },
+    {
+      "id": "sys_abfs",
+      "display_name": "Auxiliary Building Filter System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "NF",
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:NF"
+    },
+    {
+      "id": "sys_slcrs",
+      "display_name": "SLCRS",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "backup; operated together with ABFS during accident conditions",
+      "match_key": "System:slcrs"
+    },
+    {
+      "id": "sys_eccs",
+      "display_name": "Emergency Core Cooling System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "affected TS system; expected to maintain safety function",
+      "match_key": "System:emergency-core-cooling-system"
+    },
+    {
+      "id": "sys_rpccw",
+      "display_name": "Reactor Plant Component Cooling Water",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "affected TS system; expected to maintain safety function",
+      "match_key": "System:reactor-plant-component-cooling-water"
+    },
+    {
+      "id": "c_fan13b",
+      "display_name": "Charging Pump and RPCCW Pump Area Exhaust Fan 3HVR*FN13B",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "FAN",
+      "identifier": "3HVR*FN13B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:FAN|3HVR*FN13B"
+    },
+    {
+      "id": "c_fan13a",
+      "display_name": "Charging Pump and RPCCW Pump Area Exhaust Fan 3HVR*FN13A",
+      "properties": {
+        "role": "redundant train, remained in service"
+      },
+      "type": "Component",
+      "eiis_code": "FAN",
+      "identifier": "3HVR*FN13A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:FAN|3HVR*FN13A"
+    },
+    {
+      "id": "c_motor",
+      "display_name": "Fan motor",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:fan-motor"
+    },
+    {
+      "id": "c_hub_blade",
+      "display_name": "Fan hub and blade assembly",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:fan-hub-and-blade-assembly"
+    },
+    {
+      "id": "fm_motor_damage",
+      "display_name": "Fan motor damaged",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Motor for 3HVR*FN13B was damaged, requiring replacement with spare motor",
+      "match_key": "FailureMode:fan-motor-damaged"
+    },
+    {
+      "id": "fm_hub_damage",
+      "display_name": "Fan hub and blade assembly damaged",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Hub and blade assembly for 3HVR*FN13B was damaged, requiring like-for-like replacement",
+      "match_key": "FailureMode:fan-hub-and-blade-assembly-damaged"
+    },
+    {
+      "id": "fm_fan_inop",
+      "display_name": "Exhaust fan 3HVR*FN13B inoperable",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Fan out of service beyond allowed outage time",
+      "match_key": "FailureMode:exhaust-fan-3hvr-fn13b-inoperable"
+    },
+    {
+      "id": "cons_tsaos",
+      "display_name": "ECCS and RPCCW systems inoperable for time greater than Technical Specifications allowed outage time",
+      "properties": {
+        "duration_beyond_aot": "approximately 33.5 hours"
+      },
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:eccs-and-rpccw-systems-inoperable-for-time-greater-than-technical-specifications-allowed-outage-time"
+    },
+    {
+      "id": "ca_motor",
+      "display_name": "Replace damaged motor with spare from warehouse",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-damaged-motor-with-spare-from-warehouse"
+    },
+    {
+      "id": "ca_hub",
+      "display_name": "Replace damaged hub and blade assembly with like-for-like assembly",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-damaged-hub-and-blade-assembly-with-like-for-like-assembly"
+    },
+    {
+      "id": "ca_cap",
+      "display_name": "Additional corrective actions per station Corrective Action Program",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:additional-corrective-actions-per-station-corrective-action-program"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts3475",
+      "display_name": "TS 3/4.7.5 Ultimate Heat Sink",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ts-3-4-7-5-ultimate-heat-sink"
+    },
+    {
+      "id": "rr_trm741",
+      "display_name": "TRM 7.4.1 Fire Related Safe Shutdown Components",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:trm-7-4-1-fire-related-safe-shutdown-components"
+    },
+    {
+      "id": "rr_5067",
+      "display_name": "10 CFR 50.67 TEDE Limits",
+      "properties": {
+        "type": "analysis-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-67-tede-limits"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_vf",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_abfs",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_eccs",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rpccw",
+      "evidence": null
+    },
+    {
+      "source": "c_fan13b",
+      "relation": "PART_OF",
+      "target": "sys_abfs",
+      "evidence": null
+    },
+    {
+      "source": "c_fan13a",
+      "relation": "PART_OF",
+      "target": "sys_abfs",
+      "evidence": null
+    },
+    {
+      "source": "fm_motor_damage",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_motor_damage",
+      "relation": "LEADS_TO",
+      "target": "fm_fan_inop",
+      "evidence": null
+    },
+    {
+      "source": "fm_hub_damage",
+      "relation": "LEADS_TO",
+      "target": "fm_fan_inop",
+      "evidence": null
+    },
+    {
+      "source": "fm_fan_inop",
+      "relation": "LEADS_TO",
+      "target": "cons_tsaos",
+      "evidence": null
+    },
+    {
+      "source": "cons_tsaos",
+      "relation": "BACKED_UP_BY",
+      "target": "c_fan13a",
+      "evidence": null
+    },
+    {
+      "source": "cons_tsaos",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_slcrs",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_motor",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_hub",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_cap",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts3475",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_trm741",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5067",
+      "evidence": null
+    }
+  ],
+  "chain": "fan motor damage + hub/blade assembly damage [cause TBD] -> exhaust fan 3HVR*FN13B inoperable -> ECCS/RPCCW inoperable beyond TS AOT (~33.5 hrs) [backups: redundant train 3HVR*FN13A in service, SLCRS operating together with ABFS]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "No official cause code was provided in FORM-366 fields (TBD/provisional). Narrative describes two physically distinct damaged components (motor; hub/blade assembly) both requiring replacement, modeled as separate FailureMode nodes both leading to fan inoperability. Systems described purely in 'System Design'/'Safety Analysis' context (e.g., portable emergency ventilation fan 3HVR-FN18 contingency, Auxiliary Building general ventilation dampers) were treated as design context and not modeled as System/Component nodes, per rule 6. SLCRS is explicitly stated to have been maintained in service (opposite train of ABFS maintained in service) providing continued filtered release capability, so treated as an operable backup. Previous occurrences section states no similar events occurred in the past three years at this plant -- no stub LER emitted since no specific prior LER is referenced."
+}

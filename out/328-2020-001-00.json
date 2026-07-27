@@ -1,0 +1,455 @@
+{
+  "ler_number": "328-2020-001-00",
+  "identity": {
+    "accession_number": "ML20262G938",
+    "docket": "05000328",
+    "plant_name": "Sequoyah",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2020-07-24",
+    "report_date": "2020-09-16",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Ice Bed Inoperable Due to"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "X",
+      "system": "BC",
+      "component": "PSF",
+      "manufacturer": "G293",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The cause of the AGCS leak and subsequent ice bed inoperability was the failure of a gasket on vendor supplied equipment at the flanged connection on the AGCS skid. This resulted in a leak that led to isolation of the AGCS skid and caused a loss of cooling for the Unit 2 ice bed.",
+    "cause_code": "X",
+    "category": "Other",
+    "theme": "vendor-equipment gasket failure on temporary cooling modification",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 328-2020-001-00",
+      "properties": {
+        "match_key": "LER:328-2020-001-00"
+      },
+      "type": "LER",
+      "key": "328-2020-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:328-2020-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Sequoyah Unit 2",
+      "properties": {
+        "match_key": "Unit:05000328",
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000328",
+      "match_key": "Unit:05000328"
+    },
+    {
+      "id": "cause",
+      "display_name": "Other (X)",
+      "properties": {
+        "match_key": "Cause:Other"
+      },
+      "type": "Cause",
+      "cause_code": "X",
+      "category": "Other",
+      "theme": "vendor-equipment gasket failure on temporary cooling modification",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Other"
+    },
+    {
+      "id": "sys_bc",
+      "display_name": "Ice Condenser System",
+      "properties": {
+        "match_key": "System:BC"
+      },
+      "type": "System",
+      "eiis_code": "BC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BC"
+    },
+    {
+      "id": "sys_jm",
+      "display_name": "Containment Isolation",
+      "properties": {
+        "match_key": "System:JM"
+      },
+      "type": "System",
+      "eiis_code": "JM",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JM"
+    },
+    {
+      "id": "sys_agcs",
+      "display_name": "Auxiliary Glycol Cooling System",
+      "properties": {
+        "note": "temporary modification implementing ice bed cooling in lieu of plant chillers",
+        "match_key": "System:auxiliary-glycol-cooling-system"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:auxiliary-glycol-cooling-system"
+    },
+    {
+      "id": "sys_chillers",
+      "display_name": "Plant Installed Glycol Chillers",
+      "properties": {
+        "match_key": "System:plant-installed-glycol-chillers"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "backup; realigned and operable",
+      "match_key": "System:plant-installed-glycol-chillers"
+    },
+    {
+      "id": "c_gasket",
+      "display_name": "AGCS skid flanged connection gasket",
+      "properties": {
+        "match_key": "Component:PSF|AGCS-flange-gasket"
+      },
+      "type": "Component",
+      "eiis_code": "PSF",
+      "identifier": null,
+      "model": "Garlock Multiswell 3760",
+      "manufacturer_code": "G293",
+      "inferred_code": false,
+      "match_key": "Component:PSF"
+    },
+    {
+      "id": "c_isv1",
+      "display_name": "Ice condenser containment isolation valve (auto-closed)",
+      "properties": {
+        "match_key": "Component:ISV|auto-closed"
+      },
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:ISV"
+    },
+    {
+      "id": "c_isv2",
+      "display_name": "Ice condenser containment isolation valve (failed to auto-close, closed manually)",
+      "properties": {
+        "match_key": "Component:ISV|manual-close"
+      },
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:ISV"
+    },
+    {
+      "id": "fm_gasket",
+      "display_name": "AGCS flange gasket pressure boundary compromised (material fracture/tearing)",
+      "properties": {
+        "match_key": "FailureMode:agcs-gasket-pressure-boundary-compromised"
+      },
+      "type": "FailureMode",
+      "description": "The failure mode of the AGCS flange gasket was a compromised pressure boundary. The failure mechanism was material fracture or tearing.",
+      "match_key": "FailureMode:agcs-flange-gasket-pressure-boundary-compromised-material-fracture-tearing"
+    },
+    {
+      "id": "fm_leak",
+      "display_name": "Glycol leak at AGCS skid (~10 gpm)",
+      "properties": {
+        "match_key": "FailureMode:glycol-leak-agcs-skid"
+      },
+      "type": "FailureMode",
+      "description": null,
+      "match_key": "FailureMode:glycol-leak-at-agcs-skid-10-gpm"
+    },
+    {
+      "id": "fm_lowlevel",
+      "display_name": "Glycol expansion tank low-low level / containment isolation of ice bed cooling valves",
+      "properties": {
+        "match_key": "FailureMode:glycol-expansion-tank-low-low-level-isolation"
+      },
+      "type": "FailureMode",
+      "description": null,
+      "match_key": "FailureMode:glycol-expansion-tank-low-low-level-containment-isolation-of-ice-bed-cooling-valves"
+    },
+    {
+      "id": "fm_lossofcooling",
+      "display_name": "Loss of ice bed cooling",
+      "properties": {
+        "match_key": "FailureMode:loss-of-ice-bed-cooling"
+      },
+      "type": "FailureMode",
+      "description": null,
+      "match_key": "FailureMode:loss-of-ice-bed-cooling"
+    },
+    {
+      "id": "fm_isv_fail",
+      "display_name": "Containment isolation valve failed to auto-close on low-low level signal",
+      "properties": {
+        "match_key": "FailureMode:isv-failed-to-auto-close"
+      },
+      "type": "FailureMode",
+      "description": null,
+      "match_key": "FailureMode:containment-isolation-valve-failed-to-auto-close-on-low-low-level-signal"
+    },
+    {
+      "id": "cons_icebed",
+      "display_name": "Ice bed inoperable (exceeded max temperature <= 27 F)",
+      "properties": {
+        "match_key": "Consequence:ice-bed-inoperable"
+      },
+      "type": "Consequence",
+      "start": "2020-07-24T01:05",
+      "end": "2020-07-24T08:33",
+      "duration": "7:28",
+      "tz": "EDT",
+      "match_key": "Consequence:ice-bed-inoperable-exceeded-max-temperature-27-f"
+    },
+    {
+      "id": "ca_gasket_replace",
+      "display_name": "Replaced failed gasket and torque checked remaining connections",
+      "properties": {
+        "match_key": "CorrectiveAction:replace-gasket-torque-check"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replaced-failed-gasket-and-torque-checked-remaining-connections"
+    },
+    {
+      "id": "ca_repair_skid",
+      "display_name": "Repair the AGCS skid",
+      "properties": {
+        "match_key": "CorrectiveAction:repair-agcs-skid"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:repair-the-agcs-skid"
+    },
+    {
+      "id": "ca_repair_valve",
+      "display_name": "Initiate work order to repair ice condenser containment isolation valve that failed to auto-close",
+      "properties": {
+        "match_key": "CorrectiveAction:repair-isolation-valve"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:initiate-work-order-to-repair-ice-condenser-containment-isolation-valve-that-failed-to-auto-close"
+    },
+    {
+      "id": "mfr_garlock",
+      "display_name": "Garlock",
+      "properties": {
+        "match_key": "Manufacturer:G293"
+      },
+      "type": "Manufacturer",
+      "code": "G293",
+      "match_key": "Manufacturer:G293"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(v)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v"
+    },
+    {
+      "id": "rr_5072",
+      "display_name": "10 CFR 50.72(b)(3)(v)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-72-b-3-v"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-3-v"
+    },
+    {
+      "id": "rr_nureg",
+      "display_name": "NUREG-1022, Revision 3, Section 3.2.7",
+      "properties": {
+        "match_key": "RegulatoryReference:nureg-1022-rev3-3-2-7"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "standard/guidance",
+      "match_key": "RegulatoryReference:nureg-1022-revision-3-section-3-2-7"
+    },
+    {
+      "id": "rr_ufsar",
+      "display_name": "Updated Final Safety Analysis Report",
+      "properties": {
+        "match_key": "RegulatoryReference:ufsar"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:updated-final-safety-analysis-report"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_nureg",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jm",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_agcs",
+      "evidence": null
+    },
+    {
+      "source": "c_isv1",
+      "relation": "PART_OF",
+      "target": "sys_bc",
+      "evidence": null
+    },
+    {
+      "source": "c_isv2",
+      "relation": "PART_OF",
+      "target": "sys_bc",
+      "evidence": null
+    },
+    {
+      "source": "c_gasket",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_garlock",
+      "evidence": null
+    },
+    {
+      "source": "fm_gasket",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_gasket",
+      "relation": "LEADS_TO",
+      "target": "fm_leak",
+      "evidence": null
+    },
+    {
+      "source": "fm_leak",
+      "relation": "LEADS_TO",
+      "target": "fm_lowlevel",
+      "evidence": null
+    },
+    {
+      "source": "fm_lowlevel",
+      "relation": "LEADS_TO",
+      "target": "fm_isv_fail",
+      "evidence": null
+    },
+    {
+      "source": "fm_leak",
+      "relation": "LEADS_TO",
+      "target": "fm_lossofcooling",
+      "evidence": null
+    },
+    {
+      "source": "fm_lossofcooling",
+      "relation": "LEADS_TO",
+      "target": "cons_icebed",
+      "evidence": null
+    },
+    {
+      "source": "cons_icebed",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_chillers",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_gasket_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_repair_skid",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_repair_valve",
+      "evidence": null
+    }
+  ],
+  "chain": "vendor gasket material fracture/tearing [cause X] -> AGCS flange leak (~10 gpm) -> glycol expansion tank low-low level -> containment isolation valves close (one fails to auto-close) -> loss of AGCS cooling to ice bed -> ice bed exceeds max temperature -> ice bed inoperable ~7.5h [backup plant installed glycol chillers realigned]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code X (Other) governs category per official coding despite narrative describing a discrete component (gasket) failure; theme captures the vendor-equipment/temporary-modification angle. AGCS is a temporary modification system actively involved in the event (not mere design context) so it is modeled as a System node. Plant installed chillers explicitly realigned and returned ice bed to operable status, meeting the BACKED_UP_BY bar. The second isolation valve's failure to auto-close is modeled as a separate, parallel FailureMode triggered by the same low-low level signal, per an additional planned corrective action (work order to repair it) -- it did not itself drive the ice-bed-inoperable consequence chain, which proceeded via loss of cooling instead. No previous similar events were identified in the narrative, so no stub LER/SIMILAR_TO edge was created."
+}

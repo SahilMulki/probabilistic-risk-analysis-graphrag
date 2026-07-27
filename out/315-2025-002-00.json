@@ -1,0 +1,323 @@
+{
+  "ler_number": "315-2025-002-00",
+  "identity": {
+    "accession_number": "ML25302A454",
+    "docket": "05000315",
+    "plant_name": "D.C. Cook",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2025-09-03",
+    "report_date": "2025-10-29",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "inspection",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Supplemental Diesel Generators (DG) Unavailable Resulting in Emergency DGs Inoperable Greater Than Allowed by TS"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The direct cause is the calculation did not account for vortexing. Revising the calculation to account for vortexing resulted in more fuel required in each SDG fuel oil tank than the unrevised TRM value of 2200 gallons.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Calculation error - fuel oil volume did not account for vortexing",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 315-2025-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "315-2025-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:315-2025-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "D.C. Cook Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000315",
+      "match_key": "Unit:05000315"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Calculation error - fuel oil volume did not account for vortexing",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_edg",
+      "display_name": "Emergency Diesel Generator",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "DG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "primary onsite AC power source",
+      "match_key": "System:DG"
+    },
+    {
+      "id": "sys_sdg",
+      "display_name": "Supplemental Diesel Generator",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "DG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup to EDG; credited for TSAS 3.8.1.B.5",
+      "match_key": "System:DG"
+    },
+    {
+      "id": "c_sdg1_tank",
+      "display_name": "SDG1 Fuel Oil Tank (12-OME-250-SDG1)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "TK",
+      "identifier": "12-OME-250-SDG1",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:TK|12-OME-250-SDG1"
+    },
+    {
+      "id": "c_sdg2_tank",
+      "display_name": "SDG2 Fuel Oil Tank (12-OME-250-SDG2)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "TK",
+      "identifier": "12-OME-250-SDG2",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:TK|12-OME-250-SDG2"
+    },
+    {
+      "id": "c_edg_ab",
+      "display_name": "1AB Emergency Diesel Generator (1-DME-150-AB)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "DG",
+      "identifier": "1-DME-150-AB",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:DG|1-DME-150-AB"
+    },
+    {
+      "id": "c_edg_cd",
+      "display_name": "1CD Emergency Diesel Generator (1-DME-150-CD)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "DG",
+      "identifier": "1-DME-150-CD",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:DG|1-DME-150-CD"
+    },
+    {
+      "id": "fm_vortex_calc",
+      "display_name": "Fuel oil volume calculation did not account for vortexing",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Original calculation set minimum fuel oil volume without accounting for vortexing effects in the tank, resulting in an understated minimum required volume (unrevised TRM value of 2200 gallons).",
+      "match_key": "FailureMode:fuel-oil-volume-calculation-did-not-account-for-vortexing"
+    },
+    {
+      "id": "fm_sdg_unavailable",
+      "display_name": "SDG fuel oil volume below revised minimum required for 24-hour operation",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Actual SDG fuel oil tank levels (3327/3326 gallons and 3392/3380 gallons) were below the revised minimum of 3450 gallons, rendering the SDGs unavailable per the corrected calculation, though they were credited as available during two EDG outages.",
+      "match_key": "FailureMode:sdg-fuel-oil-volume-below-revised-minimum-required-for-24-hour-operation"
+    },
+    {
+      "id": "cons_ts_violation",
+      "display_name": "EDGs inoperable longer than allowed by Technical Specifications (condition prohibited by TS)",
+      "properties": {
+        "occurrence_1_start": "2023-02-26T01:00",
+        "occurrence_1_end": "2023-03-02T20:18",
+        "occurrence_1_duration": "115.3 hours",
+        "occurrence_2_start": "2025-06-08T00:01",
+        "occurrence_2_end": "2025-06-12T23:57",
+        "occurrence_2_duration": "120.0 hours"
+      },
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:edgs-inoperable-longer-than-allowed-by-technical-specifications-condition-prohibited-by-ts"
+    },
+    {
+      "id": "ca_procedure",
+      "display_name": "Revise site procedures to maintain minimum SDG fuel oil tank level >= 3450 gallons",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-site-procedures-to-maintain-minimum-sdg-fuel-oil-tank-level-3450-gallons"
+    },
+    {
+      "id": "ca_trm",
+      "display_name": "Revise TRM for both units to specify SDG fuel oil tank contains >= 3450 gallons",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-trm-for-both-units-to-specify-sdg-fuel-oil-tank-contains-3450-gallons"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts381",
+      "display_name": "Technical Specification 3.8.1 / TSAS 3.8.1.B.5",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:technical-specification-3-8-1-tsas-3-8-1-b-5"
+    },
+    {
+      "id": "rr_imc0609",
+      "display_name": "NRC Inspection Manual Chapter 0609",
+      "properties": {
+        "type": "standard/guidance"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:nrc-inspection-manual-chapter-0609"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_edg",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sdg",
+      "evidence": null
+    },
+    {
+      "source": "c_sdg1_tank",
+      "relation": "PART_OF",
+      "target": "sys_sdg",
+      "evidence": null
+    },
+    {
+      "source": "c_sdg2_tank",
+      "relation": "PART_OF",
+      "target": "sys_sdg",
+      "evidence": null
+    },
+    {
+      "source": "fm_vortex_calc",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_vortex_calc",
+      "relation": "LEADS_TO",
+      "target": "fm_sdg_unavailable",
+      "evidence": null
+    },
+    {
+      "source": "fm_sdg_unavailable",
+      "relation": "LEADS_TO",
+      "target": "cons_ts_violation",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procedure",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_trm",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts381",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_imc0609",
+      "evidence": null
+    },
+    {
+      "source": "c_edg_ab",
+      "relation": "INVOLVES",
+      "target": "sys_edg",
+      "evidence": null
+    },
+    {
+      "source": "c_edg_cd",
+      "relation": "INVOLVES",
+      "target": "sys_edg",
+      "evidence": null
+    }
+  ],
+  "chain": "fuel oil calculation did not account for vortexing [cause TBD] -> revised minimum volume (3450 gal) exceeds actual historic tank levels -> SDG1/SDG2 retroactively unavailable during two prior EDG outages -> EDG inoperable beyond TS-allowed Completion Time (condition prohibited by TS)",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code and category are TBD/provisional per FORM-366 fields (no official code assigned); theme captures the calculation/vortexing narrative. Two retroactively-identified occurrences (Feb-Mar 2023 and June 2025) are treated as instances of the same consequence pattern rather than separate events, since both stem from the single underlying calculation defect discovered in September 2025. No PART_OF edges asserted for EDGs to sys_edg since narrative does not state literal containment; used INVOLVES instead per functional relationship rule. No previous similar events per licensee review of past five years."
+}

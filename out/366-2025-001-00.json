@@ -1,0 +1,450 @@
+{
+  "ler_number": "366-2025-001-00",
+  "identity": {
+    "accession_number": "ML25107A275",
+    "docket": "05000366",
+    "plant_name": "Hatch",
+    "unit": 2,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2025-02-22",
+    "report_date": "2025-04-17",
+    "operating_mode": null,
+    "power_level": 0,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Primary Containment Inoperable Due To Exceeding Technical Specification Allowable Leakage Limits"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)",
+      "10 CFR 50.73(a)(2)(ii)(A)",
+      "10 CFR 50.73(a)(2)(v)(C)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "X",
+      "system": "BD",
+      "component": "ISV",
+      "manufacturer": "F130",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "the T-Ring to Disc interface has an excessive clearance which requires increased compression stresses in the T-ring to provide a proper seal. This increased mechanical stress results in relaxation (creep, cold flow, compression set) with separation between T-Ring and Disc",
+    "cause_code": "X",
+    "category": "Other",
+    "theme": "T-ring seal design/relaxation causing PCIV leakage",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 366-2025-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "366-2025-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:366-2025-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Hatch Unit 2",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000366",
+      "match_key": "Unit:05000366"
+    },
+    {
+      "id": "cause",
+      "display_name": "Other (X)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "X",
+      "category": "Other",
+      "theme": "T-ring seal design/relaxation causing PCIV leakage",
+      "proximate_text": "the T-Ring to Disc interface has an excessive clearance which requires increased compression stresses in the T-ring to provide a proper seal. This increased mechanical stress results in relaxation (creep, cold flow, compression set) with separation between T-Ring and Disc",
+      "provisional": false,
+      "match_key": "Cause:Other"
+    },
+    {
+      "id": "sys_bd",
+      "display_name": "Primary Containment",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BD",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BD"
+    },
+    {
+      "id": "sys_sgt",
+      "display_name": "Standby Gas Treatment",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BH",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup filtration path; available",
+      "match_key": "System:BH"
+    },
+    {
+      "id": "c_pciv1",
+      "display_name": "Primary Containment Isolation Valve 2T48F309",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": "2T48F309",
+      "model": "Fisher Series 9200 Butterfly Valve",
+      "manufacturer_code": "F130",
+      "inferred_code": false,
+      "match_key": "Component:ISV|2T48F309"
+    },
+    {
+      "id": "c_pciv2",
+      "display_name": "Primary Containment Isolation Valve 2T48F324",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": "2T48F324",
+      "model": "Fisher Series 9200 Butterfly Valve",
+      "manufacturer_code": "F130",
+      "inferred_code": false,
+      "match_key": "Component:ISV|2T48F324"
+    },
+    {
+      "id": "c_tring1",
+      "display_name": "T-ring seal (2T48F309)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:t-ring-seal-2t48f309"
+    },
+    {
+      "id": "c_tring2",
+      "display_name": "T-ring seal (2T48F324)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:t-ring-seal-2t48f324"
+    },
+    {
+      "id": "fm_clearance",
+      "display_name": "Excessive T-Ring to Disc interface clearance",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Excessive clearance required increased compression stresses in the T-ring to achieve a proper seal",
+      "match_key": "FailureMode:excessive-t-ring-to-disc-interface-clearance"
+    },
+    {
+      "id": "fm_relaxation",
+      "display_name": "T-ring relaxation (creep/cold flow/compression set)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Increased mechanical stress resulted in relaxation with separation between T-Ring and Disc",
+      "match_key": "FailureMode:t-ring-relaxation-creep-cold-flow-compression-set"
+    },
+    {
+      "id": "fm_leak1",
+      "display_name": "PCIV 2T48F309 exceeded La leakage limit",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Valve leakage rate exceeded Technical Specification allowable limit La during LLRT",
+      "match_key": "FailureMode:pciv-2t48f309-exceeded-la-leakage-limit"
+    },
+    {
+      "id": "fm_leak2",
+      "display_name": "PCIV 2T48F324 exceeded La leakage limit",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Valve leakage rate exceeded Technical Specification allowable limit La during LLRT",
+      "match_key": "FailureMode:pciv-2t48f324-exceeded-la-leakage-limit"
+    },
+    {
+      "id": "cons_containment",
+      "display_name": "Primary containment inoperable due to exceeding allowable leakage limits",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2025-02-22T11:11",
+      "end": null,
+      "duration": null,
+      "tz": "EST",
+      "match_key": "Consequence:primary-containment-inoperable-due-to-exceeding-allowable-leakage-limits"
+    },
+    {
+      "id": "ca_setscrews",
+      "display_name": "Tighten T-ring bracket set screws to compensate for T-ring relaxation",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:tighten-t-ring-bracket-set-screws-to-compensate-for-t-ring-relaxation"
+    },
+    {
+      "id": "ca_torque",
+      "display_name": "Require higher valve actuator closing torque",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:require-higher-valve-actuator-closing-torque"
+    },
+    {
+      "id": "ca_llrt",
+      "display_name": "Successfully leak rate test repaired valves and restore containment to operable status",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:successfully-leak-rate-test-repaired-valves-and-restore-containment-to-operable-status"
+    },
+    {
+      "id": "ca_rca",
+      "display_name": "Complete causal analysis to identify root cause of leakage",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:complete-causal-analysis-to-identify-root-cause-of-leakage"
+    },
+    {
+      "id": "mfr_fisher",
+      "display_name": "Fisher Controls Company",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "F130",
+      "match_key": "Manufacturer:F130"
+    },
+    {
+      "id": "rr_5073_i_b",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_5073_ii_a",
+      "display_name": "10 CFR 50.73(a)(2)(ii)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-ii-a"
+    },
+    {
+      "id": "rr_5073_v_c",
+      "display_name": "10 CFR 50.73(a)(2)(v)(C)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-c"
+    },
+    {
+      "id": "rr_appj",
+      "display_name": "10 CFR 50 Appendix J - Primary Reactor Containment Leakage Testing",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:10-cfr-50-appendix-j-primary-reactor-containment-leakage-testing"
+    },
+    {
+      "id": "rr_ufsar",
+      "display_name": "UFSAR Chapter 15",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:ufsar-chapter-15"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "Previous Hatch Unit 2 LER - Primary Containment Leakage Exceeding La (T-ring manufacturing defect)",
+      "properties": {},
+      "type": "LER",
+      "key": "2023-001",
+      "stub": true,
+      "title": "Primary containment leakage rate exceeded allowable limit (La) under postulated accident conditions through two PCIVs in one penetration",
+      "plant": "Edwin I. Hatch Nuclear Plant Unit 2",
+      "match_key": "LER:2023-001"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_i_b",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_ii_a",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_v_c",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bd",
+      "evidence": null
+    },
+    {
+      "source": "c_pciv1",
+      "relation": "PART_OF",
+      "target": "sys_bd",
+      "evidence": null
+    },
+    {
+      "source": "c_pciv2",
+      "relation": "PART_OF",
+      "target": "sys_bd",
+      "evidence": null
+    },
+    {
+      "source": "c_tring1",
+      "relation": "PART_OF",
+      "target": "c_pciv1",
+      "evidence": null
+    },
+    {
+      "source": "c_tring2",
+      "relation": "PART_OF",
+      "target": "c_pciv2",
+      "evidence": null
+    },
+    {
+      "source": "c_pciv1",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_fisher",
+      "evidence": null
+    },
+    {
+      "source": "c_pciv2",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_fisher",
+      "evidence": null
+    },
+    {
+      "source": "fm_clearance",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_clearance",
+      "relation": "LEADS_TO",
+      "target": "fm_relaxation",
+      "evidence": null
+    },
+    {
+      "source": "fm_relaxation",
+      "relation": "LEADS_TO",
+      "target": "fm_leak1",
+      "evidence": null
+    },
+    {
+      "source": "fm_relaxation",
+      "relation": "LEADS_TO",
+      "target": "fm_leak2",
+      "evidence": null
+    },
+    {
+      "source": "fm_leak1",
+      "relation": "LEADS_TO",
+      "target": "cons_containment",
+      "evidence": null
+    },
+    {
+      "source": "fm_leak2",
+      "relation": "LEADS_TO",
+      "target": "cons_containment",
+      "evidence": null
+    },
+    {
+      "source": "cons_containment",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_sgt",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_setscrews",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_torque",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_llrt",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_rca",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_appj",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ufsar",
+      "evidence": null
+    }
+  ],
+  "chain": "excessive T-ring/disc clearance [cause X, provisional] -> T-ring relaxation (creep/cold flow/compression set) -> separation between T-ring and disc -> PCIVs 2T48F309 & 2T48F324 exceed La during LLRT -> primary containment inoperable [backup: leakage would be filtered through Standby Gas Treatment]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Two PCIVs in a single penetration both exceeded La; modeled as parallel failure modes from a common root cause (T-ring relaxation). Root cause analysis was still in progress at time of report (preliminary cause only) -> cause node marked provisional despite official code X. Previous similar event (2023-02-07) referenced without explicit LER number in narrative; used a placeholder key '2023-001' as no exact LER number string was given in the text - flagged as approximate since rule 9 requires exact reported key and narrative did not supply one explicitly."
+}

@@ -1,0 +1,384 @@
+{
+  "ler_number": "325-2026-001-00",
+  "identity": {
+    "accession_number": "ML26119A585",
+    "docket": "05000325",
+    "plant_name": "Brunswick",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2026-03-02",
+    "report_date": "2026-04-29",
+    "operating_mode": "5",
+    "power_level": 0,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Brunswick Steam Electric Plant, Unit No. 1 Renewed Facility Operating License No. DPR-71 Docket No. 50-325 Licensee Event Report 1-2026-001"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(ii)(A)",
+      "10 CFR 50.73(a)(2)(v)(C)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "B",
+      "system": "NH",
+      "component": "ISV",
+      "manufacturer": "A391",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The direct cause of the primary containment leakage rate exceeding the 10 CFR 50, Appendix J, requirements specified in TS 5.5.12 was the RCIC turbine steam supply line penetration inboard and outboard primary containment isolation valves not maintaining test pressure during LLRT. The subject valves are double disc gate valves, and this valve design has had a history of performance issues.",
+    "cause_code": "B",
+    "category": "Design/Manufacturing/Installation",
+    "theme": "Double disc gate valve design susceptible to leakage under LLRT",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 1-2026-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "325-2026-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:325-2026-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Brunswick Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000325",
+      "match_key": "Unit:05000325"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Manufacturing/Installation (B)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "B",
+      "category": "Design/Manufacturing/Installation",
+      "theme": "Double disc gate valve design susceptible to leakage under LLRT",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Design/Manufacturing/Installation"
+    },
+    {
+      "id": "sys_nh",
+      "display_name": "Primary Containment",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "NH",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:NH"
+    },
+    {
+      "id": "sys_bn",
+      "display_name": "Reactor Core Isolation Cooling",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BN",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BN"
+    },
+    {
+      "id": "c_ivb",
+      "display_name": "RCIC turbine steam supply line inboard primary containment isolation valve",
+      "properties": {
+        "valve_type": "double disc gate valve"
+      },
+      "type": "Component",
+      "eiis_code": "BD",
+      "identifier": "inboard",
+      "model": null,
+      "manufacturer_code": "A391",
+      "inferred_code": false,
+      "match_key": "Component:BD|inboard"
+    },
+    {
+      "id": "c_ovb",
+      "display_name": "RCIC turbine steam supply line outboard primary containment isolation valve",
+      "properties": {
+        "valve_type": "double disc gate valve"
+      },
+      "type": "Component",
+      "eiis_code": "BD",
+      "identifier": "outboard",
+      "model": null,
+      "manufacturer_code": "A391",
+      "inferred_code": false,
+      "match_key": "Component:BD|outboard"
+    },
+    {
+      "id": "fm_design",
+      "display_name": "Double disc gate valve design prone to leakage",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Valve design has a history of performance issues maintaining seat leak-tightness.",
+      "match_key": "FailureMode:double-disc-gate-valve-design-prone-to-leakage"
+    },
+    {
+      "id": "fm_ivb_leak",
+      "display_name": "Inboard isolation valve failed to maintain test pressure during LLRT",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Inboard valve did not pressurize during LLRT, indicating excessive leakage.",
+      "match_key": "FailureMode:inboard-isolation-valve-failed-to-maintain-test-pressure-during-llrt"
+    },
+    {
+      "id": "fm_ovb_leak",
+      "display_name": "Outboard isolation valve failed to maintain test pressure during LLRT",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Outboard valve did not pressurize during LLRT, indicating excessive leakage.",
+      "match_key": "FailureMode:outboard-isolation-valve-failed-to-maintain-test-pressure-during-llrt"
+    },
+    {
+      "id": "cons_leakrate",
+      "display_name": "Primary containment leakage rate exceeded Appendix J / TS 5.5.12 acceptance criteria; degraded containment isolation boundary",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2026-03-02T02:59",
+      "end": null,
+      "duration": null,
+      "tz": "EST",
+      "match_key": "Consequence:primary-containment-leakage-rate-exceeded-appendix-j-ts-5-5-12-acceptance-criteria-degraded-containment-isolation-boundary"
+    },
+    {
+      "id": "ca_repair",
+      "display_name": "Repair inboard and outboard RCIC turbine steam supply line isolation valves during outage",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:repair-inboard-and-outboard-rcic-turbine-steam-supply-line-isolation-valves-during-outage"
+    },
+    {
+      "id": "ca_retest",
+      "display_name": "Perform subsequent satisfactory LLRT of the penetration",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:perform-subsequent-satisfactory-llrt-of-the-penetration"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace RCIC inboard/outboard steam supply isolation valves with new design",
+      "properties": {
+        "target_completion": "prior to startup from 2028 refueling outage"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-rcic-inboard-outboard-steam-supply-isolation-valves-with-new-design"
+    },
+    {
+      "id": "mfr_a391",
+      "display_name": "Manufacturer A391",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "A391",
+      "match_key": "Manufacturer:A391"
+    },
+    {
+      "id": "rr_5073ii",
+      "display_name": "10 CFR 50.73(a)(2)(ii)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-ii-a"
+    },
+    {
+      "id": "rr_5073v",
+      "display_name": "10 CFR 50.73(a)(2)(v)(C)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-c"
+    },
+    {
+      "id": "rr_5072",
+      "display_name": "10 CFR 50.72(b)(3)(ii)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-3-ii-a"
+    },
+    {
+      "id": "rr_app_j",
+      "display_name": "10 CFR 50 Appendix J",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:10-cfr-50-appendix-j"
+    },
+    {
+      "id": "rr_ts5512",
+      "display_name": "Technical Specification 5.5.12",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-5-5-12"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "LER 325-2024-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "325-2024-001-00",
+      "stub": true,
+      "title": "Unit 1 primary containment leakage rate did not meet 10 CFR 50 Appendix J requirements due to as-found LLRT results of RCIC turbine steam supply line penetration",
+      "plant": "Brunswick Steam Electric Plant, Unit 1",
+      "match_key": "LER:325-2024-001-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073ii",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073v",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_nh",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bn",
+      "evidence": null
+    },
+    {
+      "source": "c_ivb",
+      "relation": "PART_OF",
+      "target": "sys_nh",
+      "evidence": null
+    },
+    {
+      "source": "c_ovb",
+      "relation": "PART_OF",
+      "target": "sys_nh",
+      "evidence": null
+    },
+    {
+      "source": "fm_design",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_design",
+      "relation": "LEADS_TO",
+      "target": "fm_ivb_leak",
+      "evidence": null
+    },
+    {
+      "source": "fm_design",
+      "relation": "LEADS_TO",
+      "target": "fm_ovb_leak",
+      "evidence": null
+    },
+    {
+      "source": "fm_ivb_leak",
+      "relation": "LEADS_TO",
+      "target": "cons_leakrate",
+      "evidence": null
+    },
+    {
+      "source": "fm_ovb_leak",
+      "relation": "LEADS_TO",
+      "target": "cons_leakrate",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_repair",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_retest",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "c_ivb",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_a391",
+      "evidence": null
+    },
+    {
+      "source": "c_ovb",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_a391",
+      "evidence": null
+    },
+    {
+      "source": "cons_leakrate",
+      "relation": "MITIGATED_BY",
+      "target": "rr_app_j",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    }
+  ],
+  "chain": "double disc gate valve design susceptible to leakage [cause B] -> inboard isolation valve fails to hold LLRT pressure -> outboard isolation valve fails to hold LLRT pressure -> primary containment leakage rate exceeds Appendix J/TS 5.5.12 acceptance criteria, degraded isolation boundary",
+  "golden_questions": [
+    "Q1",
+    "Q2",
+    "Q9",
+    "Q13"
+  ],
+  "notes": "Both inboard and outboard valves failed the same LLRT for the same design-related reason; modeled as two parallel FailureMode nodes sharing the same design-defect origin per rule 5. No BACKED_UP_BY edges emitted since narrative does not state an operable backup isolation boundary during the leakage window. Previous LER 1-2024-001 modeled as stub with key exactly as stated. rr_app_j linked via MITIGATED_BY to consequence to represent the analysis-basis reference tied to the leak-rate criterion (no better relation available in schema for this linkage); reporting-criterion refs attached to ler via REPORTED_UNDER."
+}

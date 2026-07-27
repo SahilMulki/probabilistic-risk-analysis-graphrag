@@ -1,0 +1,381 @@
+{
+  "ler_number": "424-2021-001-00",
+  "identity": {
+    "accession_number": "ML21319A348",
+    "docket": "05000424",
+    "plant_name": "Vogtle",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2021-09-16",
+    "report_date": "2021-11-15",
+    "operating_mode": "6",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Train A Safety Injection Pump inoperability causes the unit to operate in a Condition Prohibited by Technical Specifications"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)",
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "A",
+      "system": "BQ",
+      "component": "p",
+      "manufacturer": "PACI",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The foreign material intrusion was caused by improperly obtaining the oil samples for this pump. A plastic tube was inserted into the gearbox next to the oil pump shaft. This caused pieces of the plastic tubing to be removed from the end of the tube and left in the lube oil system.",
+    "cause_code": "A",
+    "category": "Personnel Error",
+    "theme": "improper oil-sampling technique introduced foreign material",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 424-2021-011-00",
+      "properties": {},
+      "type": "LER",
+      "key": "424-2021-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:424-2021-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Vogtle Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000424",
+      "match_key": "Unit:05000424"
+    },
+    {
+      "id": "cause",
+      "display_name": "Personnel Error (A)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "A",
+      "category": "Personnel Error",
+      "theme": "improper oil-sampling technique introduced foreign material",
+      "proximate_text": "The foreign material intrusion was caused by improperly obtaining the oil samples for this pump. A plastic tube was inserted into the gearbox next to the oil pump shaft. This caused pieces of the plastic tubing to be removed from the end of the tube and left in the lube oil system.",
+      "provisional": false,
+      "match_key": "Cause:Personnel Error"
+    },
+    {
+      "id": "sys_bq",
+      "display_name": "Safety Injection",
+      "properties": {
+        "note": "ECCS train"
+      },
+      "type": "System",
+      "eiis_code": "BQ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BQ"
+    },
+    {
+      "id": "c_pump_a",
+      "display_name": "Unit 1 A-Train Safety Injection Pump",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "P",
+      "identifier": "1A SI Pump",
+      "model": null,
+      "manufacturer_code": "PACI",
+      "inferred_code": false,
+      "match_key": "Component:P|1A SI Pump"
+    },
+    {
+      "id": "c_bearing",
+      "display_name": "SI pump outboard bearing",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:si-pump-outboard-bearing"
+    },
+    {
+      "id": "c_lube_oil_pump",
+      "display_name": "Lube oil pump (gear pump)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:lube-oil-pump-gear-pump"
+    },
+    {
+      "id": "c_plastic_tube",
+      "display_name": "Plastic sampling tube fragment",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:plastic-sampling-tube-fragment"
+    },
+    {
+      "id": "fm_improper_sampling",
+      "display_name": "Improper oil sampling technique used plastic tube inserted near oil pump shaft",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "A plastic tube was inserted into the gearbox next to the oil pump shaft during sampling, shearing off pieces of tubing.",
+      "match_key": "FailureMode:improper-oil-sampling-technique-used-plastic-tube-inserted-near-oil-pump-shaft"
+    },
+    {
+      "id": "fm_fm_intrusion",
+      "display_name": "Foreign material (plastic tubing) introduced into lube oil system",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Plastic tubing fragments left in the lube oil system after improper sampling.",
+      "match_key": "FailureMode:foreign-material-plastic-tubing-introduced-into-lube-oil-system"
+    },
+    {
+      "id": "fm_lube_pump_seizure",
+      "display_name": "Lube oil pump seized by plastic tubing lodged between gears",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "A piece of plastic tubing was found between the gears of the lube oil pump, causing the pump to seize.",
+      "match_key": "FailureMode:lube-oil-pump-seized-by-plastic-tubing-lodged-between-gears"
+    },
+    {
+      "id": "fm_low_oil_flow",
+      "display_name": "Low oil flow to bearing",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Lube oil pump seizure resulted in low oil flow conditions to the SI pump bearing.",
+      "match_key": "FailureMode:low-oil-flow-to-bearing"
+    },
+    {
+      "id": "fm_bearing_failure",
+      "display_name": "Outboard bearing starved of lubrication and failed",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Bearing temperatures rose rapidly upon pump start due to lubrication starvation, resulting in bearing failure.",
+      "match_key": "FailureMode:outboard-bearing-starved-of-lubrication-and-failed"
+    },
+    {
+      "id": "cons_si_inop",
+      "display_name": "Unit operated in condition prohibited by Technical Specifications (SI pump inoperable beyond allowed outage time)",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2021-09-06T14:36",
+      "end": "2021-09-12T07:59",
+      "duration": "137.4 hours (of which 47.4 hours exceeded the 90-hour allowed outage time)",
+      "tz": null,
+      "match_key": "Consequence:unit-operated-in-condition-prohibited-by-technical-specifications-si-pump-inoperable-beyond-allowed-outage-time"
+    },
+    {
+      "id": "ca_replace_bearings",
+      "display_name": "Replace bearings, flush lube oil system, and restore pump to operable status",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-bearings-flush-lube-oil-system-and-restore-pump-to-operable-status"
+    },
+    {
+      "id": "ca_change_sampling",
+      "display_name": "Change oil sampling method",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:change-oil-sampling-method"
+    },
+    {
+      "id": "mfr_paci",
+      "display_name": "PACI",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "PACI",
+      "match_key": "Manufacturer:PACI"
+    },
+    {
+      "id": "rr_50731",
+      "display_name": "10 CFR 50.73(a)(2)(i)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i"
+    },
+    {
+      "id": "rr_50731b",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts352",
+      "display_name": "Technical Specification 3.5.2",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:technical-specification-3-5-2"
+    },
+    {
+      "id": "rr_ufsar15",
+      "display_name": "UFSAR Chapter 15",
+      "properties": {
+        "type": "analysis-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ufsar-chapter-15"
+    },
+    {
+      "id": "sys_b_train_si",
+      "display_name": "B-Train Safety Injection",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BQ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; operable",
+      "match_key": "System:BQ"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_50731",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_50731b",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bq",
+      "evidence": null
+    },
+    {
+      "source": "c_pump_a",
+      "relation": "PART_OF",
+      "target": "sys_bq",
+      "evidence": null
+    },
+    {
+      "source": "c_lube_oil_pump",
+      "relation": "PART_OF",
+      "target": "c_pump_a",
+      "evidence": null
+    },
+    {
+      "source": "c_bearing",
+      "relation": "PART_OF",
+      "target": "c_pump_a",
+      "evidence": null
+    },
+    {
+      "source": "fm_improper_sampling",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_improper_sampling",
+      "relation": "LEADS_TO",
+      "target": "fm_fm_intrusion",
+      "evidence": null
+    },
+    {
+      "source": "fm_fm_intrusion",
+      "relation": "LEADS_TO",
+      "target": "fm_lube_pump_seizure",
+      "evidence": null
+    },
+    {
+      "source": "fm_lube_pump_seizure",
+      "relation": "LEADS_TO",
+      "target": "fm_low_oil_flow",
+      "evidence": null
+    },
+    {
+      "source": "fm_low_oil_flow",
+      "relation": "LEADS_TO",
+      "target": "fm_bearing_failure",
+      "evidence": null
+    },
+    {
+      "source": "fm_bearing_failure",
+      "relation": "LEADS_TO",
+      "target": "cons_si_inop",
+      "evidence": null
+    },
+    {
+      "source": "cons_si_inop",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_b_train_si",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_bearings",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_change_sampling",
+      "evidence": null
+    },
+    {
+      "source": "c_pump_a",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_paci",
+      "evidence": null
+    }
+  ],
+  "chain": "improper oil sampling technique [cause A] -> plastic tubing fragments introduced into lube oil system -> lube oil pump seized (tubing lodged between gears) -> low oil flow to outboard bearing -> bearing starved and failed on pump start -> A-train SI pump inoperable/unit operated in TS-prohibited condition for 47.4 hours [backup B-train SI available]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Discovery occurred in Mode 6 on 9/16/2021, but the inoperability window that drove the TS-prohibited-condition report spans 9/6/2021 1436 to 9/12/2021 0759 while in Modes 1-3, per the narrative's timeline analysis. Component code 'p' from block 13 interpreted as pump. No PART_OF edge asserted for lube-oil-pump/bearing to system directly (only to the SI pump component, per explicit narrative containment); B-train SI modeled as separate system node reflecting its EIIS code BQ but distinct train, since it was stated as available/operable throughout the event."
+}

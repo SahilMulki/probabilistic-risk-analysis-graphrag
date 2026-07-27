@@ -1,0 +1,330 @@
+{
+  "ler_number": "282-2024-001-01",
+  "identity": {
+    "accession_number": "ML24296B194",
+    "docket": "05000282",
+    "plant_name": "Prairie Island",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2024-05-02",
+    "report_date": "2024-10-22",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2024-001-01 for Prairie Island Nuclear Generating Plant, Units 1 and 2, Auxiliary Building Special Ventilation System Inoperable during Movement of Irradiated Fuel Assemblies"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "TS Bases were changed to clarify operability requirements of the ABSV system without ensuring the license holders understood the changes to TS 3.7.12 Bases. Operating procedures were not updated to include steps to evaluate TS 3.7.12 if radiation monitors were inoperable or out of service.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Inadequate procedure/training update following TS Bases change",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 282-2024-001-01",
+      "properties": {},
+      "type": "LER",
+      "key": "282-2024-001-01",
+      "stub": false,
+      "title": null,
+      "plant": "Prairie Island Nuclear Generating Plant",
+      "match_key": "LER:282-2024-001-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Prairie Island Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000282",
+      "match_key": "Unit:05000282"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Inadequate procedure/training update following TS Bases change",
+      "proximate_text": "TS Bases were changed to clarify operability requirements of the ABSV system without ensuring the license holders understood the changes to TS 3.7.12 Bases. Operating procedures were not updated to include steps to evaluate TS 3.7.12 if radiation monitors were inoperable or out of service.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_vf",
+      "display_name": "Auxiliary Building Special Ventilation System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "VF",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "system rendered inoperable; serves both Unit 1 and Unit 2, two redundant trains",
+      "match_key": "System:VF"
+    },
+    {
+      "id": "sys_abnv",
+      "display_name": "Auxiliary Building Normal Ventilation System",
+      "properties": {
+        "note": "ABNV exhaust stacks monitored by radiation monitors; isolated upon ABSVS actuation"
+      },
+      "type": "System",
+      "eiis_code": "NF",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:NF"
+    },
+    {
+      "id": "c_1r37",
+      "display_name": "Radiation Monitor 1R-37 (Unit 1, Train A)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "IL",
+      "identifier": "1R-37",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:IL|1R-37"
+    },
+    {
+      "id": "c_2r30",
+      "display_name": "Radiation Monitor 2R-30 (Unit 2, Train B)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "IL",
+      "identifier": "2R-30",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:IL|2R-30"
+    },
+    {
+      "id": "fm_1r37oos",
+      "display_name": "1R-37 (Train A monitor) out of service",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "1R-37 was out of service; the A Train ABSVS would not receive the auto-start signal from a release through the Unit 1 ABNV exhaust stack.",
+      "match_key": "FailureMode:1r-37-train-a-monitor-out-of-service"
+    },
+    {
+      "id": "fm_2r30oos",
+      "display_name": "2R-30 (Train B monitor) out of service",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "2R-30 was out of service for calibration; the B Train ABSVS would not receive the auto-start signal from a release through the Unit 2 ABNV exhaust stack.",
+      "match_key": "FailureMode:2r-30-train-b-monitor-out-of-service"
+    },
+    {
+      "id": "fm_traina_inop",
+      "display_name": "ABSVS Train A inoperable",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Loss of high-radiation auto-start signal made ABSVS Train A inoperable during movement of irradiated fuel assemblies.",
+      "match_key": "FailureMode:absvs-train-a-inoperable"
+    },
+    {
+      "id": "fm_trainb_inop",
+      "display_name": "ABSVS Train B inoperable",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Loss of high-radiation auto-start signal made ABSVS Train B inoperable during movement of irradiated fuel assemblies.",
+      "match_key": "FailureMode:absvs-train-b-inoperable"
+    },
+    {
+      "id": "fm_notrecognized",
+      "display_name": "LCO 3.0.3 applicability not recognized; fuel movement not suspended",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "It was not recognized that LCO 3.0.3 was applicable; the appropriate action of immediately suspending movement of irradiated fuel assemblies did not occur.",
+      "match_key": "FailureMode:lco-3-0-3-applicability-not-recognized-fuel-movement-not-suspended"
+    },
+    {
+      "id": "cons_absvs",
+      "display_name": "Both ABSVS trains inoperable during movement of irradiated fuel assemblies (TS violation)",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2024-05-02T12:52",
+      "end": "2024-05-02T13:25",
+      "duration": "0:33",
+      "tz": "CDT",
+      "match_key": "Consequence:both-absvs-trains-inoperable-during-movement-of-irradiated-fuel-assemblies-ts-violation"
+    },
+    {
+      "id": "ca_bases",
+      "display_name": "Further clarify and communicate TS Bases for ABSV system to operating crews",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:further-clarify-and-communicate-ts-bases-for-absv-system-to-operating-crews"
+    },
+    {
+      "id": "ca_fhproc",
+      "display_name": "Initiate changes to fuel handling procedures to ensure TS compliance during irradiated fuel movement",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:initiate-changes-to-fuel-handling-procedures-to-ensure-ts-compliance-during-irradiated-fuel-movement"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts3712",
+      "display_name": "TS LCO 3.7.12 Auxiliary Building Special Ventilation System",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ts-lco-3-7-12-auxiliary-building-special-ventilation-system"
+    },
+    {
+      "id": "rr_ts303",
+      "display_name": "TS LCO 3.0.3",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ts-lco-3-0-3"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_vf",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_1r37",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_2r30",
+      "evidence": null
+    },
+    {
+      "source": "c_1r37",
+      "relation": "PART_OF",
+      "target": "sys_abnv",
+      "evidence": null
+    },
+    {
+      "source": "c_2r30",
+      "relation": "PART_OF",
+      "target": "sys_abnv",
+      "evidence": null
+    },
+    {
+      "source": "fm_1r37oos",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_1r37oos",
+      "relation": "LEADS_TO",
+      "target": "fm_traina_inop",
+      "evidence": null
+    },
+    {
+      "source": "fm_2r30oos",
+      "relation": "LEADS_TO",
+      "target": "fm_trainb_inop",
+      "evidence": null
+    },
+    {
+      "source": "fm_traina_inop",
+      "relation": "LEADS_TO",
+      "target": "cons_absvs",
+      "evidence": null
+    },
+    {
+      "source": "fm_trainb_inop",
+      "relation": "LEADS_TO",
+      "target": "cons_absvs",
+      "evidence": null
+    },
+    {
+      "source": "cons_absvs",
+      "relation": "LEADS_TO",
+      "target": "fm_notrecognized",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_bases",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_fhproc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts3712",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts303",
+      "evidence": null
+    }
+  ],
+  "chain": "TS Bases clarification not fully understood by license holders + procedures not updated [cause TBD] -> 1R-37 out of service -> ABSVS Train A inoperable; 2R-30 out of service -> ABSVS Train B inoperable -> both trains inoperable during irradiated fuel movement (33 min, TS violation) -> LCO 3.0.3 applicability not recognized, fuel movement not suspended [no backups asserted; redundant monitor on other unit provided FHA protective function per safety assessment]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code left TBD/provisional per FORM-366 fields, though narrative provides a detailed personnel/procedural cause narrative. Two independent radiation-monitor OOS conditions (1R-37 since Oct 2023 due to failed sample pump; 2R-30 OOS 05/02/2024 for calibration) coincided to cause simultaneous Train A/B inoperability; modeled as two parallel origin failure modes both converging on the consequence. Discovery was retrospective (July/August 2024 Past Operability Review), well after the event. No BACKED_UP_BY edge asserted for the redundant-monitor safety function, since it pertains to postulated FHA mitigation/safety analysis rather than a stated operable backup system restoring ABSVS train operability during the event window. No previous similar events per narrative, so no SIMILAR_TO stub LER emitted."
+}

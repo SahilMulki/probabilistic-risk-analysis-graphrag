@@ -1,0 +1,300 @@
+{
+  "ler_number": "461-2021-001-00",
+  "identity": {
+    "accession_number": "ML21351A167",
+    "docket": "05000461",
+    "plant_name": "Clinton",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2021-07-20",
+    "report_date": "2021-08-19",
+    "operating_mode": "1",
+    "power_level": 25,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Core Monitoring System Software Modeling Error Results in Condition Prohibited by Technical Specifications"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "GEH notified CPS the Side Entry Orifice (SEO) loss coefficient was underpredicted for some fuel bundle locations, which could result in an overprediction of MCPR margin in core monitoring applications. The overprediction was a result of not originally including in the assessment flow area restrictions associated with instrument support structures in the cross beams... a legacy vendor design calculation error.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "vendor core-monitoring software modeling error (SEO loss coefficient underprediction)",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 461-2021-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "461-2021-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:461-2021-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Clinton Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000461",
+      "match_key": "Unit:05000461"
+    },
+    {
+      "id": "cause",
+      "display_name": "Vendor Design/Software Error (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "vendor core-monitoring software modeling error (SEO loss coefficient underprediction)",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_cms",
+      "display_name": "Core Monitoring System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "IG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "reactor core power distribution/MCPR monitoring software",
+      "match_key": "System:IG"
+    },
+    {
+      "id": "c_seo",
+      "display_name": "Side Entry Orifice (fuel support)",
+      "properties": {
+        "location": "adjacent to two supporting beams of core plate, ~25% of fuel bundle locations"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:side-entry-orifice-fuel-support"
+    },
+    {
+      "id": "fm_seo_loss",
+      "display_name": "SEO loss coefficient underpredicted in core monitoring model",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Flow area restrictions from instrument support structures in cross beams were not included in original assessment, causing underprediction of SEO loss coefficient.",
+      "match_key": "FailureMode:seo-loss-coefficient-underpredicted-in-core-monitoring-model"
+    },
+    {
+      "id": "fm_bypass_overpredict",
+      "display_name": "Fuel bundle bypass flow inaccurately modeled / MCPR margin overpredicted",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Core monitoring system did not accurately model bypass flow for bundles adjacent to two support beams, resulting in overprediction of MCPR margin (understated MFLCPR).",
+      "match_key": "FailureMode:fuel-bundle-bypass-flow-inaccurately-modeled-mcpr-margin-overpredicted"
+    },
+    {
+      "id": "fm_mflcpr_exceeded",
+      "display_name": "MFLCPR exceeded 1.0 for longer than 6 hours (undetected)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "After applying SC 21-04 Rev.1 penalty retroactively, review showed MFLCPR was greater than 1.0 for periods on May 25, 2019, and June 22-Aug 3, 2019, exceeding the 6-hour allowed time without corrective action being taken at the time.",
+      "match_key": "FailureMode:mflcpr-exceeded-1-0-for-longer-than-6-hours-undetected"
+    },
+    {
+      "id": "cons_ts",
+      "display_name": "Multiple entries into condition prohibited by Technical Specifications (TS 3.2.2)",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2019-05-25",
+      "end": "2019-08-03",
+      "duration": "intermittent periods across May 25, 2019 and June 22-Aug 3, 2019",
+      "tz": null,
+      "match_key": "Consequence:multiple-entries-into-condition-prohibited-by-technical-specifications-ts-3-2-2"
+    },
+    {
+      "id": "ca_verify",
+      "display_name": "Verified current MFLCPR value is within recommended limit",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:verified-current-mflcpr-value-is-within-recommended-limit"
+    },
+    {
+      "id": "ca_standing_order",
+      "display_name": "Issued Operations Standing Orders to capture SC 21-04 Rev 0 and Rev 1 recommended actions",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:issued-operations-standing-orders-to-capture-sc-21-04-rev-0-and-rev-1-recommended-actions"
+    },
+    {
+      "id": "ca_colr",
+      "display_name": "Revised Core Operating Limit Report and Databank Design Analysis",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revised-core-operating-limit-report-and-databank-design-analysis"
+    },
+    {
+      "id": "ca_cms_update",
+      "display_name": "Updated core monitoring system to address SC 21-04, Revision 1",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:updated-core-monitoring-system-to-address-sc-21-04-revision-1"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts322",
+      "display_name": "Technical Specification 3.2.2, Power Distribution Limits - Minimum Critical Power Ratio (MCPR)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-3-2-2-power-distribution-limits-minimum-critical-power-ratio-mcpr"
+    },
+    {
+      "id": "rr_sc2104",
+      "display_name": "GEH Safety Communication 21-04, Fuel Support Side Entry Orifice Meta-Stable Flow for 2 Beam Locations in the BWR/6 Reactors",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "standard/guidance",
+      "match_key": "RegulatoryReference:geh-safety-communication-21-04-fuel-support-side-entry-orifice-meta-stable-flow-for-2-beam-locations-in-the-bwr-6-reactors"
+    },
+    {
+      "id": "rr_part21",
+      "display_name": "2020 Part 21 report - Non-conservative BWR/6 Side Entry Orifice (SEO) Loss Coefficients (ML20176A432)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "standard/guidance",
+      "match_key": "RegulatoryReference:2020-part-21-report-non-conservative-bwr-6-side-entry-orifice-seo-loss-coefficients-ml20176a432"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_cms",
+      "evidence": null
+    },
+    {
+      "source": "c_seo",
+      "relation": "PART_OF",
+      "target": "sys_cms",
+      "evidence": null
+    },
+    {
+      "source": "fm_seo_loss",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_seo_loss",
+      "relation": "LEADS_TO",
+      "target": "fm_bypass_overpredict",
+      "evidence": null
+    },
+    {
+      "source": "fm_bypass_overpredict",
+      "relation": "LEADS_TO",
+      "target": "fm_mflcpr_exceeded",
+      "evidence": null
+    },
+    {
+      "source": "fm_mflcpr_exceeded",
+      "relation": "LEADS_TO",
+      "target": "cons_ts",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_verify",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_standing_order",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_colr",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_cms_update",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts322",
+      "evidence": null
+    },
+    {
+      "source": "cause",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_sc2104",
+      "evidence": null
+    },
+    {
+      "source": "cause",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_part21",
+      "evidence": null
+    }
+  ],
+  "chain": "legacy GEH vendor SEO loss-coefficient calculation error [cause TBD] -> bypass flow inaccurately modeled / MCPR margin overpredicted -> MFLCPR exceeded 1.0 for >6 hours undetected (retroactively identified) -> multiple entries into TS 3.2.2 prohibited condition",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "This is a retrospective/software-modeling-error LER discovered via vendor Part 21/Safety Communication review rather than a hardware failure event; no block_13 data provided (empty array) and cause_code remains TBD/provisional per FORM-366 fields. No previous similar occurrences were identified by licensee, so no stub LER/SIMILAR_TO edge created. No manufacturer or component-failure data applicable per Section G. ADS/other ECCS not involved; this event is confined to core monitoring/TS compliance domain, not a system inoperability/backup scenario, so no BACKED_UP_BY edges apply."
+}

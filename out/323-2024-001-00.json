@@ -1,0 +1,376 @@
+{
+  "ler_number": "323-2024-001-00",
+  "identity": {
+    "accession_number": "ML24141A032",
+    "docket": "05000323",
+    "plant_name": "Diablo Canyon",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2024-03-19",
+    "report_date": "2024-05-17",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LCO 3.0.3 Completion Time Limits"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "X",
+      "system": "ED",
+      "component": "BKR",
+      "manufacturer": null,
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The cause of the ABVS fan failure E-1 was a degraded \"C\" phase contactor in the breaker cubicle providing power to the fan.",
+    "cause_code": "X",
+    "category": "Other",
+    "theme": "degraded electrical contactor causing dual-train ventilation inoperability and TS 3.0.3 exceedance",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 323-2024-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "323-2024-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:323-2024-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Diablo Canyon Unit 2",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000323",
+      "match_key": "Unit:05000323"
+    },
+    {
+      "id": "cause",
+      "display_name": "Other (X)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "X",
+      "category": "Other",
+      "theme": "degraded electrical contactor causing dual-train ventilation inoperability and TS 3.0.3 exceedance",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Other"
+    },
+    {
+      "id": "sys_abvs",
+      "display_name": "Auxiliary Building Ventilation System",
+      "properties": {
+        "note": "provides outside air and cooling for ESF pump motors; exhaust fans provide accident-condition pressure relief"
+      },
+      "type": "System",
+      "eiis_code": "NF",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:NF"
+    },
+    {
+      "id": "sys_ed",
+      "display_name": "Onsite Power Systems (Class 1E electrical distribution)",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "ED",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:ED"
+    },
+    {
+      "id": "c_e1",
+      "display_name": "ABVS Exhaust Fan E-1",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "E-1",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:abvs-exhaust-fan-e-1"
+    },
+    {
+      "id": "c_e2",
+      "display_name": "ABVS Exhaust Fan E-2",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "E-2",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:abvs-exhaust-fan-e-2"
+    },
+    {
+      "id": "c_bkr",
+      "display_name": "Breaker cubicle providing power to ABVS Fan E-1",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "BKR",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:BKR"
+    },
+    {
+      "id": "c_contactor",
+      "display_name": "\"C\" phase contactor",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:c-phase-contactor"
+    },
+    {
+      "id": "c_edg22",
+      "display_name": "Emergency Diesel Generator 2-2",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "EDG 2-2",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:emergency-diesel-generator-2-2"
+    },
+    {
+      "id": "fm_contactor_degraded",
+      "display_name": "\"C\" phase contactor degraded in breaker cubicle",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Degraded contactor in the breaker cubicle powering ABVS Fan E-1",
+      "match_key": "FailureMode:c-phase-contactor-degraded-in-breaker-cubicle"
+    },
+    {
+      "id": "fm_e1_trip",
+      "display_name": "ABVS Fan E-1 trips on thermal overload",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Fan E-1 tripped on TOL during planned EDG 2-2 maintenance; declared inoperable",
+      "match_key": "FailureMode:abvs-fan-e-1-trips-on-thermal-overload"
+    },
+    {
+      "id": "fm_e1_not_restored",
+      "display_name": "ABVS Fan E-1 not restored within 4-hour completion time",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Per TS 3.8.1 Required Action B.2, failure to restore E-1 within 4 hours",
+      "match_key": "FailureMode:abvs-fan-e-1-not-restored-within-4-hour-completion-time"
+    },
+    {
+      "id": "fm_e2_declared_inop",
+      "display_name": "ABVS Fan E-2 declared inoperable (supported by EDG 2-2)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "E-2 declared inoperable because it was supported by EDG 2-2, which was in planned maintenance concurrent with E-1's TOL trip",
+      "match_key": "FailureMode:abvs-fan-e-2-declared-inoperable-supported-by-edg-2-2"
+    },
+    {
+      "id": "cons_tso33",
+      "display_name": "TS 3.0.3 entered; completion time exceeded for both ABVS exhaust trains",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2024-03-18T19:43",
+      "end": "2024-03-19T17:30",
+      "duration": null,
+      "tz": "PDT",
+      "match_key": "Consequence:ts-3-0-3-entered-completion-time-exceeded-for-both-abvs-exhaust-trains"
+    },
+    {
+      "id": "ca_repair",
+      "display_name": "Implement repairs in breaker cubicle providing power to ABVS Fan E-1",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:implement-repairs-in-breaker-cubicle-providing-power-to-abvs-fan-e-1"
+    },
+    {
+      "id": "ca_cap",
+      "display_name": "Manage additional follow-up corrective actions under DCPP Corrective Action Program",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:manage-additional-follow-up-corrective-actions-under-dcpp-corrective-action-program"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_nureg1022",
+      "display_name": "NUREG-1022, Revision 3",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "standard/guidance",
+      "match_key": "RegulatoryReference:nureg-1022-revision-3"
+    },
+    {
+      "id": "rr_ts3712",
+      "display_name": "TS 3.7.12 (ABVS)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-3-7-12-abvs"
+    },
+    {
+      "id": "rr_ts381",
+      "display_name": "TS 3.8.1 Required Action B.2",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-3-8-1-required-action-b-2"
+    },
+    {
+      "id": "rr_ts303",
+      "display_name": "TS 3.0.3",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-3-0-3"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_nureg1022",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts3712",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts381",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts303",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_abvs",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ed",
+      "evidence": null
+    },
+    {
+      "source": "fm_contactor_degraded",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_contactor_degraded",
+      "relation": "LEADS_TO",
+      "target": "fm_e1_trip",
+      "evidence": null
+    },
+    {
+      "source": "fm_e1_trip",
+      "relation": "LEADS_TO",
+      "target": "fm_e1_not_restored",
+      "evidence": null
+    },
+    {
+      "source": "fm_e1_not_restored",
+      "relation": "LEADS_TO",
+      "target": "fm_e2_declared_inop",
+      "evidence": null
+    },
+    {
+      "source": "fm_e2_declared_inop",
+      "relation": "LEADS_TO",
+      "target": "cons_tso33",
+      "evidence": null
+    },
+    {
+      "source": "cons_tso33",
+      "relation": "BACKED_UP_BY",
+      "target": "c_e2",
+      "evidence": null
+    },
+    {
+      "source": "c_contactor",
+      "relation": "PART_OF",
+      "target": "c_bkr",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_repair",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_cap",
+      "evidence": null
+    }
+  ],
+  "chain": "degraded C-phase contactor in breaker cubicle [cause X] -> ABVS Fan E-1 trips on thermal overload -> E-1 not restored within 4-hr TS 3.8.1 completion time -> E-2 (supported by EDG 2-2, in maintenance) declared inoperable -> TS 3.0.3 entered, completion time exceeded [backup: E-2 remained available/in service during E-1 repair]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Plant name, unit, and reactor type were null in FORM-366 FIELDS but explicitly stated in narrative (Diablo Canyon Unit 2, PWR); populated from narrative per authoritative rule for component/system identifiers and context. ABVS has no EIIS code given in text; left null per rule 2. EDG 2-2 modeled as component involved in the causal narrative context (concurrent maintenance created the redundancy loss) but not part of the direct failure chain -> no LEADS_TO edge from it, only descriptive linkage via fm_e2 description. E-2 treated as a Component that backs up the consequence (it remained available/in service during the E-1 repair window), not as a System, since ABVS itself is the System node and E-1/E-2 are its fans."
+}

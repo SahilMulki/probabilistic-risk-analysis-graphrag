@@ -1,0 +1,407 @@
+{
+  "ler_number": "333-2023-004-00",
+  "identity": {
+    "accession_number": "ML23335A068",
+    "docket": "05000333",
+    "plant_name": "FitzPatrick",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2023-04-12",
+    "report_date": "2023-12-01",
+    "operating_mode": "3",
+    "power_level": 100,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Dear Sir or Madam:"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)",
+      "10 CFR 50.73(a)(2)(v)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "This was caused by binding of the closing coil armature of the breaker due to a misaligned spacer installed in June 2021. The cause of this condition is inadequate procedural guidance to ensure proper orientation/alignment of the close coil sleeve and spacers.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Inadequate procedural guidance for component installation",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 333-2023-004-00",
+      "properties": {
+        "match_key": "LER:333-2023-004-00"
+      },
+      "type": "LER",
+      "key": "333-2023-004-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:333-2023-004-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "FitzPatrick Unit 1",
+      "properties": {
+        "match_key": "Unit:05000333",
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000333",
+      "match_key": "Unit:05000333"
+    },
+    {
+      "id": "cause",
+      "display_name": "Inadequate Procedural Guidance (D)",
+      "properties": {
+        "match_key": "Cause:inadequate-procedural-guidance"
+      },
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Inadequate procedural guidance for component installation",
+      "proximate_text": "This was caused by binding of the closing coil armature of the breaker due to a misaligned spacer installed in June 2021. The cause of this condition is inadequate procedural guidance to ensure proper orientation/alignment of the close coil sleeve and spacers.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_ek",
+      "display_name": "Emergency Onsite Power Supply System",
+      "properties": {
+        "note": "Two redundant EDG subsystems, each with two EDG units",
+        "match_key": "System:EK"
+      },
+      "type": "System",
+      "eiis_code": "EK",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:EK"
+    },
+    {
+      "id": "c_tiebreaker",
+      "display_name": "EDG \"A\"/\"C\" Tie Breaker 71-10504 (Magne-Blast)",
+      "properties": {
+        "match_key": "Component:BKR|71-10504"
+      },
+      "type": "Component",
+      "eiis_code": "BKR",
+      "identifier": "71-10504",
+      "model": "AMH-4.76-250-1D",
+      "manufacturer_code": "G080",
+      "inferred_code": false,
+      "match_key": "Component:BKR|71-10504"
+    },
+    {
+      "id": "c_closingcoil",
+      "display_name": "Closing coil armature/assembly",
+      "properties": {
+        "match_key": "Component:closing-coil-armature-assembly"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:closing-coil-armature-assembly"
+    },
+    {
+      "id": "c_spacer",
+      "display_name": "Closing coil spacer",
+      "properties": {
+        "match_key": "Component:closing-coil-spacer"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:closing-coil-spacer"
+    },
+    {
+      "id": "fm_misaligned_spacer",
+      "display_name": "Spacer misaligned during June 2021 installation",
+      "properties": {
+        "match_key": "FailureMode:spacer-misaligned-during-installation"
+      },
+      "type": "FailureMode",
+      "description": "Misaligned spacer did not allow the closing coil sleeve to seat properly in the cutout of the support, decreasing clearance for armature movement.",
+      "match_key": "FailureMode:spacer-misaligned-during-june-2021-installation"
+    },
+    {
+      "id": "fm_armature_binding",
+      "display_name": "Closing coil armature intermittent binding",
+      "properties": {
+        "match_key": "FailureMode:closing-coil-armature-intermittent-binding"
+      },
+      "type": "FailureMode",
+      "description": "Decreased clearance caused the armature to bind against the spacer and inside of the sleeve in certain rotational positions.",
+      "match_key": "FailureMode:closing-coil-armature-intermittent-binding"
+    },
+    {
+      "id": "fm_breaker_failtoclose",
+      "display_name": "Tie breaker 71-10504 failed to close",
+      "properties": {
+        "match_key": "FailureMode:tie-breaker-failed-to-close"
+      },
+      "type": "FailureMode",
+      "description": "Binding prevented the full stroke required to close the circuit breaker during monthly full load surveillance test ST-9BA.",
+      "match_key": "FailureMode:tie-breaker-71-10504-failed-to-close"
+    },
+    {
+      "id": "cons_edga_inop",
+      "display_name": "\"A\" EDG subsystem inoperable",
+      "properties": {
+        "match_key": "Consequence:a-edg-subsystem-inoperable"
+      },
+      "type": "Consequence",
+      "start": "2023-04-12",
+      "end": "2023-04-13T23:00",
+      "duration": "43 hours",
+      "tz": null,
+      "match_key": "Consequence:a-edg-subsystem-inoperable"
+    },
+    {
+      "id": "cons_two_edg_inop",
+      "display_name": "Concurrent inoperability of \"A\" and \"B\" EDG subsystems",
+      "properties": {
+        "match_key": "Consequence:concurrent-a-b-edg-inoperable"
+      },
+      "type": "Consequence",
+      "start": "2023-03-27",
+      "end": "2023-04-13",
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:concurrent-inoperability-of-a-and-b-edg-subsystems"
+    },
+    {
+      "id": "sys_edg_b",
+      "display_name": "\"B\" EDG Subsystem",
+      "properties": {
+        "match_key": "System:b-edg-subsystem"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "concurrently inoperable subsystem (separate event)",
+      "match_key": "System:b-edg-subsystem"
+    },
+    {
+      "id": "ca_replace_breaker",
+      "display_name": "Replace 71-10504 Tie Breaker",
+      "properties": {
+        "match_key": "CorrectiveAction:replace-tie-breaker"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-71-10504-tie-breaker"
+    },
+    {
+      "id": "ca_revise_mp05401",
+      "display_name": "Revise procedure MP-054.01 (4.16 KV Magne-Blast Breaker)",
+      "properties": {
+        "match_key": "CorrectiveAction:revise-mp-054-01"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-procedure-mp-054-01-4-16-kv-magne-blast-breaker"
+    },
+    {
+      "id": "ca_revise_mp05403",
+      "display_name": "Revise procedure MP-054.03 (4.16 KV Magne-Blast Breaker Overhaul)",
+      "properties": {
+        "match_key": "CorrectiveAction:revise-mp-054-03"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-procedure-mp-054-03-4-16-kv-magne-blast-breaker-overhaul"
+    },
+    {
+      "id": "mfr_ge",
+      "display_name": "General Electric",
+      "properties": {
+        "match_key": "Manufacturer:G080"
+      },
+      "type": "Manufacturer",
+      "code": "G080",
+      "match_key": "Manufacturer:G080"
+    },
+    {
+      "id": "rr_5073i",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_5073v",
+      "display_name": "10 CFR 50.73(a)(2)(v)(A)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-a"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-a"
+    },
+    {
+      "id": "rr_ts381",
+      "display_name": "Technical Specification 3.8.1",
+      "properties": {
+        "match_key": "RegulatoryReference:ts-3-8-1"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-3-8-1"
+    },
+    {
+      "id": "ler_2023_003",
+      "display_name": "LER 333-2023-003-00",
+      "properties": {
+        "match_key": "LER:1-2023-003"
+      },
+      "type": "LER",
+      "key": "333-2023-003-00",
+      "stub": true,
+      "title": "Procedure Error in Emergency Diesel Generator Fuel Oil Supply \"B\" Subsystem",
+      "plant": "James A. FitzPatrick Nuclear Power Plant",
+      "match_key": "LER:333-2023-003-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073i",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073v",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ek",
+      "evidence": null
+    },
+    {
+      "source": "c_tiebreaker",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_ge",
+      "evidence": null
+    },
+    {
+      "source": "c_closingcoil",
+      "relation": "PART_OF",
+      "target": "c_tiebreaker",
+      "evidence": null
+    },
+    {
+      "source": "c_spacer",
+      "relation": "PART_OF",
+      "target": "c_closingcoil",
+      "evidence": null
+    },
+    {
+      "source": "fm_misaligned_spacer",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_misaligned_spacer",
+      "relation": "LEADS_TO",
+      "target": "fm_armature_binding",
+      "evidence": null
+    },
+    {
+      "source": "fm_armature_binding",
+      "relation": "LEADS_TO",
+      "target": "fm_breaker_failtoclose",
+      "evidence": null
+    },
+    {
+      "source": "fm_breaker_failtoclose",
+      "relation": "LEADS_TO",
+      "target": "cons_edga_inop",
+      "evidence": null
+    },
+    {
+      "source": "cons_edga_inop",
+      "relation": "LEADS_TO",
+      "target": "cons_two_edg_inop",
+      "evidence": null
+    },
+    {
+      "source": "cons_two_edg_inop",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_breaker",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_breaker",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_revise_mp05401",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_revise_mp05403",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_2023_003",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts381",
+      "evidence": null
+    }
+  ],
+  "chain": "inadequate procedural guidance for spacer alignment [cause D] -> spacer misaligned during June 2021 installation -> closing coil armature intermittent binding -> tie breaker 71-10504 fails to close -> \"A\" EDG subsystem inoperable (43h) -> concurrent with \"B\" EDG subsystem inoperability (fuel oil issue, LER 2023-003) -> TS 3.8.1 Condition E applicability",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Block-13 cause code shown is 'D' (design/manufacture issue coding per NRC form conventions here reflects inadequate procedural guidance) though FORM-366 header cause_code was given as TBD; per rule 4 the official code should be copied verbatim, but the only cause code stated in the report is Block 13's 'D' (no separate authoritative header cause_code was provided distinct from block_13). Used 'D' as the cause_code and left category as 'provisional' since no explicit category label was given in the FORM-366 FIELDS. 'B' EDG subsystem is modeled as System node because its concurrent inoperability is explicitly part of the reportability determination (10 CFR 50.73(a)(2)(v)(A)), not merely design context. Fuel oil system [DE] referenced only via the separate stub LER 2023-003 and not modeled as its own System node since it is not directly part of this event's causal chain. Two 10 CFR citations both modeled as RegulatoryReference/REPORTED_UNDER per reporting_basis. TS 3.8.1 added as a license-basis RegulatoryReference given its explicit centrality to the reportability determination."
+}

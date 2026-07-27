@@ -1,0 +1,338 @@
+{
+  "ler_number": "443-2023-003-00",
+  "identity": {
+    "accession_number": "ML23181A088",
+    "docket": "05000443",
+    "plant_name": "Seabrook",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2023-05-06",
+    "report_date": "2023-06-30",
+    "operating_mode": "3",
+    "power_level": null,
+    "discovery_context": "operability test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Reactor Protection System Manual Actuation Due to Failed Silicon Controlled Rectifiers"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)",
+      "10 CFR 50.73(a)(2)(iv)(B)",
+      "10 CFR 50.73(a)(2)(iv)(B)(1)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "X",
+      "system": "AA",
+      "component": "SCR",
+      "manufacturer": "W120",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The cause of the Rod Control Urgent Alarm preventing manual and automatic rod motion was identified through troubleshooting as failed Silicon Controlled Rectifiers (SCR) associated with lift coils.",
+    "cause_code": "X",
+    "category": "Other",
+    "theme": "Failed SCRs in rod lift coil circuitry; root cause under investigation",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 443-2023-003-00",
+      "properties": {},
+      "type": "LER",
+      "key": "443-2023-003-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:443-2023-003-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Seabrook Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000443",
+      "match_key": "Unit:05000443"
+    },
+    {
+      "id": "cause",
+      "display_name": "Other (X)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "X",
+      "category": "Other",
+      "theme": "Failed SCRs in rod lift coil circuitry; root cause under investigation",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Other"
+    },
+    {
+      "id": "sys_aa",
+      "display_name": "Shutdown Bank C, D, E (SCDE) Rod Control Cabinet",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "AA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:AA"
+    },
+    {
+      "id": "sys_jd",
+      "display_name": "Reactor Protection System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JD",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JD"
+    },
+    {
+      "id": "c_rtb",
+      "display_name": "Reactor Trip Breakers",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "BKR",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:BKR"
+    },
+    {
+      "id": "c_scr",
+      "display_name": "Silicon Controlled Rectifiers (associated with lift coils)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "SCR",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": "W120",
+      "inferred_code": false,
+      "match_key": "Component:SCR"
+    },
+    {
+      "id": "fm_scrfail",
+      "display_name": "Silicon Controlled Rectifiers failed (associated with lift coils)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Failed SCRs associated with rod lift coils prevented proper rod motion control.",
+      "match_key": "FailureMode:silicon-controlled-rectifiers-failed-associated-with-lift-coils"
+    },
+    {
+      "id": "fm_urgentalarm1",
+      "display_name": "Rod Control Urgent Failure Alarm - Shutdown Bank E stopped withdrawing at 114 steps",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Shutdown Bank E stopped withdrawing at 114 steps during DRPI operability testing; rods could not step manually or automatically.",
+      "match_key": "FailureMode:rod-control-urgent-failure-alarm-shutdown-bank-e-stopped-withdrawing-at-114-steps"
+    },
+    {
+      "id": "fm_urgentalarm2",
+      "display_name": "Rod Control Urgent Failure Alarm - Shutdown Bank C stopped inserting at 143 steps",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Shutdown Bank C stopped inserting at 143 steps during DRPI system surveillance testing; second urgent failure alarm activated.",
+      "match_key": "FailureMode:rod-control-urgent-failure-alarm-shutdown-bank-c-stopped-inserting-at-143-steps"
+    },
+    {
+      "id": "cons_rps1",
+      "display_name": "Manual RPS actuation #1 (RTBs manually opened)",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2023-05-06T15:52",
+      "end": null,
+      "duration": null,
+      "tz": "local",
+      "match_key": "Consequence:manual-rps-actuation-1-rtbs-manually-opened"
+    },
+    {
+      "id": "cons_rps2",
+      "display_name": "Manual RPS actuation #2 (RTBs manually opened)",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2023-05-06T22:53",
+      "end": null,
+      "duration": null,
+      "tz": "local",
+      "match_key": "Consequence:manual-rps-actuation-2-rtbs-manually-opened"
+    },
+    {
+      "id": "ca_forensics",
+      "display_name": "Complete circuit card forensics at CPED",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:complete-circuit-card-forensics-at-cped"
+    },
+    {
+      "id": "ca_pm_review",
+      "display_name": "Review preventative maintenance strategy for SCR/capacitor alignment with OEM and implement deficiencies found",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:review-preventative-maintenance-strategy-for-scr-capacitor-alignment-with-oem-and-implement-deficiencies-found"
+    },
+    {
+      "id": "ca_mrff",
+      "display_name": "Revise maintenance rule functional failure (MRFF) evaluation if necessary based on troubleshooting results",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-maintenance-rule-functional-failure-mrff-evaluation-if-necessary-based-on-troubleshooting-results"
+    },
+    {
+      "id": "mfr_westinghouse",
+      "display_name": "Westinghouse",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "W120",
+      "match_key": "Manufacturer:W120"
+    },
+    {
+      "id": "rr_5073_iv_a",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5073_iv_b",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-b"
+    },
+    {
+      "id": "rr_5073_iv_b1",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(B)(1)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-b-1"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_iv_a",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_iv_b",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_iv_b1",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_aa",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jd",
+      "evidence": null
+    },
+    {
+      "source": "c_scr",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_westinghouse",
+      "evidence": null
+    },
+    {
+      "source": "fm_scrfail",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_scrfail",
+      "relation": "LEADS_TO",
+      "target": "fm_urgentalarm1",
+      "evidence": null
+    },
+    {
+      "source": "fm_scrfail",
+      "relation": "LEADS_TO",
+      "target": "fm_urgentalarm2",
+      "evidence": null
+    },
+    {
+      "source": "fm_urgentalarm1",
+      "relation": "LEADS_TO",
+      "target": "cons_rps1",
+      "evidence": null
+    },
+    {
+      "source": "fm_urgentalarm2",
+      "relation": "LEADS_TO",
+      "target": "cons_rps2",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_forensics",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_pm_review",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_mrff",
+      "evidence": null
+    }
+  ],
+  "chain": "failed SCRs (lift coils) [cause X] -> Shutdown Bank E urgent alarm (stopped at 114 steps) -> manual RTB opening -> RPS actuation #1; failed SCRs -> Shutdown Bank C urgent alarm (stopped at 143 steps) -> manual RTB opening -> RPS actuation #2",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Two separate but related failure events on the same day, both traced to failed SCRs associated with rod lift coils in the SCDE cabinet; each independently led to a manual RPS actuation via manually opened RTBs. No SSCs were inoperable at event onset and no SSFF occurred. Root cause of the SCR failures remained under investigation (CPED forensics) at time of report, consistent with cause code X (Other). No backup systems modeled since RPS/reactor trip is the terminal safety response, not a system requiring backup. No previous similar events found in 10-year review, so no SIMILAR_TO/stub LER emitted per narrative statement."
+}

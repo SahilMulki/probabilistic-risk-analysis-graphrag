@@ -1,0 +1,405 @@
+{
+  "ler_number": "410-2022-001-00",
+  "identity": {
+    "accession_number": "ML22159A196",
+    "docket": "05000410",
+    "plant_name": "Nine Mile Point",
+    "unit": 2,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2022-04-05",
+    "report_date": "2022-06-03",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "NMP2 Licensee Event Report 2022-001 , Revision 0, Automatic Reactor Scram due to Low Reactor Water Level During Maintenance"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "D",
+      "system": "NIA",
+      "component": "NIA",
+      "manufacturer": "NIA",
+      "reportable": "Y"
+    },
+    {
+      "cause": "NIA",
+      "system": "NIA",
+      "component": "NIA",
+      "manufacturer": "NIA",
+      "reportable": null
+    }
+  ],
+  "cause": {
+    "proximate_text": "incorrect procedure guidance for nulling the demand and position signal in procedure N2-SOP-06, Feedwater Failures, Attachment 1, Restoration of 2FWS-LV10 Control. When the NORMAL/RESET switch (S10B) is placed to reset, the signal sent to the MIA station is from the non-selected position feedback potentiometer and not the potentiometer selected with the corresponding Feedback Potentiometer selector switch (S2B). This procedure error was introduced when the modification was implemented and not recognized.",
+    "cause_code": "D",
+    "category": "Defective Procedure",
+    "theme": "procedure error in valve restoration sequence caused signal mismatch",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 410-2022-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "410-2022-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:410-2022-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Nine Mile Point Unit 2",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000410",
+      "match_key": "Unit:05000410"
+    },
+    {
+      "id": "cause",
+      "display_name": "Defective Procedure (D)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "D",
+      "category": "Defective Procedure",
+      "theme": "procedure error in valve restoration sequence caused signal mismatch",
+      "proximate_text": "incorrect procedure guidance for nulling the demand and position signal in procedure N2-SOP-06, Feedwater Failures, Attachment 1, Restoration of 2FWS-LV10 Control. When the NORMAL/RESET switch (S10B) is placed to reset, the signal sent to the MIA station is from the non-selected position feedback potentiometer and not the potentiometer selected with the corresponding Feedback Potentiometer selector switch (S2B). This procedure error was introduced when the modification was implemented and not recognized.",
+      "provisional": false,
+      "match_key": "Cause:Defective Procedure"
+    },
+    {
+      "id": "sys_jb",
+      "display_name": "Feedwater Level Control System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JB"
+    },
+    {
+      "id": "sys_sj",
+      "display_name": "Feedwater System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "sys_jc",
+      "display_name": "Reactor Protection System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JC"
+    },
+    {
+      "id": "sys_bj",
+      "display_name": "High Pressure Coolant Injection System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; actuated as designed",
+      "match_key": "System:BJ"
+    },
+    {
+      "id": "sys_bn",
+      "display_name": "Reactor Core Isolation Cooling",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BN",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; actuated as designed",
+      "match_key": "System:BN"
+    },
+    {
+      "id": "c_lv10b",
+      "display_name": "Feedwater Level Control Valve LV10B",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "LV10B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:feedwater-level-control-valve-lv10b"
+    },
+    {
+      "id": "c_lv10a",
+      "display_name": "Feedwater Level Control Valve LV10A",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "LV10A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:feedwater-level-control-valve-lv10a"
+    },
+    {
+      "id": "c_pot",
+      "display_name": "Primary position sensor potentiometer (LV10B)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "LV10B-primary-potentiometer",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:primary-position-sensor-potentiometer-lv10b"
+    },
+    {
+      "id": "c_s10b",
+      "display_name": "NORMAL/RESET switch S10B",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "S10B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:normal-reset-switch-s10b"
+    },
+    {
+      "id": "c_s2b",
+      "display_name": "Feedback Potentiometer selector switch S2B",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "S2B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:feedback-potentiometer-selector-switch-s2b"
+    },
+    {
+      "id": "fm_procerror",
+      "display_name": "Procedure incorrectly nulled demand/position signal on switch reset",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "N2-SOP-06 Attachment 1 caused the wrong (non-selected) potentiometer feedback to be sent to the MIA station upon reset.",
+      "match_key": "FailureMode:procedure-incorrectly-nulled-demand-position-signal-on-switch-reset"
+    },
+    {
+      "id": "fm_mismatch",
+      "display_name": "Position feedback signal mismatch on LV10B",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Position read approximately 80% open while demand signal was 43%.",
+      "match_key": "FailureMode:position-feedback-signal-mismatch-on-lv10b"
+    },
+    {
+      "id": "fm_valveclose",
+      "display_name": "LV10B rapidly closed",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Signal mismatch caused the valve to drive closed.",
+      "match_key": "FailureMode:lv10b-rapidly-closed"
+    },
+    {
+      "id": "fm_lv10a_fail",
+      "display_name": "LV10A unable to compensate",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "LV10A attempted to open to maintain reactor water level but was unsuccessful.",
+      "match_key": "FailureMode:lv10a-unable-to-compensate"
+    },
+    {
+      "id": "cons_scram",
+      "display_name": "Automatic reactor scram on low reactor water level",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2022-04-05T02:22",
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:automatic-reactor-scram-on-low-reactor-water-level"
+    },
+    {
+      "id": "ca_potmodel",
+      "display_name": "Install new model potentiometers on LV10A and LV10B",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:install-new-model-potentiometers-on-lv10a-and-lv10b"
+    },
+    {
+      "id": "ca_procrevise",
+      "display_name": "Revise N2-SOP-06 Attachment 1 to correctly null demand signal",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-n2-sop-06-attachment-1-to-correctly-null-demand-signal"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5072b2iv",
+      "display_name": "10 CFR 50.72(b)(2)(iv)(A)/(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-2-iv-a-b"
+    },
+    {
+      "id": "rr_5072b3iv",
+      "display_name": "10 CFR 50.72(b)(3)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-3-iv-a"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072b2iv",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072b3iv",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jb",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sj",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bj",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bn",
+      "evidence": null
+    },
+    {
+      "source": "fm_procerror",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_procerror",
+      "relation": "LEADS_TO",
+      "target": "fm_mismatch",
+      "evidence": null
+    },
+    {
+      "source": "fm_mismatch",
+      "relation": "LEADS_TO",
+      "target": "fm_valveclose",
+      "evidence": null
+    },
+    {
+      "source": "fm_valveclose",
+      "relation": "LEADS_TO",
+      "target": "fm_lv10a_fail",
+      "evidence": null
+    },
+    {
+      "source": "fm_lv10a_fail",
+      "relation": "LEADS_TO",
+      "target": "cons_scram",
+      "evidence": null
+    },
+    {
+      "source": "cons_scram",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_bj",
+      "evidence": null
+    },
+    {
+      "source": "cons_scram",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_bn",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_potmodel",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procrevise",
+      "evidence": null
+    }
+  ],
+  "chain": "defective N2-SOP-06 procedure [cause D] -> incorrect nulling of demand/position signal on switch S10B reset -> LV10B position feedback mismatch (80% actual vs 43% demand) -> LV10B rapidly closes -> LV10A unable to compensate -> low reactor water level scram [backups HPCI, RCIC actuated as designed]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "No failed components identified per Section V.A; the root cause is purely procedural (Cause code D). Previous LERs on similar events: None stated in narrative, so no SIMILAR_TO edge or stub LER node emitted. HPCI and RCIC are explicitly stated to have actuated as designed to maintain level during the event, satisfying the BACKED_UP_BY evidentiary requirement (operable during the event, not merely design-context)."
+}

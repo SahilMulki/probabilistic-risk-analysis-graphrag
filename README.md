@@ -1,6 +1,6 @@
 # Probabilistic Risk Analysis GraphRAG
 
-**All federal nuclear-incident reports from 2020 to 2026, restructured into a knowledge graph (12,474 nodes, 17,372 links): trace a plant failure's causal chain, rank the systems that carry the most risk, and answer challenging cross-document questions**
+**All federal nuclear-incident reports from 2020 to 2026, restructured into a knowledge graph (12,474 nodes, 17,431 links): trace a plant failure's causal chain, rank the systems that carry the most risk, and answer challenging cross-document questions**
 
 ### ▶︎ [**Try the live demo**](https://sahilmulki.github.io/probabilistic-risk-analysis-graphrag/) &nbsp;·&nbsp; runs in your browser, nothing to install
 
@@ -106,7 +106,7 @@ A four-stage pipeline turns raw reports into answerable structure:
     │  Entities are normalized to the NRC's own equipment codes so the same system across three
     │  reports becomes one shared node, then loaded into Neo4j as one connected graph.
     ▼
- Knowledge graph — 12,474 nodes / 17,372 edges, one connected component, 0 orphans
+ Knowledge graph — 12,474 nodes / 17,431 edges, one connected component, 0 orphans
     │
     ▼  RETRIEVAL + ANSWER
     │  An LLM router maps a question to one of ~11 intents + vetted query templates (no free-form
@@ -141,14 +141,20 @@ runs entirely in the browser from a bundle of _real, captured_ pipeline output. 
 python -m http.server -d web 8000     # then open http://localhost:8000
 ```
 
-**Live mode — ask your own questions.** Runs both retrievers and the answerer against a live database.
-Needs [Neo4j](https://neo4j.com/download/) running and an Anthropic API key in a `.env` file
-(~$0.02–0.05 per question).
+**Live mode — ask your own questions.** Runs both retrievers and the answerer against a live graph.
+Needs [Docker](https://docs.docker.com/get-docker/) (for Neo4j) and an Anthropic API key. Copy
+`.env.example` to `.env` and fill it in (~$0.02–0.05 per question).
 
 ```bash
 pip install -e .                      # installs the `pragraph` package + pinned deps
+docker compose up -d                  # start Neo4j (pinned version, configured from .env)
+python -m pragraph.load_graph         # rebuild the graph from the committed records — $0, no API calls
 uvicorn pragraph.app:app              # serves the page + the /ask API at http://localhost:8000
 ```
+
+The graph (**12,474 nodes / 17,431 edges**) rebuilds deterministically from the **833 extracted
+records committed under `out/`** — the one-time LLM extraction is already captured, so standing up
+Live mode costs nothing and needs no ADAMS key. (Only re-running the extraction from raw filings does.)
 
 The **[demo guide](docs/DEMO_GUIDE.md)** lists every kind of question you can
 ask in Live mode, with copy-paste examples and a plain-language vocabulary of real plants, systems, and
@@ -158,7 +164,8 @@ causes to drop into your own questions.
 <summary>Rebuild the graph and re-run the evaluation from scratch</summary>
 
 ```bash
-python -m pragraph.pipeline           # extract + score reports  → out/
+python -m pragraph.pipeline           # RE-extract + score reports → out/  (paid: LLM calls)
+docker compose up -d                  # start Neo4j
 python -m pragraph.load_graph         # load into Neo4j (idempotent)
 python -m pragraph.ask --golden       # run the full graded question suite
 python -m pragraph.precompute         # rebuild the demo bundle from real output, and prove demo ≡ live
@@ -171,7 +178,7 @@ python -m pragraph.precompute         # rebuild the demo bundle from real output
 ## Honest scope
 
 The risk figures are observed reportable-event frequencies, not
-certified PRA failure rates. It is **not affiliated with or endorsed by the NRC.**
+certified PRA failure rates. This project is not affiliated with or endorsed by the NRC.
 
 ---
 

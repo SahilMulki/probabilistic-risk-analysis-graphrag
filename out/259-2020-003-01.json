@@ -1,0 +1,513 @@
+{
+  "ler_number": "259-2020-003-01",
+  "identity": {
+    "accession_number": "ML21092A022",
+    "docket": "05000259",
+    "plant_name": "Browns Ferry",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2020-12-04",
+    "report_date": "2021-04-02",
+    "operating_mode": "1",
+    "power_level": 85,
+    "discovery_context": "inspection",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "– Main Steam Relief Valves Lift"
+  },
+  "reporting_basis": {
+    "reported_under": [],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "B",
+      "system": "SB",
+      "component": "RV",
+      "manufacturer": "T020",
+      "reportable": "N"
+    }
+  ],
+  "cause": {
+    "proximate_text": "MSRV BFN-1-PCV-001-0041 failed above its setpoint band due to valve disc corrosion bonding to the valve seat; MSRVs BFN-1-PCV-001-0004, -0019, and -0022 failed below their setpoints due to relaxation of the setpoint spring over time",
+    "cause_code": "B",
+    "category": "Design/Manufacturing/Installation",
+    "theme": "MSRV pilot valve setpoint drift (corrosion bonding / spring relaxation)",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 259-2020-003-01",
+      "properties": {},
+      "type": "LER",
+      "key": "259-2020-003-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:259-2020-003-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Browns Ferry Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000259",
+      "match_key": "Unit:05000259"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Manufacturing/Installation (B)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "B",
+      "category": "Design/Manufacturing/Installation",
+      "theme": "MSRV pilot valve setpoint drift (corrosion bonding / spring relaxation)",
+      "proximate_text": "MSRV BFN-1-PCV-001-0041 failed above its setpoint band due to valve disc corrosion bonding to the valve seat; MSRVs BFN-1-PCV-001-0004, -0019, and -0022 failed below their setpoints due to relaxation of the setpoint spring over time",
+      "provisional": false,
+      "match_key": "Cause:Design/Manufacturing/Installation"
+    },
+    {
+      "id": "sys_sb",
+      "display_name": "Safety/Relief Valve System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "primary system involved",
+      "match_key": "System:SB"
+    },
+    {
+      "id": "sys_actuation_logic",
+      "display_name": "MSRV Actuation Logic",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "defense-in-depth backup; available throughout event",
+      "match_key": "System:msrv-actuation-logic"
+    },
+    {
+      "id": "c_rv0004",
+      "display_name": "MSRV BFN-1-PCV-001-0004",
+      "properties": {
+        "setpoint_psig": 1155,
+        "test_result_psig": 1109,
+        "difference_percent": -4.0
+      },
+      "type": "Component",
+      "eiis_code": "RV",
+      "identifier": "BFN-1-PCV-001-0004",
+      "model": "7567F",
+      "manufacturer_code": "T020",
+      "inferred_code": false,
+      "match_key": "Component:RV|BFN-1-PCV-001-0004"
+    },
+    {
+      "id": "c_rv0019",
+      "display_name": "MSRV BFN-1-PCV-001-0019",
+      "properties": {
+        "setpoint_psig": 1135,
+        "test_result_psig": 1099,
+        "difference_percent": -3.2
+      },
+      "type": "Component",
+      "eiis_code": "RV",
+      "identifier": "BFN-1-PCV-001-0019",
+      "model": "7567F",
+      "manufacturer_code": "T020",
+      "inferred_code": false,
+      "match_key": "Component:RV|BFN-1-PCV-001-0019"
+    },
+    {
+      "id": "c_rv0022",
+      "display_name": "MSRV BFN-1-PCV-001-0022",
+      "properties": {
+        "setpoint_psig": 1145,
+        "test_result_psig": 1096,
+        "difference_percent": -4.3
+      },
+      "type": "Component",
+      "eiis_code": "RV",
+      "identifier": "BFN-1-PCV-001-0022",
+      "model": "7567F",
+      "manufacturer_code": "T020",
+      "inferred_code": false,
+      "match_key": "Component:RV|BFN-1-PCV-001-0022"
+    },
+    {
+      "id": "c_rv0041",
+      "display_name": "MSRV BFN-1-PCV-001-0041",
+      "properties": {
+        "setpoint_psig": 1155,
+        "test_result_psig": 1248,
+        "difference_percent": 8.1
+      },
+      "type": "Component",
+      "eiis_code": "RV",
+      "identifier": "BFN-1-PCV-001-0041",
+      "model": "7567F",
+      "manufacturer_code": "T020",
+      "inferred_code": false,
+      "match_key": "Component:RV|BFN-1-PCV-001-0041"
+    },
+    {
+      "id": "fm_corrosion",
+      "display_name": "Valve disc corrosion bonding to seat (0041)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Corrosion bonding caused pilot valve to initially lift high, above setpoint band",
+      "match_key": "FailureMode:valve-disc-corrosion-bonding-to-seat-0041"
+    },
+    {
+      "id": "fm_spring",
+      "display_name": "Setpoint spring relaxation over time (0004, 0019, 0022)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Relaxation of setpoint spring caused valves to lift below their setpoints",
+      "match_key": "FailureMode:setpoint-spring-relaxation-over-time-0004-0019-0022"
+    },
+    {
+      "id": "fm_out_of_band",
+      "display_name": "Four MSRVs outside +/-3% setpoint band, inoperable",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "As-found testing found four MSRV pilot valves outside the +/-3 percent operability band required by TS 3.4.3.1",
+      "match_key": "FailureMode:four-msrvs-outside-3-setpoint-band-inoperable"
+    },
+    {
+      "id": "cons_inoperable",
+      "display_name": "MSRVs inoperable for indeterminate period / TS 3.4.3 and 3.0.4 violation",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2018-11-20",
+      "end": "2020-10-03",
+      "duration": "indeterminate, spanning entire fuel cycle 13",
+      "tz": null,
+      "match_key": "Consequence:msrvs-inoperable-for-indeterminate-period-ts-3-4-3-and-3-0-4-violation"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace all 13 MSRV pilot valves with refurbished valves during U1R13",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-all-13-msrv-pilot-valves-with-refurbished-valves-during-u1r13"
+    },
+    {
+      "id": "ca_pems",
+      "display_name": "Adopt PEMS platinum deposition method for pilot disc coatings",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:adopt-pems-platinum-deposition-method-for-pilot-disc-coatings"
+    },
+    {
+      "id": "ca_procedure",
+      "display_name": "Revise MCI-0-001-VLV002 procedure to add setpoint spring acceptance criteria",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-mci-0-001-vlv002-procedure-to-add-setpoint-spring-acceptance-criteria"
+    },
+    {
+      "id": "mfr_targetrock",
+      "display_name": "Target Rock Corporation",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "T020",
+      "match_key": "Manufacturer:T020"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts343",
+      "display_name": "TS 3.4.3 Safety/Relief Valves",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-3-4-3-safety-relief-valves"
+    },
+    {
+      "id": "rr_ts304",
+      "display_name": "TS LCO 3.0.4",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-lco-3-0-4"
+    },
+    {
+      "id": "ler_stub_296_2020_002",
+      "display_name": "LER 296-2020-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "296-2020-002-00",
+      "stub": true,
+      "title": "MSRV lift settings outside TS required setpoints",
+      "plant": "Browns Ferry Unit 3",
+      "match_key": "LER:296-2020-002-00"
+    },
+    {
+      "id": "ler_stub_260_2019_002",
+      "display_name": "LER 260-2019-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "260-2019-002-00",
+      "stub": true,
+      "title": "MSRV lift settings outside TS required setpoints",
+      "plant": "Browns Ferry Unit 2",
+      "match_key": "LER:260-2019-002-00"
+    },
+    {
+      "id": "ler_stub_259_2018_007",
+      "display_name": "LER 259-2018-007-00",
+      "properties": {},
+      "type": "LER",
+      "key": "259-2018-007-00",
+      "stub": true,
+      "title": "MSRV lift settings outside TS required setpoints",
+      "plant": "Browns Ferry Unit 1",
+      "match_key": "LER:259-2018-007-00"
+    },
+    {
+      "id": "ler_stub_296_2018_004",
+      "display_name": "LER 296-2018-004-00",
+      "properties": {},
+      "type": "LER",
+      "key": "296-2018-004-00",
+      "stub": true,
+      "title": "MSRV lift settings outside TS required setpoints",
+      "plant": "Browns Ferry Unit 3",
+      "match_key": "LER:296-2018-004-00"
+    },
+    {
+      "id": "ler_stub_260_2017_004",
+      "display_name": "LER 260-2017-004-00",
+      "properties": {},
+      "type": "LER",
+      "key": "260-2017-004-00",
+      "stub": true,
+      "title": "MSRV lift settings outside TS required setpoints",
+      "plant": "Browns Ferry Unit 2",
+      "match_key": "LER:260-2017-004-00"
+    },
+    {
+      "id": "ler_stub_259_2016_005",
+      "display_name": "LER 259-2016-005-00",
+      "properties": {},
+      "type": "LER",
+      "key": "259-2016-005-00",
+      "stub": true,
+      "title": "MSRV lift settings outside TS required setpoints",
+      "plant": "Browns Ferry Unit 1",
+      "match_key": "LER:259-2016-005-00"
+    },
+    {
+      "id": "ler_stub_296_2016_004",
+      "display_name": "LER 296-2016-004-00",
+      "properties": {},
+      "type": "LER",
+      "key": "296-2016-004-00",
+      "stub": true,
+      "title": "MSRV lift settings outside TS required setpoints",
+      "plant": "Browns Ferry Unit 3",
+      "match_key": "LER:296-2016-004-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_actuation_logic",
+      "evidence": null
+    },
+    {
+      "source": "c_rv0004",
+      "relation": "PART_OF",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "c_rv0019",
+      "relation": "PART_OF",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "c_rv0022",
+      "relation": "PART_OF",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "c_rv0041",
+      "relation": "PART_OF",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "c_rv0004",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_targetrock",
+      "evidence": null
+    },
+    {
+      "source": "c_rv0019",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_targetrock",
+      "evidence": null
+    },
+    {
+      "source": "c_rv0022",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_targetrock",
+      "evidence": null
+    },
+    {
+      "source": "c_rv0041",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_targetrock",
+      "evidence": null
+    },
+    {
+      "source": "fm_corrosion",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_spring",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_corrosion",
+      "relation": "LEADS_TO",
+      "target": "fm_out_of_band",
+      "evidence": null
+    },
+    {
+      "source": "fm_spring",
+      "relation": "LEADS_TO",
+      "target": "fm_out_of_band",
+      "evidence": null
+    },
+    {
+      "source": "fm_out_of_band",
+      "relation": "LEADS_TO",
+      "target": "cons_inoperable",
+      "evidence": null
+    },
+    {
+      "source": "cons_inoperable",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_actuation_logic",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_pems",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procedure",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_stub_296_2020_002",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_stub_260_2019_002",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_stub_259_2018_007",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_stub_296_2018_004",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_stub_260_2017_004",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_stub_259_2016_005",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_stub_296_2016_004",
+      "evidence": null
+    }
+  ],
+  "chain": "corrosion bonding (0041) / setpoint spring relaxation (0004, 0019, 0022) [cause B] -> four MSRV pilot valves outside +/-3% band -> MSRVs inoperable for indeterminate period spanning fuel cycle 13, TS 3.4.3/3.0.4 violation [backup: MSRV Actuation Logic electrical actuation available]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Two distinct failure mechanisms modeled as separate FailureMode nodes per rule 5 (corrosion bonding vs. spring relaxation), both converging on the same 'outside setpoint band' failure state and consequence. MSRV Actuation Logic is explicitly stated as available/operable throughout the event as electrical defense-in-depth, so modeled as BACKED_UP_BY per rule 6. No SSC inoperability contributed to the event per Section II.B; the four MSRV pilot valves themselves are the failed components. Seven previous similar LERs modeled as stub nodes with keys exactly as stated in narrative (unit-year-sequence-revision format)."
+}

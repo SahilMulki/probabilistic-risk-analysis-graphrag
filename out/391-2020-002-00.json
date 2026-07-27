@@ -1,0 +1,337 @@
+{
+  "ler_number": "391-2020-002-00",
+  "identity": {
+    "accession_number": "ML20352A005",
+    "docket": "05000391",
+    "plant_name": "Watts Bar",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2020-11-02",
+    "report_date": "2020-12-17",
+    "operating_mode": "0",
+    "power_level": 0,
+    "discovery_context": "inspection",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Two Pressurizer Safety Valves Outside of Technical Specification Limits Due to Set Point Drift"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "X",
+      "system": "AB",
+      "component": "RV",
+      "manufacturer": "C710",
+      "reportable": "Y"
+    },
+    {
+      "cause": "X",
+      "system": "AB",
+      "component": "RV",
+      "manufacturer": "C710",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "Set point drift of the PSVs was determined to be the most likely cause of these failures.",
+    "cause_code": "X",
+    "category": "Other",
+    "theme": "PSV set-point drift",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 391-2020-002-00",
+      "properties": {
+        "match_key": "LER:391-2020-002-00"
+      },
+      "type": "LER",
+      "key": "391-2020-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:391-2020-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Watts Bar Unit 2",
+      "properties": {
+        "match_key": "Unit:05000391",
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000391",
+      "match_key": "Unit:05000391"
+    },
+    {
+      "id": "cause",
+      "display_name": "Other (X)",
+      "properties": {
+        "match_key": "Cause:Other"
+      },
+      "type": "Cause",
+      "cause_code": "X",
+      "category": "Other",
+      "theme": "PSV set-point drift",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Other"
+    },
+    {
+      "id": "sys_ab",
+      "display_name": "Reactor Coolant System",
+      "properties": {
+        "match_key": "System:AB"
+      },
+      "type": "System",
+      "eiis_code": "AB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:AB"
+    },
+    {
+      "id": "c_psv563",
+      "display_name": "Pressurizer Safety Valve 2-RFV-68-563",
+      "properties": {
+        "match_key": "Component:RV|2-RFV-68-563"
+      },
+      "type": "Component",
+      "eiis_code": "RV",
+      "identifier": "2-RFV-68-563",
+      "model": "HB-BP-86",
+      "manufacturer_code": "C710",
+      "inferred_code": false,
+      "match_key": "Component:RV|2-RFV-68-563"
+    },
+    {
+      "id": "c_psv565",
+      "display_name": "Pressurizer Safety Valve 2-RFV-68-565",
+      "properties": {
+        "match_key": "Component:RV|2-RFV-68-565"
+      },
+      "type": "Component",
+      "eiis_code": "RV",
+      "identifier": "2-RFV-68-565",
+      "model": "HB-BP-86",
+      "manufacturer_code": "C710",
+      "inferred_code": false,
+      "match_key": "Component:RV|2-RFV-68-565"
+    },
+    {
+      "id": "fm_563",
+      "display_name": "PSV 2-RFV-68-563 set point drifted low",
+      "properties": {
+        "match_key": "FailureMode:psv-563-set-point-drifted-low"
+      },
+      "type": "FailureMode",
+      "description": "As-found lift pressure 2380 psig vs set pressure 2485 psig, below TS allowable limit of 2410 psig.",
+      "match_key": "FailureMode:psv-2-rfv-68-563-set-point-drifted-low"
+    },
+    {
+      "id": "fm_565",
+      "display_name": "PSV 2-RFV-68-565 set point drifted low",
+      "properties": {
+        "match_key": "FailureMode:psv-565-set-point-drifted-low"
+      },
+      "type": "FailureMode",
+      "description": "As-found lift pressure 2398 psig vs set pressure 2485 psig, below TS allowable limit of 2410 psig.",
+      "match_key": "FailureMode:psv-2-rfv-68-565-set-point-drifted-low"
+    },
+    {
+      "id": "cons_ts",
+      "display_name": "Two PSVs found outside TS 3.4.10 allowable lift pressure limits (condition prohibited by TS)",
+      "properties": {
+        "match_key": "Consequence:two-psvs-outside-ts-limits"
+      },
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:two-psvs-found-outside-ts-3-4-10-allowable-lift-pressure-limits-condition-prohibited-by-ts"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace PSVs 2-RFV-68-563 and 2-RFV-68-565 with refurbished valves certified within +/-1% of set point",
+      "properties": {
+        "match_key": "CorrectiveAction:replace-psvs-refurbished"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-psvs-2-rfv-68-563-and-2-rfv-68-565-with-refurbished-valves-certified-within-1-of-set-point"
+    },
+    {
+      "id": "ca_sample",
+      "display_name": "Perform IST sample expansion: test and replace third PSV 2-RFV-68-564",
+      "properties": {
+        "match_key": "CorrectiveAction:ist-sample-expansion-psv-564"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:perform-ist-sample-expansion-test-and-replace-third-psv-2-rfv-68-564"
+    },
+    {
+      "id": "ca_vendor",
+      "display_name": "Document vendor disassembly/inspection results and causes; revise corrective action plan if necessary",
+      "properties": {
+        "match_key": "CorrectiveAction:vendor-inspection-documentation"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:document-vendor-disassembly-inspection-results-and-causes-revise-corrective-action-plan-if-necessary"
+    },
+    {
+      "id": "mfr_crosby",
+      "display_name": "Crosby Valve & Gage Co",
+      "properties": {
+        "match_key": "Manufacturer:C710"
+      },
+      "type": "Manufacturer",
+      "code": "C710",
+      "match_key": "Manufacturer:C710"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts3410",
+      "display_name": "Technical Specification 3.4.10 (Pressurizer Safety Valves)",
+      "properties": {
+        "match_key": "RegulatoryReference:ts-3-4-10"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-3-4-10-pressurizer-safety-valves"
+    },
+    {
+      "id": "rr_ufsar",
+      "display_name": "UFSAR Section 15.2.12",
+      "properties": {
+        "match_key": "RegulatoryReference:ufsar-15-2-12"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:ufsar-section-15-2-12"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts3410",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ab",
+      "evidence": null
+    },
+    {
+      "source": "c_psv563",
+      "relation": "PART_OF",
+      "target": "sys_ab",
+      "evidence": null
+    },
+    {
+      "source": "c_psv565",
+      "relation": "PART_OF",
+      "target": "sys_ab",
+      "evidence": null
+    },
+    {
+      "source": "c_psv563",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_crosby",
+      "evidence": null
+    },
+    {
+      "source": "c_psv565",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_crosby",
+      "evidence": null
+    },
+    {
+      "source": "fm_563",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_565",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_563",
+      "relation": "LEADS_TO",
+      "target": "cons_ts",
+      "evidence": null
+    },
+    {
+      "source": "fm_565",
+      "relation": "LEADS_TO",
+      "target": "cons_ts",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_sample",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_vendor",
+      "evidence": null
+    }
+  ],
+  "chain": "set point drift [cause X] -> PSV 2-RFV-68-563 lift pressure low (2380 psig) -> outside TS 3.4.10 limits; set point drift [cause X] -> PSV 2-RFV-68-565 lift pressure low (2398 psig) -> outside TS 3.4.10 limits [no operable backup applicable; unit defueled]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4"
+  ],
+  "notes": "Unit defueled at 0% RTP during refueling outage; no ECCS/backup system applicable to this discovery-based (IST) condition. Both PSVs failed the same way (low lift pressure due to set point drift) and are modeled as separate FailureMode nodes per rule 5. Third PSV (2-RFV-68-564) tested satisfactorily as part of sample expansion and is not a failure node, only referenced in corrective action. No previous similar events section content was provided (blank in narrative), so no stub LER/SIMILAR_TO edge emitted."
+}

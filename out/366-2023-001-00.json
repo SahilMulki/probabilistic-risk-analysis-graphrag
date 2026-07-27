@@ -1,0 +1,398 @@
+{
+  "ler_number": "366-2023-001-00",
+  "identity": {
+    "accession_number": "ML23095A088",
+    "docket": "05000366",
+    "plant_name": "Hatch",
+    "unit": 2,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2023-02-07",
+    "report_date": "2023-04-05",
+    "operating_mode": null,
+    "power_level": 0,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2023-001-00 for Edwin I. Hatch Nuclear Plant, Primary Containment Penetration Exceeded Maximum Allowable Primary Containment Leakage Rate (La)"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(ii)(A)",
+      "10 CFR 50.73(a)(2)(v)(C)",
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "B",
+      "system": "BD",
+      "component": "ISV",
+      "manufacturer": "F130",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "These LLRT failures were caused by using a vendor supplied T-ring that was incorrectly manufactured, leading to the T-ring rotating away from the valve disc when in operation.",
+    "cause_code": "B",
+    "category": "Design/Manufacturing/Installation",
+    "theme": "Vendor manufacturing defect in valve T-ring seal",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 366-2023-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "366-2023-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:366-2023-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Hatch Unit 2",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000366",
+      "match_key": "Unit:05000366"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Manufacturing/Installation (B)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "B",
+      "category": "Design/Manufacturing/Installation",
+      "theme": "Vendor manufacturing defect in valve T-ring seal",
+      "proximate_text": "These LLRT failures were caused by using a vendor supplied T-ring that was incorrectly manufactured, leading to the T-ring rotating away from the valve disc when in operation.",
+      "provisional": false,
+      "match_key": "Cause:Design/Manufacturing/Installation"
+    },
+    {
+      "id": "sys_bd",
+      "display_name": "Primary Containment System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BD",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BD"
+    },
+    {
+      "id": "sys_sgt",
+      "display_name": "Standby Gas Treatment System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BH",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; filters/releases leakage during accident conditions",
+      "match_key": "System:BH"
+    },
+    {
+      "id": "c_pciv1",
+      "display_name": "PCIV 2T48F319 (Fisher Series 9200 Butterfly Valve)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": "2T48F319",
+      "model": "Fisher Series 9200 Butterfly Valve",
+      "manufacturer_code": "F130",
+      "inferred_code": false,
+      "match_key": "Component:ISV|2T48F319"
+    },
+    {
+      "id": "c_pciv2",
+      "display_name": "PCIV 2T48F320 (Fisher Series 9200 Butterfly Valve)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": "2T48F320",
+      "model": "Fisher Series 9200 Butterfly Valve",
+      "manufacturer_code": "F130",
+      "inferred_code": false,
+      "match_key": "Component:ISV|2T48F320"
+    },
+    {
+      "id": "c_tring",
+      "display_name": "T-ring seal",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:t-ring-seal"
+    },
+    {
+      "id": "fm_tring_defect",
+      "display_name": "T-ring incorrectly manufactured",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Vendor-supplied T-ring had a manufacturing defect.",
+      "match_key": "FailureMode:t-ring-incorrectly-manufactured"
+    },
+    {
+      "id": "fm_tring_rotate",
+      "display_name": "T-ring rotated away from valve disc during operation",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Defective T-ring rotated away from the valve disc, degrading the seal.",
+      "match_key": "FailureMode:t-ring-rotated-away-from-valve-disc-during-operation"
+    },
+    {
+      "id": "fm_llrt_fail",
+      "display_name": "Two PCIVs in single penetration fail LLRT requirements",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Both PCIVs in the affected penetration failed Local Leak Rate Test requirements.",
+      "match_key": "FailureMode:two-pcivs-in-single-penetration-fail-llrt-requirements"
+    },
+    {
+      "id": "cons_leakage",
+      "display_name": "Primary containment leakage exceeded La; ILRT failure; loss of containment integrity",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2023-02-07T17:38",
+      "end": null,
+      "duration": null,
+      "tz": "EST",
+      "match_key": "Consequence:primary-containment-leakage-exceeded-la-ilrt-failure-loss-of-containment-integrity"
+    },
+    {
+      "id": "ca_tring_replace",
+      "display_name": "Obtain and install correctly manufactured T-rings in affected valves",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:obtain-and-install-correctly-manufactured-t-rings-in-affected-valves"
+    },
+    {
+      "id": "ca_llrt_retest",
+      "display_name": "Perform satisfactory LLRTs and restore primary containment to operable status",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:perform-satisfactory-llrts-and-restore-primary-containment-to-operable-status"
+    },
+    {
+      "id": "mfr_fisher",
+      "display_name": "Fisher Controls Company",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "F130",
+      "match_key": "Manufacturer:F130"
+    },
+    {
+      "id": "rr_5073ii",
+      "display_name": "10 CFR 50.73(a)(2)(ii)(A)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-ii-a"
+    },
+    {
+      "id": "rr_5073v",
+      "display_name": "10 CFR 50.73(a)(2)(v)(C)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-c"
+    },
+    {
+      "id": "rr_5073i",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_appj",
+      "display_name": "10 CFR 50 Appendix J",
+      "properties": {
+        "type": "analysis-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-appendix-j"
+    },
+    {
+      "id": "rr_nei",
+      "display_name": "NEI 99-02",
+      "properties": {
+        "type": "standard/guidance"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:nei-99-02"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "LER 2020-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "2020-001-00",
+      "stub": true,
+      "title": "Primary containment leakage rate (La) exceeded under postulated accident conditions due to T-ring set screws backing out",
+      "plant": "Edwin I. Hatch Nuclear Plant Unit 2",
+      "match_key": "LER:2020-001-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073ii",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073v",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073i",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bd",
+      "evidence": null
+    },
+    {
+      "source": "c_pciv1",
+      "relation": "PART_OF",
+      "target": "sys_bd",
+      "evidence": null
+    },
+    {
+      "source": "c_pciv2",
+      "relation": "PART_OF",
+      "target": "sys_bd",
+      "evidence": null
+    },
+    {
+      "source": "fm_tring_defect",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_tring_defect",
+      "relation": "LEADS_TO",
+      "target": "fm_tring_rotate",
+      "evidence": null
+    },
+    {
+      "source": "fm_tring_rotate",
+      "relation": "LEADS_TO",
+      "target": "fm_llrt_fail",
+      "evidence": null
+    },
+    {
+      "source": "fm_llrt_fail",
+      "relation": "LEADS_TO",
+      "target": "cons_leakage",
+      "evidence": null
+    },
+    {
+      "source": "cons_leakage",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_sgt",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_tring_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_llrt_retest",
+      "evidence": null
+    },
+    {
+      "source": "c_pciv1",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_fisher",
+      "evidence": null
+    },
+    {
+      "source": "c_pciv2",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_fisher",
+      "evidence": null
+    },
+    {
+      "source": "c_tring",
+      "relation": "PART_OF",
+      "target": "c_pciv1",
+      "evidence": null
+    },
+    {
+      "source": "c_tring",
+      "relation": "PART_OF",
+      "target": "c_pciv2",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_appj",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_nei",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    }
+  ],
+  "chain": "vendor T-ring manufacturing defect [cause B] -> T-ring rotates away from valve disc -> two PCIVs in single penetration fail LLRT -> primary containment leakage exceeds La / ILRT failure [backup: Standby Gas Treatment filtration path]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Distinct from the 2020 similar event (set screws backing out) — current failure is a T-ring manufacturing defect causing rotation, not set-screw loosening; corrective actions from 2020 event were confirmed effective and not implicated here. SGT is modeled as backup because narrative states leakage would be filtered/released through it during an actual event (design-basis mitigation path stated as available), though this is a hypothetical-consequence statement rather than an explicit 'was operable' statement — included cautiously given explicit mention of the pathway."
+}

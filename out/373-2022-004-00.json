@@ -1,0 +1,394 @@
+{
+  "ler_number": "373-2022-004-00",
+  "identity": {
+    "accession_number": "ML22362A015",
+    "docket": "05000373",
+    "plant_name": "La Salle",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2022-11-04",
+    "report_date": "2022-12-28",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LaSalle County Station, Units 1 and 2 Renewed Facility Operating License No. NPF-11 and NPF-18 NRC Docket Nos. 50-373 and 50-374"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)(D)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The cause of the A VC Compressor trip was a leak on an oil pressure switch, resulting in a trip on low oil pressure. The cause of the B VE compressor trip on high oil temperature was liquid refrigerant slugging. This resulted in oil migrating into the compressor, causing the compressor to trip.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "compressor component failures (oil pressure switch leak; refrigerant slugging)",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 373-2022-004-00",
+      "properties": {},
+      "type": "LER",
+      "key": "373-2022-004-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:373-2022-004-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "La Salle Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000373",
+      "match_key": "Unit:05000373"
+    },
+    {
+      "id": "cause",
+      "display_name": "TBD (provisional)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "compressor component failures (oil pressure switch leak; refrigerant slugging)",
+      "proximate_text": "The cause of the A VC Compressor trip was a leak on an oil pressure switch, resulting in a trip on low oil pressure. The cause of the B VE compressor trip on high oil temperature was liquid refrigerant slugging. This resulted in oil migrating into the compressor, causing the compressor to trip.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_vc",
+      "display_name": "Main Control Room Area Ventilation",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "VC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:VC"
+    },
+    {
+      "id": "sys_ve",
+      "display_name": "Auxiliary Equipment Room Ventilation",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "VE",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:VE"
+    },
+    {
+      "id": "c_vc_comp_a",
+      "display_name": "A Control Room HVAC Refrigeration Compressor",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "0VC0SCA",
+      "model": "5H80",
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:a-control-room-hvac-refrigeration-compressor"
+    },
+    {
+      "id": "c_ve_comp_b",
+      "display_name": "B Aux Electric Equipment Room HVAC Refrigeration Compressor",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "0VE04CB",
+      "model": "5H86",
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:b-aux-electric-equipment-room-hvac-refrigeration-compressor"
+    },
+    {
+      "id": "c_oil_switch",
+      "display_name": "Oil pressure switch sensing lines (A VC compressor)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:oil-pressure-switch-sensing-lines-a-vc-compressor"
+    },
+    {
+      "id": "fm_oil_leak",
+      "display_name": "Oil pressure switch leak",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "A leak on the oil pressure switch caused a low oil pressure trip on the A VC compressor.",
+      "match_key": "FailureMode:oil-pressure-switch-leak"
+    },
+    {
+      "id": "fm_vc_trip",
+      "display_name": "A VC compressor trip on low oil pressure",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "A Main Control Room Ventilation (VC) Compressor tripped on low oil pressure at 2308 CDT on 11/3/22.",
+      "match_key": "FailureMode:a-vc-compressor-trip-on-low-oil-pressure"
+    },
+    {
+      "id": "fm_a_inop",
+      "display_name": "A VC train declared inoperable",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Following the compressor trip, the A train of VC was declared inoperable and both units entered TS 3.7.5 RA A.1.",
+      "match_key": "FailureMode:a-vc-train-declared-inoperable"
+    },
+    {
+      "id": "fm_refrig_slug",
+      "display_name": "Liquid refrigerant slugging in B VE compressor",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Liquid refrigerant slugging caused oil to migrate into the B VE compressor.",
+      "match_key": "FailureMode:liquid-refrigerant-slugging-in-b-ve-compressor"
+    },
+    {
+      "id": "fm_ve_trip",
+      "display_name": "B VE compressor trip on high oil temperature",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The B VE compressor tripped on high oil temperature at 0006 CDT on 11/4/22, following an emergent swap to the B VC/VE train after the A VC trip.",
+      "match_key": "FailureMode:b-ve-compressor-trip-on-high-oil-temperature"
+    },
+    {
+      "id": "fm_b_inop",
+      "display_name": "B VE train declared inoperable",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The B VE train was declared inoperable, resulting in both A and B trains being simultaneously inoperable.",
+      "match_key": "FailureMode:b-ve-train-declared-inoperable"
+    },
+    {
+      "id": "cons_lossoffunction",
+      "display_name": "Simultaneous inoperability of A and B VC/VE trains (condition that could have prevented fulfillment of safety function)",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2022-11-04T00:06",
+      "end": "2022-11-04T03:57",
+      "duration": "approximately 4 hours",
+      "tz": "CDT",
+      "match_key": "Consequence:simultaneous-inoperability-of-a-and-b-vc-ve-trains-condition-that-could-have-prevented-fulfillment-of-safety-function"
+    },
+    {
+      "id": "ca_add_oil",
+      "display_name": "Add oil to B VE compressor and restart compressor",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:add-oil-to-b-ve-compressor-and-restart-compressor"
+    },
+    {
+      "id": "ca_repair_switch",
+      "display_name": "Repair A VC compressor oil pressure switch sensing lines",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:repair-a-vc-compressor-oil-pressure-switch-sensing-lines"
+    },
+    {
+      "id": "mfr_carrier",
+      "display_name": "Carrier Corp.",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": null,
+      "match_key": "Manufacturer:carrier-corp"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "rr_5072",
+      "display_name": "10 CFR 50.72(b)(3)(v)(D)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-3-v-d"
+    },
+    {
+      "id": "ler_prev_003",
+      "display_name": "LER 373-2022-003-00",
+      "properties": {},
+      "type": "LER",
+      "key": "373-2022-003-00",
+      "stub": true,
+      "title": "Simultaneous Inoperability of A and B VC/VE Trains Due to Inadequate Breaker Settings",
+      "plant": "LaSalle County Station Unit 1/2",
+      "match_key": "LER:373-2022-003-00"
+    },
+    {
+      "id": "ler_prev_2014",
+      "display_name": "LER 373-2014-004-00",
+      "properties": {},
+      "type": "LER",
+      "key": "373-2014-004-00",
+      "stub": true,
+      "title": "Simultaneous Inoperability of A and B VC/VE Trains Due to Shorted Wire on Liquid Line Solenoid Valve",
+      "plant": "LaSalle County Station Unit 1/2",
+      "match_key": "LER:373-2014-004-00"
+    },
+    {
+      "id": "ler_prev_2013",
+      "display_name": "LER 373-2013-008-00",
+      "properties": {},
+      "type": "LER",
+      "key": "373-2013-008-00",
+      "stub": true,
+      "title": "Simultaneous Inoperability of A and B VC/VE Trains Due to Fan Motor Winding Failure",
+      "plant": "LaSalle County Station Unit 1/2",
+      "match_key": "LER:373-2013-008-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_vc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ve",
+      "evidence": null
+    },
+    {
+      "source": "c_vc_comp_a",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_carrier",
+      "evidence": null
+    },
+    {
+      "source": "c_ve_comp_b",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_carrier",
+      "evidence": null
+    },
+    {
+      "source": "fm_oil_leak",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_oil_leak",
+      "relation": "LEADS_TO",
+      "target": "fm_vc_trip",
+      "evidence": null
+    },
+    {
+      "source": "fm_vc_trip",
+      "relation": "LEADS_TO",
+      "target": "fm_a_inop",
+      "evidence": null
+    },
+    {
+      "source": "fm_a_inop",
+      "relation": "LEADS_TO",
+      "target": "fm_ve_trip",
+      "evidence": null
+    },
+    {
+      "source": "fm_refrig_slug",
+      "relation": "LEADS_TO",
+      "target": "fm_ve_trip",
+      "evidence": null
+    },
+    {
+      "source": "fm_ve_trip",
+      "relation": "LEADS_TO",
+      "target": "fm_b_inop",
+      "evidence": null
+    },
+    {
+      "source": "fm_a_inop",
+      "relation": "LEADS_TO",
+      "target": "cons_lossoffunction",
+      "evidence": null
+    },
+    {
+      "source": "fm_b_inop",
+      "relation": "LEADS_TO",
+      "target": "cons_lossoffunction",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_add_oil",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_repair_switch",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev_003",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev_2014",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev_2013",
+      "evidence": null
+    }
+  ],
+  "chain": "oil pressure switch leak [cause TBD] -> A VC compressor trips on low oil pressure -> A VC train declared inoperable -> emergent swap to B train -> liquid refrigerant slugging -> B VE compressor trips on high oil temperature -> B VE train declared inoperable -> both A and B trains simultaneously inoperable (~4 hrs) [restored via oil refill/switch repair]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Form-366 fields did not include plant name, unit, reactor type, or NSS vendor; these were populated from the narrative (LaSalle County Station, Unit 1, GE BWR). Cause code remains TBD/provisional per FORM-366; narrative gives two distinct proximate causes (oil pressure switch leak on A VC compressor; refrigerant slugging on B VE compressor) modeled as separate origin FailureModes both CAUSED_BY the single provisional Cause node. No explicit backup system (e.g., alternate ventilation) stated as operable during the ~4-hour dual-inoperability window, so no BACKED_UP_BY edges emitted; control room temperature stayed within limits per TS action compliance, not via a backup system per se. Three previous occurrences captured as stub LERs with SIMILAR_TO edges, keys copied exactly as stated in narrative."
+}

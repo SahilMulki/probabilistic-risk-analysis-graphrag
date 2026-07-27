@@ -1,0 +1,285 @@
+{
+  "ler_number": "282-2026-001-00",
+  "identity": {
+    "accession_number": "ML26089A209",
+    "docket": "05000282",
+    "plant_name": "Prairie Island",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2026-02-01",
+    "report_date": "2026-03-30",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2026-001-00 for Prairie Island Nuclear Generating Plant, Units 1 and 2, Diesel Driven Cooling Water Pump Auto Start based on how System Pressure due to Broken Valve Reach-Rod Bolt"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "the cause of the event was due to a broken bolt in the reach-rod assembly which disconnected the valve actuation from the position indication and left 2CL-39-2 in the closed position",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "valve reach-rod mechanical failure masking true valve position",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 282-2026-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "282-2026-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:282-2026-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Prairie Island Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000282",
+      "match_key": "Unit:05000282"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "valve reach-rod mechanical failure masking true valve position",
+      "proximate_text": "the cause of the event was due to a broken bolt in the reach-rod assembly which disconnected the valve actuation from the position indication and left 2CL-39-2 in the closed position",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_cl",
+      "display_name": "Cooling Water System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BI",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BI"
+    },
+    {
+      "id": "c_valve",
+      "display_name": "22 DDCLP discharge valve",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "2CL-39-2",
+      "model": null,
+      "manufacturer_code": "2FII",
+      "inferred_code": false,
+      "match_key": "Component:22-ddclp-discharge-valve"
+    },
+    {
+      "id": "c_reachrod",
+      "display_name": "Reach-rod assembly bolt",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:reach-rod-assembly-bolt"
+    },
+    {
+      "id": "c_12ddclp",
+      "display_name": "12 Diesel Driven Cooling Water Pump",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "12 DDCLP",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:12-diesel-driven-cooling-water-pump"
+    },
+    {
+      "id": "c_22ddclp",
+      "display_name": "22 Diesel Driven Cooling Water Pump",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "22 DDCLP",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:22-diesel-driven-cooling-water-pump"
+    },
+    {
+      "id": "c_121mdclp",
+      "display_name": "121 Motor Driven Cooling Water Pump",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "121 MDCLP",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:121-motor-driven-cooling-water-pump"
+    },
+    {
+      "id": "fm_bolt",
+      "display_name": "Reach-rod assembly bolt broken",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "A broken bolt in the reach-rod assembly disconnected the valve actuation from the position indication",
+      "match_key": "FailureMode:reach-rod-assembly-bolt-broken"
+    },
+    {
+      "id": "fm_valveclosed",
+      "display_name": "22 DDCLP discharge valve stuck closed, position indication misleading",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "2CL-39-2 remained in the closed position while remote indication did not show this, isolating 22 DDCLP from the CL system",
+      "match_key": "FailureMode:22-ddclp-discharge-valve-stuck-closed-position-indication-misleading"
+    },
+    {
+      "id": "fm_pressuredrop",
+      "display_name": "CL header pressure drop below auto-start threshold",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Closing the 121 MDCLP discharge valve for surveillance alignment, combined with 22 DDCLP being isolated, dropped CL header pressure below 75 psig for 15 seconds",
+      "match_key": "FailureMode:cl-header-pressure-drop-below-auto-start-threshold"
+    },
+    {
+      "id": "cons_autostart",
+      "display_name": "Automatic start of 12 DDCLP (valid ESW system actuation)",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2026-02-01T16:43:00",
+      "end": null,
+      "duration": null,
+      "tz": "CST",
+      "match_key": "Consequence:automatic-start-of-12-ddclp-valid-esw-system-actuation"
+    },
+    {
+      "id": "ca_replace_bolt",
+      "display_name": "Replace broken reach-rod bolt for 2CL-39-2 and verify valve cycles smoothly",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-broken-reach-rod-bolt-for-2cl-39-2-and-verify-valve-cycles-smoothly"
+    },
+    {
+      "id": "ca_secure_pump",
+      "display_name": "Secure 12 DDCLP and restore normal CL operation",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:secure-12-ddclp-and-restore-normal-cl-operation"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_cl",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_valve",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_12ddclp",
+      "evidence": null
+    },
+    {
+      "source": "c_reachrod",
+      "relation": "PART_OF",
+      "target": "c_valve",
+      "evidence": null
+    },
+    {
+      "source": "fm_bolt",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_bolt",
+      "relation": "LEADS_TO",
+      "target": "fm_valveclosed",
+      "evidence": null
+    },
+    {
+      "source": "fm_valveclosed",
+      "relation": "LEADS_TO",
+      "target": "fm_pressuredrop",
+      "evidence": null
+    },
+    {
+      "source": "fm_pressuredrop",
+      "relation": "LEADS_TO",
+      "target": "cons_autostart",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_bolt",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_secure_pump",
+      "evidence": null
+    }
+  ],
+  "chain": "broken reach-rod bolt [cause TBD] -> 22 DDCLP discharge valve (2CL-39-2) stuck closed with misleading position indication -> 121 MDCLP discharge valve closed for surveillance alignment drops CL header pressure below 75 psig for 15s -> automatic start of 12 DDCLP (valid ESW actuation)",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code remains TBD/provisional per FORM-366 fields; narrative describes a mechanical valve reach-rod bolt failure as the proximate cause. No previous similar events in past three years per narrative, so no stub LER/SIMILAR_TO edge is created. 121 MDCLP and 11 CL Pump are part of normal system description/alignment, not backups during the inoperability window in the BACKED_UP_BY sense (the event resolved via automatic pump start, not a stated-operable backup system) — no BACKED_UP_BY edges asserted. Unit inferred as 1 as primary docket 05000282 corresponds to Unit 1; event affects shared CL header used by both units."
+}

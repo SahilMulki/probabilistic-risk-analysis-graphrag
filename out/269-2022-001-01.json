@@ -1,0 +1,80 @@
+{
+  "ler_number": "269-2022-001-01",
+  "identity": {
+    "accession_number": "ML24312A416",
+    "docket": "05000269",
+    "plant_name": "Oconee",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2022-11-01",
+    "report_date": "2024-11-07",
+    "operating_mode": null,
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Revision 01 – Unit 1 Ultrasonic Examination"
+  },
+  "reporting_basis": {
+    "reported_under": [],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": null,
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": null,
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 269-2022-004-01",
+      "properties": {},
+      "type": "LER",
+      "key": "269-2022-001-01",
+      "stub": false,
+      "title": "Revision 01 – Unit 1 Ultrasonic Examination",
+      "plant": null,
+      "match_key": "LER:269-2022-001-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Oconee Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000269",
+      "match_key": "Unit:05000269"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": null,
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    }
+  ],
+  "chain": null,
+  "golden_questions": [],
+  "notes": "No narrative (366A) text was provided beyond the header/title. FORM-366 fields contain no cause code, block-13 rows, plant name, or system/component identifiers, and no ENS or reporting-basis citations were given. Without narrative content, no failure chain, systems, components, consequences, or corrective actions can be extracted without inventing data, which is prohibited. Only the anchor LER, Unit, and provisional Cause nodes are emitted per the rules; the cause block remains provisional/TBD as instructed. If the full 366A narrative becomes available, this record should be re-extracted to populate the causal chain, involved systems/components, consequence, and corrective actions."
+}

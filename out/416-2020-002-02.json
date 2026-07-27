@@ -1,0 +1,305 @@
+{
+  "ler_number": "416-2020-002-02",
+  "identity": {
+    "accession_number": "ML21231A135",
+    "docket": "05000416",
+    "plant_name": "Grand Gulf",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2020-05-25",
+    "report_date": "2021-08-19",
+    "operating_mode": null,
+    "power_level": 66,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "02",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Grand Gulf Nuclear Station, Unit 1 Revised Licensee Event Report 2020- 002-02"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)",
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The direct cause of the trip was determined to be inadvertent overspeed signals from two (2) Active Speed Probes which contacted the speed wheel installed on the turbine shaft... The Root Cause of the event is that Entergy Engineering Leadership (Corporate Projects and Site Engineering) did not ensure critical assumptions in EC 72780, Turbine Control Protection System - Non-Safety, were documented or validated for turbine shaft movement during operation where a reduction in margin was present.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "engineering change validation weakness / reduced design margin",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 416-2020-002-02",
+      "properties": {},
+      "type": "LER",
+      "key": "416-2020-002-02",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:416-2020-002-02"
+    },
+    {
+      "id": "unit",
+      "display_name": "Grand Gulf Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000416",
+      "match_key": "Unit:05000416"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "engineering change validation weakness / reduced design margin",
+      "proximate_text": "The Root Cause of the event is that Entergy Engineering Leadership (Corporate Projects and Site Engineering) did not ensure critical assumptions in EC 72780, Turbine Control Protection System - Non-Safety, were documented or validated for turbine shaft movement during operation where a reduction in margin was present.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_ta",
+      "display_name": "Main Turbine",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "TA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:TA"
+    },
+    {
+      "id": "sys_rps",
+      "display_name": "Reactor Protection System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "actuated as designed",
+      "match_key": "System:reactor-protection-system"
+    },
+    {
+      "id": "c_probes",
+      "display_name": "Active Speed Probes",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "Active Speed Probes (2)",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:active-speed-probes"
+    },
+    {
+      "id": "c_wheel",
+      "display_name": "Speed sensing wheel",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:speed-sensing-wheel"
+    },
+    {
+      "id": "c_bypass",
+      "display_name": "Turbine Bypass valves",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:turbine-bypass-valves"
+    },
+    {
+      "id": "fm_margin",
+      "display_name": "Reduced air gap margin from RF22 modification",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Speed sensing probes and speed sensing wheel modified during RF22 with new equipment, reducing the air gap and operating margin.",
+      "match_key": "FailureMode:reduced-air-gap-margin-from-rf22-modification"
+    },
+    {
+      "id": "fm_contact",
+      "display_name": "Speed probes contacted speed wheel",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Turbine shaft movement during steam-line isolation for valve stroke testing caused two Active Speed Probes to contact the speed wheel.",
+      "match_key": "FailureMode:speed-probes-contacted-speed-wheel"
+    },
+    {
+      "id": "fm_overspeed",
+      "display_name": "Inadvertent overspeed signals generated",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Contact between the probes and speed wheel produced spurious overspeed signals.",
+      "match_key": "FailureMode:inadvertent-overspeed-signals-generated"
+    },
+    {
+      "id": "fm_turbtrip",
+      "display_name": "Main Turbine Trip",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Spurious overspeed signals caused an automatic Main Turbine Trip at a power level beyond the capability of the Turbine Bypass valves.",
+      "match_key": "FailureMode:main-turbine-trip"
+    },
+    {
+      "id": "cons_scram",
+      "display_name": "Automatic Reactor SCRAM",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2020-05-25T04:33",
+      "end": null,
+      "duration": null,
+      "tz": "CT",
+      "match_key": "Consequence:automatic-reactor-scram"
+    },
+    {
+      "id": "ca_airgap",
+      "display_name": "Increase speed probe-to-wheel air gap from 35 mils to 50 mils",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:increase-speed-probe-to-wheel-air-gap-from-35-mils-to-50-mils"
+    },
+    {
+      "id": "ca_procedure",
+      "display_name": "Revise EN-HU-104 to require detailed risk-parameter table for high-risk engineering changes",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-en-hu-104-to-require-detailed-risk-parameter-table-for-high-risk-engineering-changes"
+    },
+    {
+      "id": "ca_vendor",
+      "display_name": "Place vendor on Conditional Services pending cause analysis and corrective actions",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:place-vendor-on-conditional-services-pending-cause-analysis-and-corrective-actions"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5072",
+      "display_name": "10 CFR 50.72(b)(2)(iv)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-2-iv-b"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ta",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rps",
+      "evidence": null
+    },
+    {
+      "source": "fm_margin",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_margin",
+      "relation": "LEADS_TO",
+      "target": "fm_contact",
+      "evidence": null
+    },
+    {
+      "source": "fm_contact",
+      "relation": "LEADS_TO",
+      "target": "fm_overspeed",
+      "evidence": null
+    },
+    {
+      "source": "fm_overspeed",
+      "relation": "LEADS_TO",
+      "target": "fm_turbtrip",
+      "evidence": null
+    },
+    {
+      "source": "fm_turbtrip",
+      "relation": "LEADS_TO",
+      "target": "cons_scram",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_airgap",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procedure",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_vendor",
+      "evidence": null
+    }
+  ],
+  "chain": "inadequate validation of EC 72780 margin assumptions [cause TBD] -> reduced air-gap margin from RF22 modification -> speed probes contact speed wheel during valve stroke testing -> inadvertent overspeed signals -> Main Turbine Trip beyond bypass valve capability -> automatic Reactor SCRAM",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code not provided in FORM-366 FIELDS (TBD/provisional) despite narrative describing a detailed root cause (engineering change process/leadership); category kept as 'provisional' per rule 4 since no authoritative code was given. Turbine Bypass valves referenced as capability limit context, not itself in the causal chain as a FailureMode. No previous similar events found per three-year review. RPS actuation modeled as System node since it's the direct subject of the reporting criterion, not merely design context."
+}

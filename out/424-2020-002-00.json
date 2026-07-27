@@ -1,0 +1,311 @@
+{
+  "ler_number": "424-2020-002-00",
+  "identity": {
+    "accession_number": "ML20330A317",
+    "docket": "05000424",
+    "plant_name": "Vogtle",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2020-09-29",
+    "report_date": "2020-11-25",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2020-002-00 for Vogtle Electric Generating Plant, Unit 1 re Oil Leak causes Ultimate Heat Sink to be inoperable longer than allowed by Technical Specifications"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "X",
+      "system": "BS",
+      "component": "SEAL",
+      "manufacturer": "MARL",
+      "reportable": "N"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The gearbox seal was replaced on February 21, 2020 as part of the 36-month PM for the soft parts in the gearbox. Since the seal failed approximately seven months after its initial installation in February 2020, the most likely failure mechanism is either premature failure or improper installation.",
+    "cause_code": "X",
+    "category": "Other",
+    "theme": "premature seal failure / possible improper installation",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 424-2020-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "424-2020-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:424-2020-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Vogtle Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000424",
+      "match_key": "Unit:05000424"
+    },
+    {
+      "id": "cause",
+      "display_name": "Other (X)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "X",
+      "category": "Other",
+      "theme": "premature seal failure / possible improper installation",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Other"
+    },
+    {
+      "id": "sys_bs",
+      "display_name": "Nuclear Service Cooling Water",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BS",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "B-train fan 4 gearbox inoperable",
+      "match_key": "System:BS"
+    },
+    {
+      "id": "sys_bs_a",
+      "display_name": "Nuclear Service Cooling Water (A-train)",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BS",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup train; operable, briefly out of service four times",
+      "match_key": "System:BS"
+    },
+    {
+      "id": "c_gearbox",
+      "display_name": "NSCW Fan 4 Gearbox (B-train)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "Fan 4",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:nscw-fan-4-gearbox-b-train"
+    },
+    {
+      "id": "c_seal",
+      "display_name": "Gearbox seal",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "SEAL",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": "MARL",
+      "inferred_code": false,
+      "match_key": "Component:SEAL"
+    },
+    {
+      "id": "fm_sealfail",
+      "display_name": "Gearbox seal failed (premature failure or improper installation)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Seal failed approximately seven months after installation, causing oil leakage",
+      "match_key": "FailureMode:gearbox-seal-failed-premature-failure-or-improper-installation"
+    },
+    {
+      "id": "fm_oilleak",
+      "display_name": "Gearbox oil leakage during operation",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Oil leaked from gearbox at approximately 1.14 gallons per day while the fan was in operation",
+      "match_key": "FailureMode:gearbox-oil-leakage-during-operation"
+    },
+    {
+      "id": "fm_lowoil",
+      "display_name": "Gearbox oil level dropped below level needed to prevent failure",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "By September 6, 2020, oil loss exceeded the threshold (>9 gallons lost) associated with gearbox failures in previous OE",
+      "match_key": "FailureMode:gearbox-oil-level-dropped-below-level-needed-to-prevent-failure"
+    },
+    {
+      "id": "cons_ucs",
+      "display_name": "NSCW B-train Fan 4 gearbox inoperable longer than Technical Specification allowed outage time",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2020-09-06",
+      "end": "2020-11-04",
+      "duration": "~59 days",
+      "tz": null,
+      "match_key": "Consequence:nscw-b-train-fan-4-gearbox-inoperable-longer-than-technical-specification-allowed-outage-time"
+    },
+    {
+      "id": "ca_replace_seal",
+      "display_name": "Replace gearbox seal",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-gearbox-seal"
+    },
+    {
+      "id": "ca_maint_rule",
+      "display_name": "Evaluate event under Maintenance Rule program for additional actions",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:evaluate-event-under-maintenance-rule-program-for-additional-actions"
+    },
+    {
+      "id": "mfr_marl",
+      "display_name": "MARL",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "MARL",
+      "match_key": "Manufacturer:MARL"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts379",
+      "display_name": "Technical Specification 3.7.9 Condition B",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:technical-specification-3-7-9-condition-b"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "Previous LER - Unit 1 B NSCW Fan 1 gearbox low oil level (May 2019)",
+      "properties": {},
+      "type": "LER",
+      "key": "424-2019-XXX",
+      "stub": true,
+      "title": "Unit 1 B NSCW Fan 1 gearbox found with low oil level; several seals replaced",
+      "plant": "Vogtle Electric Generating Plant",
+      "match_key": "LER:424-2019-XXX"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts379",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bs",
+      "evidence": null
+    },
+    {
+      "source": "c_seal",
+      "relation": "PART_OF",
+      "target": "c_gearbox",
+      "evidence": null
+    },
+    {
+      "source": "fm_sealfail",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_sealfail",
+      "relation": "LEADS_TO",
+      "target": "fm_oilleak",
+      "evidence": null
+    },
+    {
+      "source": "fm_oilleak",
+      "relation": "LEADS_TO",
+      "target": "fm_lowoil",
+      "evidence": null
+    },
+    {
+      "source": "fm_lowoil",
+      "relation": "LEADS_TO",
+      "target": "cons_ucs",
+      "evidence": null
+    },
+    {
+      "source": "cons_ucs",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_bs_a",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_seal",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_maint_rule",
+      "evidence": null
+    },
+    {
+      "source": "c_seal",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_marl",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    }
+  ],
+  "chain": "gearbox seal premature failure/improper installation [cause X] -> oil leakage during operation (~1.14 gal/day) -> oil level drops below threshold needed to prevent gearbox failure -> NSCW B-train Fan 4 gearbox inoperable beyond TS allowed outage time [backup A-train NSCW available]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Event date per form-366 is 2020-09-29 (discovery date); narrative analysis determined actual loss-of-function date was 2020-09-06, used as consequence start. Cause code X (Other) governs category per official code despite narrative's premature-failure/improper-installation theme. A-train NSCW is modeled as a separate System node (BACKED_UP_BY) since narrative explicitly states it remained available/operable and was briefly removed from service four times but readily restored. Previous similar LER (Unit 1 B NSCW Fan 1, May 2019) has no LER number stated in narrative; stub key is a placeholder pending resolver lookup since no explicit LER number was given in text."
+}

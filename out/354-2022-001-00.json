@@ -1,0 +1,307 @@
+{
+  "ler_number": "354-2022-001-00",
+  "identity": {
+    "accession_number": "ML22077A378",
+    "docket": "05000354",
+    "plant_name": "Hope Creek",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2021-05-03",
+    "report_date": "2022-03-18",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Hope Creek Generating Station Renewed Facility Operating License No. NPF-57 Docket No. 50-354"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "the inability of the B EDG to reach max load condition was introduced when fuel rack adjustments were made in April and May, 2021 during planned maintenance conducted during the Hope Creek refuel outage 23. Following the adjustments, the EDG was tested to 4000-4400 kW per TS surveillance requirement 4.8.1.1.2.a, on May 3, 2021. It was not tested at the higher load of 105-110 percent.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "inadequate post-maintenance testing following fuel rack adjustment",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 354-2022-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "354-2022-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:354-2022-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Hope Creek Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000354",
+      "match_key": "Unit:05000354"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "inadequate post-maintenance testing following fuel rack adjustment",
+      "proximate_text": "the inability of the B EDG to reach max load condition was introduced when fuel rack adjustments were made in April and May, 2021 during planned maintenance conducted during the Hope Creek refuel outage 23. Following the adjustments, the EDG was tested to 4000-4400 kW per TS surveillance requirement 4.8.1.1.2.a, on May 3, 2021. It was not tested at the higher load of 105-110 percent.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_ek",
+      "display_name": "Emergency Onsite Power Supply System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "EK",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:EK"
+    },
+    {
+      "id": "c_dg_b",
+      "display_name": "B Emergency Diesel Generator",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "DG",
+      "identifier": "B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:DG|B"
+    },
+    {
+      "id": "c_fuelrack_b",
+      "display_name": "B EDG cylinder injection pump fuel rack mechanical linkage",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:b-edg-cylinder-injection-pump-fuel-rack-mechanical-linkage"
+    },
+    {
+      "id": "fm_adjust",
+      "display_name": "Fuel rack mechanical linkage improperly adjusted during refuel outage 23 maintenance",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Adjustments made to B EDG cylinder injection pumps (fuel rack) during planned maintenance in April/May 2021 left fueling capability degraded.",
+      "match_key": "FailureMode:fuel-rack-mechanical-linkage-improperly-adjusted-during-refuel-outage-23-maintenance"
+    },
+    {
+      "id": "fm_testgap",
+      "display_name": "Post-maintenance test did not verify 105-110% load capability",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Following the fuel rack adjustment, B EDG was tested only to 4000-4400 kW per TS SR 4.8.1.1.2.a and not tested at the higher 105-110% rated load, so the degraded fueling condition went undetected.",
+      "match_key": "FailureMode:post-maintenance-test-did-not-verify-105-110-load-capability"
+    },
+    {
+      "id": "fm_maxload",
+      "display_name": "B EDG unable to reach required 105-110% rated load",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "During TS SR 4.8.1.1.2.k surveillance on January 19, 2022, the B EDG could only reach 4650 kW instead of the required 4652-4873 kW during the final 2-hour high-load portion of the test.",
+      "match_key": "FailureMode:b-edg-unable-to-reach-required-105-110-rated-load"
+    },
+    {
+      "id": "cons_inop",
+      "display_name": "B EDG declared inoperable, exceeding TS 14-day allowed outage time",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2021-05-03",
+      "end": "2022-01-23",
+      "duration": "approximately 8.5 months (retroactively determined; exceeds TS 14-day AOT)",
+      "tz": null,
+      "match_key": "Consequence:b-edg-declared-inoperable-exceeding-ts-14-day-allowed-outage-time"
+    },
+    {
+      "id": "ca_adjust",
+      "display_name": "Adjust B EDG fuel rack mechanical linkage to allow required loading of 4652-4873 kW",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:adjust-b-edg-fuel-rack-mechanical-linkage-to-allow-required-loading-of-4652-4873-kw"
+    },
+    {
+      "id": "ca_verify_others",
+      "display_name": "Verify A, C, and D EDGs successfully completed 105-110% loaded run surveillance subsequent to refueling outage 23",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:verify-a-c-and-d-edgs-successfully-completed-105-110-loaded-run-surveillance-subsequent-to-refueling-outage-23"
+    },
+    {
+      "id": "ca_review_maint",
+      "display_name": "Review of maintenance activities",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:review-of-maintenance-activities"
+    },
+    {
+      "id": "ca_cause_eval",
+      "display_name": "Cause evaluation to identify additional actions",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:cause-evaluation-to-identify-additional-actions"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts",
+      "display_name": "TS surveillance requirement 4.8.1.1.2.k / 4.8.1.1.2.a",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-surveillance-requirement-4-8-1-1-2-k-4-8-1-1-2-a"
+    },
+    {
+      "id": "rr_ufsar",
+      "display_name": "Hope Creek UFSAR and supporting calculations",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:hope-creek-ufsar-and-supporting-calculations"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "C EDG governor replacement load limitation (October 2019, corrective action occurrence)",
+      "properties": {},
+      "type": "LER",
+      "key": "unknown",
+      "stub": true,
+      "title": "C EDG would not achieve more than 4700 kW following planned governor replacement",
+      "plant": "Hope Creek Generating Station",
+      "match_key": "LER:unknown"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ek",
+      "evidence": null
+    },
+    {
+      "source": "c_dg_b",
+      "relation": "PART_OF",
+      "target": "sys_ek",
+      "evidence": null
+    },
+    {
+      "source": "c_fuelrack_b",
+      "relation": "PART_OF",
+      "target": "c_dg_b",
+      "evidence": null
+    },
+    {
+      "source": "fm_adjust",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_adjust",
+      "relation": "LEADS_TO",
+      "target": "fm_testgap",
+      "evidence": null
+    },
+    {
+      "source": "fm_testgap",
+      "relation": "LEADS_TO",
+      "target": "fm_maxload",
+      "evidence": null
+    },
+    {
+      "source": "fm_maxload",
+      "relation": "LEADS_TO",
+      "target": "cons_inop",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_adjust",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_verify_others",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_review_maint",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_cause_eval",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    }
+  ],
+  "chain": "fuel rack linkage misadjusted during RFO23 maintenance [cause TBD] -> post-maintenance test only verified 4000-4400 kW, not 105-110% load -> B EDG unable to reach 4652-4873 kW required load -> B EDG declared inoperable, TS 14-day AOT exceeded (retroactive, May 2021-Jan 2022)",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause_code/category remain TBD per FORM-366 fields; no block_13 data provided in source. The previous occurrence (C EDG, October 2019) was identified as a corrective action program entry, not an LER, so no LER number exists; stub key set to 'unknown' since no LER number was given in narrative. UFSAR analysis confirms B EDG at 4650 kW still satisfied design-basis loading requirement of 4628.44 kW, so no actual safety consequence despite the TS violation."
+}

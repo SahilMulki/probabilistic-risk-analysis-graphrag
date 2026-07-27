@@ -1,0 +1,358 @@
+{
+  "ler_number": "423-2023-005-00",
+  "identity": {
+    "accession_number": "ML24039A186",
+    "docket": "05000423",
+    "plant_name": "Millstone",
+    "unit": 3,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2023-12-10",
+    "report_date": "2024-02-08",
+    "operating_mode": null,
+    "power_level": 47,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Oil Leakage From \"C\" RSS Pump Motor Challenged Meeting its Mission Time Resulting in a Condition Prohibited by Technical Specifications"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The direct cause of the event was oil leakage past the O-ring of the upper motor bearing sight glass.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "sight-glass O-ring seal degradation / oil leakage",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 423-2023-005-00",
+      "properties": {},
+      "type": "LER",
+      "key": "423-2023-005-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:423-2023-005-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Millstone Unit 3",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000423",
+      "match_key": "Unit:05000423"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "sight-glass O-ring seal degradation / oil leakage",
+      "proximate_text": "The direct cause of the event was oil leakage past the O-ring of the upper motor bearing sight glass.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_be",
+      "display_name": "Containment Spray System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BE",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected system; Recirculation Spray System (RSS) is part of containment spray",
+      "match_key": "System:BE"
+    },
+    {
+      "id": "sys_bravo",
+      "display_name": "Bravo train Recirculation Spray System",
+      "properties": {
+        "note": "separate RSS train, both pumps unaffected"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "backup; available",
+      "match_key": "System:bravo-train-recirculation-spray-system"
+    },
+    {
+      "id": "c_pump_c",
+      "display_name": "\"C\" RSS Pump (3RSS*P1C)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "3RSS*P1C",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:c-rss-pump-3rss-p1c"
+    },
+    {
+      "id": "c_pump_a",
+      "display_name": "\"A\" Train RSS Pump (3RSS*P1A)",
+      "properties": {
+        "role": "unaffected pump in same train"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "3RSS*P1A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:a-train-rss-pump-3rss-p1a"
+    },
+    {
+      "id": "c_motor",
+      "display_name": "RSS Pump Motor",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "MO",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:MO"
+    },
+    {
+      "id": "c_sightglass",
+      "display_name": "Upper Motor Bearing Sight Glass",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "LG",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:LG"
+    },
+    {
+      "id": "c_oring",
+      "display_name": "Sight Glass O-ring",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:sight-glass-o-ring"
+    },
+    {
+      "id": "fm_oring_degrade",
+      "display_name": "Sight glass O-ring seal degraded, allowing oil leakage",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Oil leaked past the O-ring of the upper motor bearing sight glass",
+      "match_key": "FailureMode:sight-glass-o-ring-seal-degraded-allowing-oil-leakage"
+    },
+    {
+      "id": "fm_oil_low",
+      "display_name": "Upper motor bearing oil level dropped below acceptance criteria",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Motor upper bearing oil level found approximately 0.5 inches below the standstill mark on the sight glass",
+      "match_key": "FailureMode:upper-motor-bearing-oil-level-dropped-below-acceptance-criteria"
+    },
+    {
+      "id": "fm_mission_time",
+      "display_name": "\"C\" RSS pump may not have been capable of meeting mission time requirements",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Reduced oil level and ongoing leak to the upper motor bearing challenged the pump's ability to meet its mission time",
+      "match_key": "FailureMode:c-rss-pump-may-not-have-been-capable-of-meeting-mission-time-requirements"
+    },
+    {
+      "id": "cons_ts",
+      "display_name": "Condition prohibited by Technical Specifications / RSS train operability could not be assured",
+      "properties": {
+        "note": "Existed longer than allowed by TS 3.6.2.2; corrected by sight glass/O-ring replacement on 2024-01-13"
+      },
+      "type": "Consequence",
+      "start": "2023-08-30",
+      "end": "2024-01-13",
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:condition-prohibited-by-technical-specifications-rss-train-operability-could-not-be-assured"
+    },
+    {
+      "id": "ca_oil_add_dec",
+      "display_name": "Added oil to upper motor bearing on December 10, 2023",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:added-oil-to-upper-motor-bearing-on-december-10-2023"
+    },
+    {
+      "id": "ca_sightglass_oct",
+      "display_name": "Replaced upper motor sight glass and installed new O-rings in lower bearing sight glass (October 31, 2023)",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replaced-upper-motor-sight-glass-and-installed-new-o-rings-in-lower-bearing-sight-glass-october-31-2023"
+    },
+    {
+      "id": "ca_oil_add_jan",
+      "display_name": "Added oil to upper motor bearing on January 4, 2024",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:added-oil-to-upper-motor-bearing-on-january-4-2024"
+    },
+    {
+      "id": "ca_sightglass_jan",
+      "display_name": "Installed new upper sight glass assembly and O-rings (January 13, 2024)",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:installed-new-upper-sight-glass-assembly-and-o-rings-january-13-2024"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts3622",
+      "display_name": "Technical Specification 3.6.2.2 Recirculation Spray System",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-3-6-2-2-recirculation-spray-system"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts3622",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_be",
+      "evidence": null
+    },
+    {
+      "source": "c_pump_c",
+      "relation": "PART_OF",
+      "target": "sys_be",
+      "evidence": null
+    },
+    {
+      "source": "c_sightglass",
+      "relation": "PART_OF",
+      "target": "c_motor",
+      "evidence": null
+    },
+    {
+      "source": "c_oring",
+      "relation": "PART_OF",
+      "target": "c_sightglass",
+      "evidence": null
+    },
+    {
+      "source": "fm_oring_degrade",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_oring_degrade",
+      "relation": "LEADS_TO",
+      "target": "fm_oil_low",
+      "evidence": null
+    },
+    {
+      "source": "fm_oil_low",
+      "relation": "LEADS_TO",
+      "target": "fm_mission_time",
+      "evidence": null
+    },
+    {
+      "source": "fm_mission_time",
+      "relation": "LEADS_TO",
+      "target": "cons_ts",
+      "evidence": null
+    },
+    {
+      "source": "cons_ts",
+      "relation": "BACKED_UP_BY",
+      "target": "c_pump_a",
+      "evidence": null
+    },
+    {
+      "source": "cons_ts",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_bravo",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_oil_add_dec",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_sightglass_oct",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_oil_add_jan",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_sightglass_jan",
+      "evidence": null
+    }
+  ],
+  "chain": "sight glass O-ring seal degradation [cause TBD] -> oil leaked past O-ring -> upper motor bearing oil level dropped below acceptance criteria -> \"C\" RSS pump mission-time capability challenged -> condition prohibited by Technical Specifications / RSS operability could not be assured [backups: \"A\" train pump 3RSS*P1A unaffected, Bravo train RSS available]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code is TBD/provisional per FORM-366 fields despite narrative providing a direct-cause statement; category thus remains 'provisional' per rule 4. Leak first observed 2023-08-30, temporarily addressed 2023-10-31, recurred and confirmed as TS-prohibited condition by 2023-12-10, finally corrected 2024-01-13. Modeled 3RSS*P1A and Bravo train as BACKED_UP_BY since narrative states they were unaffected/available throughout. No previous similar occurrences reported (none in past 5 years), so no stub LER/SIMILAR_TO edge emitted. EIIS codes BE, LG, MO taken directly from narrative's EIIS code list."
+}

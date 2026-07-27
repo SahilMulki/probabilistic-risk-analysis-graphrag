@@ -1,0 +1,385 @@
+{
+  "ler_number": "335-2022-003-00",
+  "identity": {
+    "accession_number": "ML22301A127",
+    "docket": "05000335",
+    "plant_name": "Saint Lucie",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2022-09-02",
+    "report_date": "2022-10-28",
+    "operating_mode": "1",
+    "power_level": 40,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2022-003-00 for St. Lucie Unit 1, Manual Reactor Trip Due to Loss of Feedwater Pump"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "Reportable",
+      "system": "To",
+      "component": "IRIS",
+      "manufacturer": "E",
+      "reportable": null
+    }
+  ],
+  "cause": {
+    "proximate_text": "The direct cause of this event was an erroneous indication on condensate flow controller FIC-12-1. Specifically, when the FIC was taken to manual it indicated the manual loader pressure adjustment was balanced with the automatic control output... The root cause of this event was improper maintenance and pre-operational checks of FIC-12-1.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Inadequate maintenance/calibration of flow controller",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 335-2022-003-00",
+      "properties": {},
+      "type": "LER",
+      "key": "335-2022-003-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:335-2022-003-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Saint Lucie Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000335",
+      "match_key": "Unit:05000335"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Inadequate maintenance/calibration of flow controller",
+      "proximate_text": "The direct cause of this event was an erroneous indication on condensate flow controller FIC-12-1. Specifically, when the FIC was taken to manual it indicated the manual loader pressure adjustment was balanced with the automatic control output... The root cause of this event was improper maintenance and pre-operational checks of FIC-12-1.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_condensate",
+      "display_name": "Condensate System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SD",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SD"
+    },
+    {
+      "id": "sys_fw",
+      "display_name": "Main Feedwater System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "sys_afw",
+      "display_name": "Auxiliary Feedwater System (AFW)",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; operable",
+      "match_key": "System:BA"
+    },
+    {
+      "id": "sys_afas",
+      "display_name": "Auxiliary Feedwater Actuation System (AFAS)",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; operable",
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "c_fic",
+      "display_name": "Condensate Flow Controller FIC-12-1",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "FIC-12-1",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:condensate-flow-controller-fic-12-1"
+    },
+    {
+      "id": "c_fcv",
+      "display_name": "Condensate Recirculation Valve FCV-12-1",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "FCV-12-1",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:condensate-recirculation-valve-fcv-12-1"
+    },
+    {
+      "id": "c_pump1a",
+      "display_name": "1A Main Feedwater Pump",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "1A MFW Pump",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:1a-main-feedwater-pump"
+    },
+    {
+      "id": "fm_maint",
+      "display_name": "Improper maintenance/pre-operational checks of FIC-12-1",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Root cause: inadequate maintenance and pre-operational checks left FIC-12-1 susceptible to erroneous balance indication.",
+      "match_key": "FailureMode:improper-maintenance-pre-operational-checks-of-fic-12-1"
+    },
+    {
+      "id": "fm_indication",
+      "display_name": "Erroneous balanced indication on FIC-12-1",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "When placed in manual, FIC-12-1 falsely indicated the manual loader pressure adjustment was balanced with the automatic control output.",
+      "match_key": "FailureMode:erroneous-balanced-indication-on-fic-12-1"
+    },
+    {
+      "id": "fm_fcvopen",
+      "display_name": "FCV-12-1 went full open",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The erroneous balance indication caused the condensate recirculation valve FCV-12-1 to open fully upon transfer to manual control.",
+      "match_key": "FailureMode:fcv-12-1-went-full-open"
+    },
+    {
+      "id": "fm_pumptrip",
+      "display_name": "1A Main Feedwater Pump tripped on low suction pressure",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Full opening of FCV-12-1 diverted condensate flow, reducing suction pressure to the 1A Main Feedwater Pump and causing it to trip.",
+      "match_key": "FailureMode:1a-main-feedwater-pump-tripped-on-low-suction-pressure"
+    },
+    {
+      "id": "cons_trip",
+      "display_name": "Manual reactor trip due to inability to maintain steam generator levels",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2022-09-02T22:46",
+      "end": "2022-09-02T22:47",
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:manual-reactor-trip-due-to-inability-to-maintain-steam-generator-levels"
+    },
+    {
+      "id": "ca_rebuild",
+      "display_name": "Rebuild FIC-12-1 during SL 1-31",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:rebuild-fic-12-1-during-sl-1-31"
+    },
+    {
+      "id": "ca_revise_proc",
+      "display_name": "Revise Unit 1 and Unit 2 maintenance procedures to exercise FIC-12-1 for reliability",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-unit-1-and-unit-2-maintenance-procedures-to-exercise-fic-12-1-for-reliability"
+    },
+    {
+      "id": "ca_pm",
+      "display_name": "Update preventative maintenance requirements for Unit 1 and 2 control loop F-12-1 components",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:update-preventative-maintenance-requirements-for-unit-1-and-2-control-loop-f-12-1-components"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_7203",
+      "display_name": "10 CFR 50.72(b)(3)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-3-iv-a"
+    },
+    {
+      "id": "rr_7203b",
+      "display_name": "10 CFR 50.72(b)(2)(iv)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-2-iv-b"
+    },
+    {
+      "id": "rr_ufsar",
+      "display_name": "Updated Final Safety Analysis Report",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:updated-final-safety-analysis-report"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_7203",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_7203b",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ufsar",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_condensate",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_fw",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_afw",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_afas",
+      "evidence": null
+    },
+    {
+      "source": "fm_maint",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_maint",
+      "relation": "LEADS_TO",
+      "target": "fm_indication",
+      "evidence": null
+    },
+    {
+      "source": "fm_indication",
+      "relation": "LEADS_TO",
+      "target": "fm_fcvopen",
+      "evidence": null
+    },
+    {
+      "source": "fm_fcvopen",
+      "relation": "LEADS_TO",
+      "target": "fm_pumptrip",
+      "evidence": null
+    },
+    {
+      "source": "fm_pumptrip",
+      "relation": "LEADS_TO",
+      "target": "cons_trip",
+      "evidence": null
+    },
+    {
+      "source": "cons_trip",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_afw",
+      "evidence": null
+    },
+    {
+      "source": "cons_trip",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_afas",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_rebuild",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_revise_proc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_pm",
+      "evidence": null
+    }
+  ],
+  "chain": "improper maintenance/pre-op checks of FIC-12-1 [cause TBD] -> erroneous balanced indication on transfer to manual -> FCV-12-1 opens fully -> 1A MFW Pump trips on low suction pressure -> unable to maintain SG levels -> manual reactor trip [backups AFW, AFAS actuated]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code is TBD/provisional per FORM-366 fields; narrative describes both a 'direct cause' (erroneous FIC indication) and a 'root cause' (improper maintenance/pre-operational checks) — modeled as two sequential FailureMode nodes with the root-cause node linked to the Cause node via CAUSED_BY per rule 5. Block 13 fields in source form appear garbled/non-standard (system 'To', component 'IRIS') and are copied verbatim as required. No previous similar occurrences were cited ('Similar Events: None'), so no SIMILAR_TO edge or stub LER was created."
+}

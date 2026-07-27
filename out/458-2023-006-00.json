@@ -1,0 +1,348 @@
+{
+  "ler_number": "458-2023-006-00",
+  "identity": {
+    "accession_number": "ML24039A130",
+    "docket": "05000458",
+    "plant_name": "River Bend",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2023-12-13",
+    "report_date": "2024-02-08",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "/ 2023-006-00, Automatic Reactor Scram Due to a Turbine Trip Following a Disconnect Failure at Switchyard"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "A",
+      "system": "FK",
+      "component": "DISC",
+      "manufacturer": null,
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "the disconnects were not properly seated in the saddle of the disconnect fingers because of personnel error. During the closing of the disconnects following maintenance activities, the disconnects were locked in a partially closed position. The movable members were closed, but not all the way to their mechanical stops.",
+    "cause_code": "A",
+    "category": "Personnel Error",
+    "theme": "Improper disconnect switch closure during maintenance",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 458-2023-006-00",
+      "properties": {},
+      "type": "LER",
+      "key": "458-2023-006-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:458-2023-006-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "River Bend Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000458",
+      "match_key": "Unit:05000458"
+    },
+    {
+      "id": "cause",
+      "display_name": "Personnel Error (A)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "A",
+      "category": "Personnel Error",
+      "theme": "Improper disconnect switch closure during maintenance",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Personnel Error"
+    },
+    {
+      "id": "sys_fk",
+      "display_name": "Switchyard / Main Generator Output System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "FK",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:FK"
+    },
+    {
+      "id": "sys_sj",
+      "display_name": "Reactor Feedwater System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "sys_bn",
+      "display_name": "Reactor Core Isolation Cooling",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BN",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; operable",
+      "match_key": "System:BN"
+    },
+    {
+      "id": "sys_ji",
+      "display_name": "Turbine Bypass Valve system",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JI",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; operable",
+      "match_key": "System:JI"
+    },
+    {
+      "id": "c_disc",
+      "display_name": "Generator Side Disconnect switch",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "DISC",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:DISC"
+    },
+    {
+      "id": "c_fwp1b",
+      "display_name": "Reactor Feedwater System Pump B (FWS-P1B)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "SJ",
+      "identifier": "FWS-P1B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:SJ|FWS-P1B"
+    },
+    {
+      "id": "fm_notseated",
+      "display_name": "Disconnect not fully seated in saddle fingers",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Disconnect locked in partially closed position after maintenance, movable members not fully closed to mechanical stops",
+      "match_key": "FailureMode:disconnect-not-fully-seated-in-saddle-fingers"
+    },
+    {
+      "id": "fm_hotspot",
+      "display_name": "Hotspot formed at disconnect contact, melting pads",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Improper seating created a hotspot that melted the pads to the point where cable connections faulted",
+      "match_key": "FailureMode:hotspot-formed-at-disconnect-contact-melting-pads"
+    },
+    {
+      "id": "fm_opencircuit",
+      "display_name": "Open circuit condition on Main Generator output",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Cable connections faulted between the disconnect and the triad jumper cable, causing an open circuit on the output of the Main Generator",
+      "match_key": "FailureMode:open-circuit-condition-on-main-generator-output"
+    },
+    {
+      "id": "fm_turbinetrip",
+      "display_name": "Turbine trip signal generated",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Open circuit condition on Main Generator output resulted in a turbine trip signal",
+      "match_key": "FailureMode:turbine-trip-signal-generated"
+    },
+    {
+      "id": "fm_fwsisolation",
+      "display_name": "FWS trip on low suction pressure",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Reactor Feedwater System tripped on low suction pressure caused by isolations to both trains of Reactor Feedwater Heating",
+      "match_key": "FailureMode:fws-trip-on-low-suction-pressure"
+    },
+    {
+      "id": "cons_scram",
+      "display_name": "Automatic reactor scram / RPS actuation",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2023-12-13T01:02:00",
+      "end": null,
+      "duration": null,
+      "tz": "CST",
+      "match_key": "Consequence:automatic-reactor-scram-rps-actuation"
+    },
+    {
+      "id": "ca_swcoord",
+      "display_name": "Establish expectation for Switchyard Coordinator/SME engagement on switchyard work",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:establish-expectation-for-switchyard-coordinator-sme-engagement-on-switchyard-work"
+    },
+    {
+      "id": "ca_qualworkers",
+      "display_name": "Communicate that only qualified electrical switchyard workers operate disconnects",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:communicate-that-only-qualified-electrical-switchyard-workers-operate-disconnects"
+    },
+    {
+      "id": "ca_procrevision",
+      "display_name": "Revise procedures to require qualified workers and post-closure thermography",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-procedures-to-require-qualified-workers-and-post-closure-thermography"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_usar",
+      "display_name": "Updated Safety Analysis Report - Main Turbine Trip with Steam Bypass Valves/Pressure Regulators in service",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:updated-safety-analysis-report-main-turbine-trip-with-steam-bypass-valves-pressure-regulators-in-service"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_fk",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sj",
+      "evidence": null
+    },
+    {
+      "source": "c_disc",
+      "relation": "PART_OF",
+      "target": "sys_fk",
+      "evidence": null
+    },
+    {
+      "source": "fm_notseated",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_notseated",
+      "relation": "LEADS_TO",
+      "target": "fm_hotspot",
+      "evidence": null
+    },
+    {
+      "source": "fm_hotspot",
+      "relation": "LEADS_TO",
+      "target": "fm_opencircuit",
+      "evidence": null
+    },
+    {
+      "source": "fm_opencircuit",
+      "relation": "LEADS_TO",
+      "target": "fm_turbinetrip",
+      "evidence": null
+    },
+    {
+      "source": "fm_turbinetrip",
+      "relation": "LEADS_TO",
+      "target": "cons_scram",
+      "evidence": null
+    },
+    {
+      "source": "fm_turbinetrip",
+      "relation": "LEADS_TO",
+      "target": "fm_fwsisolation",
+      "evidence": null
+    },
+    {
+      "source": "cons_scram",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_bn",
+      "evidence": null
+    },
+    {
+      "source": "cons_scram",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_ji",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_swcoord",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_qualworkers",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procrevision",
+      "evidence": null
+    }
+  ],
+  "chain": "personnel error during disconnect closure [cause A] -> disconnect not fully seated in saddle fingers -> hotspot melts pads -> open circuit on Main Generator output -> turbine trip signal -> automatic reactor scram [backups RCIC, Turbine Bypass Valves available]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "No previous similar occurrences reported (stated 'None' in narrative), so no SIMILAR_TO edge or stub LER node created. FWS trip on low suction pressure modeled as a parallel downstream failure mode from the turbine trip, per the narrative sequence, but reactor water level was managed via RCIC/FWS restart with no lasting consequence beyond the scram itself. Plant name and unit were null in FORM-366 FIELDS identity block but derivable from narrative text (River Bend Station, Unit 1) and title reference to docket 458; populated accordingly. Reactor type (BWR) inferred from RCIC/turbine bypass valve terminology typical of BWR plants."
+}

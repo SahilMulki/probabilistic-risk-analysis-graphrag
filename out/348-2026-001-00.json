@@ -1,0 +1,424 @@
+{
+  "ler_number": "348-2026-001-00",
+  "identity": {
+    "accession_number": "ML26062A865",
+    "docket": "05000348",
+    "plant_name": "Farley",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2026-01-06",
+    "report_date": "2026-03-03",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Three Pressurizer Safety Valves' Lift Pressure Outside of Technical Specifications Limits due to Setpoint Drift"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)",
+      "10 CFR 50.73(a)(2)(i)(8)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "X",
+      "system": "AB",
+      "component": "RV",
+      "manufacturer": "C710",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "Setpoint drift was determined to be the cause of the PSV failures (Manufacturer: Crosby, Model Number: HP-8P-86, Serial Numbers: N56963-01-0004, N56963-01-0012, and N56963-01-0013).",
+    "cause_code": "X",
+    "category": "Other",
+    "theme": "PSV setpoint drift",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 348-2026-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "348-2026-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:348-2026-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Farley Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000348",
+      "match_key": "Unit:05000348"
+    },
+    {
+      "id": "cause",
+      "display_name": "Other (X)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "X",
+      "category": "Other",
+      "theme": "PSV setpoint drift",
+      "proximate_text": "Setpoint drift was determined to be the cause of the PSV failures (Manufacturer: Crosby, Model Number: HP-8P-86, Serial Numbers: N56963-01-0004, N56963-01-0012, and N56963-01-0013).",
+      "provisional": false,
+      "match_key": "Cause:Other"
+    },
+    {
+      "id": "sys_ab",
+      "display_name": "Reactor Coolant System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "AB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "system containing pressurizer safety valves",
+      "match_key": "System:AB"
+    },
+    {
+      "id": "c_psv_a",
+      "display_name": "Pressurizer Safety Valve 1A (Q1813V031A)",
+      "properties": {
+        "serial_number": "N56963-01-0013",
+        "as_found_pressure_psig": 2397,
+        "as_found_deviation_pct": -3.5
+      },
+      "type": "Component",
+      "eiis_code": "RV",
+      "identifier": "Q1813V031A",
+      "model": "HP-8P-86",
+      "manufacturer_code": "C710",
+      "inferred_code": false,
+      "match_key": "Component:RV|Q1813V031A"
+    },
+    {
+      "id": "c_psv_b",
+      "display_name": "Pressurizer Safety Valve 1B (Q1813V031B)",
+      "properties": {
+        "serial_number": "N56963-01-0012",
+        "as_found_pressure_psig": 2410,
+        "as_found_deviation_pct": -3.0
+      },
+      "type": "Component",
+      "eiis_code": "RV",
+      "identifier": "Q1813V031B",
+      "model": "HP-8P-86",
+      "manufacturer_code": "C710",
+      "inferred_code": false,
+      "match_key": "Component:RV|Q1813V031B"
+    },
+    {
+      "id": "c_psv_c",
+      "display_name": "Pressurizer Safety Valve 1C (Q1813V031C)",
+      "properties": {
+        "serial_number": "N56963-01-0004",
+        "as_found_pressure_psig": 2416,
+        "as_found_deviation_pct": -2.8
+      },
+      "type": "Component",
+      "eiis_code": "RV",
+      "identifier": "Q1813V031C",
+      "model": "HP-8P-86",
+      "manufacturer_code": "C710",
+      "inferred_code": false,
+      "match_key": "Component:RV|Q1813V031C"
+    },
+    {
+      "id": "fm_drift_a",
+      "display_name": "PSV 1A setpoint drift below TS/ASME limit",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "As-found lift pressure 2397 psig (-3.5%), below TS 3.4.10 allowable band and outside ASME +/-3% acceptance band.",
+      "match_key": "FailureMode:psv-1a-setpoint-drift-below-ts-asme-limit"
+    },
+    {
+      "id": "fm_drift_b",
+      "display_name": "PSV 1B setpoint drift below TS/ASME limit",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "As-found lift pressure 2410 psig (-3.0%), below TS 3.4.10 allowable band and outside ASME +/-3% acceptance band.",
+      "match_key": "FailureMode:psv-1b-setpoint-drift-below-ts-asme-limit"
+    },
+    {
+      "id": "fm_drift_c",
+      "display_name": "PSV 1C setpoint drift below TS limit",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "As-found lift pressure 2416 psig (-2.8%), below TS 3.4.10 allowable band.",
+      "match_key": "FailureMode:psv-1c-setpoint-drift-below-ts-limit"
+    },
+    {
+      "id": "cons_ts",
+      "display_name": "Operation prohibited by Technical Specifications / PSV lift pressures outside TS 3.4.10 limits",
+      "properties": {
+        "discovered": "2026-01-06",
+        "note": "No loss of safety function; ASME 110% RCS design pressure safety limit not challenged."
+      },
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:operation-prohibited-by-technical-specifications-psv-lift-pressures-outside-ts-3-4-10-limits"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace all three PSVs during fall 2025 refueling outage",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-all-three-psvs-during-fall-2025-refueling-outage"
+    },
+    {
+      "id": "ca_precondition",
+      "display_name": "Precondition replacement valves to vendor recommendations; verify as-left setpoints within +/-1%",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:precondition-replacement-valves-to-vendor-recommendations-verify-as-left-setpoints-within-1"
+    },
+    {
+      "id": "mfr_crosby",
+      "display_name": "Crosby",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "C710",
+      "match_key": "Manufacturer:C710"
+    },
+    {
+      "id": "rr_5073i1b",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_5073i8",
+      "display_name": "10 CFR 50.73(a)(2)(i)(8)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-8"
+    },
+    {
+      "id": "rr_ts3410",
+      "display_name": "Technical Specification 3.4.10",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:technical-specification-3-4-10"
+    },
+    {
+      "id": "rr_asme",
+      "display_name": "ASME OM Code / ASME code acceptance band",
+      "properties": {
+        "type": "standard/guidance"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:asme-om-code-asme-code-acceptance-band"
+    },
+    {
+      "id": "ler_u2_2025_002",
+      "display_name": "Unit 2 LER 2025-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "364-2025-002-00",
+      "stub": true,
+      "title": "Unit 2 PSV failures",
+      "plant": "Joseph M. Farley Nuclear Plant",
+      "match_key": "LER:364-2025-002-00"
+    },
+    {
+      "id": "ler_u1_2024_001",
+      "display_name": "Unit 1 LER 2024-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "348-2024-001-00",
+      "stub": true,
+      "title": "Similar PSV event",
+      "plant": "Joseph M. Farley Nuclear Plant",
+      "match_key": "LER:348-2024-001-00"
+    },
+    {
+      "id": "ler_u2_2023_003",
+      "display_name": "Unit 2 LER 2023-003-00",
+      "properties": {},
+      "type": "LER",
+      "key": "364-2023-003-00",
+      "stub": true,
+      "title": "Similar PSV event",
+      "plant": "Joseph M. Farley Nuclear Plant",
+      "match_key": "LER:364-2023-003-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073i1b",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073i8",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ab",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_psv_a",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_psv_b",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_psv_c",
+      "evidence": null
+    },
+    {
+      "source": "c_psv_a",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_crosby",
+      "evidence": null
+    },
+    {
+      "source": "c_psv_b",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_crosby",
+      "evidence": null
+    },
+    {
+      "source": "c_psv_c",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_crosby",
+      "evidence": null
+    },
+    {
+      "source": "fm_drift_a",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_drift_b",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_drift_c",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_drift_a",
+      "relation": "LEADS_TO",
+      "target": "cons_ts",
+      "evidence": null
+    },
+    {
+      "source": "fm_drift_b",
+      "relation": "LEADS_TO",
+      "target": "cons_ts",
+      "evidence": null
+    },
+    {
+      "source": "fm_drift_c",
+      "relation": "LEADS_TO",
+      "target": "cons_ts",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_precondition",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_u2_2025_002",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_u1_2024_001",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_u2_2023_003",
+      "evidence": null
+    },
+    {
+      "source": "cons_ts",
+      "relation": "MITIGATED_BY",
+      "target": "rr_ts3410",
+      "evidence": null
+    },
+    {
+      "source": "cons_ts",
+      "relation": "MITIGATED_BY",
+      "target": "rr_asme",
+      "evidence": null
+    }
+  ],
+  "chain": "setpoint drift [cause X] -> PSV 1A/1B/1C as-found lift pressures below TS 3.4.10 band (and 1A/1B outside ASME +/-3% band) -> operation prohibited by Technical Specifications -> valves replaced and preconditioned to vendor spec; no loss of safety function",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Three PSVs (1A, 1B, 1C) each treated as separate FailureMode nodes per distinct-failure rule, all caused by the same officially-coded 'X'/Other setpoint-drift cause and all leading to the same TS-violation consequence. UFSAR/RCS design-pressure limit and ASME 110% limit mentioned only as design-context/safety-limit check (not challenged) -- not modeled as a System or backup. Unit 2 PSV failure analysis (LER 2025-002-00) was leveraged as the bounding engineering analysis for this event but is captured only via SIMILAR_TO stub per rule 9, not duplicated as a separate cause chain. RegulatoryReference for reporting criterion 50.73(a)(2)(i)(8) note: form lists it oddly as '...(8)' rather than '...(B)'; both are carried verbatim from FORM-366 fields."
+}

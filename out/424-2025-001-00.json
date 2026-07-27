@@ -1,0 +1,198 @@
+{
+  "ler_number": "424-2025-001-00",
+  "identity": {
+    "accession_number": "ML25205A149",
+    "docket": "05000424",
+    "plant_name": "Vogtle",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2025-05-28",
+    "report_date": "2025-07-24",
+    "operating_mode": null,
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Human Performance Error Results in Loss of Main Feedwater Pump and Manual Reactor Trip"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": null,
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "human performance error",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 424-2025-006-00",
+      "properties": {},
+      "type": "LER",
+      "key": "424-2025-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:424-2025-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Vogtle Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000424",
+      "match_key": "Unit:05000424"
+    },
+    {
+      "id": "cause",
+      "display_name": "Human Performance Error (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "human performance error",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_fw",
+      "display_name": "Main Feedwater",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected system",
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "c_mfp",
+      "display_name": "Main Feedwater Pump",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:main-feedwater-pump"
+    },
+    {
+      "id": "fm_human_error",
+      "display_name": "Human performance error",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Personnel error resulted in loss of a main feedwater pump.",
+      "match_key": "FailureMode:human-performance-error"
+    },
+    {
+      "id": "fm_mfp_loss",
+      "display_name": "Loss of main feedwater pump",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Main feedwater pump lost/tripped as a result of the human performance error.",
+      "match_key": "FailureMode:loss-of-main-feedwater-pump"
+    },
+    {
+      "id": "cons_trip",
+      "display_name": "Manual reactor trip",
+      "properties": {},
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:manual-reactor-trip"
+    },
+    {
+      "id": "ca_review",
+      "display_name": "Evaluate and address human performance error",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:evaluate-and-address-human-performance-error"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_fw",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_mfp",
+      "evidence": null
+    },
+    {
+      "source": "fm_human_error",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_human_error",
+      "relation": "LEADS_TO",
+      "target": "fm_mfp_loss",
+      "evidence": null
+    },
+    {
+      "source": "fm_mfp_loss",
+      "relation": "LEADS_TO",
+      "target": "cons_trip",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_review",
+      "evidence": null
+    }
+  ],
+  "chain": "human performance error [cause TBD] -> loss of main feedwater pump -> manual reactor trip",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Narrative text was not provided (empty), so only the FORM-366 fields and abstract-level title could be used. Cause code TBD/provisional per form; no detailed proximate cause text, component identifiers, timing, or corrective-action specifics were available in the supplied inputs. FailureMode and Consequence nodes reflect the minimal information stated in the event title. No backups, manufacturers, or previous occurrences were identified due to absence of narrative content."
+}

@@ -1,0 +1,314 @@
+{
+  "ler_number": "348-2024-001-00",
+  "identity": {
+    "accession_number": "ML24169A161",
+    "docket": "05000348",
+    "plant_name": "Farley",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2024-04-18",
+    "report_date": "2024-06-17",
+    "operating_mode": null,
+    "power_level": 0,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Pressurizer Safety Valve Lift Pressure Outside of Technical Specifications Limits due to Setpoint Drift"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "X",
+      "system": "AB",
+      "component": "RV",
+      "manufacturer": "C710",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "Setpoint Drift of the PSV (Manufacturer: Crosby, Model Number: HP-BP-86, Serial Number: N56963-01-0014) was determined to be the cause of the failure.",
+    "cause_code": "X",
+    "category": "Other",
+    "theme": "spring/setpoint drift on aging safety valve",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 348-2024-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "348-2024-001-00",
+      "stub": false,
+      "title": "Pressurizer Safety Valve Lift Pressure Outside of Technical Specifications Limits due to Setpoint Drift",
+      "plant": "Joseph M. Farley Nuclear Plant",
+      "match_key": "LER:348-2024-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Farley Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000348",
+      "match_key": "Unit:05000348"
+    },
+    {
+      "id": "cause",
+      "display_name": "Other (X)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "X",
+      "category": "Other",
+      "theme": "spring/setpoint drift on aging safety valve",
+      "proximate_text": "Setpoint Drift of the PSV (Manufacturer: Crosby, Model Number: HP-BP-86, Serial Number: N56963-01-0014) was determined to be the cause of the failure.",
+      "provisional": false,
+      "match_key": "Cause:Other"
+    },
+    {
+      "id": "sys_ab",
+      "display_name": "Reactor Coolant System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "AB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:AB"
+    },
+    {
+      "id": "c_psv",
+      "display_name": "1A Pressurizer Safety Valve",
+      "properties": {
+        "serial_number": "N56963-01-0014"
+      },
+      "type": "Component",
+      "eiis_code": "RV",
+      "identifier": "1A PSV",
+      "model": "HP-BP-86",
+      "manufacturer_code": "C710",
+      "inferred_code": false,
+      "match_key": "Component:RV|1A PSV"
+    },
+    {
+      "id": "fm_springaging",
+      "display_name": "Aging spring in PSV",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "PSV retained older-design spring, last such spring in the fleet at FNP, subject to setpoint drift over time.",
+      "match_key": "FailureMode:aging-spring-in-psv"
+    },
+    {
+      "id": "fm_setpointdrift",
+      "display_name": "PSV lift setpoint drifted high",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "As-found lift pressure of 2538 psig, exceeding TS 3.4.10 allowable upper limit of 2510 psig, though within ASME code acceptance band.",
+      "match_key": "FailureMode:psv-lift-setpoint-drifted-high"
+    },
+    {
+      "id": "cons_ts",
+      "display_name": "PSV lift pressure outside TS 3.4.10 limits",
+      "properties": {
+        "as_found_lift_pressure_psig": 2538,
+        "ts_limits_psig": "2423-2510",
+        "asme_band_psig": "2410-2560"
+      },
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:psv-lift-pressure-outside-ts-3-4-10-limits"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace 1A PSV during outage with as-left setpoint within +/-1% tolerance",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-1a-psv-during-outage-with-as-left-setpoint-within-1-tolerance"
+    },
+    {
+      "id": "ca_springcampaign",
+      "display_name": "Complete fleet-wide PSV spring replacement campaign (last unit completed)",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:complete-fleet-wide-psv-spring-replacement-campaign-last-unit-completed"
+    },
+    {
+      "id": "mfr_crosby",
+      "display_name": "Crosby",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "C710",
+      "match_key": "Manufacturer:C710"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts3410",
+      "display_name": "Technical Specification 3.4.10",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:technical-specification-3-4-10"
+    },
+    {
+      "id": "ler_2016_003",
+      "display_name": "LER 348-2016-003-00",
+      "properties": {},
+      "type": "LER",
+      "key": "348-2016-003-00",
+      "stub": true,
+      "title": null,
+      "plant": "Joseph M. Farley Nuclear Plant",
+      "match_key": "LER:348-2016-003-00"
+    },
+    {
+      "id": "ler_2018_001",
+      "display_name": "LER 348-2018-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "348-2018-001-00",
+      "stub": true,
+      "title": null,
+      "plant": "Joseph M. Farley Nuclear Plant",
+      "match_key": "LER:348-2018-001-00"
+    },
+    {
+      "id": "ler_2019_001",
+      "display_name": "LER 348-2019-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "348-2019-001-00",
+      "stub": true,
+      "title": null,
+      "plant": "Joseph M. Farley Nuclear Plant",
+      "match_key": "LER:348-2019-001-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ab",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_psv",
+      "evidence": null
+    },
+    {
+      "source": "c_psv",
+      "relation": "PART_OF",
+      "target": "sys_ab",
+      "evidence": null
+    },
+    {
+      "source": "fm_springaging",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_springaging",
+      "relation": "LEADS_TO",
+      "target": "fm_setpointdrift",
+      "evidence": null
+    },
+    {
+      "source": "fm_setpointdrift",
+      "relation": "LEADS_TO",
+      "target": "cons_ts",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_springcampaign",
+      "evidence": null
+    },
+    {
+      "source": "c_psv",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_crosby",
+      "evidence": null
+    },
+    {
+      "source": "cons_ts",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts3410",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_2016_003",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_2018_001",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_2019_001",
+      "evidence": null
+    }
+  ],
+  "chain": "aging spring in 1A PSV [cause X] -> lift setpoint drifted high (as-found 2538 psig) -> PSV lift pressure outside TS 3.4.10 limits [safety function maintained per Westinghouse single-PSV-lift-high analysis]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code X (Other) governs category; narrative attributes the drift to an aging spring design, now fully replaced fleet-wide at FNP. Valve remained within ASME code acceptance band despite exceeding tighter TS limits; safety function preserved per prior Westinghouse analysis of single-PSV-lift-high scenario, so no BACKED_UP_BY system edge is warranted (this is an analysis-basis mitigation, not an operable backup system). Previous similar LERs captured as stubs per instructions; unit digit '1' prefixed per report's own reference format."
+}

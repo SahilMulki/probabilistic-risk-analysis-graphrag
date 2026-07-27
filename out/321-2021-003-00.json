@@ -1,0 +1,162 @@
+{
+  "ler_number": "321-2021-003-00",
+  "identity": {
+    "accession_number": "ML21305A874",
+    "docket": "05000321",
+    "plant_name": "Hatch",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2021-09-08",
+    "report_date": "2021-11-01",
+    "operating_mode": null,
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "High Pressure Coolant Injection System Discharge Valve Failure to Open"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)(D)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": null,
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": null,
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 321-2021-003-00",
+      "properties": {},
+      "type": "LER",
+      "key": "321-2021-003-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:321-2021-003-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Hatch Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000321",
+      "match_key": "Unit:05000321"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": null,
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_bj",
+      "display_name": "High Pressure Coolant Injection",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BJ"
+    },
+    {
+      "id": "c_valve",
+      "display_name": "HPCI Discharge Valve",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:hpci-discharge-valve"
+    },
+    {
+      "id": "fm_valve",
+      "display_name": "HPCI discharge valve failed to open",
+      "properties": {},
+      "type": "FailureMode",
+      "description": null,
+      "match_key": "FailureMode:hpci-discharge-valve-failed-to-open"
+    },
+    {
+      "id": "cons_hpci",
+      "display_name": "HPCI inoperable / unable to inject",
+      "properties": {},
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:hpci-inoperable-unable-to-inject"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bj",
+      "evidence": null
+    },
+    {
+      "source": "fm_valve",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_valve",
+      "relation": "LEADS_TO",
+      "target": "cons_hpci",
+      "evidence": null
+    }
+  ],
+  "chain": "unspecified cause [TBD] -> HPCI discharge valve fails to open -> HPCI inoperable",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "No narrative text was provided for this event; only FORM-366 fields were available. Cause code and category are TBD/provisional per source data. Component and failure-mode nodes are inferred minimally from the title only, since no 366A narrative content was supplied to establish detailed causal chain, timing, backups, or corrective actions."
+}

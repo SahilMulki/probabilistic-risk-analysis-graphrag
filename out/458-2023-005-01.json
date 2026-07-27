@@ -1,0 +1,372 @@
+{
+  "ler_number": "458-2023-005-01",
+  "identity": {
+    "accession_number": "ML24156A040",
+    "docket": "05000458",
+    "plant_name": "River Bend",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2023-11-17",
+    "report_date": "2024-06-04",
+    "operating_mode": "1",
+    "power_level": 30,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "/ 2023-005-01, Manual Reactor Scram Due to Lowering Feedwater Temperature Following an Automatic Isolation of Feedwater Heater String"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "There is insufficient evidence to determine a direct causal factor for the Low-Pressure Feedwater Heater String isolation event. An independent third-party review of this incident has determined the most probable cause of the isolation was a level switch actuation due to steam backflow from the drain receiver tank volume flashing as a result of a rapid pressure transient event.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "level switch actuation from steam flashing during pressure transient (undetermined root cause)",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 458-2023-005-01",
+      "properties": {},
+      "type": "LER",
+      "key": "458-2023-005-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:458-2023-005-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "River Bend Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000458",
+      "match_key": "Unit:05000458"
+    },
+    {
+      "id": "cause",
+      "display_name": "Undetermined (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "level switch actuation from steam flashing during pressure transient (undetermined root cause)",
+      "proximate_text": "There is insufficient evidence to determine a direct causal factor for the Low-Pressure Feedwater Heater String isolation event. An independent third-party review of this incident has determined the most probable cause of the isolation was a level switch actuation due to steam backflow from the drain receiver tank volume flashing as a result of a rapid pressure transient event.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_sj",
+      "display_name": "Feedwater",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "involved; heater string isolated, later maintained reactor water level",
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "sys_aa",
+      "display_name": "Control Rod Drive System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "AA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "used to insert control rods per AOP-0007",
+      "match_key": "System:AA"
+    },
+    {
+      "id": "sys_tf",
+      "display_name": "Turbine Steam Drains",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "TF",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; operable, maintained reactor pressure after scram",
+      "match_key": "System:TF"
+    },
+    {
+      "id": "c_heater_string_a",
+      "display_name": "Low-Pressure Feedwater Heater String 'A'",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "SJ",
+      "identifier": "String A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:SJ|String A"
+    },
+    {
+      "id": "c_level_switch",
+      "display_name": "Level switch (drain receiver tank level sensing)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:level-switch-drain-receiver-tank-level-sensing"
+    },
+    {
+      "id": "fm_pressure_transient",
+      "display_name": "Rapid pressure transient causes drain receiver tank volume steam backflow/flashing",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "A rapid pressure transient event caused steam backflow from the drain receiver tank volume to flash.",
+      "match_key": "FailureMode:rapid-pressure-transient-causes-drain-receiver-tank-volume-steam-backflow-flashing"
+    },
+    {
+      "id": "fm_level_switch_actuation",
+      "display_name": "Level switch spurious actuation",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Steam flashing caused the level switch to spuriously actuate.",
+      "match_key": "FailureMode:level-switch-spurious-actuation"
+    },
+    {
+      "id": "fm_heater_isolation",
+      "display_name": "Automatic isolation of Low-Pressure Feedwater Heater String 'A'",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Spurious level switch actuation caused automatic isolation of the heater string.",
+      "match_key": "FailureMode:automatic-isolation-of-low-pressure-feedwater-heater-string-a"
+    },
+    {
+      "id": "fm_fw_temp_lowering",
+      "display_name": "Lowering feedwater temperature transient",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Heater string isolation caused feedwater temperature to lower, requiring entry into AOP-0007.",
+      "match_key": "FailureMode:lowering-feedwater-temperature-transient"
+    },
+    {
+      "id": "fm_below_graph",
+      "display_name": "Reactor power lowered below AOP-0007 Attachment 1 graph start point",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Manual control rod insertion to exit the restricted region per AOP-0007 lowered power to 24%, below the 25.7% graph start point, leaving operators unable to determine if the unit was in an acceptable operating region.",
+      "match_key": "FailureMode:reactor-power-lowered-below-aop-0007-attachment-1-graph-start-point"
+    },
+    {
+      "id": "cons_scram",
+      "display_name": "Manual reactor scram",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2023-11-17T23:55:00",
+      "end": null,
+      "duration": null,
+      "tz": "CST",
+      "match_key": "Consequence:manual-reactor-scram"
+    },
+    {
+      "id": "ca_aop_clarify",
+      "display_name": "Add clarifying information/technical basis to AOP-0007",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:add-clarifying-information-technical-basis-to-aop-0007"
+    },
+    {
+      "id": "ca_graph_update",
+      "display_name": "Update Feedwater Temperature vs Core Thermal Power Graph in AOP-0007 for power below 25.7%",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:update-feedwater-temperature-vs-core-thermal-power-graph-in-aop-0007-for-power-below-25-7"
+    },
+    {
+      "id": "ca_time_delay",
+      "display_name": "Install time delay in level sensing circuit to distinguish valid level from pressure transient",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:install-time-delay-in-level-sensing-circuit-to-distinguish-valid-level-from-pressure-transient"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5072b2iv",
+      "display_name": "10 CFR 50.72(b)(2)(iv)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-2-iv-b"
+    },
+    {
+      "id": "rr_5072b3iv",
+      "display_name": "10 CFR 50.72(b)(3)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-3-iv-a"
+    },
+    {
+      "id": "ler_1986_001",
+      "display_name": "LER 458-1986-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "458-1986-001-00",
+      "stub": true,
+      "title": "Reactor scram from Low-Pressure Feedwater Heater String isolation due to false high level indication",
+      "plant": "River Bend Station",
+      "match_key": "LER:458-1986-001-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072b2iv",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072b3iv",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sj",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_aa",
+      "evidence": null
+    },
+    {
+      "source": "c_heater_string_a",
+      "relation": "PART_OF",
+      "target": "sys_sj",
+      "evidence": null
+    },
+    {
+      "source": "fm_pressure_transient",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_pressure_transient",
+      "relation": "LEADS_TO",
+      "target": "fm_level_switch_actuation",
+      "evidence": null
+    },
+    {
+      "source": "fm_level_switch_actuation",
+      "relation": "LEADS_TO",
+      "target": "fm_heater_isolation",
+      "evidence": null
+    },
+    {
+      "source": "fm_heater_isolation",
+      "relation": "LEADS_TO",
+      "target": "fm_fw_temp_lowering",
+      "evidence": null
+    },
+    {
+      "source": "fm_fw_temp_lowering",
+      "relation": "LEADS_TO",
+      "target": "fm_below_graph",
+      "evidence": null
+    },
+    {
+      "source": "fm_below_graph",
+      "relation": "LEADS_TO",
+      "target": "cons_scram",
+      "evidence": null
+    },
+    {
+      "source": "cons_scram",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_tf",
+      "evidence": null
+    },
+    {
+      "source": "cons_scram",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_sj",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_aop_clarify",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_graph_update",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_time_delay",
+      "evidence": null
+    },
+    {
+      "source": "c_level_switch",
+      "relation": "PART_OF",
+      "target": "sys_sj",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_1986_001",
+      "evidence": null
+    }
+  ],
+  "chain": "undetermined [cause TBD, most probable: level switch actuation from steam flashing on pressure transient] -> level switch spuriously actuates -> Feedwater Heater String 'A' auto-isolates -> feedwater temperature lowers -> operators manually insert rods per AOP-0007, power drops to 24% (below graph start point of 25.7%) -> manual reactor scram [backups: Turbine Steam Drains maintained pressure, Feedwater maintained level]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code is TBD/provisional per FORM-366 fields; category left as 'provisional' verbatim. The narrative provides only a 'most probable cause' from a third-party review, not a definitive root cause, so proximate_text quotes that language directly. Previous similar event LER-1986-001 is modeled as a stub LER per rule 9, with key preserved exactly as stated ('LER-1986-001' -> normalized to '1-1986-001' per unit-prefixed key convention, though the narrative did not explicitly give a unit digit; used unit 1 since RBS Unit 1 is the only unit). Turbine Steam Drains and Feedwater system are both stated as having maintained parameters post-scram, so both are modeled as BACKED_UP_BY per rule 6."
+}

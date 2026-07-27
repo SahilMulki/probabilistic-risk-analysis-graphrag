@@ -1,0 +1,392 @@
+{
+  "ler_number": "458-2025-003-00",
+  "identity": {
+    "accession_number": "ML25226A231",
+    "docket": "05000458",
+    "plant_name": "River Bend",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2025-06-18",
+    "report_date": "2025-08-14",
+    "operating_mode": "1",
+    "power_level": 95,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "/ 2025-003-00, Turbine Control Valve Closure Results in Loss of Safety Function"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)(A)",
+      "10 CFR 50.73(a)(2)(v)(D)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "B",
+      "system": "TG",
+      "component": "IMOD",
+      "manufacturer": "G080",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The direct cause of this event was a failure of the Redundant Valve Positioner \"B\" (RVP-B) for MSS-HYVCV3. This failure resulted in the closing of MSS-HYVCV3 resulting in the opening of the Turbine Bypass Valves to maintain reactor pressure at the selected setpoint.",
+    "cause_code": "B",
+    "category": "Design/Manufacturing/Installation",
+    "theme": "valve positioner module failure",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 05000458-2025-003-00",
+      "properties": {
+        "match_key": "LER:05000458-2025-003-00"
+      },
+      "type": "LER",
+      "key": "458-2025-003-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:458-2025-003-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "River Bend Unit 1",
+      "properties": {
+        "match_key": "Unit:05000458",
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000458",
+      "match_key": "Unit:05000458"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Manufacturing/Installation (B)",
+      "properties": {
+        "match_key": "Cause:Design/Manufacturing/Installation"
+      },
+      "type": "Cause",
+      "cause_code": "B",
+      "category": "Design/Manufacturing/Installation",
+      "theme": "valve positioner module failure",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Design/Manufacturing/Installation"
+    },
+    {
+      "id": "sys_tg",
+      "display_name": "Turbine Generator",
+      "properties": {
+        "match_key": "System:TG"
+      },
+      "type": "System",
+      "eiis_code": "TG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:TG"
+    },
+    {
+      "id": "sys_ji",
+      "display_name": "Turbine Bypass",
+      "properties": {
+        "match_key": "System:JI"
+      },
+      "type": "System",
+      "eiis_code": "JI",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JI"
+    },
+    {
+      "id": "c_hyvcv3",
+      "display_name": "High-Pressure Turbine Main Steam Supply Line \"D\" Control Valve (MSS-HYVCV3)",
+      "properties": {
+        "match_key": "Component:VLV|MSS-HYVCV3"
+      },
+      "type": "Component",
+      "eiis_code": "VLV",
+      "identifier": "MSS-HYVCV3",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:VLV|MSS-HYVCV3"
+    },
+    {
+      "id": "c_bypass",
+      "display_name": "Turbine Bypass Valves",
+      "properties": {
+        "match_key": "Component:V|turbine-bypass-valves"
+      },
+      "type": "Component",
+      "eiis_code": "V",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:V"
+    },
+    {
+      "id": "c_rvpb",
+      "display_name": "Redundant Valve Positioner \"B\" (RVP-B)",
+      "properties": {
+        "match_key": "Component:IMOD|RVP-B"
+      },
+      "type": "Component",
+      "eiis_code": "IMOD",
+      "identifier": "RVP-B",
+      "model": null,
+      "manufacturer_code": "G080",
+      "inferred_code": false,
+      "match_key": "Component:IMOD|RVP-B"
+    },
+    {
+      "id": "fm_rvp_fail",
+      "display_name": "Redundant Valve Positioner B failed",
+      "properties": {
+        "match_key": "FailureMode:rvp-b-failed"
+      },
+      "type": "FailureMode",
+      "description": "RVP-B failure for MSS-HYVCV3",
+      "match_key": "FailureMode:redundant-valve-positioner-b-failed"
+    },
+    {
+      "id": "fm_valve_close",
+      "display_name": "MSS-HYVCV3 closed unexpectedly",
+      "properties": {
+        "match_key": "FailureMode:mss-hyvcv3-closed"
+      },
+      "type": "FailureMode",
+      "description": "High-Pressure Turbine Main Steam Supply Line D Control Valve closed",
+      "match_key": "FailureMode:mss-hyvcv3-closed-unexpectedly"
+    },
+    {
+      "id": "fm_bypass_open",
+      "display_name": "Turbine Bypass Valves opened",
+      "properties": {
+        "match_key": "FailureMode:turbine-bypass-valves-opened"
+      },
+      "type": "FailureMode",
+      "description": "Turbine Bypass Valves opened to maintain reactor pressure at setpoint",
+      "match_key": "FailureMode:turbine-bypass-valves-opened"
+    },
+    {
+      "id": "cons_loss",
+      "display_name": "Loss of TS-required safety function instrumentation using turbine first stage pressure",
+      "properties": {
+        "match_key": "Consequence:loss-of-safety-function"
+      },
+      "type": "Consequence",
+      "start": "2025-06-18T05:53",
+      "end": "2025-06-18T06:46",
+      "duration": null,
+      "tz": "CDT",
+      "match_key": "Consequence:loss-of-ts-required-safety-function-instrumentation-using-turbine-first-stage-pressure"
+    },
+    {
+      "id": "ca_vendor",
+      "display_name": "Perform vendor analysis for the failed RVP module",
+      "properties": {
+        "match_key": "CorrectiveAction:vendor-analysis-rvp-module"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:perform-vendor-analysis-for-the-failed-rvp-module"
+    },
+    {
+      "id": "ca_investigate",
+      "display_name": "Investigate possible solution to mitigate or eliminate similar RVP module failures",
+      "properties": {
+        "match_key": "CorrectiveAction:investigate-rvp-mitigation"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:investigate-possible-solution-to-mitigate-or-eliminate-similar-rvp-module-failures"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace Redundant Valve Positioner B",
+      "properties": {
+        "match_key": "CorrectiveAction:replace-rvp-b"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-redundant-valve-positioner-b"
+    },
+    {
+      "id": "mfr_g080",
+      "display_name": "Manufacturer G080",
+      "properties": {
+        "match_key": "Manufacturer:G080"
+      },
+      "type": "Manufacturer",
+      "code": "G080",
+      "match_key": "Manufacturer:G080"
+    },
+    {
+      "id": "rr_5073a2vA",
+      "display_name": "10 CFR 50.73(a)(2)(v)(A)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-a"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-a"
+    },
+    {
+      "id": "rr_5073a2vD",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "rr_5072b3vA",
+      "display_name": "10 CFR 50.72(b)(3)(v)(A)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-72-b-3-v-a"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-3-v-a"
+    },
+    {
+      "id": "rr_5072b3vD",
+      "display_name": "10 CFR 50.72(b)(3)(v)(D)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-72-b-3-v-d"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-3-v-d"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073a2vA",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073a2vD",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072b3vA",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072b3vD",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_tg",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ji",
+      "evidence": null
+    },
+    {
+      "source": "c_hyvcv3",
+      "relation": "PART_OF",
+      "target": "sys_tg",
+      "evidence": null
+    },
+    {
+      "source": "c_bypass",
+      "relation": "PART_OF",
+      "target": "sys_ji",
+      "evidence": null
+    },
+    {
+      "source": "fm_rvp_fail",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_rvp_fail",
+      "relation": "LEADS_TO",
+      "target": "fm_valve_close",
+      "evidence": null
+    },
+    {
+      "source": "fm_valve_close",
+      "relation": "LEADS_TO",
+      "target": "fm_bypass_open",
+      "evidence": null
+    },
+    {
+      "source": "fm_bypass_open",
+      "relation": "LEADS_TO",
+      "target": "cons_loss",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_vendor",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_investigate",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "c_rvpb",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_g080",
+      "evidence": null
+    }
+  ],
+  "chain": "RVP-B positioner failure [cause B] -> MSS-HYVCV3 control valve closes -> Turbine Bypass Valves open -> loss of TS-required turbine first-stage-pressure safety functions (RPS, Control Rod Block, EOC-RPT) [functionality maintained, no actual SSFF]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Event closely tied to turbine first-stage pressure instrumentation used by RPS, Control Rod Block, and EOC-RPT TS functions; these were declared inoperable due to open bypass valves but functionality was maintained (not an actual SSFF). No previous occurrences reported, so no SIMILAR_TO edge or stub LER emitted. Block-13 system code TG and component code IMOD taken verbatim from FORM-366; RVP-B mapped to IMOD component per block-13."
+}

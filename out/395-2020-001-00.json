@@ -1,0 +1,398 @@
+{
+  "ler_number": "395-2020-001-00",
+  "identity": {
+    "accession_number": "ML20170B056",
+    "docket": "05000395",
+    "plant_name": "Summer",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2020-04-21",
+    "report_date": "2020-06-18",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "operability test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Condition Prohibited by Technical Specification 3.7.3"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "A review of the valve's service history indicates that there are seven potential causes, and each was evaluated. Of these seven only two failure mechanisms could not be refuted: solenoid issues and the valve's disc being stuck in the seat. Either of these could have prevented XVG09627B-CC from stroking open and they are the most likely causes.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "undetermined valve failure to stroke open (solenoid or disc stuck in seat)",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 395-2020-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "395-2020-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:395-2020-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Summer Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000395",
+      "match_key": "Unit:05000395"
+    },
+    {
+      "id": "cause",
+      "display_name": "Undetermined (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "undetermined valve failure to stroke open (solenoid or disc stuck in seat)",
+      "proximate_text": "A review of the valve's service history indicates that there are seven potential causes, and each was evaluated. Of these seven only two failure mechanisms could not be refuted: solenoid issues and the valve's disc being stuck in the seat. Either of these could have prevented XVG09627B-CC from stroking open and they are the most likely causes.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_cc",
+      "display_name": "Component Cooling Water System",
+      "properties": {
+        "note": "two independent 100% capacity loops"
+      },
+      "type": "System",
+      "eiis_code": "CC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:CC"
+    },
+    {
+      "id": "sys_sw",
+      "display_name": "Service Water System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SW",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "emergency makeup supply to CC via cross-connect valve",
+      "match_key": "System:SW"
+    },
+    {
+      "id": "c_xvg09627b",
+      "display_name": "XVG09627B-CC Service Water Supply to Component Cooling Valve",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "FSV",
+      "identifier": "XVG09627B-CC",
+      "model": "CKJAB 2AS 13/14 C",
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:FSV|XVG09627B-CC"
+    },
+    {
+      "id": "c_xvg09627a",
+      "display_name": "XVG09627A-CC Service Water Supply to Component Cooling Valve",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "FSV",
+      "identifier": "XVG09627A-CC",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:FSV|XVG09627A-CC"
+    },
+    {
+      "id": "fm_solenoid",
+      "display_name": "Solenoid issue preventing valve stroke",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "One of two unrefuted potential causes for XVG09627B-CC failing to stroke open",
+      "match_key": "FailureMode:solenoid-issue-preventing-valve-stroke"
+    },
+    {
+      "id": "fm_discstuck",
+      "display_name": "Valve disc stuck in seat",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Second of two unrefuted potential causes for XVG09627B-CC failing to stroke open",
+      "match_key": "FailureMode:valve-disc-stuck-in-seat"
+    },
+    {
+      "id": "fm_valvefail",
+      "display_name": "XVG09627B-CC failed to stroke open",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Valve failed to open during STP-130.005M surveillance test on April 21, 2020",
+      "match_key": "FailureMode:xvg09627b-cc-failed-to-stroke-open"
+    },
+    {
+      "id": "cons_tsviol",
+      "display_name": "CC loop B inoperable / TS 3.7.3 condition prohibited",
+      "properties": {
+        "note": "Valve inoperable for longer than the 72-hour LCO allowed outage time since last successful test on October 27, 2018"
+      },
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:cc-loop-b-inoperable-ts-3-7-3-condition-prohibited"
+    },
+    {
+      "id": "ca_returnservice",
+      "display_name": "Return XVG09627B-CC to service via Work Order 1901340",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:return-xvg09627b-cc-to-service-via-work-order-1901340"
+    },
+    {
+      "id": "ca_pm_solenoid",
+      "display_name": "PM addition to replace solenoids for XVG09627A,B-CC on R10 frequency (WO 2007409)",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:pm-addition-to-replace-solenoids-for-xvg09627a-b-cc-on-r10-frequency-wo-2007409"
+    },
+    {
+      "id": "ca_replace_solenoid_a",
+      "display_name": "Replace air supply solenoid on XVG09627A-CC during RF26 (WO 2007410)",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-air-supply-solenoid-on-xvg09627a-cc-during-rf26-wo-2007410"
+    },
+    {
+      "id": "ca_internal_inspection",
+      "display_name": "Internal inspection of XVG09627A-CC during RF26 per normal PM",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:internal-inspection-of-xvg09627a-cc-during-rf26-per-normal-pm"
+    },
+    {
+      "id": "mfr_anchor",
+      "display_name": "Anchor/Darling Valve Company",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": null,
+      "match_key": "Manufacturer:anchor-darling-valve-company"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts373",
+      "display_name": "Technical Specification 3.7.3",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-3-7-3"
+    },
+    {
+      "id": "rr_ts405",
+      "display_name": "Technical Specification Surveillance Requirement 4.0.5",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-surveillance-requirement-4-0-5"
+    },
+    {
+      "id": "ler_stub_11_02582",
+      "display_name": "CR-11-02582: XVG09627A-CC failed to fully stroke open during STP-130.005L",
+      "properties": {},
+      "type": "LER",
+      "key": "CR-11-02582",
+      "stub": true,
+      "title": null,
+      "plant": "V. C. Summer Nuclear Station Unit 1",
+      "match_key": "LER:CR-11-02582"
+    },
+    {
+      "id": "ler_stub_12_05011",
+      "display_name": "CR-12-05011: XVG09627B-CC failed to stroke open during STP-130.005M",
+      "properties": {},
+      "type": "LER",
+      "key": "CR-12-05011",
+      "stub": true,
+      "title": null,
+      "plant": "V. C. Summer Nuclear Station Unit 1",
+      "match_key": "LER:CR-12-05011"
+    },
+    {
+      "id": "ler_stub_13_01471",
+      "display_name": "CR-13-01471: XVG09627B-CC failed to fully stroke open during STP-130.005M",
+      "properties": {},
+      "type": "LER",
+      "key": "CR-13-01471",
+      "stub": true,
+      "title": null,
+      "plant": "V. C. Summer Nuclear Station Unit 1",
+      "match_key": "LER:CR-13-01471"
+    },
+    {
+      "id": "ler_stub_14_02282",
+      "display_name": "CR-14-02282: XVG09627A-CC failed to stroke open during STP-130.005L",
+      "properties": {},
+      "type": "LER",
+      "key": "CR-14-02282",
+      "stub": true,
+      "title": null,
+      "plant": "V. C. Summer Nuclear Station Unit 1",
+      "match_key": "LER:CR-14-02282"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts373",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts405",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_cc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sw",
+      "evidence": null
+    },
+    {
+      "source": "c_xvg09627b",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_anchor",
+      "evidence": null
+    },
+    {
+      "source": "fm_solenoid",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_discstuck",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_solenoid",
+      "relation": "LEADS_TO",
+      "target": "fm_valvefail",
+      "evidence": null
+    },
+    {
+      "source": "fm_discstuck",
+      "relation": "LEADS_TO",
+      "target": "fm_valvefail",
+      "evidence": null
+    },
+    {
+      "source": "fm_valvefail",
+      "relation": "LEADS_TO",
+      "target": "cons_tsviol",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_returnservice",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_pm_solenoid",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_solenoid_a",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_internal_inspection",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_stub_11_02582",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_stub_12_05011",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_stub_13_01471",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_stub_14_02282",
+      "evidence": null
+    }
+  ],
+  "chain": "undetermined cause [TBD] -> solenoid issue OR disc stuck in seat -> XVG09627B-CC fails to stroke open -> CC loop B inoperable > 72h -> condition prohibited by TS 3.7.3",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code is TBD/provisional per FORM-366 fields; narrative could not refute two candidate failure mechanisms (solenoid issue, disc stuck in seat), modeled as parallel FailureMode nodes both CAUSED_BY the provisional Cause node and both LEADS_TO the terminal valve-failure FailureMode. Block-13 system code 'CC' (Component Cooling) inferred from narrative context though not explicitly bracketed in that form; component code 'FSV' taken from garbled block-13 text ('cc FSV y'). No backups modeled for CC loop A since it is same-system redundancy already captured via sys_cc description, not a separate operable backup system explicitly named as such during the event window. Four CR (Condition Report) similar-occurrence references modeled as stub LER nodes per instructions, using their CR numbers as keys since no LER numbers were given."
+}

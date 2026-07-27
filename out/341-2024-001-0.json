@@ -1,0 +1,444 @@
+{
+  "ler_number": "341-2024-001-0",
+  "identity": {
+    "accession_number": "ML24136A211",
+    "docket": "05000341",
+    "plant_name": "Fermi",
+    "unit": 2,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2024-03-23",
+    "report_date": "2024-05-15",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "0",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Licensee Event Report (LER) No. 2024-001"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The cause of the SCRAM was the failure of the RL16 Block Load Relay which resulted in a trip of a bypass valve logic and prevented the opening of the bypass valves, in automatic, when required.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "relay failure disabling automatic bypass valve logic",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 341-2024-001-00",
+      "properties": {
+        "match_key": "LER:341-2024-001-00"
+      },
+      "type": "LER",
+      "key": "341-2024-001-0",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:341-2024-001-0"
+    },
+    {
+      "id": "unit",
+      "display_name": "Fermi Unit 2",
+      "properties": {
+        "match_key": "Unit:05000341",
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000341",
+      "match_key": "Unit:05000341"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {
+        "match_key": "Cause:provisional"
+      },
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "relay failure disabling automatic bypass valve logic",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_pcv",
+      "display_name": "Turbine Bypass Valves",
+      "properties": {
+        "match_key": "System:PCV"
+      },
+      "type": "System",
+      "eiis_code": "PCV",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "involved",
+      "match_key": "System:PCV"
+    },
+    {
+      "id": "sys_ji",
+      "display_name": "Main Turbine Pressure Regulator Control System / Main Turbine Bypass System",
+      "properties": {
+        "match_key": "System:JI"
+      },
+      "type": "System",
+      "eiis_code": "JI",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "involved",
+      "match_key": "System:JI"
+    },
+    {
+      "id": "sys_jd",
+      "display_name": "Reactor Protection System",
+      "properties": {
+        "match_key": "System:JD"
+      },
+      "type": "System",
+      "eiis_code": "JD",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "involved; RPS Reactor Pressure High trip functioned correctly",
+      "match_key": "System:JD"
+    },
+    {
+      "id": "sys_sb",
+      "display_name": "Main Steam System",
+      "properties": {
+        "match_key": "System:SB"
+      },
+      "type": "System",
+      "eiis_code": "SB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "used for decay heat removal to main condenser via manual bypass valve operation post-scram",
+      "match_key": "System:SB"
+    },
+    {
+      "id": "sys_gen",
+      "display_name": "Generator",
+      "properties": {
+        "match_key": "System:GEN"
+      },
+      "type": "System",
+      "eiis_code": "GEN",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "involved; load reduction target",
+      "match_key": "System:GEN"
+    },
+    {
+      "id": "c_rl16",
+      "display_name": "RL16 Block Load Relay",
+      "properties": {
+        "match_key": "Component:rl16-block-load-relay"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "RL16",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:rl16-block-load-relay"
+    },
+    {
+      "id": "c_bypassvalves",
+      "display_name": "Turbine Bypass Valves (two, on 52-inch manifold)",
+      "properties": {
+        "match_key": "Component:turbine-bypass-valves"
+      },
+      "type": "Component",
+      "eiis_code": "PCV",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:PCV"
+    },
+    {
+      "id": "fm_relay",
+      "display_name": "RL16 Block Load Relay failed",
+      "properties": {
+        "match_key": "FailureMode:rl16-block-load-relay-failed"
+      },
+      "type": "FailureMode",
+      "description": "Failure of the RL16 Block Load Relay resulted in a trip of the bypass valve logic.",
+      "match_key": "FailureMode:rl16-block-load-relay-failed"
+    },
+    {
+      "id": "fm_logictrip",
+      "display_name": "Bypass valve logic tripped",
+      "properties": {
+        "match_key": "FailureMode:bypass-valve-logic-tripped"
+      },
+      "type": "FailureMode",
+      "description": "The bypass valve automatic control logic tripped, preventing automatic opening of bypass valves when required.",
+      "match_key": "FailureMode:bypass-valve-logic-tripped"
+    },
+    {
+      "id": "fm_bypassclose",
+      "display_name": "Turbine bypass valves unexpectedly closed",
+      "properties": {
+        "match_key": "FailureMode:turbine-bypass-valves-unexpectedly-closed"
+      },
+      "type": "FailureMode",
+      "description": "Bypass valves, which were being opened per shutdown procedure, unexpectedly closed while lowering generator output.",
+      "match_key": "FailureMode:turbine-bypass-valves-unexpectedly-closed"
+    },
+    {
+      "id": "fm_pressurerise",
+      "display_name": "Reactor pressure/power positive feedback rise",
+      "properties": {
+        "match_key": "FailureMode:reactor-pressure-power-positive-feedback-rise"
+      },
+      "type": "FailureMode",
+      "description": "Unexpected bypass valve closure caused a pressure increase creating a positive feedback loop where rising pressure raised reactor power, further raising pressure, accelerated by turbine control valve closure over one minute.",
+      "match_key": "FailureMode:reactor-pressure-power-positive-feedback-rise"
+    },
+    {
+      "id": "cons_scram",
+      "display_name": "Automatic reactor SCRAM on high RPV pressure",
+      "properties": {
+        "match_key": "Consequence:automatic-reactor-scram-on-high-rpv-pressure"
+      },
+      "type": "Consequence",
+      "start": "2024-03-23T00:04",
+      "end": null,
+      "duration": null,
+      "tz": "EDT",
+      "match_key": "Consequence:automatic-reactor-scram-on-high-rpv-pressure"
+    },
+    {
+      "id": "cons_isolations",
+      "display_name": "Expected primary containment isolations (Groups 13, 15, 4)",
+      "properties": {
+        "match_key": "Consequence:expected-primary-containment-isolations"
+      },
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:expected-primary-containment-isolations-groups-13-15-4"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace RL16 Block Load Relay",
+      "properties": {
+        "match_key": "CorrectiveAction:replace-rl16-block-load-relay"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-rl16-block-load-relay"
+    },
+    {
+      "id": "ca_procedure",
+      "display_name": "Revise Procedure 22.000.04 Section 6 to eliminate operating on NRSG during reactor shutdown",
+      "properties": {
+        "match_key": "CorrectiveAction:revise-procedure-22-000-04"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-procedure-22-000-04-section-6-to-eliminate-operating-on-nrsg-during-reactor-shutdown"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5072iv",
+      "display_name": "10 CFR 50.72(b)(2)(iv)(B)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-72-b-2-iv-b"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-2-iv-b"
+    },
+    {
+      "id": "rr_5072iii",
+      "display_name": "10 CFR 50.72(b)(3)(iv)(A)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-72-b-3-iv-a"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-3-iv-a"
+    },
+    {
+      "id": "rr_ufsar152",
+      "display_name": "UFSAR Section 15.2 - Increase in Reactor Pressure",
+      "properties": {
+        "match_key": "RegulatoryReference:ufsar-section-15-2"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:ufsar-section-15-2-increase-in-reactor-pressure"
+    },
+    {
+      "id": "rr_ufsar771",
+      "display_name": "UFSAR Section 7.7.1.4",
+      "properties": {
+        "match_key": "RegulatoryReference:ufsar-section-7-7-1-4"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:ufsar-section-7-7-1-4"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072iv",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072iii",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_pcv",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ji",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jd",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_gen",
+      "evidence": null
+    },
+    {
+      "source": "c_bypassvalves",
+      "relation": "PART_OF",
+      "target": "sys_pcv",
+      "evidence": null
+    },
+    {
+      "source": "fm_relay",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_relay",
+      "relation": "LEADS_TO",
+      "target": "fm_logictrip",
+      "evidence": null
+    },
+    {
+      "source": "fm_logictrip",
+      "relation": "LEADS_TO",
+      "target": "fm_bypassclose",
+      "evidence": null
+    },
+    {
+      "source": "fm_bypassclose",
+      "relation": "LEADS_TO",
+      "target": "fm_pressurerise",
+      "evidence": null
+    },
+    {
+      "source": "fm_pressurerise",
+      "relation": "LEADS_TO",
+      "target": "cons_scram",
+      "evidence": null
+    },
+    {
+      "source": "fm_pressurerise",
+      "relation": "LEADS_TO",
+      "target": "cons_isolations",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procedure",
+      "evidence": null
+    },
+    {
+      "source": "cons_scram",
+      "relation": "MITIGATED_BY",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ufsar152",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ufsar771",
+      "evidence": null
+    }
+  ],
+  "chain": "RL16 Block Load Relay failure [cause TBD] -> bypass valve logic trip -> turbine bypass valves unexpectedly close -> reactor pressure/power positive feedback rise -> automatic reactor SCRAM on high RPV pressure [decay heat removed via Main Steam System to main condenser]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code is TBD/provisional per FORM-366 fields; narrative gives a specific proximate cause (RL16 relay failure) but no formal cause code/category was assigned, so cause node is marked provisional per rule 4. Reported initially under 10 CFR 50.72(b)(3)(v)(D) but later revised to remove that criterion since it was not judged to prevent fulfillment of a safety function; only 10 CFR 50.73(a)(2)(iv)(A) is the final Block 13 basis, though 50.72 notifications are referenced as regulatory references for completeness. No backup systems were stated as operable substitutes for the bypass system itself; Main Steam System was used post-scram for decay heat removal via manual operation, modeled as mitigation rather than BACKED_UP_BY since it is not a backup to a failed system in the ECCS sense. No previous occurrences reported, so no SIMILAR_TO edge or stub LER created."
+}

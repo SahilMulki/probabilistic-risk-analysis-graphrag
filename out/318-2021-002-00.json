@@ -1,0 +1,473 @@
+{
+  "ler_number": "318-2021-002-00",
+  "identity": {
+    "accession_number": "ML21139A096",
+    "docket": "05000318",
+    "plant_name": "Calvert Cliffs",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2021-03-21",
+    "report_date": "2021-05-19",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "inspection",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Revision 00"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "B",
+      "system": "SJ",
+      "component": "FCO",
+      "manufacturer": "F130",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "Troubleshooting determined 2ZC1111B failed due to the presence of foreign material internal to the positioner which caused the controller pneumatic outputs to force close 2CV1111. Analysis conducted by an off-site laboratory concluded that the foreign material was most likely debris from the assembly process.",
+    "cause_code": "B",
+    "category": "Design/Manufacturing/Installation",
+    "theme": "manufacturing/assembly debris contaminating positioner internals",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 318-2021-002-00",
+      "properties": {
+        "match_key": "LER:318-2021-002-00"
+      },
+      "type": "LER",
+      "key": "318-2021-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:318-2021-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Calvert Cliffs Unit 2",
+      "properties": {
+        "match_key": "Unit:05000318",
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000318",
+      "match_key": "Unit:05000318"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Manufacturing/Installation (B)",
+      "properties": {
+        "match_key": "Cause:Design/Manufacturing/Installation"
+      },
+      "type": "Cause",
+      "cause_code": "B",
+      "category": "Design/Manufacturing/Installation",
+      "theme": "manufacturing/assembly debris contaminating positioner internals",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Design/Manufacturing/Installation"
+    },
+    {
+      "id": "sys_sj",
+      "display_name": "Main Feedwater",
+      "properties": {
+        "match_key": "System:SJ"
+      },
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "c_fcv",
+      "display_name": "21 Steam Generator Feedwater Regulating Valve (2CV1111)",
+      "properties": {
+        "match_key": "Component:FCV|2CV1111"
+      },
+      "type": "Component",
+      "eiis_code": "FCV",
+      "identifier": "2CV1111",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:FCV|2CV1111"
+    },
+    {
+      "id": "c_pos_a",
+      "display_name": "21 SG Feedwater Regulating Valve Positioner A (2ZC1111A)",
+      "properties": {
+        "match_key": "Component:FCO|2ZC1111A"
+      },
+      "type": "Component",
+      "eiis_code": "FCO",
+      "identifier": "2ZC1111A",
+      "model": "Fisher DVC 6205",
+      "manufacturer_code": "F130",
+      "inferred_code": false,
+      "match_key": "Component:FCO|2ZC1111A"
+    },
+    {
+      "id": "c_pos_b",
+      "display_name": "21 SG Feedwater Regulating Valve Positioner B (2ZC1111B)",
+      "properties": {
+        "match_key": "Component:FCO|2ZC1111B"
+      },
+      "type": "Component",
+      "eiis_code": "FCO",
+      "identifier": "2ZC1111B",
+      "model": "Fisher DVC 6205",
+      "manufacturer_code": "F130",
+      "inferred_code": false,
+      "match_key": "Component:FCO|2ZC1111B"
+    },
+    {
+      "id": "fm_posa_fail",
+      "display_name": "Positioner 2ZC1111A failed due to poor quality feedback signal",
+      "properties": {
+        "match_key": "FailureMode:posa-feedback-signal-fail"
+      },
+      "type": "FailureMode",
+      "description": "Poor quality feedback signal resulted in a signal to open the valve, causing a mismatch between valve position and demand signal, transferring control to redundant positioner B.",
+      "match_key": "FailureMode:positioner-2zc1111a-failed-due-to-poor-quality-feedback-signal"
+    },
+    {
+      "id": "fm_auto_transfer",
+      "display_name": "Automatic transfer to redundant positioner B (no further backup available)",
+      "properties": {
+        "match_key": "FailureMode:auto-transfer-to-posb"
+      },
+      "type": "FailureMode",
+      "description": "Control transferred to 2ZC1111B as designed after 2ZC1111A failure, leaving no redundant controller available.",
+      "match_key": "FailureMode:automatic-transfer-to-redundant-positioner-b-no-further-backup-available"
+    },
+    {
+      "id": "fm_debris",
+      "display_name": "Foreign material (assembly debris) internal to positioner B",
+      "properties": {
+        "match_key": "FailureMode:posb-foreign-material"
+      },
+      "type": "FailureMode",
+      "description": "Debris from the assembly process was present internal to 2ZC1111B.",
+      "match_key": "FailureMode:foreign-material-assembly-debris-internal-to-positioner-b"
+    },
+    {
+      "id": "fm_posb_fail",
+      "display_name": "Positioner 2ZC1111B pneumatic outputs forced valve closed",
+      "properties": {
+        "match_key": "FailureMode:posb-pneumatic-force-close"
+      },
+      "type": "FailureMode",
+      "description": "Foreign material affected pneumatic outputs of 2ZC1111B, driving 2CV1111 shut.",
+      "match_key": "FailureMode:positioner-2zc1111b-pneumatic-outputs-forced-valve-closed"
+    },
+    {
+      "id": "fm_valve_shut",
+      "display_name": "2CV1111 failed shut",
+      "properties": {
+        "match_key": "FailureMode:2cv1111-failed-shut"
+      },
+      "type": "FailureMode",
+      "description": "Feedwater regulating valve 2CV1111 failed in the closed position, cutting off feedwater to 21 SG.",
+      "match_key": "FailureMode:2cv1111-failed-shut"
+    },
+    {
+      "id": "cons_trip",
+      "display_name": "21 Steam Generator water level lowering leading to manual reactor trip",
+      "properties": {
+        "match_key": "Consequence:sg-low-level-manual-trip"
+      },
+      "type": "Consequence",
+      "start": "2021-03-21T22:16",
+      "end": "2021-03-21T22:19",
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:21-steam-generator-water-level-lowering-leading-to-manual-reactor-trip"
+    },
+    {
+      "id": "sys_afw",
+      "display_name": "Auxiliary Feedwater",
+      "properties": {
+        "match_key": "System:auxiliary-feedwater"
+      },
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "manually initiated to restore SG level",
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "ca_replace_pos",
+      "display_name": "Replace both positioners (2ZC1111A and 2ZC1111B)",
+      "properties": {
+        "match_key": "CorrectiveAction:replace-both-positioners"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-both-positioners-2zc1111a-and-2zc1111b"
+    },
+    {
+      "id": "ca_pmt",
+      "display_name": "Complete post maintenance testing of positioners and 2CV1111",
+      "properties": {
+        "match_key": "CorrectiveAction:post-maintenance-testing"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:complete-post-maintenance-testing-of-positioners-and-2cv1111"
+    },
+    {
+      "id": "ca_screened_orings_2cv1111",
+      "display_name": "Install screened O-rings in replacement positioners for 2CV1111",
+      "properties": {
+        "match_key": "CorrectiveAction:screened-orings-2cv1111"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:install-screened-o-rings-in-replacement-positioners-for-2cv1111"
+    },
+    {
+      "id": "ca_screened_orings_2cv1121",
+      "display_name": "Install screened O-rings in positioners for 22 SG feedwater regulating valve 2CV1121",
+      "properties": {
+        "match_key": "CorrectiveAction:screened-orings-2cv1121"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:install-screened-o-rings-in-positioners-for-22-sg-feedwater-regulating-valve-2cv1121"
+    },
+    {
+      "id": "ca_extent_of_cause_unit1",
+      "display_name": "Install screened O-rings in all Unit 1 main feedwater regulating positioners during 2022 refueling outage",
+      "properties": {
+        "match_key": "CorrectiveAction:unit1-screened-orings-2022"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:install-screened-o-rings-in-all-unit-1-main-feedwater-regulating-positioners-during-2022-refueling-outage"
+    },
+    {
+      "id": "ca_pqi",
+      "display_name": "Revise receipt inspection to include Fisher 6000/6200 positioners in Parts Quality Initiative (PQI) Program",
+      "properties": {
+        "match_key": "CorrectiveAction:pqi-program-inclusion"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-receipt-inspection-to-include-fisher-6000-6200-positioners-in-parts-quality-initiative-pqi-program"
+    },
+    {
+      "id": "mfr_fisher",
+      "display_name": "Fisher",
+      "properties": {
+        "match_key": "Manufacturer:F130"
+      },
+      "type": "Manufacturer",
+      "code": "F130",
+      "match_key": "Manufacturer:F130"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5072b2",
+      "display_name": "10 CFR 50.72(b)(2)(iv)(B)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-72-b-2-iv-b"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-2-iv-b"
+    },
+    {
+      "id": "rr_5072b3",
+      "display_name": "10 CFR 50.72(b)(3)(iv)(A)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-72-b-3-iv-a"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-3-iv-a"
+    },
+    {
+      "id": "rr_nureg1022",
+      "display_name": "NUREG-1022, Rev. 3",
+      "properties": {
+        "match_key": "RegulatoryReference:nureg-1022-rev-3"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "standard/guidance",
+      "match_key": "RegulatoryReference:nureg-1022-rev-3"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072b2",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072b3",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sj",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_afw",
+      "evidence": null
+    },
+    {
+      "source": "c_fcv",
+      "relation": "PART_OF",
+      "target": "sys_sj",
+      "evidence": null
+    },
+    {
+      "source": "fm_posa_fail",
+      "relation": "LEADS_TO",
+      "target": "fm_auto_transfer",
+      "evidence": null
+    },
+    {
+      "source": "fm_auto_transfer",
+      "relation": "LEADS_TO",
+      "target": "fm_valve_shut",
+      "evidence": null
+    },
+    {
+      "source": "fm_debris",
+      "relation": "LEADS_TO",
+      "target": "fm_posb_fail",
+      "evidence": null
+    },
+    {
+      "source": "fm_posb_fail",
+      "relation": "LEADS_TO",
+      "target": "fm_valve_shut",
+      "evidence": null
+    },
+    {
+      "source": "fm_valve_shut",
+      "relation": "LEADS_TO",
+      "target": "cons_trip",
+      "evidence": null
+    },
+    {
+      "source": "fm_debris",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "cons_trip",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_pos",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_pos",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_pmt",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_screened_orings_2cv1111",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_screened_orings_2cv1121",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_extent_of_cause_unit1",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_pqi",
+      "evidence": null
+    },
+    {
+      "source": "c_pos_a",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_fisher",
+      "evidence": null
+    },
+    {
+      "source": "c_pos_b",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_fisher",
+      "evidence": null
+    }
+  ],
+  "chain": "assembly debris internal to positioner 2ZC1111B [cause B] -> pneumatic outputs force 2CV1111 closed (in parallel: 2ZC1111A feedback signal failure -> automatic transfer to redundant positioner B, leaving no further backup) -> feedwater regulating valve 2CV1111 fails shut -> 21 SG water level lowers toward auto-trip setpoint -> manual reactor trip [AFW manually initiated to restore SG level]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Two independent positioner failures occurred in sequence on the same valve: 2ZC1111A (feedback signal quality issue, not attributed to the official cause code) and 2ZC1111B (foreign material/debris, the actual root cause per Block 13 cause code B). Both are modeled as separate FailureMode nodes with a shared downstream consequence (valve failing shut), consistent with rule 5's parallel-trigger guidance. Only 2ZC1111B's foreign-material failure is linked CAUSED_BY the official Cause node, since that is what the narrative identifies as the root cause driving code B. AFW is modeled as an involved/operated system (manually initiated as part of recovery), not a BACKED_UP_BY relationship to a specific failure chain, since it did not prevent the trip but restored SG level afterward. No previous similar occurrences found per Section G, so no stub LER/SIMILAR_TO edge is created."
+}

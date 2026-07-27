@@ -1,0 +1,559 @@
+{
+  "ler_number": "374-2021-002-02",
+  "identity": {
+    "accession_number": "ML23145A012",
+    "docket": "05000374",
+    "plant_name": "La Salle",
+    "unit": 2,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2018-08-23",
+    "report_date": "2023-05-25",
+    "operating_mode": null,
+    "power_level": 100,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "02",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Supplement to Reactor Protection System Half Scram due to Motor Generator Set Output Breaker Trip"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)",
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "the cause of the issue was a degraded voltage adjustment potentiometer (device 1P) on the 2A RPS MG set, which was causing intermittent resistance readings...the cause of the 2B21-F067D slow closure was motor and bearing degradation caused by an adjacent steam leak",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "component degradation (potentiometer and MOV motor/bearing) leading to RPS bus loss and delayed valve closure",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 374-2021-002-02",
+      "properties": {},
+      "type": "LER",
+      "key": "374-2021-002-02",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:374-2021-002-02"
+    },
+    {
+      "id": "unit",
+      "display_name": "La Salle Unit 2",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000374",
+      "match_key": "Unit:05000374"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "component degradation (potentiometer and MOV motor/bearing) leading to RPS bus loss and delayed valve closure",
+      "proximate_text": "the cause of the issue was a degraded voltage adjustment potentiometer (device 1P) on the 2A RPS MG set, which was causing intermittent resistance readings...the cause of the 2B21-F067D slow closure was motor and bearing degradation caused by an adjacent steam leak",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_rps",
+      "display_name": "Reactor Protection System",
+      "properties": {
+        "note": "A RPS logic and associated isolation functions"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:reactor-protection-system"
+    },
+    {
+      "id": "sys_pcis",
+      "display_name": "Primary Containment Isolation System",
+      "properties": {
+        "note": "designed to isolate containment penetrations"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:primary-containment-isolation-system"
+    },
+    {
+      "id": "c_mgset",
+      "display_name": "2A RPS Logic MG Set Output Breaker",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "2A RPS MG Set",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:2a-rps-logic-mg-set-output-breaker"
+    },
+    {
+      "id": "c_pot",
+      "display_name": "Voltage Adjustment Potentiometer (device 1P)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "RHE",
+      "identifier": "1P",
+      "model": "RHS500",
+      "manufacturer_code": "0026",
+      "inferred_code": false,
+      "match_key": "Component:RHE|1P"
+    },
+    {
+      "id": "c_msiv_drain",
+      "display_name": "2D Outboard MSIV Drain Valve",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": "2B21-F067D",
+      "model": "GR12809F-6565-1M",
+      "manufacturer_code": "A415",
+      "inferred_code": false,
+      "match_key": "Component:ISV|2B21-F067D"
+    },
+    {
+      "id": "c_msiv_a",
+      "display_name": "2B21-F067A Valve (adjacent steam leak source)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "2B21-F067A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:2b21-f067a-valve-adjacent-steam-leak-source"
+    },
+    {
+      "id": "fm_pot_degraded",
+      "display_name": "Potentiometer degraded causing intermittent resistance",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Degraded voltage adjustment potentiometer on 2A RPS MG set caused intermittent resistance readings",
+      "match_key": "FailureMode:potentiometer-degraded-causing-intermittent-resistance"
+    },
+    {
+      "id": "fm_voltage_fluctuation",
+      "display_name": "MG set output voltage fluctuation",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Intermittent resistance caused output voltage of RPS MG set to fluctuate",
+      "match_key": "FailureMode:mg-set-output-voltage-fluctuation"
+    },
+    {
+      "id": "fm_breaker_trip",
+      "display_name": "2A RPS MG set output breaker overloaded and tripped",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Breaker tripped due to overload from voltage fluctuation",
+      "match_key": "FailureMode:2a-rps-mg-set-output-breaker-overloaded-and-tripped"
+    },
+    {
+      "id": "fm_steam_leak",
+      "display_name": "Adjacent steam leak from 2B21-F067A",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Steam leak from adjacent valve caused degradation of motor and bearing on 2B21-F067D",
+      "match_key": "FailureMode:adjacent-steam-leak-from-2b21-f067a"
+    },
+    {
+      "id": "fm_motor_bearing_degradation",
+      "display_name": "Motor and bearing degradation on 2D MSIV drain valve",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Motor and bearing degradation caused by adjacent steam leak",
+      "match_key": "FailureMode:motor-and-bearing-degradation-on-2d-msiv-drain-valve"
+    },
+    {
+      "id": "fm_slow_closure",
+      "display_name": "2D MSIV drain valve slow closure",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Slow closure time exceeded TRM maximum isolation time limits, valve tripped on thermal overloads",
+      "match_key": "FailureMode:2d-msiv-drain-valve-slow-closure"
+    },
+    {
+      "id": "cons_halfscram",
+      "display_name": "RPS half scram / loss of power to 2A RPS bus and multiple isolations",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2021-05-31T19:26",
+      "end": null,
+      "duration": null,
+      "tz": "CDT",
+      "match_key": "Consequence:rps-half-scram-loss-of-power-to-2a-rps-bus-and-multiple-isolations"
+    },
+    {
+      "id": "cons_pciv_inop",
+      "display_name": "2D outboard MSIV drain valve declared inoperable as PCIV",
+      "properties": {
+        "note": "no loss of safety function; inboard PCIV remained operable"
+      },
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:2d-outboard-msiv-drain-valve-declared-inoperable-as-pciv"
+    },
+    {
+      "id": "ca_declare_inop",
+      "display_name": "Declaration of affected systems inoperable and applicable TS required actions",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:declaration-of-affected-systems-inoperable-and-applicable-ts-required-actions"
+    },
+    {
+      "id": "ca_evaluate_breaker",
+      "display_name": "Evaluate A RPS MG set output breaker trip condition",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:evaluate-a-rps-mg-set-output-breaker-trip-condition"
+    },
+    {
+      "id": "ca_restore_rps",
+      "display_name": "Maintenance activities to restore A RPS logic",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:maintenance-activities-to-restore-a-rps-logic"
+    },
+    {
+      "id": "ca_restore_pcis",
+      "display_name": "Restore system alignments for affected PCIS group",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:restore-system-alignments-for-affected-pcis-group"
+    },
+    {
+      "id": "ca_repair_valve",
+      "display_name": "Completed repairs and failure analysis of valve in 2023 Unit 2 refueling outage",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:completed-repairs-and-failure-analysis-of-valve-in-2023-unit-2-refueling-outage"
+    },
+    {
+      "id": "ca_replace_pot_regulator",
+      "display_name": "Replace degraded potentiometer and voltage regulator on 2A RPS MG set",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-degraded-potentiometer-and-voltage-regulator-on-2a-rps-mg-set"
+    },
+    {
+      "id": "ca_extent_condition_rps",
+      "display_name": "Extent of condition review of Unit 1 RPS MG sets and Unit 2 2B RPS MG set",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:extent-of-condition-review-of-unit-1-rps-mg-sets-and-unit-2-2b-rps-mg-set"
+    },
+    {
+      "id": "ca_extent_condition_msiv",
+      "display_name": "Extent of condition testing on nearby MSIV drain valves and repairs as necessary",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:extent-of-condition-testing-on-nearby-msiv-drain-valves-and-repairs-as-necessary"
+    },
+    {
+      "id": "ca_mov_testing",
+      "display_name": "Include all MSIV drain valves in station MOV testing program for periodic testing",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:include-all-msiv-drain-valves-in-station-mov-testing-program-for-periodic-testing"
+    },
+    {
+      "id": "mfr_ohmite",
+      "display_name": "Ohmite",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "0026",
+      "match_key": "Manufacturer:0026"
+    },
+    {
+      "id": "mfr_anderson",
+      "display_name": "Anderson & Co., Greenwood",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "A415",
+      "match_key": "Manufacturer:A415"
+    },
+    {
+      "id": "rr_5073iv",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5073i",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_nei",
+      "display_name": "NEI 99-02, Regulatory Assessment Performance Indicator Guideline",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "standard/guidance",
+      "match_key": "RegulatoryReference:nei-99-02-regulatory-assessment-performance-indicator-guideline"
+    },
+    {
+      "id": "rr_trm",
+      "display_name": "Technical Requirements Manual (TRM) isolation time limits",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-requirements-manual-trm-isolation-time-limits"
+    },
+    {
+      "id": "ler_prev1",
+      "display_name": "IR 4166455 - 2A RPS MG Set Output Breaker Failed to Trip Open During Surveillance Test",
+      "properties": {},
+      "type": "LER",
+      "key": "IR 4166455",
+      "stub": true,
+      "title": null,
+      "plant": "LaSalle County Station Unit 2",
+      "match_key": "LER:IR 4166455"
+    },
+    {
+      "id": "ler_prev2",
+      "display_name": "IR 4368877 - 1A RPS Half-Scram During Relay Replacement Maintenance",
+      "properties": {},
+      "type": "LER",
+      "key": "IR 4368877",
+      "stub": true,
+      "title": null,
+      "plant": "LaSalle County Station Unit 1",
+      "match_key": "LER:IR 4368877"
+    },
+    {
+      "id": "ler_prev3",
+      "display_name": "IR 4407689 - 2D Inboard MSIV Unresponsive During Maintenance Testing",
+      "properties": {},
+      "type": "LER",
+      "key": "IR 4407689",
+      "stub": true,
+      "title": null,
+      "plant": "LaSalle County Station Unit 2",
+      "match_key": "LER:IR 4407689"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073iv",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073i",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rps",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_pcis",
+      "evidence": null
+    },
+    {
+      "source": "c_pot",
+      "relation": "PART_OF",
+      "target": "c_mgset",
+      "evidence": null
+    },
+    {
+      "source": "c_pot",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_ohmite",
+      "evidence": null
+    },
+    {
+      "source": "c_msiv_drain",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_anderson",
+      "evidence": null
+    },
+    {
+      "source": "fm_pot_degraded",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_pot_degraded",
+      "relation": "LEADS_TO",
+      "target": "fm_voltage_fluctuation",
+      "evidence": null
+    },
+    {
+      "source": "fm_voltage_fluctuation",
+      "relation": "LEADS_TO",
+      "target": "fm_breaker_trip",
+      "evidence": null
+    },
+    {
+      "source": "fm_breaker_trip",
+      "relation": "LEADS_TO",
+      "target": "cons_halfscram",
+      "evidence": null
+    },
+    {
+      "source": "fm_steam_leak",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_steam_leak",
+      "relation": "LEADS_TO",
+      "target": "fm_motor_bearing_degradation",
+      "evidence": null
+    },
+    {
+      "source": "fm_motor_bearing_degradation",
+      "relation": "LEADS_TO",
+      "target": "fm_slow_closure",
+      "evidence": null
+    },
+    {
+      "source": "fm_slow_closure",
+      "relation": "LEADS_TO",
+      "target": "cons_pciv_inop",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_declare_inop",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_evaluate_breaker",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_restore_rps",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_restore_pcis",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_repair_valve",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_pot_regulator",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_extent_condition_rps",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_extent_condition_msiv",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_mov_testing",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev1",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev2",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev3",
+      "evidence": null
+    }
+  ],
+  "chain": "degraded voltage adjustment potentiometer [cause TBD] -> RPS MG set output voltage fluctuation -> 2A RPS MG set output breaker overload/trip -> RPS half scram & multi-system isolations; separately: adjacent steam leak -> motor/bearing degradation on 2D MSIV drain valve -> slow closure exceeding TRM limits -> valve declared inoperable as PCIV [backup: inboard PCIV remained operable]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "This is a Rev 02 supplement to an original LER; official cause code remains TBD/provisional per form fields, though narrative describes two distinct root causes (potentiometer degradation for RPS MG set trip; steam-leak-induced motor/bearing degradation for MSIV drain valve slow closure) modeled as parallel failure chains sharing the same provisional cause node. Previous occurrences captured as stub LER nodes using their IR numbers as keys per instructions, since no formal LER numbers were given for them; plant/unit inferred from narrative text describing each IR."
+}

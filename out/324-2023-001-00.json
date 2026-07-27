@@ -1,0 +1,475 @@
+{
+  "ler_number": "324-2023-001-00",
+  "identity": {
+    "accession_number": "ML23199A224",
+    "docket": "05000324",
+    "plant_name": "Brunswick",
+    "unit": 2,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2023-05-23",
+    "report_date": "2023-07-17",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2023-001-00 for Brunswick Steam Electric Plant, Unit No. 2, Two Main Steam Line Safety Relief Valves Inoperable"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "B",
+      "system": "SB",
+      "component": "RV",
+      "manufacturer": "T020",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "For the SN 1278 pilot valve, corrosion bonding of the SRV pilot disc to the pilot seat likely caused the +3.8 percent out of tolerance as-found lift setpoint...an inherent problem with the Target Rock two-stage SRV design...For the SN 1223 pilot valve, the -5 percent out of tolerance lift setpoint was likely a result of a combination of degraded pilot valve assembly sub-components...the set pressure spring was not a matched set with the spring follower which likely resulted in the spring repositioning after being lifted and contributed to the side-loading of the spring",
+    "cause_code": "B",
+    "category": "Design/Manufacturing/Installation",
+    "theme": "SRV pilot valve design/assembly degradation (corrosion bonding; mismatched spring set)",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 324-2023-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "324-2023-001-00",
+      "stub": false,
+      "title": "Two Main Steam Line Safety Relief Valves Inoperable",
+      "plant": null,
+      "match_key": "LER:324-2023-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Brunswick Unit 2",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000324",
+      "match_key": "Unit:05000324"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Manufacturing/Installation (B)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "B",
+      "category": "Design/Manufacturing/Installation",
+      "theme": "SRV pilot valve design/assembly degradation (corrosion bonding; mismatched spring set)",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Design/Manufacturing/Installation"
+    },
+    {
+      "id": "sys_sb",
+      "display_name": "Main Steam",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SB"
+    },
+    {
+      "id": "c_srv1278",
+      "display_name": "SRV Pilot Valve SN 1278",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "RV",
+      "identifier": "SN 1278",
+      "model": null,
+      "manufacturer_code": "T020",
+      "inferred_code": false,
+      "match_key": "Component:RV|SN 1278"
+    },
+    {
+      "id": "c_srv1223",
+      "display_name": "SRV Pilot Valve SN 1223",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "RV",
+      "identifier": "SN 1223",
+      "model": null,
+      "manufacturer_code": "T020",
+      "inferred_code": false,
+      "match_key": "Component:RV|SN 1223"
+    },
+    {
+      "id": "c_pilotdisc",
+      "display_name": "Pilot disc",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:pilot-disc"
+    },
+    {
+      "id": "c_pilotseat",
+      "display_name": "Pilot seat",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:pilot-seat"
+    },
+    {
+      "id": "c_spring",
+      "display_name": "Set pressure spring / spring follower assembly",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:set-pressure-spring-spring-follower-assembly"
+    },
+    {
+      "id": "c_guide",
+      "display_name": "Guide assembly / seal bellows rod assembly",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:guide-assembly-seal-bellows-rod-assembly"
+    },
+    {
+      "id": "fm_corrosion",
+      "display_name": "Corrosion bonding of pilot disc to pilot seat (SN 1278)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Corrosion bonding between pilot disc and seat, an inherent issue with the Target Rock two-stage SRV design, mitigated by Platinum coating but recurring periodically.",
+      "match_key": "FailureMode:corrosion-bonding-of-pilot-disc-to-pilot-seat-sn-1278"
+    },
+    {
+      "id": "fm_highsetpoint",
+      "display_name": "SN 1278 lift setpoint +3.8% out of tolerance",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "As-found lift setpoint exceeded the +/-3% TS SR 3.4.3.1 tolerance.",
+      "match_key": "FailureMode:sn-1278-lift-setpoint-3-8-out-of-tolerance"
+    },
+    {
+      "id": "fm_mismatchedspring",
+      "display_name": "Mismatched set pressure spring and follower (SN 1223)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Set pressure spring was not a matched set with the spring follower, likely causing spring repositioning after lift and side-loading.",
+      "match_key": "FailureMode:mismatched-set-pressure-spring-and-follower-sn-1223"
+    },
+    {
+      "id": "fm_sideload",
+      "display_name": "Spring side-loading / scoring between guide and seal bellows rod",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Minor scoring between guide assembly and seal bellows rod assembly indicating side-loading of the spring, considered normal wear but contributory.",
+      "match_key": "FailureMode:spring-side-loading-scoring-between-guide-and-seal-bellows-rod"
+    },
+    {
+      "id": "fm_steamcutting",
+      "display_name": "Minor steam cutting on pilot disc from slight seat leakage",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Minor steam cutting noted on the pilot disc, likely resulted from slight seat leakage; considered normal wear but contributory.",
+      "match_key": "FailureMode:minor-steam-cutting-on-pilot-disc-from-slight-seat-leakage"
+    },
+    {
+      "id": "fm_lowsetpoint",
+      "display_name": "SN 1223 lift setpoint -5% out of tolerance",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Combined effect of degraded pilot valve assembly sub-components resulted in the -5% out-of-tolerance lift setpoint.",
+      "match_key": "FailureMode:sn-1223-lift-setpoint-5-out-of-tolerance"
+    },
+    {
+      "id": "cons_srv",
+      "display_name": "Two main steam SRVs inoperable / TS-prohibited condition (fewer than required SRVs within tolerance)",
+      "properties": {
+        "note": "Reported per 10 CFR 50.73(a)(2)(i)(B) as condition prohibited by TS 3.4.3; no adverse impact on nuclear safety per RSAR bounding analysis"
+      },
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:two-main-steam-srvs-inoperable-ts-prohibited-condition-fewer-than-required-srvs-within-tolerance"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace all eleven SRV pilot valves with certified spares before startup",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-all-eleven-srv-pilot-valves-with-certified-spares-before-startup"
+    },
+    {
+      "id": "ca_confirmsprings",
+      "display_name": "Confirm matching spring sets on all removed valves / verify rebuild paperwork for Unit 1 and Unit 2",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:confirm-matching-spring-sets-on-all-removed-valves-verify-rebuild-paperwork-for-unit-1-and-unit-2"
+    },
+    {
+      "id": "ca_rebuild",
+      "display_name": "Rebuild and certify out-of-tolerance pilot valve assemblies (restore disc surface, recoat Platinum, restore sub-components, match spring set)",
+      "properties": {
+        "target_completion": "end of 2023"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:rebuild-and-certify-out-of-tolerance-pilot-valve-assemblies-restore-disc-surface-recoat-platinum-restore-sub-components-match-spring-set"
+    },
+    {
+      "id": "mfr_targetrock",
+      "display_name": "Target Rock",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "T020",
+      "match_key": "Manufacturer:T020"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts343",
+      "display_name": "TS 3.4.3 / SR 3.4.3.1",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ts-3-4-3-sr-3-4-3-1"
+    },
+    {
+      "id": "rr_rsar",
+      "display_name": "Brunswick Unit 2 Cycle 25 Reload Safety Analysis Report (RSAR)",
+      "properties": {
+        "type": "analysis-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:brunswick-unit-2-cycle-25-reload-safety-analysis-report-rsar"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "LER 325-2020-004-00",
+      "properties": {},
+      "type": "LER",
+      "key": "325-2020-004-00",
+      "stub": true,
+      "title": "Unit 1 operation prohibited by TSs due to three of eleven SRV pilot valves found with lift setpoints outside +/-3 percent tolerance",
+      "plant": "Brunswick Steam Electric Plant, Unit 1",
+      "match_key": "LER:325-2020-004-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts343",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_srv1278",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_srv1223",
+      "evidence": null
+    },
+    {
+      "source": "c_srv1278",
+      "relation": "PART_OF",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "c_srv1223",
+      "relation": "PART_OF",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "c_pilotdisc",
+      "relation": "PART_OF",
+      "target": "c_srv1278",
+      "evidence": null
+    },
+    {
+      "source": "c_pilotseat",
+      "relation": "PART_OF",
+      "target": "c_srv1278",
+      "evidence": null
+    },
+    {
+      "source": "c_spring",
+      "relation": "PART_OF",
+      "target": "c_srv1223",
+      "evidence": null
+    },
+    {
+      "source": "c_guide",
+      "relation": "PART_OF",
+      "target": "c_srv1223",
+      "evidence": null
+    },
+    {
+      "source": "fm_corrosion",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_corrosion",
+      "relation": "LEADS_TO",
+      "target": "fm_highsetpoint",
+      "evidence": null
+    },
+    {
+      "source": "fm_highsetpoint",
+      "relation": "LEADS_TO",
+      "target": "cons_srv",
+      "evidence": null
+    },
+    {
+      "source": "fm_mismatchedspring",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_mismatchedspring",
+      "relation": "LEADS_TO",
+      "target": "fm_sideload",
+      "evidence": null
+    },
+    {
+      "source": "fm_steamcutting",
+      "relation": "LEADS_TO",
+      "target": "fm_lowsetpoint",
+      "evidence": null
+    },
+    {
+      "source": "fm_sideload",
+      "relation": "LEADS_TO",
+      "target": "fm_lowsetpoint",
+      "evidence": null
+    },
+    {
+      "source": "fm_lowsetpoint",
+      "relation": "LEADS_TO",
+      "target": "cons_srv",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_confirmsprings",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_rebuild",
+      "evidence": null
+    },
+    {
+      "source": "c_srv1278",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_targetrock",
+      "evidence": null
+    },
+    {
+      "source": "c_srv1223",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_targetrock",
+      "evidence": null
+    },
+    {
+      "source": "cons_srv",
+      "relation": "MITIGATED_BY",
+      "target": "rr_rsar",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    }
+  ],
+  "chain": "corrosion bonding (design B) -> SN1278 pilot valve lift setpoint +3.8% out of tolerance -> SRV inoperable; mismatched spring/follower (design B) -> side-loading/scoring + minor steam cutting -> SN1223 lift setpoint -5% out of tolerance -> two SRVs inoperable / TS-prohibited condition [bounded by RSAR analysis, no adverse safety impact]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q9",
+    "Q14"
+  ],
+  "notes": "Two parallel, physically distinct failure chains converge on the same consequence node (two SRVs found out of tolerance). Reactor type inferred as BWR from Brunswick plant identity (not explicitly restated in form fields). MANUFACTURED_BY edge uses T020 (Target Rock) per block 13. RSAR analysis basis modeled as mitigating regulatory reference since it bounds/limits the consequence rather than being a design-context-only mention. Previous similar event LER 1-2020-004 kept exactly as cited (unit-prefixed format) per instructions."
+}

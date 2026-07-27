@@ -1,0 +1,491 @@
+{
+  "ler_number": "373-2024-003-01",
+  "identity": {
+    "accession_number": "ML24213A022",
+    "docket": "05000373",
+    "plant_name": "La Salle",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2024-04-09",
+    "report_date": "2024-07-31",
+    "operating_mode": null,
+    "power_level": null,
+    "discovery_context": "operability test",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Supplement to Technical Specification (TS) Limiting Condition for Operation (LCO) 3.6.1.3 Completion Time Exceeded"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)",
+      "10 CFR 50.73(a)(2)(vii)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "X",
+      "system": "IG",
+      "component": "ISV",
+      "manufacturer": "G080",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "the test surveillance did not factor in the expiration date of the squib cartridges for future surveillance test performances. Instead, an alternative tracking method was used to ensure the squib cartridges did not expire prior to the next performance of the operability test, which was ineffective. Additionally, during the last performance of the operability test, the expiration dates of the squib cartridges were not documented in the Corrective Action Program (CAP) to ensure expiration dates were not exceeded.",
+    "cause_code": "X",
+    "category": "Other",
+    "theme": "surveillance tracking / procedure did not track component shelf-life expiration",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 373-2024-003-01",
+      "properties": {
+        "match_key": "LER:373-2024-003-01"
+      },
+      "type": "LER",
+      "key": "373-2024-003-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:373-2024-003-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "La Salle Unit 1",
+      "properties": {
+        "match_key": "Unit:05000373",
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000373",
+      "match_key": "Unit:05000373"
+    },
+    {
+      "id": "cause",
+      "display_name": "Other (X)",
+      "properties": {
+        "match_key": "Cause:Other"
+      },
+      "type": "Cause",
+      "cause_code": "X",
+      "category": "Other",
+      "theme": "surveillance tracking / procedure did not track component shelf-life expiration",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Other"
+    },
+    {
+      "id": "sys_ig",
+      "display_name": "Traversing In-Core Probe System",
+      "properties": {
+        "match_key": "System:IG"
+      },
+      "type": "System",
+      "eiis_code": "IG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:IG"
+    },
+    {
+      "id": "c_shear_a",
+      "display_name": "TIP System Shear Valve 1C51-J004A ('A' train)",
+      "properties": {
+        "match_key": "Component:ISV|1C51-J004A"
+      },
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": "1C51-J004A",
+      "model": null,
+      "manufacturer_code": "G080",
+      "inferred_code": false,
+      "match_key": "Component:ISV|1C51-J004A"
+    },
+    {
+      "id": "c_shear_d",
+      "display_name": "TIP System Shear Valve 1C51-J004D ('D' train)",
+      "properties": {
+        "match_key": "Component:ISV|1C51-J004D"
+      },
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": "1C51-J004D",
+      "model": null,
+      "manufacturer_code": "G080",
+      "inferred_code": false,
+      "match_key": "Component:ISV|1C51-J004D"
+    },
+    {
+      "id": "c_shear_e",
+      "display_name": "TIP System Shear Valve 1C51-J004E ('E' train)",
+      "properties": {
+        "match_key": "Component:ISV|1C51-J004E"
+      },
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": "1C51-J004E",
+      "model": null,
+      "manufacturer_code": "G080",
+      "inferred_code": false,
+      "match_key": "Component:ISV|1C51-J004E"
+    },
+    {
+      "id": "c_squib",
+      "display_name": "Squib cartridge (explosive charge)",
+      "properties": {
+        "match_key": "Component:squib-cartridge"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:squib-cartridge-explosive-charge"
+    },
+    {
+      "id": "fm_notrack",
+      "display_name": "Alternative tracking method for squib expiration was ineffective / not documented in CAP",
+      "properties": {
+        "match_key": "FailureMode:alternative-tracking-method-ineffective"
+      },
+      "type": "FailureMode",
+      "description": "Test surveillance did not factor in squib cartridge five-year expiration date for future performances; alternative tracking method failed and expiration dates were not documented in CAP.",
+      "match_key": "FailureMode:alternative-tracking-method-for-squib-expiration-was-ineffective-not-documented-in-cap"
+    },
+    {
+      "id": "fm_expired",
+      "display_name": "Squib cartridges exceeded five-year expiration date in three shear valves",
+      "properties": {
+        "match_key": "FailureMode:squib-cartridges-expired"
+      },
+      "type": "FailureMode",
+      "description": "Squib cartridges in 'A', 'D', and 'E' train TIP shear valves expired in October 2023 without being replaced.",
+      "match_key": "FailureMode:squib-cartridges-exceeded-five-year-expiration-date-in-three-shear-valves"
+    },
+    {
+      "id": "fm_inoperable",
+      "display_name": "TIP shear valves declared inoperable (SR 3.6.1.3.9 Bases not met)",
+      "properties": {
+        "match_key": "FailureMode:tip-shear-valves-inoperable"
+      },
+      "type": "FailureMode",
+      "description": "Because the squib shelf-life/expiration control in the Bases of SR 3.6.1.3.9 was not met, the three affected TIP shear valves were rendered inoperable PCIVs.",
+      "match_key": "FailureMode:tip-shear-valves-declared-inoperable-sr-3-6-1-3-9-bases-not-met"
+    },
+    {
+      "id": "fm_ct_exceeded",
+      "display_name": "LCO 3.6.1.3 Condition C completion times exceeded",
+      "properties": {
+        "match_key": "FailureMode:lco-3613-completion-time-exceeded"
+      },
+      "type": "FailureMode",
+      "description": "Condition C.1 (4-hour isolation) and C.2 (31-day verification) completion times were exceeded because the TIP shear valves had been inoperable since October 2023 without being identified.",
+      "match_key": "FailureMode:lco-3-6-1-3-condition-c-completion-times-exceeded"
+    },
+    {
+      "id": "cons_ct",
+      "display_name": "TS LCO 3.6.1.3 Completion Time exceeded / condition prohibited by TS; common-cause inoperability of independent trains",
+      "properties": {
+        "match_key": "Consequence:lco-completion-time-exceeded"
+      },
+      "type": "Consequence",
+      "start": "2023-10",
+      "end": "2024-04-10",
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:ts-lco-3-6-1-3-completion-time-exceeded-condition-prohibited-by-ts-common-cause-inoperability-of-independent-trains"
+    },
+    {
+      "id": "ca_declare_inop",
+      "display_name": "Declared affected TIP shear valves inoperable and entered required TS timeclocks/actions",
+      "properties": {
+        "match_key": "CorrectiveAction:declared-inoperable-entered-timeclocks"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:declared-affected-tip-shear-valves-inoperable-and-entered-required-ts-timeclocks-actions"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replaced squib charges in all five TIP shear valves",
+      "properties": {
+        "match_key": "CorrectiveAction:replaced-squib-charges"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replaced-squib-charges-in-all-five-tip-shear-valves"
+    },
+    {
+      "id": "ca_testfire",
+      "display_name": "Test fired the five removed squib charges; confirmed successful actuation",
+      "properties": {
+        "match_key": "CorrectiveAction:test-fired-squib-charges"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:test-fired-the-five-removed-squib-charges-confirmed-successful-actuation"
+    },
+    {
+      "id": "ca_declare_op",
+      "display_name": "Declared TIP shear valves operable and exited applicable TS timeclocks/actions",
+      "properties": {
+        "match_key": "CorrectiveAction:declared-operable-exited-timeclocks"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:declared-tip-shear-valves-operable-and-exited-applicable-ts-timeclocks-actions"
+    },
+    {
+      "id": "ca_extent",
+      "display_name": "Performed extent-of-condition review for Unit 2; confirmed compliance",
+      "properties": {
+        "match_key": "CorrectiveAction:extent-of-condition-unit-2"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:performed-extent-of-condition-review-for-unit-2-confirmed-compliance"
+    },
+    {
+      "id": "ca_revise_test",
+      "display_name": "Revise test instructions to require CAP documentation of completion, expiration dates, and tracking recommendations",
+      "properties": {
+        "match_key": "CorrectiveAction:revise-test-instructions"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-test-instructions-to-require-cap-documentation-of-completion-expiration-dates-and-tracking-recommendations"
+    },
+    {
+      "id": "ca_revise_freq",
+      "display_name": "Revise test frequency to limit allowed grace time for late performance",
+      "properties": {
+        "match_key": "CorrectiveAction:revise-test-frequency"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-test-frequency-to-limit-allowed-grace-time-for-late-performance"
+    },
+    {
+      "id": "mfr_ge",
+      "display_name": "General Electric",
+      "properties": {
+        "match_key": "Manufacturer:G080"
+      },
+      "type": "Manufacturer",
+      "code": "G080",
+      "match_key": "Manufacturer:G080"
+    },
+    {
+      "id": "rr_5073i",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_5073vii",
+      "display_name": "10 CFR 50.73(a)(2)(vii)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-vii"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-vii"
+    },
+    {
+      "id": "rr_ts",
+      "display_name": "TS LCO 3.6.1.3 / SR 3.6.1.3.9",
+      "properties": {
+        "match_key": "RegulatoryReference:ts-lco-3613-sr-36139"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-lco-3-6-1-3-sr-3-6-1-3-9"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073i",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073vii",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ig",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_shear_a",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_shear_d",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_shear_e",
+      "evidence": null
+    },
+    {
+      "source": "c_squib",
+      "relation": "PART_OF",
+      "target": "c_shear_a",
+      "evidence": null
+    },
+    {
+      "source": "c_squib",
+      "relation": "PART_OF",
+      "target": "c_shear_d",
+      "evidence": null
+    },
+    {
+      "source": "c_squib",
+      "relation": "PART_OF",
+      "target": "c_shear_e",
+      "evidence": null
+    },
+    {
+      "source": "fm_notrack",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_notrack",
+      "relation": "LEADS_TO",
+      "target": "fm_expired",
+      "evidence": null
+    },
+    {
+      "source": "fm_expired",
+      "relation": "LEADS_TO",
+      "target": "fm_inoperable",
+      "evidence": null
+    },
+    {
+      "source": "fm_inoperable",
+      "relation": "LEADS_TO",
+      "target": "fm_ct_exceeded",
+      "evidence": null
+    },
+    {
+      "source": "fm_ct_exceeded",
+      "relation": "LEADS_TO",
+      "target": "cons_ct",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_declare_inop",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_testfire",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_declare_op",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_extent",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_revise_test",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_revise_freq",
+      "evidence": null
+    },
+    {
+      "source": "c_shear_a",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_ge",
+      "evidence": null
+    },
+    {
+      "source": "c_shear_d",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_ge",
+      "evidence": null
+    },
+    {
+      "source": "c_shear_e",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_ge",
+      "evidence": null
+    }
+  ],
+  "chain": "ineffective alternative tracking / no CAP documentation of squib expiration [cause X] -> squib cartridges exceeded 5-yr expiration (A, D, E trains) -> SR 3.6.1.3.9 Bases not met -> TIP shear valves declared inoperable -> LCO 3.6.1.3 Condition C.1/C.2 completion times exceeded -> TS-prohibited condition & common-cause inoperability of independent trains",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code X / category Other governs despite narrative describing a procedural/tracking-program weakness (theme captures this). No stated operable backup system was named for the TIP shear valve penetration isolation function during the event window (Condition C requires isolation via the flow path itself, not an alternate system), so no BACKED_UP_BY edge was created. This is a supplement (rev 01) to an original LER; no distinct previous-occurrence LER was cited by number in the narrative, so no SIMILAR_TO/stub LER node was created. Three physically distinct shear-valve components (A/D/E trains) modeled separately per rule 5/8 guidance on distinct entities; squib cartridge modeled as a single generic Component with PART_OF into each valve since it is explicitly a subcomponent."
+}

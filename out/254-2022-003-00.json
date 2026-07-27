@@ -1,0 +1,360 @@
+{
+  "ler_number": "254-2022-003-00",
+  "identity": {
+    "accession_number": "ML22244A134",
+    "docket": "05000254",
+    "plant_name": "Quad Cities",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2022-07-04",
+    "report_date": "2022-09-01",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": "55976",
+    "ens_date": null,
+    "ens_time": "0853",
+    "title": "Both Trains of Standby Gas Treatment Inoperable due to Blockage in the Common Discharge Line"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)(C)",
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The cause of low flow condition on both trains of SGT was due to partial water blockage in the SGT 24 inch common discharge line...The source of the water intrusion into the SGT common discharge line can come from two potential sources: (1) condensation from the Main Chimney exhausts or (2) groundwater intrusion from a flaw in the wall of the buried common discharge line pipe section.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "gradual water accumulation in shared discharge piping; design lacks means to detect/remove accumulated water",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 254-2022-003-00",
+      "properties": {},
+      "type": "LER",
+      "key": "254-2022-003-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:254-2022-003-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Quad Cities Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric",
+        "thermal_power_mwt": "2957"
+      },
+      "type": "Unit",
+      "key": "05000254",
+      "match_key": "Unit:05000254"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "gradual water accumulation in shared discharge piping; design lacks means to detect/remove accumulated water",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_bh",
+      "display_name": "Standby Gas Treatment",
+      "properties": {
+        "note": "shared between Units 1 and 2; two redundant subsystems"
+      },
+      "type": "System",
+      "eiis_code": "BH",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BH"
+    },
+    {
+      "id": "sys_nh",
+      "display_name": "Reactor Building (Secondary Containment)",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "NH",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:NH"
+    },
+    {
+      "id": "c_line",
+      "display_name": "24-inch SGT Common Discharge Line",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "PSX",
+      "identifier": "0-7509A-24\"",
+      "model": "unknown",
+      "manufacturer_code": "unknown",
+      "inferred_code": false,
+      "match_key": "Component:PSX|0-7509A-24\""
+    },
+    {
+      "id": "c_fcv",
+      "display_name": "SGT Flow Control Valve",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "FCV",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:FCV"
+    },
+    {
+      "id": "fm_intrusion",
+      "display_name": "Water intrusion/condensation accumulates in common discharge line",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Gradual accumulation of water from condensation or groundwater intrusion into buried section of the common discharge line over time (since May 26, 2022).",
+      "match_key": "FailureMode:water-intrusion-condensation-accumulates-in-common-discharge-line"
+    },
+    {
+      "id": "fm_blockage",
+      "display_name": "Partial blockage of common discharge line",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Accumulated water caused a partial blockage in the 24-inch common discharge line from both SGT trains to the main chimney.",
+      "match_key": "FailureMode:partial-blockage-of-common-discharge-line"
+    },
+    {
+      "id": "fm_degradedflow_b",
+      "display_name": "1/2 B SGT train degraded/oscillating flow",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "1/2 B SGT train ran with degraded and oscillating flow between 2400-2600 scfm, below TS-required 4000 cfm +/-10%.",
+      "match_key": "FailureMode:1-2-b-sgt-train-degraded-oscillating-flow"
+    },
+    {
+      "id": "fm_degradedflow_a",
+      "display_name": "1/2 A SGT train degraded/oscillating flow",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "1/2 A SGT train, started after B train was secured, also indicated degraded and oscillating flow of similar magnitude and signature.",
+      "match_key": "FailureMode:1-2-a-sgt-train-degraded-oscillating-flow"
+    },
+    {
+      "id": "fm_fcv_fullopen",
+      "display_name": "SGT flow control valves fully open (loss of flow control)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The FCVs were observed fully open instead of partially open/controlling, consistent with the trains struggling against the blockage.",
+      "match_key": "FailureMode:sgt-flow-control-valves-fully-open-loss-of-flow-control"
+    },
+    {
+      "id": "cons_sgt_inop",
+      "display_name": "Both trains of SGT inoperable / secondary containment vacuum reduced below TS limit",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2022-07-04T01:30",
+      "end": "2022-07-04T13:30",
+      "duration": "approx. 12:00",
+      "tz": "CST/CT",
+      "match_key": "Consequence:both-trains-of-sgt-inoperable-secondary-containment-vacuum-reduced-below-ts-limit"
+    },
+    {
+      "id": "ca_run",
+      "display_name": "Run SGT train until water in common discharge line dissipates and flow returns to normal",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:run-sgt-train-until-water-in-common-discharge-line-dissipates-and-flow-returns-to-normal"
+    },
+    {
+      "id": "ca_surv_freq",
+      "display_name": "Change SGT TS SR 3.6.4.3.1 surveillance frequency from 184 days to 31 days",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:change-sgt-ts-sr-3-6-4-3-1-surveillance-frequency-from-184-days-to-31-days"
+    },
+    {
+      "id": "ca_source_plan",
+      "display_name": "Develop and implement plan to locate, characterize, and resolve source of water intrusion",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:develop-and-implement-plan-to-locate-characterize-and-resolve-source-of-water-intrusion"
+    },
+    {
+      "id": "ca_chimney_drain_wo",
+      "display_name": "Create/implement work orders for cleaning chimney drains until permanent PM task implemented",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:create-implement-work-orders-for-cleaning-chimney-drains-until-permanent-pm-task-implemented"
+    },
+    {
+      "id": "rr_5073v_c",
+      "display_name": "10 CFR 50.73(a)(2)(v)(C)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-c"
+    },
+    {
+      "id": "rr_5073i_b",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "ler_prev_2019",
+      "display_name": "LER 254-2019-003-00",
+      "properties": {},
+      "type": "LER",
+      "key": "254-2019-003-00",
+      "stub": true,
+      "title": "Water Found in Control Room Emergency Ventilation Air Filtration Unit",
+      "plant": "Quad Cities Nuclear Power Station",
+      "match_key": "LER:254-2019-003-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073v_c",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073i_b",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bh",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_nh",
+      "evidence": null
+    },
+    {
+      "source": "c_line",
+      "relation": "PART_OF",
+      "target": "sys_bh",
+      "evidence": null
+    },
+    {
+      "source": "fm_intrusion",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_intrusion",
+      "relation": "LEADS_TO",
+      "target": "fm_blockage",
+      "evidence": null
+    },
+    {
+      "source": "fm_blockage",
+      "relation": "LEADS_TO",
+      "target": "fm_degradedflow_b",
+      "evidence": null
+    },
+    {
+      "source": "fm_blockage",
+      "relation": "LEADS_TO",
+      "target": "fm_degradedflow_a",
+      "evidence": null
+    },
+    {
+      "source": "fm_blockage",
+      "relation": "LEADS_TO",
+      "target": "fm_fcv_fullopen",
+      "evidence": null
+    },
+    {
+      "source": "fm_degradedflow_b",
+      "relation": "LEADS_TO",
+      "target": "cons_sgt_inop",
+      "evidence": null
+    },
+    {
+      "source": "fm_degradedflow_a",
+      "relation": "LEADS_TO",
+      "target": "cons_sgt_inop",
+      "evidence": null
+    },
+    {
+      "source": "fm_fcv_fullopen",
+      "relation": "LEADS_TO",
+      "target": "cons_sgt_inop",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_run",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_surv_freq",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_source_plan",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_chimney_drain_wo",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev_2019",
+      "evidence": null
+    }
+  ],
+  "chain": "gradual water intrusion/condensation [cause TBD] -> water accumulates in buried common discharge line -> partial blockage of 24in common discharge line -> 1/2B and 1/2A SGT trains show degraded/oscillating flow & FCVs fully open -> both SGT trains inoperable, secondary containment vacuum below TS limit [no operable backup identified]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code is TBD/provisional per FORM-366 fields; narrative gives a detailed proximate cause (water accumulation from condensation or groundwater intrusion) but no official cause code letter was assigned, so cause node marked provisional. No BACKED_UP_BY edges emitted: narrative does not state an alternate operable train/system available during the full inoperability window (both trains were degraded simultaneously). Block 13 has no explicit rows in FORM-366 FIELDS; component failure data (E) supplies component/manufacturer info used to populate the single block_13 row. Second previous occurrence (IR 1016562) is an internal issue report, not an LER, so no stub LER node was created for it per rule 9 (LER-only stubs)."
+}

@@ -1,0 +1,359 @@
+{
+  "ler_number": "416-2021-005-00",
+  "identity": {
+    "accession_number": "ML22033A065",
+    "docket": "05000416",
+    "plant_name": "Grand Gulf",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2021-12-06",
+    "report_date": "2022-02-02",
+    "operating_mode": null,
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Grand Gulf Nuclear Station, Unit 1 Licensee Event Report 2021-005-00, Oscillation Power Range Monitors ( OPRMs) Technical Specification Noncompliance."
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The direct cause of this event was that the setpoints were not implemented correctly during Maximum Extended Load Line Limit Analysis Plus (MELLLA+) implementation.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Setpoint/calibration procedure not updated to current licensing basis during MELLLA+ implementation",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 416-2021-005-00",
+      "properties": {
+        "match_key": "LER:416-2021-005-00"
+      },
+      "type": "LER",
+      "key": "416-2021-005-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:416-2021-005-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Grand Gulf Unit 1",
+      "properties": {
+        "match_key": "Unit:05000416",
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000416",
+      "match_key": "Unit:05000416"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {
+        "match_key": "Cause:provisional"
+      },
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Setpoint/calibration procedure not updated to current licensing basis during MELLLA+ implementation",
+      "proximate_text": "The direct cause of this event was that the setpoints were not implemented correctly during Maximum Extended Load Line Limit Analysis Plus (MELLLA+) implementation.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_rps",
+      "display_name": "Reactor Protection System",
+      "properties": {
+        "match_key": "System:reactor-protection-system"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "affected safety system",
+      "match_key": "System:reactor-protection-system"
+    },
+    {
+      "id": "c_aprm",
+      "display_name": "Average Power Range Monitor (APRM) channels",
+      "properties": {
+        "match_key": "Component:aprm-channels"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:average-power-range-monitor-aprm-channels"
+    },
+    {
+      "id": "c_oprm",
+      "display_name": "Oscillation Power Range Monitor (OPRM) Upscale function",
+      "properties": {
+        "match_key": "Component:oprm-upscale-function"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:oscillation-power-range-monitor-oprm-upscale-function"
+    },
+    {
+      "id": "fm_report_not_updated",
+      "display_name": "DSS-CD settings not updated to current GEH-recommended report",
+      "properties": {
+        "match_key": "FailureMode:dss-cd-settings-not-updated"
+      },
+      "type": "FailureMode",
+      "description": "GGNS identified that the Detect and Suppress Solution - Confirmation Density (DSS-CD) settings had not been updated to the current version of the GEH recommended report.",
+      "match_key": "FailureMode:dss-cd-settings-not-updated-to-current-geh-recommended-report"
+    },
+    {
+      "id": "fm_procedure_not_updated",
+      "display_name": "I&C calibration procedures not updated for APRM channels",
+      "properties": {
+        "match_key": "FailureMode:ic-calibration-procedures-not-updated"
+      },
+      "type": "FailureMode",
+      "description": "The Instrument and Control Calibration procedures were not updated for the APRM channels; Tmax setpoint set at 3.5 seconds instead of 4.0 seconds required by licensing basis.",
+      "match_key": "FailureMode:i-c-calibration-procedures-not-updated-for-aprm-channels"
+    },
+    {
+      "id": "fm_nonconservative_setpoint",
+      "display_name": "Installed maximum oscillation period setpoint non-conservative vs licensing basis",
+      "properties": {
+        "match_key": "FailureMode:nonconservative-setpoint"
+      },
+      "type": "FailureMode",
+      "description": "The settings for the maximum period installed in the plant were non-conservative with respect to the licensing basis (NEDC-33075P Rev 7).",
+      "match_key": "FailureMode:installed-maximum-oscillation-period-setpoint-non-conservative-vs-licensing-basis"
+    },
+    {
+      "id": "fm_report_misrevised",
+      "display_name": "Engineering report GGNS-NE-16-00007 inappropriately revised",
+      "properties": {
+        "match_key": "FailureMode:engineering-report-misrevised"
+      },
+      "type": "FailureMode",
+      "description": "GGNS-NE-16-00007, the engineering report for the June 17, 2016 OPRM SCRAM, was inappropriately revised in a way that contradicted the PRNM DSS-CD Settings Report, causing confusion regarding the actual licensing basis, and was used to state Tmax = 3.5 seconds was acceptable.",
+      "match_key": "FailureMode:engineering-report-ggns-ne-16-00007-inappropriately-revised"
+    },
+    {
+      "id": "cons_ts_noncompliance",
+      "display_name": "OPRM Upscale TS 3.3.1.1 requirements not fully met (TS noncompliance)",
+      "properties": {
+        "match_key": "Consequence:ts-noncompliance"
+      },
+      "type": "Consequence",
+      "start": "2021-06-21",
+      "end": "2021-12-06",
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:oprm-upscale-ts-3-3-1-1-requirements-not-fully-met-ts-noncompliance"
+    },
+    {
+      "id": "ca_setpoint_fix",
+      "display_name": "Change Tmax setpoint to 4.0 seconds on all four APRM channels",
+      "properties": {
+        "match_key": "CorrectiveAction:change-tmax-setpoint"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:change-tmax-setpoint-to-4-0-seconds-on-all-four-aprm-channels"
+    },
+    {
+      "id": "ca_extent_of_condition",
+      "display_name": "Reperform extent of condition on MELLLA+ implementation for settings/setpoint changes",
+      "properties": {
+        "match_key": "CorrectiveAction:extent-of-condition-mellla-plus"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:reperform-extent-of-condition-on-mellla-implementation-for-settings-setpoint-changes"
+    },
+    {
+      "id": "ca_revise_report",
+      "display_name": "Revise GGNS-NE-16-00007 to delete Revision 2 changes, reverting to Revision 1 basis",
+      "properties": {
+        "match_key": "CorrectiveAction:revise-ggns-ne-16-00007"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-ggns-ne-16-00007-to-delete-revision-2-changes-reverting-to-revision-1-basis"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts_3311",
+      "display_name": "Technical Specification 3.3.1.1, Reactor Protection System Instrumentation",
+      "properties": {
+        "match_key": "RegulatoryReference:ts-3-3-1-1"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-3-3-1-1-reactor-protection-system-instrumentation"
+    },
+    {
+      "id": "rr_nedc",
+      "display_name": "NEDC-33075P Rev 7, GEH BWR DSS-CD Licensing Topical Report",
+      "properties": {
+        "match_key": "RegulatoryReference:nedc-33075p-rev7"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:nedc-33075p-rev-7-geh-bwr-dss-cd-licensing-topical-report"
+    },
+    {
+      "id": "prev_ler",
+      "display_name": "LER 2016-009-00",
+      "properties": {
+        "match_key": "LER:2016-009-00"
+      },
+      "type": "LER",
+      "key": "2016-009-00",
+      "stub": true,
+      "title": "Entry into Mode of Applicability with the Oscillation Power Range Monitor Upscale Settings Incorrectly Set",
+      "plant": "Grand Gulf Nuclear Station",
+      "match_key": "LER:2016-009-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts_3311",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rps",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_aprm",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_oprm",
+      "evidence": null
+    },
+    {
+      "source": "c_oprm",
+      "relation": "PART_OF",
+      "target": "sys_rps",
+      "evidence": null
+    },
+    {
+      "source": "fm_report_misrevised",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_report_misrevised",
+      "relation": "LEADS_TO",
+      "target": "fm_report_not_updated",
+      "evidence": null
+    },
+    {
+      "source": "fm_report_not_updated",
+      "relation": "LEADS_TO",
+      "target": "fm_procedure_not_updated",
+      "evidence": null
+    },
+    {
+      "source": "fm_procedure_not_updated",
+      "relation": "LEADS_TO",
+      "target": "fm_nonconservative_setpoint",
+      "evidence": null
+    },
+    {
+      "source": "fm_nonconservative_setpoint",
+      "relation": "LEADS_TO",
+      "target": "cons_ts_noncompliance",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_setpoint_fix",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_extent_of_condition",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_revise_report",
+      "evidence": null
+    },
+    {
+      "source": "c_aprm",
+      "relation": "MANUFACTURED_BY",
+      "target": "rr_nedc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "prev_ler",
+      "evidence": null
+    }
+  ],
+  "chain": "GGNS-NE-16-00007 inappropriately revised (contradicting PRNM DSS-CD Settings Report) [cause TBD] -> DSS-CD settings not updated to current GEH report -> I&C calibration procedures not updated (Tmax=3.5s vs required 4.0s) -> installed setpoint non-conservative vs licensing basis -> OPRM Upscale TS 3.3.1.1 requirements not fully met (TS noncompliance)",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "MANUFACTURED_BY edge used loosely here to link APRM component to its governing licensing topical report reference (NEDC-33075P) since no true manufacturer is present in narrative; treat as a documentation linkage rather than a literal manufacturer relationship. No block_13 data provided in FORM-366 fields (empty array). Cause code left TBD/provisional per FORM-366 authoritative field despite narrative giving a 'direct cause' statement, per rule 4. No components/systems described as operable backups during the inoperability window -- this event is a TS/setpoint compliance issue rather than an equipment outage, so no BACKED_UP_BY edges apply."
+}

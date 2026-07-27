@@ -1,0 +1,273 @@
+{
+  "ler_number": "272-2020-002-00",
+  "identity": {
+    "accession_number": "ML20188A010",
+    "docket": "05000272",
+    "plant_name": "Salem",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2020-05-05",
+    "report_date": "2020-07-06",
+    "operating_mode": "4",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Salem Unit 1 and Unit 2 RHR availability for Emergency Core Cooling in Mode 4"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)(D)",
+      "10 CFR 50.73(a)(2)(i)(B)",
+      "10 CFR 50.73(a)(2)(vii)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The engineering evaluations determined that in MODE 4, the temperature of the fluid in the residual heat removal (RHR) pump suction header exceeded the temperature which, under postulated shutdown loss of coolant accident (LOCA) conditions, could have resulted in cavitation of the RHR system for both injection phase and recirculation. No component failures contributed to this event.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Non-conservative procedural temperature limits vs. RHR NPSH/cavitation margin (per Westinghouse NSAL 09-08)",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 272-2020-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "272-2020-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:272-2020-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Salem Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000272",
+      "match_key": "Unit:05000272"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Non-conservative procedural temperature limits vs. RHR NPSH/cavitation margin (per Westinghouse NSAL 09-08)",
+      "proximate_text": "The engineering evaluations determined that in MODE 4, the temperature of the fluid in the residual heat removal (RHR) pump suction header exceeded the temperature which, under postulated shutdown loss of coolant accident (LOCA) conditions, could have resulted in cavitation of the RHR system for both injection phase and recirculation. No component failures contributed to this event.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_bp",
+      "display_name": "Residual Heat Removal (Low Pressure Safety Injection System)",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BP",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected ECCS train, subject of postulated cavitation",
+      "match_key": "System:BP"
+    },
+    {
+      "id": "c_suction_header",
+      "display_name": "RHR pump suction header",
+      "properties": {
+        "note": "cross-connected between trains, common flow path from RCS/RWST"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:rhr-pump-suction-header"
+    },
+    {
+      "id": "fm_procedure_limits",
+      "display_name": "Procedure temperature limitations inadequate for postulated shutdown LOCA cavitation margin",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Recent procedure upgrades evaluating Westinghouse NSAL 09-08 found procedure temperature limitations did not preclude fluid temperatures in the RHR suction header exceeding the cavitation-avoidance threshold under postulated shutdown LOCA conditions.",
+      "match_key": "FailureMode:procedure-temperature-limitations-inadequate-for-postulated-shutdown-loca-cavitation-margin"
+    },
+    {
+      "id": "fm_elevated_temp_operation",
+      "display_name": "RHR operated in shutdown cooling at elevated coolant temperatures within Tech Spec allowances",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Review of plant operating history found brief instances in which RHR was operated in shutdown cooling at elevated coolant temperatures where cavitation is expected if RHR pressure is reduced when actuated for ECCS operation.",
+      "match_key": "FailureMode:rhr-operated-in-shutdown-cooling-at-elevated-coolant-temperatures-within-tech-spec-allowances"
+    },
+    {
+      "id": "fm_cavitation_potential",
+      "display_name": "Potential for RHR suction header cavitation upon ECCS actuation",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Postulated to occur during both the RWST injection phase and the ECCS sump recirculation phase, affecting both RHR trains via the shared cross-connected suction header.",
+      "match_key": "FailureMode:potential-for-rhr-suction-header-cavitation-upon-eccs-actuation"
+    },
+    {
+      "id": "cons_rhr_inoperable",
+      "display_name": "RHR system inoperable in MODE 4 / common-cause inoperability of both ECCS trains",
+      "properties": {
+        "note": "Considered a safety system functional failure and operation in a condition prohibited by technical specifications; Tech Specs require one operable ECCS/RHR train in MODE 4."
+      },
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:rhr-system-inoperable-in-mode-4-common-cause-inoperability-of-both-eccs-trains"
+    },
+    {
+      "id": "ca_revise_procedures",
+      "display_name": "Revise affected procedures for RHR temperature limitations",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-affected-procedures-for-rhr-temperature-limitations"
+    },
+    {
+      "id": "ca_interim",
+      "display_name": "Implement interim corrective actions pending procedure revision",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:implement-interim-corrective-actions-pending-procedure-revision"
+    },
+    {
+      "id": "rr_5073v_d",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "rr_5073i_b",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_5073vii",
+      "display_name": "10 CFR 50.73(a)(2)(vii)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-vii"
+    },
+    {
+      "id": "rr_nsal",
+      "display_name": "Westinghouse NSAL 09-08",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:westinghouse-nsal-09-08"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073v_d",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073i_b",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073vii",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bp",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_suction_header",
+      "evidence": null
+    },
+    {
+      "source": "fm_procedure_limits",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_procedure_limits",
+      "relation": "LEADS_TO",
+      "target": "fm_elevated_temp_operation",
+      "evidence": null
+    },
+    {
+      "source": "fm_elevated_temp_operation",
+      "relation": "LEADS_TO",
+      "target": "fm_cavitation_potential",
+      "evidence": null
+    },
+    {
+      "source": "fm_cavitation_potential",
+      "relation": "LEADS_TO",
+      "target": "cons_rhr_inoperable",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_revise_procedures",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_interim",
+      "evidence": null
+    },
+    {
+      "source": "fm_procedure_limits",
+      "relation": "REVISES",
+      "target": "rr_nsal",
+      "evidence": null
+    }
+  ],
+  "chain": "inadequate procedure temperature limits (Westinghouse NSAL 09-08 review) [cause TBD] -> RHR operated at elevated shutdown-cooling temperatures within Tech Spec allowances -> postulated cavitation potential in shared cross-connected suction header (both injection and recirculation phases) -> RHR/ECCS inoperable in MODE 4, common-cause inoperability of both trains [no backups stated]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "No component failures contributed to this event per the narrative; this is a design/analysis/procedural adequacy issue rather than a hardware failure, hence no Component FailureMode beyond the suction header context node. Cause code left TBD/provisional per FORM-366 (official code not assigned in the source fields). Block 13 was empty in the source. The REVISES edge from fm_procedure_limits to rr_nsal reflects that the procedure review was triggered by re-evaluation against the NSAL bulletin, not a formal document revision relationship in the schema sense, but no better relation exists in the allowed enum for 'evaluated against/triggered by industry notice' semantics -- treated as closest fit. No previous similar occurrence reported ('There were no similar events in the past three years'), so no stub LER/SIMILAR_TO edge emitted. Unit 2 was in Mode 5 restoring from outage at event time, but title indicates both units affected by the same generic condition; only Unit 1 docket/anchor used per FORM-366 identity fields, consistent with docket 05000272 = Salem Unit 1."
+}

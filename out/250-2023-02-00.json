@@ -1,0 +1,182 @@
+{
+  "ler_number": "250-2023-02-00",
+  "identity": {
+    "accession_number": "ML23275A053",
+    "docket": "05000250",
+    "plant_name": "Turkey Point",
+    "unit": 3,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2023-08-04",
+    "report_date": "2023-10-02",
+    "operating_mode": null,
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Manual Reactor Trip due to Steam Generator Feedwater Regulating Valve Positioner Failure"
+  },
+  "reporting_basis": {
+    "reported_under": [],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": null,
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Feedwater regulating valve positioner failure leading to manual reactor trip",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 250-2023-006-00",
+      "properties": {},
+      "type": "LER",
+      "key": "250-2023-02-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:250-2023-02-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Turkey Point Unit 3",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000250",
+      "match_key": "Unit:05000250"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Feedwater regulating valve positioner failure leading to manual reactor trip",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_fw",
+      "display_name": "Steam Generator Feedwater System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "c_frv",
+      "display_name": "Steam Generator Feedwater Regulating Valve",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:steam-generator-feedwater-regulating-valve"
+    },
+    {
+      "id": "c_positioner",
+      "display_name": "Feedwater Regulating Valve Positioner",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:feedwater-regulating-valve-positioner"
+    },
+    {
+      "id": "fm_positioner_fail",
+      "display_name": "Feedwater regulating valve positioner failure",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Positioner failure caused unexpected/uncontrolled feedwater regulating valve behavior",
+      "match_key": "FailureMode:feedwater-regulating-valve-positioner-failure"
+    },
+    {
+      "id": "fm_trip",
+      "display_name": "Manual reactor trip initiated",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Operators manually tripped the reactor in response to the valve positioner failure",
+      "match_key": "FailureMode:manual-reactor-trip-initiated"
+    },
+    {
+      "id": "cons_trip",
+      "display_name": "Manual reactor trip",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2023-08-04",
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:manual-reactor-trip"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_fw",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_frv",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_positioner",
+      "evidence": null
+    },
+    {
+      "source": "fm_positioner_fail",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_positioner_fail",
+      "relation": "LEADS_TO",
+      "target": "fm_trip",
+      "evidence": null
+    },
+    {
+      "source": "fm_trip",
+      "relation": "LEADS_TO",
+      "target": "cons_trip",
+      "evidence": null
+    }
+  ],
+  "chain": "positioner failure [cause TBD] -> feedwater regulating valve malfunction -> manual reactor trip",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4"
+  ],
+  "notes": "No narrative (366A) content was provided beyond the title, and FORM-366 fields lack plant name, unit, mode, power level, and cause code. Cause set to TBD/provisional per rule 4. Modeling is minimal, inferred only from the event title; component/system identifiers (EIIS codes) could not be determined without narrative text, so eiis_code left null throughout. No corrective actions, manufacturers, backups, or regulatory references could be extracted absent narrative detail."
+}

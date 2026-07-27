@@ -1,0 +1,492 @@
+{
+  "ler_number": "298-2020-001-00",
+  "identity": {
+    "accession_number": "ML20192A112",
+    "docket": "05000298",
+    "plant_name": "Cooper",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2020-05-01",
+    "report_date": "2020-06-30",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Licensee Event Report No. 2020-001-00 Cooper Nuclear Station, Docket No. 50-298, DPR-46"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The solenoid locking mechanism in door R101 failed to operate as designed. Specifically, the locking pin did not move to the extended position in a timely manner, resulting in the inner door not providing a positive barrier when the outage door was opened. A causal factor was identified that there is no preventive maintenance (PM) strategy to identify or eliminate degraded conditions for the solenoid locking mechanisms of the doors, resulting in maintenance being performed only when a failure is recognized.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Missing PM strategy for door interlock solenoid; degraded condition not recognized/communicated",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 298-2020-001-00",
+      "properties": {
+        "match_key": "LER:298-2020-001-00"
+      },
+      "type": "LER",
+      "key": "298-2020-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:298-2020-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Cooper Unit 1",
+      "properties": {
+        "match_key": "Unit:05000298",
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000298",
+      "match_key": "Unit:05000298"
+    },
+    {
+      "id": "cause",
+      "display_name": "Personnel Error (A)",
+      "properties": {
+        "match_key": "Cause:Personnel Error"
+      },
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Missing PM strategy for door interlock solenoid; degraded condition not recognized/communicated",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_ng",
+      "display_name": "Reactor Building",
+      "properties": {
+        "match_key": "System:NG"
+      },
+      "type": "System",
+      "eiis_code": "NG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "secondary containment subsystem",
+      "match_key": "System:NG"
+    },
+    {
+      "id": "sys_nh",
+      "display_name": "Primary Containment",
+      "properties": {
+        "match_key": "System:NH"
+      },
+      "type": "System",
+      "eiis_code": "NH",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "context only - encloses RPV",
+      "match_key": "System:NH"
+    },
+    {
+      "id": "sys_sgt",
+      "display_name": "Standby Gas Treatment",
+      "properties": {
+        "match_key": "System:standby-gas-treatment"
+      },
+      "type": "System",
+      "eiis_code": "BH",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; would have automatically started and maintained vacuum",
+      "match_key": "System:BH"
+    },
+    {
+      "id": "c_r101",
+      "display_name": "Inner Reactor Building airlock door R101",
+      "properties": {
+        "match_key": "Component:DR|R101"
+      },
+      "type": "Component",
+      "eiis_code": "DR",
+      "identifier": "R101",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:DR|R101"
+    },
+    {
+      "id": "c_r102",
+      "display_name": "Outer Reactor Building airlock door R102",
+      "properties": {
+        "match_key": "Component:DR|R102"
+      },
+      "type": "Component",
+      "eiis_code": "DR",
+      "identifier": "R102",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:DR|R102"
+    },
+    {
+      "id": "c_iel",
+      "display_name": "Door interlock (solenoid locking mechanism)",
+      "properties": {
+        "match_key": "Component:IEL"
+      },
+      "type": "Component",
+      "eiis_code": "IEL",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": "P370",
+      "inferred_code": false,
+      "match_key": "Component:IEL"
+    },
+    {
+      "id": "c_pen",
+      "display_name": "Penetration",
+      "properties": {
+        "match_key": "Component:PEN"
+      },
+      "type": "Component",
+      "eiis_code": "PEN",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:PEN"
+    },
+    {
+      "id": "fm_nopm",
+      "display_name": "No preventive maintenance strategy for door solenoid locking mechanisms",
+      "properties": {
+        "match_key": "FailureMode:no-pm-strategy-door-solenoid"
+      },
+      "type": "FailureMode",
+      "description": "No PM strategy existed to identify or eliminate degraded conditions for the solenoid locking mechanisms; maintenance only performed after failure recognized.",
+      "match_key": "FailureMode:no-preventive-maintenance-strategy-for-door-solenoid-locking-mechanisms"
+    },
+    {
+      "id": "fm_degraded",
+      "display_name": "Solenoid locking pin sticking/moving slowly",
+      "properties": {
+        "match_key": "FailureMode:solenoid-locking-pin-sticking"
+      },
+      "type": "FailureMode",
+      "description": "Inner Reactor Building door (R101) solenoid locking mechanism found in degraded condition; locking pin sticking or moving very slowly, sometimes working correctly.",
+      "match_key": "FailureMode:solenoid-locking-pin-sticking-moving-slowly"
+    },
+    {
+      "id": "fm_notrecognized",
+      "display_name": "Previous degraded performance not recognized/communicated",
+      "properties": {
+        "match_key": "FailureMode:previous-degradation-not-communicated"
+      },
+      "type": "FailureMode",
+      "description": "Previous degraded performance of the inner door was not recognized or communicated to mitigate the risk of the solenoid locking mechanism failure.",
+      "match_key": "FailureMode:previous-degraded-performance-not-recognized-communicated"
+    },
+    {
+      "id": "fm_innernotlatch",
+      "display_name": "Inner door failed to provide positive barrier / reopened after closing",
+      "properties": {
+        "match_key": "FailureMode:inner-door-no-positive-barrier"
+      },
+      "type": "FailureMode",
+      "description": "Locking pin did not move to extended position in a timely manner, resulting in the inner door not providing a positive barrier; door reopened when checked.",
+      "match_key": "FailureMode:inner-door-failed-to-provide-positive-barrier-reopened-after-closing"
+    },
+    {
+      "id": "fm_bothopen",
+      "display_name": "Both airlock doors opened simultaneously",
+      "properties": {
+        "match_key": "FailureMode:both-doors-open-simultaneously"
+      },
+      "type": "FailureMode",
+      "description": "Outer door was opened by another individual while the inner door was open (not latched due to degraded solenoid), resulting in both doors open simultaneously for less than 1 second.",
+      "match_key": "FailureMode:both-airlock-doors-opened-simultaneously"
+    },
+    {
+      "id": "cons_breach",
+      "display_name": "Secondary Containment breach / declared inoperable",
+      "properties": {
+        "match_key": "Consequence:secondary-containment-breach"
+      },
+      "type": "Consequence",
+      "start": "2020-05-01T08:31",
+      "end": "2020-05-01T08:36",
+      "duration": "00:05",
+      "tz": null,
+      "match_key": "Consequence:secondary-containment-breach-declared-inoperable"
+    },
+    {
+      "id": "ca_comm",
+      "display_name": "Communicate door traversal risk and limit Reactor Building entry to scheduled work",
+      "properties": {
+        "match_key": "CorrectiveAction:communicate-door-traversal-risk"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:communicate-door-traversal-risk-and-limit-reactor-building-entry-to-scheduled-work"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace R101 solenoid locking mechanism",
+      "properties": {
+        "match_key": "CorrectiveAction:replace-r101-solenoid"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-r101-solenoid-locking-mechanism"
+    },
+    {
+      "id": "ca_pm",
+      "display_name": "Develop PM strategy for R101/R102 solenoid locking mechanisms",
+      "properties": {
+        "match_key": "CorrectiveAction:develop-pm-strategy-solenoids"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:develop-pm-strategy-for-r101-r102-solenoid-locking-mechanisms"
+    },
+    {
+      "id": "ca_trend",
+      "display_name": "Communicate about recognizing degrading trends and risk of accepting multiple failures",
+      "properties": {
+        "match_key": "CorrectiveAction:communicate-degrading-trends"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:communicate-about-recognizing-degrading-trends-and-risk-of-accepting-multiple-failures"
+    },
+    {
+      "id": "mfr_p370",
+      "display_name": "Manufacturer P370",
+      "properties": {
+        "match_key": "Manufacturer:P370"
+      },
+      "type": "Manufacturer",
+      "code": "P370",
+      "match_key": "Manufacturer:P370"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(v)",
+      "properties": {
+        "type": "reporting-criterion",
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v"
+    },
+    {
+      "id": "rr_lco",
+      "display_name": "TS LCO 3.6.4.1, Condition A",
+      "properties": {
+        "type": "license-basis",
+        "match_key": "RegulatoryReference:ts-lco-3-6-4-1-condition-a"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ts-lco-3-6-4-1-condition-a"
+    },
+    {
+      "id": "ler_2019",
+      "display_name": "LER 2019-002-00",
+      "properties": {
+        "match_key": "LER:2019-002-00"
+      },
+      "type": "LER",
+      "key": "2019-002-00",
+      "stub": true,
+      "title": "Secondary Containment declared inoperable due to a rise in differential pressure",
+      "plant": "Cooper Nuclear Station",
+      "match_key": "LER:2019-002-00"
+    },
+    {
+      "id": "ler_2014",
+      "display_name": "LER 2014-001-00",
+      "properties": {
+        "match_key": "LER:2014-001-00"
+      },
+      "type": "LER",
+      "key": "2014-001-00",
+      "stub": true,
+      "title": "Secondary Containment declared inoperable due to a rise in differential pressure",
+      "plant": "Cooper Nuclear Station",
+      "match_key": "LER:2014-001-00"
+    },
+    {
+      "id": "ler_2012",
+      "display_name": "LER 2012-003-00",
+      "properties": {
+        "match_key": "LER:2012-003-00"
+      },
+      "type": "LER",
+      "key": "2012-003-00",
+      "stub": true,
+      "title": "Secondary Containment breached due to both airlock doors in the Reactor Building being inadvertently left open simultaneously",
+      "plant": "Cooper Nuclear Station",
+      "match_key": "LER:2012-003-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_lco",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ng",
+      "evidence": null
+    },
+    {
+      "source": "c_r101",
+      "relation": "PART_OF",
+      "target": "sys_ng",
+      "evidence": null
+    },
+    {
+      "source": "c_r102",
+      "relation": "PART_OF",
+      "target": "sys_ng",
+      "evidence": null
+    },
+    {
+      "source": "c_iel",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_p370",
+      "evidence": null
+    },
+    {
+      "source": "fm_nopm",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_nopm",
+      "relation": "LEADS_TO",
+      "target": "fm_degraded",
+      "evidence": null
+    },
+    {
+      "source": "fm_degraded",
+      "relation": "LEADS_TO",
+      "target": "fm_notrecognized",
+      "evidence": null
+    },
+    {
+      "source": "fm_degraded",
+      "relation": "LEADS_TO",
+      "target": "fm_innernotlatch",
+      "evidence": null
+    },
+    {
+      "source": "fm_notrecognized",
+      "relation": "LEADS_TO",
+      "target": "fm_innernotlatch",
+      "evidence": null
+    },
+    {
+      "source": "fm_innernotlatch",
+      "relation": "LEADS_TO",
+      "target": "fm_bothopen",
+      "evidence": null
+    },
+    {
+      "source": "fm_bothopen",
+      "relation": "LEADS_TO",
+      "target": "cons_breach",
+      "evidence": null
+    },
+    {
+      "source": "cons_breach",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_sgt",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_comm",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_pm",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_trend",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_2019",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_2014",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_2012",
+      "evidence": null
+    }
+  ],
+  "chain": "no PM strategy for door solenoid locking mechanisms [cause A] -> solenoid locking pin sticking/moving slowly (R101 degraded) -> previous degradation not recognized/communicated -> inner door fails to provide positive barrier -> both airlock doors open simultaneously (<1s) -> Secondary Containment breach/declared inoperable (5 min) [backup SGT would have automatically started and maintained vacuum]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Block-13 cause code A governs category (Personnel Error) despite the hardware degradation narrative; theme captures both PM-program and human-performance/communication angles. SGT is modeled as a backup because the narrative states it 'would have automatically started and would have been able to maintain vacuum' during the postulated accident scenario used in the engineering review, treated here as an operable safety-function backstop supporting the no-loss-of-safety-function conclusion. Primary Containment (NH) and penetration (PEN) are mentioned only as background/design context describing Secondary Containment's structure, not as participants in the failure chain; PEN component node retained per EIIS mention but not linked into chain since it plays no explicit failure role. Three previous similar occurrences captured as stub LERs with keys exactly as stated in narrative (no unit digit prefix given in text)."
+}

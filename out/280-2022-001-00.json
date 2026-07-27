@@ -1,0 +1,430 @@
+{
+  "ler_number": "280-2022-001-00",
+  "identity": {
+    "accession_number": "ML22138A355",
+    "docket": "05000280",
+    "plant_name": "Surry",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2022-03-22",
+    "report_date": "2022-05-18",
+    "operating_mode": null,
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2022-001-00 for Surry Power Station, Unit 1 and Unit 2, Failure of Two Intake Canal Level Probes Due to Biofouling"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)",
+      "10 CFR 50.73(a)(2)(vii)(D)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "C",
+      "system": "JE",
+      "component": "LE",
+      "manufacturer": "F132",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "the cause of the event was due to the material that was removed when cleaned. Observations indicate a muddy film that is suspected of being biofouling noted on both probes.",
+    "cause_code": "C",
+    "category": "External Cause",
+    "theme": "biofouling of intake canal level probes",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 280-2022-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "280-2022-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:280-2022-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Surry Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000280",
+      "match_key": "Unit:05000280"
+    },
+    {
+      "id": "cause",
+      "display_name": "External Cause (C)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "C",
+      "category": "External Cause",
+      "theme": "biofouling of intake canal level probes",
+      "proximate_text": "the cause of the event was due to the material that was removed when cleaned. Observations indicate a muddy film that is suspected of being biofouling noted on both probes.",
+      "provisional": false,
+      "match_key": "Cause:External Cause"
+    },
+    {
+      "id": "sys_je",
+      "display_name": "Non-essential Service Water automatic isolation function",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JE",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JE"
+    },
+    {
+      "id": "sys_kg",
+      "display_name": "Service Water automatic isolation logic",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "KG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:KG"
+    },
+    {
+      "id": "sys_bp",
+      "display_name": "Emergency Service Water Pumps",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BP",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; operable",
+      "match_key": "System:BP"
+    },
+    {
+      "id": "c_probe1",
+      "display_name": "Intake Canal Level Probe - Channel 1",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "LE",
+      "identifier": "Channel 1",
+      "model": "8-66",
+      "manufacturer_code": "F132",
+      "inferred_code": false,
+      "match_key": "Component:LE|Channel 1"
+    },
+    {
+      "id": "c_probe4",
+      "display_name": "Intake Canal Level Probe - Channel 4",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "LE",
+      "identifier": "Channel 4",
+      "model": "8-66",
+      "manufacturer_code": "F132",
+      "inferred_code": false,
+      "match_key": "Component:LE|Channel 4"
+    },
+    {
+      "id": "c_cha",
+      "display_name": "Channel calibration hardware",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "CHA",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:CHA"
+    },
+    {
+      "id": "fm_biofoul1",
+      "display_name": "Biofouling accumulation on Channel 1 probe",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Muddy film (biofilm) accumulated on channel 1 probe, slowing response time to 106 seconds",
+      "match_key": "FailureMode:biofouling-accumulation-on-channel-1-probe"
+    },
+    {
+      "id": "fm_biofoul4",
+      "display_name": "Biofouling accumulation on Channel 4 probe",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Muddy film (biofilm) accumulated on channel 4 probe, slowing response time to 119 seconds",
+      "match_key": "FailureMode:biofouling-accumulation-on-channel-4-probe"
+    },
+    {
+      "id": "fm_slow1",
+      "display_name": "Channel 1 probe slow response time (106s > 55s limit)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "As-found response time of 106 seconds exceeded the 55-second acceptance criteria",
+      "match_key": "FailureMode:channel-1-probe-slow-response-time-106s-55s-limit"
+    },
+    {
+      "id": "fm_slow4",
+      "display_name": "Channel 4 probe slow response time (119s > 55s limit)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "As-found response time of 119 seconds exceeded the 55-second acceptance criteria",
+      "match_key": "FailureMode:channel-4-probe-slow-response-time-119s-55s-limit"
+    },
+    {
+      "id": "cons_inop",
+      "display_name": "Common-cause inoperability of two independent intake canal level probe channels; operation in a condition prohibited by Technical Specifications",
+      "properties": {},
+      "type": "Consequence",
+      "start": "approx. 2022-03-19 (>72 hours prior to discovery)",
+      "end": "2022-03-22",
+      "duration": ">72 hours (estimated)",
+      "tz": null,
+      "match_key": "Consequence:common-cause-inoperability-of-two-independent-intake-canal-level-probe-channels-operation-in-a-condition-prohibited-by-technical-specifications"
+    },
+    {
+      "id": "ca_clean_retest",
+      "display_name": "Clean and retest probes; return to service",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:clean-and-retest-probes-return-to-service"
+    },
+    {
+      "id": "ca_all_clean",
+      "display_name": "Inspect and clean all four intake canal probes as part of routine cleaning cycle",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:inspect-and-clean-all-four-intake-canal-probes-as-part-of-routine-cleaning-cycle"
+    },
+    {
+      "id": "ca_coating",
+      "display_name": "Test new coatings to reduce biofouling buildup",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:test-new-coatings-to-reduce-biofouling-buildup"
+    },
+    {
+      "id": "ca_freq",
+      "display_name": "Change cleaning frequency from seasonal (April-October) to year-round",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:change-cleaning-frequency-from-seasonal-april-october-to-year-round"
+    },
+    {
+      "id": "mfr_fci",
+      "display_name": "Fluid Components International (FCI)",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "F132",
+      "match_key": "Manufacturer:F132"
+    },
+    {
+      "id": "rr_5073i",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_5073vii",
+      "display_name": "10 CFR 50.73(a)(2)(vii)(D)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-vii-d"
+    },
+    {
+      "id": "rr_nureg",
+      "display_name": "NUREG-1022, Rev. 3, Event Report Guidelines 10 CFR 50.72 and 50.73",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "standard/guidance",
+      "match_key": "RegulatoryReference:nureg-1022-rev-3-event-report-guidelines-10-cfr-50-72-and-50-73"
+    },
+    {
+      "id": "ler_prev1",
+      "display_name": "LER 280-1997-009-01",
+      "properties": {},
+      "type": "LER",
+      "key": "280-1997-009-01",
+      "stub": true,
+      "title": "Intake Canal Level Probes Inoperable Due to Marine Growth",
+      "plant": "Surry Power Station",
+      "match_key": "LER:280-1997-009-01"
+    },
+    {
+      "id": "ler_prev2",
+      "display_name": "LER 280-1998-010-00",
+      "properties": {},
+      "type": "LER",
+      "key": "280-1998-010-00",
+      "stub": true,
+      "title": "Intake Canal Level Probes Inoperable Due to Marine Growth",
+      "plant": "Surry Power Station",
+      "match_key": "LER:280-1998-010-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073i",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073vii",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_nureg",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_je",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_kg",
+      "evidence": null
+    },
+    {
+      "source": "c_probe1",
+      "relation": "PART_OF",
+      "target": "sys_je",
+      "evidence": null
+    },
+    {
+      "source": "c_probe4",
+      "relation": "PART_OF",
+      "target": "sys_je",
+      "evidence": null
+    },
+    {
+      "source": "fm_biofoul1",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_biofoul4",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_biofoul1",
+      "relation": "LEADS_TO",
+      "target": "fm_slow1",
+      "evidence": null
+    },
+    {
+      "source": "fm_biofoul4",
+      "relation": "LEADS_TO",
+      "target": "fm_slow4",
+      "evidence": null
+    },
+    {
+      "source": "fm_slow1",
+      "relation": "LEADS_TO",
+      "target": "cons_inop",
+      "evidence": null
+    },
+    {
+      "source": "fm_slow4",
+      "relation": "LEADS_TO",
+      "target": "cons_inop",
+      "evidence": null
+    },
+    {
+      "source": "cons_inop",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_bp",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_clean_retest",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_all_clean",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_coating",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_freq",
+      "evidence": null
+    },
+    {
+      "source": "c_probe1",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_fci",
+      "evidence": null
+    },
+    {
+      "source": "c_probe4",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_fci",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev1",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev2",
+      "evidence": null
+    }
+  ],
+  "chain": "biofouling (colonial hydroids/biofilm) [cause C] -> muddy film accumulates on Channel 1 & Channel 4 probes -> slow response times (106s and 119s, exceeding 55s limit) -> common-cause inoperability of two independent intake canal level probe channels / TS-prohibited condition [backups: independent level indication in main control room, emergency SW pumps]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q9"
+  ],
+  "notes": "Two physically distinct probes (Channel 1 and Channel 4) modeled as separate FailureMode chains sharing the same terminal Consequence per common-cause reporting basis (50.73(a)(2)(vii)(D)). Independent MCR level indication and emergency SW pumps described as operable backups during the event window are modeled as BACKED_UP_BY; broader accident-analysis design-basis discussion (LOCA/LOOP scenario) treated as design context and not separately modeled. Plant/unit inferred from title (Unit 1 report; Unit 2 also operating but not the subject unit)."
+}

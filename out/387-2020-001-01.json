@@ -1,0 +1,350 @@
+{
+  "ler_number": "387-2020-001-01",
+  "identity": {
+    "accession_number": "ML21026A253",
+    "docket": "05000387",
+    "plant_name": "Susquehanna",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2020-05-03",
+    "report_date": "2021-01-26",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2020-001-01 for Susquehanna Steam Electric Station Unit 1 re Automatic Reactor Scram Due to Main Turbine Trip Caused by an Electrical Ground Path in the B Main Transformer"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)",
+      "10 CFR 50.73(a)(2)(iv)(B)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "B",
+      "system": "EL",
+      "component": "XCT",
+      "manufacturer": "ITL",
+      "reportable": null
+    }
+  ],
+  "cause": {
+    "proximate_text": "an electrical path from a replacement current transformer (CT7) inside the main transformer to the low voltage bus causing a ground on the 24 kV System (Main Generator). The apparent cause of the ground was a current transformer with the incorrect insulation characteristics installed as a result of the wrong current transformer being supplied to Susquehanna",
+    "cause_code": "B",
+    "category": "Design/Manufacturing/Installation",
+    "theme": "wrong-part supplied; incorrect CT insulation rating",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 387-2020-001-01",
+      "properties": {},
+      "type": "LER",
+      "key": "387-2020-001-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:387-2020-001-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Susquehanna Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000387",
+      "match_key": "Unit:05000387"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Manufacturing/Installation (B)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "B",
+      "category": "Design/Manufacturing/Installation",
+      "theme": "wrong-part supplied; incorrect CT insulation rating",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Design/Manufacturing/Installation"
+    },
+    {
+      "id": "sys_tb",
+      "display_name": "24 kV System (Main Generator)",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "TB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:TB"
+    },
+    {
+      "id": "sys_ta",
+      "display_name": "Main Turbine",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "TA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:TA"
+    },
+    {
+      "id": "sys_jc",
+      "display_name": "Reactor Protection System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JC"
+    },
+    {
+      "id": "sys_ad",
+      "display_name": "Reactor Recirculation",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "AD",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:AD"
+    },
+    {
+      "id": "sys_sj",
+      "display_name": "Reactor Feed Water",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "c_ct7",
+      "display_name": "Current Transformer 7 (CT7), B Main Transformer",
+      "properties": {
+        "part_number": "40889-1-001"
+      },
+      "type": "Component",
+      "eiis_code": "XCT",
+      "identifier": "1X102 CT7",
+      "model": null,
+      "manufacturer_code": "ITL",
+      "inferred_code": false,
+      "match_key": "Component:XCT|1X102 CT7"
+    },
+    {
+      "id": "c_trb",
+      "display_name": "Main Turbine",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "TRB",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:TRB"
+    },
+    {
+      "id": "c_p",
+      "display_name": "Reactor Recirculation Pumps",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "P",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:P"
+    },
+    {
+      "id": "fm_wrongpart",
+      "display_name": "Incorrect current transformer supplied/installed",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Wrong CT with incorrect insulation characteristics was supplied to Susquehanna and installed as CT7 replacement",
+      "match_key": "FailureMode:incorrect-current-transformer-supplied-installed"
+    },
+    {
+      "id": "fm_groundpath",
+      "display_name": "Electrical ground path from CT7 to low voltage bus",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Electrical path formed from replacement CT7 inside the main transformer to the low voltage bus, causing a ground on the 24 kV Main Generator system",
+      "match_key": "FailureMode:electrical-ground-path-from-ct7-to-low-voltage-bus"
+    },
+    {
+      "id": "fm_turbtrip",
+      "display_name": "Main turbine trip",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Ground on the 24 kV Main Generator system caused the main turbine to trip",
+      "match_key": "FailureMode:main-turbine-trip"
+    },
+    {
+      "id": "cons_scram",
+      "display_name": "Automatic reactor scram / RPS actuation with EOC-RPT recirc pump trip",
+      "properties": {
+        "notes": "Both RPS divisions actuated, all control rods inserted, recirc pumps tripped on EOC-RPT"
+      },
+      "type": "Consequence",
+      "start": "2020-05-03T08:21",
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:automatic-reactor-scram-rps-actuation-with-eoc-rpt-recirc-pump-trip"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Removed current transformer and replaced with bus bar under approved engineering change",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:removed-current-transformer-and-replaced-with-bus-bar-under-approved-engineering-change"
+    },
+    {
+      "id": "mfr_itl",
+      "display_name": "Instrument Transformers Limited",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "ITL",
+      "match_key": "Manufacturer:ITL"
+    },
+    {
+      "id": "rr_5073_iv_a",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5073_iv_b",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-b"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_iv_a",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_iv_b",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_tb",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ta",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ad",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sj",
+      "evidence": null
+    },
+    {
+      "source": "c_trb",
+      "relation": "PART_OF",
+      "target": "sys_ta",
+      "evidence": null
+    },
+    {
+      "source": "c_p",
+      "relation": "PART_OF",
+      "target": "sys_ad",
+      "evidence": null
+    },
+    {
+      "source": "fm_wrongpart",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_wrongpart",
+      "relation": "LEADS_TO",
+      "target": "fm_groundpath",
+      "evidence": null
+    },
+    {
+      "source": "fm_groundpath",
+      "relation": "LEADS_TO",
+      "target": "fm_turbtrip",
+      "evidence": null
+    },
+    {
+      "source": "fm_turbtrip",
+      "relation": "LEADS_TO",
+      "target": "cons_scram",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "c_ct7",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_itl",
+      "evidence": null
+    }
+  ],
+  "chain": "wrong CT with incorrect insulation supplied/installed [cause B] -> electrical ground path from CT7 to low voltage bus -> ground on 24 kV Main Generator system -> main turbine trip -> automatic reactor scram / RPS actuation with EOC-RPT recirc pump trip",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "No SSCs inoperable prior to event; all safety systems responded properly and no ECCS/RCIC actuation or SRV lifts occurred, so no BACKED_UP_BY edges are warranted. Previous occurrences section states 'None' - no SIMILAR_TO stub LER created. Component failure info identifies CT7 as 1X102 CT7, part number 40889-1-001, manufactured by Instrument Transformers Limited (ITL)."
+}

@@ -1,0 +1,408 @@
+{
+  "ler_number": "391-2024-001-00",
+  "identity": {
+    "accession_number": "ML24087A215",
+    "docket": "05000391",
+    "plant_name": "Watts Bar",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2024-01-27",
+    "report_date": "2024-03-27",
+    "operating_mode": "3",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Automatic Reactor Trip Due to Main Generator Protection Relay Actuation"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "B",
+      "system": "TB",
+      "component": "CBL",
+      "manufacturer": "ROCK",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "vibration induced wear damage from metal conduit threading and conduit edging to cable insulation, exposing conductors and subsequently causing a ground fault in the associated Current Transformer (CT) protective relay circuit",
+    "cause_code": "B",
+    "category": "Design/Manufacturing/Installation",
+    "theme": "CT cable insulation wear against conduit causing intermittent ground fault",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 391-2024-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "391-2024-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:391-2024-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Watts Bar Unit 2",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000391",
+      "match_key": "Unit:05000391"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Manufacturing/Installation (B)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "B",
+      "category": "Design/Manufacturing/Installation",
+      "theme": "CT cable insulation wear against conduit causing intermittent ground fault",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Design/Manufacturing/Installation"
+    },
+    {
+      "id": "sys_tb",
+      "display_name": "Turbine/Generator Building Electrical (Main Generator/Turbine)",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "TB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:TB"
+    },
+    {
+      "id": "sys_rps",
+      "display_name": "Reactor Protection System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "actuated safety system",
+      "match_key": "System:reactor-protection-system"
+    },
+    {
+      "id": "sys_afw",
+      "display_name": "Auxiliary Feedwater",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "actuated safety system",
+      "match_key": "System:BA"
+    },
+    {
+      "id": "c_ct",
+      "display_name": "Main Generator Neutral Current Transformers 251/252",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "251, 252",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:main-generator-neutral-current-transformers-251-252"
+    },
+    {
+      "id": "c_cable",
+      "display_name": "CT-to-termination-box cable",
+      "properties": {
+        "manufacturer_code": "ROCK"
+      },
+      "type": "Component",
+      "eiis_code": "CBL",
+      "identifier": null,
+      "model": "WWW-2, 10 AWG",
+      "manufacturer_code": "ROCK",
+      "inferred_code": false,
+      "match_key": "Component:CBL"
+    },
+    {
+      "id": "c_relay",
+      "display_name": "Main Transformer Differential Current Protective Relay (287T)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "87",
+      "identifier": "2-RLY-244-S300G3/1",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:87|2-RLY-244-S300G3/1"
+    },
+    {
+      "id": "fm_wear",
+      "display_name": "Cable insulation worn by conduit threading/edging, exposing conductor",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Vibration induced wear damage to generator protective relay CT cable insulation against metal conduit threading and edging, exposing the conductor.",
+      "match_key": "FailureMode:cable-insulation-worn-by-conduit-threading-edging-exposing-conductor"
+    },
+    {
+      "id": "fm_ground",
+      "display_name": "Intermittent phase-to-ground / phase-to-phase-to-ground fault",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Exposed conductor caused intermittent ground fault in CT current loops.",
+      "match_key": "FailureMode:intermittent-phase-to-ground-phase-to-phase-to-ground-fault"
+    },
+    {
+      "id": "fm_relayactuation",
+      "display_name": "Main transformer differential current relay (287T) actuation",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Intermittent ground fault caused actuation of the associated main transformer differential current protective relay.",
+      "match_key": "FailureMode:main-transformer-differential-current-relay-287t-actuation"
+    },
+    {
+      "id": "fm_turbinetrip",
+      "display_name": "Main turbine trip",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Relay actuation resulted in a main turbine trip.",
+      "match_key": "FailureMode:main-turbine-trip"
+    },
+    {
+      "id": "cons_rxtrip",
+      "display_name": "Automatic reactor trip",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2024-01-27T21:41",
+      "end": null,
+      "duration": null,
+      "tz": "EST",
+      "match_key": "Consequence:automatic-reactor-trip"
+    },
+    {
+      "id": "ca_replace_cable",
+      "display_name": "Replace degraded CT-to-termination-box cables with protective wrap at wear locations",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-degraded-ct-to-termination-box-cables-with-protective-wrap-at-wear-locations"
+    },
+    {
+      "id": "ca_monitor",
+      "display_name": "Install clamp-on amp meters with power quality analyzer for online monitoring",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:install-clamp-on-amp-meters-with-power-quality-analyzer-for-online-monitoring"
+    },
+    {
+      "id": "ca_troubleshoot_process",
+      "display_name": "Revise troubleshooting equipment investigation process, Corrective Action Program, and issue resolution process for common cause-level/failure-mechanism language",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-troubleshooting-equipment-investigation-process-corrective-action-program-and-issue-resolution-process-for-common-cause-level-failure-mechanism-language"
+    },
+    {
+      "id": "ca_leadership_training",
+      "display_name": "Revise Leadership Culture, Site Middle Manager, and Management Review Committee training on failure investigation and failure mechanism",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-leadership-culture-site-middle-manager-and-management-review-committee-training-on-failure-investigation-and-failure-mechanism"
+    },
+    {
+      "id": "ca_qa_process",
+      "display_name": "Revise Corporate Functional Area Management and QA processes to require periodic assessment of personnel/leadership behaviors around failure investigations",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-corporate-functional-area-management-and-qa-processes-to-require-periodic-assessment-of-personnel-leadership-behaviors-around-failure-investigations"
+    },
+    {
+      "id": "mfr_rock",
+      "display_name": "Rockbestos Company",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "ROCK",
+      "match_key": "Manufacturer:ROCK"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_ufsar",
+      "display_name": "UFSAR Section 15.2.7, Loss of External Electrical Load and/or Turbine Trip",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:ufsar-section-15-2-7-loss-of-external-electrical-load-and-or-turbine-trip"
+    },
+    {
+      "id": "ler_prev1",
+      "display_name": "LER 391-2018-003-00",
+      "properties": {},
+      "type": "LER",
+      "key": "391-2018-003-00",
+      "stub": true,
+      "title": "Unit trip due to actuation of the main transformer differential current relay",
+      "plant": "Watts Bar Nuclear Plant",
+      "match_key": "LER:391-2018-003-00"
+    },
+    {
+      "id": "ler_prev2",
+      "display_name": "LER 391-2023-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "391-2023-002-00",
+      "stub": true,
+      "title": "Unit trip due to a main turbine trip",
+      "plant": "Watts Bar Nuclear Plant",
+      "match_key": "LER:391-2023-002-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_tb",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rps",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_afw",
+      "evidence": null
+    },
+    {
+      "source": "c_cable",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_rock",
+      "evidence": null
+    },
+    {
+      "source": "fm_wear",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_wear",
+      "relation": "LEADS_TO",
+      "target": "fm_ground",
+      "evidence": null
+    },
+    {
+      "source": "fm_ground",
+      "relation": "LEADS_TO",
+      "target": "fm_relayactuation",
+      "evidence": null
+    },
+    {
+      "source": "fm_relayactuation",
+      "relation": "LEADS_TO",
+      "target": "fm_turbinetrip",
+      "evidence": null
+    },
+    {
+      "source": "fm_turbinetrip",
+      "relation": "LEADS_TO",
+      "target": "cons_rxtrip",
+      "evidence": null
+    },
+    {
+      "source": "cons_rxtrip",
+      "relation": "MITIGATED_BY",
+      "target": "sys_afw",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_cable",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_monitor",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_troubleshoot_process",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_leadership_training",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_qa_process",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev1",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev2",
+      "evidence": null
+    }
+  ],
+  "chain": "cable insulation wear from conduit threading/edging [cause B] -> exposed conductor causes intermittent phase-to-ground fault -> main transformer differential relay (287T) actuation -> main turbine trip -> automatic reactor trip [RPS and AFW performed as designed]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code B (Design/Manufacturing/Installation) governs category despite narrative's root-cause section attributing a human-performance/leadership root cause regarding troubleshooting rigor; theme captures the physical CT cable wear mechanism per rule 4. AFW and RPS modeled as INVOLVES per reporting basis and MITIGATED_BY/BACKED_UP_BY-style response since narrative states they performed as designed during the event (not merely design context). Two previous similar LERs captured as stub nodes with keys exactly as stated in text."
+}

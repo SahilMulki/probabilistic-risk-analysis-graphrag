@@ -1,0 +1,150 @@
+{
+  "ler_number": "352-2020-001-01",
+  "identity": {
+    "accession_number": "ML21078A049",
+    "docket": "05000352",
+    "plant_name": "Limerick",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2020-11-13",
+    "report_date": "2021-03-19",
+    "operating_mode": null,
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Valid Automatic Actuation of the Reactor Protection System with the Reactor Critical Due to Closure of One Main Steam Isolation Valve"
+  },
+  "reporting_basis": {
+    "reported_under": [],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": null,
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "MSIV closure causing reactor trip",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 352-2020-002-01",
+      "properties": {},
+      "type": "LER",
+      "key": "352-2020-001-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:352-2020-001-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Limerick Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000352",
+      "match_key": "Unit:05000352"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "MSIV closure causing reactor trip",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_msiv",
+      "display_name": "Main Steam System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:main-steam-system"
+    },
+    {
+      "id": "c_msiv",
+      "display_name": "Main Steam Isolation Valve",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": true,
+      "match_key": "Component:ISV"
+    },
+    {
+      "id": "fm_msiv_close",
+      "display_name": "Closure of one Main Steam Isolation Valve",
+      "properties": {},
+      "type": "FailureMode",
+      "description": null,
+      "match_key": "FailureMode:closure-of-one-main-steam-isolation-valve"
+    },
+    {
+      "id": "cons_rps",
+      "display_name": "Automatic actuation of Reactor Protection System (reactor trip) with reactor critical",
+      "properties": {},
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:automatic-actuation-of-reactor-protection-system-reactor-trip-with-reactor-critical"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_msiv",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_msiv",
+      "evidence": null
+    },
+    {
+      "source": "fm_msiv_close",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_msiv_close",
+      "relation": "LEADS_TO",
+      "target": "cons_rps",
+      "evidence": null
+    }
+  ],
+  "chain": "unspecified cause [TBD] -> MSIV closes -> RPS automatic actuation / reactor trip with reactor critical",
+  "golden_questions": [
+    "Q1",
+    "Q3"
+  ],
+  "notes": "No narrative text was provided (366A body empty in this input), so only header/title-derived facts could be modeled. Cause code is TBD per FORM-366 fields; no corrective actions, manufacturers, or backup systems could be extracted without narrative detail. Plant name, unit number, and reactor type were not provided in FORM-366 fields and are left null."
+}

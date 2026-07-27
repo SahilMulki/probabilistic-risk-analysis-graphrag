@@ -1,0 +1,353 @@
+{
+  "ler_number": "270-2021-005-00",
+  "identity": {
+    "accession_number": "ML22039A333",
+    "docket": "05000270",
+    "plant_name": "Oconee",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2021-12-10",
+    "report_date": "2022-02-08",
+    "operating_mode": "1",
+    "power_level": 73,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Revision 00 – Unit 2 Automatic Reactor Trip"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "the Unit 2 Reactor Trip occurred due to a combination of: 1. The 2B RPS Channel being placed in \"trip\" via the Manual Trip Keyswitch during performance of IP/2/A/0315/018B ... and 2. a concurrent momentary flux/imbalance/flow trip signal being received in the 2A RPS Channel due to a 2NI-5 signal spike",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "test-procedure-induced channel trip coincident with transient instrumentation spike",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 270-2021-005-00",
+      "properties": {},
+      "type": "LER",
+      "key": "270-2021-005-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:270-2021-005-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Oconee Unit 2",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000270",
+      "match_key": "Unit:05000270"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "test-procedure-induced channel trip coincident with transient instrumentation spike",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_rps",
+      "display_name": "Reactor Protective System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JC"
+    },
+    {
+      "id": "c_2b_channel",
+      "display_name": "2B RPS Channel",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "CHA",
+      "identifier": "2B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:CHA|2B"
+    },
+    {
+      "id": "c_keyswitch",
+      "display_name": "Manual Trip Keyswitch",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:manual-trip-keyswitch"
+    },
+    {
+      "id": "c_2a_channel",
+      "display_name": "2A RPS Channel",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "CHA",
+      "identifier": "2A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:CHA|2A"
+    },
+    {
+      "id": "c_2ni5",
+      "display_name": "2NI-5 Neutron Detector",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "JI",
+      "identifier": "2NI-5",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:JI|2NI-5"
+    },
+    {
+      "id": "c_2ni5_amp",
+      "display_name": "2NI-5 Upper Linear Amplifier",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "2NI-5 upper linear amplifier",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:2ni-5-upper-linear-amplifier"
+    },
+    {
+      "id": "fm_2b_manualtrip",
+      "display_name": "2B RPS Channel placed in trip during maintenance test",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "2B RPS Channel placed in \"trip\" via the Manual Trip Keyswitch during performance of IP/2/A/0315/018B (TXS RPS Ch B Statalarm and Event Recorder Test and Manual Trip Keyswitch Test)",
+      "match_key": "FailureMode:2b-rps-channel-placed-in-trip-during-maintenance-test"
+    },
+    {
+      "id": "fm_2ni5_spike",
+      "display_name": "2NI-5 signal spike causing momentary flux/flow/imbalance trip",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Short duration signal spike (200ms) on the 2NI-5 detector causing a Flux/Flow/Imbalance function trip in RPS Channel 2A",
+      "match_key": "FailureMode:2ni-5-signal-spike-causing-momentary-flux-flow-imbalance-trip"
+    },
+    {
+      "id": "fm_2of4_logic",
+      "display_name": "2/4 RPS trip logic satisfied",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "2B channel in trip plus concurrent momentary trip signal in 2A channel satisfied the 2/4 trip logic",
+      "match_key": "FailureMode:2-4-rps-trip-logic-satisfied"
+    },
+    {
+      "id": "cons_trip",
+      "display_name": "Automatic reactor trip",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2021-12-10T00:49",
+      "end": null,
+      "duration": null,
+      "tz": "EST",
+      "match_key": "Consequence:automatic-reactor-trip"
+    },
+    {
+      "id": "ca_proc_split",
+      "display_name": "Revised IP/2/A/0315/018 A,B,C,D procedures to separate trip and alarm verification tests",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revised-ip-2-a-0315-018-a-b-c-d-procedures-to-separate-trip-and-alarm-verification-tests"
+    },
+    {
+      "id": "ca_replace_amp",
+      "display_name": "Replaced 2NI-5 upper linear amplifier",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replaced-2ni-5-upper-linear-amplifier"
+    },
+    {
+      "id": "ca_elec_test",
+      "display_name": "Completed electrical testing for 2NI-5",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:completed-electrical-testing-for-2ni-5"
+    },
+    {
+      "id": "ca_proc_status",
+      "display_name": "Process procedure revision to change unit status for Manual Trip Keyswitch portion of IP/1,2,3/A/0315/018 A,B,C,D",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:process-procedure-revision-to-change-unit-status-for-manual-trip-keyswitch-portion-of-ip-1-2-3-a-0315-018-a-b-c-d"
+    },
+    {
+      "id": "ca_training",
+      "display_name": "Training to Operations, Maintenance, and Engineering",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:training-to-operations-maintenance-and-engineering"
+    },
+    {
+      "id": "ca_degradation",
+      "display_name": "Address degradation issues found during electrical testing",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:address-degradation-issues-found-during-electrical-testing"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5072",
+      "display_name": "10 CFR 50.72(b)(2)(iv)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-2-iv-b"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rps",
+      "evidence": null
+    },
+    {
+      "source": "c_2b_channel",
+      "relation": "PART_OF",
+      "target": "sys_rps",
+      "evidence": null
+    },
+    {
+      "source": "c_2a_channel",
+      "relation": "PART_OF",
+      "target": "sys_rps",
+      "evidence": null
+    },
+    {
+      "source": "fm_2b_manualtrip",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_2b_manualtrip",
+      "relation": "LEADS_TO",
+      "target": "fm_2of4_logic",
+      "evidence": null
+    },
+    {
+      "source": "fm_2ni5_spike",
+      "relation": "LEADS_TO",
+      "target": "fm_2of4_logic",
+      "evidence": null
+    },
+    {
+      "source": "fm_2of4_logic",
+      "relation": "LEADS_TO",
+      "target": "cons_trip",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_proc_split",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_amp",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_elec_test",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_proc_status",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_training",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_degradation",
+      "evidence": null
+    }
+  ],
+  "chain": "2B RPS channel placed in trip via Manual Trip Keyswitch during test [cause TBD] + concurrent 2NI-5 signal spike causing 2A flux/flow/imbalance trip -> 2/4 RPS trip logic satisfied -> automatic reactor trip",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code TBD/provisional per FORM-366 header; narrative attributes trip to a combination of two concurrent conditions (test-induced 2B channel trip plus a transient 2NI-5 signal spike causing a momentary 2A channel trip). Modeled as two parallel FailureModes converging on the 2/4 logic satisfaction, per rule 5. SSF RCMUP being out of service is discussed only in Safety Analysis as a pre-existing OOS condition unrelated to the trip's causal chain; not modeled as System/backup since it did not participate in mitigating this failure chain. One main steam relief valve failing to fully reseat is a minor post-trip observation not part of the causal chain to the trip itself; omitted per scope guidance (event is the reactor trip, not the relief valve issue). No block_13 data was reported (component failure table marked N/A), consistent with no equipment failure identified as root cause."
+}

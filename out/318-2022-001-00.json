@@ -1,0 +1,380 @@
+{
+  "ler_number": "318-2022-001-00",
+  "identity": {
+    "accession_number": "ML22063A703",
+    "docket": "05000318",
+    "plant_name": "Calvert Cliffs",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2022-01-03",
+    "report_date": "2022-03-03",
+    "operating_mode": "2",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Automatic Reactor Trip Due to High Reactor Coolant System"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(B)",
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "B",
+      "system": "TG",
+      "component": "TD",
+      "manufacturer": "W120",
+      "reportable": "N"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The cause of the event was the configuration of the megawatt transducer circuit was not corrected prior to the January 3, 2022 transient. ... the megawatt transducers installed in the megawatt transducer circuit for the Unit 2 main turbine Ovation control system were configured to activate the Load Drop Anticipator (LDA) function of the system if main turbine speed reached 1809 revolutions per minute (RPM) with the reactor at 100 percent power [instead of the correct 1854 RPM at 100 percent power]",
+    "cause_code": "B",
+    "category": "Design/Manufacturing/Installation",
+    "theme": "incorrect megawatt transducer circuit configuration / setpoint",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 318-2022-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "318-2022-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:318-2022-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Calvert Cliffs Unit 2",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000318",
+      "match_key": "Unit:05000318"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Manufacturing/Installation (B)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "B",
+      "category": "Design/Manufacturing/Installation",
+      "theme": "incorrect megawatt transducer circuit configuration / setpoint",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Design/Manufacturing/Installation"
+    },
+    {
+      "id": "sys_tg",
+      "display_name": "Main Turbine Control System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "TG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:TG"
+    },
+    {
+      "id": "sys_bu",
+      "display_name": "500-kV Switchyard Red Bus",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BU",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BU"
+    },
+    {
+      "id": "sys_ab",
+      "display_name": "Reactor Coolant System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "AB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:AB"
+    },
+    {
+      "id": "c_bkr",
+      "display_name": "Transformer feeder breaker",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "BKR",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:BKR"
+    },
+    {
+      "id": "c_td",
+      "display_name": "Megawatt transducer circuit",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "TD",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": "W120",
+      "inferred_code": false,
+      "match_key": "Component:TD"
+    },
+    {
+      "id": "c_fcv",
+      "display_name": "Turbine control valves",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "FCV",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:FCV"
+    },
+    {
+      "id": "c_v",
+      "display_name": "Turbine intercept valves",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "V",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:V"
+    },
+    {
+      "id": "fm_fault",
+      "display_name": "Phase-to-ground fault on transformer feeder breaker",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Severe weather induced phase-to-ground fault on 500-kV switchyard Red Bus 'B' phase feeder breaker, causing electrical transient affecting bus frequency and main turbine speed.",
+      "match_key": "FailureMode:phase-to-ground-fault-on-transformer-feeder-breaker"
+    },
+    {
+      "id": "fm_misconfig",
+      "display_name": "Megawatt transducer circuit misconfigured LDA setpoint",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Megawatt transducers configured to activate the Load Drop Anticipator at 1809 RPM even at 100% reactor power, instead of the intended 1854 RPM at full power.",
+      "match_key": "FailureMode:megawatt-transducer-circuit-misconfigured-lda-setpoint"
+    },
+    {
+      "id": "fm_lda",
+      "display_name": "Load Drop Anticipator function actuated",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Turbine speed transient increased to 1810 RPM, exceeding the 1809 RPM LDA setpoint, latching the LDA function.",
+      "match_key": "FailureMode:load-drop-anticipator-function-actuated"
+    },
+    {
+      "id": "fm_valveclosure",
+      "display_name": "Turbine control and intercept valves forced shut",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "With LDA latched, turbine control valves and intercept valves were forced shut to prevent possible turbine overspeed.",
+      "match_key": "FailureMode:turbine-control-and-intercept-valves-forced-shut"
+    },
+    {
+      "id": "fm_rcspress",
+      "display_name": "RCS pressure rise",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "With turbine valves traveling closed, reactor coolant system pressure began to rise.",
+      "match_key": "FailureMode:rcs-pressure-rise"
+    },
+    {
+      "id": "cons_trip",
+      "display_name": "Automatic Unit 2 reactor trip on high RCS pressure",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2022-01-03T12:23:52",
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:automatic-unit-2-reactor-trip-on-high-rcs-pressure"
+    },
+    {
+      "id": "ca_tuning",
+      "display_name": "Tuning change to main turbine Ovation controls to activate LDA at 1854 RPM at full power",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:tuning-change-to-main-turbine-ovation-controls-to-activate-lda-at-1854-rpm-at-full-power"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace megawatt transducers in future outage to restore original design operation",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-megawatt-transducers-in-future-outage-to-restore-original-design-operation"
+    },
+    {
+      "id": "mfr_west",
+      "display_name": "Westinghouse",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "W120",
+      "match_key": "Manufacturer:W120"
+    },
+    {
+      "id": "rr_50_73_iv_a",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_50_73_iv_b",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-b"
+    },
+    {
+      "id": "rr_nureg1022",
+      "display_name": "NUREG-1022, Revision 3",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "standard/guidance",
+      "match_key": "RegulatoryReference:nureg-1022-revision-3"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_50_73_iv_a",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_50_73_iv_b",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_tg",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ab",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bu",
+      "evidence": null
+    },
+    {
+      "source": "c_td",
+      "relation": "PART_OF",
+      "target": "sys_tg",
+      "evidence": null
+    },
+    {
+      "source": "c_bkr",
+      "relation": "PART_OF",
+      "target": "sys_bu",
+      "evidence": null
+    },
+    {
+      "source": "fm_fault",
+      "relation": "LEADS_TO",
+      "target": "fm_lda",
+      "evidence": null
+    },
+    {
+      "source": "fm_misconfig",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_misconfig",
+      "relation": "LEADS_TO",
+      "target": "fm_lda",
+      "evidence": null
+    },
+    {
+      "source": "fm_lda",
+      "relation": "LEADS_TO",
+      "target": "fm_valveclosure",
+      "evidence": null
+    },
+    {
+      "source": "fm_valveclosure",
+      "relation": "LEADS_TO",
+      "target": "fm_rcspress",
+      "evidence": null
+    },
+    {
+      "source": "fm_rcspress",
+      "relation": "LEADS_TO",
+      "target": "cons_trip",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_tuning",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "c_td",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_west",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_nureg1022",
+      "evidence": null
+    }
+  ],
+  "chain": "megawatt transducer circuit misconfigured LDA setpoint [cause B] + weather-induced grid fault -> turbine speed transient reaches 1810 RPM -> LDA function latches -> turbine control/intercept valves forced shut -> RCS pressure rises -> automatic reactor trip on high RCS pressure",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Root failure mode is a latent design/configuration error (megawatt transducer circuit LDA setpoint incorrect for full-power operation), which was only revealed when a weather-induced electrical fault produced a turbine speed transient that crossed the erroneous 1809 RPM setpoint. Both the external fault and the misconfiguration are modeled as parallel inputs converging on LDA actuation, per rule 5 (single trigger with two causal inputs). No previous occurrences (Section G) or applicable backups stated in narrative; RCS/turbine valve systems and 500kV bus are modeled as directly involved per the event description, not as design-context-only mentions."
+}

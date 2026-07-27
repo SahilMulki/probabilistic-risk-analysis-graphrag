@@ -1,0 +1,430 @@
+{
+  "ler_number": "282-2025-002-00",
+  "identity": {
+    "accession_number": "ML25283A066",
+    "docket": "05000282",
+    "plant_name": "Prairie Island",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2025-06-21",
+    "report_date": "2025-10-10",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "inspection",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2025-002-00 for Prairie Island Nuclear Generating Plant, Units 1 and 2, 121 Control Room Chiller Inoperable Due to Purge System Failure"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)",
+      "10 CFR 50.73(a)(2)(v)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The cause of the 121 CR Chiller tripping was a buildup of non-condensable gases due to a failed purge compressor. Troubleshooting refuted the possibility of fouled condenser tubes, insufficient cooling water flow, and excessive air intrusion into the chiller system. No specific failure mode of the purge compressor was identified.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "purge compressor failure with undetermined failure mode",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 282-2025-002-00",
+      "properties": {
+        "match_key": "LER:282-2025-002-00"
+      },
+      "type": "LER",
+      "key": "282-2025-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:282-2025-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Prairie Island Unit 1",
+      "properties": {
+        "match_key": "Unit:05000282",
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000282",
+      "match_key": "Unit:05000282"
+    },
+    {
+      "id": "cause",
+      "display_name": "Undetermined (TBD)",
+      "properties": {
+        "match_key": "Cause:provisional"
+      },
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "purge compressor failure with undetermined failure mode",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_scws",
+      "display_name": "Safeguards Chilled Water System",
+      "properties": {
+        "acronym": "SCWS",
+        "match_key": "System:safeguards-chilled-water-system"
+      },
+      "type": "System",
+      "eiis_code": "KM",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "safety-related system providing control room habitability and cooling",
+      "match_key": "System:KM"
+    },
+    {
+      "id": "sys_ib",
+      "display_name": "Annunciator/Alarm System",
+      "properties": {
+        "match_key": "System:IB"
+      },
+      "type": "System",
+      "eiis_code": "IB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "alarm notification",
+      "match_key": "System:IB"
+    },
+    {
+      "id": "c_121chiller",
+      "display_name": "121 Control Room Chiller (Trane Air Conditioning, PCV-1C)",
+      "properties": {
+        "manufacturer": "Trane Air Conditioning",
+        "match_key": "Component:VI|PCV-1C"
+      },
+      "type": "Component",
+      "eiis_code": "VI",
+      "identifier": "PCV-1C",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:VI|PCV-1C"
+    },
+    {
+      "id": "c_122chiller",
+      "display_name": "122 Control Room Chiller",
+      "properties": {
+        "role": "backup chiller; operable during 121 outage except brief support-system outages",
+        "match_key": "Component:VI|122-chiller"
+      },
+      "type": "Component",
+      "eiis_code": "VI",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:VI"
+    },
+    {
+      "id": "c_purge",
+      "display_name": "Purge Compressor (Trane Air Conditioning, PRGAA2A1BA0B)",
+      "properties": {
+        "manufacturer": "Trane Air Conditioning",
+        "match_key": "Component:purge-compressor-prgaa2a1ba0b"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "PRGAA2A1BA0B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:purge-compressor-trane-air-conditioning-prgaa2a1ba0b"
+    },
+    {
+      "id": "fm_purgefail",
+      "display_name": "Purge compressor failed (timer not advancing)",
+      "properties": {
+        "match_key": "FailureMode:purge-compressor-failed"
+      },
+      "type": "FailureMode",
+      "description": "Timer on purge compressor stopped advancing, indicating compressor failure; documented January 17, 2025 during Test Procedure 1687 inspection.",
+      "match_key": "FailureMode:purge-compressor-failed-timer-not-advancing"
+    },
+    {
+      "id": "fm_gasbuildup",
+      "display_name": "Non-condensable gas buildup in chiller refrigerant system",
+      "properties": {
+        "match_key": "FailureMode:non-condensable-gas-buildup"
+      },
+      "type": "FailureMode",
+      "description": "Without purge compressor function, non-condensable gases accumulated in the 121 CR Chiller refrigerant system over time.",
+      "match_key": "FailureMode:non-condensable-gas-buildup-in-chiller-refrigerant-system"
+    },
+    {
+      "id": "fm_chillertrip",
+      "display_name": "121 CR Chiller tripped on High Refrigerant Pressure",
+      "properties": {
+        "match_key": "FailureMode:chiller-tripped-high-refrigerant-pressure"
+      },
+      "type": "FailureMode",
+      "description": "Non-condensable gas level reached a point permitting the chiller to trip on High Refrigerant Pressure on June 21, 2025.",
+      "match_key": "FailureMode:121-cr-chiller-tripped-on-high-refrigerant-pressure"
+    },
+    {
+      "id": "fm_missedactions",
+      "display_name": "Missed TS-required Mode 3 transitions",
+      "properties": {
+        "match_key": "FailureMode:missed-ts-mode-3-transitions"
+      },
+      "type": "FailureMode",
+      "description": "Past Operability Review determined 121 CR Chiller was inoperable > 30 days (TS LCO 3.7.11 Condition A); required Mode 3 transition (Condition B) was not completed, and LCO 3.0.3 Mode 3 entry required by Condition E during concurrent 122 CR Chiller inoperability was also not entered.",
+      "match_key": "FailureMode:missed-ts-required-mode-3-transitions"
+    },
+    {
+      "id": "cons_inoperable",
+      "display_name": "121 CR Chiller inoperable beyond 30-day mission time / TS action not completed",
+      "properties": {
+        "match_key": "Consequence:121-chiller-inoperable-ts-violation"
+      },
+      "type": "Consequence",
+      "start": "2025-04-22T09:31",
+      "end": "2025-06-21T17:56",
+      "duration": "~60 days",
+      "tz": "CDT",
+      "match_key": "Consequence:121-cr-chiller-inoperable-beyond-30-day-mission-time-ts-action-not-completed"
+    },
+    {
+      "id": "cons_dualinop",
+      "display_name": "Combined ~9.5 hours both CR Chillers inoperable (potential loss of safety function)",
+      "properties": {
+        "match_key": "Consequence:combined-dual-chiller-inoperability"
+      },
+      "type": "Consequence",
+      "start": "2025-04-22T09:31",
+      "end": "2025-06-21T17:56",
+      "duration": "approximately 9.5 hours combined",
+      "tz": "CDT",
+      "match_key": "Consequence:combined-9-5-hours-both-cr-chillers-inoperable-potential-loss-of-safety-function"
+    },
+    {
+      "id": "ca_ec",
+      "display_name": "Engineering change approved to replace obsolete Trane purge compressor with new skid",
+      "properties": {
+        "match_key": "CorrectiveAction:ec-approved-replace-purge-compressor-skid"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:engineering-change-approved-to-replace-obsolete-trane-purge-compressor-with-new-skid"
+    },
+    {
+      "id": "ca_interim",
+      "display_name": "Install interim non-safety-related purge compressor skid on 121 CR Chiller",
+      "properties": {
+        "match_key": "CorrectiveAction:install-interim-purge-skid"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:install-interim-non-safety-related-purge-compressor-skid-on-121-cr-chiller"
+    },
+    {
+      "id": "ca_compensatory",
+      "display_name": "Run temporary purge compressor 1 hour every 2 weeks as compensatory measure",
+      "properties": {
+        "note": "remains in place until new safety-related skid installed",
+        "match_key": "CorrectiveAction:compensatory-purge-run-schedule"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:run-temporary-purge-compressor-1-hour-every-2-weeks-as-compensatory-measure"
+    },
+    {
+      "id": "ca_122mod",
+      "display_name": "Permanently modify 122 CR Chiller purge compressor with new skid",
+      "properties": {
+        "match_key": "CorrectiveAction:modify-122-chiller-purge-skid"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:permanently-modify-122-cr-chiller-purge-compressor-with-new-skid"
+    },
+    {
+      "id": "rr_5073i",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_5073v",
+      "display_name": "10 CFR 50.73(a)(2)(v)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v"
+    },
+    {
+      "id": "rr_lco3711",
+      "display_name": "TS LCO 3.7.11 (Safeguards Chilled Water System)",
+      "properties": {
+        "match_key": "RegulatoryReference:ts-lco-3-7-11"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-lco-3-7-11-safeguards-chilled-water-system"
+    },
+    {
+      "id": "rr_lco303",
+      "display_name": "TS LCO 3.0.3",
+      "properties": {
+        "match_key": "RegulatoryReference:ts-lco-3-0-3"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-lco-3-0-3"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073i",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073v",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_scws",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_121chiller",
+      "evidence": null
+    },
+    {
+      "source": "c_121chiller",
+      "relation": "PART_OF",
+      "target": "sys_scws",
+      "evidence": null
+    },
+    {
+      "source": "sys_ib",
+      "relation": "INVOLVES",
+      "target": "c_121chiller",
+      "evidence": "annunciator [IB] alarm 47022-0302, 121 CONTROL ROOM WATER CHILLER TRIPPED"
+    },
+    {
+      "source": "fm_purgefail",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_purgefail",
+      "relation": "LEADS_TO",
+      "target": "fm_gasbuildup",
+      "evidence": null
+    },
+    {
+      "source": "fm_gasbuildup",
+      "relation": "LEADS_TO",
+      "target": "fm_chillertrip",
+      "evidence": null
+    },
+    {
+      "source": "fm_gasbuildup",
+      "relation": "LEADS_TO",
+      "target": "fm_missedactions",
+      "evidence": null
+    },
+    {
+      "source": "fm_chillertrip",
+      "relation": "LEADS_TO",
+      "target": "cons_inoperable",
+      "evidence": null
+    },
+    {
+      "source": "fm_missedactions",
+      "relation": "LEADS_TO",
+      "target": "cons_dualinop",
+      "evidence": null
+    },
+    {
+      "source": "cons_inoperable",
+      "relation": "BACKED_UP_BY",
+      "target": "c_122chiller",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_ec",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_interim",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_compensatory",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_122mod",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_lco3711",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_lco303",
+      "evidence": null
+    }
+  ],
+  "chain": "purge compressor failure [cause TBD] -> non-condensable gas buildup -> 121 CR Chiller trips on high refrigerant pressure -> 121 chiller inoperable >30 days / missed TS Mode 3 actions -> combined ~9.5h dual-chiller inoperability [backup: 122 CR Chiller operable except brief coincident outages]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code left TBD/provisional per FORM-366 fields since no official cause code was assigned; narrative states 'no specific failure mode of the purge compressor was identified' after troubleshooting ruled out several other causes. Two distinct reportability bases apply: (1) TS-prohibited condition (missed Mode 3 transitions) under 50.73(a)(2)(i)(B), and (2) combined ~9.5 hr period where both CR Chillers were inoperable simultaneously, reportable under 50.73(a)(2)(v) as a condition that could have prevented fulfillment of a safety function. Modeled as two related but distinct Consequence nodes. 122 CR Chiller modeled as a Component (not System) consistent with narrative treatment as the redundant train chiller; SCWS modeled as the governing System. No block_13 data was provided in FORM-366 fields (empty array), so none was fabricated. 'Previous Similar Events' section explicitly states none in past three years, so no stub LER was created per rule 9's requirement of an actual referenced prior event."
+}

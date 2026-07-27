@@ -1,0 +1,354 @@
+{
+  "ler_number": "255-2021-001-00",
+  "identity": {
+    "accession_number": "ML21226A001",
+    "docket": "05000255",
+    "plant_name": "Palisades",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2021-06-16",
+    "report_date": "2021-08-13",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Atmospheric Steam Dump Valves Inoperable Due to Relay Failure"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)(D)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "Raportabla",
+      "system": "to",
+      "component": "IRIS",
+      "manufacturer": "E",
+      "reportable": null
+    }
+  ],
+  "cause": {
+    "proximate_text": "The cause of the relay coil failure is overheating due to the age of the relay coil being beyond the vendor recommended life. The relay coil was beyond the vendor recommended life because the duty cycle of the relay was set at 'low duty cycle' when it should have been 'high duty cycle' due to the normally energized state of the relay.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "relay duty-cycle misclassification leading to premature coil overheating",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 255-2021-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "255-2021-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:255-2021-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Palisades Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000255",
+      "match_key": "Unit:05000255"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "relay duty-cycle misclassification leading to premature coil overheating",
+      "proximate_text": "The cause of the relay coil failure is overheating due to the age of the relay coil being beyond the vendor recommended life. The relay coil was beyond the vendor recommended life because the duty cycle of the relay was set at 'low duty cycle' when it should have been 'high duty cycle' due to the normally energized state of the relay.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_sb",
+      "display_name": "Main Steam Dump and Bypass System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SB"
+    },
+    {
+      "id": "sys_rct",
+      "display_name": "Reactor",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "RCT",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:RCT"
+    },
+    {
+      "id": "c_asdv",
+      "display_name": "Atmospheric Steam Dump Valves (ASDVs)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "PCV",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:PCV"
+    },
+    {
+      "id": "c_sdcr",
+      "display_name": "Steam Dump Control Relay (SDCR)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "RLY",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:RLY"
+    },
+    {
+      "id": "c_coil",
+      "display_name": "Relay coil",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "CL",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:CL"
+    },
+    {
+      "id": "c_fuse",
+      "display_name": "Fuse FUZ/IM13-1",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "FU",
+      "identifier": "FUZ/IM13-1",
+      "model": "FNM-5",
+      "manufacturer_code": "Bussmann",
+      "inferred_code": false,
+      "match_key": "Component:FU|FUZ/IM13-1"
+    },
+    {
+      "id": "c_tbv",
+      "display_name": "Turbine bypass valve",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:turbine-bypass-valve"
+    },
+    {
+      "id": "c_msrv",
+      "display_name": "Main steam safety valves",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "RV",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:RV"
+    },
+    {
+      "id": "fm_classify",
+      "display_name": "Relay duty cycle misclassified as low duty cycle in 2005",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The subject relay was not classified properly in 2005 when all safety systems and component classifications were validated; duty cycle set to 'low duty cycle' instead of 'high duty cycle'.",
+      "match_key": "FailureMode:relay-duty-cycle-misclassified-as-low-duty-cycle-in-2005"
+    },
+    {
+      "id": "fm_coiloverheat",
+      "display_name": "Relay coil overheated / exceeded vendor recommended life",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Relay coil aged beyond vendor recommended life for a normally energized (high duty cycle) relay, causing overheating.",
+      "match_key": "FailureMode:relay-coil-overheated-exceeded-vendor-recommended-life"
+    },
+    {
+      "id": "fm_coilfail",
+      "display_name": "SDCR coil internal short-circuit failure",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Internal failure of the electrical coil resulted in a short-circuit within the relay coil.",
+      "match_key": "FailureMode:sdcr-coil-internal-short-circuit-failure"
+    },
+    {
+      "id": "fm_fuseopen",
+      "display_name": "Fuse FUZ/IM13-1 opened due to overcurrent",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Short-circuit in relay coil caused overcurrent in the IM13 circuit, opening the fuse and removing power to the IM13 scheme.",
+      "match_key": "FailureMode:fuse-fuz-im13-1-opened-due-to-overcurrent"
+    },
+    {
+      "id": "cons_asdv",
+      "display_name": "All four ASDVs inoperable (automatic and manual)",
+      "properties": {
+        "note": "Loss of power to IM13 scheme disabled automatic fast-open function and manual operation of ASDVs; 24-hour shutdown action statement LCO 3.7.4 entered"
+      },
+      "type": "Consequence",
+      "start": "2021-06-16T15:50",
+      "end": null,
+      "duration": "approximately 12 hours",
+      "tz": "EDT",
+      "match_key": "Consequence:all-four-asdvs-inoperable-automatic-and-manual"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace fuse and relay",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-fuse-and-relay"
+    },
+    {
+      "id": "ca_pmo",
+      "display_name": "Revise preventive maintenance optimization code to classify relay as high duty cycle",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-preventive-maintenance-optimization-code-to-classify-relay-as-high-duty-cycle"
+    },
+    {
+      "id": "mfr_ge",
+      "display_name": "General Electric",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": null,
+      "match_key": "Manufacturer:general-electric"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "rr_lco374",
+      "display_name": "LCO 3.7.4",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:lco-3-7-4"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "c_asdv",
+      "relation": "PART_OF",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "c_coil",
+      "relation": "PART_OF",
+      "target": "c_sdcr",
+      "evidence": null
+    },
+    {
+      "source": "c_sdcr",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_ge",
+      "evidence": null
+    },
+    {
+      "source": "fm_classify",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_classify",
+      "relation": "LEADS_TO",
+      "target": "fm_coiloverheat",
+      "evidence": null
+    },
+    {
+      "source": "fm_coiloverheat",
+      "relation": "LEADS_TO",
+      "target": "fm_coilfail",
+      "evidence": null
+    },
+    {
+      "source": "fm_coilfail",
+      "relation": "LEADS_TO",
+      "target": "fm_fuseopen",
+      "evidence": null
+    },
+    {
+      "source": "fm_fuseopen",
+      "relation": "LEADS_TO",
+      "target": "cons_asdv",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_pmo",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_lco374",
+      "evidence": null
+    }
+  ],
+  "chain": "relay duty-cycle misclassified in 2005 [cause TBD] -> relay coil aged beyond vendor life / overheated -> SDCR coil internal short-circuit -> fuse FUZ/IM13-1 opens (overcurrent) -> loss of power to IM13 scheme -> all four ASDVs inoperable (~12 hr) [no stated operable backup]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Block-13 fields in FORM-366 FIELDS input appear corrupted/OCR-garbled ('Raportabla', 'to', 'IRIS', 'E') and are copied verbatim per instructions despite not matching narrative content. Cause code left TBD/provisional per FORM-366 authoritative field, even though narrative provides a clear root cause chain (duty-cycle misclassification -> coil overheating -> coil failure -> fuse opening). No backup system stated as operable during the ASDV inoperability window (turbine bypass to condenser and MSSVs are described only in a System Design passage, not as available backups during the event) so no BACKED_UP_BY edge emitted. No previous similar events per narrative."
+}

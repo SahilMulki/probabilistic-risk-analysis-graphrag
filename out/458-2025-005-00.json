@@ -1,0 +1,402 @@
+{
+  "ler_number": "458-2025-005-00",
+  "identity": {
+    "accession_number": "ML25293A447",
+    "docket": "05000458",
+    "plant_name": "River Bend",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2025-08-20",
+    "report_date": "2025-10-20",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "/ 2025-005-00, Containment Unit Coolers Inoperable Due to Compensatory Measures"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(ii)(B)",
+      "10 CFR 50.73(a)(2)(v)(C)",
+      "10 CFR 50.73(a)(2)(v)(D)",
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "multiple ineffective reviews of electrical drawings resulting in Engineering personnel failing to recognize the impact of the compensatory measures on the loading sequence of the containment unit coolers. During review and validation prior to implementation, Operations personnel did not recognize the impact of the compensatory measures.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Inadequate design/engineering review of compensatory measures",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 458-2025-005-00",
+      "properties": {},
+      "type": "LER",
+      "key": "458-2025-005-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:458-2025-005-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "River Bend Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000458",
+      "match_key": "Unit:05000458"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Inadequate design/engineering review of compensatory measures",
+      "proximate_text": "multiple ineffective reviews of electrical drawings resulting in Engineering personnel failing to recognize the impact of the compensatory measures on the loading sequence of the containment unit coolers. During review and validation prior to implementation, Operations personnel did not recognize the impact of the compensatory measures.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_va",
+      "display_name": "Containment Unit Cooler System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "VA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:VA"
+    },
+    {
+      "id": "c_uc1a",
+      "display_name": "Containment Unit Cooler 'A' (HVR-UC1A)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "CLR",
+      "identifier": "HVR-UC1A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:CLR|HVR-UC1A"
+    },
+    {
+      "id": "c_uc1b",
+      "display_name": "Containment Unit Cooler 'B' (HVR-UC1B)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "CLR",
+      "identifier": "HVR-UC1B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:CLR|HVR-UC1B"
+    },
+    {
+      "id": "c_rly",
+      "display_name": "Time-delay relay",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "RLY",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:RLY"
+    },
+    {
+      "id": "fm_p21",
+      "display_name": "Part 21 notification from General Electric prompted compensatory lockout",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "A Part 21 notification from GE led RBS to place HVR-UC1A and HVR-UC1B in lockout as a compensatory measure to ensure operability.",
+      "match_key": "FailureMode:part-21-notification-from-general-electric-prompted-compensatory-lockout"
+    },
+    {
+      "id": "fm_review",
+      "display_name": "Ineffective engineering/operations review of compensatory measures",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Multiple ineffective reviews of electrical drawings caused Engineering and Operations personnel to fail to recognize the impact of the compensatory measures on the unit cooler loading sequence.",
+      "match_key": "FailureMode:ineffective-engineering-operations-review-of-compensatory-measures"
+    },
+    {
+      "id": "fm_delay",
+      "display_name": "Lockout function delays time-delay relay start",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The lockout function would delay the start of the time-delay relay needed for load sequencing following an accident, preventing the unit coolers from starting within their required sequence following a Loss of Offsite Power.",
+      "match_key": "FailureMode:lockout-function-delays-time-delay-relay-start"
+    },
+    {
+      "id": "fm_misapplied",
+      "display_name": "Compensatory measures inappropriately applied",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "As implemented, the compensatory measures would have caused HVR-UC1A and HVR-UC1B to start up to 10 minutes after a dedicated operator reset the lockout pushbuttons, instead of 10 minutes following a Loss of Offsite Power.",
+      "match_key": "FailureMode:compensatory-measures-inappropriately-applied"
+    },
+    {
+      "id": "cons_inop",
+      "display_name": "Containment Unit Coolers HVR-UC1A/B inoperable / unable to meet safety function load sequence timing",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2025-08-14",
+      "end": "2025-08-20T12:19",
+      "duration": "~6 days",
+      "tz": "CDT",
+      "match_key": "Consequence:containment-unit-coolers-hvr-uc1a-b-inoperable-unable-to-meet-safety-function-load-sequence-timing"
+    },
+    {
+      "id": "ca_standards_review",
+      "display_name": "Perform a standards reset with respect to expectations of independent reviews",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:perform-a-standards-reset-with-respect-to-expectations-of-independent-reviews"
+    },
+    {
+      "id": "ca_standards_hp",
+      "display_name": "Perform a standards reset with personnel on pre-job briefs and human performance tools",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:perform-a-standards-reset-with-personnel-on-pre-job-briefs-and-human-performance-tools"
+    },
+    {
+      "id": "ca_mgmt_obs",
+      "display_name": "Perform management observations during development of operability determinations",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:perform-management-observations-during-development-of-operability-determinations"
+    },
+    {
+      "id": "rr_5072b3ii_b",
+      "display_name": "10 CFR 50.72(b)(3)(ii)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-3-ii-b"
+    },
+    {
+      "id": "rr_5072b3v_c",
+      "display_name": "10 CFR 50.72(b)(3)(v)(C)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-3-v-c"
+    },
+    {
+      "id": "rr_5072b3v_d",
+      "display_name": "10 CFR 50.72(b)(3)(v)(D)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-3-v-d"
+    },
+    {
+      "id": "rr_5073a2ii_b",
+      "display_name": "10 CFR 50.73(a)(2)(ii)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-ii-b"
+    },
+    {
+      "id": "rr_5073a2v_c",
+      "display_name": "10 CFR 50.73(a)(2)(v)(C)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-c"
+    },
+    {
+      "id": "rr_5073a2v_d",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "rr_5073a2i_b",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts3617",
+      "display_name": "TS LCO 3.6.1.7, Primary Containment Unit Cooler, Condition B",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ts-lco-3-6-1-7-primary-containment-unit-cooler-condition-b"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073a2ii_b",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073a2v_c",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073a2v_d",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073a2i_b",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072b3ii_b",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072b3v_c",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072b3v_d",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts3617",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_va",
+      "evidence": null
+    },
+    {
+      "source": "c_uc1a",
+      "relation": "PART_OF",
+      "target": "sys_va",
+      "evidence": null
+    },
+    {
+      "source": "c_uc1b",
+      "relation": "PART_OF",
+      "target": "sys_va",
+      "evidence": null
+    },
+    {
+      "source": "fm_p21",
+      "relation": "LEADS_TO",
+      "target": "fm_review",
+      "evidence": null
+    },
+    {
+      "source": "fm_review",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_review",
+      "relation": "LEADS_TO",
+      "target": "fm_misapplied",
+      "evidence": null
+    },
+    {
+      "source": "fm_misapplied",
+      "relation": "LEADS_TO",
+      "target": "fm_delay",
+      "evidence": null
+    },
+    {
+      "source": "fm_delay",
+      "relation": "LEADS_TO",
+      "target": "cons_inop",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_standards_review",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_standards_hp",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_mgmt_obs",
+      "evidence": null
+    }
+  ],
+  "chain": "Part 21 notification from GE -> compensatory lockout implemented -> ineffective engineering/operations review [cause TBD] -> compensatory measures inappropriately applied -> lockout delays time-delay relay start beyond required sequence -> unit coolers HVR-UC1A/B inoperable for safety function (~Aug 14-Aug 20 12:19 CDT)",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code is officially TBD per FORM-366 fields; category left provisional per rule 4. No manufacturer/component code data was provided in block_13 (empty array in source). Previous Occurrences section explicitly states 'None', so no SIMILAR_TO edge or stub LER node created. The Part 21 notification from GE is the originating trigger for the compensatory measure but is not itself a component/system failure; modeled as the first FailureMode node in the chain since it directly precipitated the review failure that is CAUSED_BY the official (provisional) cause."
+}

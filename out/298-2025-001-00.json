@@ -1,0 +1,435 @@
+{
+  "ler_number": "298-2025-001-00",
+  "identity": {
+    "accession_number": "ML25157A104",
+    "docket": "05000298",
+    "plant_name": "Cooper",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2025-04-08",
+    "report_date": "2025-06-06",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "operability test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Licensee Event Report No. 2025-001-00 Cooper Nuclear Station, Docket No. 50-298, Renewed License No. DPR-46"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)",
+      "10 CFR 50.73(a)(2)(v)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The direct cause of the DGJW pump was inadequate interference fit of the impeller onto the shaft... Original manufacturer machining of the impeller tolerances were found to be outside bore dimensional specification. Original vendor work instructions were of insufficient detail to ensure repeatable impeller assembly.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "out-of-tolerance impeller manufacturing combined with inadequate vendor reassembly instructions",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 298-2025-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "298-2025-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:298-2025-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Cooper Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000298",
+      "match_key": "Unit:05000298"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "out-of-tolerance impeller manufacturing combined with inadequate vendor reassembly instructions",
+      "proximate_text": "The direct cause of the DGJW pump was inadequate interference fit of the impeller onto the shaft... Original manufacturer machining of the impeller tolerances were found to be outside bore dimensional specification. Original vendor work instructions were of insufficient detail to ensure repeatable impeller assembly.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_dg",
+      "display_name": "Emergency Diesel Generator",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "DG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected; DG1 declared inoperable",
+      "match_key": "System:DG"
+    },
+    {
+      "id": "sys_djw",
+      "display_name": "Diesel Generator Jacket Water",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "LB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected subsystem",
+      "match_key": "System:LB"
+    },
+    {
+      "id": "sys_ek",
+      "display_name": "Standby (Emergency) Alternating Current Power System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "EK",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "overall system context",
+      "match_key": "System:EK"
+    },
+    {
+      "id": "c_pump",
+      "display_name": "Engine-driven Jacket Water Pump",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "P",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:P"
+    },
+    {
+      "id": "c_impeller",
+      "display_name": "Jacket Water Pump Impeller",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:jacket-water-pump-impeller"
+    },
+    {
+      "id": "c_shaft",
+      "display_name": "Jacket Water Pump Shaft",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:jacket-water-pump-shaft"
+    },
+    {
+      "id": "c_alarm",
+      "display_name": "Jacket Water Low Temperature Alarm",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "TA",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:TA"
+    },
+    {
+      "id": "sys_ssst",
+      "display_name": "Station Start-up Service Transformer",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "backup; available for LOCA function per Division 1 during exposure period, but also had own inoperable instance",
+      "match_key": "System:station-start-up-service-transformer"
+    },
+    {
+      "id": "sys_esst",
+      "display_name": "Emergency Station Service Transformer",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "backup; remained operable throughout",
+      "match_key": "System:emergency-station-service-transformer"
+    },
+    {
+      "id": "sys_dg2",
+      "display_name": "Diesel Generator 2 (supplemental/redundant DG)",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "DG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "redundant DG; inoperable in multiple instances during exposure window",
+      "match_key": "System:DG"
+    },
+    {
+      "id": "fm_machining",
+      "display_name": "Impeller manufactured out-of-tolerance (bore dimensions)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Original manufacturer machining of the impeller tolerances were found to be outside bore dimensional specification.",
+      "match_key": "FailureMode:impeller-manufactured-out-of-tolerance-bore-dimensions"
+    },
+    {
+      "id": "fm_reinstall",
+      "display_name": "Impeller re-installation failed to establish adequate interference fit",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Vendor work instructions were of insufficient detail to ensure repeatable impeller assembly; impeller re-installed on Feb 5, 2025 without adequate interference fit.",
+      "match_key": "FailureMode:impeller-re-installation-failed-to-establish-adequate-interference-fit"
+    },
+    {
+      "id": "fm_loosen",
+      "display_name": "Impeller came loose and spun freely on shaft",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Impeller eventually came loose from the shaft, spinning freely; inner diameter had wear damage from shaft rotation.",
+      "match_key": "FailureMode:impeller-came-loose-and-spun-freely-on-shaft"
+    },
+    {
+      "id": "fm_lowflow",
+      "display_name": "Degraded jacket water flow / low pump discharge pressure",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Discharge pressure read 5 psi versus expected 25-30 psi; jacket water inlet/outlet temperatures diverged, indicating low flow and insufficient engine cooling.",
+      "match_key": "FailureMode:degraded-jacket-water-flow-low-pump-discharge-pressure"
+    },
+    {
+      "id": "cons_dg1inop",
+      "display_name": "DG1 declared inoperable / TS 3.8.1 prohibited condition (>7 days)",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2025-02-03T22:30",
+      "end": "2025-04-12T08:20",
+      "duration": "potentially inoperable from Feb 3, 2025 22:30 CST to Apr 12, 2025 08:20 CST",
+      "tz": "CST",
+      "match_key": "Consequence:dg1-declared-inoperable-ts-3-8-1-prohibited-condition-7-days"
+    },
+    {
+      "id": "ca_sleeve",
+      "display_name": "Sleeve fabrication and installation in impeller bore; reinstalled with new vendor work instructions",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:sleeve-fabrication-and-installation-in-impeller-bore-reinstalled-with-new-vendor-work-instructions"
+    },
+    {
+      "id": "ca_replace_impellers",
+      "display_name": "Obtain replacement impellers manufactured to original design specifications",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:obtain-replacement-impellers-manufactured-to-original-design-specifications"
+    },
+    {
+      "id": "ca_revise_pm",
+      "display_name": "Revise PM and vendor manual work instructions to validate impeller bore critical dimensions and shaft placement",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-pm-and-vendor-manual-work-instructions-to-validate-impeller-bore-critical-dimensions-and-shaft-placement"
+    },
+    {
+      "id": "rr_5073i",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_5073v",
+      "display_name": "10 CFR 50.73(a)(2)(v)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v"
+    },
+    {
+      "id": "rr_ts381",
+      "display_name": "Technical Specification 3.8.1, AC Sources-Operating",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-3-8-1-ac-sources-operating"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073i",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073v",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts381",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_dg",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_djw",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ek",
+      "evidence": null
+    },
+    {
+      "source": "c_pump",
+      "relation": "PART_OF",
+      "target": "sys_djw",
+      "evidence": null
+    },
+    {
+      "source": "c_impeller",
+      "relation": "PART_OF",
+      "target": "c_pump",
+      "evidence": null
+    },
+    {
+      "source": "c_shaft",
+      "relation": "PART_OF",
+      "target": "c_pump",
+      "evidence": null
+    },
+    {
+      "source": "sys_djw",
+      "relation": "PART_OF",
+      "target": "sys_dg",
+      "evidence": null
+    },
+    {
+      "source": "fm_machining",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_machining",
+      "relation": "LEADS_TO",
+      "target": "fm_reinstall",
+      "evidence": null
+    },
+    {
+      "source": "fm_reinstall",
+      "relation": "LEADS_TO",
+      "target": "fm_loosen",
+      "evidence": null
+    },
+    {
+      "source": "fm_loosen",
+      "relation": "LEADS_TO",
+      "target": "fm_lowflow",
+      "evidence": null
+    },
+    {
+      "source": "fm_lowflow",
+      "relation": "LEADS_TO",
+      "target": "cons_dg1inop",
+      "evidence": null
+    },
+    {
+      "source": "cons_dg1inop",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_esst",
+      "evidence": null
+    },
+    {
+      "source": "cons_dg1inop",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_dg2",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ssst",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_esst",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_dg2",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_sleeve",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_impellers",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_revise_pm",
+      "evidence": null
+    }
+  ],
+  "chain": "impeller machined out-of-tolerance [cause TBD] -> vendor instructions insufficient to ensure repeatable assembly -> impeller re-installed without adequate interference fit (Feb 5, 2025) -> impeller comes loose and spins freely on shaft -> degraded jacket water flow / low discharge pressure -> DG1 jacket water pump fails, DG1 inoperable >7 days [backups: DG2 (intermittently inoperable), SSST (intermittently inoperable), ESST remained available]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause_code and category are TBD/provisional per FORM-366 fields; theme captures manufacturing tolerance + vendor instruction inadequacy narrative. DG2, SSST inoperability during the exposure window are modeled as INVOLVES/BACKED_UP_BY since narrative explicitly discusses their operability status concurrent with DG1's inoperability, per rule 6. ESST explicitly stated to have remained available throughout. No previous similar occurrence identified in narrative, so no stub LER/SIMILAR_TO edge emitted."
+}

@@ -1,0 +1,290 @@
+{
+  "ler_number": "482-2025-003-00",
+  "identity": {
+    "accession_number": "ML25351A150",
+    "docket": "05000482",
+    "plant_name": "Wolf Creek",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2025-11-05",
+    "report_date": "2025-12-17",
+    "operating_mode": "5",
+    "power_level": 0,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": "58026",
+    "ens_date": "2025-11-05",
+    "ens_time": null,
+    "title": "Docket No. 50-482: License Event Report (LER) 2025-003-00, “Loss of"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The event was caused by insufficient base loading to support the power requirements for energizing the main transformers.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Inadequate load/voltage planning during backfeed energization",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 482-2025-003-00",
+      "properties": {},
+      "type": "LER",
+      "key": "482-2025-003-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:482-2025-003-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Wolf Creek Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000482",
+      "match_key": "Unit:05000482"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Inadequate load/voltage planning during backfeed energization",
+      "proximate_text": "The event was caused by insufficient base loading to support the power requirements for energizing the main transformers.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_eb",
+      "display_name": "Class 1E 4.16 kV AC Bus",
+      "properties": {
+        "identifier": "NB01",
+        "note": "one of two independent redundant Class 1E buses"
+      },
+      "type": "System",
+      "eiis_code": "EB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:EB"
+    },
+    {
+      "id": "sys_dg",
+      "display_name": "Emergency Diesel Generator",
+      "properties": {
+        "train": "A"
+      },
+      "type": "System",
+      "eiis_code": "DG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "actuated on undervoltage",
+      "match_key": "System:DG"
+    },
+    {
+      "id": "sys_rhr",
+      "display_name": "Residual Heat Removal System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BO",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; Train B operable and running, provided shutdown cooling",
+      "match_key": "System:BO"
+    },
+    {
+      "id": "c_maintxfmr",
+      "display_name": "Newly installed main transformer",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:newly-installed-main-transformer"
+    },
+    {
+      "id": "c_breaker",
+      "display_name": "Switchyard breaker (energizing main transformers)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:switchyard-breaker-energizing-main-transformers"
+    },
+    {
+      "id": "fm_insufficient_load",
+      "display_name": "Insufficient base loading during main transformer energization",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Breaker closed to energize newly installed main transformers from switchyard without adequate base loading to support the power requirements.",
+      "match_key": "FailureMode:insufficient-base-loading-during-main-transformer-energization"
+    },
+    {
+      "id": "fm_undervoltage",
+      "display_name": "Bus NB01 voltage degradation / undervoltage condition",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Bus voltage on Class 1E bus NB01 degraded sufficiently to cause an undervoltage actuation of the 'A' EDG.",
+      "match_key": "FailureMode:bus-nb01-voltage-degradation-undervoltage-condition"
+    },
+    {
+      "id": "fm_edg_actuation",
+      "display_name": "'A' EDG automatic undervoltage actuation",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The 'A' EDG automatically started and loads sequenced onto NB01 bus as designed.",
+      "match_key": "FailureMode:a-edg-automatic-undervoltage-actuation"
+    },
+    {
+      "id": "cons_edg",
+      "display_name": "Valid automatic actuation of 'A' EDG; no loss of shutdown cooling",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2025-11-05T10:03",
+      "end": null,
+      "duration": null,
+      "tz": "CST",
+      "match_key": "Consequence:valid-automatic-actuation-of-a-edg-no-loss-of-shutdown-cooling"
+    },
+    {
+      "id": "ca_grid_study",
+      "display_name": "Evergy Transmission to complete grid study for backfeed energization parameters",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:evergy-transmission-to-complete-grid-study-for-backfeed-energization-parameters"
+    },
+    {
+      "id": "ca_restore_offsite",
+      "display_name": "Restore offsite source to energize NB01",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:restore-offsite-source-to-energize-nb01"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5072",
+      "display_name": "10 CFR 50.72(b)(3)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-3-iv-a"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_eb",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_dg",
+      "evidence": null
+    },
+    {
+      "source": "c_breaker",
+      "relation": "LEADS_TO",
+      "target": "fm_insufficient_load",
+      "evidence": null
+    },
+    {
+      "source": "fm_insufficient_load",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_insufficient_load",
+      "relation": "LEADS_TO",
+      "target": "fm_undervoltage",
+      "evidence": null
+    },
+    {
+      "source": "fm_undervoltage",
+      "relation": "LEADS_TO",
+      "target": "fm_edg_actuation",
+      "evidence": null
+    },
+    {
+      "source": "fm_edg_actuation",
+      "relation": "LEADS_TO",
+      "target": "cons_edg",
+      "evidence": null
+    },
+    {
+      "source": "cons_edg",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_rhr",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_restore_offsite",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_grid_study",
+      "evidence": null
+    }
+  ],
+  "chain": "insufficient base loading during main transformer energization [cause TBD] -> NB01 bus undervoltage -> 'A' EDG automatic actuation and load sequencing -> valid EDG actuation reported, no loss of shutdown cooling [backup RHR Train B running]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause_code is TBD/provisional per FORM-366 fields; narrative cause statement is descriptive but not mapped to a formal cause code letter. RHR Train B was already running and is stated as operable during the event, modeled as BACKED_UP_BY. Main transformers and breaker are equipment described in design/event context, not EIIS-coded systems; no EIIS code given so left null. No previous similar occurrence (stub LER) referenced in this narrative."
+}

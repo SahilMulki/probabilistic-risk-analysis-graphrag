@@ -1,0 +1,469 @@
+{
+  "ler_number": "311-22-001-00",
+  "identity": {
+    "accession_number": "ML23052A211",
+    "docket": "05000311",
+    "plant_name": "Salem",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2022-12-24",
+    "report_date": "2023-02-21",
+    "operating_mode": null,
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Salem Generating Station, Unit 2 Renewed Facility Operating License No. DPR-75 Docket No. 50-311"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "E",
+      "system": "JC",
+      "component": null,
+      "manufacturer": null,
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The inaccurate indications from the SG pressure sensors were caused by localized freezing of water-filled instrument tubing located directly below the outer penetration area intake dampers. Ambient temperatures were less than 10 degrees Fahrenheit with winds averaging up to 45 miles per hour. Plenum dampers near instrument tubing for 22 and 24 SG steam pressure sensors were open. An ongoing root cause analysis preliminarily identified incomplete implementation of corrective actions from a similar cold weather event in 2003.",
+    "cause_code": "E",
+    "category": "Management/QA Deficiency",
+    "theme": "incomplete implementation of prior cold-weather corrective actions leading to freezing of instrument tubing",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 311-2022-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "311-22-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:311-22-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Salem Unit 2",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000311",
+      "match_key": "Unit:05000311"
+    },
+    {
+      "id": "cause",
+      "display_name": "Management/QA Deficiency (E)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "E",
+      "category": "Management/QA Deficiency",
+      "theme": "incomplete implementation of prior cold-weather corrective actions leading to freezing of instrument tubing",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Management/QA Deficiency"
+    },
+    {
+      "id": "sys_jc",
+      "display_name": "Plant Protection System / Indicator, Pressure",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JC"
+    },
+    {
+      "id": "sys_rps",
+      "display_name": "Reactor Protection System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "actuated as designed",
+      "match_key": "System:reactor-protection-system"
+    },
+    {
+      "id": "sys_eccs",
+      "display_name": "Emergency Core Cooling System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "actuated as designed",
+      "match_key": "System:emergency-core-cooling-system"
+    },
+    {
+      "id": "sys_afw",
+      "display_name": "Auxiliary Feedwater System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "actuated as designed; motor and steam driven pumps",
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "c_sg22_sensor",
+      "display_name": "Steam Generator 22 pressure sensor instrument tubing",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:steam-generator-22-pressure-sensor-instrument-tubing"
+    },
+    {
+      "id": "c_sg24_sensor",
+      "display_name": "Steam Generator 24 pressure sensor instrument tubing",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:steam-generator-24-pressure-sensor-instrument-tubing"
+    },
+    {
+      "id": "c_damper",
+      "display_name": "Outer penetration area intake plenum dampers",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:outer-penetration-area-intake-plenum-dampers"
+    },
+    {
+      "id": "fm_damper_open",
+      "display_name": "Plenum dampers left open near instrument tubing",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Dampers near SG 22 and 24 steam pressure sensor instrument tubing were open, exposing tubing to cold outside air.",
+      "match_key": "FailureMode:plenum-dampers-left-open-near-instrument-tubing"
+    },
+    {
+      "id": "fm_freeze",
+      "display_name": "Localized freezing of water-filled instrument tubing",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Water-filled instrument tubing for SG 22 and 24 pressure sensors froze locally due to extreme cold ambient temperatures (<10F) and high winds (up to 45 mph).",
+      "match_key": "FailureMode:localized-freezing-of-water-filled-instrument-tubing"
+    },
+    {
+      "id": "fm_inaccurate_indication",
+      "display_name": "Inaccurate SG pressure indication for SG 22 and 24",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Frozen tubing caused inaccurate steam generator pressure indications, producing two high differential pressure setpoint signals.",
+      "match_key": "FailureMode:inaccurate-sg-pressure-indication-for-sg-22-and-24"
+    },
+    {
+      "id": "fm_invalid_si",
+      "display_name": "Invalid Safety Injection signal generated",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Two high differential pressure signals met 2-out-of-3 coincidence logic, generating an invalid SI signal and consequent valid reactor trip signal.",
+      "match_key": "FailureMode:invalid-safety-injection-signal-generated"
+    },
+    {
+      "id": "cons_trip",
+      "display_name": "Automatic reactor trip on invalid SI signal",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2022-12-24T02:22",
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:automatic-reactor-trip-on-invalid-si-signal"
+    },
+    {
+      "id": "ca_thaw",
+      "display_name": "Thaw water-filled tubing",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:thaw-water-filled-tubing"
+    },
+    {
+      "id": "ca_insulate",
+      "display_name": "Insulate affected water-filled lines for both units",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:insulate-affected-water-filled-lines-for-both-units"
+    },
+    {
+      "id": "ca_secure_dampers",
+      "display_name": "Secure dampers closed via temporary modification",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:secure-dampers-closed-via-temporary-modification"
+    },
+    {
+      "id": "ca_extent",
+      "display_name": "Perform extent of condition review",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:perform-extent-of-condition-review"
+    },
+    {
+      "id": "ca_rootcause",
+      "display_name": "Complete ongoing root cause analysis and develop additional corrective actions",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:complete-ongoing-root-cause-analysis-and-develop-additional-corrective-actions"
+    },
+    {
+      "id": "ca_cap_track",
+      "display_name": "Track evaluation and improvements in corrective action program",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:track-evaluation-and-improvements-in-corrective-action-program"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_ts352",
+      "display_name": "Technical Specification 3.5.2 ACTION b",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:technical-specification-3-5-2-action-b"
+    },
+    {
+      "id": "ler_2003",
+      "display_name": "Salem Unit 2, January 2003 main steam line pressure channel failed high (suspected freezing) - root cause evaluation",
+      "properties": {},
+      "type": "LER",
+      "key": "311-2003-001-00",
+      "stub": true,
+      "title": "Main steam line pressure channel failed high due to suspected freezing of indicating lines",
+      "plant": "Salem Generating Station, Unit 2",
+      "match_key": "LER:311-2003-001-00"
+    },
+    {
+      "id": "ler_2010",
+      "display_name": "Salem Unit 2 LER 2010-001-00 (cold weather condenser heat removal degradation, plant trip)",
+      "properties": {},
+      "type": "LER",
+      "key": "311-2010-001-00",
+      "stub": true,
+      "title": "Cold weather conditions degraded main condenser heat removal leading to plant trip",
+      "plant": "Salem Generating Station, Unit 2",
+      "match_key": "LER:311-2010-001-00"
+    },
+    {
+      "id": "ler_2019",
+      "display_name": "Salem Unit 2 LER 2019-001-00 (cold weather condenser heat removal degradation, plant trip)",
+      "properties": {},
+      "type": "LER",
+      "key": "311-2019-001-00",
+      "stub": true,
+      "title": "Cold weather conditions degraded main condenser heat removal leading to plant trip",
+      "plant": "Salem Generating Station, Unit 2",
+      "match_key": "LER:311-2019-001-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts352",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rps",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_eccs",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_afw",
+      "evidence": null
+    },
+    {
+      "source": "c_sg22_sensor",
+      "relation": "PART_OF",
+      "target": "sys_jc",
+      "evidence": null
+    },
+    {
+      "source": "c_sg24_sensor",
+      "relation": "PART_OF",
+      "target": "sys_jc",
+      "evidence": null
+    },
+    {
+      "source": "fm_damper_open",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_damper_open",
+      "relation": "LEADS_TO",
+      "target": "fm_freeze",
+      "evidence": null
+    },
+    {
+      "source": "fm_freeze",
+      "relation": "LEADS_TO",
+      "target": "fm_inaccurate_indication",
+      "evidence": null
+    },
+    {
+      "source": "fm_inaccurate_indication",
+      "relation": "LEADS_TO",
+      "target": "fm_invalid_si",
+      "evidence": null
+    },
+    {
+      "source": "fm_invalid_si",
+      "relation": "LEADS_TO",
+      "target": "cons_trip",
+      "evidence": null
+    },
+    {
+      "source": "cons_trip",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_eccs",
+      "evidence": null
+    },
+    {
+      "source": "cons_trip",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_afw",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_thaw",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_insulate",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_secure_dampers",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_extent",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_rootcause",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_cap_track",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_2003",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_2010",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_2019",
+      "evidence": null
+    }
+  ],
+  "chain": "incomplete implementation of 2003 cold-weather corrective actions [cause E] -> plenum dampers open near instrument tubing -> localized freezing of water-filled instrument tubing -> inaccurate SG 22/24 pressure indication -> invalid SI signal (2-of-3 coincidence) -> automatic reactor trip [backups ECCS, AFW actuated as designed]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code E (Management/QA Deficiency) reflects the root-cause finding of incomplete implementation of prior (2003) corrective actions, despite the narrative's proximate physical description (freezing tubing) reading like a component/environmental cause. RPS and ECCS/AFW are described as functioning per design during the event, so modeled as involved systems and stated-operable backups rather than design-context-only. Root cause analysis was ongoing at time of report; a supplement may follow, but block-13 cause code itself is not marked TBD, so cause.provisional is false per instructions (only set true if code is TBD)."
+}

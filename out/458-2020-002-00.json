@@ -1,0 +1,396 @@
+{
+  "ler_number": "458-2020-002-00",
+  "identity": {
+    "accession_number": "ML20293A475",
+    "docket": "05000458",
+    "plant_name": "River Bend",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2020-08-21",
+    "report_date": "2020-10-19",
+    "operating_mode": null,
+    "power_level": 66,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "I 2020-02-00, ‘Manual Reactor Scram Due to Reactor Recirculation Pump Trip”"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "B",
+      "system": null,
+      "component": null,
+      "manufacturer": null,
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "slow response of the high-level dump valve, due to debris identified in the air relays, led to low water level in the 3rd point 'B' heater. The low water level in the 3rd point 'B' heater resulted in the trip of the 'C' Heater Drain Pump resulting in colder Feedwater temperature being sent to the Reactor. This condition, combined with being in the Restricted Region of the power to flow map, led to power oscillations.",
+    "cause_code": "B",
+    "category": "Design/Manufacturing/Installation",
+    "theme": "debris-fouled air relay causing slow AOV response",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 458-2020-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "458-2020-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:458-2020-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "River Bend Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000458",
+      "match_key": "Unit:05000458"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Manufacturing/Installation (B)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "B",
+      "category": "Design/Manufacturing/Installation",
+      "theme": "debris-fouled air relay causing slow AOV response",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Design/Manufacturing/Installation"
+    },
+    {
+      "id": "sys_recirc",
+      "display_name": "Reactor Recirculation System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "AD",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:AD"
+    },
+    {
+      "id": "sys_fw",
+      "display_name": "Feedwater Heater Drain System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "sys_pbds",
+      "display_name": "Period Based Detection System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:period-based-detection-system"
+    },
+    {
+      "id": "c_recircpumpb",
+      "display_name": "Reactor Recirculation Pump B",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:reactor-recirculation-pump-b"
+    },
+    {
+      "id": "c_dumpvalve",
+      "display_name": "High-level dump valve (AOV)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:high-level-dump-valve-aov"
+    },
+    {
+      "id": "c_airrelay",
+      "display_name": "Air relay (positioner supply)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:air-relay-positioner-supply"
+    },
+    {
+      "id": "c_fwheaterb",
+      "display_name": "3rd Point Feedwater Heater B",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:3rd-point-feedwater-heater-b"
+    },
+    {
+      "id": "c_hdpumpc",
+      "display_name": "Heater Drain Pump C",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "C",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:heater-drain-pump-c"
+    },
+    {
+      "id": "fm_recirctrip",
+      "display_name": "Reactor Recirculation Pump B trip",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Recirculation Pump B tripped, lowering power to ~66% and requiring single loop operation",
+      "match_key": "FailureMode:reactor-recirculation-pump-b-trip"
+    },
+    {
+      "id": "fm_debris",
+      "display_name": "Debris in air relay causing slow dump valve response",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Debris identified in the air relays led to slow response of the high-level dump valve",
+      "match_key": "FailureMode:debris-in-air-relay-causing-slow-dump-valve-response"
+    },
+    {
+      "id": "fm_lowlevel",
+      "display_name": "Low water level in 3rd point Feedwater Heater B",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Extraction steam isolation combined with slow dump valve response caused low level in 3rd point Heater B",
+      "match_key": "FailureMode:low-water-level-in-3rd-point-feedwater-heater-b"
+    },
+    {
+      "id": "fm_hdpumptrip",
+      "display_name": "Heater Drain Pump C trip on low heater level",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Heater Drain Pump C tripped due to low heater level",
+      "match_key": "FailureMode:heater-drain-pump-c-trip-on-low-heater-level"
+    },
+    {
+      "id": "fm_coldfw",
+      "display_name": "Colder feedwater delivered to reactor",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Loss of heater drain pump C resulted in colder feedwater temperature being sent to the reactor",
+      "match_key": "FailureMode:colder-feedwater-delivered-to-reactor"
+    },
+    {
+      "id": "fm_restricted",
+      "display_name": "Entry into Restricted Region of power-to-flow map",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Colder feedwater combined with single loop flow reduction led to unexpected entry into the Restricted Region of the power to flow map",
+      "match_key": "FailureMode:entry-into-restricted-region-of-power-to-flow-map"
+    },
+    {
+      "id": "fm_oscillation",
+      "display_name": "Power oscillations / rising PBDS decay ratio",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Power oscillations occurred with APRM power fluctuating between 62% and 68% and PBDS alarms indicating rising decay ratio",
+      "match_key": "FailureMode:power-oscillations-rising-pbds-decay-ratio"
+    },
+    {
+      "id": "cons_scram",
+      "display_name": "Manual reactor SCRAM",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2020-08-21T09:08",
+      "end": null,
+      "duration": null,
+      "tz": "CT",
+      "match_key": "Consequence:manual-reactor-scram"
+    },
+    {
+      "id": "ca_filters",
+      "display_name": "Install air filters upstream of regulator feeding positioner on affected AOVs",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:install-air-filters-upstream-of-regulator-feeding-positioner-on-affected-aovs"
+    },
+    {
+      "id": "ca_tuning",
+      "display_name": "Complete dynamic tuning of Feedwater Heater Drain System control valves",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:complete-dynamic-tuning-of-feedwater-heater-drain-system-control-valves"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_recirc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_fw",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_pbds",
+      "evidence": null
+    },
+    {
+      "source": "c_recircpumpb",
+      "relation": "PART_OF",
+      "target": "sys_recirc",
+      "evidence": null
+    },
+    {
+      "source": "c_hdpumpc",
+      "relation": "PART_OF",
+      "target": "sys_fw",
+      "evidence": null
+    },
+    {
+      "source": "c_fwheaterb",
+      "relation": "PART_OF",
+      "target": "sys_fw",
+      "evidence": null
+    },
+    {
+      "source": "c_dumpvalve",
+      "relation": "PART_OF",
+      "target": "sys_fw",
+      "evidence": null
+    },
+    {
+      "source": "fm_debris",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_recirctrip",
+      "relation": "LEADS_TO",
+      "target": "fm_debris",
+      "evidence": null
+    },
+    {
+      "source": "fm_debris",
+      "relation": "LEADS_TO",
+      "target": "fm_lowlevel",
+      "evidence": null
+    },
+    {
+      "source": "fm_lowlevel",
+      "relation": "LEADS_TO",
+      "target": "fm_hdpumptrip",
+      "evidence": null
+    },
+    {
+      "source": "fm_hdpumptrip",
+      "relation": "LEADS_TO",
+      "target": "fm_coldfw",
+      "evidence": null
+    },
+    {
+      "source": "fm_recirctrip",
+      "relation": "LEADS_TO",
+      "target": "fm_restricted",
+      "evidence": null
+    },
+    {
+      "source": "fm_coldfw",
+      "relation": "LEADS_TO",
+      "target": "fm_restricted",
+      "evidence": null
+    },
+    {
+      "source": "fm_restricted",
+      "relation": "LEADS_TO",
+      "target": "fm_oscillation",
+      "evidence": null
+    },
+    {
+      "source": "fm_oscillation",
+      "relation": "LEADS_TO",
+      "target": "cons_scram",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_filters",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_tuning",
+      "evidence": null
+    }
+  ],
+  "chain": "Recirc Pump B trip -> debris in air relay causes slow dump valve response [cause B] -> low level in 3rd point Heater B -> Heater Drain Pump C trips -> colder feedwater to reactor -> combined with single-loop flow reduction, entry into Restricted Region of power-to-flow map -> power oscillations (rising PBDS decay ratio) -> manual reactor SCRAM",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Form-366 fields did not include plant name/unit/reactor type; filled from narrative header (River Bend Station, docket 05000458, BWR). No EIIS bracket codes were present in the narrative text for any system/component, so eiis_code left null throughout per rule 2. Previous Similar Events section states 'None' - no stub LER created. HPCI/RCIC/ADS not applicable to this event; systems modeled are recirculation, feedwater heater drain, and PBDS since the event directly involves them."
+}

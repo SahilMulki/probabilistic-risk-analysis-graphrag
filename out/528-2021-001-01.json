@@ -1,0 +1,442 @@
+{
+  "ler_number": "528-2021-001-01",
+  "identity": {
+    "accession_number": "ML22154A554",
+    "docket": "05000528",
+    "plant_name": "Palo Verde",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2021-10-20",
+    "report_date": "2022-06-03",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "inspection",
+    "status": "final",
+    "revision": "01",
+    "ens_number": "55534",
+    "ens_date": "2021-12-03",
+    "ens_time": null,
+    "title": "Palo Verde Nuclear Generating Station (PVNGS) Units 1 and 3 Docket No. STN 50-528 and 50-530"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)",
+      "10 CFR 50.73(a)(2)(v)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "A",
+      "system": "EA",
+      "component": "SWGR",
+      "manufacturer": "G080",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The root cause of the event was attributed to overconfidence of the work team during validation activities. The team incorrectly assumed the work planning and clearance processes had established conditions for conducting work activities safely...the team performed an inadequate clearance boundary verification using a marked-up copy of the site electrical distribution one-line drawing, which shows only the power feeds into the switchgear, not the cross-ties between the switchgear cubicles...contrary to a station procedure, the work team had utilized an organizationally accepted behavior that performing Live-Dead-Live checks is not required when there is confidence that energy is not present.",
+    "cause_code": "A",
+    "category": "Personnel Error",
+    "theme": "Worker overconfidence / inadequate clearance boundary verification leading to inadvertent contact with energized switchgear",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 528-2021-001-01",
+      "properties": {},
+      "type": "LER",
+      "key": "528-2021-001-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:528-2021-001-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Palo Verde Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000528",
+      "match_key": "Unit:05000528"
+    },
+    {
+      "id": "cause",
+      "display_name": "Personnel Error (A)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "A",
+      "category": "Personnel Error",
+      "theme": "Worker overconfidence / inadequate clearance boundary verification leading to inadvertent contact with energized switchgear",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Personnel Error"
+    },
+    {
+      "id": "sys_ea",
+      "display_name": "Startup Transformer / Offsite Power Supply",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "EA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:EA"
+    },
+    {
+      "id": "sys_ek",
+      "display_name": "Emergency Diesel Generator / Offsite Power (EK)",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "EK",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; operable",
+      "match_key": "System:EK"
+    },
+    {
+      "id": "sys_eb",
+      "display_name": "Class 1E 4.16 kV Safety Bus",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "EB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:EB"
+    },
+    {
+      "id": "sys_bs",
+      "display_name": "Essential Spray Pond System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BS",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "actuated as designed",
+      "match_key": "System:BS"
+    },
+    {
+      "id": "sys_ba",
+      "display_name": "Auxiliary Feedwater System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "actuated as designed",
+      "match_key": "System:BA"
+    },
+    {
+      "id": "c_swgr",
+      "display_name": "Unit 2 S06 Switchgear (13.8 kV) - 'B' Cubicle",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "SWGR",
+      "identifier": "S06",
+      "model": null,
+      "manufacturer_code": "G080",
+      "inferred_code": false,
+      "match_key": "Component:SWGR|S06"
+    },
+    {
+      "id": "c_xfmr",
+      "display_name": "Startup Transformer AE-NAN-X02",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "AE-NAN-X02",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:startup-transformer-ae-nan-x02"
+    },
+    {
+      "id": "fm_contact",
+      "display_name": "Worker inadvertently contacted energized 13.8 kV element in Unit 2 S06 switchgear",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Electrician reached into an area outside the clearance boundary and contacted an energized portion of the de-energized switchgear cubicle.",
+      "match_key": "FailureMode:worker-inadvertently-contacted-energized-13-8-kv-element-in-unit-2-s06-switchgear"
+    },
+    {
+      "id": "fm_fault",
+      "display_name": "Electrical fault caused by personnel contact",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The personnel contact resulted in an electrical fault that tripped the 525 kV breakers supplying startup transformer AE-NAN-X02.",
+      "match_key": "FailureMode:electrical-fault-caused-by-personnel-contact"
+    },
+    {
+      "id": "fm_deenergize",
+      "display_name": "Startup transformer de-energized, loss of 13.8 kV intermediate bus power",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Loss of AE-NAN-X02 de-energized Unit 1 13.8 kV intermediate bus S06 and Unit 3 13.8 kV intermediate bus S05.",
+      "match_key": "FailureMode:startup-transformer-de-energized-loss-of-13-8-kv-intermediate-bus-power"
+    },
+    {
+      "id": "fm_undervoltage",
+      "display_name": "Undervoltage on Unit 1 B-train and Unit 3 A-train Class 1E 4.16 kV safety buses",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "De-energization of the intermediate buses caused an undervoltage condition on the associated safety buses.",
+      "match_key": "FailureMode:undervoltage-on-unit-1-b-train-and-unit-3-a-train-class-1e-4-16-kv-safety-buses"
+    },
+    {
+      "id": "cons_lop",
+      "display_name": "Valid loss-of-power actuation: EDG start/load, SP and AF pump actuations, LCO 3.8.1 Condition A entry",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2021-10-20T14:46",
+      "end": "2021-10-21T15:45",
+      "duration": "~25:00",
+      "tz": "MST",
+      "match_key": "Consequence:valid-loss-of-power-actuation-edg-start-load-sp-and-af-pump-actuations-lco-3-8-1-condition-a-entry"
+    },
+    {
+      "id": "ca_restore",
+      "display_name": "Restore offsite power to Unit 1 and Unit 3 safety buses via alternate startup transformer supply",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:restore-offsite-power-to-unit-1-and-unit-3-safety-buses-via-alternate-startup-transformer-supply"
+    },
+    {
+      "id": "ca_leadership_plan",
+      "display_name": "Electrical Maintenance leaders develop/implement plan reinforcing personal responsibility for protection",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:electrical-maintenance-leaders-develop-implement-plan-reinforcing-personal-responsibility-for-protection"
+    },
+    {
+      "id": "ca_monitor_behavior",
+      "display_name": "Monitor worker behaviors during electrical work",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:monitor-worker-behaviors-during-electrical-work"
+    },
+    {
+      "id": "ca_training",
+      "display_name": "Develop and deliver training on electrical safe work practices",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:develop-and-deliver-training-on-electrical-safe-work-practices"
+    },
+    {
+      "id": "ca_oversight",
+      "display_name": "Increase station leader oversight and engagement",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:increase-station-leader-oversight-and-engagement"
+    },
+    {
+      "id": "ca_proficiency",
+      "display_name": "Evaluate and increase knowledge/proficiency of electrical workers",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:evaluate-and-increase-knowledge-proficiency-of-electrical-workers"
+    },
+    {
+      "id": "mfr_g080",
+      "display_name": "Manufacturer G080",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "G080",
+      "match_key": "Manufacturer:G080"
+    },
+    {
+      "id": "rr_5073_iv_a",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5073_v",
+      "display_name": "10 CFR 50.73(a)(2)(v)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v"
+    },
+    {
+      "id": "rr_ts_3_8_1",
+      "display_name": "Technical Specification LCO 3.8.1 Condition A",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-lco-3-8-1-condition-a"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_iv_a",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_v",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ea",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ek",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_eb",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bs",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ba",
+      "evidence": null
+    },
+    {
+      "source": "c_xfmr",
+      "relation": "PART_OF",
+      "target": "sys_ea",
+      "evidence": null
+    },
+    {
+      "source": "fm_contact",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_contact",
+      "relation": "LEADS_TO",
+      "target": "fm_fault",
+      "evidence": null
+    },
+    {
+      "source": "fm_fault",
+      "relation": "LEADS_TO",
+      "target": "fm_deenergize",
+      "evidence": null
+    },
+    {
+      "source": "fm_deenergize",
+      "relation": "LEADS_TO",
+      "target": "fm_undervoltage",
+      "evidence": null
+    },
+    {
+      "source": "fm_undervoltage",
+      "relation": "LEADS_TO",
+      "target": "cons_lop",
+      "evidence": null
+    },
+    {
+      "source": "cons_lop",
+      "relation": "MITIGATED_BY",
+      "target": "sys_ek",
+      "evidence": null
+    },
+    {
+      "source": "cons_lop",
+      "relation": "MITIGATED_BY",
+      "target": "sys_bs",
+      "evidence": null
+    },
+    {
+      "source": "cons_lop",
+      "relation": "MITIGATED_BY",
+      "target": "sys_ba",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_restore",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_leadership_plan",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_monitor_behavior",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_training",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_oversight",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_proficiency",
+      "evidence": null
+    },
+    {
+      "source": "c_swgr",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_g080",
+      "evidence": null
+    }
+  ],
+  "chain": "worker overconfidence / inadequate clearance verification [cause A] -> inadvertent contact with energized 13.8kV switchgear element -> electrical fault trips 525kV breakers -> startup transformer AE-NAN-X02 de-energized -> undervoltage on Unit1 B-train & Unit3 A-train 4.16kV safety buses -> valid EDG/SP/AF pump actuations & LCO 3.8.1 entry [EDGs, SP pumps, AF pump responded as designed; offsite power restored via alternate supply]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Event affects two units (Unit 1 and Unit 3) simultaneously via a single common-cause trigger in Unit 2 switchgear during refueling outage; per schema constraints only one Unit anchor node was created for docket 05000528 (Unit 1). Narrative block 8 (Previous Similar Events) is truncated/garbled in the source text ('Verde in the last three years.') with no LER number, plant, or title identifiable, so no stub LER/SIMILAR_TO edge was created per rule 9's requirement for a concrete LER key. EDG, SP pump, and AF pump systems are modeled both as INVOLVES (event-participating) and MITIGATED_BY (functioned as designed to limit consequence), since they actuated successfully rather than being pre-existing backups during an inoperability window."
+}

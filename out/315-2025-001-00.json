@@ -1,0 +1,335 @@
+{
+  "ler_number": "315-2025-001-00",
+  "identity": {
+    "accession_number": "ML25135A102",
+    "docket": "05000315",
+    "plant_name": "D.C. Cook",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2025-03-20",
+    "report_date": "2025-05-15",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Two Main Steam Safety Valves Failed Setpoint Testing"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "X",
+      "system": "SB",
+      "component": "RV",
+      "manufacturer": "Dresser",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "the preliminary cause of the inability of 1-SV-1B-4 and 1-SV-2B-4 to lift was corrosion bonding...The outlet elbow and tailpipe drain pan drains were clogged for an extended period of time for the failed valves, which prevented condensed seat leakage draining from the valves when seat leakage occurred. This resulted in the valve bodies periodically filling with water and corroding at a faster rate than would be expected",
+    "cause_code": "X",
+    "category": "Other",
+    "theme": "clogged drains causing accelerated corrosion bonding of safety valve seats",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 315-2025-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "315-2025-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:315-2025-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "D.C. Cook Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000315",
+      "match_key": "Unit:05000315"
+    },
+    {
+      "id": "cause",
+      "display_name": "Other (X)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "X",
+      "category": "Other",
+      "theme": "clogged drains causing accelerated corrosion bonding of safety valve seats",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Other"
+    },
+    {
+      "id": "sys_sb",
+      "display_name": "Main Steam",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "system involved in event",
+      "match_key": "System:SB"
+    },
+    {
+      "id": "c_sv1b4",
+      "display_name": "1-SV-1B-4, S/G 4 Safety Valve 1B",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "RV",
+      "identifier": "1-SV-1B-4",
+      "model": null,
+      "manufacturer_code": "Dresser",
+      "inferred_code": false,
+      "match_key": "Component:RV|1-SV-1B-4"
+    },
+    {
+      "id": "c_sv2b4",
+      "display_name": "1-SV-2B-4, S/G 4 Safety Valve 2B",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "RV",
+      "identifier": "1-SV-2B-4",
+      "model": null,
+      "manufacturer_code": "Dresser",
+      "inferred_code": false,
+      "match_key": "Component:RV|1-SV-2B-4"
+    },
+    {
+      "id": "fm_clogged_drain",
+      "display_name": "Tailpipe/outlet elbow drain clogged, preventing seat leakage drainage",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The outlet elbow and tailpipe drain pan drains were clogged for an extended period, preventing condensed seat leakage from draining.",
+      "match_key": "FailureMode:tailpipe-outlet-elbow-drain-clogged-preventing-seat-leakage-drainage"
+    },
+    {
+      "id": "fm_water_fill",
+      "display_name": "Valve body periodically filled with water",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Valve bodies periodically filled with water due to blocked drains when seat leakage occurred.",
+      "match_key": "FailureMode:valve-body-periodically-filled-with-water"
+    },
+    {
+      "id": "fm_corrosion",
+      "display_name": "Accelerated corrosion bonding of valve seat",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Corrosion occurred at a faster rate than expected, resulting in corrosion bonding preventing valve lift.",
+      "match_key": "FailureMode:accelerated-corrosion-bonding-of-valve-seat"
+    },
+    {
+      "id": "fm_sv1b4_fail",
+      "display_name": "1-SV-1B-4 failed to lift at 110% setpoint",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "1-SV-1B-4 did not lift with 110% of set pressure applied during testing on 3/20/25.",
+      "match_key": "FailureMode:1-sv-1b-4-failed-to-lift-at-110-setpoint"
+    },
+    {
+      "id": "fm_sv2b4_fail",
+      "display_name": "1-SV-2B-4 failed to lift at 110% setpoint",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "1-SV-2B-4 did not lift with 110% of set pressure applied during testing on 3/21/25.",
+      "match_key": "FailureMode:1-sv-2b-4-failed-to-lift-at-110-setpoint"
+    },
+    {
+      "id": "cons_tsviolation",
+      "display_name": "TS LCO 3.7.1 condition prohibited by Technical Specifications (fewer than required operable MSSVs)",
+      "properties": {
+        "note": "Both valves failed similarly and considered to have existed during prior plant operation per NUREG-1022 guidance"
+      },
+      "type": "Consequence",
+      "start": "2025-03-20",
+      "end": "2025-03-21",
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:ts-lco-3-7-1-condition-prohibited-by-technical-specifications-fewer-than-required-operable-mssvs"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Remove both MSSVs for refurbishment and replace with pre-tested valves",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:remove-both-mssvs-for-refurbishment-and-replace-with-pre-tested-valves"
+    },
+    {
+      "id": "ca_drain_mod",
+      "display_name": "Modify tailpipe drain configuration to eliminate clogging-induced corrosion",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:modify-tailpipe-drain-configuration-to-eliminate-clogging-induced-corrosion"
+    },
+    {
+      "id": "mfr_dresser",
+      "display_name": "Dresser",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "Dresser",
+      "match_key": "Manufacturer:Dresser"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_nureg1022",
+      "display_name": "NUREG-1022",
+      "properties": {
+        "type": "standard/guidance"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:nureg-1022"
+    },
+    {
+      "id": "rr_ts371",
+      "display_name": "TS LCO 3.7.1",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ts-lco-3-7-1"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts371",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_sv1b4",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_sv2b4",
+      "evidence": null
+    },
+    {
+      "source": "fm_clogged_drain",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_clogged_drain",
+      "relation": "LEADS_TO",
+      "target": "fm_water_fill",
+      "evidence": null
+    },
+    {
+      "source": "fm_water_fill",
+      "relation": "LEADS_TO",
+      "target": "fm_corrosion",
+      "evidence": null
+    },
+    {
+      "source": "fm_corrosion",
+      "relation": "LEADS_TO",
+      "target": "fm_sv1b4_fail",
+      "evidence": null
+    },
+    {
+      "source": "fm_corrosion",
+      "relation": "LEADS_TO",
+      "target": "fm_sv2b4_fail",
+      "evidence": null
+    },
+    {
+      "source": "fm_sv1b4_fail",
+      "relation": "LEADS_TO",
+      "target": "cons_tsviolation",
+      "evidence": null
+    },
+    {
+      "source": "fm_sv2b4_fail",
+      "relation": "LEADS_TO",
+      "target": "cons_tsviolation",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_drain_mod",
+      "evidence": null
+    },
+    {
+      "source": "c_sv1b4",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_dresser",
+      "evidence": null
+    },
+    {
+      "source": "c_sv2b4",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_dresser",
+      "evidence": null
+    }
+  ],
+  "chain": "clogged tailpipe/outlet elbow drains [cause X, provisional] -> valve body periodically fills with water -> accelerated corrosion bonding of valve seat -> 1-SV-1B-4 and 1-SV-2B-4 fail to lift at 110% setpoint -> TS LCO 3.7.1 condition prohibited by Technical Specifications",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code X (Other) governs category though narrative describes a specific corrosion-bonding mechanism from clogged drains; cause evaluation was in progress at time of report (provisional=true) and report states it will be supplemented if final results differ. No SSCs inoperable at start contributing to the event. PRA/safety analysis concluded no significant CDF/LERF impact and no actual nuclear safety hazard; preliminary evaluation credited SG PORVs for steam relief but this is design-context/analysis narrative, not an operable backup during the failure window, so no BACKED_UP_BY edge was created. Previous similar events review found none, so no SIMILAR_TO edge/stub LER was created."
+}

@@ -1,0 +1,394 @@
+{
+  "ler_number": "263-2024-001-00",
+  "identity": {
+    "accession_number": "ML24116A117",
+    "docket": "05000263",
+    "plant_name": "Monticello",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2024-02-28",
+    "report_date": "2024-04-25",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2024-001-00 for Monticello Nuclear Generating Plant, Reactor Scram, Containment Isolation, and Cooldown Rate outside of limits following technician adjustment of wrong component"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)",
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "a technician did not perform verification that the physical component matched the Surveillance Procedure step. The technician adjusted the potentiometer in the C module rather than the A module while the A channel was in trip which made up the required two trip signals and actuated the ATWS system",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "wrong-component adjustment / inadequate procedure verification",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 263-2024-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "263-2024-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:263-2024-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Monticello Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000263",
+      "match_key": "Unit:05000263"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "wrong-component adjustment / inadequate procedure verification",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_atws",
+      "display_name": "Anticipated Transient Without Scram Mitigation System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "actuated during event",
+      "match_key": "System:anticipated-transient-without-scram-mitigation-system"
+    },
+    {
+      "id": "sys_rr",
+      "display_name": "Reactor Recirculation System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "AD",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:AD"
+    },
+    {
+      "id": "sys_rcs",
+      "display_name": "Reactor Coolant System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "AB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:AB"
+    },
+    {
+      "id": "c_pot_a",
+      "display_name": "Potentiometer, A module",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "A module",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:potentiometer-a-module"
+    },
+    {
+      "id": "c_pot_c",
+      "display_name": "Potentiometer, C module",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "C module",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:potentiometer-c-module"
+    },
+    {
+      "id": "fm_verify",
+      "display_name": "Technician failed to verify physical component matched procedure step",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Technician did not perform verification that the physical component matched the Surveillance Procedure step.",
+      "match_key": "FailureMode:technician-failed-to-verify-physical-component-matched-procedure-step"
+    },
+    {
+      "id": "fm_wrongadj",
+      "display_name": "Wrong module potentiometer adjusted (C instead of A)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Technician adjusted the potentiometer in the C module rather than the A module while the A channel was in trip.",
+      "match_key": "FailureMode:wrong-module-potentiometer-adjusted-c-instead-of-a"
+    },
+    {
+      "id": "fm_atws",
+      "display_name": "Two trip signals made up, ATWS system actuated",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Adjustment combined with A channel already in trip made up the required two trip signals and actuated the ATWS system.",
+      "match_key": "FailureMode:two-trip-signals-made-up-atws-system-actuated"
+    },
+    {
+      "id": "fm_pumptrip",
+      "display_name": "Both Reactor Recirculation Pumps tripped",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "ATWS actuation resulted in Reactor Scram and trip of both Reactor Recirculation Pumps.",
+      "match_key": "FailureMode:both-reactor-recirculation-pumps-tripped"
+    },
+    {
+      "id": "fm_stratification",
+      "display_name": "Reactor Pressure Vessel stratification",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Subsequent Reactor Pressure Vessel stratification following recirculation pump trips.",
+      "match_key": "FailureMode:reactor-pressure-vessel-stratification"
+    },
+    {
+      "id": "cons_scram",
+      "display_name": "Reactor Scram and Containment Isolation",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2024-02-28",
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:reactor-scram-and-containment-isolation"
+    },
+    {
+      "id": "cons_cooldown",
+      "display_name": "RPV bottom head cooldown rate exceeded PTLR limit (>100°F/hr)",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2024-02-28",
+      "end": "2024-03-08T22:00",
+      "duration": null,
+      "tz": "CST",
+      "match_key": "Consequence:rpv-bottom-head-cooldown-rate-exceeded-ptlr-limit-100-f-hr"
+    },
+    {
+      "id": "ca_procedure",
+      "display_name": "Update Surveillance Procedure to improve human performance factors and remove steps to adjust potentiometers in A and C modules",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:update-surveillance-procedure-to-improve-human-performance-factors-and-remove-steps-to-adjust-potentiometers-in-a-and-c-modules"
+    },
+    {
+      "id": "ca_analysis",
+      "display_name": "Submit analytical evaluation of structural integrity effects per ASME BPVC Section XI IWB-3720(a) to NRC",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:submit-analytical-evaluation-of-structural-integrity-effects-per-asme-bpvc-section-xi-iwb-3720-a-to-nrc"
+    },
+    {
+      "id": "rr_5073i",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_5073iv",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5055a",
+      "display_name": "10 CFR 50.55a(b)(2)(xliii)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-55a-b-2-xliii"
+    },
+    {
+      "id": "rr_ts349",
+      "display_name": "Technical Specification 3.4.9, RCS Pressure and Temperature Limits",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-3-4-9-rcs-pressure-and-temperature-limits"
+    },
+    {
+      "id": "rr_ptlr",
+      "display_name": "Pressure and Temperature Limits Report (PTLR)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:pressure-and-temperature-limits-report-ptlr"
+    },
+    {
+      "id": "rr_asme",
+      "display_name": "ASME Boiler and Pressure Vessel Code, Section XI, IWB-3720(a)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "standard/guidance",
+      "match_key": "RegulatoryReference:asme-boiler-and-pressure-vessel-code-section-xi-iwb-3720-a"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073i",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073iv",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5055a",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_atws",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rr",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rcs",
+      "evidence": null
+    },
+    {
+      "source": "fm_verify",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_verify",
+      "relation": "LEADS_TO",
+      "target": "fm_wrongadj",
+      "evidence": null
+    },
+    {
+      "source": "fm_wrongadj",
+      "relation": "LEADS_TO",
+      "target": "fm_atws",
+      "evidence": null
+    },
+    {
+      "source": "fm_atws",
+      "relation": "LEADS_TO",
+      "target": "cons_scram",
+      "evidence": null
+    },
+    {
+      "source": "fm_atws",
+      "relation": "LEADS_TO",
+      "target": "fm_pumptrip",
+      "evidence": null
+    },
+    {
+      "source": "fm_pumptrip",
+      "relation": "LEADS_TO",
+      "target": "fm_stratification",
+      "evidence": null
+    },
+    {
+      "source": "fm_stratification",
+      "relation": "LEADS_TO",
+      "target": "cons_cooldown",
+      "evidence": null
+    },
+    {
+      "source": "c_pot_a",
+      "relation": "PART_OF",
+      "target": "sys_atws",
+      "evidence": null
+    },
+    {
+      "source": "c_pot_c",
+      "relation": "PART_OF",
+      "target": "sys_atws",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procedure",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_analysis",
+      "evidence": null
+    },
+    {
+      "source": "cons_cooldown",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts349",
+      "evidence": null
+    },
+    {
+      "source": "cons_cooldown",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ptlr",
+      "evidence": null
+    },
+    {
+      "source": "ca_analysis",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_asme",
+      "evidence": null
+    }
+  ],
+  "chain": "technician failed to verify physical component matched procedure [cause TBD] -> wrong module potentiometer adjusted (C instead of A) -> two trip signals made up / ATWS actuated -> Reactor Scram & Containment Isolation; ATWS actuation -> both Recirc Pumps trip -> RPV stratification -> bottom head cooldown rate exceeded PTLR limit",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause_code is TBD/provisional per FORM-366 fields (no block_13 rows provided). No backups (BACKED_UP_BY) asserted: narrative states 'all safety systems functioned properly' generically but does not name a specific operable backup system for the cooldown-rate/ATWS event, so no BACKED_UP_BY edges were added. Previous similar events section explicitly states none in past three years, so no stub LER/SIMILAR_TO edge created. Two related but distinct consequences captured: the Reactor Scram/Containment Isolation event and the separate PTLR cooldown-rate limit exceedance, both flowing from the same causal chain per rule 5 (parallel effects)."
+}

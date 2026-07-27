@@ -1,0 +1,329 @@
+{
+  "ler_number": "387-2023-003-00",
+  "identity": {
+    "accession_number": "ML23313A196",
+    "docket": "05000387",
+    "plant_name": "Susquehanna",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2023-09-12",
+    "report_date": "2023-11-09",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2023-003-00 for Susquehanna Steam Electric Station, D Diesel Generator Inoperable due to Clogged Fuel Injectors"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "I",
+      "system": "I",
+      "component": "I",
+      "manufacturer": "I",
+      "reportable": null
+    },
+    {
+      "cause": "D",
+      "system": "EK",
+      "component": "I",
+      "manufacturer": "DG",
+      "reportable": null
+    },
+    {
+      "cause": "C634",
+      "system": "y",
+      "component": "I",
+      "manufacturer": "I",
+      "reportable": null
+    }
+  ],
+  "cause": {
+    "proximate_text": "The cause of the slow start was clogged fuel injectors.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "clogged fuel injectors causing slow diesel generator start",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 387-2023-003-00",
+      "properties": {},
+      "type": "LER",
+      "key": "387-2023-003-00",
+      "stub": false,
+      "title": "D Diesel Generator Inoperable due to Clogged Fuel Injectors",
+      "plant": "Susquehanna Steam Electric Station",
+      "match_key": "LER:387-2023-003-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Susquehanna Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000387",
+      "match_key": "Unit:05000387"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "clogged fuel injectors causing slow diesel generator start",
+      "proximate_text": "The cause of the slow start was clogged fuel injectors.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_ek",
+      "display_name": "Diesel Generator System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "EK",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:EK"
+    },
+    {
+      "id": "c_ddg",
+      "display_name": "D Diesel Generator",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "DG",
+      "identifier": "0G501D",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:DG|0G501D"
+    },
+    {
+      "id": "c_injectors",
+      "display_name": "Fuel Injectors",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:fuel-injectors"
+    },
+    {
+      "id": "sys_edg",
+      "display_name": "E Diesel Generator",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "EK",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; substituted for D DG",
+      "match_key": "System:EK"
+    },
+    {
+      "id": "fm_lowload",
+      "display_name": "Higher than normal accumulated low-load run time",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The D DG had higher than normal accumulated low load run time, considered a possible contributor to the clogged injectors, though no increasing trend in start time was observed.",
+      "match_key": "FailureMode:higher-than-normal-accumulated-low-load-run-time"
+    },
+    {
+      "id": "fm_clogged",
+      "display_name": "Fuel injectors clogged with excessive carbon buildup",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Troubleshooting identified fuel injectors had excessive carbon buildup.",
+      "match_key": "FailureMode:fuel-injectors-clogged-with-excessive-carbon-buildup"
+    },
+    {
+      "id": "fm_slowstart",
+      "display_name": "D DG slow start (12.6 seconds, exceeding 10-second acceptance criteria)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The D DG reached required frequency at 12.6 seconds, exceeding SR 3.8.1.7 acceptance criteria of 10 seconds.",
+      "match_key": "FailureMode:d-dg-slow-start-12-6-seconds-exceeding-10-second-acceptance-criteria"
+    },
+    {
+      "id": "cons_inop",
+      "display_name": "D DG declared inoperable / TS LCO 3.8.1 Condition B entered on Units 1 and 2",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2023-09-12T05:01",
+      "end": "2023-09-12T22:52",
+      "duration": "17:51",
+      "tz": null,
+      "match_key": "Consequence:d-dg-declared-inoperable-ts-lco-3-8-1-condition-b-entered-on-units-1-and-2"
+    },
+    {
+      "id": "ca_clean",
+      "display_name": "Clean D DG fuel injectors",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:clean-d-dg-fuel-injectors"
+    },
+    {
+      "id": "ca_lowload",
+      "display_name": "Refine guidance on DG low-load run times",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:refine-guidance-on-dg-low-load-run-times"
+    },
+    {
+      "id": "mfr_cooper",
+      "display_name": "Cooper Energy Services",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": null,
+      "match_key": "Manufacturer:cooper-energy-services"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_gdc17",
+      "display_name": "10 CFR 50 Appendix A, General Design Criterion 17",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-appendix-a-general-design-criterion-17"
+    },
+    {
+      "id": "rr_ufsar8",
+      "display_name": "UFSAR Section 8.3",
+      "properties": {
+        "type": "analysis-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ufsar-section-8-3"
+    },
+    {
+      "id": "rr_ufsar15",
+      "display_name": "UFSAR Chapter 15",
+      "properties": {
+        "type": "analysis-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ufsar-chapter-15"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ek",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_ddg",
+      "evidence": null
+    },
+    {
+      "source": "c_ddg",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_cooper",
+      "evidence": null
+    },
+    {
+      "source": "fm_lowload",
+      "relation": "LEADS_TO",
+      "target": "fm_clogged",
+      "evidence": null
+    },
+    {
+      "source": "fm_clogged",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_clogged",
+      "relation": "LEADS_TO",
+      "target": "fm_slowstart",
+      "evidence": null
+    },
+    {
+      "source": "fm_slowstart",
+      "relation": "LEADS_TO",
+      "target": "cons_inop",
+      "evidence": null
+    },
+    {
+      "source": "cons_inop",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_edg",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_clean",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_lowload",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_gdc17",
+      "evidence": null
+    }
+  ],
+  "chain": "clogged fuel injectors (excessive carbon buildup) [cause TBD] -> D DG slow start (12.6s > 10s criteria) -> D DG declared inoperable / TS LCO 3.8.1 Condition B entered [backup: E DG substituted, A/B/C DGs operable]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code is TBD/provisional per FORM-366 fields; narrative attributes slow start to clogged fuel injectors from carbon buildup, with low-load run time noted as a possible but unconfirmed contributor (no increasing start-time trend observed). E DG was substituted in as an explicit operable backup during the inoperability window; A, B, and C DGs also remained operable but were not substituted. No previous similar occurrences were reported (narrative states 'None')."
+}

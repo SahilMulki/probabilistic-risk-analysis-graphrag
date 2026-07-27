@@ -1,0 +1,257 @@
+{
+  "ler_number": "321-2024-004-00",
+  "identity": {
+    "accession_number": "ML24324A187",
+    "docket": "05000321",
+    "plant_name": "Hatch",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2024-09-27",
+    "report_date": "2024-11-19",
+    "operating_mode": "1",
+    "power_level": 54,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2024-004-00 for Edwin I. Hatch Nuclear Plant, Unit 1 Manual Reactor Trip During Hurricane Helene Due to Degrading Condenser Vacuum"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The degrading condenser vacuum was caused by debris from Hurricane Helene that accumulated and clogged the circulation water screens of the Unit 1 flume.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "External weather event / debris-clogged intake screens",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 321-2024-004-00",
+      "properties": {},
+      "type": "LER",
+      "key": "321-2024-004-00",
+      "stub": false,
+      "title": "Manual Reactor Trip During Hurricane Helene Due to Degrading Condenser Vacuum",
+      "plant": "Edwin I. Hatch Nuclear Plant",
+      "match_key": "LER:321-2024-004-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Hatch Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000321",
+      "match_key": "Unit:05000321"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "External weather event / debris-clogged intake screens",
+      "proximate_text": "The degrading condenser vacuum was caused by debris from Hurricane Helene that accumulated and clogged the circulation water screens of the Unit 1 flume.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_cw",
+      "display_name": "Circulating Water System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "NN",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected system",
+      "match_key": "System:NN"
+    },
+    {
+      "id": "sys_rps",
+      "display_name": "Reactor Protection System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "IG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "actuated",
+      "match_key": "System:IG"
+    },
+    {
+      "id": "sys_civ",
+      "display_name": "Containment Isolation Valves",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "ISV",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "actuated",
+      "match_key": "System:ISV"
+    },
+    {
+      "id": "c_cwscreens",
+      "display_name": "Circulating water screens (Unit 1 flume)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:circulating-water-screens-unit-1-flume"
+    },
+    {
+      "id": "fm_debris",
+      "display_name": "Hurricane debris clogged circulating water screens",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Debris from Hurricane Helene accumulated and clogged the circulation water screens of the Unit 1 flume.",
+      "match_key": "FailureMode:hurricane-debris-clogged-circulating-water-screens"
+    },
+    {
+      "id": "fm_vacuum",
+      "display_name": "Degrading condenser vacuum",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Clogged circulating water screens caused reduced circulating water flow, degrading condenser vacuum.",
+      "match_key": "FailureMode:degrading-condenser-vacuum"
+    },
+    {
+      "id": "cons_trip",
+      "display_name": "Manual reactor trip",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2024-09-27T03:46",
+      "end": null,
+      "duration": null,
+      "tz": "EDT",
+      "match_key": "Consequence:manual-reactor-trip"
+    },
+    {
+      "id": "ca_shutdown_clean",
+      "display_name": "Shutdown circulating water system and remove debris from Unit 1 circulation water screens",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:shutdown-circulating-water-system-and-remove-debris-from-unit-1-circulation-water-screens"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_ufsar",
+      "display_name": "UFSAR Chapter 15",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:ufsar-chapter-15"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ufsar",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_cw",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rps",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_civ",
+      "evidence": null
+    },
+    {
+      "source": "c_cwscreens",
+      "relation": "PART_OF",
+      "target": "sys_cw",
+      "evidence": null
+    },
+    {
+      "source": "fm_debris",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_debris",
+      "relation": "LEADS_TO",
+      "target": "fm_vacuum",
+      "evidence": null
+    },
+    {
+      "source": "fm_vacuum",
+      "relation": "LEADS_TO",
+      "target": "cons_trip",
+      "evidence": null
+    },
+    {
+      "source": "cons_trip",
+      "relation": "MITIGATED_BY",
+      "target": "sys_rps",
+      "evidence": null
+    },
+    {
+      "source": "cons_trip",
+      "relation": "MITIGATED_BY",
+      "target": "sys_civ",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_shutdown_clean",
+      "evidence": null
+    }
+  ],
+  "chain": "Hurricane Helene debris [cause TBD] -> clogged circulating water screens -> degrading condenser vacuum -> manual reactor trip [RPS actuated, CIVs closed]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code is TBD/provisional per form-366 fields; category left as 'provisional' per rule 4. No block_13 rows provided in source fields. No previous similar events reported (narrative states 'None'), so no SIMILAR_TO edge/stub LER created. Circulating Water System EIIS code not given in narrative; left null per rule 2."
+}

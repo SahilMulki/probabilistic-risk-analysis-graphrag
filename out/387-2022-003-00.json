@@ -1,0 +1,285 @@
+{
+  "ler_number": "387-2022-003-00",
+  "identity": {
+    "accession_number": "ML22353A082",
+    "docket": "05000387",
+    "plant_name": "Susquehanna",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2022-10-22",
+    "report_date": "2022-12-19",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2022-003-00 for Susquehanna Steam Electric Station, Inoperable 13.8kV Startup Transformer due to Misaligned Load Tap Charger Local/Remote Control Switch"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The cause of the event was determined to be inadvertent bumping of the LTC local/remote control switch during opening and closing of the transformer cabinet doors by maintenance personnel. This cause was attributed to a human performance error.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Inadvertent switch manipulation during maintenance access",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 387-2022-003-00",
+      "properties": {},
+      "type": "LER",
+      "key": "387-2022-003-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:387-2022-003-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Susquehanna Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000387",
+      "match_key": "Unit:05000387"
+    },
+    {
+      "id": "cause",
+      "display_name": "Human Performance Error (provisional)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Inadvertent switch manipulation during maintenance access",
+      "proximate_text": "The cause of the event was determined to be inadvertent bumping of the LTC local/remote control switch during opening and closing of the transformer cabinet doors by maintenance personnel. This cause was attributed to a human performance error.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_xfmr",
+      "display_name": "13.8kV Startup Transformer",
+      "properties": {
+        "component_code": "XFMR"
+      },
+      "type": "System",
+      "eiis_code": "E",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:E"
+    },
+    {
+      "id": "sys_alt_xfmr",
+      "display_name": "Alternate Startup Transformer",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "backup; available",
+      "match_key": "System:alternate-startup-transformer"
+    },
+    {
+      "id": "sys_dg",
+      "display_name": "Emergency Diesel Generators",
+      "properties": {
+        "note": "four aligned DGs"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "backup; available",
+      "match_key": "System:emergency-diesel-generators"
+    },
+    {
+      "id": "c_ltc_switch",
+      "display_name": "LTC Local/Remote Control Switch",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "33",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:33"
+    },
+    {
+      "id": "c_cab",
+      "display_name": "480V Normal and Alternate Control Cabinet",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "CAB",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:CAB"
+    },
+    {
+      "id": "c_fan",
+      "display_name": "Transformer Cooling Fans",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "FAN",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:FAN"
+    },
+    {
+      "id": "fm_bump",
+      "display_name": "LTC control switch inadvertently bumped to remote position",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "During maintenance access to troubleshoot an unexpected fan start, personnel opening/closing the transformer cabinet doors most likely inadvertently manipulated the LTC local/remote control switch, moving it from local to remote.",
+      "match_key": "FailureMode:ltc-control-switch-inadvertently-bumped-to-remote-position"
+    },
+    {
+      "id": "fm_misalign",
+      "display_name": "LTC control switch left in remote position (undetected)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The switch remained undetected in the remote position instead of the required local position from approximately 10/12/2022 20:00 until discovered on 10/22/2022 15:13.",
+      "match_key": "FailureMode:ltc-control-switch-left-in-remote-position-undetected"
+    },
+    {
+      "id": "cons_inop",
+      "display_name": "13.8kV Startup Transformer declared inoperable beyond TS allowed time",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2022-10-12T20:00",
+      "end": "2022-10-22T21:00",
+      "duration": "~9 days 1 hour",
+      "tz": null,
+      "match_key": "Consequence:13-8kv-startup-transformer-declared-inoperable-beyond-ts-allowed-time"
+    },
+    {
+      "id": "ca_procedure",
+      "display_name": "Revise station operating procedures to verify LTC control switch position during transformer restoration",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-station-operating-procedures-to-verify-ltc-control-switch-position-during-transformer-restoration"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts381",
+      "display_name": "TS 3.8.1, AC Sources-Operating",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-3-8-1-ac-sources-operating"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts381",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_xfmr",
+      "evidence": null
+    },
+    {
+      "source": "c_ltc_switch",
+      "relation": "PART_OF",
+      "target": "sys_xfmr",
+      "evidence": null
+    },
+    {
+      "source": "c_cab",
+      "relation": "PART_OF",
+      "target": "sys_xfmr",
+      "evidence": null
+    },
+    {
+      "source": "c_fan",
+      "relation": "PART_OF",
+      "target": "sys_xfmr",
+      "evidence": null
+    },
+    {
+      "source": "fm_bump",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_bump",
+      "relation": "LEADS_TO",
+      "target": "fm_misalign",
+      "evidence": null
+    },
+    {
+      "source": "fm_misalign",
+      "relation": "LEADS_TO",
+      "target": "cons_inop",
+      "evidence": null
+    },
+    {
+      "source": "cons_inop",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_alt_xfmr",
+      "evidence": null
+    },
+    {
+      "source": "cons_inop",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_dg",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procedure",
+      "evidence": null
+    }
+  ],
+  "chain": "human performance error [cause TBD] -> LTC control switch inadvertently bumped to remote during cabinet access -> switch left undetected in remote position -> startup transformer inoperable beyond TS allowed time [backups: alternate startup transformer, EDGs available]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code and category are TBD in FORM-366 FIELDS; narrative attributes cause to human performance error but per rule 4 the provisional TBD code/category governs, with theme capturing the human-performance angle. Cabinet troubleshooting for the unrelated cooling-fan start event is the context in which the switch was bumped; fan start itself was resolved and is not part of the main causal chain to the reportable condition, so it is modeled only as a component, not a separate FailureMode. No previous occurrences reported; no component failure info; no manufacturer/model data provided."
+}

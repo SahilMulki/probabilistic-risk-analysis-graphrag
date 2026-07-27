@@ -1,0 +1,506 @@
+{
+  "ler_number": "445-2024-001-00",
+  "identity": {
+    "accession_number": "ML24127A155",
+    "docket": "05000445",
+    "plant_name": "Comanche Peak",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2024-03-05",
+    "report_date": "2024-05-06",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Comanche Peak Nuclear Power Plant (CPNPP) Docket Nos. 50-445 and 50-446"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)(D)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "X",
+      "system": "EF",
+      "component": "MO",
+      "manufacturer": "W120",
+      "reportable": "Y"
+    },
+    {
+      "cause": "D",
+      "system": "EF",
+      "component": "FCU",
+      "manufacturer": "E&W",
+      "reportable": "N"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The root cause of this event was station personnel exhibiting a less than adequate conservative bias to the unique operability concerns associated with the UPS Cooling System when performing off-normal maintenance (i.e., at-power work requiring the inoperability of CCW Train 1-A).",
+    "cause_code": "X",
+    "category": "Other",
+    "theme": "inadequate conservative bias / operability decision-making during off-normal maintenance",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 445-2024-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "445-2024-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:445-2024-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Comanche Peak Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000445",
+      "match_key": "Unit:05000445"
+    },
+    {
+      "id": "cause",
+      "display_name": "Other (X)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "X",
+      "category": "Other",
+      "theme": "inadequate conservative bias / operability decision-making during off-normal maintenance",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Other"
+    },
+    {
+      "id": "sys_ef",
+      "display_name": "UPS HVAC System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "EF",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "safety-related cooling for UPS and Distribution Rooms",
+      "match_key": "System:EF"
+    },
+    {
+      "id": "sys_ccw",
+      "display_name": "Component Cooling Water",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "CC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "support system to UPS HVAC condenser",
+      "match_key": "System:CC"
+    },
+    {
+      "id": "c_ac_x01",
+      "display_name": "UPS HVAC X-01 Air Conditioner",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "X-01",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:ups-hvac-x-01-air-conditioner"
+    },
+    {
+      "id": "c_ac_x02",
+      "display_name": "UPS HVAC X-02 Air Conditioner",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "X-02",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:ups-hvac-x-02-air-conditioner"
+    },
+    {
+      "id": "c_blower_motor",
+      "display_name": "Evaporator blower motor (UPS HVAC X-02)",
+      "properties": {
+        "description": "Westinghouse open drip proof squirrel cage induction motor"
+      },
+      "type": "Component",
+      "eiis_code": "MO",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": "W120",
+      "inferred_code": false,
+      "match_key": "Component:MO"
+    },
+    {
+      "id": "c_efcu",
+      "display_name": "Emergency Fan Cooling Units (EFCUs)",
+      "properties": {
+        "serial_range": "14500-145503",
+        "count": 4
+      },
+      "type": "Component",
+      "eiis_code": "FCU",
+      "identifier": null,
+      "model": "ACH-100",
+      "manufacturer_code": "E&W",
+      "inferred_code": false,
+      "match_key": "Component:FCU"
+    },
+    {
+      "id": "c_condenser",
+      "display_name": "UPS HVAC X-01 Condenser",
+      "properties": {
+        "manufacturer": "Graham Manufacturing Company",
+        "description": "tube and shell, single pass"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:ups-hvac-x-01-condenser"
+    },
+    {
+      "id": "fm_ccw_maint",
+      "display_name": "CCW Train 1-A taken out of service for planned Hx maintenance without realigning UPS HVAC X-01",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Station performed planned maintenance on CCW Train 1-A Hx and did not realign UPS HVAC X-01 to Train 2-A, rendering UPS HVAC X-01 inoperable.",
+      "match_key": "FailureMode:ccw-train-1-a-taken-out-of-service-for-planned-hx-maintenance-without-realigning-ups-hvac-x-01"
+    },
+    {
+      "id": "fm_efcu_off",
+      "display_name": "All EFCUs turned off for maintenance support",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Planned maintenance in the UPS and Distribution Rooms resulted in all four EFCUs being turned off, per procedure, while relying on UPS HVAC to remain running.",
+      "match_key": "FailureMode:all-efcus-turned-off-for-maintenance-support"
+    },
+    {
+      "id": "fm_motor_fail",
+      "display_name": "UPS HVAC X-02 evaporator blower motor immediate failure",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Immediate, unplanned failure of the evaporator blower motor while UPS HVAC X-02 was in service, causing loss of UPS HVAC X-02.",
+      "match_key": "FailureMode:ups-hvac-x-02-evaporator-blower-motor-immediate-failure"
+    },
+    {
+      "id": "fm_concurrent_loss",
+      "display_name": "Concurrent loss of all UPS HVAC cooling trains",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "UPS HVAC X-01 inoperable (CCW Train 1-A out) plus EFCUs off for maintenance plus UPS HVAC X-02 motor failure resulted in loss of all redundant cooling to the UPS and Distribution Rooms.",
+      "match_key": "FailureMode:concurrent-loss-of-all-ups-hvac-cooling-trains"
+    },
+    {
+      "id": "cons_ups_hvac",
+      "display_name": "Potential loss of safety function (temperature control) in UPS and Distribution Rooms",
+      "properties": {
+        "note": "No measurable temperature change occurred; both units remained at 100% power in Mode 1 throughout."
+      },
+      "type": "Consequence",
+      "start": "2024-03-05T07:20",
+      "end": "2024-03-05T08:01",
+      "duration": "0:41",
+      "tz": null,
+      "match_key": "Consequence:potential-loss-of-safety-function-temperature-control-in-ups-and-distribution-rooms"
+    },
+    {
+      "id": "ca_start_efcus",
+      "display_name": "Turn on all four EFCUs to restore Train B/interim cooling",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:turn-on-all-four-efcus-to-restore-train-b-interim-cooling"
+    },
+    {
+      "id": "ca_connect_x01",
+      "display_name": "Connect UPS HVAC X-01 to CCW Train 2-A to restore Train A operability",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:connect-ups-hvac-x-01-to-ccw-train-2-a-to-restore-train-a-operability"
+    },
+    {
+      "id": "ca_rce",
+      "display_name": "Perform Root Cause Evaluation on the event",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:perform-root-cause-evaluation-on-the-event"
+    },
+    {
+      "id": "ca_sfdp_procedure",
+      "display_name": "Revise procedures to evaluate cross-unit impact via SFDP when unit-common support system inoperable (CAPR 1)",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-procedures-to-evaluate-cross-unit-impact-via-sfdp-when-unit-common-support-system-inoperable-capr-1"
+    },
+    {
+      "id": "ca_common_loads_procedure",
+      "display_name": "Revise procedures to list common loads supplied by systems (CCW, SSW, CHS, etc.) in clearance notepad (CAPR 2)",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-procedures-to-list-common-loads-supplied-by-systems-ccw-ssw-chs-etc-in-clearance-notepad-capr-2"
+    },
+    {
+      "id": "ca_case_study",
+      "display_name": "Perform case study of event for presentation to relevant departments",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:perform-case-study-of-event-for-presentation-to-relevant-departments"
+    },
+    {
+      "id": "mfr_westinghouse",
+      "display_name": "Westinghouse",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "W120",
+      "match_key": "Manufacturer:W120"
+    },
+    {
+      "id": "mfr_ew",
+      "display_name": "Ellis and Watts",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "E&W",
+      "match_key": "Manufacturer:E&W"
+    },
+    {
+      "id": "mfr_graham",
+      "display_name": "Graham Manufacturing Company",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": null,
+      "match_key": "Manufacturer:graham-manufacturing-company"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "rr_ts_3720",
+      "display_name": "Technical Specification 3.7.20",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:technical-specification-3-7-20"
+    },
+    {
+      "id": "rr_fsar_15",
+      "display_name": "FSAR Section 15",
+      "properties": {
+        "type": "analysis-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:fsar-section-15"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "LER 445/03-004-00",
+      "properties": {},
+      "type": "LER",
+      "key": "445/03-004-00",
+      "stub": true,
+      "title": "Control Room Air Conditioning (CRAC) System Both Trains Inoperable",
+      "plant": "Comanche Peak Nuclear Power Plant",
+      "match_key": "LER:445/03-004-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ef",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ccw",
+      "evidence": null
+    },
+    {
+      "source": "c_ac_x01",
+      "relation": "PART_OF",
+      "target": "sys_ef",
+      "evidence": null
+    },
+    {
+      "source": "c_ac_x02",
+      "relation": "PART_OF",
+      "target": "sys_ef",
+      "evidence": null
+    },
+    {
+      "source": "c_efcu",
+      "relation": "PART_OF",
+      "target": "sys_ef",
+      "evidence": null
+    },
+    {
+      "source": "c_condenser",
+      "relation": "PART_OF",
+      "target": "c_ac_x01",
+      "evidence": null
+    },
+    {
+      "source": "c_blower_motor",
+      "relation": "PART_OF",
+      "target": "c_ac_x02",
+      "evidence": null
+    },
+    {
+      "source": "fm_ccw_maint",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_ccw_maint",
+      "relation": "LEADS_TO",
+      "target": "fm_concurrent_loss",
+      "evidence": null
+    },
+    {
+      "source": "fm_efcu_off",
+      "relation": "LEADS_TO",
+      "target": "fm_concurrent_loss",
+      "evidence": null
+    },
+    {
+      "source": "fm_motor_fail",
+      "relation": "LEADS_TO",
+      "target": "fm_concurrent_loss",
+      "evidence": null
+    },
+    {
+      "source": "fm_concurrent_loss",
+      "relation": "LEADS_TO",
+      "target": "cons_ups_hvac",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_start_efcus",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_connect_x01",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_rce",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_sfdp_procedure",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_common_loads_procedure",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_case_study",
+      "evidence": null
+    },
+    {
+      "source": "c_blower_motor",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_westinghouse",
+      "evidence": null
+    },
+    {
+      "source": "c_efcu",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_ew",
+      "evidence": null
+    },
+    {
+      "source": "c_condenser",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_graham",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts_3720",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_fsar_15",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    }
+  ],
+  "chain": "inadequate conservative bias re: UPS Cooling operability during off-normal maintenance [cause X] -> CCW Train 1-A maintenance leaves UPS HVAC X-01 inoperable (not realigned) + all EFCUs turned off for maintenance -> concurrent UPS HVAC X-02 blower motor failure -> loss of all UPS HVAC cooling trains -> potential loss of safety function in UPS/Distribution Rooms (9 min total loss; full restoration in 41 min) [no measurable temperature rise; no backups modeled as none stated operable during full-loss window]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code X ('Other') governs category despite narrative's root-cause language pointing toward a personnel/conservative-decision-making theme; theme field captures this nuance. UPS HVAC X-01's cross-connection to CCW Train 1-B kept it functional for the whole event per Section III.A, but this describes ongoing condenser cooling capability rather than a distinct 'backup system' being invoked during a stated inoperability window for X-01 itself (X-01 itself was declared inoperable due to non-realignment) - not modeled as BACKED_UP_BY given ambiguity/overlap with the failure chain itself. No ADS/HPCI/RCIC-type systems present in this narrative. Previous similar event LER 445/03-004-00 modeled as stub per rule 9; root cause of that prior event was explicitly stated as unrelated to CCW alignment, included in notes rather than as a queryable claim since it's descriptive text, not a graph relation the schema supports well beyond SIMILAR_TO."
+}

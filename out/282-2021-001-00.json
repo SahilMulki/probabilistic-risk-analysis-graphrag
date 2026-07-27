@@ -1,0 +1,340 @@
+{
+  "ler_number": "282-2021-001-00",
+  "identity": {
+    "accession_number": "ML21081A290",
+    "docket": "05000282",
+    "plant_name": "Prairie Island",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2021-01-26",
+    "report_date": "2021-03-22",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "12 Diesel Driven Cooling Water Pump Auto Start Due to Low System Pressure"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The direct cause of this event was low pressure at the discharge of 12 DDCLP due to the isolation of the Cooling Water Strainer while 22 DDCLP was isolated during low CL system flow conditions.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Cooling Water system configuration led to low discharge pressure and spurious safety pump auto-start",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 282-2021-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "282-2021-001-00",
+      "stub": false,
+      "title": "12 Diesel Driven Cooling Water Pump Auto Start Due to Low System Pressure",
+      "plant": "Prairie Island Nuclear Generating Plant",
+      "match_key": "LER:282-2021-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Prairie Island Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000282",
+      "match_key": "Unit:05000282"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Cooling Water system configuration led to low discharge pressure and spurious safety pump auto-start",
+      "proximate_text": "The direct cause of this event was low pressure at the discharge of 12 DDCLP due to the isolation of the Cooling Water Strainer while 22 DDCLP was isolated during low CL system flow conditions.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_cl",
+      "display_name": "Cooling Water System",
+      "properties": {
+        "note": "shared ring header providing heat sink for safety-related components, Units 1 and 2"
+      },
+      "type": "System",
+      "eiis_code": "BI",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BI"
+    },
+    {
+      "id": "c_21clpump",
+      "display_name": "21 CL Pump (non-safety related, train B)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:21-cl-pump-non-safety-related-train-b"
+    },
+    {
+      "id": "c_22ddclp",
+      "display_name": "22 Diesel Driven Cooling Water Pump (train B)",
+      "properties": {
+        "status": "out of service for maintenance"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:22-diesel-driven-cooling-water-pump-train-b"
+    },
+    {
+      "id": "c_121mdclp",
+      "display_name": "121 Motor Driven Cooling Water Pump",
+      "properties": {
+        "role": "aligned as train B replacement safety-related pump"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:121-motor-driven-cooling-water-pump"
+    },
+    {
+      "id": "c_12ddclp",
+      "display_name": "12 Diesel Driven Cooling Water Pump (train A)",
+      "properties": {
+        "auto_start_setpoint": "75 psig discharge header pressure for 15 seconds"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:12-diesel-driven-cooling-water-pump-train-a"
+    },
+    {
+      "id": "c_22clstrainer",
+      "display_name": "22 Cooling Water Strainer",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:22-cooling-water-strainer"
+    },
+    {
+      "id": "fm_alignment",
+      "display_name": "Train B/A cross-feed configuration created lower actual pressure at 12 DDCLP discharge than indicated",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "With 121 MDCLP replacing 22 DDCLP on train B, the operating 21 CL pump supplied the ring header via train B and back fed to train A, creating a lower pressure at the discharge of 12 DDCLP than what is indicated in the control room.",
+      "match_key": "FailureMode:train-b-a-cross-feed-configuration-created-lower-actual-pressure-at-12-ddclp-discharge-than-indicated"
+    },
+    {
+      "id": "fm_strainerisolation",
+      "display_name": "22 Cooling Water Strainer isolated for maintenance, triggering auto backwash of other strainers",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The isolation of 22 Cooling Water Strainer and subsequent auto backwash of the other Cooling Water strainers further reduced pressure to the 12 DDCLP auto start setpoint.",
+      "match_key": "FailureMode:22-cooling-water-strainer-isolated-for-maintenance-triggering-auto-backwash-of-other-strainers"
+    },
+    {
+      "id": "fm_lowpressure",
+      "display_name": "CL discharge header pressure dropped to 12 DDCLP auto-start setpoint",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "At 1044 CST, the train A 12 DDCLP auto started on a sensed low header pressure following the isolation of 22 Cooling Water Strainer for maintenance and subsequent auto initiation of backwash of the other Cooling Water Strainers which reduced system pressure slightly.",
+      "match_key": "FailureMode:cl-discharge-header-pressure-dropped-to-12-ddclp-auto-start-setpoint"
+    },
+    {
+      "id": "cons_autostart",
+      "display_name": "12 DDCLP auto start / valid Emergency Service Water system actuation",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2021-01-26T10:44",
+      "end": null,
+      "duration": null,
+      "tz": "CST",
+      "match_key": "Consequence:12-ddclp-auto-start-valid-emergency-service-water-system-actuation"
+    },
+    {
+      "id": "ca_restore",
+      "display_name": "Restore CL system pressure by returning 22 CL Strainer to service, securing 12 DDCLP, and operating 11 CL pump for duration of 22 DDCLP maintenance",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:restore-cl-system-pressure-by-returning-22-cl-strainer-to-service-securing-12-ddclp-and-operating-11-cl-pump-for-duration-of-22-ddclp-maintenance"
+    },
+    {
+      "id": "ca_procupdate",
+      "display_name": "Update procedures to perform mitigating actions while performing DDCLP and Cooling Water Strainer maintenance",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:update-procedures-to-perform-mitigating-actions-while-performing-ddclp-and-cooling-water-strainer-maintenance"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_nureg1022",
+      "display_name": "NUREG 1022, Revision 3",
+      "properties": {
+        "type": "standard/guidance"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:nureg-1022-revision-3"
+    },
+    {
+      "id": "ler_stub_prev",
+      "display_name": "PINGP LER 2021-001-00 (previous similar event reference)",
+      "properties": {},
+      "type": "LER",
+      "key": "2021-001-00",
+      "stub": true,
+      "title": "12 DDCLP Auto Start",
+      "plant": "Prairie Island Nuclear Generating Plant",
+      "match_key": "LER:2021-001-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_nureg1022",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_cl",
+      "evidence": null
+    },
+    {
+      "source": "c_12ddclp",
+      "relation": "PART_OF",
+      "target": "sys_cl",
+      "evidence": null
+    },
+    {
+      "source": "c_22ddclp",
+      "relation": "PART_OF",
+      "target": "sys_cl",
+      "evidence": null
+    },
+    {
+      "source": "c_21clpump",
+      "relation": "PART_OF",
+      "target": "sys_cl",
+      "evidence": null
+    },
+    {
+      "source": "c_121mdclp",
+      "relation": "PART_OF",
+      "target": "sys_cl",
+      "evidence": null
+    },
+    {
+      "source": "c_22clstrainer",
+      "relation": "PART_OF",
+      "target": "sys_cl",
+      "evidence": null
+    },
+    {
+      "source": "fm_alignment",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_alignment",
+      "relation": "LEADS_TO",
+      "target": "fm_strainerisolation",
+      "evidence": null
+    },
+    {
+      "source": "fm_strainerisolation",
+      "relation": "LEADS_TO",
+      "target": "fm_lowpressure",
+      "evidence": null
+    },
+    {
+      "source": "fm_lowpressure",
+      "relation": "LEADS_TO",
+      "target": "cons_autostart",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_restore",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procupdate",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_stub_prev",
+      "evidence": null
+    }
+  ],
+  "chain": "train B/A cross-feed configuration masked true discharge pressure [cause TBD] -> 22 CL Strainer isolated for maintenance -> auto backwash of remaining strainers further drops pressure -> CL header pressure reaches 12 DDCLP auto-start setpoint -> 12 DDCLP auto starts (valid ESW actuation)",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code is TBD/provisional per FORM-366 fields; narrative attributes the direct cause to low discharge pressure from strainer isolation combined with train B/A cross-feed configuration during 22 DDCLP maintenance. No backup systems are explicitly stated as operable during the inoperability window in a BACKED_UP_BY sense (11 CL pump used post-event as corrective action, not a stated concurrent backup), so no BACKED_UP_BY edge emitted. Previous similar event reference is ambiguous/self-referential in the narrative (appears to cite the same LER number 2021-001-00), but per rule 9 the stub is created using the LER number exactly as stated in the text."
+}

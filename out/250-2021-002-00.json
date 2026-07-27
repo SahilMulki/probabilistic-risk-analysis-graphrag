@@ -1,0 +1,281 @@
+{
+  "ler_number": "250-2021-002-00",
+  "identity": {
+    "accession_number": "ML21154A110",
+    "docket": "05000250",
+    "plant_name": "Turkey Point",
+    "unit": 3,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2021-04-15",
+    "report_date": "2021-06-03",
+    "operating_mode": "3",
+    "power_level": 15,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2021-002-00 for Turkey Point, Units 3 and 4, Unrecognized Technical Specification Surveillance Requirement Non-Compliance"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The cause of this event is a latent gap within the test capabilities of the Turkey Point RPS. Although not compliant with the SFCP frequencies, the practice of performing the ALT surveillances during outage conditions is consistent with the design of the Turkey Point RPS.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Surveillance frequency control program (SFCP) not aligned with RPS design-imposed test constraints",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 250-2021-002-00",
+      "properties": {
+        "match_key": "LER:250-2021-002-00"
+      },
+      "type": "LER",
+      "key": "250-2021-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:250-2021-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Turkey Point Unit 3",
+      "properties": {
+        "match_key": "Unit:05000250",
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000250",
+      "match_key": "Unit:05000250"
+    },
+    {
+      "id": "cause",
+      "display_name": "Latent test-capability gap (TBD)",
+      "properties": {
+        "match_key": "Cause:provisional"
+      },
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Surveillance frequency control program (SFCP) not aligned with RPS design-imposed test constraints",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_jc",
+      "display_name": "Reactor Protection System",
+      "properties": {
+        "match_key": "System:JC"
+      },
+      "type": "System",
+      "eiis_code": "JC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JC"
+    },
+    {
+      "id": "c_fu20",
+      "display_name": "FU20 Automatic Trip and Interlock Logic",
+      "properties": {
+        "match_key": "Component:fu20-automatic-trip-and-interlock-logic",
+        "note": "RPS functional unit governed by TS 3.3.1 Table 3.3-1"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "FU20",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:fu20-automatic-trip-and-interlock-logic"
+    },
+    {
+      "id": "fm_sfcp_gap",
+      "display_name": "SFCP quarterly ALT frequency incompatible with RPS interlock-based test window",
+      "properties": {
+        "match_key": "FailureMode:sfcp-alt-frequency-incompatible-with-interlock-window"
+      },
+      "type": "FailureMode",
+      "description": "The SFCP assigned a 92-day (quarterly) test frequency to Actuation Logic Tests for trip functions that, by RPS design, can only be performed when reactor power is below the associated interlock (P6/P8/P10). This created a latent gap where the prescribed frequency could not be met during sustained full-power operation.",
+      "match_key": "FailureMode:sfcp-quarterly-alt-frequency-incompatible-with-rps-interlock-based-test-window"
+    },
+    {
+      "id": "fm_alt_pastdue",
+      "display_name": "ALT surveillance became past due while above interlock power",
+      "properties": {
+        "match_key": "FailureMode:alt-surveillance-past-due-above-interlock"
+      },
+      "type": "FailureMode",
+      "description": "Because the ALTs could not be performed above the P8/P10/P6 interlocks, the surveillance became past due whenever the plant remained at power beyond the SFCP's quarterly interval.",
+      "match_key": "FailureMode:alt-surveillance-became-past-due-while-above-interlock-power"
+    },
+    {
+      "id": "fm_unrecognized_inop",
+      "display_name": "FU20 channel inoperability unrecognized when power reduced below interlock",
+      "properties": {
+        "match_key": "FailureMode:fu20-inoperability-unrecognized"
+      },
+      "type": "FailureMode",
+      "description": "When reactor power was later maneuvered below the interlock (e.g., for maintenance or a scheduled outage) with the ALT already past due, the FU20 channel(s) became inoperable per TSSR 4.3.1.1, but this condition was not recognized, so required TSAS shutdown actions were not taken.",
+      "match_key": "FailureMode:fu20-channel-inoperability-unrecognized-when-power-reduced-below-interlock"
+    },
+    {
+      "id": "cons_tsnoncompliance",
+      "display_name": "5 discrete periods of TS 3.3.1 / TS 3.0.3 non-compliance (Units 3 and 4)",
+      "properties": {
+        "match_key": "Consequence:ts-noncompliance-periods"
+      },
+      "type": "Consequence",
+      "start": "2018-09-30T04:41",
+      "end": "2020-03-30T00:02",
+      "duration": "multiple discrete periods ranging ~18-38 hours each",
+      "tz": null,
+      "match_key": "Consequence:5-discrete-periods-of-ts-3-3-1-ts-3-0-3-non-compliance-units-3-and-4"
+    },
+    {
+      "id": "ca_shutdown_alts",
+      "display_name": "Complete all affected FU20 ALT surveillances during reactor shutdown conditions",
+      "properties": {
+        "match_key": "CorrectiveAction:complete-alts-during-shutdown"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:complete-all-affected-fu20-alt-surveillances-during-reactor-shutdown-conditions"
+    },
+    {
+      "id": "ca_revise_sfcp",
+      "display_name": "Revise SFCP implementing procedure to assign 18-month refueling outage frequency to affected FU20 ALTs",
+      "properties": {
+        "match_key": "CorrectiveAction:revise-sfcp-frequency"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-sfcp-implementing-procedure-to-assign-18-month-refueling-outage-frequency-to-affected-fu20-alts"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts331",
+      "display_name": "TS 3.3.1 Table 3.3-1 / TS 4.3.3.1 Table 4.3-1",
+      "properties": {
+        "match_key": "RegulatoryReference:ts-3-3-1-table-3-3-1"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-3-3-1-table-3-3-1-ts-4-3-3-1-table-4-3-1"
+    },
+    {
+      "id": "rr_ts303",
+      "display_name": "TS 3.0.3",
+      "properties": {
+        "match_key": "RegulatoryReference:ts-3-0-3"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-3-0-3"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts331",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts303",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jc",
+      "evidence": null
+    },
+    {
+      "source": "c_fu20",
+      "relation": "PART_OF",
+      "target": "sys_jc",
+      "evidence": null
+    },
+    {
+      "source": "fm_sfcp_gap",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_sfcp_gap",
+      "relation": "LEADS_TO",
+      "target": "fm_alt_pastdue",
+      "evidence": null
+    },
+    {
+      "source": "fm_alt_pastdue",
+      "relation": "LEADS_TO",
+      "target": "fm_unrecognized_inop",
+      "evidence": null
+    },
+    {
+      "source": "fm_unrecognized_inop",
+      "relation": "LEADS_TO",
+      "target": "cons_tsnoncompliance",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_shutdown_alts",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_revise_sfcp",
+      "evidence": null
+    }
+  ],
+  "chain": "latent SFCP/RPS-design test-window gap [cause TBD] -> quarterly ALT frequency unmeetable above interlock -> ALT surveillance past due -> FU20 channel inoperability unrecognized when power dropped below interlock -> 5 discrete TS 3.3.1/3.0.3 non-compliance periods (Units 3 & 4) -> corrective: complete ALTs during shutdown, revise SFCP to 18-month outage frequency",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause_code/category are TBD/provisional per FORM-366 fields; narrative describes a latent design/test-program gap rather than a classic hardware failure, so cause node is marked provisional. Event spans both Unit 3 and Unit 4 occurrences, but per docket (05000250) this record is scoped to Turkey Point Unit 3; Unit 4 occurrence (3/10/19) is part of the same reported condition/assessment and included in the consequence description rather than modeled as a separate LER. No block_13 rows were provided (empty array) and no equipment/component failures occurred -- this is a TS-compliance/programmatic LER, so no Manufacturer, backup System, or hardware Component failure nodes apply beyond FU20/RPS. No 'similar events' stub LER created because narrative states none were identified in the 5-year historical review."
+}

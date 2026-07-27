@@ -1,0 +1,288 @@
+{
+  "ler_number": "443-2020-002-00",
+  "identity": {
+    "accession_number": "ML20240A330",
+    "docket": "05000443",
+    "plant_name": "Seabrook",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2020-07-04",
+    "report_date": "2020-08-27",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Remote Shutdown System Indicator Exceeded Allowable Value for Time Longer than  Permitted by the Technical Specifications."
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "B",
+      "system": "AB",
+      "component": null,
+      "manufacturer": null,
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The cause of this issue was determined to be electrical termination connections that were not fully tightened within the instrument loop.",
+    "cause_code": "B",
+    "category": "Design/Manufacturing/Installation",
+    "theme": "loose electrical terminations in instrument loop",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 443-2020-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "443-2020-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:443-2020-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Seabrook Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000443",
+      "match_key": "Unit:05000443"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Manufacturing/Installation (B)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "B",
+      "category": "Design/Manufacturing/Installation",
+      "theme": "loose electrical terminations in instrument loop",
+      "proximate_text": "The cause of this issue was determined to be electrical termination connections that were not fully tightened within the instrument loop.",
+      "provisional": false,
+      "match_key": "Cause:Design/Manufacturing/Installation"
+    },
+    {
+      "id": "sys_ab",
+      "display_name": "Reactor Coolant System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "AB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "monitored system; loop 1 cold leg temperature",
+      "match_key": "System:AB"
+    },
+    {
+      "id": "sys_rss",
+      "display_name": "Remote Shutdown System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "monitoring system with failed indicator",
+      "match_key": "System:remote-shutdown-system"
+    },
+    {
+      "id": "c_ti_loop1",
+      "display_name": "RSS RCS loop 1 wide range cold leg temperature indicator",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "RCS loop 1 cold leg temperature indicator",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:rss-rcs-loop-1-wide-range-cold-leg-temperature-indicator"
+    },
+    {
+      "id": "c_terms",
+      "display_name": "Electrical termination connections (instrument loop)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:electrical-termination-connections-instrument-loop"
+    },
+    {
+      "id": "fm_loose_terms",
+      "display_name": "Electrical termination connections not fully tightened",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Field and cabinet side terminal connections in the instrument loop were loose.",
+      "match_key": "FailureMode:electrical-termination-connections-not-fully-tightened"
+    },
+    {
+      "id": "fm_indicator_fail_high",
+      "display_name": "RSS loop 1 cold leg temperature indicator failed high",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Indicator showed 680°F versus expected 557°F, exceeding the 35°F channel deviation acceptance criteria.",
+      "match_key": "FailureMode:rss-loop-1-cold-leg-temperature-indicator-failed-high"
+    },
+    {
+      "id": "cons_rss_inop",
+      "display_name": "RSS loop 1 cold leg temperature monitoring inoperable beyond Technical Specification allowed time",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2020-06-19",
+      "end": "2020-07-04",
+      "duration": "greater than 7 days (TS limit)",
+      "tz": null,
+      "match_key": "Consequence:rss-loop-1-cold-leg-temperature-monitoring-inoperable-beyond-technical-specification-allowed-time"
+    },
+    {
+      "id": "ca_troubleshoot",
+      "display_name": "Troubleshoot and inspect field/cabinet terminal connections",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:troubleshoot-and-inspect-field-cabinet-terminal-connections"
+    },
+    {
+      "id": "ca_tighten",
+      "display_name": "Tighten loose terminal connections",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:tighten-loose-terminal-connections"
+    },
+    {
+      "id": "ca_return",
+      "display_name": "Return loop to service and verify expected indications",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:return-loop-to-service-and-verify-expected-indications"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "prev_ler",
+      "display_name": "Previous Seabrook Station RSS RCS loop 1 cold leg temperature channel check deviation (drift)",
+      "properties": {},
+      "type": "LER",
+      "key": "seabrook-previous-channel-check-deviation",
+      "stub": true,
+      "title": "Previous occurrence of a channel check deviation on the RSS RCS loop 1 cold leg temperature",
+      "plant": "Seabrook Station",
+      "match_key": "LER:seabrook-previous-channel-check-deviation"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ab",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rss",
+      "evidence": null
+    },
+    {
+      "source": "c_ti_loop1",
+      "relation": "PART_OF",
+      "target": "sys_rss",
+      "evidence": null
+    },
+    {
+      "source": "fm_loose_terms",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_loose_terms",
+      "relation": "LEADS_TO",
+      "target": "fm_indicator_fail_high",
+      "evidence": null
+    },
+    {
+      "source": "fm_indicator_fail_high",
+      "relation": "LEADS_TO",
+      "target": "cons_rss_inop",
+      "evidence": null
+    },
+    {
+      "source": "cons_rss_inop",
+      "relation": "MITIGATED_BY",
+      "target": "ca_troubleshoot",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_troubleshoot",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_tighten",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_return",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "prev_ler",
+      "evidence": null
+    }
+  ],
+  "chain": "loose electrical termination connections [cause B] -> RSS loop 1 cold leg temperature indicator fails high (680F vs 557F expected) -> RSS monitoring capability for loop 1 cold leg temperature lost / TS 7-day allowed outage exceeded -> connections found and tightened, loop restored [monitoring backed up by loop 4 RSS indication and local control room monitoring]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Loop 4 cold leg temperature indication and local control room monitoring are mentioned as available during the event but are not modeled as System nodes since they are not distinct EIIS systems/backups in the schema sense (they are the same RSS system's other channel and manual local monitoring); captured qualitatively in chain summary rather than as BACKED_UP_BY edges to avoid inventing spurious System nodes. Component-level identifier for the specific electrical termination connections is generic per narrative (no manufacturer/model given)."
+}

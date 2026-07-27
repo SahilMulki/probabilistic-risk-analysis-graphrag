@@ -1,0 +1,455 @@
+{
+  "ler_number": "296-2020-001-00",
+  "identity": {
+    "accession_number": "ML20125A102",
+    "docket": "05000296",
+    "plant_name": "Browns Ferry",
+    "unit": 3,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2020-03-03",
+    "report_date": "2020-05-04",
+    "operating_mode": "5",
+    "power_level": 0,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Automatic Actuation of Emergency Diesel Generators Due to an Offsite Lightning Strike"
+  },
+  "reporting_basis": {
+    "reported_under": [],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "an off-site lightning strike to the Athens 161 kV line upstream of the licensee-controlled switchyard, which actuated 161 kV line breakers 924 and 928. These breakers opened and reclosed to clear the high short circuit current (phase differential) sensed on the line by zone protection relays. This caused other downstream breakers to open, and subsequently resulted in the loss of power to Unit 3 4 kV Shutdown Boards 3EA & 3EB. The system responses which occurred are consistent with the normal operation and design of protective breakers. No equipment failure was identified",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "offsite lightning strike / act of nature causing protective breaker cascade",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 296-2020-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "296-2020-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:296-2020-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Browns Ferry Unit 3",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000296",
+      "match_key": "Unit:05000296"
+    },
+    {
+      "id": "cause",
+      "display_name": "Act of Nature / Offsite Lightning Strike (X)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "offsite lightning strike / act of nature causing protective breaker cascade",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_161kv",
+      "display_name": "161 kV Transmission/Switchyard System",
+      "properties": {
+        "note": "offsite power switchyard, non-EIIS grid asset"
+      },
+      "type": "System",
+      "eiis_code": "FK",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:FK"
+    },
+    {
+      "id": "c_athens_line",
+      "display_name": "Athens 161 kV Transmission Line",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:athens-161-kv-transmission-line"
+    },
+    {
+      "id": "c_bkr924",
+      "display_name": "161 kV Line Breaker 924",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "BKR",
+      "identifier": "924",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:BKR|924"
+    },
+    {
+      "id": "c_bkr928",
+      "display_name": "161 kV Line Breaker 928",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "BKR",
+      "identifier": "928",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:BKR|928"
+    },
+    {
+      "id": "c_bkr1412",
+      "display_name": "Breaker 1412 (feeder to 4 kV Start Bus 1A)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "BKR",
+      "identifier": "1412",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:BKR|1412"
+    },
+    {
+      "id": "c_csst_a",
+      "display_name": "Common Station Service Transformer A",
+      "properties": {
+        "note": "XFMR"
+      },
+      "type": "Component",
+      "eiis_code": "FK",
+      "identifier": "CSST A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:FK|CSST A"
+    },
+    {
+      "id": "sys_startbus1a",
+      "display_name": "4 kV Start Bus 1A",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:4-kv-start-bus-1a"
+    },
+    {
+      "id": "sys_unitboard3a",
+      "display_name": "3A Unit Board",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "EA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:EA"
+    },
+    {
+      "id": "sys_sdbd3ea",
+      "display_name": "3EA 4 kV Shutdown Board",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "EK",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:EK"
+    },
+    {
+      "id": "sys_sdbd3eb",
+      "display_name": "3EB 4 kV Shutdown Board",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "EK",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:EK"
+    },
+    {
+      "id": "sys_edg",
+      "display_name": "Emergency Diesel Generator System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "DG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:DG"
+    },
+    {
+      "id": "c_edg3a",
+      "display_name": "3A Emergency Diesel Generator",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "DG",
+      "identifier": "3A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:DG|3A"
+    },
+    {
+      "id": "c_edg3b",
+      "display_name": "3B Emergency Diesel Generator",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "DG",
+      "identifier": "3B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:DG|3B"
+    },
+    {
+      "id": "sys_rps",
+      "display_name": "Reactor Protection System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "affected; received full scram signal",
+      "match_key": "System:reactor-protection-system"
+    },
+    {
+      "id": "sys_crd",
+      "display_name": "Control Rod Drive Pump",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "AA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected; lost power",
+      "match_key": "System:AA"
+    },
+    {
+      "id": "sys_adhr",
+      "display_name": "Alternate Decay Heat Removal",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "affected; lost power, restored under EDG power",
+      "match_key": "System:alternate-decay-heat-removal"
+    },
+    {
+      "id": "sys_fpc",
+      "display_name": "Fuel Pool Cooling",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "DA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected; lost power",
+      "match_key": "System:DA"
+    },
+    {
+      "id": "fm_fault",
+      "display_name": "Lightning-induced fault on Athens 161 kV line (high A-phase current, B-phase voltage loss)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Lightning strike caused excessive high current on A phase for ~93 ms and loss of voltage on B phase for ~1 second",
+      "match_key": "FailureMode:lightning-induced-fault-on-athens-161-kv-line-high-a-phase-current-b-phase-voltage-loss"
+    },
+    {
+      "id": "fm_bkr_trip",
+      "display_name": "161 kV Breakers 924/928 trip and reclose",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Breakers 924 and 928 opened and reclosed to clear the high short circuit current sensed by zone protection relays",
+      "match_key": "FailureMode:161-kv-breakers-924-928-trip-and-reclose"
+    },
+    {
+      "id": "fm_bkr1412_trip",
+      "display_name": "Breaker 1412 trips on phase voltage differential/overcurrent",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Breaker 1412 tripped due to the phase voltage differential and/or A phase overcurrent, de-energizing 4 kV Start Bus 1A",
+      "match_key": "FailureMode:breaker-1412-trips-on-phase-voltage-differential-overcurrent"
+    },
+    {
+      "id": "fm_loss_power_sdbd",
+      "display_name": "Loss of power to 3EA and 3EB 4 kV Shutdown Boards",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Loss of 4 kV Start Bus 1A and 3A Unit Board de-energized 3EA and 3EB Shutdown Boards",
+      "match_key": "FailureMode:loss-of-power-to-3ea-and-3eb-4-kv-shutdown-boards"
+    },
+    {
+      "id": "cons_edg_actuation",
+      "display_name": "Automatic actuation of 3A and 3B EDGs / partial loss of offsite power",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2020-03-03T04:16",
+      "end": "2020-03-03T06:52",
+      "duration": "2:36",
+      "tz": "CST",
+      "match_key": "Consequence:automatic-actuation-of-3a-and-3b-edgs-partial-loss-of-offsite-power"
+    },
+    {
+      "id": "ca_feasibility",
+      "display_name": "Perform feasibility study on hardening 161 kV power system protection scheme",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:perform-feasibility-study-on-hardening-161-kv-power-system-protection-scheme"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "Previous BFN lightning strike event (August 19, 2019)",
+      "properties": {},
+      "type": "LER",
+      "key": "1-2019-XXX",
+      "stub": true,
+      "title": "Lightning strike to Trinity-Nance 161 kV line causing loss of cooling towers and downpower of all three units",
+      "plant": "Browns Ferry Nuclear Plant",
+      "match_key": "LER:1-2019-XXX"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_161kv",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_edg",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sdbd3ea",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sdbd3eb",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rps",
+      "evidence": null
+    },
+    {
+      "source": "c_athens_line",
+      "relation": "PART_OF",
+      "target": "sys_161kv",
+      "evidence": null
+    },
+    {
+      "source": "c_bkr924",
+      "relation": "PART_OF",
+      "target": "sys_161kv",
+      "evidence": null
+    },
+    {
+      "source": "c_bkr928",
+      "relation": "PART_OF",
+      "target": "sys_161kv",
+      "evidence": null
+    },
+    {
+      "source": "c_edg3a",
+      "relation": "PART_OF",
+      "target": "sys_edg",
+      "evidence": null
+    },
+    {
+      "source": "c_edg3b",
+      "relation": "PART_OF",
+      "target": "sys_edg",
+      "evidence": null
+    },
+    {
+      "source": "fm_fault",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_fault",
+      "relation": "LEADS_TO",
+      "target": "fm_bkr_trip",
+      "evidence": null
+    },
+    {
+      "source": "fm_bkr_trip",
+      "relation": "LEADS_TO",
+      "target": "fm_bkr1412_trip",
+      "evidence": null
+    },
+    {
+      "source": "fm_bkr1412_trip",
+      "relation": "LEADS_TO",
+      "target": "fm_loss_power_sdbd",
+      "evidence": null
+    },
+    {
+      "source": "fm_loss_power_sdbd",
+      "relation": "LEADS_TO",
+      "target": "cons_edg_actuation",
+      "evidence": null
+    },
+    {
+      "source": "cons_edg_actuation",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_edg",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_feasibility",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    }
+  ],
+  "chain": "offsite lightning strike on Athens 161kV line [cause X, provisional] -> line fault (high A-phase current/B-phase voltage loss) -> breakers 924/928 trip & reclose -> breaker 1412 trips -> loss of power to 3EA/3EB 4kV SD Boards -> automatic actuation of 3A/3B EDGs [backed up by EDG system; power restored 0632/0652 CST]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "No equipment failure was identified; breakers responded as-designed to a lightning-induced grid fault, hence cause_code left as X/provisional (official form field was TBD, category provisional) rather than assigning a specific personnel/equipment cause. Block 13 fields were all N/A per the form. Previous similar event (Aug 19, 2019 lightning strike, Trinity-Nance line) referenced narratively but no LER number was given in the text, so a placeholder stub key '1-2019-XXX' is used pending resolver lookup; unit is inferred as Unit 3 consistent with docket 05000296. 161 kV switchyard and RPS/CRD/ADHR/Fuel Pool Cooling are modeled as involved/affected systems per explicit narrative statements of power loss, not as design-context-only mentions."
+}

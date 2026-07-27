@@ -1,0 +1,327 @@
+{
+  "ler_number": "530-2024-002-00",
+  "identity": {
+    "accession_number": "ML24177A322",
+    "docket": "05000530",
+    "plant_name": "Palo Verde",
+    "unit": 3,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2024-04-27",
+    "report_date": "2024-06-25",
+    "operating_mode": "6",
+    "power_level": 0,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Invalid Specified System Actuation Of Train B Emergency Diesel Generator"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)",
+      "10 CFR 50.73(a)(2)(v)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The direct cause of the invalid emergency start of the Unit 3 Train B EDG was the presence of an invalid LOP signal that had not been reset after de-energization of Train B BOP-ESFAS. The apparent cause ... was that the relevant procedure did not appropriately identify the need to reset the Unit 3 Train B EDG circuitry prior to placing the EDG Mode Control Switch in REMOTE.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "procedure inadequacy / uncleared actuation signal",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 530-2024-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "530-2024-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:530-2024-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Palo Verde Unit 3",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000530",
+      "match_key": "Unit:05000530"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "procedure inadequacy / uncleared actuation signal",
+      "proximate_text": "The direct cause of the invalid emergency start of the Unit 3 Train B EDG was the presence of an invalid LOP signal that had not been reset after de-energization of Train B BOP-ESFAS. The apparent cause ... was that the relevant procedure did not appropriately identify the need to reset the Unit 3 Train B EDG circuitry prior to placing the EDG Mode Control Switch in REMOTE.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_ek_edg",
+      "display_name": "Emergency Diesel Generator",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "EK",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "standby AC power source",
+      "match_key": "System:EK"
+    },
+    {
+      "id": "sys_bs_sp",
+      "display_name": "Essential Spray Pond System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BS",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "EDG cooling support",
+      "match_key": "System:BS"
+    },
+    {
+      "id": "sys_bop_esfas",
+      "display_name": "Balance of Plant – Engineered Safety Features Actuation System (BOP-ESFAS)",
+      "properties": {
+        "train": "B"
+      },
+      "type": "System",
+      "eiis_code": "JE",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "actuation logic",
+      "match_key": "System:JE"
+    },
+    {
+      "id": "c_edg_b",
+      "display_name": "Unit 3 Train B Emergency Diesel Generator",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "EK",
+      "identifier": "Train B EDG",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:EK|Train B EDG"
+    },
+    {
+      "id": "c_sp_pump_b",
+      "display_name": "Unit 3 Train B Essential Spray Pond Pump",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "BS",
+      "identifier": "Train B SP pump",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:BS|Train B SP pump"
+    },
+    {
+      "id": "c_edg_ctrl_cabinet",
+      "display_name": "Train B EDG control cabinet",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "Train B EDG control cabinet",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:train-b-edg-control-cabinet"
+    },
+    {
+      "id": "c_mode_switch",
+      "display_name": "EDG Mode Control Switch",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "EDG Mode Control Switch",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:edg-mode-control-switch"
+    },
+    {
+      "id": "fm_deenergized",
+      "display_name": "Train B BOP-ESFAS de-energized during clearance activities",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Planned work de-energized the Train B BOP-ESFAS, sending a Loss of Power (LOP) signal to the Train B EDG control cabinet.",
+      "match_key": "FailureMode:train-b-bop-esfas-de-energized-during-clearance-activities"
+    },
+    {
+      "id": "fm_not_reset",
+      "display_name": "LOP signal not reset during restoration",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "During restoration activities for the BOP-ESFAS, the LOP circuitry was not reset; no alarms or indications revealed the signal was present.",
+      "match_key": "FailureMode:lop-signal-not-reset-during-restoration"
+    },
+    {
+      "id": "fm_emergency_start",
+      "display_name": "Invalid emergency start of Train B EDG",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "When the Train B EDG was taken to REMOTE, the control cabinet initiated an emergency start due to the un-reset LOP signal.",
+      "match_key": "FailureMode:invalid-emergency-start-of-train-b-edg"
+    },
+    {
+      "id": "cons_actuation",
+      "display_name": "Invalid automatic actuation of Train B EDG and SP pump",
+      "properties": {
+        "no_loss_of_voltage": true,
+        "no_ts_entries_required": true
+      },
+      "type": "Consequence",
+      "start": "2024-04-27T10:18",
+      "end": null,
+      "duration": null,
+      "tz": "MST",
+      "match_key": "Consequence:invalid-automatic-actuation-of-train-b-edg-and-sp-pump"
+    },
+    {
+      "id": "ca_secure_reset",
+      "display_name": "Secure EDG, reset and restore BOP-ESFAS signal, EDG, and SP pump",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:secure-edg-reset-and-restore-bop-esfas-signal-edg-and-sp-pump"
+    },
+    {
+      "id": "ca_procedure_update",
+      "display_name": "Update procedure with cautions, equipment status tags, and reset steps for EDG start signals",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:update-procedure-with-cautions-equipment-status-tags-and-reset-steps-for-edg-start-signals"
+    },
+    {
+      "id": "rr_5073_iv_a",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5073_v",
+      "display_name": "10 CFR 50.73(a)(2)(v)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_iv_a",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_v",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ek_edg",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bs_sp",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bop_esfas",
+      "evidence": null
+    },
+    {
+      "source": "c_edg_b",
+      "relation": "PART_OF",
+      "target": "sys_ek_edg",
+      "evidence": null
+    },
+    {
+      "source": "c_sp_pump_b",
+      "relation": "PART_OF",
+      "target": "sys_bs_sp",
+      "evidence": null
+    },
+    {
+      "source": "c_edg_ctrl_cabinet",
+      "relation": "PART_OF",
+      "target": "c_edg_b",
+      "evidence": null
+    },
+    {
+      "source": "fm_deenergized",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_deenergized",
+      "relation": "LEADS_TO",
+      "target": "fm_not_reset",
+      "evidence": null
+    },
+    {
+      "source": "fm_not_reset",
+      "relation": "LEADS_TO",
+      "target": "fm_emergency_start",
+      "evidence": null
+    },
+    {
+      "source": "fm_emergency_start",
+      "relation": "LEADS_TO",
+      "target": "cons_actuation",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_secure_reset",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procedure_update",
+      "evidence": null
+    }
+  ],
+  "chain": "Train B BOP-ESFAS de-energized for clearance work -> LOP signal not reset during restoration [cause TBD, procedure inadequacy] -> EDG taken to REMOTE triggers invalid emergency start -> Train B EDG and SP pump actuate invalidly -> no loss of voltage, no safety function lost, Mode 6 with Train B not required",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "No previous similar events section content was provided beyond the header (block 8 lists no actual referenced LER, so no stub LER/SIMILAR_TO edge emitted). Cause code remains TBD/provisional per FORM-366 fields; narrative provides direct and apparent cause text but no official cause code was assigned. Block 13 table empty in source. No manufacturer info given, so no Manufacturer node created."
+}

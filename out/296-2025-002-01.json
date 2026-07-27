@@ -1,0 +1,352 @@
+{
+  "ler_number": "296-2025-002-01",
+  "identity": {
+    "accession_number": "ML26033A500",
+    "docket": "05000296",
+    "plant_name": "Browns Ferry",
+    "unit": 3,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2025-08-19",
+    "report_date": "2026-02-02",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Reactor Core Isolation Cooling Inoperable due to a Failed Ramp Generating Signal Converter"
+  },
+  "reporting_basis": {
+    "reported_under": [],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The apparent cause of the Unit 3 RCIC RGSC failure was accumulated stress over time on the operational amplifiers [AMP]. Additionally, the failure to implement Preventive Maintenance (PM) to replace the RGSC on a frequency conducive to preventing age-related failures was identified as a contributing cause. The RCIC System Engineer failed to follow the system monitoring plan for RCIC.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "obsolete component run-to-failure / PM program and monitoring plan not followed",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 296-2025-002-01",
+      "properties": {},
+      "type": "LER",
+      "key": "296-2025-002-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:296-2025-002-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Browns Ferry Unit 3",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000296",
+      "match_key": "Unit:05000296"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "obsolete component run-to-failure / PM program and monitoring plan not followed",
+      "proximate_text": "The apparent cause of the Unit 3 RCIC RGSC failure was accumulated stress over time on the operational amplifiers [AMP]. Additionally, the failure to implement Preventive Maintenance (PM) to replace the RGSC on a frequency conducive to preventing age-related failures was identified as a contributing cause. The RCIC System Engineer failed to follow the system monitoring plan for RCIC.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_bn",
+      "display_name": "Reactor Core Isolation Cooling",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BN",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BN"
+    },
+    {
+      "id": "sys_bj",
+      "display_name": "High Pressure Coolant Injection",
+      "properties": {
+        "note": "concurrently inoperable during several windows; not a confirmed available backup"
+      },
+      "type": "System",
+      "eiis_code": "BJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BJ"
+    },
+    {
+      "id": "sys_sc",
+      "display_name": "Governor Control System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SC"
+    },
+    {
+      "id": "c_rgsc",
+      "display_name": "Ramp Generating Signal Converter (RGSC)",
+      "properties": {
+        "part_number": "9903-015"
+      },
+      "type": "Component",
+      "eiis_code": "CNV",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:CNV"
+    },
+    {
+      "id": "c_amp",
+      "display_name": "Operational amplifiers",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "AMP",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:AMP"
+    },
+    {
+      "id": "fm_stress",
+      "display_name": "Accumulated stress on operational amplifiers over time",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The RGSC was an obsolete component under a run-to-failure maintenance strategy, which most likely failed due to stress over time on the operational amplifiers.",
+      "match_key": "FailureMode:accumulated-stress-on-operational-amplifiers-over-time"
+    },
+    {
+      "id": "fm_rgscfail",
+      "display_name": "RGSC module failed (voltage drops)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Voltage drops on Unit 3 RCIC RGSC, resulting in a deficient condition on July 20, 2025.",
+      "match_key": "FailureMode:rgsc-module-failed-voltage-drops"
+    },
+    {
+      "id": "fm_govissue",
+      "display_name": "Governor control system malfunction",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "RCIC failed to achieve required flow rate and pump discharge pressure due to an issue with the governor control system.",
+      "match_key": "FailureMode:governor-control-system-malfunction"
+    },
+    {
+      "id": "cons_rcic",
+      "display_name": "RCIC inoperable / TS LCO 3.5.3 required actions not met",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2025-07-20T11:54",
+      "end": "2025-08-23T01:08",
+      "duration": "~34 days (excluding period 2025-08-05 0132 to 2025-08-09 0801 when reactor pressure < 150 psig)",
+      "tz": "CDT",
+      "match_key": "Consequence:rcic-inoperable-ts-lco-3-5-3-required-actions-not-met"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace Unit 3 RCIC RGSC (WO 125559901)",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-unit-3-rcic-rgsc-wo-125559901"
+    },
+    {
+      "id": "ca_pmt",
+      "display_name": "Perform Cold Quick Start Post Maintenance Testing",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:perform-cold-quick-start-post-maintenance-testing"
+    },
+    {
+      "id": "ca_newpm",
+      "display_name": "Create new PMs to periodically replace HPCI and RCIC RGSCs and EG-M",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:create-new-pms-to-periodically-replace-hpci-and-rcic-rgscs-and-eg-m"
+    },
+    {
+      "id": "ca_agereplace",
+      "display_name": "Replace aged HPCI/RCIC EG-M and RGSC components (Units 1 and 2) at earliest opportunity",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-aged-hpci-rcic-eg-m-and-rgsc-components-units-1-and-2-at-earliest-opportunity"
+    },
+    {
+      "id": "mfr_woodward",
+      "display_name": "Woodward Governor Company",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": null,
+      "match_key": "Manufacturer:woodward-governor-company"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts353",
+      "display_name": "TS LCO 3.5.3",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ts-lco-3-5-3"
+    },
+    {
+      "id": "rr_ts304",
+      "display_name": "TS LCO 3.0.4",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ts-lco-3-0-4"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts353",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts304",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bn",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bj",
+      "evidence": null
+    },
+    {
+      "source": "c_rgsc",
+      "relation": "PART_OF",
+      "target": "sys_sc",
+      "evidence": null
+    },
+    {
+      "source": "c_amp",
+      "relation": "PART_OF",
+      "target": "c_rgsc",
+      "evidence": null
+    },
+    {
+      "source": "c_rgsc",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_woodward",
+      "evidence": null
+    },
+    {
+      "source": "fm_stress",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_stress",
+      "relation": "LEADS_TO",
+      "target": "fm_rgscfail",
+      "evidence": null
+    },
+    {
+      "source": "fm_rgscfail",
+      "relation": "LEADS_TO",
+      "target": "fm_govissue",
+      "evidence": null
+    },
+    {
+      "source": "fm_govissue",
+      "relation": "LEADS_TO",
+      "target": "cons_rcic",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_pmt",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_newpm",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_agereplace",
+      "evidence": null
+    }
+  ],
+  "chain": "accumulated stress on operational amplifiers [cause TBD] -> RGSC module failed (voltage drops, 2025-07-20) -> governor control system malfunction -> RCIC fails to achieve rated flow/pressure -> RCIC inoperable (TS LCO 3.5.3 required actions not met) [HPCI concurrently inoperable in several windows, not a confirmed backup]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code is TBD/provisional per FORM-366 fields; narrative describes both a component aging/PM-program cause and a human-performance cause (System Engineer failed to follow monitoring plan) but no official cause code letter was assigned in the provided form fields, so category stays 'provisional' per rule 4. HPCI [BJ] is discussed as a TS-required backup verification but the narrative states it was concurrently inoperable during several windows, so no BACKED_UP_BY edge is asserted (ambiguous/not clearly available throughout). RCIC not credited in BFN FSAR noted but not modeled as a separate entity. No previous-similar-event stub emitted since narrative explicitly states none found in past three years (Section VII) — no LER referenced to stub."
+}

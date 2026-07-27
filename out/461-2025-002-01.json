@@ -1,0 +1,374 @@
+{
+  "ler_number": "461-2025-002-01",
+  "identity": {
+    "accession_number": "ML26078A183",
+    "docket": "05000461",
+    "plant_name": "Clinton",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2025-10-06",
+    "report_date": "2026-03-03",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Supplemental Licensee Event Report 2025-002-01"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "B",
+      "system": "SJ",
+      "component": "P",
+      "manufacturer": "G080",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "scoring on the A-port side of the servo valve body, confirming abrasive interaction. The scoring, caused by lodged debris, increased friction or temporarily locked the servo swing plate. The servo motor had to overcome additional drag, which it could not do effectively. As a result, the valve did not respond to a decreasing demand signal, causing failure to control the operating cylinder responsible for closing the low-pressure steam control valve",
+    "cause_code": "B",
+    "category": "Design/Manufacturing/Installation",
+    "theme": "servo valve debris-induced scoring/binding",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 461-2025-002-01",
+      "properties": {},
+      "type": "LER",
+      "key": "461-2025-002-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:461-2025-002-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Clinton Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000461",
+      "match_key": "Unit:05000461"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Manufacturing/Installation (B)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "B",
+      "category": "Design/Manufacturing/Installation",
+      "theme": "servo valve debris-induced scoring/binding",
+      "proximate_text": "scoring on the A-port side of the servo valve body, confirming abrasive interaction. The scoring, caused by lodged debris, increased friction or temporarily locked the servo swing plate. The servo motor had to overcome additional drag, which it could not do effectively.",
+      "provisional": false,
+      "match_key": "Cause:Design/Manufacturing/Installation"
+    },
+    {
+      "id": "sys_sj",
+      "display_name": "Turbine Driven Reactor Feed Pump System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "sys_rps",
+      "display_name": "Reactor Protective System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "responded automatically to trip signal",
+      "match_key": "System:reactor-protective-system"
+    },
+    {
+      "id": "c_tdrfp_a",
+      "display_name": "Turbine Driven Reactor Feed Pump A (TDRFP A)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "P",
+      "identifier": "TDRFP A",
+      "model": null,
+      "manufacturer_code": "G080",
+      "inferred_code": false,
+      "match_key": "Component:P|TDRFP A"
+    },
+    {
+      "id": "c_servo",
+      "display_name": "Servo valve SV-2 (TDRFP A control loop)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "SV-2",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:servo-valve-sv-2-tdrfp-a-control-loop"
+    },
+    {
+      "id": "c_op_cyl",
+      "display_name": "Operating cylinder (low-pressure steam control valve actuator)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:operating-cylinder-low-pressure-steam-control-valve-actuator"
+    },
+    {
+      "id": "c_lp_valve",
+      "display_name": "Low-pressure steam control valve",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:low-pressure-steam-control-valve"
+    },
+    {
+      "id": "c_tdrfp_b",
+      "display_name": "Turbine Driven Reactor Feed Pump B (TDRFP B)",
+      "properties": {
+        "note": "same control loop as TDRFP A; susceptible to same failure"
+      },
+      "type": "Component",
+      "eiis_code": "P",
+      "identifier": "TDRFP B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:P|TDRFP B"
+    },
+    {
+      "id": "fm_debris",
+      "display_name": "Debris lodged in servo valve causing A-port scoring",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Lodged debris scored the A-port side of the servo valve body, confirming abrasive interaction",
+      "match_key": "FailureMode:debris-lodged-in-servo-valve-causing-a-port-scoring"
+    },
+    {
+      "id": "fm_binding",
+      "display_name": "Servo swing plate friction/temporary lock",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Scoring increased friction or temporarily locked the servo swing plate, requiring the servo motor to overcome additional drag it could not effectively overcome",
+      "match_key": "FailureMode:servo-swing-plate-friction-temporary-lock"
+    },
+    {
+      "id": "fm_noresponse",
+      "display_name": "Servo valve failed to respond to decreasing demand signal",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Valve did not respond to a decreasing demand signal",
+      "match_key": "FailureMode:servo-valve-failed-to-respond-to-decreasing-demand-signal"
+    },
+    {
+      "id": "fm_cylfail",
+      "display_name": "Failure to control operating cylinder / LP steam control valve did not close",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Failure to control the operating cylinder responsible for closing the low-pressure steam control valve",
+      "match_key": "FailureMode:failure-to-control-operating-cylinder-lp-steam-control-valve-did-not-close"
+    },
+    {
+      "id": "fm_speedrise",
+      "display_name": "TDRFP speed rose uncontrolled above setpoint",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Pump speed rose rapidly to 1300 rpm then to 4300 rpm above the 1000 rpm target setpoint",
+      "match_key": "FailureMode:tdrfp-speed-rose-uncontrolled-above-setpoint"
+    },
+    {
+      "id": "fm_leveltrip",
+      "display_name": "Rising reactor water level to Level 8",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Reactor water level rose to approximately 52 inches (Level 8) after TDRFP trip, due to feedwater already injected prior to trip",
+      "match_key": "FailureMode:rising-reactor-water-level-to-level-8"
+    },
+    {
+      "id": "cons_scram",
+      "display_name": "Automatic reactor scram on Level 8 (RPS)",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2025-10-06T03:21",
+      "end": null,
+      "duration": null,
+      "tz": "CST",
+      "match_key": "Consequence:automatic-reactor-scram-on-level-8-rps"
+    },
+    {
+      "id": "ca_replace_sv2",
+      "display_name": "Replace TDRFP B servo valve SV-2 before operation",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-tdrfp-b-servo-valve-sv-2-before-operation"
+    },
+    {
+      "id": "ca_procedure",
+      "display_name": "Revise operating procedures to exclusively utilize rolling standby mode before feeding RPV",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-operating-procedures-to-exclusively-utilize-rolling-standby-mode-before-feeding-rpv"
+    },
+    {
+      "id": "ca_test",
+      "display_name": "Servo tested at power labs with final report of findings issued to CPS",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:servo-tested-at-power-labs-with-final-report-of-findings-issued-to-cps"
+    },
+    {
+      "id": "mfr_g080",
+      "display_name": "Manufacturer G080",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "G080",
+      "match_key": "Manufacturer:G080"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sj",
+      "evidence": null
+    },
+    {
+      "source": "c_tdrfp_a",
+      "relation": "PART_OF",
+      "target": "sys_sj",
+      "evidence": null
+    },
+    {
+      "source": "c_tdrfp_a",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_g080",
+      "evidence": null
+    },
+    {
+      "source": "fm_debris",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_debris",
+      "relation": "LEADS_TO",
+      "target": "fm_binding",
+      "evidence": null
+    },
+    {
+      "source": "fm_binding",
+      "relation": "LEADS_TO",
+      "target": "fm_noresponse",
+      "evidence": null
+    },
+    {
+      "source": "fm_noresponse",
+      "relation": "LEADS_TO",
+      "target": "fm_cylfail",
+      "evidence": null
+    },
+    {
+      "source": "fm_cylfail",
+      "relation": "LEADS_TO",
+      "target": "fm_speedrise",
+      "evidence": null
+    },
+    {
+      "source": "fm_speedrise",
+      "relation": "LEADS_TO",
+      "target": "fm_leveltrip",
+      "evidence": null
+    },
+    {
+      "source": "fm_leveltrip",
+      "relation": "LEADS_TO",
+      "target": "cons_scram",
+      "evidence": null
+    },
+    {
+      "source": "cons_scram",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_rps",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_sv2",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procedure",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_test",
+      "evidence": null
+    }
+  ],
+  "chain": "debris lodged in servo valve [cause B] -> A-port scoring/abrasive interaction -> servo swing plate friction/binding -> servo fails to respond to decreasing demand signal -> operating cylinder/LP steam control valve fails to close -> TDRFP speed rises uncontrolled (1000->4300 rpm) -> operator trips TDRFP but level continues rising to Level 8 -> automatic RPS reactor scram [backup RPS responded automatically]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Discovery context defaulted to 'normal operation' since event occurred during reactor startup power ascension, not a scheduled test. RPS modeled as a System node because it is explicitly stated to have 'responded automatically' during the event (BACKED_UP_BY), distinct from design-context mentions. No previous similar occurrence found per licensee's 5-year review, so no SIMILAR_TO/stub LER emitted. TDRFP B and its servo replacement included since narrative explicitly ties it into the corrective action for the same failure mechanism."
+}

@@ -1,0 +1,391 @@
+{
+  "ler_number": "483-2020-08-00",
+  "identity": {
+    "accession_number": "ML21049A109",
+    "docket": "05000483",
+    "plant_name": "Callaway",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2020-12-24",
+    "report_date": "2021-02-18",
+    "operating_mode": null,
+    "power_level": 90,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": "55049",
+    "ens_date": "2020-12-24",
+    "ens_time": "1514",
+    "title": "LER 2020-08-00 for Callaway Plant Unit 1, Reactor Trip due to Main Generator Electrical Fault"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The cause of the generator fault was due to failure of the connection rings on the main generator stator. Both the collector end connection ring (i.e., phase ring) and the turbine end connection ring (i.e., serial ring) failed, resulting in an electrical path from the generator stator to ground... The underlying cause of the connection ring failure is still under investigation and will be determined during the course of the generator disassembly and repair.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "main generator stator connection ring failure - root cause under investigation",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 483-2020-008-00",
+      "properties": {},
+      "type": "LER",
+      "key": "483-2020-08-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:483-2020-08-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Callaway Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000483",
+      "match_key": "Unit:05000483"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "main generator stator connection ring failure - root cause under investigation",
+      "proximate_text": "The cause of the generator fault was due to failure of the connection rings on the main generator stator. Both the collector end connection ring (i.e., phase ring) and the turbine end connection ring (i.e., serial ring) failed, resulting in an electrical path from the generator stator to ground.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_rps",
+      "display_name": "Reactor Protection System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "actuated as designed",
+      "match_key": "System:reactor-protection-system"
+    },
+    {
+      "id": "sys_tb",
+      "display_name": "Main Generator",
+      "properties": {
+        "note": "converts turbine rotational kinetic energy to electrical energy",
+        "function_code": "GEN"
+      },
+      "type": "System",
+      "eiis_code": "TB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:TB"
+    },
+    {
+      "id": "sys_afw",
+      "display_name": "Auxiliary Feedwater System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "actuated as expected per plant design",
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "c_phase_ring",
+      "display_name": "Collector end connection ring (phase ring)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:collector-end-connection-ring-phase-ring"
+    },
+    {
+      "id": "c_serial_ring",
+      "display_name": "Turbine end connection ring (serial ring)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:turbine-end-connection-ring-serial-ring"
+    },
+    {
+      "id": "c_relay",
+      "display_name": "Generator neutral ground overcurrent relay",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:generator-neutral-ground-overcurrent-relay"
+    },
+    {
+      "id": "fm_phase_ring_fail",
+      "display_name": "Collector end (phase) connection ring failed",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Phase ring on main generator stator failed.",
+      "match_key": "FailureMode:collector-end-phase-connection-ring-failed"
+    },
+    {
+      "id": "fm_serial_ring_fail",
+      "display_name": "Turbine end (serial) connection ring failed",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Serial ring on main generator stator failed.",
+      "match_key": "FailureMode:turbine-end-serial-connection-ring-failed"
+    },
+    {
+      "id": "fm_ground_path",
+      "display_name": "Electrical path from generator stator to ground",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Combined ring failures created an electrical path from the generator stator to ground, producing a generator protection fault.",
+      "match_key": "FailureMode:electrical-path-from-generator-stator-to-ground"
+    },
+    {
+      "id": "fm_gen_trip",
+      "display_name": "Generator protective relaying actuation / generator trip",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Generator neutral ground overcurrent relay detected the fault, resulting in a generator trip and turbine trip.",
+      "match_key": "FailureMode:generator-protective-relaying-actuation-generator-trip"
+    },
+    {
+      "id": "fm_turbine_trip",
+      "display_name": "Turbine trip",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Turbine tripped as a result of the generator trip.",
+      "match_key": "FailureMode:turbine-trip"
+    },
+    {
+      "id": "cons_reactor_trip",
+      "display_name": "Automatic reactor trip",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2020-12-24T12:35",
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:automatic-reactor-trip"
+    },
+    {
+      "id": "ca_disassemble",
+      "display_name": "Disassemble and repair main generator to determine underlying cause of connection ring failure",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:disassemble-and-repair-main-generator-to-determine-underlying-cause-of-connection-ring-failure"
+    },
+    {
+      "id": "ca_replace_rings",
+      "display_name": "Replace/repair damaged connection rings and associated components",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-repair-damaged-connection-rings-and-associated-components"
+    },
+    {
+      "id": "mfr_ge",
+      "display_name": "General Electric",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": null,
+      "match_key": "Manufacturer:general-electric"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "ler_2013_008",
+      "display_name": "LER 2013-008",
+      "properties": {},
+      "type": "LER",
+      "key": "2013-008",
+      "stub": true,
+      "title": "Turbine trip due to electrical faults damaging isophase bus in auxiliary transformer and main generator neutral connection box",
+      "plant": "Callaway Plant",
+      "match_key": "LER:2013-008"
+    },
+    {
+      "id": "ler_2014_006",
+      "display_name": "LER 2014-006",
+      "properties": {},
+      "type": "LER",
+      "key": "2014-006",
+      "stub": true,
+      "title": "Turbine trip when main generator excitation transformer faulted to ground",
+      "plant": "Callaway Plant",
+      "match_key": "LER:2014-006"
+    },
+    {
+      "id": "ler_2020_006",
+      "display_name": "LER 2020-006",
+      "properties": {},
+      "type": "LER",
+      "key": "2020-006",
+      "stub": true,
+      "title": "Turbine trip due to main generator fault resulting from a piece of laminated-style flexible link in isophase bus duct becoming detached, causing phase-to-ground fault",
+      "plant": "Callaway Plant",
+      "match_key": "LER:2020-006"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_tb",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rps",
+      "evidence": null
+    },
+    {
+      "source": "c_phase_ring",
+      "relation": "PART_OF",
+      "target": "sys_tb",
+      "evidence": null
+    },
+    {
+      "source": "c_serial_ring",
+      "relation": "PART_OF",
+      "target": "sys_tb",
+      "evidence": null
+    },
+    {
+      "source": "c_relay",
+      "relation": "PART_OF",
+      "target": "sys_tb",
+      "evidence": null
+    },
+    {
+      "source": "sys_tb",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_ge",
+      "evidence": null
+    },
+    {
+      "source": "fm_phase_ring_fail",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_phase_ring_fail",
+      "relation": "LEADS_TO",
+      "target": "fm_ground_path",
+      "evidence": null
+    },
+    {
+      "source": "fm_serial_ring_fail",
+      "relation": "LEADS_TO",
+      "target": "fm_ground_path",
+      "evidence": null
+    },
+    {
+      "source": "fm_ground_path",
+      "relation": "LEADS_TO",
+      "target": "fm_gen_trip",
+      "evidence": null
+    },
+    {
+      "source": "fm_gen_trip",
+      "relation": "LEADS_TO",
+      "target": "fm_turbine_trip",
+      "evidence": null
+    },
+    {
+      "source": "fm_turbine_trip",
+      "relation": "LEADS_TO",
+      "target": "cons_reactor_trip",
+      "evidence": null
+    },
+    {
+      "source": "cons_reactor_trip",
+      "relation": "MITIGATED_BY",
+      "target": "sys_afw",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_disassemble",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_rings",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_2013_008",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_2014_006",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_2020_006",
+      "evidence": null
+    }
+  ],
+  "chain": "connection ring failure [cause TBD - under investigation] -> phase ring & serial ring both fail -> electrical path from stator to ground -> generator neutral ground overcurrent relay actuates -> generator/turbine trip -> automatic reactor trip [mitigated by AFW actuation]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code is TBD/provisional per form field; underlying root cause of connection ring failure was still under investigation pending generator disassembly and repair at time of report. Three previous similar occurrences of turbine/reactor trips from main generator protective relaying actuation cited (LER 2013-008, LER 2014-006, LER 2020-006), all at Callaway Plant Unit 1, modeled as stub LER nodes. AFW and main feedwater isolation are described as automatic responses per plant design consistent with high-power reactor trip, not stated-operable backups to a failed system per se, but AFW actuation is explicitly stated to have occurred as expected in response to the trip so it is modeled as mitigating the trip consequence. OCR quality in narrative was poor; text reconstructed based on context."
+}

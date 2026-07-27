@@ -1,0 +1,330 @@
+{
+  "ler_number": "321-2026-001-00",
+  "identity": {
+    "accession_number": "ML26114A183",
+    "docket": "05000321",
+    "plant_name": "Hatch",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2026-02-26",
+    "report_date": "2026-04-24",
+    "operating_mode": "2",
+    "power_level": 1,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2026-001-00 for Edwin I. Hatch Nuclear Plant, Unit 1 Manual Reactor Trip due to Reaching Subcriticality"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)",
+      "10 CFR 50.73(a)(2)(iv)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "This startup sequence, combined with an unexpected response from the Startup Level Control Valve (SULCV) (EIIS Code: SJ) resulted in low pressure feedwater injection not effectively being established.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "startup sequencing / SULCV response led to loss of level control",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 321-2026-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "321-2026-001-00",
+      "stub": false,
+      "title": "LER 2026-001-00 for Edwin I. Hatch Nuclear Plant, Unit 1 Manual Reactor Trip due to Reaching Subcriticality",
+      "plant": "Edwin I. Hatch Nuclear Plant",
+      "match_key": "LER:321-2026-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Hatch Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000321",
+      "match_key": "Unit:05000321"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "startup sequencing / SULCV response led to loss of level control",
+      "proximate_text": "This startup sequence, combined with an unexpected response from the Startup Level Control Valve (SULCV) (EIIS Code: SJ) resulted in low pressure feedwater injection not effectively being established.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_ji",
+      "display_name": "Turbine Bypass Valve System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JI",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JI"
+    },
+    {
+      "id": "sys_sj",
+      "display_name": "Startup Level Control Valve System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "sys_jc",
+      "display_name": "Reactor Protection System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JC"
+    },
+    {
+      "id": "c_sulcv",
+      "display_name": "Startup Level Control Valve (SULCV)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "SJ",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:SJ"
+    },
+    {
+      "id": "fm_sequence",
+      "display_name": "Startup sequence prioritized BPV pressure control ahead of low pressure feedwater injection",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Based on prior successful operating experience and per governing procedures, the crew selected a startup sequence prioritizing BPV pressure control ahead of low pressure feedwater injection.",
+      "match_key": "FailureMode:startup-sequence-prioritized-bpv-pressure-control-ahead-of-low-pressure-feedwater-injection"
+    },
+    {
+      "id": "fm_sulcv_response",
+      "display_name": "Unexpected SULCV response",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The Startup Level Control Valve exhibited an unexpected response during the startup evolution.",
+      "match_key": "FailureMode:unexpected-sulcv-response"
+    },
+    {
+      "id": "fm_no_injection",
+      "display_name": "Low pressure feedwater injection not effectively established",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Expected injection response did not occur, and reactor water level began to lower.",
+      "match_key": "FailureMode:low-pressure-feedwater-injection-not-effectively-established"
+    },
+    {
+      "id": "fm_rod_insertion",
+      "display_name": "Control rod insertion to reduce pressure and close bypass valves",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Crew inserted control rods to reduce reactor pressure in order to close bypass valves to control reactor water inventory, which drove reactor toward preestablished subcriticality/level parameters.",
+      "match_key": "FailureMode:control-rod-insertion-to-reduce-pressure-and-close-bypass-valves"
+    },
+    {
+      "id": "cons_trip",
+      "display_name": "Manual reactor trip due to reaching subcriticality/water level parameters",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2026-02-26T03:03",
+      "end": null,
+      "duration": null,
+      "tz": "EST",
+      "match_key": "Consequence:manual-reactor-trip-due-to-reaching-subcriticality-water-level-parameters"
+    },
+    {
+      "id": "ca_procedures",
+      "display_name": "Revise procedures to resolve inconsistencies in low pressure feedwater injection sequencing",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-procedures-to-resolve-inconsistencies-in-low-pressure-feedwater-injection-sequencing"
+    },
+    {
+      "id": "ca_training",
+      "display_name": "Update operator training to reinforce expected system behavior during low-power conditions",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:update-operator-training-to-reinforce-expected-system-behavior-during-low-power-conditions"
+    },
+    {
+      "id": "ca_lessons",
+      "display_name": "Capture lessons learned into initial and continuing training programs",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:capture-lessons-learned-into-initial-and-continuing-training-programs"
+    },
+    {
+      "id": "rr_5073ivA",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5073ivB",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-b"
+    },
+    {
+      "id": "rr_ufsar15",
+      "display_name": "UFSAR Chapter 15",
+      "properties": {
+        "type": "analysis-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ufsar-chapter-15"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073ivA",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073ivB",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ji",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sj",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jc",
+      "evidence": null
+    },
+    {
+      "source": "c_sulcv",
+      "relation": "PART_OF",
+      "target": "sys_sj",
+      "evidence": null
+    },
+    {
+      "source": "fm_sequence",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_sequence",
+      "relation": "LEADS_TO",
+      "target": "fm_no_injection",
+      "evidence": null
+    },
+    {
+      "source": "fm_sulcv_response",
+      "relation": "LEADS_TO",
+      "target": "fm_no_injection",
+      "evidence": null
+    },
+    {
+      "source": "fm_no_injection",
+      "relation": "LEADS_TO",
+      "target": "fm_rod_insertion",
+      "evidence": null
+    },
+    {
+      "source": "fm_rod_insertion",
+      "relation": "LEADS_TO",
+      "target": "cons_trip",
+      "evidence": null
+    },
+    {
+      "source": "cons_trip",
+      "relation": "MITIGATED_BY",
+      "target": "sys_jc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procedures",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_training",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_lessons",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ufsar15",
+      "evidence": null
+    }
+  ],
+  "chain": "startup sequence prioritized BPV pressure control [cause TBD] -> unexpected SULCV response -> low pressure feedwater injection not established -> control rods inserted to reduce pressure/close BPVs -> subcriticality/level parameters met -> manual reactor trip [mitigated by RPS actuation]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code is TBD/provisional per FORM-366 fields; narrative does not assign an official cause code, so cause node marked provisional. No FailureMode merging: sequencing choice and SULCV response modeled as parallel contributing failure modes both leading to loss of injection. RPS (JC) modeled as the actuated system satisfying reporting criterion and as mitigating/terminating the event via reactor trip, not as a pre-existing backup during an inoperability window. No block_13 rows provided in FORM-366 fields. No previous similar events (narrative states 'None')."
+}

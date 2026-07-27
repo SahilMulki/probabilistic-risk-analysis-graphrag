@@ -1,0 +1,355 @@
+{
+  "ler_number": "364-2023-003-00",
+  "identity": {
+    "accession_number": "ML23341A209",
+    "docket": "05000364",
+    "plant_name": "Farley",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2023-10-24",
+    "report_date": "2023-12-07",
+    "operating_mode": "6",
+    "power_level": 0,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Pressurizer Code Safety Valve Lift Pressure Outside of Technical Specifications Limits"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "X",
+      "system": "AB",
+      "component": "RV",
+      "manufacturer": "C710",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "Setpoint drift of the PSV was determined to be the most likely cause of the failure.",
+    "cause_code": "X",
+    "category": "Other",
+    "theme": "valve setpoint drift",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 364-2023-003-00",
+      "properties": {},
+      "type": "LER",
+      "key": "364-2023-003-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:364-2023-003-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Farley Unit 2",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000364",
+      "match_key": "Unit:05000364"
+    },
+    {
+      "id": "cause",
+      "display_name": "Other (X)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "X",
+      "category": "Other",
+      "theme": "valve setpoint drift",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Other"
+    },
+    {
+      "id": "sys_ab",
+      "display_name": "Reactor Coolant System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "AB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:AB"
+    },
+    {
+      "id": "c_psv",
+      "display_name": "2C Pressurizer Code Safety Valve",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "RV",
+      "identifier": "N56963-01-0003",
+      "model": "HB-86-BP",
+      "manufacturer_code": "C710",
+      "inferred_code": false,
+      "match_key": "Component:RV|N56963-01-0003"
+    },
+    {
+      "id": "fm_drift",
+      "display_name": "PSV setpoint drift",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "As-found lift pressure of 2522 psig exceeded the TS 3.4.10 allowable upper limit of 2510 psig, though within ASME code acceptance band.",
+      "match_key": "FailureMode:psv-setpoint-drift"
+    },
+    {
+      "id": "cons_ts",
+      "display_name": "PSV lift pressure outside Technical Specifications limits",
+      "properties": {
+        "note": "No adverse impact on overpressure protection function; valve reclosed following lift; no actual safety consequences"
+      },
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:psv-lift-pressure-outside-technical-specifications-limits"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace 2C PSV during October 2023 refueling outage",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-2c-psv-during-october-2023-refueling-outage"
+    },
+    {
+      "id": "ca_spring",
+      "display_name": "Spring changeout campaign for all PSVs (previous action, completed with this valve)",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:spring-changeout-campaign-for-all-psvs-previous-action-completed-with-this-valve"
+    },
+    {
+      "id": "ca_ts",
+      "display_name": "Revise TS 3.4.10 (previous action)",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-ts-3-4-10-previous-action"
+    },
+    {
+      "id": "mfr_crosby",
+      "display_name": "Crosby",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "C710",
+      "match_key": "Manufacturer:C710"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts3410",
+      "display_name": "TS 3.4.10",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ts-3-4-10"
+    },
+    {
+      "id": "rr_asme",
+      "display_name": "ASME Code acceptance band (+/- 3%)",
+      "properties": {
+        "type": "standard/guidance"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:asme-code-acceptance-band-3"
+    },
+    {
+      "id": "ler_2023_01",
+      "display_name": "LER 2023-01-00",
+      "properties": {},
+      "type": "LER",
+      "key": "2023-01-00",
+      "stub": true,
+      "title": null,
+      "plant": "Joseph M. Farley Nuclear Plant",
+      "match_key": "LER:2023-01-00"
+    },
+    {
+      "id": "ler_2020_02",
+      "display_name": "LER 2020-02-00",
+      "properties": {},
+      "type": "LER",
+      "key": "2020-02-00",
+      "stub": true,
+      "title": null,
+      "plant": "Joseph M. Farley Nuclear Plant",
+      "match_key": "LER:2020-02-00"
+    },
+    {
+      "id": "ler_2019_01",
+      "display_name": "LER 2019-01-00",
+      "properties": {},
+      "type": "LER",
+      "key": "2019-01-00",
+      "stub": true,
+      "title": null,
+      "plant": "Joseph M. Farley Nuclear Plant",
+      "match_key": "LER:2019-01-00"
+    },
+    {
+      "id": "ler_2018_01",
+      "display_name": "LER 2018-01-00",
+      "properties": {},
+      "type": "LER",
+      "key": "2018-01-00",
+      "stub": true,
+      "title": null,
+      "plant": "Joseph M. Farley Nuclear Plant",
+      "match_key": "LER:2018-01-00"
+    },
+    {
+      "id": "ler_2017_03",
+      "display_name": "LER 2017-03-00",
+      "properties": {},
+      "type": "LER",
+      "key": "2017-03-00",
+      "stub": true,
+      "title": null,
+      "plant": "Joseph M. Farley Nuclear Plant",
+      "match_key": "LER:2017-03-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ab",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_psv",
+      "evidence": null
+    },
+    {
+      "source": "fm_drift",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_drift",
+      "relation": "LEADS_TO",
+      "target": "cons_ts",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_spring",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_ts",
+      "evidence": null
+    },
+    {
+      "source": "c_psv",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_crosby",
+      "evidence": null
+    },
+    {
+      "source": "cons_ts",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts3410",
+      "evidence": null
+    },
+    {
+      "source": "cons_ts",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_asme",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_2023_01",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_2020_02",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_2019_01",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_2018_01",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_2017_03",
+      "evidence": null
+    }
+  ],
+  "chain": "PSV setpoint drift [cause X, Other] -> as-found lift pressure 2522 psig exceeds TS 3.4.10 upper limit (2510 psig), within ASME +/-3% band -> reportable TS violation, no adverse safety impact, valve reclosed",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code X (Other) governs category per official coding despite narrative attributing failure to 'setpoint drift' - a specific mechanism, but no further root-cause mechanism (e.g., personnel, design, equipment) was assigned, consistent with 'Other'. Previous similar event LER keys recorded exactly as stated in narrative (e.g., '2023-01-00'), without inventing docket-prefixed unit digit since narrative did not specify unit for each; plant assumed Farley given context. No EIIS code given for RCS beyond bracket [AB]; PSV bracket [RV] used directly. Spring changeout and TS revision listed as previous corrective actions, marked completed since already executed prior to this event per narrative ('previously revised', 'last PSV in the spring changeout campaign')."
+}

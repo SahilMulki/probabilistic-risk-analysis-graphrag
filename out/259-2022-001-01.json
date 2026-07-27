@@ -1,0 +1,338 @@
+{
+  "ler_number": "259-2022-001-01",
+  "identity": {
+    "accession_number": "ML22151A327",
+    "docket": "05000259",
+    "plant_name": "Browns Ferry",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2022-01-15",
+    "report_date": "2022-05-31",
+    "operating_mode": "4",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2022-001-01 for Browns Ferry Nuclear Plant Unit 1, Pressure Boundary Leak on Residual Heat Removal System Low Pressure Coolant Injection Test Line"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(ii)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "A vendor analysis determined the pipe failed due to vibration induced high cycle fatigue originating at the outer diameter of the pipe where the valve and socket welds overlap. The root cause of this event was that small bore piping was not specifically analyzed for fatigue failure vulnerability due to operational or resonance vibration.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "small-bore piping fatigue vulnerability not analyzed",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 259-2022-001-01",
+      "properties": {},
+      "type": "LER",
+      "key": "259-2022-001-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:259-2022-001-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Browns Ferry Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000259",
+      "match_key": "Unit:05000259"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "small-bore piping fatigue vulnerability not analyzed",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_rhr",
+      "display_name": "Residual Heat Removal",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BO",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected; LPCI Loop I mode",
+      "match_key": "System:BO"
+    },
+    {
+      "id": "sys_rcs",
+      "display_name": "Reactor Coolant System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "AC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "pressure boundary breached",
+      "match_key": "System:AC"
+    },
+    {
+      "id": "sys_hpci",
+      "display_name": "High Pressure Coolant Injection",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; operable",
+      "match_key": "System:BJ"
+    },
+    {
+      "id": "sys_cs",
+      "display_name": "Core Spray",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; operable, both loops",
+      "match_key": "System:BG"
+    },
+    {
+      "id": "sys_ads",
+      "display_name": "Automatic Depressurization System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "backup; operable, all valves",
+      "match_key": "System:automatic-depressurization-system"
+    },
+    {
+      "id": "c_testline",
+      "display_name": "RHR/LPCI test line piping [PSF]",
+      "properties": {
+        "note": "ASME Code Class 1 piping, upstream of Shutdown Cooling test shut-off valve"
+      },
+      "type": "Component",
+      "eiis_code": "PSF",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:PSF"
+    },
+    {
+      "id": "c_shv",
+      "display_name": "Shutdown Cooling test shut-off valve",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "SHV",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:SHV"
+    },
+    {
+      "id": "fm_analysis",
+      "display_name": "Small bore piping not analyzed for fatigue vulnerability under vibration",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Small bore piping treated as rigid/not modeled independently during EPU seismic and vibration acceptance calculations; design calculation failed to identify stress from flow-induced resonance vibration at pump speeds 1500-1600 rpm exceeding endurance limit.",
+      "match_key": "FailureMode:small-bore-piping-not-analyzed-for-fatigue-vulnerability-under-vibration"
+    },
+    {
+      "id": "fm_perlearn",
+      "display_name": "Prior PER learnings not incorporated at Unit 1 restart",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "PER 98-011374-000 identified trend of fatigue failures for ASME Code Class 1 equivalent socket-welded connections in Units 2 and 3 drywell on RHR shutdown cooling lines and 3A Recirculation Loop; learnings not applied to Unit 1 restart configuration.",
+      "match_key": "FailureMode:prior-per-learnings-not-incorporated-at-unit-1-restart"
+    },
+    {
+      "id": "fm_fatigue",
+      "display_name": "Pipe through-wall fatigue crack at valve/socket weld interface",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Vibration induced high cycle fatigue originating at outer diameter of pipe where valve and socket welds overlap led to through-wall flaw.",
+      "match_key": "FailureMode:pipe-through-wall-fatigue-crack-at-valve-socket-weld-interface"
+    },
+    {
+      "id": "cons_leak",
+      "display_name": "Pressure boundary leak on RHR/LPCI test line; RCS barrier seriously degraded; LPCI Loop I declared inoperable",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2021-09-11T00:00",
+      "end": "2022-01-20T15:20",
+      "duration": null,
+      "tz": "CST",
+      "match_key": "Consequence:pressure-boundary-leak-on-rhr-lpci-test-line-rcs-barrier-seriously-degraded-lpci-loop-i-declared-inoperable"
+    },
+    {
+      "id": "ca_cutcap",
+      "display_name": "Cut and cap test line vent piping",
+      "properties": {
+        "work_order": "122645957"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:cut-and-cap-test-line-vent-piping"
+    },
+    {
+      "id": "ca_ecp",
+      "display_name": "Implement Engineering Change Packages for small bore piping with fatigue vulnerability",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:implement-engineering-change-packages-for-small-bore-piping-with-fatigue-vulnerability"
+    },
+    {
+      "id": "rr_5073ii",
+      "display_name": "10 CFR 50.73(a)(2)(ii)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-ii-a"
+    },
+    {
+      "id": "rr_5073ib",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts344",
+      "display_name": "TS LCO 3.4.4 RCS Operational Leakage",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-lco-3-4-4-rcs-operational-leakage"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073ii",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073ib",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rhr",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rcs",
+      "evidence": null
+    },
+    {
+      "source": "c_testline",
+      "relation": "PART_OF",
+      "target": "sys_rcs",
+      "evidence": null
+    },
+    {
+      "source": "fm_analysis",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_analysis",
+      "relation": "LEADS_TO",
+      "target": "fm_fatigue",
+      "evidence": null
+    },
+    {
+      "source": "fm_perlearn",
+      "relation": "LEADS_TO",
+      "target": "fm_fatigue",
+      "evidence": null
+    },
+    {
+      "source": "fm_fatigue",
+      "relation": "LEADS_TO",
+      "target": "cons_leak",
+      "evidence": null
+    },
+    {
+      "source": "cons_leak",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_hpci",
+      "evidence": null
+    },
+    {
+      "source": "cons_leak",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_cs",
+      "evidence": null
+    },
+    {
+      "source": "cons_leak",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_ads",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_cutcap",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_ecp",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts344",
+      "evidence": null
+    }
+  ],
+  "chain": "small bore piping not analyzed for fatigue vulnerability [cause TBD] -> (parallel: PER 98-011374-000 learnings not applied at U1 restart) -> vibration-induced high cycle fatigue crack at valve/socket weld -> RCS pressure boundary leak / LPCI Loop I inoperable [backups HPCI, Core Spray, ADS all operable]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code is TBD/provisional per FORM-366 fields, despite a detailed root-cause narrative (small bore piping fatigue analysis gap plus contributing PER-learnings-not-applied cause). Two distinct contributing failure modes both feed the pipe fatigue failure in parallel per rule 5. No component/system failures were formally attributed (narrative explicitly states none), so no Manufacturer or MANUFACTURED_BY edges. LPCI Loop I itself is the RHR system in its low-pressure-coolant-injection mode, not modeled as a separate System node. TS 3.4.4 included as license-basis regulatory reference since narrative explicitly cites the LCO violation."
+}

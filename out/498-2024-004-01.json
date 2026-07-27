@@ -1,0 +1,443 @@
+{
+  "ler_number": "498-2024-004-01",
+  "identity": {
+    "accession_number": "ML25254A061",
+    "docket": "05000498",
+    "plant_name": "South Texas",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2024-07-24",
+    "report_date": "2025-09-11",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2024-004-01 for South Texas Project, Units 1 and 2, Loss of Offsite Power Resulting in Unit 1 Automatic Reactor Trip and Actuation of Emergency Diesel Generators and Auxiliary Feedwater Pumps"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)",
+      "10 CFR 50.73(a)(2)(iv)(B)(1)",
+      "10 CFR 50.73(a)(2)(iv)(B)(6)",
+      "10 CFR 50.73(a)(2)(iv)(B)(8)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "A Transmission Distribution Service Provider (TDSP) had not established and implemented adequate management controls governing design changes to equipment in the Switchyard to ensure that changes were consistent with design requirements and aligned with requirements and recommendations of applicable Industry Standards; and subsequently, STPNOC did not rigorously implement management controls during the review and approval of design changes developed by the TDSP. As a result, in 2014 the Shunt Reactors were relocated, and their associated circuit switchers were replaced with circuit breakers without adequately evaluating the change.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "inadequate management controls over switchyard design changes (TDSP and STPNOC review/approval)",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 498-2024-004-01",
+      "properties": {},
+      "type": "LER",
+      "key": "498-2024-004-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:498-2024-004-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "South Texas Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000498",
+      "match_key": "Unit:05000498"
+    },
+    {
+      "id": "cause",
+      "display_name": "Cause TBD (provisional)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "inadequate management controls over switchyard design changes (TDSP and STPNOC review/approval)",
+      "proximate_text": "A Transmission Distribution Service Provider (TDSP) had not established and implemented adequate management controls governing design changes to equipment in the Switchyard to ensure that changes were consistent with design requirements and aligned with requirements and recommendations of applicable Industry Standards; and subsequently, STPNOC did not rigorously implement management controls during the review and approval of design changes developed by the TDSP. As a result, in 2014 the Shunt Reactors were relocated, and their associated circuit switchers were replaced with circuit breakers without adequately evaluating the change.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_switchyard",
+      "display_name": "Switchyard / Shunt Reactor RT-2 (offsite transmission equipment)",
+      "properties": {
+        "note": "not an EIIS plant system; owned/operated/maintained by partnership of four Electrical Transmission Utility Companies"
+      },
+      "type": "System",
+      "eiis_code": "FK",
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:FK"
+    },
+    {
+      "id": "sys_rps",
+      "display_name": "Reactor Protection System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "actuated; tripped reactor",
+      "match_key": "System:reactor-protection-system"
+    },
+    {
+      "id": "sys_sbdg",
+      "display_name": "Standby Diesel Generators",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "backup; automatically actuated on LOOP",
+      "match_key": "System:standby-diesel-generators"
+    },
+    {
+      "id": "sys_afw",
+      "display_name": "Auxiliary Feedwater System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; automatically actuated, provided S/G cooling",
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "sys_offsite_power",
+      "display_name": "Offsite Power System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:offsite-power-system"
+    },
+    {
+      "id": "c_bushing",
+      "display_name": "Insulator (Shunt Reactor RT-2 H3 GE Type U high-voltage bushing)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "INS",
+      "identifier": "RT-2 H3",
+      "model": "GE 11B877BB",
+      "manufacturer_code": "G080",
+      "inferred_code": false,
+      "match_key": "Component:INS|RT-2 H3"
+    },
+    {
+      "id": "c_porv1c",
+      "display_name": "Steam Generator PORV 1C",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:steam-generator-porv-1c"
+    },
+    {
+      "id": "mfr_ge",
+      "display_name": "General Electric",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "G080",
+      "match_key": "Manufacturer:G080"
+    },
+    {
+      "id": "fm_design_change",
+      "display_name": "Shunt Reactor relocation and circuit switcher replacement without adequate evaluation (2014)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Shunt Reactors relocated and associated circuit switchers replaced with circuit breakers in 2014 without adequately evaluating the design change.",
+      "match_key": "FailureMode:shunt-reactor-relocation-and-circuit-switcher-replacement-without-adequate-evaluation-2014"
+    },
+    {
+      "id": "fm_bushing_failure",
+      "display_name": "Shunt Reactor RT-2 H3 bushing insulation breakdown",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "GE Type U high-voltage bushing failed due to insulation breakdown; root cause of breakdown undetermined due to extensive damage.",
+      "match_key": "FailureMode:shunt-reactor-rt-2-h3-bushing-insulation-breakdown"
+    },
+    {
+      "id": "fm_fire",
+      "display_name": "Bushing failure caused fire in switchyard",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Failure of the bushing resulted in a fire in the switchyard.",
+      "match_key": "FailureMode:bushing-failure-caused-fire-in-switchyard"
+    },
+    {
+      "id": "fm_phase_ground_fault",
+      "display_name": "Phase-to-ground faults via smoke plume",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Smoke plume reached A-phase conductor of Unit 1 Main Generator Transformer and C-phase conductor of No. 1 Standby Transformer, allowing phase-to-ground faults through the plume.",
+      "match_key": "FailureMode:phase-to-ground-faults-via-smoke-plume"
+    },
+    {
+      "id": "fm_loss_circuits",
+      "display_name": "Loss of two independent offsite transmission circuits",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Phase-to-ground faults caused loss of two independent offsite transmission circuits.",
+      "match_key": "FailureMode:loss-of-two-independent-offsite-transmission-circuits"
+    },
+    {
+      "id": "fm_porv_inop",
+      "display_name": "S/G PORV 1C failed to operate in AUTO or MANUAL from Control Room",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "PORV 1C declared inoperable and nonfunctional due to not operating in AUTO or MANUAL from the Control Room.",
+      "match_key": "FailureMode:s-g-porv-1c-failed-to-operate-in-auto-or-manual-from-control-room"
+    },
+    {
+      "id": "cons_loop_u1",
+      "display_name": "Loss of Offsite Power to Unit 1 with reactor trip and SBDG/AFW actuation",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2024-07-24T07:02",
+      "end": "2024-07-25T09:33",
+      "duration": null,
+      "tz": "CDT",
+      "match_key": "Consequence:loss-of-offsite-power-to-unit-1-with-reactor-trip-and-sbdg-afw-actuation"
+    },
+    {
+      "id": "cons_partial_loop_u2",
+      "display_name": "Partial loss of offsite power to Unit 2 with SBDG 22 / AFW Pump 22 actuation",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2024-07-24T07:02",
+      "end": "2024-07-24T15:37",
+      "duration": null,
+      "tz": "CDT",
+      "match_key": "Consequence:partial-loss-of-offsite-power-to-unit-2-with-sbdg-22-afw-pump-22-actuation"
+    },
+    {
+      "id": "ca_procedure",
+      "display_name": "Revise 10CFR50.59 evaluation procedure to address all elements of change",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-10cfr50-59-evaluation-procedure-to-address-all-elements-of-change"
+    },
+    {
+      "id": "ca_controls",
+      "display_name": "Develop and implement written instructions for management controls over TDSP changes",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:develop-and-implement-written-instructions-for-management-controls-over-tdsp-changes"
+    },
+    {
+      "id": "rr_5073_a",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5073_b1",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(B)(1)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-b-1"
+    },
+    {
+      "id": "rr_5073_b6",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(B)(6)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-b-6"
+    },
+    {
+      "id": "rr_5073_b8",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(B)(8)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-b-8"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_a",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_b1",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_b6",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_b8",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_switchyard",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rps",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sbdg",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_afw",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_offsite_power",
+      "evidence": null
+    },
+    {
+      "source": "c_bushing",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_ge",
+      "evidence": null
+    },
+    {
+      "source": "fm_design_change",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_design_change",
+      "relation": "LEADS_TO",
+      "target": "fm_bushing_failure",
+      "evidence": null
+    },
+    {
+      "source": "fm_bushing_failure",
+      "relation": "LEADS_TO",
+      "target": "fm_fire",
+      "evidence": null
+    },
+    {
+      "source": "fm_fire",
+      "relation": "LEADS_TO",
+      "target": "fm_phase_ground_fault",
+      "evidence": null
+    },
+    {
+      "source": "fm_phase_ground_fault",
+      "relation": "LEADS_TO",
+      "target": "fm_loss_circuits",
+      "evidence": null
+    },
+    {
+      "source": "fm_loss_circuits",
+      "relation": "LEADS_TO",
+      "target": "cons_loop_u1",
+      "evidence": null
+    },
+    {
+      "source": "fm_loss_circuits",
+      "relation": "LEADS_TO",
+      "target": "cons_partial_loop_u2",
+      "evidence": null
+    },
+    {
+      "source": "cons_loop_u1",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_sbdg",
+      "evidence": null
+    },
+    {
+      "source": "cons_loop_u1",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_afw",
+      "evidence": null
+    },
+    {
+      "source": "cons_partial_loop_u2",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_sbdg",
+      "evidence": null
+    },
+    {
+      "source": "cons_partial_loop_u2",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_afw",
+      "evidence": null
+    },
+    {
+      "source": "c_porv1c",
+      "relation": "LEADS_TO",
+      "target": "fm_porv_inop",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procedure",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_controls",
+      "evidence": null
+    }
+  ],
+  "chain": "inadequate management controls over TDSP switchyard design changes [cause TBD] -> 2014 Shunt Reactor relocation/circuit switcher replacement without adequate evaluation -> Shunt Reactor RT-2 bushing insulation breakdown -> switchyard fire -> smoke plume phase-to-ground faults -> loss of two independent offsite transmission circuits -> LOOP to Unit 1 (reactor trip, SBDG/AFW actuation) and partial LOOP to Unit 2 (SBDG 22/AFW 22 actuation) [backed up by SBDGs, AFW]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause_code is TBD/provisional per FORM-366 fields; category reproduced verbatim as 'provisional'. Block 13 system field is literally 'N/A' in the narrative since the shunt reactor is offsite equipment owned by a transmission utility partnership, not a plant EIIS system - modeled as non_eiis System per rule 2/6 guidance for non-plant equipment. PORV 1C inoperability is a related but secondary failure not on the main LOOP causal chain (not caused by the bushing failure), so it is linked separately rather than merged into the main chain. No BACKED_UP_BY for offsite power itself since it was the failed system, not a backup. Previous Similar Events section explicitly states no similar events found in past 3 years - no stub LER emitted per absence of a referenced prior event."
+}

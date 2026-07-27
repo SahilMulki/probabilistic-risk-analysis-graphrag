@@ -1,0 +1,387 @@
+{
+  "ler_number": "366-2023-002-00",
+  "identity": {
+    "accession_number": "ML23146A191",
+    "docket": "05000366",
+    "plant_name": "Hatch",
+    "unit": 2,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2023-03-31",
+    "report_date": "2023-05-26",
+    "operating_mode": null,
+    "power_level": 97,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Manual SCRAM due to Trip of both Reactor Recirculation Pumps"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "Reportabl!!",
+      "system": "to",
+      "component": "IRIS",
+      "manufacturer": "A",
+      "reportable": null
+    },
+    {
+      "cause": "81",
+      "system": "B093",
+      "component": "y",
+      "manufacturer": "--·",
+      "reportable": null
+    }
+  ],
+  "cause": {
+    "proximate_text": "during implementation of a design modification the high speed stop setpoints for the ASD's were set higher than the over frequency relay trip setpoints. The conflicting setpoints is the reason the over frequency trip setpoint was reached prior to the ASD high speed stops and resulted in the ASD trips.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "conflicting design setpoints (design modification error)",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 366-2023-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "366-2023-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:366-2023-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Hatch Unit 2",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000366",
+      "match_key": "Unit:05000366"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "conflicting design setpoints (design modification error)",
+      "proximate_text": "during implementation of a design modification the high speed stop setpoints for the ASD's were set higher than the over frequency relay trip setpoints. The conflicting setpoints is the reason the over frequency trip setpoint was reached prior to the ASD high speed stops and resulted in the ASD trips.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_ad",
+      "display_name": "Reactor Recirculation",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "AD",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:AD"
+    },
+    {
+      "id": "sys_ehc",
+      "display_name": "Electro-Hydraulic Control",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "backup; operable",
+      "match_key": "System:electro-hydraulic-control"
+    },
+    {
+      "id": "c_asd_2a",
+      "display_name": "2A Adjustable Speed Drive",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "SC",
+      "identifier": "2A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:SC|2A"
+    },
+    {
+      "id": "c_asd_2b",
+      "display_name": "2B Adjustable Speed Drive",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "SC",
+      "identifier": "2B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:SC|2B"
+    },
+    {
+      "id": "c_relay_2a",
+      "display_name": "2A Over Frequency Relay",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "81",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:81"
+    },
+    {
+      "id": "c_relay_2b",
+      "display_name": "2B Over Frequency Relay",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "81",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:81"
+    },
+    {
+      "id": "c_pump_2a",
+      "display_name": "2A Reactor Recirculation Pump",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "P",
+      "identifier": "2A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:P|2A"
+    },
+    {
+      "id": "c_pump_2b",
+      "display_name": "2B Reactor Recirculation Pump",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "P",
+      "identifier": "2B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:P|2B"
+    },
+    {
+      "id": "fm_setpoint",
+      "display_name": "ASD high speed stop setpoints set higher than over frequency relay trip setpoints",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Design modification implementation left conflicting setpoints between ASD high speed stop and over frequency relay trip.",
+      "match_key": "FailureMode:asd-high-speed-stop-setpoints-set-higher-than-over-frequency-relay-trip-setpoints"
+    },
+    {
+      "id": "fm_relay_2a",
+      "display_name": "2A over frequency relay actuated at trip setpoint",
+      "properties": {},
+      "type": "FailureMode",
+      "description": null,
+      "match_key": "FailureMode:2a-over-frequency-relay-actuated-at-trip-setpoint"
+    },
+    {
+      "id": "fm_relay_2b",
+      "display_name": "2B over frequency relay actuated at trip setpoint",
+      "properties": {},
+      "type": "FailureMode",
+      "description": null,
+      "match_key": "FailureMode:2b-over-frequency-relay-actuated-at-trip-setpoint"
+    },
+    {
+      "id": "fm_asd_2a_trip",
+      "display_name": "2A ASD tripped",
+      "properties": {},
+      "type": "FailureMode",
+      "description": null,
+      "match_key": "FailureMode:2a-asd-tripped"
+    },
+    {
+      "id": "fm_asd_2b_trip",
+      "display_name": "2B ASD tripped",
+      "properties": {},
+      "type": "FailureMode",
+      "description": null,
+      "match_key": "FailureMode:2b-asd-tripped"
+    },
+    {
+      "id": "fm_pump_2a_trip",
+      "display_name": "2A Recirculation Pump tripped",
+      "properties": {},
+      "type": "FailureMode",
+      "description": null,
+      "match_key": "FailureMode:2a-recirculation-pump-tripped"
+    },
+    {
+      "id": "fm_pump_2b_trip",
+      "display_name": "2B Recirculation Pump tripped",
+      "properties": {},
+      "type": "FailureMode",
+      "description": null,
+      "match_key": "FailureMode:2b-recirculation-pump-tripped"
+    },
+    {
+      "id": "fm_both_recirc_lost",
+      "display_name": "Loss of both reactor recirculation pumps",
+      "properties": {},
+      "type": "FailureMode",
+      "description": null,
+      "match_key": "FailureMode:loss-of-both-reactor-recirculation-pumps"
+    },
+    {
+      "id": "cons_scram",
+      "display_name": "Manual reactor SCRAM inserted",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2023-03-31T14:30",
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:manual-reactor-scram-inserted"
+    },
+    {
+      "id": "ca_setpoint",
+      "display_name": "Adjust ASD High Speed Stop setpoint values lower than over frequency relay trip setpoint",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:adjust-asd-high-speed-stop-setpoint-values-lower-than-over-frequency-relay-trip-setpoint"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ad",
+      "evidence": null
+    },
+    {
+      "source": "c_asd_2a",
+      "relation": "PART_OF",
+      "target": "sys_ad",
+      "evidence": null
+    },
+    {
+      "source": "c_asd_2b",
+      "relation": "PART_OF",
+      "target": "sys_ad",
+      "evidence": null
+    },
+    {
+      "source": "fm_setpoint",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_setpoint",
+      "relation": "LEADS_TO",
+      "target": "fm_relay_2a",
+      "evidence": null
+    },
+    {
+      "source": "fm_setpoint",
+      "relation": "LEADS_TO",
+      "target": "fm_relay_2b",
+      "evidence": null
+    },
+    {
+      "source": "fm_relay_2a",
+      "relation": "LEADS_TO",
+      "target": "fm_asd_2a_trip",
+      "evidence": null
+    },
+    {
+      "source": "fm_relay_2b",
+      "relation": "LEADS_TO",
+      "target": "fm_asd_2b_trip",
+      "evidence": null
+    },
+    {
+      "source": "fm_asd_2a_trip",
+      "relation": "LEADS_TO",
+      "target": "fm_pump_2a_trip",
+      "evidence": null
+    },
+    {
+      "source": "fm_asd_2b_trip",
+      "relation": "LEADS_TO",
+      "target": "fm_pump_2b_trip",
+      "evidence": null
+    },
+    {
+      "source": "fm_pump_2a_trip",
+      "relation": "LEADS_TO",
+      "target": "fm_both_recirc_lost",
+      "evidence": null
+    },
+    {
+      "source": "fm_pump_2b_trip",
+      "relation": "LEADS_TO",
+      "target": "fm_both_recirc_lost",
+      "evidence": null
+    },
+    {
+      "source": "fm_both_recirc_lost",
+      "relation": "LEADS_TO",
+      "target": "cons_scram",
+      "evidence": null
+    },
+    {
+      "source": "cons_scram",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_ehc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_setpoint",
+      "evidence": null
+    }
+  ],
+  "chain": "conflicting ASD high-speed-stop / over-frequency relay setpoints [cause TBD] -> 2A/2B over frequency relays actuate -> 2A/2B ASDs trip -> 2A/2B recirculation pumps trip -> loss of both recirculation pumps -> manual reactor SCRAM [pressure controlled by EHC and bypass valves]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Form-366 fields for identity plant/unit/reactor were blank in the header block but derivable from narrative title/docket (Hatch Unit 2, BWR). Block 13 rows in the raw form appear OCR-garbled ('Reportabl!!', 'to', '--·'); reconstructed cause=X (component failure, per relay/setpoint conflict) with EIIS AD system and 81 relay component code per narrative, since raw fields are unreliable. Official cause_code remains TBD/provisional as stated in FORM-366 FIELDS. EHC (Electro-Hydraulic Control) modeled as backup per narrative statement 'Pressure was controlled by EHC and Bypass valves' during the event. No previous similar events reported, so no SIMILAR_TO edge or stub LER emitted."
+}

@@ -1,0 +1,346 @@
+{
+  "ler_number": "278-2023-001-00",
+  "identity": {
+    "accession_number": "ML23311A061",
+    "docket": "05000278",
+    "plant_name": "Peach Bottom",
+    "unit": 3,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2023-09-09",
+    "report_date": "2023-11-07",
+    "operating_mode": "1",
+    "power_level": 91,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Peach Bottom Atomic Power Station (PBAPS) Unit 3 Subsequent Renewed Facility Operating License No. DPR-56 NRC Docket No. 50-278"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "X",
+      "system": "BR",
+      "component": "ACC",
+      "manufacturer": "G250",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The most likely cause of the condition is gas leakage through the accumulator bladder... at this time, the exact cause of the leakage is unknown.",
+    "cause_code": "X",
+    "category": "Other",
+    "theme": "accumulator bladder leak of undetermined cause",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 278-2023-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "278-2023-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:278-2023-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Peach Bottom Unit 3",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000278",
+      "match_key": "Unit:05000278"
+    },
+    {
+      "id": "cause",
+      "display_name": "Other (X)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "X",
+      "category": "Other",
+      "theme": "accumulator bladder leak of undetermined cause",
+      "proximate_text": "The most likely cause of the condition is gas leakage through the accumulator bladder... at this time, the exact cause of the leakage is unknown.",
+      "provisional": false,
+      "match_key": "Cause:Other"
+    },
+    {
+      "id": "sys_br",
+      "display_name": "Standby Liquid Control System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BR",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BR"
+    },
+    {
+      "id": "sys_slc_a",
+      "display_name": "Standby Liquid Control System (Train A)",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BR",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "redundant train; operable",
+      "match_key": "System:BR"
+    },
+    {
+      "id": "c_pump",
+      "display_name": "3B SLC Pump",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "P",
+      "identifier": "3B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:P|3B"
+    },
+    {
+      "id": "c_acc",
+      "display_name": "Standby Liquid Control N2 Accumulator",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "ACC",
+      "identifier": "3BT076",
+      "model": "A68514-200",
+      "manufacturer_code": "G250",
+      "inferred_code": false,
+      "match_key": "Component:ACC|3BT076"
+    },
+    {
+      "id": "c_bladder",
+      "display_name": "Accumulator bladder",
+      "properties": {
+        "note": "internal to accumulator"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:accumulator-bladder"
+    },
+    {
+      "id": "fm_bladder_leak",
+      "display_name": "Accumulator bladder gas leakage",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Slow gas leak through the pneumatic-hydraulic accumulator bladder, cause undetermined pending failure analysis.",
+      "match_key": "FailureMode:accumulator-bladder-gas-leakage"
+    },
+    {
+      "id": "fm_gas_intrusion",
+      "display_name": "Gas intrusion into discharge piping and pump",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Gas from the leaking accumulator bladder intruded into the SLC pump and discharge piping, displacing water.",
+      "match_key": "FailureMode:gas-intrusion-into-discharge-piping-and-pump"
+    },
+    {
+      "id": "fm_pump_no_pressure",
+      "display_name": "Pump and piping not sufficiently filled with water",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Insufficient water fill in pump and discharge piping caused the pump to fail to produce discharge pressure during functional test.",
+      "match_key": "FailureMode:pump-and-piping-not-sufficiently-filled-with-water"
+    },
+    {
+      "id": "cons_slc_inop",
+      "display_name": "3B SLC subsystem inoperable / failed functional test",
+      "properties": {
+        "note": "likely inoperable longer than LCO allowed outage time due to slow leak"
+      },
+      "type": "Consequence",
+      "start": "2023-09-09T20:32",
+      "end": "2023-09-12T17:39",
+      "duration": "69:07",
+      "tz": null,
+      "match_key": "Consequence:3b-slc-subsystem-inoperable-failed-functional-test"
+    },
+    {
+      "id": "ca_replace_bladder",
+      "display_name": "Replace 3B SLC accumulator bladder",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-3b-slc-accumulator-bladder"
+    },
+    {
+      "id": "ca_fill_run",
+      "display_name": "Fill pump and discharge piping and successfully run pump",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:fill-pump-and-discharge-piping-and-successfully-run-pump"
+    },
+    {
+      "id": "ca_ut_exam",
+      "display_name": "Ultrasonic testing of remaining SLC discharge lines (2A, 2B, 3A)",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:ultrasonic-testing-of-remaining-slc-discharge-lines-2a-2b-3a"
+    },
+    {
+      "id": "ca_investigation",
+      "display_name": "Failure analysis of bladder / ongoing investigation into leak cause",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:failure-analysis-of-bladder-ongoing-investigation-into-leak-cause"
+    },
+    {
+      "id": "ca_monitor_piping",
+      "display_name": "Periodically monitor SLC discharge process piping until replacement bladders procured and installed",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:periodically-monitor-slc-discharge-process-piping-until-replacement-bladders-procured-and-installed"
+    },
+    {
+      "id": "mfr_greer",
+      "display_name": "Greer Hydraulics, Inc",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "G250",
+      "match_key": "Manufacturer:G250"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_5062",
+      "display_name": "10 CFR 50.62 (ATWS)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:10-cfr-50-62-atws"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_br",
+      "evidence": null
+    },
+    {
+      "source": "c_acc",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_greer",
+      "evidence": null
+    },
+    {
+      "source": "c_bladder",
+      "relation": "PART_OF",
+      "target": "c_acc",
+      "evidence": null
+    },
+    {
+      "source": "fm_bladder_leak",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_bladder_leak",
+      "relation": "LEADS_TO",
+      "target": "fm_gas_intrusion",
+      "evidence": null
+    },
+    {
+      "source": "fm_gas_intrusion",
+      "relation": "LEADS_TO",
+      "target": "fm_pump_no_pressure",
+      "evidence": null
+    },
+    {
+      "source": "fm_pump_no_pressure",
+      "relation": "LEADS_TO",
+      "target": "cons_slc_inop",
+      "evidence": null
+    },
+    {
+      "source": "cons_slc_inop",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_slc_a",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_bladder",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_fill_run",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_ut_exam",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_investigation",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_monitor_piping",
+      "evidence": null
+    }
+  ],
+  "chain": "accumulator bladder gas leak [cause X, undetermined] -> gas intrusion into discharge piping/pump -> pump/piping not fully water-filled -> 3B SLC pump fails functional test / subsystem inoperable [backup: 3A SLC train operable]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code X (Other) reflects undetermined root cause of bladder leak per official coding; failure analysis on bladder ongoing at time of report, potential supplemental LER anticipated. UT exams found gas voids in other SLC discharge lines (2A, 2B, 3A) but none impacting pump function; not modeled as separate failure modes since they did not cause inoperability. No PART_OF from pump/accumulator to system per rule 7 (only bladder->accumulator containment is explicit)."
+}

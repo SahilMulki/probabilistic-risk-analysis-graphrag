@@ -1,0 +1,405 @@
+{
+  "ler_number": "483-2020-002-01",
+  "identity": {
+    "accession_number": "ML21040A521",
+    "docket": "05000483",
+    "plant_name": "Callaway",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2020-04-04",
+    "report_date": "2021-02-09",
+    "operating_mode": null,
+    "power_level": 30,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2020-002-01 for Callaway Plant Unit 1, Reactor Trip and AFW Actuation Following Spurious MFRV Closure"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)",
+      "10 CFR 50.73(a)(2)(iv)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "the physical cause of the positioner failure was a combination of high cycle fatigue of the positioner associated with positioner movement demand and the presence of impurities in the instrument air supply to the positioner. The failure of the backup positioner to assume control was attributed to a latent design error during implementation of the modification that installed the positioners, which resulted in the inability of the positioner swapover function to detect an internal failure of the primary positioner.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "positioner fatigue/contaminated air supply combined with latent design error in backup-positioner swapover logic",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 483-2020-002-01",
+      "properties": {
+        "match_key": "LER:483-2020-002-01"
+      },
+      "type": "LER",
+      "key": "483-2020-002-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:483-2020-002-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Callaway Unit 1",
+      "properties": {
+        "match_key": "Unit:05000483",
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000483",
+      "match_key": "Unit:05000483"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {
+        "match_key": "Cause:provisional"
+      },
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "positioner fatigue/contaminated air supply combined with latent design error in backup-positioner swapover logic",
+      "proximate_text": "the physical cause of the positioner failure was a combination of high cycle fatigue of the positioner associated with positioner movement demand and the presence of impurities in the instrument air supply to the positioner. The failure of the backup positioner to assume control was attributed to a latent design error during implementation of the modification that installed the positioners, which resulted in the inability of the positioner swapover function to detect an internal failure of the primary positioner.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_mfw",
+      "display_name": "Main Feedwater",
+      "properties": {
+        "match_key": "System:SJ"
+      },
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "c_mfiv",
+      "display_name": "Main Feedwater Isolation Valve",
+      "properties": {
+        "match_key": "Component:ISV"
+      },
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:ISV"
+    },
+    {
+      "id": "c_mfrv_c",
+      "display_name": "'C' Main Feedwater Regulating Valve",
+      "properties": {
+        "match_key": "Component:FCV|C-MFRV"
+      },
+      "type": "Component",
+      "eiis_code": "FCV",
+      "identifier": "C MFRV",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:FCV|C MFRV"
+    },
+    {
+      "id": "c_positioner_primary",
+      "display_name": "'C' MFRV primary positioner",
+      "properties": {
+        "match_key": "Component:c-mfrv-primary-positioner"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:c-mfrv-primary-positioner"
+    },
+    {
+      "id": "c_positioner_backup",
+      "display_name": "'C' MFRV backup positioner",
+      "properties": {
+        "match_key": "Component:c-mfrv-backup-positioner"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:c-mfrv-backup-positioner"
+    },
+    {
+      "id": "c_hv0220",
+      "display_name": "AL-HV0220, Hardened Condensate Storage Tank Isolation Valve to AFW",
+      "properties": {
+        "match_key": "Component:AL-HV0220"
+      },
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": "AL-HV0220",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": true,
+      "match_key": "Component:ISV|AL-HV0220"
+    },
+    {
+      "id": "sys_afw",
+      "display_name": "Auxiliary Feedwater",
+      "properties": {
+        "match_key": "System:auxiliary-feedwater"
+      },
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "sys_rps",
+      "display_name": "Reactor Protection System",
+      "properties": {
+        "match_key": "System:reactor-protection-system"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:reactor-protection-system"
+    },
+    {
+      "id": "fm_positioner_fatigue",
+      "display_name": "Primary positioner high-cycle fatigue and instrument air contamination",
+      "properties": {
+        "match_key": "FailureMode:primary-positioner-fatigue-air-contamination"
+      },
+      "type": "FailureMode",
+      "description": "High cycle fatigue from positioner movement demand combined with impurities in the instrument air supply degraded the primary 'C' MFRV positioner.",
+      "match_key": "FailureMode:primary-positioner-high-cycle-fatigue-and-instrument-air-contamination"
+    },
+    {
+      "id": "fm_primary_positioner_malfunction",
+      "display_name": "Primary 'C' MFRV positioner malfunction",
+      "properties": {
+        "match_key": "FailureMode:primary-c-mfrv-positioner-malfunction"
+      },
+      "type": "FailureMode",
+      "description": "Malfunction of the primary 'C' MFRV positioner caused inability to control 'C' MFRV/steam generator level.",
+      "match_key": "FailureMode:primary-c-mfrv-positioner-malfunction"
+    },
+    {
+      "id": "fm_backup_swapover_fail",
+      "display_name": "Backup positioner failed to automatically assume control",
+      "properties": {
+        "match_key": "FailureMode:backup-positioner-swapover-fail"
+      },
+      "type": "FailureMode",
+      "description": "Latent design error in the positioner swapover function prevented detection of the internal failure of the primary positioner, so the backup positioner did not automatically assume control.",
+      "match_key": "FailureMode:backup-positioner-failed-to-automatically-assume-control"
+    },
+    {
+      "id": "fm_sg_level_low",
+      "display_name": "'C' Steam Generator level uncontrolled/lowering",
+      "properties": {
+        "match_key": "FailureMode:c-sg-level-lowering"
+      },
+      "type": "FailureMode",
+      "description": "Inability to control 'C' MFRV resulted in lowering 'C' steam generator level toward Low-Low setpoint.",
+      "match_key": "FailureMode:c-steam-generator-level-uncontrolled-lowering"
+    },
+    {
+      "id": "fm_hv0220_unexpected_open",
+      "display_name": "Unexpected opening of AL-HV0220",
+      "properties": {
+        "match_key": "FailureMode:hv0220-unexpected-open"
+      },
+      "type": "FailureMode",
+      "description": "AL-HV0220 opened unexpectedly when both motor-driven AFW pumps started on AFAS; under corrective action program evaluation, no impact on AFW safety function.",
+      "match_key": "FailureMode:unexpected-opening-of-al-hv0220"
+    },
+    {
+      "id": "cons_trip_afw",
+      "display_name": "Automatic reactor trip, feedwater isolation signal, and AFW actuation",
+      "properties": {
+        "match_key": "Consequence:reactor-trip-afw-actuation"
+      },
+      "type": "Consequence",
+      "start": "2020-04-04T01:15",
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:automatic-reactor-trip-feedwater-isolation-signal-and-afw-actuation"
+    },
+    {
+      "id": "ca_tune_fw",
+      "display_name": "Tune main feedwater control system to reduce positioner movement demand frequency",
+      "properties": {
+        "match_key": "CorrectiveAction:tune-fw-control-system"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:tune-main-feedwater-control-system-to-reduce-positioner-movement-demand-frequency"
+    },
+    {
+      "id": "ca_air_filters",
+      "display_name": "Install 5-micron air filters in instrument air supply to MFRV positioners",
+      "properties": {
+        "match_key": "CorrectiveAction:install-air-filters"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:install-5-micron-air-filters-in-instrument-air-supply-to-mfrv-positioners"
+    },
+    {
+      "id": "ca_positioner_mod",
+      "display_name": "Modify positioner design to address single-point vulnerability",
+      "properties": {
+        "match_key": "CorrectiveAction:modify-positioner-design"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:modify-positioner-design-to-address-single-point-vulnerability"
+    },
+    {
+      "id": "ca_replace_positioners",
+      "display_name": "Replace all primary MFRV positioners and verify backup positioner function",
+      "properties": {
+        "match_key": "CorrectiveAction:replace-primary-positioners"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-all-primary-mfrv-positioners-and-verify-backup-positioner-function"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "sys_rps",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_mfw",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_afw",
+      "evidence": null
+    },
+    {
+      "source": "c_mfrv_c",
+      "relation": "PART_OF",
+      "target": "sys_mfw",
+      "evidence": null
+    },
+    {
+      "source": "c_positioner_primary",
+      "relation": "PART_OF",
+      "target": "c_mfrv_c",
+      "evidence": null
+    },
+    {
+      "source": "c_positioner_backup",
+      "relation": "PART_OF",
+      "target": "c_mfrv_c",
+      "evidence": null
+    },
+    {
+      "source": "fm_positioner_fatigue",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_positioner_fatigue",
+      "relation": "LEADS_TO",
+      "target": "fm_primary_positioner_malfunction",
+      "evidence": null
+    },
+    {
+      "source": "fm_primary_positioner_malfunction",
+      "relation": "LEADS_TO",
+      "target": "fm_sg_level_low",
+      "evidence": null
+    },
+    {
+      "source": "fm_primary_positioner_malfunction",
+      "relation": "LEADS_TO",
+      "target": "fm_backup_swapover_fail",
+      "evidence": null
+    },
+    {
+      "source": "fm_sg_level_low",
+      "relation": "LEADS_TO",
+      "target": "cons_trip_afw",
+      "evidence": null
+    },
+    {
+      "source": "cons_trip_afw",
+      "relation": "LEADS_TO",
+      "target": "fm_hv0220_unexpected_open",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_tune_fw",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_air_filters",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_positioner_mod",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_positioners",
+      "evidence": null
+    }
+  ],
+  "chain": "positioner high-cycle fatigue + contaminated instrument air [cause TBD] -> primary 'C' MFRV positioner malfunction -> ('C' SG level uncontrolled -> reactor trip/FWIS/AFW actuation) & (backup positioner swapover fails to detect primary failure, latent design error) -> unexpected AL-HV0220 opening (no safety impact)",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code was 'TBD' in FORM-366 FIELDS, so cause node is provisional per rule 4; category left as 'provisional'. Backup positioner did not automatically assume control due to a latent design error, so RCIC/AFW-style BACKED_UP_BY edge is not applicable — the backup positioner's failure is itself modeled as a parallel FailureMode rather than an operable backup, since narrative states it did NOT assume control automatically. AL-HV0220 unexpected opening is modeled as a downstream, non-safety-significant failure mode per narrative ('had no bearing on the AFW safety function'). No block_13 rows were provided in FORM-366 FIELDS (empty array), so none were fabricated."
+}

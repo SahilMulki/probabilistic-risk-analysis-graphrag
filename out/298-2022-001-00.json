@@ -1,0 +1,427 @@
+{
+  "ler_number": "298-2022-001-00",
+  "identity": {
+    "accession_number": "ML22201A521",
+    "docket": "05000298",
+    "plant_name": "Cooper",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2022-05-23",
+    "report_date": "2022-07-20",
+    "operating_mode": "1",
+    "power_level": 95,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Licensee Event Report No. 2022-001-00"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)",
+      "10 CFR 50.73(a)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The causal factor for this event was failure to previously identify all potential failure modes for the Exhaust Fan vortex damper actuator.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Inadequate maintenance plan / failure modes not identified",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 298-2022-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "298-2022-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:298-2022-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Cooper Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000298",
+      "match_key": "Unit:05000298"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Inadequate maintenance plan / failure modes not identified",
+      "proximate_text": "The causal factor for this event was failure to previously identify all potential failure modes for the Exhaust Fan vortex damper actuator.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_sc",
+      "display_name": "Secondary Containment",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "affected safety-related barrier",
+      "match_key": "System:secondary-containment"
+    },
+    {
+      "id": "sys_ng",
+      "display_name": "Reactor Building",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "NG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:NG"
+    },
+    {
+      "id": "sys_nh",
+      "display_name": "Primary Containment",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "NH",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:NH"
+    },
+    {
+      "id": "sys_bh",
+      "display_name": "Standby Gas Treatment System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BH",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; remained capable per engineering review",
+      "match_key": "System:BH"
+    },
+    {
+      "id": "c_fan_a",
+      "display_name": "Reactor Building Exhaust Fan 'A'",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "Exhaust Fan A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:reactor-building-exhaust-fan-a"
+    },
+    {
+      "id": "c_damper",
+      "display_name": "Vortex Damper Actuator",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "COMP",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:COMP"
+    },
+    {
+      "id": "c_pdc",
+      "display_name": "Differential Pressure Controller",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "PDC",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:PDC"
+    },
+    {
+      "id": "c_oring",
+      "display_name": "Valve stem O-ring",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:valve-stem-o-ring"
+    },
+    {
+      "id": "fm_oring",
+      "display_name": "Valve stem O-ring degraded/brittle and failed to seal",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Under-diaphragm area of damper actuator would not hold pressure because the valve stem O-ring failed to seal; O-ring was brittle and fell apart during removal.",
+      "match_key": "FailureMode:valve-stem-o-ring-degraded-brittle-and-failed-to-seal"
+    },
+    {
+      "id": "fm_actuator",
+      "display_name": "Vortex damper actuator failed to respond to demand",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Under-diaphragm area could not be pressurized, causing the actuator to not respond to changes in d/p controller demand for 40 minutes.",
+      "match_key": "FailureMode:vortex-damper-actuator-failed-to-respond-to-demand"
+    },
+    {
+      "id": "fm_sudden_move",
+      "display_name": "Sudden actuator response causing exhaust flow reduction",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Vortex damper actuator eventually responded suddenly, causing a sudden reduction in exhaust flow.",
+      "match_key": "FailureMode:sudden-actuator-response-causing-exhaust-flow-reduction"
+    },
+    {
+      "id": "cons_pressure",
+      "display_name": "Reactor Building d/p exceeded TS limit / Secondary Containment inoperable",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2022-05-23T04:00",
+      "end": "2022-05-23T04:57",
+      "duration": "0:57",
+      "tz": null,
+      "match_key": "Consequence:reactor-building-d-p-exceeded-ts-limit-secondary-containment-inoperable"
+    },
+    {
+      "id": "ca_replace_oring",
+      "display_name": "Replace stem O-ring and case gaskets on Reactor Building Exhaust Fans",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-stem-o-ring-and-case-gaskets-on-reactor-building-exhaust-fans"
+    },
+    {
+      "id": "ca_revise_plan",
+      "display_name": "Revise maintenance plan to include valve stem O-ring replacement during routine maintenance",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-maintenance-plan-to-include-valve-stem-o-ring-replacement-during-routine-maintenance"
+    },
+    {
+      "id": "rr_5073av",
+      "display_name": "10 CFR 50.73(a)(2)(v)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v"
+    },
+    {
+      "id": "rr_5073a",
+      "display_name": "10 CFR 50.73(a)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a"
+    },
+    {
+      "id": "rr_ts3641",
+      "display_name": "Technical Specification Surveillance Requirement 3.6.4.1.1",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-surveillance-requirement-3-6-4-1-1"
+    },
+    {
+      "id": "ler_prev_2021_001",
+      "display_name": "LER 298-2021-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "298-2021-001-00",
+      "stub": true,
+      "title": "Secondary Containment inoperable due to rise in d/p",
+      "plant": "Cooper Nuclear Station",
+      "match_key": "LER:298-2021-001-00"
+    },
+    {
+      "id": "ler_prev_2020_004",
+      "display_name": "LER 298-2020-004-00",
+      "properties": {},
+      "type": "LER",
+      "key": "298-2020-004-00",
+      "stub": true,
+      "title": "Secondary Containment inoperable due to rise in d/p",
+      "plant": "Cooper Nuclear Station",
+      "match_key": "LER:298-2020-004-00"
+    },
+    {
+      "id": "ler_prev_2020_002",
+      "display_name": "LER 298-2020-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "298-2020-002-00",
+      "stub": true,
+      "title": "Secondary Containment inoperable due to rise in d/p",
+      "plant": "Cooper Nuclear Station",
+      "match_key": "LER:298-2020-002-00"
+    },
+    {
+      "id": "ler_prev_2020_001",
+      "display_name": "LER 298-2020-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "298-2020-001-00",
+      "stub": true,
+      "title": "Secondary Containment breached due to both airlock doors in the Reactor Building being inadvertently opened simultaneously",
+      "plant": "Cooper Nuclear Station",
+      "match_key": "LER:298-2020-001-00"
+    },
+    {
+      "id": "ler_prev_2019_002",
+      "display_name": "LER 298-2019-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "298-2019-002-00",
+      "stub": true,
+      "title": "Secondary Containment inoperable due to rise in d/p",
+      "plant": "Cooper Nuclear Station",
+      "match_key": "LER:298-2019-002-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073av",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073a",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ng",
+      "evidence": null
+    },
+    {
+      "source": "sys_ng",
+      "relation": "PART_OF",
+      "target": "sys_sc",
+      "evidence": null
+    },
+    {
+      "source": "c_damper",
+      "relation": "PART_OF",
+      "target": "c_fan_a",
+      "evidence": null
+    },
+    {
+      "source": "c_oring",
+      "relation": "PART_OF",
+      "target": "c_damper",
+      "evidence": null
+    },
+    {
+      "source": "fm_oring",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_oring",
+      "relation": "LEADS_TO",
+      "target": "fm_actuator",
+      "evidence": null
+    },
+    {
+      "source": "fm_actuator",
+      "relation": "LEADS_TO",
+      "target": "fm_sudden_move",
+      "evidence": null
+    },
+    {
+      "source": "fm_sudden_move",
+      "relation": "LEADS_TO",
+      "target": "cons_pressure",
+      "evidence": null
+    },
+    {
+      "source": "cons_pressure",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_bh",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_oring",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_revise_plan",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev_2021_001",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev_2020_004",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev_2020_002",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev_2020_001",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev_2019_002",
+      "evidence": null
+    }
+  ],
+  "chain": "failure to identify all potential failure modes of vortex damper actuator [cause TBD] -> valve stem O-ring brittle/failed to seal -> damper actuator failed to respond to d/p demand -> actuator sudden response reduces exhaust flow -> Reactor Building d/p exceeds TS limit / Secondary Containment inoperable [backup SGT capable, no loss of safety function]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code and category left as TBD/provisional per FORM-366 fields (official code not provided). Engineering review determined SGT remained capable of restoring vacuum conditions, so no actual loss of safety function occurred despite the TS exceedance; SGT modeled as BACKED_UP_BY per this operability statement. Five previous similar occurrences listed in narrative are captured as stub LER nodes with keys exactly as stated (unit-prefixed format inferred to match schema convention: '1-YYYY-NNN' since narrative gives only 'LER 20XX-00X-00' without explicit unit digit; Unit 1 assumed since docket 05000298 is Cooper's single unit)."
+}

@@ -1,0 +1,321 @@
+{
+  "ler_number": "458-2025-004-00",
+  "identity": {
+    "accession_number": "ML25259A219",
+    "docket": "05000458",
+    "plant_name": "River Bend",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2025-07-21",
+    "report_date": "2025-09-16",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "/ 2025-004-00, Unsecured Pressure Boundary Door Resulting in Condition That Could Have Prevented Fulfillment of a Safety Function"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)(C)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "A",
+      "system": "NF",
+      "component": "DR",
+      "manufacturer": "R275",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The direct cause of this event was a personnel error. PW123-01 was left unsecured because the individual passing through the door closed it but failed to fully engage the dogs.",
+    "cause_code": "A",
+    "category": "Personnel Error",
+    "theme": "failure to fully secure containment door dogs",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 05000458-2025-004-00",
+      "properties": {},
+      "type": "LER",
+      "key": "458-2025-004-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:458-2025-004-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "River Bend Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000458",
+      "match_key": "Unit:05000458"
+    },
+    {
+      "id": "cause",
+      "display_name": "Personnel Error (A)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "A",
+      "category": "Personnel Error",
+      "theme": "failure to fully secure containment door dogs",
+      "proximate_text": "The direct cause of this event was a personnel error. PW123-01 was left unsecured because the individual passing through the door closed it but failed to fully engage the dogs.",
+      "provisional": false,
+      "match_key": "Cause:Personnel Error"
+    },
+    {
+      "id": "sys_nf",
+      "display_name": "Auxiliary Building (Secondary Containment)",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "NF",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "pressure/secondary containment boundary",
+      "match_key": "System:NF"
+    },
+    {
+      "id": "c_door",
+      "display_name": "Pressure Boundary Door PW 123-01 (T-Tunnel Access to 114' Aux West Access)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "DR",
+      "identifier": "PW123-01",
+      "model": null,
+      "manufacturer_code": "R275",
+      "inferred_code": false,
+      "match_key": "Component:DR|PW123-01"
+    },
+    {
+      "id": "fm_dogs",
+      "display_name": "Door closed but dogs not fully engaged",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Individual passing through the door closed it but failed to fully engage the securing dogs, leaving the pressure boundary door unsecured.",
+      "match_key": "FailureMode:door-closed-but-dogs-not-fully-engaged"
+    },
+    {
+      "id": "fm_alarm",
+      "display_name": "Door alarm annunciated at Central Alarm Station",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "CAS received a door alarm indicating PW123-01 was not fully secured; security officer dispatched and found dogs not engaged.",
+      "match_key": "FailureMode:door-alarm-annunciated-at-central-alarm-station"
+    },
+    {
+      "id": "cons_sc",
+      "display_name": "Secondary Containment declared inoperable",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2025-07-21T15:48:00-05:00",
+      "end": "2025-07-21T15:51:00-05:00",
+      "duration": "0:03:00",
+      "tz": "CDT",
+      "match_key": "Consequence:secondary-containment-declared-inoperable"
+    },
+    {
+      "id": "ca_perf_analysis",
+      "display_name": "Performance Analysis to evaluate training deficiencies",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:performance-analysis-to-evaluate-training-deficiencies"
+    },
+    {
+      "id": "ca_prejob",
+      "display_name": "Verify Engineering Pre-Job Briefs include door management and traversing to work locations",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:verify-engineering-pre-job-briefs-include-door-management-and-traversing-to-work-locations"
+    },
+    {
+      "id": "ca_perf_mgmt",
+      "display_name": "Performance management actions to reinforce proper behaviors with the individual",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:performance-management-actions-to-reinforce-proper-behaviors-with-the-individual"
+    },
+    {
+      "id": "mfr_r275",
+      "display_name": "Manufacturer R275",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "R275",
+      "match_key": "Manufacturer:R275"
+    },
+    {
+      "id": "rr_5072",
+      "display_name": "10 CFR 50.72(b)(3)(v)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-3-v"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(v)(C)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-c"
+    },
+    {
+      "id": "rr_ufsar",
+      "display_name": "River Bend Updated Safety Analysis Report - LOCA dose analysis",
+      "properties": {
+        "type": "analysis-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:river-bend-updated-safety-analysis-report-loca-dose-analysis"
+    },
+    {
+      "id": "rr_ts_3641",
+      "display_name": "TS LCO 3.6.4.1 Condition A - Secondary Containment",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ts-lco-3-6-4-1-condition-a-secondary-containment"
+    },
+    {
+      "id": "ler_prev1",
+      "display_name": "LER 050/458-2013-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "050/458-2013-002-00",
+      "stub": true,
+      "title": "Individual failing to properly secure a door in the auxiliary building pressure boundary",
+      "plant": "River Bend Station Unit 1",
+      "match_key": "LER:050/458-2013-002-00"
+    },
+    {
+      "id": "ler_prev2",
+      "display_name": "LER 050/458-2017-009-00",
+      "properties": {},
+      "type": "LER",
+      "key": "050/458-2017-009-00",
+      "stub": true,
+      "title": "Individual failing to properly secure a door in the auxiliary building pressure boundary",
+      "plant": "River Bend Station Unit 1",
+      "match_key": "LER:050/458-2017-009-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_nf",
+      "evidence": null
+    },
+    {
+      "source": "c_door",
+      "relation": "PART_OF",
+      "target": "sys_nf",
+      "evidence": null
+    },
+    {
+      "source": "fm_dogs",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_dogs",
+      "relation": "LEADS_TO",
+      "target": "fm_alarm",
+      "evidence": null
+    },
+    {
+      "source": "fm_alarm",
+      "relation": "LEADS_TO",
+      "target": "cons_sc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_perf_analysis",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_prejob",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_perf_mgmt",
+      "evidence": null
+    },
+    {
+      "source": "c_door",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_r275",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev1",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev2",
+      "evidence": null
+    }
+  ],
+  "chain": "personnel error [cause A] -> door closed but dogs not fully engaged -> door alarm annunciated at CAS -> Secondary Containment declared inoperable (3 min, secured before 20-min safety-function limit)",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Secondary Containment safety function was maintained per USAR LOCA dose analysis (door secured within ~3 min, well inside the 20-min allowance); event not considered a safety system functional failure despite TS inoperability declaration. Two previous similar RBS door-securing events referenced as stub LERs; audible tamper alarms installed after 2017-009-00 functioned as designed (door alarmed) but the physical dogs were still not engaged, distinguishing this failure mode."
+}

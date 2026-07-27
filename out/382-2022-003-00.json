@@ -1,0 +1,432 @@
+{
+  "ler_number": "382-2022-003-00",
+  "identity": {
+    "accession_number": "ML22164B005",
+    "docket": "05000382",
+    "plant_name": "Waterford",
+    "unit": 3,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2022-04-13",
+    "report_date": "2022-06-13",
+    "operating_mode": "6",
+    "power_level": 0,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Operation Prohibited by Technical Specifications Due to Radiation Monitor Calibration Error"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The incorrect model Log Pico-ammeter and ADC circuit board was installed in ARMIRE5400A in July 2012 because the material request contained the incorrect replacement model number... Following replacement of the Log Pico-ammeter and ADC circuit board in September 2013, the Log Pico-ammeter and ADC circuit board was incorrectly calibrated which produced an inconsistent, nonlinear output. The calibration procedure guidance did not account for keep alive source decay",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "latent calibration/parts error compounded by inadequate post-maintenance trending",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 382-2022-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "382-2022-003-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:382-2022-003-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Waterford Unit 3",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000382",
+      "match_key": "Unit:05000382"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "latent calibration/parts error compounded by inadequate post-maintenance trending",
+      "proximate_text": "The incorrect model Log Pico-ammeter and ADC circuit board was installed in ARMIRE5400A in July 2012 because the material request contained the incorrect replacement model number... Following replacement of the Log Pico-ammeter and ADC circuit board in September 2013, the Log Pico-ammeter and ADC circuit board was incorrectly calibrated which produced an inconsistent, nonlinear output. The calibration procedure guidance did not account for keep alive source decay",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_il",
+      "display_name": "Instrumentation/Radiation Monitoring System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "IL",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:IL"
+    },
+    {
+      "id": "c_arm5400a",
+      "display_name": "Containment High Range Radiation Monitor A (ARMIRE5400A)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "RI",
+      "identifier": "ARMIRE5400A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:RI|ARMIRE5400A"
+    },
+    {
+      "id": "c_arm5400b",
+      "display_name": "Containment High Range Radiation Monitor B (ARMIRE5400B)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "RI",
+      "identifier": "ARMIRE5400B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:RI|ARMIRE5400B"
+    },
+    {
+      "id": "c_adcboard",
+      "display_name": "Log Pico-ammeter and Analog-to-Digital Converter (ADC) circuit board",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:log-pico-ammeter-and-analog-to-digital-converter-adc-circuit-board"
+    },
+    {
+      "id": "c_connector",
+      "display_name": "Signal connector between detector and signal processor",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "CON",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:CON"
+    },
+    {
+      "id": "c_detector",
+      "display_name": "Detector",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "RE",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:RE"
+    },
+    {
+      "id": "c_cpu",
+      "display_name": "Signal processor",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "CPU",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:CPU"
+    },
+    {
+      "id": "fm_wrongmodel",
+      "display_name": "Incorrect model Log Pico-ammeter/ADC board installed (material request error)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "July 2012: incorrect model circuit board installed in ARMIRE5400A due to erroneous material request model number",
+      "match_key": "FailureMode:incorrect-model-log-pico-ammeter-adc-board-installed-material-request-error"
+    },
+    {
+      "id": "fm_signalfluct",
+      "display_name": "Signal fluctuations following board replacement",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Signal fluctuations began coincident with July 2012 board replacement, continued despite subcomponent replacements",
+      "match_key": "FailureMode:signal-fluctuations-following-board-replacement"
+    },
+    {
+      "id": "fm_connectordegrade",
+      "display_name": "Signal connector integrity compromised",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Continuous manipulation of the cable connector to the Log Pico-ammeter board caused signal degradation, indication displayed lower than actual",
+      "match_key": "FailureMode:signal-connector-integrity-compromised"
+    },
+    {
+      "id": "fm_miscal",
+      "display_name": "Incorrect calibration of Log Pico-ammeter/ADC board (keep-alive decay not accounted)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "September 2013 replacement board was incorrectly calibrated; calibration procedure did not account for keep alive source decay, producing inconsistent nonlinear output",
+      "match_key": "FailureMode:incorrect-calibration-of-log-pico-ammeter-adc-board-keep-alive-decay-not-accounted"
+    },
+    {
+      "id": "fm_outsideaccuracy",
+      "display_name": "ARMIRE5400A indicating outside Reg. Guide 1.97 factor-of-2 accuracy",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Monitor indicated outside its required factor of 2 accuracy from July 2012 through May 2022",
+      "match_key": "FailureMode:armire5400a-indicating-outside-reg-guide-1-97-factor-of-2-accuracy"
+    },
+    {
+      "id": "fm_trending",
+      "display_name": "Inadequate post-maintenance trending",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Inadequate post-maintenance trending to ensure system engineering reviews detector output deviations from previous successful performance resulted in missed opportunities to identify inoperable monitors",
+      "match_key": "FailureMode:inadequate-post-maintenance-trending"
+    },
+    {
+      "id": "cons_inoperable",
+      "display_name": "ARMIRE5400A declared inoperable, TS operation prohibited (~10 years undetected)",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2012-07-10",
+      "end": "2022-05-14",
+      "duration": "~10 years",
+      "tz": null,
+      "match_key": "Consequence:armire5400a-declared-inoperable-ts-operation-prohibited-10-years-undetected"
+    },
+    {
+      "id": "ca_correctmodel",
+      "display_name": "Installed correct model Log Pico-ammeter and ADC circuit board",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:installed-correct-model-log-pico-ammeter-and-adc-circuit-board"
+    },
+    {
+      "id": "ca_revisecal",
+      "display_name": "Revised calibration procedure to account for keep alive source dose-rate",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revised-calibration-procedure-to-account-for-keep-alive-source-dose-rate"
+    },
+    {
+      "id": "ca_replaceboard",
+      "display_name": "Replaced ARMIRE5400A Log Pico-ammeter and ADC circuit board",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replaced-armire5400a-log-pico-ammeter-and-adc-circuit-board"
+    },
+    {
+      "id": "ca_replaceconnector",
+      "display_name": "Replaced signal connector to ARMIRE5400A Log Pico-ammeter and ADC circuit board",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replaced-signal-connector-to-armire5400a-log-pico-ammeter-and-adc-circuit-board"
+    },
+    {
+      "id": "ca_revisework",
+      "display_name": "Revise ARMIRE5400A work orders to include post-maintenance output-trend review",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-armire5400a-work-orders-to-include-post-maintenance-output-trend-review"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts3331",
+      "display_name": "Technical Specification 3.3.3.1 / Table 3.3-6, Action 27",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-3-3-3-1-table-3-3-6-action-27"
+    },
+    {
+      "id": "rr_rg197",
+      "display_name": "Regulatory Guide 1.97, Revision 3",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "standard/guidance",
+      "match_key": "RegulatoryReference:regulatory-guide-1-97-revision-3"
+    },
+    {
+      "id": "rr_nureg0737",
+      "display_name": "NUREG-0737",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "standard/guidance",
+      "match_key": "RegulatoryReference:nureg-0737"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts3331",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_rg197",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_nureg0737",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_il",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_arm5400a",
+      "evidence": null
+    },
+    {
+      "source": "c_adcboard",
+      "relation": "PART_OF",
+      "target": "c_arm5400a",
+      "evidence": null
+    },
+    {
+      "source": "c_connector",
+      "relation": "PART_OF",
+      "target": "c_arm5400a",
+      "evidence": null
+    },
+    {
+      "source": "fm_wrongmodel",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_wrongmodel",
+      "relation": "LEADS_TO",
+      "target": "fm_signalfluct",
+      "evidence": null
+    },
+    {
+      "source": "fm_signalfluct",
+      "relation": "LEADS_TO",
+      "target": "fm_connectordegrade",
+      "evidence": null
+    },
+    {
+      "source": "fm_wrongmodel",
+      "relation": "LEADS_TO",
+      "target": "fm_miscal",
+      "evidence": null
+    },
+    {
+      "source": "fm_connectordegrade",
+      "relation": "LEADS_TO",
+      "target": "fm_outsideaccuracy",
+      "evidence": null
+    },
+    {
+      "source": "fm_miscal",
+      "relation": "LEADS_TO",
+      "target": "fm_outsideaccuracy",
+      "evidence": null
+    },
+    {
+      "source": "fm_trending",
+      "relation": "LEADS_TO",
+      "target": "fm_outsideaccuracy",
+      "evidence": null
+    },
+    {
+      "source": "fm_outsideaccuracy",
+      "relation": "LEADS_TO",
+      "target": "cons_inoperable",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_correctmodel",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_revisecal",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replaceboard",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replaceconnector",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_revisework",
+      "evidence": null
+    }
+  ],
+  "chain": "material request error [cause TBD] -> incorrect model ADC board installed -> signal fluctuations -> connector degradation & miscalibration (keep-alive decay not accounted) -> ARMIRE5400A indicating outside factor-of-2 accuracy -> monitor inoperable ~10 years undetected (inadequate post-maintenance trending contributed) -> TS-prohibited operation",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code is TBD/provisional per FORM-366 fields; official category not derivable, so cause node marked provisional per rule 4. Narrative describes three distinct causal factors (wrong board model, connector degradation, miscalibration) plus an inadequate-trending contributing factor; modeled as separate FailureMode nodes per rule 5, with fm_trending feeding the terminal outside-accuracy failure as a parallel contributor since it describes a missed-detection mechanism rather than a chain link from the wrong-model root cause. No previous similar events cited (narrative states 'None'), so no stub LER/SIMILAR_TO edge emitted. ARMIRE5400B is contextual (troubleshooting on opposite train led to discovery) but not itself inoperable/part of the failure chain, so no FailureMode or Consequence attached to it — only a Component node for context."
+}

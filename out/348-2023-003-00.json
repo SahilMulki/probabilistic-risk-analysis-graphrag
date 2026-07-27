@@ -1,0 +1,328 @@
+{
+  "ler_number": "348-2023-003-00",
+  "identity": {
+    "accession_number": "ML23341A206",
+    "docket": "05000348",
+    "plant_name": "Farley",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2023-02-26",
+    "report_date": "2023-12-07",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Emergency Diesel Generator (EOG) lube oil pwnp outlet coupling leak"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "B",
+      "system": "R43",
+      "component": "SPT",
+      "manufacturer": "F010",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "the 1B EOG lube oil leak was caused by inadequate restraints on piping adjacent to the circulating lube oil pump outlet Flexmaster coupling connection. The lack of adequate restraints allowed movement of the adjacent piping which resulted in a failure of the lube oil pressure boundary by the piping separating from the coupling",
+    "cause_code": "B",
+    "category": "Design/Manufacturing/Installation",
+    "theme": "Inadequate piping restraint design allowing coupling separation",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 348-2023-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "348-2023-003-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:348-2023-003-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Farley Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000348",
+      "match_key": "Unit:05000348"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Manufacturing/Installation (B)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "B",
+      "category": "Design/Manufacturing/Installation",
+      "theme": "Inadequate piping restraint design allowing coupling separation",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Design/Manufacturing/Installation"
+    },
+    {
+      "id": "sys_dg",
+      "display_name": "Emergency Diesel Generator",
+      "properties": {
+        "unit_designation": "1B"
+      },
+      "type": "System",
+      "eiis_code": "DG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:DG"
+    },
+    {
+      "id": "c_cplg",
+      "display_name": "Circulating lube oil pump outlet coupling connection",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "LL, CPLG",
+      "identifier": null,
+      "model": "Flexmaster coupling",
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:LL, CPLG"
+    },
+    {
+      "id": "c_piping",
+      "display_name": "2 inch lube oil discharge piping",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:2-inch-lube-oil-discharge-piping"
+    },
+    {
+      "id": "c_restraint",
+      "display_name": "Lube oil pipe restraint",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:lube-oil-pipe-restraint"
+    },
+    {
+      "id": "fm_restraint",
+      "display_name": "Inadequate piping restraint design",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Designed piping restraint was inadequate to prevent movement of the circulating lube oil pump discharge piping",
+      "match_key": "FailureMode:inadequate-piping-restraint-design"
+    },
+    {
+      "id": "fm_movement",
+      "display_name": "Piping movement at coupling",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Lack of adequate restraints allowed movement of the adjacent piping",
+      "match_key": "FailureMode:piping-movement-at-coupling"
+    },
+    {
+      "id": "fm_separation",
+      "display_name": "Coupling separation / lube oil pressure boundary failure",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Piping separated from the Flexmaster coupling, breaching the lube oil pressure boundary and causing an oil leak",
+      "match_key": "FailureMode:coupling-separation-lube-oil-pressure-boundary-failure"
+    },
+    {
+      "id": "fm_troubleshoot",
+      "display_name": "Troubleshooting process deficiencies (Nov 2022 event)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Troubleshooting process deficiencies and implementation weaknesses led to not identifying and correcting the 1B EDG circulating lube oil system failure mode following the November 4, 2022 leak",
+      "match_key": "FailureMode:troubleshooting-process-deficiencies-nov-2022-event"
+    },
+    {
+      "id": "cons_inop",
+      "display_name": "1B EOG inoperable",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2022-12-07",
+      "end": "2023-03-03",
+      "duration": "~86 days",
+      "tz": null,
+      "match_key": "Consequence:1b-eog-inoperable"
+    },
+    {
+      "id": "ca_restraint",
+      "display_name": "Modify existing lube oil pipe restraint and install new additional restraint",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:modify-existing-lube-oil-pipe-restraint-and-install-new-additional-restraint"
+    },
+    {
+      "id": "ca_rigid",
+      "display_name": "Implement rigid piping to eliminate condition",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:implement-rigid-piping-to-eliminate-condition"
+    },
+    {
+      "id": "ca_procedures",
+      "display_name": "Revise procedures defining roles, responsibilities, and documentation for issue response, troubleshooting, and corrective actions",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-procedures-defining-roles-responsibilities-and-documentation-for-issue-response-troubleshooting-and-corrective-actions"
+    },
+    {
+      "id": "mfr_f010",
+      "display_name": "Manufacturer F010",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "F010",
+      "match_key": "Manufacturer:F010"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts381",
+      "display_name": "TS 3.0.1 and 3.8.1",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-3-0-1-and-3-8-1"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts381",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_dg",
+      "evidence": null
+    },
+    {
+      "source": "c_cplg",
+      "relation": "PART_OF",
+      "target": "sys_dg",
+      "evidence": null
+    },
+    {
+      "source": "c_piping",
+      "relation": "PART_OF",
+      "target": "sys_dg",
+      "evidence": null
+    },
+    {
+      "source": "c_restraint",
+      "relation": "PART_OF",
+      "target": "sys_dg",
+      "evidence": null
+    },
+    {
+      "source": "fm_troubleshoot",
+      "relation": "LEADS_TO",
+      "target": "fm_restraint",
+      "evidence": null
+    },
+    {
+      "source": "fm_restraint",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_restraint",
+      "relation": "LEADS_TO",
+      "target": "fm_movement",
+      "evidence": null
+    },
+    {
+      "source": "fm_movement",
+      "relation": "LEADS_TO",
+      "target": "fm_separation",
+      "evidence": null
+    },
+    {
+      "source": "fm_separation",
+      "relation": "LEADS_TO",
+      "target": "cons_inop",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_restraint",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_rigid",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procedures",
+      "evidence": null
+    },
+    {
+      "source": "c_cplg",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_f010",
+      "evidence": null
+    }
+  ],
+  "chain": "inadequate piping restraint design [cause B] -> piping movement at coupling -> coupling separation / lube oil pressure boundary failure -> 1B EOG inoperable (~86 days) [no BACKED_UP_BY edge: redundant onsite power referenced only as basis for no loss of safety function, not stated as operable backup system]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q9"
+  ],
+  "notes": "Two distinct failure modes modeled: the original design/restraint failure (root cause, chain origin, CAUSED_BY cause node) and the troubleshooting process deficiency from the Nov 2022 precursor event, which is linked upstream via LEADS_TO to the restraint failure since it explains why the underlying condition was not corrected before the Feb 2023 recurrence. No previous similar occurrence LER was cited (narrative explicitly states none in the last three years with same/similar cause), so no stub LER/SIMILAR_TO edge was created despite mention of the Nov 4, 2022 internal precursor (which is not a separate LER). Redundant onsite power is mentioned only in a safety-assessment context ('no loss of safety function occurred... based on availability of redundant onsite power') without naming a specific operable system during the inoperability window, so per Rule 6 no BACKED_UP_BY edge/System node was created for it."
+}

@@ -1,0 +1,354 @@
+{
+  "ler_number": "391-2023-002-00",
+  "identity": {
+    "accession_number": "ML23236A544",
+    "docket": "05000391",
+    "plant_name": "Watts Bar",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2023-06-27",
+    "report_date": "2023-08-24",
+    "operating_mode": "3",
+    "power_level": 100,
+    "discovery_context": "inspection",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Automatic Reactor Trip Due to Main Generator Protection Relay Actuation"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The most probable cause of this event was identified as a loose connection on the terminal number 4 for B phase current input to the main transformer differential current relay (287T).",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "loose terminal connection on protective relay causing spurious actuation",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 391-2023-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "391-2023-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:391-2023-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Watts Bar Unit 2",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000391",
+      "match_key": "Unit:05000391"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "loose terminal connection on protective relay causing spurious actuation",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_rps",
+      "display_name": "Reactor Protection System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "actuated",
+      "match_key": "System:reactor-protection-system"
+    },
+    {
+      "id": "sys_afw",
+      "display_name": "Auxiliary Feedwater",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "actuated; performed as designed",
+      "match_key": "System:BA"
+    },
+    {
+      "id": "sys_gen_prot",
+      "display_name": "Main Generator Protection Relay System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "87",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "involved; source of spurious trip",
+      "match_key": "System:87"
+    },
+    {
+      "id": "c_287t",
+      "display_name": "Main Transformer Differential Current Relay (287T)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "87",
+      "identifier": "287T",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:87|287T"
+    },
+    {
+      "id": "c_terminal4",
+      "display_name": "Terminal Number 4 (B phase current input connection)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "Terminal 4",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:terminal-number-4-b-phase-current-input-connection"
+    },
+    {
+      "id": "c_286t",
+      "display_name": "Main Transformer 2 Differential Trip Lockout (286T)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "286T",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:main-transformer-2-differential-trip-lockout-286t"
+    },
+    {
+      "id": "fm_loose",
+      "display_name": "Loose connection at terminal 4, B phase current input",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Terminal number 4 for B phase current input to the 287T relay was found loose during troubleshooting.",
+      "match_key": "FailureMode:loose-connection-at-terminal-4-b-phase-current-input"
+    },
+    {
+      "id": "fm_relay_actuation",
+      "display_name": "287T differential current relay spurious actuation",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Loose connection caused actuation and trace indication on the 287T relay, tripping the 286T lockout.",
+      "match_key": "FailureMode:287t-differential-current-relay-spurious-actuation"
+    },
+    {
+      "id": "fm_turbine_trip",
+      "display_name": "Main turbine trip",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Actuation of the generator protection relay resulted in a main turbine trip.",
+      "match_key": "FailureMode:main-turbine-trip"
+    },
+    {
+      "id": "cons_reactor_trip",
+      "display_name": "Automatic Unit 2 reactor trip",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2023-06-27T16:26",
+      "end": null,
+      "duration": null,
+      "tz": "EDT",
+      "match_key": "Consequence:automatic-unit-2-reactor-trip"
+    },
+    {
+      "id": "ca_relocate",
+      "display_name": "Design change WBN-23-040 to relocate 287T differential trip signal from 252 CT loop to 251 CT loop",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:design-change-wbn-23-040-to-relocate-287t-differential-trip-signal-from-252-ct-loop-to-251-ct-loop"
+    },
+    {
+      "id": "ca_verify",
+      "display_name": "Verify terminal connection tightness on all other 287T relay current inputs",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:verify-terminal-connection-tightness-on-all-other-287t-relay-current-inputs"
+    },
+    {
+      "id": "ca_pm",
+      "display_name": "Add wire termination checks to relay calibration activities",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:add-wire-termination-checks-to-relay-calibration-activities"
+    },
+    {
+      "id": "ca_correct_connection",
+      "display_name": "Identify and correct the loose connection",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:identify-and-correct-the-loose-connection"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_ufsar",
+      "display_name": "UFSAR Section 15.2.7",
+      "properties": {
+        "type": "analysis-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ufsar-section-15-2-7"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "LER 391/2018-003-00",
+      "properties": {},
+      "type": "LER",
+      "key": "391/2018-003-00",
+      "stub": true,
+      "title": "Unit trip due to main transformer differential current relay actuation",
+      "plant": "Watts Bar Nuclear Plant",
+      "match_key": "LER:391/2018-003-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rps",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_afw",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_gen_prot",
+      "evidence": null
+    },
+    {
+      "source": "c_287t",
+      "relation": "PART_OF",
+      "target": "sys_gen_prot",
+      "evidence": null
+    },
+    {
+      "source": "c_terminal4",
+      "relation": "PART_OF",
+      "target": "c_287t",
+      "evidence": null
+    },
+    {
+      "source": "fm_loose",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_loose",
+      "relation": "LEADS_TO",
+      "target": "fm_relay_actuation",
+      "evidence": null
+    },
+    {
+      "source": "fm_relay_actuation",
+      "relation": "LEADS_TO",
+      "target": "fm_turbine_trip",
+      "evidence": null
+    },
+    {
+      "source": "fm_turbine_trip",
+      "relation": "LEADS_TO",
+      "target": "cons_reactor_trip",
+      "evidence": null
+    },
+    {
+      "source": "cons_reactor_trip",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_afw",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_correct_connection",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_relocate",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_verify",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_pm",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    }
+  ],
+  "chain": "loose terminal 4 connection (B phase current input) [cause TBD/provisional] -> 287T differential relay spurious actuation -> main turbine trip -> automatic Unit 2 reactor trip [backup AFW actuated as designed]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "FORM-366 cause_code/category are TBD/provisional and copied verbatim per rule 4; cause node marked provisional. RPS modeled without EIIS code (none given in narrative, non-EIIS convention similar to ADS treatment) since it is explicitly named as the actuated safety system. 286T lockout component included as it is explicitly named in the timeline as tripped/indicating, distinct from the 287T relay itself, but not incorporated into the causal chain beyond being observed evidence. Previous LER key preserved exactly as written in narrative ('391/2018-003-00') per rule 9."
+}

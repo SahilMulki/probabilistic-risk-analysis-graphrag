@@ -1,0 +1,314 @@
+{
+  "ler_number": "387-2023-001-00",
+  "identity": {
+    "accession_number": "ML23142A269",
+    "docket": "05000387",
+    "plant_name": "Susquehanna",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2023-03-23",
+    "report_date": "2023-05-22",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "inspection",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2023-001-00 for Susquehanna, Inadvertent Contact Between Relay Cover and Relay Trip Contacts Resulted in Automatic Actuation of the B Emergency Diesel Generator"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)",
+      "10 CFR 50.73(a)(2)(iv)(B)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The cause of the event was a momentary loss of focus on the relay target reset lever during reinstallation of the relay cover. This cause was attributed to a human performance error. Additional investigation concluded the potential impacts of an inadvertent error associated with the relay reinstallation activities were not adequately mitigated.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "momentary loss of focus during relay cover reinstallation; inadequate error mitigation for relay work",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 387-2023-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "387-2023-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:387-2023-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Susquehanna Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000387",
+      "match_key": "Unit:05000387"
+    },
+    {
+      "id": "cause",
+      "display_name": "Human Performance Error (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "momentary loss of focus during relay cover reinstallation; inadequate error mitigation for relay work",
+      "proximate_text": "The cause of the event was a momentary loss of focus on the relay target reset lever during reinstallation of the relay cover. This cause was attributed to a human performance error. Additional investigation concluded the potential impacts of an inadvertent error associated with the relay reinstallation activities were not adequately mitigated.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_ess",
+      "display_name": "Engineered Safeguard System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "B",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:B"
+    },
+    {
+      "id": "sys_ek",
+      "display_name": "Emergency Diesel Generator System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "EK",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:EK"
+    },
+    {
+      "id": "c_bus",
+      "display_name": "ESS Bus 2A202",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "E/BU",
+      "identifier": "2A202",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:E/BU|2A202"
+    },
+    {
+      "id": "c_rly",
+      "display_name": "Bus differential relay (B-phase)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "RLY",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:RLY"
+    },
+    {
+      "id": "c_bkr",
+      "display_name": "4.16 kV breakers on 2B ESS Bus",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "BKR",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:BKR"
+    },
+    {
+      "id": "c_dg",
+      "display_name": "'B' Emergency Diesel Generator",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "DG",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:DG"
+    },
+    {
+      "id": "fm_contact",
+      "display_name": "Inadvertent contact between relay cover target reset lever and relay trip contacts",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "During reinstallation of the relay cover, the target reset lever contacted the relay trip contacts.",
+      "match_key": "FailureMode:inadvertent-contact-between-relay-cover-target-reset-lever-and-relay-trip-contacts"
+    },
+    {
+      "id": "fm_lockout",
+      "display_name": "2B Bus lockout relay tripped",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Inadvertent relay actuation caused the 2B Bus lockout relays to trip.",
+      "match_key": "FailureMode:2b-bus-lockout-relay-tripped"
+    },
+    {
+      "id": "fm_breakers",
+      "display_name": "All 4.16 kV breakers on 2B ESS Bus 2A202 opened",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Bus lockout resulted in opening of all supply breakers on the 2B ESS Bus.",
+      "match_key": "FailureMode:all-4-16-kv-breakers-on-2b-ess-bus-2a202-opened"
+    },
+    {
+      "id": "cons_edg",
+      "display_name": "Automatic actuation (start) of 'B' Emergency Diesel Generator",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2023-03-23T17:33",
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:automatic-actuation-start-of-b-emergency-diesel-generator"
+    },
+    {
+      "id": "ca_accountability",
+      "display_name": "Perform accountability per station procedures",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:perform-accountability-per-station-procedures"
+    },
+    {
+      "id": "ca_procrevision",
+      "display_name": "Revise procedures to include continuous use checklists for relay removal/restoration work with trip potential",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-procedures-to-include-continuous-use-checklists-for-relay-removal-restoration-work-with-trip-potential"
+    },
+    {
+      "id": "rr_5073ivA",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5073ivB",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-b"
+    },
+    {
+      "id": "rr_5072b3ivA",
+      "display_name": "10 CFR 50.72(b)(3)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-3-iv-a"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073ivA",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073ivB",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072b3ivA",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ess",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ek",
+      "evidence": null
+    },
+    {
+      "source": "c_bus",
+      "relation": "PART_OF",
+      "target": "sys_ess",
+      "evidence": null
+    },
+    {
+      "source": "c_dg",
+      "relation": "PART_OF",
+      "target": "sys_ek",
+      "evidence": null
+    },
+    {
+      "source": "fm_contact",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_contact",
+      "relation": "LEADS_TO",
+      "target": "fm_lockout",
+      "evidence": null
+    },
+    {
+      "source": "fm_lockout",
+      "relation": "LEADS_TO",
+      "target": "fm_breakers",
+      "evidence": null
+    },
+    {
+      "source": "fm_breakers",
+      "relation": "LEADS_TO",
+      "target": "cons_edg",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_accountability",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procrevision",
+      "evidence": null
+    }
+  ],
+  "chain": "momentary loss of focus (human performance error) [cause TBD] -> inadvertent contact between relay cover reset lever and relay trip contacts -> 2B Bus lockout relay tripped -> all 4.16kV breakers on 2B ESS Bus opened -> automatic start/actuation of 'B' EDG",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code remains TBD/provisional per FORM-366 fields even though narrative attributes cause to human performance error; category left as 'provisional' per authoritative header. Component and system EIIS codes taken directly from bracketed narrative text (B, E/BU, RLY, BKR, EK/DG). No previous occurrences reported, so no SIMILAR_TO edge or stub LER emitted. No manufacturer or component-failure information provided (explicitly 'Not applicable'). Unit inferred as 2 from narrative header despite null in FORM-366 fields, since narrative explicitly states 'Susquehanna Steam Electric Station (SSES) Unit 2' and event occurred during Unit 2 outage."
+}

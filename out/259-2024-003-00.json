@@ -1,0 +1,412 @@
+{
+  "ler_number": "259-2024-003-00",
+  "identity": {
+    "accession_number": "ML24303A034",
+    "docket": "05000259",
+    "plant_name": "Browns Ferry",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2024-08-30",
+    "report_date": "2024-10-29",
+    "operating_mode": "1",
+    "power_level": 73,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2024-003-00 for Browns Ferry Nuclear Plant, Units 1 and 2, Valid Specified System Actuation Caused the Automatic Start of Emergency Diesel Generators"
+  },
+  "reporting_basis": {
+    "reported_under": [],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The direct cause of the event was a loose LS-9 appliance lug which resulted in a loss of power on 4kV SD BDs A and B. There had been previous issues with this appliance lug coming loose which had yet to be permanently corrected.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "recurring loose appliance lug on breaker charging spring light circuit",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 259-2024-003-00",
+      "properties": {},
+      "type": "LER",
+      "key": "259-2024-003-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:259-2024-003-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Browns Ferry Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000259",
+      "match_key": "Unit:05000259"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "recurring loose appliance lug on breaker charging spring light circuit",
+      "proximate_text": "The direct cause of the event was a loose LS-9 appliance lug which resulted in a loss of power on 4kV SD BDs A and B. There had been previous issues with this appliance lug coming loose which had yet to be permanently corrected.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_shutdown_bus",
+      "display_name": "4kV Shutdown Bus 1",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "electrical distribution",
+      "match_key": "System:4kv-shutdown-bus-1"
+    },
+    {
+      "id": "sys_edg",
+      "display_name": "Emergency Diesel Generators",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "EK",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup power; operable",
+      "match_key": "System:EK"
+    },
+    {
+      "id": "sys_rps",
+      "display_name": "Reactor Protection System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "affected",
+      "match_key": "System:reactor-protection-system"
+    },
+    {
+      "id": "sys_pcis",
+      "display_name": "Primary Containment Isolation System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "invalid actuation Groups 2, 3, 6",
+      "match_key": "System:primary-containment-isolation-system"
+    },
+    {
+      "id": "c_breaker",
+      "display_name": "Breaker 1622 (BFN-0-BKR-211-000D/001)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "BKR",
+      "identifier": "BFN-0-BKR-211-000D/001",
+      "model": "317A7502P005",
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:BKR|BFN-0-BKR-211-000D/001"
+    },
+    {
+      "id": "c_lug",
+      "display_name": "LS-9 appliance lug",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "LS-9",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:ls-9-appliance-lug"
+    },
+    {
+      "id": "c_lightswitch",
+      "display_name": "Charging spring limit switch wiring",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:charging-spring-limit-switch-wiring"
+    },
+    {
+      "id": "fm_looselug",
+      "display_name": "Loose LS-9 appliance lug",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Lug on charging spring indicating light circuit came loose, a recurring unresolved issue.",
+      "match_key": "FailureMode:loose-ls-9-appliance-lug"
+    },
+    {
+      "id": "fm_breakerfail",
+      "display_name": "Breaker 1622 fails to close",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Loose lug caused breaker to fail to close during planned bus transfer.",
+      "match_key": "FailureMode:breaker-1622-fails-to-close"
+    },
+    {
+      "id": "fm_lossofpower",
+      "display_name": "Loss of power to 4kV Shutdown Boards A and B",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Failure to close breaker de-energized both shutdown boards.",
+      "match_key": "FailureMode:loss-of-power-to-4kv-shutdown-boards-a-and-b"
+    },
+    {
+      "id": "cons_edgstart",
+      "display_name": "Automatic start and tie of EDGs A and B; RPS loss and invalid PCIS Group 2/3/6 actuation",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2024-08-30T10:51",
+      "end": "2024-08-30T13:36",
+      "duration": "2:45",
+      "tz": "CDT",
+      "match_key": "Consequence:automatic-start-and-tie-of-edgs-a-and-b-rps-loss-and-invalid-pcis-group-2-3-6-actuation"
+    },
+    {
+      "id": "ca_troubleshoot",
+      "display_name": "Troubleshoot breaker; tighten and reattach loose wire on charging spring limit switch",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:troubleshoot-breaker-tighten-and-reattach-loose-wire-on-charging-spring-limit-switch"
+    },
+    {
+      "id": "ca_replacelug",
+      "display_name": "Verify completion of WO 124788330 to replace LS-9 appliance lug on Breaker 1622",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:verify-completion-of-wo-124788330-to-replace-ls-9-appliance-lug-on-breaker-1622"
+    },
+    {
+      "id": "ca_extentcondition",
+      "display_name": "Verify WOs exist to inspect safety-related 4kV Siemens breakers and replace appliance lugs as required",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:verify-wos-exist-to-inspect-safety-related-4kv-siemens-breakers-and-replace-appliance-lugs-as-required"
+    },
+    {
+      "id": "ca_briefing",
+      "display_name": "Conduct briefings to operations and maintenance personnel regarding this event",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:conduct-briefings-to-operations-and-maintenance-personnel-regarding-this-event"
+    },
+    {
+      "id": "ca_reviseproc",
+      "display_name": "Revise 0-OI-57A to include guidance on charging spring failure light precautions",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-0-oi-57a-to-include-guidance-on-charging-spring-failure-light-precautions"
+    },
+    {
+      "id": "mfr_ge",
+      "display_name": "General Electric",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": null,
+      "match_key": "Manufacturer:general-electric"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5072",
+      "display_name": "10 CFR 50.72(b)(3)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-3-iv-a"
+    },
+    {
+      "id": "ler_prev1",
+      "display_name": "LER 50-296/2024-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "50-296/2024-002-00",
+      "stub": true,
+      "title": "Breaker trip which automatically started an EDG on BFN, Unit 3",
+      "plant": "Browns Ferry Nuclear Plant",
+      "match_key": "LER:50-296/2024-002-00"
+    },
+    {
+      "id": "ler_prev2",
+      "display_name": "LER 50-296/2020-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "50-296/2020-001-00",
+      "stub": true,
+      "title": "Offsite lightning strike which caused the loss of the 4 kV SD BDs on BFN, Unit 3, and automatic actuated its EDGs",
+      "plant": "Browns Ferry Nuclear Plant",
+      "match_key": "LER:50-296/2020-001-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_shutdown_bus",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_edg",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rps",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_pcis",
+      "evidence": null
+    },
+    {
+      "source": "c_lug",
+      "relation": "PART_OF",
+      "target": "c_breaker",
+      "evidence": null
+    },
+    {
+      "source": "c_breaker",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_ge",
+      "evidence": null
+    },
+    {
+      "source": "fm_looselug",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_looselug",
+      "relation": "LEADS_TO",
+      "target": "fm_breakerfail",
+      "evidence": null
+    },
+    {
+      "source": "fm_breakerfail",
+      "relation": "LEADS_TO",
+      "target": "fm_lossofpower",
+      "evidence": null
+    },
+    {
+      "source": "fm_lossofpower",
+      "relation": "LEADS_TO",
+      "target": "cons_edgstart",
+      "evidence": null
+    },
+    {
+      "source": "cons_edgstart",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_edg",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_troubleshoot",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replacelug",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_extentcondition",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_briefing",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_reviseproc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev1",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev2",
+      "evidence": null
+    }
+  ],
+  "chain": "loose LS-9 appliance lug [cause TBD] -> Breaker 1622 fails to close -> loss of power to 4kV SD BDs A and B -> automatic start/tie of EDGs A and B, invalid RPS/PCIS actuation [backed up by EDGs]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "No official cause code assigned in FORM-366 fields (TBD/provisional) despite narrative clearly identifying a loose LS-9 appliance lug as direct cause; category left provisional per rule 4. RPS loss and PCIS Group 2/3/6 actuation explicitly stated as NOT a specified system actuation -- only EDG start qualifies as the specified system actuation reported under 50.73(a)(2)(iv)(A); modeled RPS/PCIS as involved systems affected by the event but not as the reportable actuation itself. Two previous similar LERs captured as stub nodes with keys exactly as stated in text (50-296/2024-002-00 and 50-296/2020-001-00), referencing BFN Unit 3 (docket 50-296), distinct from this event's Unit 1/2 docket 05000259."
+}

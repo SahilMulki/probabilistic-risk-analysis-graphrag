@@ -17,7 +17,7 @@ system/component codes → **Neo4j** → `retrieve.py` (LLM router + Cypher temp
 Text2Cypher**) → `answer.py` (grounded, cites LER numbers, stamps `oracle|pipeline`).
 
 **Corpus (Phase 8): 833 LERs, event dates 2020–2026**, fetched from NRC ADAMS. Graph =
-**12,474 nodes / 17,372 edges**, 99.8% one connected component, **0 orphans**; cross-document
+**12,474 nodes / 17,431 edges**, 99.8% one connected component, **0 orphans**; cross-document
 hubs dense (the HPCI system joins **45 events across ~15 plants**). Extraction cost **$27**
 (Anthropic Message Batches + prompt caching). Frozen 3-doc oracle regression: node F1 **0.88**
 / edge F1 **0.72**. Scaled golden suite: **10/10**.

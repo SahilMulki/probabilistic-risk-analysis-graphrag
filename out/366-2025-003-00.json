@@ -1,0 +1,328 @@
+{
+  "ler_number": "366-2025-003-00",
+  "identity": {
+    "accession_number": "ML25315A010",
+    "docket": "05000366",
+    "plant_name": "Hatch",
+    "unit": 2,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2025-09-13",
+    "report_date": "2025-11-11",
+    "operating_mode": null,
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2025-003-00 for Edwin I. Hatch Nuclear Plant Unit 2, Manual Reactor SCRAM Due to Trip of Both Reactor Recirculation Pumps"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)",
+      "10 CFR 50.73(a)(2)(iv)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The event was caused by inadequate place-keeping by licensed operators, which led to a missed critical step to bypass the recirculation pump trip logic resulting in the pumps tripping during valve testing.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Operator place-keeping error / missed procedural step",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 366-2025-003-00",
+      "properties": {},
+      "type": "LER",
+      "key": "366-2025-003-00",
+      "stub": false,
+      "title": "Manual Reactor SCRAM Due to Trip of Both Reactor Recirculation Pumps",
+      "plant": "Edwin I. Hatch Nuclear Plant",
+      "match_key": "LER:366-2025-003-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Hatch Unit 2",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000366",
+      "match_key": "Unit:05000366"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Operator place-keeping error / missed procedural step",
+      "proximate_text": "The event was caused by inadequate place-keeping by licensed operators, which led to a missed critical step to bypass the recirculation pump trip logic resulting in the pumps tripping during valve testing.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_p",
+      "display_name": "Reactor Recirculation",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "P",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:P"
+    },
+    {
+      "id": "sys_fcv",
+      "display_name": "Turbine Control Valve",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "FCV",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:FCV"
+    },
+    {
+      "id": "sys_isv",
+      "display_name": "Containment Isolation Valves",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "ISV",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "safety system; actuated as designed",
+      "match_key": "System:ISV"
+    },
+    {
+      "id": "sys_jc",
+      "display_name": "Reactor Protection System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "safety system; actuated as designed",
+      "match_key": "System:JC"
+    },
+    {
+      "id": "c_pumps",
+      "display_name": "Reactor Recirculation Pumps (both)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "P",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:P"
+    },
+    {
+      "id": "fm_missedstep",
+      "display_name": "Missed critical procedural step to bypass recirculation pump trip logic",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Operators failed to place-keep and missed the step to bypass recirculation pump trip logic prior to turbine control valve testing.",
+      "match_key": "FailureMode:missed-critical-procedural-step-to-bypass-recirculation-pump-trip-logic"
+    },
+    {
+      "id": "fm_pumptrip",
+      "display_name": "Both reactor recirculation pumps tripped during valve testing",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Recirculation pump trip logic was not bypassed, causing both pumps to trip during turbine control valve testing.",
+      "match_key": "FailureMode:both-reactor-recirculation-pumps-tripped-during-valve-testing"
+    },
+    {
+      "id": "cons_scram",
+      "display_name": "Manual reactor SCRAM / reactor trip",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2025-09-13T17:04",
+      "end": null,
+      "duration": null,
+      "tz": "EDT",
+      "match_key": "Consequence:manual-reactor-scram-reactor-trip"
+    },
+    {
+      "id": "ca_highlight",
+      "display_name": "Highlight all critical procedural steps",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:highlight-all-critical-procedural-steps"
+    },
+    {
+      "id": "ca_supreview",
+      "display_name": "Supervisor review of critical steps during pre-job brief",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:supervisor-review-of-critical-steps-during-pre-job-brief"
+    },
+    {
+      "id": "ca_holdpoints",
+      "display_name": "Implement supervisor hold points prior to execution of each critical step",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:implement-supervisor-hold-points-prior-to-execution-of-each-critical-step"
+    },
+    {
+      "id": "ca_placekeeping",
+      "display_name": "Communicate place-keeping expectations to site personnel",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:communicate-place-keeping-expectations-to-site-personnel"
+    },
+    {
+      "id": "rr_iv_a",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_iv_b",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-b"
+    },
+    {
+      "id": "rr_ufsar",
+      "display_name": "UFSAR Chapter 15",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:ufsar-chapter-15"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_iv_a",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_iv_b",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_p",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_fcv",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_isv",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jc",
+      "evidence": null
+    },
+    {
+      "source": "c_pumps",
+      "relation": "PART_OF",
+      "target": "sys_p",
+      "evidence": null
+    },
+    {
+      "source": "fm_missedstep",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_missedstep",
+      "relation": "LEADS_TO",
+      "target": "fm_pumptrip",
+      "evidence": null
+    },
+    {
+      "source": "fm_pumptrip",
+      "relation": "LEADS_TO",
+      "target": "cons_scram",
+      "evidence": null
+    },
+    {
+      "source": "cons_scram",
+      "relation": "MITIGATED_BY",
+      "target": "sys_jc",
+      "evidence": null
+    },
+    {
+      "source": "cons_scram",
+      "relation": "MITIGATED_BY",
+      "target": "sys_isv",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_highlight",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_supreview",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_holdpoints",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_placekeeping",
+      "evidence": null
+    }
+  ],
+  "chain": "inadequate place-keeping [cause TBD] -> missed critical step to bypass recirc pump trip logic -> both recirculation pumps trip during turbine control valve testing -> manual reactor SCRAM [mitigated by RPS trip, CIV closure functioning as designed]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code left TBD/provisional per FORM-366 despite narrative attributing cause to inadequate place-keeping (personnel error theme); official code not yet assigned in source. No previous similar events reported (explicitly 'None' in narrative), so no stub LER/SIMILAR_TO edge emitted. RPS and CIVs are safety systems that actuated as designed in response to the trip, modeled as MITIGATED_BY rather than BACKED_UP_BY since they are mitigating consequences of the SCRAM, not backups for an inoperable system during an outage window."
+}

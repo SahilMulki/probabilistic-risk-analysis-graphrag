@@ -1,0 +1,381 @@
+{
+  "ler_number": "352-2024-002-00",
+  "identity": {
+    "accession_number": "ML24162A325",
+    "docket": "05000352",
+    "plant_name": "Limerick",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2024-04-11",
+    "report_date": "2024-06-10",
+    "operating_mode": "5",
+    "power_level": null,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Invalid Actuation Due to a Trip of 1 B Reactor Protection System Circuit Breaker"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "Failure analysis on circuit breaker 52-DY24801 identified a mechanical problem with the circuit breaker closing handle. The handle failed to reposition to the tripped position during testing of the circuit breaker.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "circuit breaker closing-handle mechanical failure",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 352-2024-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "352-2024-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:352-2024-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Limerick Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000352",
+      "match_key": "Unit:05000352"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "circuit breaker closing-handle mechanical failure",
+      "proximate_text": "Failure analysis on circuit breaker 52-DY24801 identified a mechanical problem with the circuit breaker closing handle. The handle failed to reposition to the tripped position during testing of the circuit breaker.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_jc",
+      "display_name": "Reactor Protection System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JC"
+    },
+    {
+      "id": "sys_km_dwcw",
+      "display_name": "Drywell Chilled Water",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "KM",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:KM"
+    },
+    {
+      "id": "sys_km_recw",
+      "display_name": "Reactor Enclosure Chilled Water",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "KM",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:KM"
+    },
+    {
+      "id": "sys_ce",
+      "display_name": "Reactor Water Cleanup",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "CE",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:CE"
+    },
+    {
+      "id": "sys_ld",
+      "display_name": "Primary Containment Instrument Gas",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "LD",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:LD"
+    },
+    {
+      "id": "sys_ij",
+      "display_name": "Primary Containment Leak Detector System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "IJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:IJ"
+    },
+    {
+      "id": "sys_bo",
+      "display_name": "Shutdown Cooling",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BO",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "isolation signal received but did not isolate; instruments bypassed",
+      "match_key": "System:BO"
+    },
+    {
+      "id": "sys_bh",
+      "display_name": "Standby Gas Treatment System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BH",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BH"
+    },
+    {
+      "id": "c_bkr",
+      "display_name": "Circuit Breaker, AC 52-DY24801",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "52",
+      "identifier": "52-DY24801",
+      "model": null,
+      "manufacturer_code": "W121",
+      "inferred_code": false,
+      "match_key": "Component:52|52-DY24801"
+    },
+    {
+      "id": "fm_handle",
+      "display_name": "Circuit breaker closing handle failed to reposition to tripped position",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Mechanical problem with the closing handle prevented the breaker from indicating its actual (open) state.",
+      "match_key": "FailureMode:circuit-breaker-closing-handle-failed-to-reposition-to-tripped-position"
+    },
+    {
+      "id": "fm_open_appeared_closed",
+      "display_name": "Breaker 52-DY24801 open but appeared closed",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Series circuit breaker appeared closed but troubleshooting determined it was actually open.",
+      "match_key": "FailureMode:breaker-52-dy24801-open-but-appeared-closed"
+    },
+    {
+      "id": "fm_bypass_opened",
+      "display_name": "Maintenance bypass switch opened with series breaker open",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "During surveillance testing, the maintenance bypass switch was opened while one of the series breakers (52-DY24801) was open, removing power to the 1B RPS panel.",
+      "match_key": "FailureMode:maintenance-bypass-switch-opened-with-series-breaker-open"
+    },
+    {
+      "id": "fm_panel_loss",
+      "display_name": "Loss of RPS Panel 1B-Y160",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Loss of power to RPS panel 1B-Y160 resulted in a 1B RPS half scram signal and isolation actuations.",
+      "match_key": "FailureMode:loss-of-rps-panel-1b-y160"
+    },
+    {
+      "id": "cons_isolation",
+      "display_name": "Invalid RPS half-scram and containment isolation actuations in multiple systems",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2024-04-11T13:48:00",
+      "end": null,
+      "duration": null,
+      "tz": "EST",
+      "match_key": "Consequence:invalid-rps-half-scram-and-containment-isolation-actuations-in-multiple-systems"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace circuit breaker 52-DY24801",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-circuit-breaker-52-dy24801"
+    },
+    {
+      "id": "ca_evaluate",
+      "display_name": "Evaluate options to verify series circuit breakers are closed prior to opening maintenance switch during testing",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:evaluate-options-to-verify-series-circuit-breakers-are-closed-prior-to-opening-maintenance-switch-during-testing"
+    },
+    {
+      "id": "mfr_westinghouse",
+      "display_name": "Westinghouse",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "W121",
+      "match_key": "Manufacturer:W121"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_nei",
+      "display_name": "NEI 99-02, Regulatory Assessment Performance Indicator Guideline",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "standard/guidance",
+      "match_key": "RegulatoryReference:nei-99-02-regulatory-assessment-performance-indicator-guideline"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bh",
+      "evidence": null
+    },
+    {
+      "source": "c_bkr",
+      "relation": "PART_OF",
+      "target": "sys_jc",
+      "evidence": null
+    },
+    {
+      "source": "c_bkr",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_westinghouse",
+      "evidence": null
+    },
+    {
+      "source": "fm_handle",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_handle",
+      "relation": "LEADS_TO",
+      "target": "fm_open_appeared_closed",
+      "evidence": null
+    },
+    {
+      "source": "fm_open_appeared_closed",
+      "relation": "LEADS_TO",
+      "target": "fm_bypass_opened",
+      "evidence": null
+    },
+    {
+      "source": "fm_bypass_opened",
+      "relation": "LEADS_TO",
+      "target": "fm_panel_loss",
+      "evidence": null
+    },
+    {
+      "source": "fm_panel_loss",
+      "relation": "LEADS_TO",
+      "target": "cons_isolation",
+      "evidence": null
+    },
+    {
+      "source": "cons_isolation",
+      "relation": "INVOLVES",
+      "target": "sys_km_dwcw",
+      "evidence": null
+    },
+    {
+      "source": "cons_isolation",
+      "relation": "INVOLVES",
+      "target": "sys_km_recw",
+      "evidence": null
+    },
+    {
+      "source": "cons_isolation",
+      "relation": "INVOLVES",
+      "target": "sys_ce",
+      "evidence": null
+    },
+    {
+      "source": "cons_isolation",
+      "relation": "INVOLVES",
+      "target": "sys_ld",
+      "evidence": null
+    },
+    {
+      "source": "cons_isolation",
+      "relation": "INVOLVES",
+      "target": "sys_ij",
+      "evidence": null
+    },
+    {
+      "source": "cons_isolation",
+      "relation": "INVOLVES",
+      "target": "sys_bo",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_evaluate",
+      "evidence": null
+    }
+  ],
+  "chain": "circuit breaker closing-handle mechanical failure [cause TBD] -> breaker 52-DY24801 open but appeared closed -> maintenance bypass switch opened with breaker open -> loss of RPS Panel 1B-Y160 -> invalid half-scram / containment isolation actuations in DWCW, RECW, RWCU, PCIG, PCLD, SGTS (SDC isolation instruments bypassed, did not isolate)",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code remains TBD/provisional per FORM-366 despite narrative identifying a specific mechanical closing-handle defect; category kept as 'provisional' per rule 4. Block-13 'reportable' field not stated in narrative, left null. No BACKED_UP_BY edges asserted: SGTS A-train and B-train are the actuated/responding systems themselves, not stated backups for an inoperable train; Shutdown Cooling isolation instruments were bypassed by design/procedure rather than an operable backup system, so no BACKED_UP_BY edge added. Previous Similar Occurrences section explicitly states none found in past five years, so no stub LER/SIMILAR_TO edge emitted."
+}

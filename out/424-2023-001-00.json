@@ -1,0 +1,311 @@
+{
+  "ler_number": "424-2023-001-00",
+  "identity": {
+    "accession_number": "ML23058A432",
+    "docket": "05000424",
+    "plant_name": "Vogtle",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2023-01-03",
+    "report_date": "2023-02-27",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2023-001-00 for Vogtle Electric Generating Plant Units 1 and 2, Partial Loss of Offsite Power Results in Emergency Diesel Generator and Auxiliary Feedwater Actuation"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The cause of the event was a failure of the lightning arrestor on the Unit 1 Bravo Reserve Auxiliary Transformer.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "component failure - lightning arrestor",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 424-2023-001-00",
+      "properties": {
+        "match_key": "LER:424-2023-001-00"
+      },
+      "type": "LER",
+      "key": "424-2023-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:424-2023-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Vogtle Unit 1",
+      "properties": {
+        "match_key": "Unit:05000424",
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000424",
+      "match_key": "Unit:05000424"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {
+        "match_key": "Cause:provisional"
+      },
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "component failure - lightning arrestor",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_xfmr",
+      "display_name": "Reserve Auxiliary Transformer",
+      "properties": {
+        "match_key": "System:XFMR"
+      },
+      "type": "System",
+      "eiis_code": "XFMR",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "offsite power supply",
+      "match_key": "System:XFMR"
+    },
+    {
+      "id": "sys_ek",
+      "display_name": "Emergency Diesel Generator",
+      "properties": {
+        "match_key": "System:EK"
+      },
+      "type": "System",
+      "eiis_code": "EK",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup power; operated as designed",
+      "match_key": "System:EK"
+    },
+    {
+      "id": "sys_ba",
+      "display_name": "Auxiliary Feedwater System",
+      "properties": {
+        "match_key": "System:BA"
+      },
+      "type": "System",
+      "eiis_code": "BA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "actuated automatically; operated as designed",
+      "match_key": "System:BA"
+    },
+    {
+      "id": "c_lar",
+      "display_name": "Hubbell MVN lightning arrestor",
+      "properties": {
+        "match_key": "Component:LAR|Unit1BravoRAT"
+      },
+      "type": "Component",
+      "eiis_code": "LAR",
+      "identifier": "Unit 1 Bravo RAT lightning arrestor",
+      "model": "MVN",
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:LAR|Unit 1 Bravo RAT lightning arrestor"
+    },
+    {
+      "id": "c_bkr",
+      "display_name": "Upstream breaker to Unit 1 Bravo / Unit 2 Alpha RATs",
+      "properties": {
+        "match_key": "Component:BKR|upstream-RAT-breaker"
+      },
+      "type": "Component",
+      "eiis_code": "BKR",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:BKR"
+    },
+    {
+      "id": "fm_lar_fail",
+      "display_name": "Lightning arrestor failure on Unit 1 Bravo RAT",
+      "properties": {
+        "match_key": "FailureMode:lightning-arrestor-failure"
+      },
+      "type": "FailureMode",
+      "description": "Hubbell MVN lightning arrestor failed on the Unit 1 Bravo Reserve Auxiliary Transformer",
+      "match_key": "FailureMode:lightning-arrestor-failure-on-unit-1-bravo-rat"
+    },
+    {
+      "id": "fm_bkr_open",
+      "display_name": "Upstream offsite power breaker opens",
+      "properties": {
+        "match_key": "FailureMode:upstream-breaker-opens"
+      },
+      "type": "FailureMode",
+      "description": "Upstream breaker to Unit 1 Bravo and Unit 2 Alpha RATs opened",
+      "match_key": "FailureMode:upstream-offsite-power-breaker-opens"
+    },
+    {
+      "id": "fm_bus_deenerg",
+      "display_name": "Emergency bus de-energization",
+      "properties": {
+        "match_key": "FailureMode:emergency-bus-deenergized"
+      },
+      "type": "FailureMode",
+      "description": "Unit 1 Bravo and Unit 2 Alpha emergency electrical buses de-energized",
+      "match_key": "FailureMode:emergency-bus-de-energization"
+    },
+    {
+      "id": "cons_actuation",
+      "display_name": "Automatic EDG start and AFW actuation on both units",
+      "properties": {
+        "match_key": "Consequence:edg-afw-actuation"
+      },
+      "type": "Consequence",
+      "start": "2023-01-03T22:59",
+      "end": null,
+      "duration": null,
+      "tz": "EST",
+      "match_key": "Consequence:automatic-edg-start-and-afw-actuation-on-both-units"
+    },
+    {
+      "id": "ca_replace_lar",
+      "display_name": "Replace lightning arrestor",
+      "properties": {
+        "match_key": "CorrectiveAction:replace-lightning-arrestor"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-lightning-arrestor"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_ufsar",
+      "display_name": "UFSAR Chapter 15",
+      "properties": {
+        "match_key": "RegulatoryReference:ufsar-ch-15"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:ufsar-chapter-15"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_xfmr",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ek",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ba",
+      "evidence": null
+    },
+    {
+      "source": "c_lar",
+      "relation": "PART_OF",
+      "target": "sys_xfmr",
+      "evidence": null
+    },
+    {
+      "source": "fm_lar_fail",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_lar_fail",
+      "relation": "LEADS_TO",
+      "target": "fm_bkr_open",
+      "evidence": null
+    },
+    {
+      "source": "fm_bkr_open",
+      "relation": "LEADS_TO",
+      "target": "fm_bus_deenerg",
+      "evidence": null
+    },
+    {
+      "source": "fm_bus_deenerg",
+      "relation": "LEADS_TO",
+      "target": "cons_actuation",
+      "evidence": null
+    },
+    {
+      "source": "cons_actuation",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_ek",
+      "evidence": null
+    },
+    {
+      "source": "cons_actuation",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_ba",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_lar",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ufsar",
+      "evidence": null
+    }
+  ],
+  "chain": "lightning arrestor failure on Unit 1 Bravo RAT [cause TBD] -> upstream offsite power breaker opens -> emergency buses de-energize -> automatic EDG start and AFW actuation [backups EDG, AFW operated as designed]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code and category not provided in FORM-366 fields (TBD/provisional) despite narrative clearly identifying the lightning arrestor failure as root cause; cause node marked provisional per rule 4. EDG and AFW are modeled as both INVOLVES (since actuated as part of the event) and BACKED_UP_BY (since narrative states they operated as designed / automatically, i.e., were available and functioned during the event). No previous similar events reported (Section E: 'None'), so no stub LER/SIMILAR_TO edge emitted."
+}

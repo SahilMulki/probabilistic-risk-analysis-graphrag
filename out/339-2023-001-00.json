@@ -1,0 +1,349 @@
+{
+  "ler_number": "339-2023-001-00",
+  "identity": {
+    "accession_number": "ML24012A145",
+    "docket": "05000339",
+    "plant_name": "North Anna",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2023-10-03",
+    "report_date": "2023-11-30",
+    "operating_mode": "5",
+    "power_level": null,
+    "discovery_context": "inspection",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Reactor Coolant Pressure Boundary Leak Due to Poor Weld Workmanship"
+  },
+  "reporting_basis": {
+    "reported_under": [],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "A",
+      "system": "AB",
+      "component": "TBG",
+      "manufacturer": "-",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The direct cause of the weld failure was due to inadequate welding process control by the welder. The specific socket welds in question exhibited poor workmanship by having a large degree of melt-through and suck-back on the inside surface, and multiple arc strikes and excessive grinding on the outside surface... which revealed a lack of fusion defect between the weldment and base metal. The degree of lack of fusion confirmed in the laboratory analysis was substantial enough to provide the eventual leak path after a 25-year service period.",
+    "cause_code": "A",
+    "category": "Personnel Error",
+    "theme": "poor weld workmanship / inadequate welding process control",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 339-2023-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "339-2023-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:339-2023-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "North Anna Unit 2",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000339",
+      "match_key": "Unit:05000339"
+    },
+    {
+      "id": "cause",
+      "display_name": "Personnel Error (A)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "A",
+      "category": "Personnel Error",
+      "theme": "poor weld workmanship / inadequate welding process control",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Personnel Error"
+    },
+    {
+      "id": "sys_ab",
+      "display_name": "Reactor Coolant System Instrumentation",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "AB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:AB"
+    },
+    {
+      "id": "sys_cb",
+      "display_name": "Chemical and Volume Control System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "CB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup capability; charging pump available",
+      "match_key": "System:CB"
+    },
+    {
+      "id": "c_pzr",
+      "display_name": "Pressurizer",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "PZR",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:PZR"
+    },
+    {
+      "id": "c_lt",
+      "display_name": "Pressurizer level transmitter",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "LT",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:LT"
+    },
+    {
+      "id": "c_tbg",
+      "display_name": "Instrument tubing socket weld",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "TBG",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:TBG"
+    },
+    {
+      "id": "c_pump",
+      "display_name": "Charging pump",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "P",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:P"
+    },
+    {
+      "id": "fm_weldproc",
+      "display_name": "Inadequate welding process control by welder",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Poor workmanship: large degree of melt-through and suck-back on inside surface, multiple arc strikes and excessive grinding on outside surface",
+      "match_key": "FailureMode:inadequate-welding-process-control-by-welder"
+    },
+    {
+      "id": "fm_lackfusion",
+      "display_name": "Lack of fusion defect between weldment and base metal",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Metallurgical failure analysis revealed lack of fusion defect between the weldment and base metal, substantial enough to provide eventual leak path",
+      "match_key": "FailureMode:lack-of-fusion-defect-between-weldment-and-base-metal"
+    },
+    {
+      "id": "fm_throughwall",
+      "display_name": "Through-wall leak in socket weld",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "NDE determined the leak was a through-wall leak after 25 years of service",
+      "match_key": "FailureMode:through-wall-leak-in-socket-weld"
+    },
+    {
+      "id": "cons_leak",
+      "display_name": "Boric acid leak / reactor coolant pressure boundary degraded condition",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2023-09-11T15:58",
+      "end": "2023-10-03T11:54",
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:boric-acid-leak-reactor-coolant-pressure-boundary-degraded-condition"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace leaking and downstream socket welded couplings",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-leaking-and-downstream-socket-welded-couplings"
+    },
+    {
+      "id": "ca_nde",
+      "display_name": "Perform NDE surface exams on replacement welds and external leakage check",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:perform-nde-surface-exams-on-replacement-welds-and-external-leakage-check"
+    },
+    {
+      "id": "ca_lp",
+      "display_name": "Perform additional liquid penetrant exams on related tubing welds",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:perform-additional-liquid-penetrant-exams-on-related-tubing-welds"
+    },
+    {
+      "id": "ca_inspect_future",
+      "display_name": "Create work orders to inspect similarly fabricated tubing socket welds at next refueling outages",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:create-work-orders-to-inspect-similarly-fabricated-tubing-socket-welds-at-next-refueling-outages"
+    },
+    {
+      "id": "ca_training",
+      "display_name": "Update Nuclear Welding Program Authorized By training to include this OE on workmanship issues",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:update-nuclear-welding-program-authorized-by-training-to-include-this-oe-on-workmanship-issues"
+    },
+    {
+      "id": "rr_asme",
+      "display_name": "ASME Section XI",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "standard/guidance",
+      "match_key": "RegulatoryReference:asme-section-xi"
+    },
+    {
+      "id": "rr_5072",
+      "display_name": "10 CFR 50.72(b)(3)(ii)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-3-ii-a"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ab",
+      "evidence": null
+    },
+    {
+      "source": "c_pzr",
+      "relation": "PART_OF",
+      "target": "sys_ab",
+      "evidence": null
+    },
+    {
+      "source": "c_lt",
+      "relation": "PART_OF",
+      "target": "sys_ab",
+      "evidence": null
+    },
+    {
+      "source": "fm_weldproc",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_weldproc",
+      "relation": "LEADS_TO",
+      "target": "fm_lackfusion",
+      "evidence": null
+    },
+    {
+      "source": "fm_lackfusion",
+      "relation": "LEADS_TO",
+      "target": "fm_throughwall",
+      "evidence": null
+    },
+    {
+      "source": "fm_throughwall",
+      "relation": "LEADS_TO",
+      "target": "cons_leak",
+      "evidence": null
+    },
+    {
+      "source": "cons_leak",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_cb",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_nde",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_lp",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_inspect_future",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_training",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_asme",
+      "evidence": null
+    }
+  ],
+  "chain": "inadequate welding process control by welder [cause A] -> lack of fusion defect between weldment and base metal -> through-wall leak after 25-year service -> boric acid leak on PZR level transmitter tubing (RCPB degraded condition) [backup: charging pump capacity well within capability]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Weld was part of an instrument tubing design change implemented in 1998; leak developed over a 25-year service period. Unit 1 unaffected. No previous similar occurrence LER referenced in narrative (Section 7.0 Similar Events is blank), so no SIMILAR_TO stub emitted. Charging pump (System CB) modeled as backup since narrative states leak was 'well within the capability of one charging pump,' indicating operability/capacity context during the event."
+}

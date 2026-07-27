@@ -1,0 +1,404 @@
+{
+  "ler_number": "327-2025-001-01",
+  "identity": {
+    "accession_number": "ML25295A001",
+    "docket": "05000327",
+    "plant_name": "Sequoyah",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2025-06-24",
+    "report_date": "2025-10-22",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "01",
+    "ens_number": "202187",
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Manual Reactor Trip due to Reboot of the Distributed Control System and Lowering Steam Generator Levels"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(b)(3)(iv)(A)",
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The event was caused by automatic CP reboots. The CP reboots were caused by the CPs experiencing multiple overrun failures... Troubleshooting identified that the cause of the reboot failure mechanism was a flaw inherent in the CP firmware.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Digital control system firmware design flaw",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 327-2025-006-01",
+      "properties": {},
+      "type": "LER",
+      "key": "327-2025-001-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:327-2025-001-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Sequoyah Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000327",
+      "match_key": "Unit:05000327"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Digital control system firmware design flaw",
+      "proximate_text": "The event was caused by automatic CP reboots. The CP reboots were caused by the CPs experiencing multiple overrun failures... Troubleshooting identified that the cause of the reboot failure mechanism was a flaw inherent in the CP firmware.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_dcc",
+      "display_name": "Distributed Control System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "DCC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:DCC"
+    },
+    {
+      "id": "sys_sm",
+      "display_name": "Heater Drain Tank",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SM",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SM"
+    },
+    {
+      "id": "sys_ab",
+      "display_name": "Steam Generator",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "AB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:AB"
+    },
+    {
+      "id": "sys_jc",
+      "display_name": "Reactor Protection System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JC"
+    },
+    {
+      "id": "sys_ba",
+      "display_name": "Auxiliary Feedwater System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BA"
+    },
+    {
+      "id": "c_cp",
+      "display_name": "Dual Control Processor S110CP",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "DCC",
+      "identifier": "S110CP",
+      "model": "FCP280",
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:DCC|S110CP"
+    },
+    {
+      "id": "c_lcv3",
+      "display_name": "#3 Heater Drain Tank Level Control Valve",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "LCV",
+      "identifier": "3",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:LCV|3"
+    },
+    {
+      "id": "c_lcv7",
+      "display_name": "#7 Heater Drain Tank Level Control Valve",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "LCV",
+      "identifier": "7",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:LCV|7"
+    },
+    {
+      "id": "fm_overrun",
+      "display_name": "CP experienced multiple overrun failures",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Control Processor experienced multiple overrun failures due to firmware flaw",
+      "match_key": "FailureMode:cp-experienced-multiple-overrun-failures"
+    },
+    {
+      "id": "fm_reboot",
+      "display_name": "Automatic dual CP reboot / memory dump",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "CP forced to perform memory dump and automatically reboot, causing ~5 minute loss of associated component control",
+      "match_key": "FailureMode:automatic-dual-cp-reboot-memory-dump"
+    },
+    {
+      "id": "fm_lcv3fail",
+      "display_name": "#3 HDT LCV failed closed",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Loss of component control during CP reboot caused #3 HDT level control valve to fail closed",
+      "match_key": "FailureMode:3-hdt-lcv-failed-closed"
+    },
+    {
+      "id": "fm_lcv7fail",
+      "display_name": "#7 HDT LCV failed closed",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Loss of component control during CP reboot caused #7 HDT level control valve to fail closed",
+      "match_key": "FailureMode:7-hdt-lcv-failed-closed"
+    },
+    {
+      "id": "fm_sglevel",
+      "display_name": "Lowering steam generator water levels",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Failed-closed HDT LCVs led to lowering SG levels, triggering manual trip criteria",
+      "match_key": "FailureMode:lowering-steam-generator-water-levels"
+    },
+    {
+      "id": "cons_trip",
+      "display_name": "Manual reactor trip / RPS and AFW actuation",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2025-06-24T00:14",
+      "end": null,
+      "duration": null,
+      "tz": "EDT",
+      "match_key": "Consequence:manual-reactor-trip-rps-and-afw-actuation"
+    },
+    {
+      "id": "ca_fw_s110",
+      "display_name": "Update firmware on S110CP",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:update-firmware-on-s110cp"
+    },
+    {
+      "id": "ca_fw_all",
+      "display_name": "Update firmware on all CPs with affected firmware version",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:update-firmware-on-all-cps-with-affected-firmware-version"
+    },
+    {
+      "id": "mfr_schneider",
+      "display_name": "Schneider Electric",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": null,
+      "match_key": "Manufacturer:schneider-electric"
+    },
+    {
+      "id": "rr_5073b3ivA",
+      "display_name": "10 CFR 50.73(b)(3)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-b-3-iv-a"
+    },
+    {
+      "id": "rr_5073a2ivA",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073b3ivA",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073a2ivA",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_dcc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sm",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ab",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ba",
+      "evidence": null
+    },
+    {
+      "source": "c_cp",
+      "relation": "PART_OF",
+      "target": "sys_dcc",
+      "evidence": null
+    },
+    {
+      "source": "c_lcv3",
+      "relation": "PART_OF",
+      "target": "sys_sm",
+      "evidence": null
+    },
+    {
+      "source": "c_lcv7",
+      "relation": "PART_OF",
+      "target": "sys_sm",
+      "evidence": null
+    },
+    {
+      "source": "fm_overrun",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_overrun",
+      "relation": "LEADS_TO",
+      "target": "fm_reboot",
+      "evidence": null
+    },
+    {
+      "source": "fm_reboot",
+      "relation": "LEADS_TO",
+      "target": "fm_lcv3fail",
+      "evidence": null
+    },
+    {
+      "source": "fm_reboot",
+      "relation": "LEADS_TO",
+      "target": "fm_lcv7fail",
+      "evidence": null
+    },
+    {
+      "source": "fm_lcv3fail",
+      "relation": "LEADS_TO",
+      "target": "fm_sglevel",
+      "evidence": null
+    },
+    {
+      "source": "fm_lcv7fail",
+      "relation": "LEADS_TO",
+      "target": "fm_sglevel",
+      "evidence": null
+    },
+    {
+      "source": "fm_sglevel",
+      "relation": "LEADS_TO",
+      "target": "cons_trip",
+      "evidence": null
+    },
+    {
+      "source": "cons_trip",
+      "relation": "MITIGATED_BY",
+      "target": "sys_jc",
+      "evidence": null
+    },
+    {
+      "source": "cons_trip",
+      "relation": "MITIGATED_BY",
+      "target": "sys_ba",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_fw_s110",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_fw_all",
+      "evidence": null
+    },
+    {
+      "source": "c_cp",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_schneider",
+      "evidence": null
+    }
+  ],
+  "chain": "CP firmware flaw [cause TBD] -> multiple overrun failures -> automatic dual CP reboot (~5 min loss of control) -> #3 & #7 HDT LCVs fail closed -> lowering SG levels -> manual reactor trip / RPS and AFW actuation",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code not assigned in FORM-366 fields (TBD/provisional) despite narrative clearly attributing root cause to a CP firmware flaw; category kept as provisional per rule 4. Reactor type/vendor and plant name inferred from well-known identity of Sequoyah Unit 1 (Westinghouse PWR), not explicitly given in FORM-366 fields. No previous similar events reported (Section VII), so no SIMILAR_TO edge or stub LER emitted. RPS and AFW modeled as both INVOLVES (per reporting basis) and MITIGATED_BY consequence, since they actuated as designed in response to the trip, not as backups during an inoperability window."
+}

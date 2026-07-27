@@ -1,0 +1,316 @@
+{
+  "ler_number": "382-2023-002-00",
+  "identity": {
+    "accession_number": "ML23129A791",
+    "docket": "05000382",
+    "plant_name": "Waterford",
+    "unit": 3,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2023-03-10",
+    "report_date": "2023-05-09",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Plant Shutdown Required by Technical Specifications for Unidentified Reactor Coolant System Leakage in Containment Waterford Steam Electric Station, Unit 3 NRC Docket No. 50-382 Renewed Facility Operating License No. NPF-38"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "B",
+      "system": "AB",
+      "component": "PSP",
+      "manufacturer": null,
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "high cycle fatigue due to vibrational stress in conjunction with missing tube supports previously corrected in 2016",
+    "cause_code": "B",
+    "category": "Design/Manufacturing/Installation",
+    "theme": "missing tube supports leading to vibration-induced fatigue cracking",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 382-2023-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "382-2023-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:382-2023-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Waterford Unit 3",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000382",
+      "match_key": "Unit:05000382"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Manufacturing/Installation (B)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "B",
+      "category": "Design/Manufacturing/Installation",
+      "theme": "missing tube supports leading to vibration-induced fatigue cracking",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Design/Manufacturing/Installation"
+    },
+    {
+      "id": "sys_ab",
+      "display_name": "Reactor Coolant System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "AB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "system in which leak occurred",
+      "match_key": "System:AB"
+    },
+    {
+      "id": "c_rcp1b",
+      "display_name": "Reactor Coolant Pump 1B",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "P",
+      "identifier": "RCP 1B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:P|RCP 1B"
+    },
+    {
+      "id": "c_instrtube",
+      "display_name": "0.5 inch instrument tubing line (RCP 1B)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "TBG",
+      "identifier": "RCP 1B instrument tubing",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:TBG|RCP 1B instrument tubing"
+    },
+    {
+      "id": "c_tubesupport",
+      "display_name": "Tube support(s)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "SPT",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:SPT"
+    },
+    {
+      "id": "c_rtv115b",
+      "display_name": "Reactor vessel loop 1B high pressure root valve (RC MV AAA 115B)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "RTV",
+      "identifier": "RC MV AAA 115B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:RTV|RC MV AAA 115B"
+    },
+    {
+      "id": "fm_missing_supports",
+      "display_name": "Missing tube supports on instrument line",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Tube supports downstream of leak location were missing, allowing tubing to vibrate against structural steel",
+      "match_key": "FailureMode:missing-tube-supports-on-instrument-line"
+    },
+    {
+      "id": "fm_vibration_fatigue",
+      "display_name": "Vibrational stress causing high cycle fatigue",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Unsupported tubing subjected to vibrational stress over time, inducing high cycle fatigue",
+      "match_key": "FailureMode:vibrational-stress-causing-high-cycle-fatigue"
+    },
+    {
+      "id": "fm_throughwall_leak",
+      "display_name": "Through-wall crack near weld on instrument tubing",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Through wall leak near a weld on the 0.5 inch instrument tubing line of RCP 1B",
+      "match_key": "FailureMode:through-wall-crack-near-weld-on-instrument-tubing"
+    },
+    {
+      "id": "cons_rcs_leak",
+      "display_name": "Unidentified RCS leakage exceeding 1 gpm requiring plant shutdown",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2023-03-09T22:00",
+      "end": "2023-03-14T13:29",
+      "duration": "~4 days 15.5 hours",
+      "tz": "CST",
+      "match_key": "Consequence:unidentified-rcs-leakage-exceeding-1-gpm-requiring-plant-shutdown"
+    },
+    {
+      "id": "ca_replace_tubing",
+      "display_name": "Replace cracked tubing line",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-cracked-tubing-line"
+    },
+    {
+      "id": "ca_isolate_leak",
+      "display_name": "Close RCP 1B instrument line valve to isolate leak",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:close-rcp-1b-instrument-line-valve-to-isolate-leak"
+    },
+    {
+      "id": "ca_extent_condition",
+      "display_name": "Extent of condition walkdown of RCP 1A, 2A, and 2B",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:extent-of-condition-walkdown-of-rcp-1a-2a-and-2b"
+    },
+    {
+      "id": "ca_vendor_analysis",
+      "display_name": "Send removed tubing to vendor for failure analysis",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:send-removed-tubing-to-vendor-for-failure-analysis"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-a"
+    },
+    {
+      "id": "ler_2016",
+      "display_name": "Previous WF3 event (2016) - RCP 1B instrument tubing leak due to missing supports",
+      "properties": {},
+      "type": "LER",
+      "key": "382-2016",
+      "stub": true,
+      "title": "RCS unidentified leakage from RCP 1B instrumentation line due to missing tubing supports and fretting",
+      "plant": "Waterford Steam Electric Station Unit 3",
+      "match_key": "LER:382-2016"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ab",
+      "evidence": null
+    },
+    {
+      "source": "c_instrtube",
+      "relation": "PART_OF",
+      "target": "sys_ab",
+      "evidence": null
+    },
+    {
+      "source": "fm_missing_supports",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_missing_supports",
+      "relation": "LEADS_TO",
+      "target": "fm_vibration_fatigue",
+      "evidence": null
+    },
+    {
+      "source": "fm_vibration_fatigue",
+      "relation": "LEADS_TO",
+      "target": "fm_throughwall_leak",
+      "evidence": null
+    },
+    {
+      "source": "fm_throughwall_leak",
+      "relation": "LEADS_TO",
+      "target": "cons_rcs_leak",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_tubing",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_isolate_leak",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_extent_condition",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_vendor_analysis",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_2016",
+      "evidence": null
+    }
+  ],
+  "chain": "missing tube supports [cause B] -> vibrational stress causes high cycle fatigue -> through-wall crack near weld on RCP 1B instrument tubing -> unidentified RCS leakage >1 gpm -> manual reactor shutdown (Mode 1 -> Mode 3), tubing replaced, restored to Mode 1",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Block 13 component code 'PSP' does not clearly correspond to a specific narrative component (possibly generic pipe/support code); modeled failure chain instead around instrument tubing and tube supports per narrative detail. Only one System (AB, RCS) is explicitly involved; RTV (root valve) and RCP appear as related components but no distinct System nodes were warranted for them. 2016 previous event lacks a formal LER number in the narrative, so stub LER key uses best available identifier '382-2016' per available text (no specific LER number was given)."
+}

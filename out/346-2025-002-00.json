@@ -1,0 +1,327 @@
+{
+  "ler_number": "346-2025-002-00",
+  "identity": {
+    "accession_number": "ML25282A052",
+    "docket": "05000346",
+    "plant_name": "Davis-Besse",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2025-08-13",
+    "report_date": "2025-10-09",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Davis-Besse Nuclear Power Station, Unit 1 Docket Number 50-346, License Number NPF-3 Licensee Event Report 2025-002-00"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The cause of the unit not reaching Mode 4 in the time required by the TS was use of the incorrect procedure for the cooldown...The operators did not route to procedure DB-OP-02543, Rapid Cooldown, which was specifically written to conduct a TS required cooldown to Mode 4 or 5...The Rapid Shutdown Procedure did not clearly specify to route to the Rapid Cooldown Procedure for a short duration evolution such as a TS Required cooldown.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "procedure-routing / mindset error during TS-required cooldown",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 346-2025-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "346-2025-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:346-2025-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Davis-Besse Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000346",
+      "match_key": "Unit:05000346"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "procedure-routing / mindset error during TS-required cooldown",
+      "proximate_text": "The cause of the unit not reaching Mode 4 in the time required by the TS was use of the incorrect procedure for the cooldown...The operators did not route to procedure DB-OP-02543, Rapid Cooldown...The Rapid Shutdown Procedure did not clearly specify to route to the Rapid Cooldown Procedure for a short duration evolution such as a TS Required cooldown.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_sfrcs",
+      "display_name": "Steam and Feedwater Rupture Control System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected system - instrument channels inoperable",
+      "match_key": "System:JB"
+    },
+    {
+      "id": "sys_afw",
+      "display_name": "Auxiliary Feedwater System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "design context - actuated by SFRCS",
+      "match_key": "System:BA"
+    },
+    {
+      "id": "c_lt_sp9b8",
+      "display_name": "SG 1 Startup Range Level Transmitter SP9B8",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "AB-LT",
+      "identifier": "SP9B8",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:AB-LT|SP9B8"
+    },
+    {
+      "id": "c_lt_sp9b9",
+      "display_name": "SG 1 Startup Range Level Transmitter SP9B9",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "AB-LT",
+      "identifier": "SP9B9",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:AB-LT|SP9B9"
+    },
+    {
+      "id": "c_refleg",
+      "display_name": "Instrument reference leg piping",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:instrument-reference-leg-piping"
+    },
+    {
+      "id": "fm_leak",
+      "display_name": "Steam leak on instrument reference leg piping",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Steam leak on the instrument reference leg piping caused SFRCS SG 1 level instruments SP9B8 and SP9B9 to be declared inoperable, entering TS LCO 3.3.11.",
+      "match_key": "FailureMode:steam-leak-on-instrument-reference-leg-piping"
+    },
+    {
+      "id": "fm_wrongproc",
+      "display_name": "Operators did not route to Rapid Cooldown procedure",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "After completing the TS-required plant shutdown to Mode 3, Control Room operators continued following the Power Operations Procedure (mindset for a planned-outage shutdown) instead of routing to Rapid Cooldown procedure DB-OP-02543 specifically written for a TS required cooldown.",
+      "match_key": "FailureMode:operators-did-not-route-to-rapid-cooldown-procedure"
+    },
+    {
+      "id": "fm_boron",
+      "display_name": "Additional time spent establishing RCS boron concentration",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Following the wrong procedure path, operators spent additional time establishing the required RCS boron concentration for a one percent shutdown margin at 300 degrees instead of crediting minimum transient poisons from the rapid shutdown, delaying the cooldown to Mode 4.",
+      "match_key": "FailureMode:additional-time-spent-establishing-rcs-boron-concentration"
+    },
+    {
+      "id": "cons_late_mode4",
+      "display_name": "Mode 4 not attained within required 12-hour TS completion time",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2025-08-12T16:21",
+      "end": "2025-08-13T07:15",
+      "duration": "3:15 over the 12-hour limit (14:54 total elapsed vs 12:00 required, due 0400 on 8/13)",
+      "tz": null,
+      "match_key": "Consequence:mode-4-not-attained-within-required-12-hour-ts-completion-time"
+    },
+    {
+      "id": "ca_mode4",
+      "display_name": "Attained Mode 4 to complete required TS actions",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:attained-mode-4-to-complete-required-ts-actions"
+    },
+    {
+      "id": "ca_standing_order",
+      "display_name": "Interim Standing Order to use Rapid Cooldown Procedure DB-OP-02543 for short-duration TS LCO shutdowns",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:interim-standing-order-to-use-rapid-cooldown-procedure-db-op-02543-for-short-duration-ts-lco-shutdowns"
+    },
+    {
+      "id": "ca_revise_proc",
+      "display_name": "Revise Rapid Shutdown Procedure DB-OP-02504 to route to Rapid Cooldown Procedure for TS-required Mode 4 cooldowns",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-rapid-shutdown-procedure-db-op-02504-to-route-to-rapid-cooldown-procedure-for-ts-required-mode-4-cooldowns"
+    },
+    {
+      "id": "ca_training",
+      "display_name": "Training on when to use Rapid Shutdown vs Rapid Cooldown procedures",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:training-on-when-to-use-rapid-shutdown-vs-rapid-cooldown-procedures"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts33_11",
+      "display_name": "TS LCO 3.3.11 SFRCS Instrumentation",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-lco-3-3-11-sfrcs-instrumentation"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "DBNPS LER 2025-001 (SFRCS SG level instrument steam leak)",
+      "properties": {},
+      "type": "LER",
+      "key": "2025-001",
+      "stub": true,
+      "title": "SFRCS SG 1 level instrument reference leg steam leak",
+      "plant": "Davis-Besse Nuclear Power Station Unit 1",
+      "match_key": "LER:2025-001"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts33_11",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sfrcs",
+      "evidence": null
+    },
+    {
+      "source": "c_lt_sp9b8",
+      "relation": "PART_OF",
+      "target": "sys_sfrcs",
+      "evidence": null
+    },
+    {
+      "source": "c_lt_sp9b9",
+      "relation": "PART_OF",
+      "target": "sys_sfrcs",
+      "evidence": null
+    },
+    {
+      "source": "fm_leak",
+      "relation": "LEADS_TO",
+      "target": "fm_wrongproc",
+      "evidence": null
+    },
+    {
+      "source": "fm_wrongproc",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_wrongproc",
+      "relation": "LEADS_TO",
+      "target": "fm_boron",
+      "evidence": null
+    },
+    {
+      "source": "fm_boron",
+      "relation": "LEADS_TO",
+      "target": "cons_late_mode4",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_mode4",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_standing_order",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_revise_proc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_training",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    }
+  ],
+  "chain": "steam leak on SFRCS SG1 instrument reference leg piping [prior LER 2025-001] -> TS LCO 3.3.11 entered, required shutdown -> operators did not route to Rapid Cooldown procedure DB-OP-02543 [cause TBD] -> extra time spent establishing RCS boron concentration instead of crediting transient poisons -> Mode 4 not attained within 12-hour TS completion time (exceeded by 3h15m)",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause_code is TBD/provisional per FORM-366 fields, despite narrative clearly describing a personnel/procedure-use error; category left as 'provisional' per rule 4. Auxiliary Feedwater System [BA] and analysis-of-event SFRCS logic-channel redundancy discussion are design/safety-analysis context (no loss of safety function) - not modeled as an operable backup with BACKED_UP_BY since AFW was not itself inoperable or substituting for a failed system in this event chain; the actual consequence being modeled is the late Mode 4 entry, not an ECCS/AFW unavailability. Previous similar event: narrative states no LERs at DBNPS in past three years related to TS required cooldowns, so no stub SIMILAR_TO LER for that comparison; however LER 2025-001 is referenced multiple times as directly related (same steam leak precipitating event) and is modeled as a stub with SIMILAR_TO edge per rule 9."
+}

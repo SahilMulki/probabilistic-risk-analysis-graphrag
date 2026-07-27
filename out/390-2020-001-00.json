@@ -1,0 +1,395 @@
+{
+  "ler_number": "390-2020-001-00",
+  "identity": {
+    "accession_number": "ML20108E838",
+    "docket": "05000390",
+    "plant_name": "Watts Bar",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2020-02-19",
+    "report_date": "2020-04-17",
+    "operating_mode": null,
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Manual Reactor Trip Due to Lowering Steam Generator Level Caused by a Hand Station Failure"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "Reportable",
+      "system": "to",
+      "component": "ICES",
+      "manufacturer": "Reportable",
+      "reportable": null
+    }
+  ],
+  "cause": {
+    "proximate_text": "while in manual SG level control, hand station (1-FIC-003-090) pushbutton stuck on the Loop 3 controller which provided a closing signal when open was demanded, which resulted in the SG number 3 MFRV closing",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Stuck pushbutton in manual feedwater control hand station caused MFRV closure and loss of SG level control",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 390-2020-001-00",
+      "properties": {
+        "match_key": "LER:390-2020-001-00"
+      },
+      "type": "LER",
+      "key": "390-2020-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:390-2020-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Watts Bar Unit 1",
+      "properties": {
+        "match_key": "Unit:05000390",
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000390",
+      "match_key": "Unit:05000390"
+    },
+    {
+      "id": "cause",
+      "display_name": "Cause TBD (provisional)",
+      "properties": {
+        "match_key": "Cause:provisional"
+      },
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Stuck pushbutton in manual feedwater control hand station caused MFRV closure and loss of SG level control",
+      "proximate_text": "while in manual SG level control, hand station (1-FIC-003-090) pushbutton stuck on the Loop 3 controller which provided a closing signal when open was demanded, which resulted in the SG number 3 MFRV closing",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_fw",
+      "display_name": "Main Feedwater System",
+      "properties": {
+        "match_key": "System:main-feedwater-system"
+      },
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "involved system; SG level control",
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "sys_afw",
+      "display_name": "Auxiliary Feedwater",
+      "properties": {
+        "match_key": "System:BA"
+      },
+      "type": "System",
+      "eiis_code": "BA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "actuated as designed at reactor trip",
+      "match_key": "System:BA"
+    },
+    {
+      "id": "sys_rps",
+      "display_name": "Reactor Protection System",
+      "properties": {
+        "match_key": "System:reactor-protection-system"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "safety system actuation basis for report",
+      "match_key": "System:reactor-protection-system"
+    },
+    {
+      "id": "c_handstation",
+      "display_name": "Hand Station 1-FIC-003-0090",
+      "properties": {
+        "match_key": "Component:FIC|1-FIC-003-0090"
+      },
+      "type": "Component",
+      "eiis_code": "FIC",
+      "identifier": "1-FIC-003-0090",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:FIC|1-FIC-003-0090"
+    },
+    {
+      "id": "c_pushbutton",
+      "display_name": "Decrease Pushbutton (Loop 3 Controller)",
+      "properties": {
+        "match_key": "Component:decrease-pushbutton-loop-3-controller"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": "AML 21 Series CQA938E",
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:decrease-pushbutton-loop-3-controller"
+    },
+    {
+      "id": "c_mfrv",
+      "display_name": "SG Number 3 Main Feedwater Regulating Valve",
+      "properties": {
+        "match_key": "Component:sg-3-mfrv"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:sg-number-3-main-feedwater-regulating-valve"
+    },
+    {
+      "id": "fm_pushbutton_stuck",
+      "display_name": "Decrease pushbutton stuck on Loop 3 controller",
+      "properties": {
+        "match_key": "FailureMode:decrease-pushbutton-stuck-loop-3-controller"
+      },
+      "type": "FailureMode",
+      "description": "Pushbutton stuck providing a closing signal when open was demanded",
+      "match_key": "FailureMode:decrease-pushbutton-stuck-on-loop-3-controller"
+    },
+    {
+      "id": "fm_mfrv_closed",
+      "display_name": "SG 3 MFRV closed unexpectedly",
+      "properties": {
+        "match_key": "FailureMode:sg-3-mfrv-closed-unexpectedly"
+      },
+      "type": "FailureMode",
+      "description": "MFRV for SG number 3 went closed due to stuck pushbutton signal",
+      "match_key": "FailureMode:sg-3-mfrv-closed-unexpectedly"
+    },
+    {
+      "id": "fm_level_loss",
+      "display_name": "Loss of manual control of SG 3 level",
+      "properties": {
+        "match_key": "FailureMode:loss-of-manual-control-sg3-level"
+      },
+      "type": "FailureMode",
+      "description": "Operators unable to manually control/raise SG number 3 level after MFRV closure",
+      "match_key": "FailureMode:loss-of-manual-control-of-sg-3-level"
+    },
+    {
+      "id": "cons_trip",
+      "display_name": "Manual reactor trip and AFW actuation",
+      "properties": {
+        "match_key": "Consequence:manual-reactor-trip-afw-actuation"
+      },
+      "type": "Consequence",
+      "start": "2020-02-19T09:36:00",
+      "end": null,
+      "duration": null,
+      "tz": "EST",
+      "match_key": "Consequence:manual-reactor-trip-and-afw-actuation"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace valve hand station",
+      "properties": {
+        "match_key": "CorrectiveAction:replace-valve-hand-station"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-valve-hand-station"
+    },
+    {
+      "id": "ca_procedure",
+      "display_name": "Revise procedures to classify manual-control-substituting-for-automatic activities as risk significant",
+      "properties": {
+        "match_key": "CorrectiveAction:revise-procedures-risk-significant-manual-control"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-procedures-to-classify-manual-control-substituting-for-automatic-activities-as-risk-significant"
+    },
+    {
+      "id": "mfr_foxboro",
+      "display_name": "Foxboro",
+      "properties": {
+        "match_key": "Manufacturer:foxboro"
+      },
+      "type": "Manufacturer",
+      "code": null,
+      "match_key": "Manufacturer:foxboro"
+    },
+    {
+      "id": "mfr_honeywell",
+      "display_name": "Honeywell",
+      "properties": {
+        "match_key": "Manufacturer:honeywell"
+      },
+      "type": "Manufacturer",
+      "code": null,
+      "match_key": "Manufacturer:honeywell"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_ufsar",
+      "display_name": "UFSAR Loss of Normal Feedwater Analysis",
+      "properties": {
+        "match_key": "RegulatoryReference:ufsar-loss-of-normal-feedwater"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:ufsar-loss-of-normal-feedwater-analysis"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "LER 390-2019-003-00",
+      "properties": {
+        "match_key": "LER:390-2019-003-00"
+      },
+      "type": "LER",
+      "key": "390-2019-003-00",
+      "stub": true,
+      "title": "Manual reactor trip as a result of a MFRV failing closed due to a failed diaphragm",
+      "plant": "Watts Bar Nuclear Plant, Unit 1",
+      "match_key": "LER:390-2019-003-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_fw",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_afw",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rps",
+      "evidence": null
+    },
+    {
+      "source": "c_pushbutton",
+      "relation": "PART_OF",
+      "target": "c_handstation",
+      "evidence": null
+    },
+    {
+      "source": "c_handstation",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_foxboro",
+      "evidence": null
+    },
+    {
+      "source": "c_pushbutton",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_honeywell",
+      "evidence": null
+    },
+    {
+      "source": "fm_pushbutton_stuck",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_pushbutton_stuck",
+      "relation": "LEADS_TO",
+      "target": "fm_mfrv_closed",
+      "evidence": null
+    },
+    {
+      "source": "fm_mfrv_closed",
+      "relation": "LEADS_TO",
+      "target": "fm_level_loss",
+      "evidence": null
+    },
+    {
+      "source": "fm_level_loss",
+      "relation": "LEADS_TO",
+      "target": "cons_trip",
+      "evidence": null
+    },
+    {
+      "source": "cons_trip",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_afw",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procedure",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ufsar",
+      "evidence": null
+    }
+  ],
+  "chain": "hand station pushbutton sticks in manual SG level control [cause TBD] -> closing signal sent when open demanded -> SG 3 MFRV closes -> operators unable to manually restore SG 3 level -> manual reactor trip / AFW actuation [backup AFW available]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Block-13 fields in the FORM-366 input were malformed/garbled ('cause: Reportable', 'system: to', 'component: ICES') and are copied verbatim per instructions but likely OCR artifacts; no reliable EIIS system/component code could be extracted from them, so System nodes use narrative-derived names with eiis_code null except AFW (BA), which is explicitly bracketed in the text. Cause code is TBD/provisional per FORM-366 fields; narrative states no human-performance root cause was identified, consistent with provisional status. UFSAR reference is analysis-basis context (Loss of Normal Feedwater), not a distinct backup system, so not modeled as System. Previous LER 390/2019-003-00 stub created per explicit narrative reference; note narrative states causes are different despite similarity of trip mechanism."
+}

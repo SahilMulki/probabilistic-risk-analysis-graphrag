@@ -1,0 +1,304 @@
+{
+  "ler_number": "352-2024-001-00",
+  "identity": {
+    "accession_number": "ML24162A324",
+    "docket": "05000352",
+    "plant_name": "Limerick",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2024-04-09",
+    "report_date": "2024-06-10",
+    "operating_mode": "5",
+    "power_level": null,
+    "discovery_context": "inspection",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Unit 1 'B' Main Steam Isolation Valve Exceeded the Technical Specification Allowable Leak Rate"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "the pilot poppet to poppet seat interface was the primary source of the leakage path for the LLRT failure due to several linear indications",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "valve seat surface degradation (linear indications) causing excess MSIV leakage",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 352-2024-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "352-2024-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:352-2024-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Limerick Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000352",
+      "match_key": "Unit:05000352"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "valve seat surface degradation (linear indications) causing excess MSIV leakage",
+      "proximate_text": "the pilot poppet to poppet seat interface was the primary source of the leakage path for the LLRT failure due to several linear indications",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_sb",
+      "display_name": "Main/Reheat Steam System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SB"
+    },
+    {
+      "id": "c_msiv_b_outboard",
+      "display_name": "'B' Outboard Main Steam Isolation Valve HV-041-1F028B",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": "HV-041-1F028B",
+      "model": null,
+      "manufacturer_code": "A585",
+      "inferred_code": false,
+      "match_key": "Component:ISV|HV-041-1F028B"
+    },
+    {
+      "id": "c_msiv_b_inboard",
+      "display_name": "'B' Inboard Main Steam Isolation Valve HV-041-1F022B",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": "HV-041-1F022B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:ISV|HV-041-1F022B"
+    },
+    {
+      "id": "fm_linear_indications",
+      "display_name": "Linear indications at pilot poppet / poppet seat interface",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Several linear indications at the pilot poppet to poppet seat interface degraded the sealing surface contact",
+      "match_key": "FailureMode:linear-indications-at-pilot-poppet-poppet-seat-interface"
+    },
+    {
+      "id": "fm_excess_leakage",
+      "display_name": "MSIV as-found leakage exceeded TS limit",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "As-found leakage of 208.9 scfh exceeded the TS 3.6.1.2.c limit of 100 scfh for HV-041-1F028B",
+      "match_key": "FailureMode:msiv-as-found-leakage-exceeded-ts-limit"
+    },
+    {
+      "id": "cons_inoperable",
+      "display_name": "'B' Outboard MSIV declared inoperable / condition prohibited by TS",
+      "properties": {
+        "note": "Leakage likely exceeded TS limit during prior operating cycle longer than TS 3.6.3.a allows; TS 3.6.3.a required actions were not met"
+      },
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:b-outboard-msiv-declared-inoperable-condition-prohibited-by-ts"
+    },
+    {
+      "id": "ca_repair",
+      "display_name": "Corrective maintenance / internal repair of HV-041-1F028B",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:corrective-maintenance-internal-repair-of-hv-041-1f028b"
+    },
+    {
+      "id": "ca_capa",
+      "display_name": "Corrective action program investigation to determine LLRT failure cause",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:corrective-action-program-investigation-to-determine-llrt-failure-cause"
+    },
+    {
+      "id": "ca_lar",
+      "display_name": "Evaluate license amendment request to revise MSIV leakage TS limits",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:evaluate-license-amendment-request-to-revise-msiv-leakage-ts-limits"
+    },
+    {
+      "id": "mfr_am",
+      "display_name": "Attwood & Morrill Company, Inc.",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "A585",
+      "match_key": "Manufacturer:A585"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts_3613",
+      "display_name": "TS 3.6.1.2.c (MSIV leakage limit)",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ts-3-6-1-2-c-msiv-leakage-limit"
+    },
+    {
+      "id": "rr_ts_363",
+      "display_name": "TS 3.6.3.a (Primary containment isolation valves)",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ts-3-6-3-a-primary-containment-isolation-valves"
+    },
+    {
+      "id": "rr_nureg1433",
+      "display_name": "NUREG-1433 Standard Technical Specifications - GE BWR/4 Plants",
+      "properties": {
+        "type": "standard/guidance"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:nureg-1433-standard-technical-specifications-ge-bwr-4-plants"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts_3613",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts_363",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_msiv_b_outboard",
+      "evidence": null
+    },
+    {
+      "source": "fm_linear_indications",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_linear_indications",
+      "relation": "LEADS_TO",
+      "target": "fm_excess_leakage",
+      "evidence": null
+    },
+    {
+      "source": "fm_excess_leakage",
+      "relation": "LEADS_TO",
+      "target": "cons_inoperable",
+      "evidence": null
+    },
+    {
+      "source": "cons_inoperable",
+      "relation": "BACKED_UP_BY",
+      "target": "c_msiv_b_inboard",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_repair",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_capa",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_lar",
+      "evidence": null
+    },
+    {
+      "source": "c_msiv_b_outboard",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_am",
+      "evidence": null
+    }
+  ],
+  "chain": "linear indications at pilot poppet/seat interface [cause TBD] -> sealing surface degraded -> MSIV as-found leakage 208.9 scfh exceeds TS 100 scfh limit -> 'B' Outboard MSIV declared inoperable / condition prohibited by TS 3.6.3.a [backup: 'B' Inboard MSIV HV-041-1F022B remained operable]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4"
+  ],
+  "notes": "Cause code is TBD/provisional per FORM-366 (official cause not yet determined; CAP investigation planned). Redundant inboard MSIV HV-041-1F022B tested with acceptable leakage in the same outage and is treated as an operable backup preserving containment isolation capability for the 'B' steam line, per narrative's Safety Consequences section. No previous similar LERs reported in past ten years, so no SIMILAR_TO stub emitted."
+}

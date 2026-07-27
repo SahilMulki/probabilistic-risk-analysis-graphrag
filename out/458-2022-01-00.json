@@ -1,0 +1,277 @@
+{
+  "ler_number": "458-2022-01-00",
+  "identity": {
+    "accession_number": "ML22137A035",
+    "docket": "05000458",
+    "plant_name": "River Bend",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2022-03-18",
+    "report_date": "2022-05-17",
+    "operating_mode": null,
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "/ 2022-01-00, \"Condition Prohibited by Technical Specifications due to Residual Heat Removal B Pump Motor Bearing Oil Leak"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The direct cause of this event was improper installation of the sight glass O-ring during the performance of preventative maintenance.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "improper maintenance installation",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 458-2022-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "458-2022-01-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:458-2022-01-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "River Bend Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000458",
+      "match_key": "Unit:05000458"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "improper maintenance installation",
+      "proximate_text": "The direct cause of this event was improper installation of the sight glass O-ring during the performance of preventative maintenance.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_bo",
+      "display_name": "Residual Heat Removal",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BO",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BO"
+    },
+    {
+      "id": "c_rhr_b",
+      "display_name": "Residual Heat Removal Pump B (RHR B)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "BO",
+      "identifier": "RHR B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:BO|RHR B"
+    },
+    {
+      "id": "c_rhr_a",
+      "display_name": "Residual Heat Removal Pump A (RHR A)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "BO",
+      "identifier": "RHR A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:BO|RHR A"
+    },
+    {
+      "id": "c_sight_glass",
+      "display_name": "Motor lower bearing oil reservoir sight glass assembly",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:motor-lower-bearing-oil-reservoir-sight-glass-assembly"
+    },
+    {
+      "id": "c_oring",
+      "display_name": "Sight glass O-ring",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:sight-glass-o-ring"
+    },
+    {
+      "id": "fm_improper_install",
+      "display_name": "Improper installation of sight glass O-ring during PM",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "O-ring was improperly installed during preventative maintenance on the sight glass assembly.",
+      "match_key": "FailureMode:improper-installation-of-sight-glass-o-ring-during-pm"
+    },
+    {
+      "id": "fm_oil_leak",
+      "display_name": "Motor lower bearing oil reservoir leak",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Oil leaked from the RHR B motor lower bearing oil reservoir following the sight glass O-ring replacement.",
+      "match_key": "FailureMode:motor-lower-bearing-oil-reservoir-leak"
+    },
+    {
+      "id": "fm_leak_rate",
+      "display_name": "Leak rate insufficient to support mission time",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Analysis determined the identified leakage rate would prevent RHR B from meeting its required mission time following a Design Basis Accident.",
+      "match_key": "FailureMode:leak-rate-insufficient-to-support-mission-time"
+    },
+    {
+      "id": "cons_inoperable",
+      "display_name": "RHR B inoperable beyond Technical Specification allowed time",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2022-03-14T00:00",
+      "end": "2022-03-30T00:00",
+      "duration": "16 days",
+      "tz": "CT",
+      "match_key": "Consequence:rhr-b-inoperable-beyond-technical-specification-allowed-time"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace sight glass assembly and O-ring",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-sight-glass-assembly-and-o-ring"
+    },
+    {
+      "id": "ca_update_wo_guidance",
+      "display_name": "Update ECCS model work orders for sight glass/O-ring replacement with further guidance",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:update-eccs-model-work-orders-for-sight-glass-o-ring-replacement-with-further-guidance"
+    },
+    {
+      "id": "ca_adjust_scope",
+      "display_name": "Adjust PM work order scope to reflect manufacturer recommendations",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:adjust-pm-work-order-scope-to-reflect-manufacturer-recommendations"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bo",
+      "evidence": null
+    },
+    {
+      "source": "fm_improper_install",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_improper_install",
+      "relation": "LEADS_TO",
+      "target": "fm_oil_leak",
+      "evidence": null
+    },
+    {
+      "source": "fm_oil_leak",
+      "relation": "LEADS_TO",
+      "target": "fm_leak_rate",
+      "evidence": null
+    },
+    {
+      "source": "fm_leak_rate",
+      "relation": "LEADS_TO",
+      "target": "cons_inoperable",
+      "evidence": null
+    },
+    {
+      "source": "cons_inoperable",
+      "relation": "BACKED_UP_BY",
+      "target": "c_rhr_a",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_update_wo_guidance",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_adjust_scope",
+      "evidence": null
+    }
+  ],
+  "chain": "improper O-ring installation during PM [cause TBD] -> motor lower bearing oil reservoir leak -> leak rate insufficient to support mission time -> RHR B inoperable beyond TS allowed time [backup RHR A operable]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Form-366 fields report unit as null but narrative identifies River Bend Station Unit 1 (docket 05000458), so this was filled from the narrative per rule allowing narrative to be authoritative for identifiers. Cause code remains TBD/provisional per FORM-366 authoritative field despite narrative stating a direct cause. RHR A is modeled as a Component (backup pump) rather than duplicate System node, consistent with narrative statement it 'was Operable for the duration of this event.' No previous similar events cited (narrative states 'None'), so no SIMILAR_TO edge or stub LER emitted."
+}

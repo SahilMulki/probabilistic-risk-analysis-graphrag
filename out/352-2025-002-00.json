@@ -1,0 +1,308 @@
+{
+  "ler_number": "352-2025-002-00",
+  "identity": {
+    "accession_number": "ML25224A176",
+    "docket": "05000352",
+    "plant_name": "Limerick",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2025-06-13",
+    "report_date": "2025-08-12",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Loss of Power to the 1A Reactor Protection System Resulted in Multiple Invalid Primary Containment Isolations"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "Troubleshooting determined the most probable cause to be a spurious trip of an under-frequency relay, 81-CY24801, for a supply circuit breaker to the 1A RPS 120 VAC Distribution Panel. Failure analysis was unable to determine a definitive cause for the spurious operation.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "spurious relay actuation, undetermined root cause",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 352-2025-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "352-2025-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:352-2025-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Limerick Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000352",
+      "match_key": "Unit:05000352"
+    },
+    {
+      "id": "cause",
+      "display_name": "Undetermined / TBD",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "spurious relay actuation, undetermined root cause",
+      "proximate_text": "Troubleshooting determined the most probable cause to be a spurious trip of an under-frequency relay, 81-CY24801, for a supply circuit breaker to the 1A RPS 120 VAC Distribution Panel. Failure analysis was unable to determine a definitive cause for the spurious operation.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_jc",
+      "display_name": "Plant Protection System (Reactor Protection System)",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected system",
+      "match_key": "System:JC"
+    },
+    {
+      "id": "c_panel",
+      "display_name": "1A RPS 120 VAC Distribution Panel",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "1A RPS 120 VAC Distribution Panel",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:1a-rps-120-vac-distribution-panel"
+    },
+    {
+      "id": "c_breaker",
+      "display_name": "Supply circuit breaker to 1A RPS 120 VAC Distribution Panel",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:supply-circuit-breaker-to-1a-rps-120-vac-distribution-panel"
+    },
+    {
+      "id": "c_relay",
+      "display_name": "Under-frequency relay 81-CY24801",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "RLY",
+      "identifier": "81-CY24801",
+      "model": null,
+      "manufacturer_code": "A500",
+      "inferred_code": false,
+      "match_key": "Component:RLY|81-CY24801"
+    },
+    {
+      "id": "fm_spurious_trip",
+      "display_name": "Spurious trip of under-frequency relay",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Under-frequency relay 81-CY24801 spuriously tripped, opening the supply circuit breaker.",
+      "match_key": "FailureMode:spurious-trip-of-under-frequency-relay"
+    },
+    {
+      "id": "fm_breaker_open",
+      "display_name": "Supply circuit breaker opened",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Circuit breaker for the 1A RPS 120 VAC Distribution Panel tripped open due to spurious relay actuation.",
+      "match_key": "FailureMode:supply-circuit-breaker-opened"
+    },
+    {
+      "id": "fm_loss_power",
+      "display_name": "Loss of power to 1A RPS 120 VAC Distribution Panel",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "1A RPS Distribution Panel lost 120 VAC power.",
+      "match_key": "FailureMode:loss-of-power-to-1a-rps-120-vac-distribution-panel"
+    },
+    {
+      "id": "fm_half_scram",
+      "display_name": "1A RPS half scram and MSIV half isolation signal",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Loss of power generated a 1A RPS half scram and MSIV half isolation signal.",
+      "match_key": "FailureMode:1a-rps-half-scram-and-msiv-half-isolation-signal"
+    },
+    {
+      "id": "cons_isolations",
+      "display_name": "Multiple invalid primary containment isolations and SGTS train start",
+      "properties": {
+        "systems_isolated": [
+          "Drywell Chilled Water (DWCW)",
+          "Reactor Enclosure Cooling Water (RECW)",
+          "Primary Containment Instrument Gas (PCIG)",
+          "Reactor Water Cleanup (RWCU)",
+          "Containment Leak Detection",
+          "Drywell Equipment & Floor Sump Drains",
+          "Reactor Enclosure ventilation"
+        ],
+        "sgts_response": "single train started"
+      },
+      "type": "Consequence",
+      "start": "2025-06-13T10:23",
+      "end": "2025-06-14T00:00",
+      "duration": "approx. 1 day (relay replaced next day)",
+      "tz": null,
+      "match_key": "Consequence:multiple-invalid-primary-containment-isolations-and-sgts-train-start"
+    },
+    {
+      "id": "ca_replace_relay",
+      "display_name": "Replace under-frequency relay",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-under-frequency-relay"
+    },
+    {
+      "id": "ca_eval_strategy",
+      "display_name": "Evaluate replacement strategy for under-frequency relay",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:evaluate-replacement-strategy-for-under-frequency-relay"
+    },
+    {
+      "id": "mfr_asea",
+      "display_name": "Asea Inc",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "A500",
+      "match_key": "Manufacturer:A500"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "LER 352-2024-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "352-2024-002-00",
+      "stub": true,
+      "title": "Invalid Actuation Due to a Trip of 1B RPS Circuit Breaker",
+      "plant": "Limerick Generating Station",
+      "match_key": "LER:352-2024-002-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jc",
+      "evidence": null
+    },
+    {
+      "source": "c_relay",
+      "relation": "PART_OF",
+      "target": "c_breaker",
+      "evidence": "relay is for the supply circuit breaker to the 1A RPS panel"
+    },
+    {
+      "source": "c_relay",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_asea",
+      "evidence": null
+    },
+    {
+      "source": "fm_spurious_trip",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_spurious_trip",
+      "relation": "LEADS_TO",
+      "target": "fm_breaker_open",
+      "evidence": null
+    },
+    {
+      "source": "fm_breaker_open",
+      "relation": "LEADS_TO",
+      "target": "fm_loss_power",
+      "evidence": null
+    },
+    {
+      "source": "fm_loss_power",
+      "relation": "LEADS_TO",
+      "target": "fm_half_scram",
+      "evidence": null
+    },
+    {
+      "source": "fm_half_scram",
+      "relation": "LEADS_TO",
+      "target": "cons_isolations",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_relay",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_eval_strategy",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    }
+  ],
+  "chain": "spurious under-frequency relay trip [cause TBD] -> supply circuit breaker opens -> loss of power to 1A RPS 120 VAC Distribution Panel -> 1A RPS half scram / MSIV half isolation signal -> multiple invalid primary containment isolations + single SGTS train start",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code is TBD/provisional per FORM-366; narrative states failure analysis could not determine a definitive cause for the spurious relay operation, so cause node is marked provisional. No backups modeled: no explicit statement of operable backup system during the isolation window; affected systems isolated as designed and were restored after relay replacement, not backed up by an alternate system. Component breaker not given an EIIS code in narrative/block-13; left null per rules."
+}

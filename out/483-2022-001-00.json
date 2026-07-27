@@ -1,0 +1,426 @@
+{
+  "ler_number": "483-2022-001-00",
+  "identity": {
+    "accession_number": "ML22066B310",
+    "docket": "05000483",
+    "plant_name": "Callaway",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2022-01-07",
+    "report_date": "2022-03-07",
+    "operating_mode": null,
+    "power_level": 100,
+    "discovery_context": "inspection",
+    "status": "final",
+    "revision": "00",
+    "ens_number": "55698",
+    "ens_date": "2022-01-07",
+    "ens_time": "1629",
+    "title": "Reactor Trip During Reactor Trip Breaker Surveillance Testing"
+  },
+  "reporting_basis": {
+    "reported_under": [],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The cause of the reactor trip has been determined to be inadequate Operations surveillance procedure guidance regarding verifying re-energization of relay contacts. As appropriate criteria to verify a relay was de-energized existed, but adequate guidance to verify re-energization did not exist, Operations continued the test procedure believing the General Warning signal was no longer present when in fact a set of contacts internal to SSPS 'B' train Master Relay SB032CK524 failed to close/re-energize.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "inadequate surveillance procedure verification guidance leading to relay contact failure to reset going undetected",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 483-2022-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "483-2022-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:483-2022-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Callaway Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000483",
+      "match_key": "Unit:05000483"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "inadequate surveillance procedure verification guidance leading to relay contact failure to reset going undetected",
+      "proximate_text": "The cause of the reactor trip has been determined to be inadequate Operations surveillance procedure guidance regarding verifying re-energization of relay contacts. As appropriate criteria to verify a relay was de-energized existed, but adequate guidance to verify re-energization did not exist, Operations continued the test procedure believing the General Warning signal was no longer present when in fact a set of contacts internal to SSPS 'B' train Master Relay SB032CK524 failed to close/re-energize.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_rps",
+      "display_name": "Reactor Protection System",
+      "properties": {
+        "acronym": "RPS"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:reactor-protection-system"
+    },
+    {
+      "id": "sys_ssps",
+      "display_name": "Solid-State Protection System",
+      "properties": {
+        "acronym": "SSPS"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:solid-state-protection-system"
+    },
+    {
+      "id": "sys_afw",
+      "display_name": "Auxiliary Feedwater System",
+      "properties": {
+        "acronym": "AFW"
+      },
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "actuated as expected per plant design in response to reactor trip",
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "c_relay",
+      "display_name": "SSPS Train B Master Relay SB032CK524",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "SB032CK524",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:ssps-train-b-master-relay-sb032ck524"
+    },
+    {
+      "id": "c_tripbkr_b",
+      "display_name": "Reactor Trip Breaker 'B'",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "Trip Breaker B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:reactor-trip-breaker-b"
+    },
+    {
+      "id": "c_bypassbkr_b",
+      "display_name": "Reactor Trip Breaker Bypass Breaker 'B'",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "Bypass Breaker B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:reactor-trip-breaker-bypass-breaker-b"
+    },
+    {
+      "id": "c_muxswitch",
+      "display_name": "Multiplexer test switch at SB029B",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "SB029B multiplexer test switch",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:multiplexer-test-switch-at-sb029b"
+    },
+    {
+      "id": "fm_procgap",
+      "display_name": "Surveillance procedure lacked adequate verification of relay re-energization",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "OSP-SB-0001B provided criteria to verify relay de-energization but not adequate guidance to verify relay contacts had returned/re-energized to normal state before test restoration continued.",
+      "match_key": "FailureMode:surveillance-procedure-lacked-adequate-verification-of-relay-re-energization"
+    },
+    {
+      "id": "fm_relayfail",
+      "display_name": "Master Relay SB032CK524 contacts failed to close",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "A set of contacts internal to SSPS 'B' train Master Relay SB032CK524 failed to close, though annunciator/indicating light showed the General Warning as clear.",
+      "match_key": "FailureMode:master-relay-sb032ck524-contacts-failed-to-close"
+    },
+    {
+      "id": "fm_secondwarning",
+      "display_name": "Second General Warning signal generated during restoration",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Moving the multiplexer test switch through 'Inhibit' to 'A+B' at SB029B (Step 6.4.45) generated a second General Warning signal, and combined with the undetected failed relay contact, resulted in an unexpected reactor trip.",
+      "match_key": "FailureMode:second-general-warning-signal-generated-during-restoration"
+    },
+    {
+      "id": "cons_trip",
+      "display_name": "Automatic reactor trip",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2022-01-07T12:23",
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:automatic-reactor-trip"
+    },
+    {
+      "id": "ca_greenambertest",
+      "display_name": "Revise Operations surveillance procedures to verify green and amber test lights at panel SB032B(A) prior to multiplexer test switch operation",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-operations-surveillance-procedures-to-verify-green-and-amber-test-lights-at-panel-sb032b-a-prior-to-multiplexer-test-switch-operation"
+    },
+    {
+      "id": "ca_contactverify",
+      "display_name": "Revise Operations and I&C surveillance procedures to verify relay contacts returned to normal state prior to test restoration",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-operations-and-i-c-surveillance-procedures-to-verify-relay-contacts-returned-to-normal-state-prior-to-test-restoration"
+    },
+    {
+      "id": "ca_procprep",
+      "display_name": "Revise procedure preparation process",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-procedure-preparation-process"
+    },
+    {
+      "id": "ca_oe",
+      "display_name": "Improve screening and incorporation of Operating Experience",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:improve-screening-and-incorporation-of-operating-experience"
+    },
+    {
+      "id": "ca_lessonplans",
+      "display_name": "Improve lesson plans",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:improve-lesson-plans"
+    },
+    {
+      "id": "ca_training",
+      "display_name": "Conduct training",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:conduct-training"
+    },
+    {
+      "id": "ca_operatoraids",
+      "display_name": "Place operator aids adjacent to multiplexer test switch",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:place-operator-aids-adjacent-to-multiplexer-test-switch"
+    },
+    {
+      "id": "ca_inspectrelays",
+      "display_name": "Require inspection of other master relays",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:require-inspection-of-other-master-relays"
+    },
+    {
+      "id": "ler_2020_002",
+      "display_name": "LER 483-2020-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "483-2020-002-00",
+      "stub": true,
+      "title": "Reactor Trip and AFW Actuation Following Spurious MFRV Closure",
+      "plant": "Callaway Plant",
+      "match_key": "LER:483-2020-002-00"
+    },
+    {
+      "id": "ler_2020_006",
+      "display_name": "LER 483-2020-006-00",
+      "properties": {},
+      "type": "LER",
+      "key": "483-2020-006-00",
+      "stub": true,
+      "title": "Reactor Trip due to Main Generator Ground Fault",
+      "plant": "Callaway Plant",
+      "match_key": "LER:483-2020-006-00"
+    },
+    {
+      "id": "ler_2020_008",
+      "display_name": "LER 483-2020-008-00",
+      "properties": {},
+      "type": "LER",
+      "key": "483-2020-008-00",
+      "stub": true,
+      "title": "Reactor Trip due to Main Generator Ground Fault",
+      "plant": "Callaway Plant",
+      "match_key": "LER:483-2020-008-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rps",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ssps",
+      "evidence": null
+    },
+    {
+      "source": "c_relay",
+      "relation": "PART_OF",
+      "target": "sys_ssps",
+      "evidence": null
+    },
+    {
+      "source": "fm_procgap",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_procgap",
+      "relation": "LEADS_TO",
+      "target": "fm_relayfail",
+      "evidence": null
+    },
+    {
+      "source": "fm_relayfail",
+      "relation": "LEADS_TO",
+      "target": "fm_secondwarning",
+      "evidence": null
+    },
+    {
+      "source": "fm_secondwarning",
+      "relation": "LEADS_TO",
+      "target": "cons_trip",
+      "evidence": null
+    },
+    {
+      "source": "cons_trip",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_afw",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_greenambertest",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_contactverify",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procprep",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_oe",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_lessonplans",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_training",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_operatoraids",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_inspectrelays",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_2020_002",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_2020_006",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_2020_008",
+      "evidence": null
+    }
+  ],
+  "chain": "inadequate surveillance procedure verification guidance [cause TBD] -> Master Relay SB032CK524 contacts fail to close/re-energize undetected -> second General Warning signal generated during restoration step -> automatic reactor trip [backup AFW actuated as designed]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause_code and category were not provided in FORM-366 FIELDS (marked TBD/provisional); left as-is per rule 4 rather than re-derived from narrative wording, though narrative clearly describes a procedure-adequacy/personnel-performance issue. Reporting-basis citations were garbled/OCR-corrupted in the narrative's block 6 section; inferred standard 10 CFR 50.73(a)(2)(i)(B) and (a)(2)(iv)(A) citations for automatic RPS actuation/reactor trip are typical for this type of event but are best-effort reconstructions from badly OCR-mangled text -- treat with caution. No specific manufacturer, EIIS bracket codes, or component identifiers beyond relay/breaker names were given, so no Manufacturer nodes or eiis_code values were assigned. Feedwater isolation valve erratic indication and one failed intermediate range nuclear instrumentation channel were mentioned as post-trip observations that did not complicate the event; per instructions these were not modeled as separate failure modes in the causal chain since they were not the trip's cause and are noted as inconsequential in the narrative."
+}

@@ -1,0 +1,336 @@
+{
+  "ler_number": "287-2023-001-00",
+  "identity": {
+    "accession_number": "ML23068A470",
+    "docket": "05000287",
+    "plant_name": "Oconee",
+    "unit": 3,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2023-01-08",
+    "report_date": "2023-03-09",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Revision 00 – Condition Prohibited by Technical Specifications due to Isolation Valve Exceeding Inservice Testing Leakage Requirements"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The cause of this event was the presence of foreign material in the valve seat thereby preventing that valve disc from fully closing.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "foreign material intrusion preventing valve closure",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 287-2023-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "287-2023-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:287-2023-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Oconee Unit 3",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000287",
+      "match_key": "Unit:05000287"
+    },
+    {
+      "id": "cause",
+      "display_name": "Foreign material in valve seat (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "foreign material intrusion preventing valve closure",
+      "proximate_text": "The cause of this event was the presence of foreign material in the valve seat thereby preventing that valve disc from fully closing.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_sfc",
+      "display_name": "Spent Fuel Cooling System",
+      "properties": {
+        "note": "provides decay heat removal for spent fuel pool"
+      },
+      "type": "System",
+      "eiis_code": "DA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:DA"
+    },
+    {
+      "id": "sys_sfcp",
+      "display_name": "Spent Fuel Cooling Purification System",
+      "properties": {
+        "note": "subsystem of SFC; provides SFP and BWST purification"
+      },
+      "type": "System",
+      "eiis_code": "DA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:DA"
+    },
+    {
+      "id": "sys_eccs",
+      "display_name": "Emergency Core Cooling System",
+      "properties": {
+        "note": "recirculates RBES fluid post-LOCA; source of potential inter-system leakage"
+      },
+      "type": "System",
+      "eiis_code": "BQ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BQ"
+    },
+    {
+      "id": "c_valve",
+      "display_name": "Manual Isolation Valve 3SF-53",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": "3SF-53",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": true,
+      "match_key": "Component:ISV|3SF-53"
+    },
+    {
+      "id": "fm_foreign",
+      "display_name": "Foreign material lodged in valve seat",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Foreign material impeded the valve disc from fully closing.",
+      "match_key": "FailureMode:foreign-material-lodged-in-valve-seat"
+    },
+    {
+      "id": "fm_leak",
+      "display_name": "Valve disc unable to fully close causing excessive leakage",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Valve 3SF-53 leakage exceeded TS SR 3.7.19.2 leakage requirements.",
+      "match_key": "FailureMode:valve-disc-unable-to-fully-close-causing-excessive-leakage"
+    },
+    {
+      "id": "cons_ts",
+      "display_name": "Condition prohibited by Technical Specifications / valve declared inoperable",
+      "properties": {
+        "note": "valve had not been repositioned since closed on May 17, 2022"
+      },
+      "type": "Consequence",
+      "start": "2022-05-17",
+      "end": "2023-01-08",
+      "duration": "unacceptable leakage existed longer than TS 3.7.19 allowed outage time",
+      "tz": null,
+      "match_key": "Consequence:condition-prohibited-by-technical-specifications-valve-declared-inoperable"
+    },
+    {
+      "id": "ca_disassemble",
+      "display_name": "Disassemble and inspect 3SF-53",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:disassemble-and-inspect-3sf-53"
+    },
+    {
+      "id": "ca_remove_fm",
+      "display_name": "Remove all foreign material from valve internals",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:remove-all-foreign-material-from-valve-internals"
+    },
+    {
+      "id": "ca_inspect_piping",
+      "display_name": "Inspect upstream/downstream piping for foreign material",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:inspect-upstream-downstream-piping-for-foreign-material"
+    },
+    {
+      "id": "ca_clean_rebuild",
+      "display_name": "Clean and rebuild 3SF-53",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:clean-and-rebuild-3sf-53"
+    },
+    {
+      "id": "ca_blue_check",
+      "display_name": "Perform blue check verifying 100% disc/seat contact",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:perform-blue-check-verifying-100-disc-seat-contact"
+    },
+    {
+      "id": "ca_retest",
+      "display_name": "Re-perform TS SR 3.7.19.2 inservice leakage test",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:re-perform-ts-sr-3-7-19-2-inservice-leakage-test"
+    },
+    {
+      "id": "ca_program",
+      "display_name": "Implement programmatic changes to ensure inservice leakage testing completed prior to Mode of Applicability",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:implement-programmatic-changes-to-ensure-inservice-leakage-testing-completed-prior-to-mode-of-applicability"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts37_19",
+      "display_name": "Technical Specification 3.7.19",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-3-7-19"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts37_19",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sfcp",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sfc",
+      "evidence": null
+    },
+    {
+      "source": "c_valve",
+      "relation": "PART_OF",
+      "target": "sys_sfcp",
+      "evidence": null
+    },
+    {
+      "source": "fm_foreign",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_foreign",
+      "relation": "LEADS_TO",
+      "target": "fm_leak",
+      "evidence": null
+    },
+    {
+      "source": "fm_leak",
+      "relation": "LEADS_TO",
+      "target": "cons_ts",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_disassemble",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_remove_fm",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_inspect_piping",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_clean_rebuild",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_blue_check",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_retest",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_program",
+      "evidence": null
+    }
+  ],
+  "chain": "foreign material in valve seat [cause TBD] -> valve disc unable to fully close -> excessive isolation valve leakage exceeding TS SR 3.7.19.2 limits -> condition prohibited by Technical Specifications (unacceptable leakage duration exceeded allowed outage time)",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code is TBD/provisional per FORM-366 fields; narrative attributes cause to foreign material obstruction, not personnel/design/etc. ECCS (BQ/BP) and RCS (AB) are described only as design-basis context for post-LOCA recirculation and inter-system leakage pathways, not as systems directly involved in the event chain, so BQ/BP/AB were not modeled with full node/edge participation beyond noting the ECCS leakage source referenced in the dose analysis; only sys_eccs was added since the narrative directly discusses measured 6 gph ECCS-to-BWST back leakage relevant to the safety analysis. No manufacturer, backup system, or previous similar occurrence (SIMILAR_TO) information was provided — CAP review found no similar events, so no stub LER was created."
+}

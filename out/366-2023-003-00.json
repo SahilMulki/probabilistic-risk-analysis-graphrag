@@ -1,0 +1,160 @@
+{
+  "ler_number": "366-2023-003-00",
+  "identity": {
+    "accession_number": "ML23353A109",
+    "docket": "05000366",
+    "plant_name": "Hatch",
+    "unit": 2,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2023-11-01",
+    "report_date": "2023-12-19",
+    "operating_mode": null,
+    "power_level": 56,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Manual Reactor Trip Due To Loss of Feedwater"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "Cau■a",
+      "system": "X",
+      "component": "SJ",
+      "manufacturer": "p",
+      "reportable": null
+    }
+  ],
+  "cause": {
+    "proximate_text": null,
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Loss of feedwater leading to manual reactor trip",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 366-2023-006-00",
+      "properties": {},
+      "type": "LER",
+      "key": "366-2023-003-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:366-2023-003-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Hatch Unit 2",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000366",
+      "match_key": "Unit:05000366"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Loss of feedwater leading to manual reactor trip",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_fw",
+      "display_name": "Feedwater System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "fm_lofw",
+      "display_name": "Loss of feedwater",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Loss of feedwater flow to the reactor, resulting in a plant condition requiring reactor trip.",
+      "match_key": "FailureMode:loss-of-feedwater"
+    },
+    {
+      "id": "cons_trip",
+      "display_name": "Manual reactor trip",
+      "properties": {
+        "date": "2023-11-01"
+      },
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:manual-reactor-trip"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_fw",
+      "evidence": null
+    },
+    {
+      "source": "fm_lofw",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_lofw",
+      "relation": "LEADS_TO",
+      "target": "cons_trip",
+      "evidence": null
+    }
+  ],
+  "chain": "loss of feedwater [cause TBD] -> manual reactor trip",
+  "golden_questions": [
+    "Q1",
+    "Q3"
+  ],
+  "notes": "No narrative text was provided (366A body empty/absent); reconstruction is limited to the FORM-366 fields and title. Cause code TBD per official field, so cause node marked provisional. Component code 'SJ' from block 13 mapped to Feedwater System per EIIS convention; docket 05000366 corresponds to Turkey Point but plant/unit fields were not populated in the provided FORM-366 fields, so left null per rule to copy authoritative fields verbatim. No detailed failure chain, corrective actions, backups, or manufacturer info could be extracted without narrative content."
+}

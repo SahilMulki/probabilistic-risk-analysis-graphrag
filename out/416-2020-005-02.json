@@ -1,0 +1,383 @@
+{
+  "ler_number": "416-2020-005-02",
+  "identity": {
+    "accession_number": "ML21231A138",
+    "docket": "05000416",
+    "plant_name": "Grand Gulf",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2020-11-06",
+    "report_date": "2021-08-19",
+    "operating_mode": null,
+    "power_level": 84,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "02",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Grand Gulf Nuclear Station, Unit 1 Revised Licensee Event Report 2020- 005-02"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "NIA",
+      "system": "NIA",
+      "component": "NIA",
+      "manufacturer": "NIA",
+      "reportable": null
+    },
+    {
+      "cause": "NIA",
+      "system": "NIA",
+      "component": "NIA",
+      "manufacturer": "NIA",
+      "reportable": null
+    }
+  ],
+  "cause": {
+    "proximate_text": "Entergy Engineering Leadership (Corporate Projects and Site Engineering) made changes to the design of the primary water bushing flow instrumentation loop without fully evaluating the impacts of the changes to the instrumentation feedback quality and existing operating margins to a generator trip.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "inadequate engineering evaluation of design change margins",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 416-2020-005-02",
+      "properties": {},
+      "type": "LER",
+      "key": "416-2020-005-02",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:416-2020-005-02"
+    },
+    {
+      "id": "unit",
+      "display_name": "Grand Gulf Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000416",
+      "match_key": "Unit:05000416"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "inadequate engineering evaluation of design change margins",
+      "proximate_text": "Entergy Engineering Leadership (Corporate Projects and Site Engineering) made changes to the design of the primary water bushing flow instrumentation loop without fully evaluating the impacts of the changes to the instrumentation feedback quality and existing operating margins to a generator trip.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_pw",
+      "display_name": "Primary Water System",
+      "properties": {
+        "note": "cools generator stator, bushings, and rotor"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:primary-water-system"
+    },
+    {
+      "id": "sys_ta",
+      "display_name": "Turbine (TA)",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "TA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:TA"
+    },
+    {
+      "id": "sys_rps",
+      "display_name": "Reactor Protection System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:reactor-protection-system"
+    },
+    {
+      "id": "c_ft",
+      "display_name": "Primary Water Flow Transmitters (Phases A, B, C)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "9 flow transmitters",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:primary-water-flow-transmitters-phases-a-b-c"
+    },
+    {
+      "id": "c_tubing",
+      "display_name": "Primary Water flow instrument tubing",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:primary-water-flow-instrument-tubing"
+    },
+    {
+      "id": "fm_design",
+      "display_name": "Instrumentation loop design change inadequately evaluated",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Design changes to primary water bushing flow instrumentation loop made without fully evaluating impacts to feedback quality and operating margins",
+      "match_key": "FailureMode:instrumentation-loop-design-change-inadequately-evaluated"
+    },
+    {
+      "id": "fm_gasvoid",
+      "display_name": "Gas voids formed in primary water system",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Gas voids in the primary water system degraded generator bushing primary water flow and increased instrument noise",
+      "match_key": "FailureMode:gas-voids-formed-in-primary-water-system"
+    },
+    {
+      "id": "fm_indication",
+      "display_name": "Flow indication drift / increased instrument noise",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "All nine flow transmitters in Phases A, B, C drifted down over 2-3 hours; instrument noise increased significantly; Phase C degraded faster",
+      "match_key": "FailureMode:flow-indication-drift-increased-instrument-noise"
+    },
+    {
+      "id": "fm_lowflowtrip",
+      "display_name": "Bushing C flow signal reached low-flow trip setpoint",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Primary water flow to generator bushing C lowered below trip setpoint (no actual low flow condition existed)",
+      "match_key": "FailureMode:bushing-c-flow-signal-reached-low-flow-trip-setpoint"
+    },
+    {
+      "id": "cons_scram",
+      "display_name": "Automatic generator/turbine trip and reactor scram",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2020-11-06T02:39",
+      "end": null,
+      "duration": null,
+      "tz": "CT",
+      "match_key": "Consequence:automatic-generator-turbine-trip-and-reactor-scram"
+    },
+    {
+      "id": "ca_tubing",
+      "display_name": "Correct flow instrument tubing slope and add backfill valves",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:correct-flow-instrument-tubing-slope-and-add-backfill-valves"
+    },
+    {
+      "id": "ca_damping",
+      "display_name": "Increase primary water flow transmitter damping and trip delay",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:increase-primary-water-flow-transmitter-damping-and-trip-delay"
+    },
+    {
+      "id": "ca_triplower",
+      "display_name": "Lower low bushing flow trip setpoint (27.9 to 25.5 gpm)",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:lower-low-bushing-flow-trip-setpoint-27-9-to-25-5-gpm"
+    },
+    {
+      "id": "ca_alarmraise",
+      "display_name": "Raise primary water bushing flow alarm setpoint (29.8 to 31.5 gpm)",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:raise-primary-water-bushing-flow-alarm-setpoint-29-8-to-31-5-gpm"
+    },
+    {
+      "id": "ca_headtank",
+      "display_name": "Increase primary water head tank level alarm setpoint",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:increase-primary-water-head-tank-level-alarm-setpoint"
+    },
+    {
+      "id": "ca_procedure",
+      "display_name": "Revise EN-HU-104 to require generation risk parameter table and independent review",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-en-hu-104-to-require-generation-risk-parameter-table-and-independent-review"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5072",
+      "display_name": "10 CFR 50.72(b)(2)(iv)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-2-iv-b"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_pw",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ta",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rps",
+      "evidence": null
+    },
+    {
+      "source": "c_ft",
+      "relation": "PART_OF",
+      "target": "sys_pw",
+      "evidence": null
+    },
+    {
+      "source": "c_tubing",
+      "relation": "PART_OF",
+      "target": "sys_pw",
+      "evidence": null
+    },
+    {
+      "source": "fm_design",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_design",
+      "relation": "LEADS_TO",
+      "target": "fm_gasvoid",
+      "evidence": null
+    },
+    {
+      "source": "fm_gasvoid",
+      "relation": "LEADS_TO",
+      "target": "fm_indication",
+      "evidence": null
+    },
+    {
+      "source": "fm_indication",
+      "relation": "LEADS_TO",
+      "target": "fm_lowflowtrip",
+      "evidence": null
+    },
+    {
+      "source": "fm_lowflowtrip",
+      "relation": "LEADS_TO",
+      "target": "cons_scram",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_tubing",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_damping",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_triplower",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_alarmraise",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_headtank",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procedure",
+      "evidence": null
+    }
+  ],
+  "chain": "inadequate engineering evaluation of instrumentation loop design change [cause TBD] -> gas voids in primary water system -> flow indication drift / increased instrument noise -> bushing C flow signal reaches low-flow trip setpoint -> automatic generator/turbine trip and reactor scram",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Form-366 block 13 rows are all 'NIA' (not applicable) and cause_code/category are TBD in the official fields; the narrative provides a root-cause statement but no formal cause code was assigned, so cause node is marked provisional per rule 4. No SSCs were inoperable and no previous similar events were cited (narrative states 'None'), so no SIMILAR_TO edge or stub LER is created. EN 54986 captured as ens_number. Turbine trip is a functional trigger for the scram, not containment, consistent with PART_OF being explicit-only."
+}

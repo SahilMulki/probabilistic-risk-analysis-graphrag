@@ -1,0 +1,319 @@
+{
+  "ler_number": "416-2024-004-00",
+  "identity": {
+    "accession_number": "ML24326A363",
+    "docket": "05000416",
+    "plant_name": "Grand Gulf",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2024-09-24",
+    "report_date": "2024-11-22",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Grand Gulf Nuclear Station, Unit 1 Licensee Event Report 2024-004-00, High Pressure Core Spray Over Frequency Relay Trip"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)(D)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The direct cause of the event was a failure of the HPCS over-frequency relay. The HPCS original system design included an over-frequency relay that is not required. This feature has existed since construction, and its need was not evaluated after HPCS was built without the Level-8 injection valve isolation bypass signal, per the GE system design criteria.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "unneeded legacy over-frequency relay design not re-evaluated",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 416-2024-004-00",
+      "properties": {},
+      "type": "LER",
+      "key": "416-2024-004-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:416-2024-004-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Grand Gulf Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000416",
+      "match_key": "Unit:05000416"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "unneeded legacy over-frequency relay design not re-evaluated",
+      "proximate_text": "The direct cause of the event was a failure of the HPCS over-frequency relay. The HPCS original system design included an over-frequency relay that is not required. This feature has existed since construction, and its need was not evaluated after HPCS was built without the Level-8 injection valve isolation bypass signal, per the GE system design criteria.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_hpcs",
+      "display_name": "High Pressure Core Spray",
+      "properties": {
+        "note": "ECCS; acronym HPCS used in narrative, no bracket code given"
+      },
+      "type": "System",
+      "eiis_code": "BG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BG"
+    },
+    {
+      "id": "sys_edg3",
+      "display_name": "Division III Emergency Diesel Generator",
+      "properties": {
+        "note": "supports HPCS; started and loaded safety bus as expected"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:division-iii-emergency-diesel-generator"
+    },
+    {
+      "id": "c_relay",
+      "display_name": "HPCS over-frequency relay (17 AC-181)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "17 AC-181",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:hpcs-over-frequency-relay-17-ac-181"
+    },
+    {
+      "id": "c_breaker",
+      "display_name": "HPCS pump breaker",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:hpcs-pump-breaker"
+    },
+    {
+      "id": "c_capacitor",
+      "display_name": "Over-frequency relay capacitor",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:over-frequency-relay-capacitor"
+    },
+    {
+      "id": "fm_relayfail",
+      "display_name": "HPCS over-frequency relay failed",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The over-frequency relay, an unneeded legacy feature, failed and caused a spurious trip signal.",
+      "match_key": "FailureMode:hpcs-over-frequency-relay-failed"
+    },
+    {
+      "id": "fm_breakertrip",
+      "display_name": "HPCS pump breaker tripped immediately after loading",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The HPCS pump breaker tripped immediately after the Division III EDG started and loaded the safety bus.",
+      "match_key": "FailureMode:hpcs-pump-breaker-tripped-immediately-after-loading"
+    },
+    {
+      "id": "cons_hpcs",
+      "display_name": "Potential loss of HPCS safety function",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2024-09-24",
+      "end": "2024-09-24",
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:potential-loss-of-hpcs-safety-function"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace HPCS over-frequency relay",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-hpcs-over-frequency-relay"
+    },
+    {
+      "id": "ca_fmea",
+      "display_name": "Perform Failure Modes Analysis and Root Cause Evaluation",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:perform-failure-modes-analysis-and-root-cause-evaluation"
+    },
+    {
+      "id": "ca_pm",
+      "display_name": "Revise preventative maintenance to include capacitor checks per EPRI guidance",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-preventative-maintenance-to-include-capacitor-checks-per-epri-guidance"
+    },
+    {
+      "id": "ca_calproc",
+      "display_name": "Revise over-frequency calibration procedure to require matched capacitor on relay installation",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-over-frequency-calibration-procedure-to-require-matched-capacitor-on-relay-installation"
+    },
+    {
+      "id": "ca_remove",
+      "display_name": "Remove over-frequency relay protection (17 AC-181) from HPCS motor protection circuit",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:remove-over-frequency-relay-protection-17-ac-181-from-hpcs-motor-protection-circuit"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "LER 416-2024-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "416-2024-001-00",
+      "stub": true,
+      "title": "High Pressure Core Spray Inoperable due to Minimum Flow Valve Failure to Close",
+      "plant": "Grand Gulf Nuclear Station",
+      "match_key": "LER:416-2024-001-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_hpcs",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_edg3",
+      "evidence": null
+    },
+    {
+      "source": "c_relay",
+      "relation": "PART_OF",
+      "target": "c_breaker",
+      "evidence": null
+    },
+    {
+      "source": "fm_relayfail",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_relayfail",
+      "relation": "LEADS_TO",
+      "target": "fm_breakertrip",
+      "evidence": null
+    },
+    {
+      "source": "fm_breakertrip",
+      "relation": "LEADS_TO",
+      "target": "cons_hpcs",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_fmea",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_pm",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_calproc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_remove",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    }
+  ],
+  "chain": "unneeded legacy over-frequency relay design [cause TBD] -> relay failure -> HPCS pump breaker trips on EDG loading -> potential loss of HPCS safety function [alternate ECCS systems available]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code TBD/category provisional copied verbatim from FORM-366 fields per rule 4; no official cause code was assigned in Block 13 (empty array in source). PART_OF edge asserted for relay->breaker since narrative describes relay as part of HPCS motor protection circuit within the breaker's protection scheme (17 AC-181 removed 'from the HPCS motor protection circuit', implying it's a subcomponent of that circuit/breaker protection). No explicit backup system named as operable during the test window beyond generic statement 'alternate ECCS systems were available' -- not specific enough to name individual System nodes per rule 6, so captured only in chain/consequence properties, not as BACKED_UP_BY edges to unnamed systems. Previous LER key kept exactly as stated in narrative ('24-001-00') per rule 9, expressed with leading unit digit as '1-2024-001-00' to match the required format pattern while preserving the reported numbering."
+}

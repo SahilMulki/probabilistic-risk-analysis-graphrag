@@ -1,0 +1,391 @@
+{
+  "ler_number": "369-2021-001-00",
+  "identity": {
+    "accession_number": "ML21315A006",
+    "docket": "05000369",
+    "plant_name": "McGuire",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2021-09-13",
+    "report_date": "2021-11-10",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": "023973",
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Duke Energy Carolinas, LLC McGuire Nuclear Station, Unit 2 Docket No. 05000370 Renewed License No. NPF-9, NPF-17 Licensee Event Report 2021-01 , Revision 0 Nuclear Condition Report Number 02397398"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)",
+      "10 CFR 50.73(a)(2)(iv)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "B",
+      "system": "JE",
+      "component": null,
+      "manufacturer": null,
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "the cause was determined to be a latent design error which introduced an unrecognized design margin vulnerability within the load sequencer BO circuitry; the sequencing between the SI blocking reset and BO circuitry reset only provided approximately 5 milliseconds of margin",
+    "cause_code": "B",
+    "category": "Design/Manufacturing/Installation",
+    "theme": "replacement timer part introduced timing margin loss in safety logic",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 370-2021-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "369-2021-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:369-2021-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "McGuire Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000369",
+      "match_key": "Unit:05000369"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Manufacturing/Installation (B)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "B",
+      "category": "Design/Manufacturing/Installation",
+      "theme": "replacement timer part introduced timing margin loss in safety logic",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Design/Manufacturing/Installation"
+    },
+    {
+      "id": "sys_je",
+      "display_name": "Engineered Safety Feature Actuation System / Diesel Generator Load Sequencer",
+      "properties": {
+        "unit_id": "EQB"
+      },
+      "type": "System",
+      "eiis_code": "JE",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JE"
+    },
+    {
+      "id": "sys_ek",
+      "display_name": "Diesel Generator Control System",
+      "properties": {
+        "unit_id": "EQC"
+      },
+      "type": "System",
+      "eiis_code": "EK",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected; 2B DG involved",
+      "match_key": "System:EK"
+    },
+    {
+      "id": "sys_ba",
+      "display_name": "Auxiliary Feedwater System",
+      "properties": {
+        "unit_id": "CA"
+      },
+      "type": "System",
+      "eiis_code": "BA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected; inadvertently actuated",
+      "match_key": "System:BA"
+    },
+    {
+      "id": "c_timer",
+      "display_name": "D87 Timer (Curtiss-Wright replacement)",
+      "properties": {
+        "original_part": "Cutler-Hammer D87 (instantaneous, no delay)",
+        "replacement_part": "Curtiss-Wright D87 (~15 ms delay)"
+      },
+      "type": "Component",
+      "eiis_code": "TRB3T",
+      "identifier": "D87",
+      "model": "Curtiss-Wright D87",
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:TRB3T|D87"
+    },
+    {
+      "id": "c_2etb",
+      "display_name": "2ETB Essential 4160 Volt Switchgear",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "2ETB",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:2etb-essential-4160-volt-switchgear"
+    },
+    {
+      "id": "c_afwpump",
+      "display_name": "2B Motor Driven AFW Pump",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "2B MD AFW Pump",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:2b-motor-driven-afw-pump"
+    },
+    {
+      "id": "c_steamvalves",
+      "display_name": "Turbine Driven AFW Steam Supply Valves 2SA-48ABC/2SA-49AB",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "2SA-48ABC, 2SA-49AB",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:turbine-driven-afw-steam-supply-valves-2sa-48abc-2sa-49ab"
+    },
+    {
+      "id": "fm_margin",
+      "display_name": "Insufficient design margin (~5 ms) between SI blocking reset and BO circuitry reset",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Replacement D87 timer's ~15 ms pickup delay eliminated intended margin between SI block reset and BO circuitry reset.",
+      "match_key": "FailureMode:insufficient-design-margin-5-ms-between-si-blocking-reset-and-bo-circuitry-reset"
+    },
+    {
+      "id": "fm_bo_actuation",
+      "display_name": "BO logic inadvertently actuated during load sequencer reset",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "During reset of the 2B DG Load Sequencer following SI-only and SI-concurrent-with-BO test portions, the blackout logic was inadvertently satisfied and sealed in.",
+      "match_key": "FailureMode:bo-logic-inadvertently-actuated-during-load-sequencer-reset"
+    },
+    {
+      "id": "fm_2etb_deenergized",
+      "display_name": "2ETB Switchgear de-energized / load shed",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Inadvertent BO circuitry actuation de-energized the 2ETB Switchgear which sealed in the load sequencer BO logic and load shed the switchgear.",
+      "match_key": "FailureMode:2etb-switchgear-de-energized-load-shed"
+    },
+    {
+      "id": "cons_ac",
+      "display_name": "Unplanned actuation of 2B Emergency AC Electrical Power System",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2021-09-13T00:11",
+      "end": null,
+      "duration": null,
+      "tz": "local",
+      "match_key": "Consequence:unplanned-actuation-of-2b-emergency-ac-electrical-power-system"
+    },
+    {
+      "id": "cons_afw",
+      "display_name": "Unplanned actuation of 2B Auxiliary Feedwater System",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2021-09-12T22:16",
+      "end": null,
+      "duration": null,
+      "tz": "local",
+      "match_key": "Consequence:unplanned-actuation-of-2b-auxiliary-feedwater-system"
+    },
+    {
+      "id": "ca_ec420097",
+      "display_name": "EC 420097: add reset relay EB(RRB) contact to blackout circuitry, implemented on 2A/2B DG Load Sequencers",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:ec-420097-add-reset-relay-eb-rrb-contact-to-blackout-circuitry-implemented-on-2a-2b-dg-load-sequencers"
+    },
+    {
+      "id": "ca_ec420121",
+      "display_name": "EC 420121: implement equivalent design fix on Unit 1 (1A/1B) DG Load Sequencers",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:ec-420121-implement-equivalent-design-fix-on-unit-1-1a-1b-dg-load-sequencers"
+    },
+    {
+      "id": "ca_compensatory",
+      "display_name": "Compensatory action: open/re-close load sequencer control power breaker instead of pressing reset pushbutton (Unit 1, until EC 420121)",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:compensatory-action-open-re-close-load-sequencer-control-power-breaker-instead-of-pressing-reset-pushbutton-unit-1-until-ec-420121"
+    },
+    {
+      "id": "rr_5072",
+      "display_name": "10 CFR 50.72(b)(3)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-3-iv-a"
+    },
+    {
+      "id": "rr_507304a",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_507304b",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-b"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_507304a",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_507304b",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_je",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ek",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ba",
+      "evidence": null
+    },
+    {
+      "source": "c_timer",
+      "relation": "PART_OF",
+      "target": "sys_je",
+      "evidence": null
+    },
+    {
+      "source": "c_2etb",
+      "relation": "PART_OF",
+      "target": "sys_ek",
+      "evidence": null
+    },
+    {
+      "source": "c_afwpump",
+      "relation": "PART_OF",
+      "target": "sys_ba",
+      "evidence": null
+    },
+    {
+      "source": "c_steamvalves",
+      "relation": "PART_OF",
+      "target": "sys_ba",
+      "evidence": null
+    },
+    {
+      "source": "fm_margin",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_margin",
+      "relation": "LEADS_TO",
+      "target": "fm_bo_actuation",
+      "evidence": null
+    },
+    {
+      "source": "fm_bo_actuation",
+      "relation": "LEADS_TO",
+      "target": "fm_2etb_deenergized",
+      "evidence": null
+    },
+    {
+      "source": "fm_2etb_deenergized",
+      "relation": "LEADS_TO",
+      "target": "cons_ac",
+      "evidence": null
+    },
+    {
+      "source": "fm_bo_actuation",
+      "relation": "LEADS_TO",
+      "target": "cons_afw",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_ec420097",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_ec420121",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_compensatory",
+      "evidence": null
+    }
+  ],
+  "chain": "replacement D87 timer introduces ~15ms delay, eliminating design margin [cause B] -> BO logic inadvertently actuates during load sequencer reset -> 2ETB switchgear de-energized/load shed -> unplanned actuation of 2B Emergency AC Electrical Power System; in parallel BO actuation -> unplanned actuation of 2B AFW System (steam supply valves open, MD AFW pump loaded)",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Two parallel consequences (AC power system actuation and AFW system actuation) both trace to the same BO logic inadvertent actuation failure mode, occurring on two separate test portions (SI-only on 9/13 causing switchgear de-energization; SI-concurrent-with-BO on 9/12 causing AFW steam valve actuation only, since 2ETB was already being fed by the 2B DG). No previous similar occurrence LER was identified per the narrative ('No previous similar events were identified within the past five years'), so no stub LER/SIMILAR_TO edge was created. Turbine-driven AFW pump was not itself actuated (design blocks it during coincident SI), so only steam supply valves and the motor-driven AFW pump are modeled as affected AFW components. EK and BA systems are modeled because the event directly involved/actuated them, not merely as design-context mentions."
+}

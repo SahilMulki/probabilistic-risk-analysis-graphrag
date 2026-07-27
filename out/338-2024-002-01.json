@@ -1,0 +1,372 @@
+{
+  "ler_number": "338-2024-002-01",
+  "identity": {
+    "accession_number": "ML25043A286",
+    "docket": "05000338",
+    "plant_name": "North Anna",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2024-10-09",
+    "report_date": "2025-02-12",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "IH EDG Failure to Achieve Rated Speed / Frequency During Surveillance Testing"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "X",
+      "system": "EK",
+      "component": "ss",
+      "manufacturer": "W290",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The identified primary cause is the organizational weakness to recognize the significance in documenting and monitoring position-able controls for Woodward governor-controlled components... a Human Performance concern exists within the self-check process (STAR). Proper self-check would have prevented the component misposition.",
+    "cause_code": "X",
+    "category": "Other",
+    "theme": "organizational weakness in documenting/monitoring position-able governor controls; self-check (STAR) breakdown",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 338-2024-002-01",
+      "properties": {},
+      "type": "LER",
+      "key": "338-2024-002-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:338-2024-002-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "North Anna Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000338",
+      "match_key": "Unit:05000338"
+    },
+    {
+      "id": "cause",
+      "display_name": "Other (X)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "X",
+      "category": "Other",
+      "theme": "organizational weakness in documenting/monitoring position-able governor controls; self-check (STAR) breakdown",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Other"
+    },
+    {
+      "id": "sys_ek",
+      "display_name": "Emergency Diesel Generator System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "EK",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected system; 1H EDG",
+      "match_key": "System:EK"
+    },
+    {
+      "id": "c_dg",
+      "display_name": "1H Emergency Diesel Generator",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "DG",
+      "identifier": "1H",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:DG|1H"
+    },
+    {
+      "id": "c_mech_gov",
+      "display_name": "Mechanical Governor (backup control unit, Woodward)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": "W290",
+      "inferred_code": false,
+      "match_key": "Component:mechanical-governor-backup-control-unit-woodward"
+    },
+    {
+      "id": "c_elec_gov",
+      "display_name": "Electronic Governor (primary control unit)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:electronic-governor-primary-control-unit"
+    },
+    {
+      "id": "c_vernier",
+      "display_name": "Mechanical Governor Speed Control Vernier",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:mechanical-governor-speed-control-vernier"
+    },
+    {
+      "id": "c_switch",
+      "display_name": "EMER GEN 1H SPEED/LOAD CONTROL Switch",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:emer-gen-1h-speed-load-control-switch"
+    },
+    {
+      "id": "fm_org_weakness",
+      "display_name": "Organizational weakness in documenting/monitoring position-able governor controls",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Position-able controls not alarmed, no immediately identifiable system response while in standby; missed opportunity to routinely validate settings.",
+      "match_key": "FailureMode:organizational-weakness-in-documenting-monitoring-position-able-governor-controls"
+    },
+    {
+      "id": "fm_selfcheck",
+      "display_name": "Self-check (STAR) process breakdown",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Human performance concern within the self-check process; proper self-check would have prevented the component misposition.",
+      "match_key": "FailureMode:self-check-star-process-breakdown"
+    },
+    {
+      "id": "fm_vernier_mispositioned",
+      "display_name": "Mechanical governor vernier mispositioned",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Vernier found at 18.74 versus desired setting of 20.96, causing mechanical governor to control engine speed below the electronic governor's 900 RPM setpoint.",
+      "match_key": "FailureMode:mechanical-governor-vernier-mispositioned"
+    },
+    {
+      "id": "fm_speed_uncontrolled",
+      "display_name": "1H EDG unable to be controlled to rated speed/frequency",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Engine operating at 880 RPM / 58.5 Hz instead of rated 900 RPM / 60 Hz; control room team unable to control speed via EMER GEN 1H SPEED/LOAD CONTROL switch.",
+      "match_key": "FailureMode:1h-edg-unable-to-be-controlled-to-rated-speed-frequency"
+    },
+    {
+      "id": "cons_edg_inop",
+      "display_name": "1H EDG operating outside Tech Spec/UFSAR limits; declared inoperable and secured",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2024-10-09T13:15",
+      "end": null,
+      "duration": null,
+      "tz": "local",
+      "match_key": "Consequence:1h-edg-operating-outside-tech-spec-ufsar-limits-declared-inoperable-and-secured"
+    },
+    {
+      "id": "ca_vernier_reset",
+      "display_name": "Return vernier to correct setting and successfully perform 1-PT-82.2A",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:return-vernier-to-correct-setting-and-successfully-perform-1-pt-82-2a"
+    },
+    {
+      "id": "ca_dla",
+      "display_name": "Dynamic Learning Activity to determine extent of Operator Self-Check/STAR effectiveness",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:dynamic-learning-activity-to-determine-extent-of-operator-self-check-star-effectiveness"
+    },
+    {
+      "id": "ca_pga",
+      "display_name": "Performance Gap Analysis based on DLA results",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:performance-gap-analysis-based-on-dla-results"
+    },
+    {
+      "id": "ca_monitoring",
+      "display_name": "Increased monitoring for EDG speed settings; permanent changes to Operator Rounds",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:increased-monitoring-for-edg-speed-settings-permanent-changes-to-operator-rounds"
+    },
+    {
+      "id": "ca_procedure",
+      "display_name": "Revise EDG procedures to document Governor Vernier setting in post-operational checklist, extended to TDAFW Pumps and Station Blackout Diesel governors",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-edg-procedures-to-document-governor-vernier-setting-in-post-operational-checklist-extended-to-tdafw-pumps-and-station-blackout-diesel-governors"
+    },
+    {
+      "id": "mfr_woodward",
+      "display_name": "Woodward",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "W290",
+      "match_key": "Manufacturer:W290"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ufsar",
+      "display_name": "UFSAR / Technical Specifications minimum setpoints",
+      "properties": {
+        "type": "analysis-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ufsar-technical-specifications-minimum-setpoints"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ek",
+      "evidence": null
+    },
+    {
+      "source": "c_dg",
+      "relation": "PART_OF",
+      "target": "sys_ek",
+      "evidence": null
+    },
+    {
+      "source": "c_mech_gov",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_woodward",
+      "evidence": null
+    },
+    {
+      "source": "fm_org_weakness",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_org_weakness",
+      "relation": "LEADS_TO",
+      "target": "fm_selfcheck",
+      "evidence": null
+    },
+    {
+      "source": "fm_selfcheck",
+      "relation": "LEADS_TO",
+      "target": "fm_vernier_mispositioned",
+      "evidence": null
+    },
+    {
+      "source": "fm_vernier_mispositioned",
+      "relation": "LEADS_TO",
+      "target": "fm_speed_uncontrolled",
+      "evidence": null
+    },
+    {
+      "source": "fm_speed_uncontrolled",
+      "relation": "LEADS_TO",
+      "target": "cons_edg_inop",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_vernier_reset",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_dla",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_pga",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_monitoring",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procedure",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ufsar",
+      "evidence": null
+    }
+  ],
+  "chain": "organizational weakness in documenting/monitoring position-able governor controls [cause X] -> self-check (STAR) process breakdown -> mechanical governor vernier mispositioned (18.74 vs 20.96) -> 1H EDG speed uncontrolled at 880 RPM/58.5 Hz -> EDG inoperable, secured (below TS/UFSAR setpoints)",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code X ('Other') governs category per official coding despite narrative emphasizing organizational/human-performance themes; theme field captures narrative nuance. No previous similar occurrence LER referenced (Section 7.0 'Similar Events' is blank), so no stub LER/SIMILAR_TO edge emitted. No backup system named as operable during the inoperability window in the narrative (electronic governor is design-basis primary control, not a stated operable backup during this specific failure since the mechanical governor itself was the failed component in control) -> no BACKED_UP_BY edge asserted. EDG rated continuous load current comparison in Section 2.0 is safety-significance analysis, not a separate corrective action or system."
+}

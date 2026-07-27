@@ -1,0 +1,348 @@
+{
+  "ler_number": "416-2020-006-02",
+  "identity": {
+    "accession_number": "ML21231A139",
+    "docket": "05000416",
+    "plant_name": "Grand Gulf",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2020-12-11",
+    "report_date": "2021-08-19",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "02",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Grand Gulf Nuclear Station, Unit 1 Revised Licensee Event Report 2020- 006-02"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "while adding makeup water to the primary water system, the Turbine Building Operator misdiagnosed the response of the Leakage Water Return Valve and closed the valve manually. This prevented transfer of makeup water from the standpipe to the Primary Water tank... which led to a Main Turbine/Generator trip and Reactor Scram.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "operator misdiagnosis of valve response combined with unclear engineering-change design logic",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 416-2020-006-02",
+      "properties": {},
+      "type": "LER",
+      "key": "416-2020-006-02",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:416-2020-006-02"
+    },
+    {
+      "id": "unit",
+      "display_name": "Grand Gulf Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000416",
+      "match_key": "Unit:05000416"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "operator misdiagnosis of valve response combined with unclear engineering-change design logic",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_ta",
+      "display_name": "Main Turbine/Generator",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "TA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:TA"
+    },
+    {
+      "id": "sys_pw",
+      "display_name": "Primary Water System",
+      "properties": {
+        "note": "non-radioactive ultra-purified water circulated to cool generator stator, bushings, rotor"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:primary-water-system"
+    },
+    {
+      "id": "sys_rps",
+      "display_name": "Reactor Protection System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:reactor-protection-system"
+    },
+    {
+      "id": "c_lwrv",
+      "display_name": "Leakage Water Return Valve",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:leakage-water-return-valve"
+    },
+    {
+      "id": "fm_design",
+      "display_name": "Leakage Water Return Valve control logic design not fully understood",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Engineering Change EC 72780 (Turbine Control Protection System - Non-Safety) established control logic for the valve that was not fully understood and had unintended operational impacts, reducing operational margin.",
+      "match_key": "FailureMode:leakage-water-return-valve-control-logic-design-not-fully-understood"
+    },
+    {
+      "id": "fm_misdiagnose",
+      "display_name": "Operator misdiagnosed valve response and manually closed valve",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Turbine Building Operator, adding makeup water to the primary water system, misdiagnosed the response of the Leakage Water Return Valve and closed it manually.",
+      "match_key": "FailureMode:operator-misdiagnosed-valve-response-and-manually-closed-valve"
+    },
+    {
+      "id": "fm_knowledge",
+      "display_name": "Operating crew lacked adequate knowledge of Primary Water System",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Operating crew lacked adequate knowledge of the Primary Water System to control and stabilize the leakage water standpipe level.",
+      "match_key": "FailureMode:operating-crew-lacked-adequate-knowledge-of-primary-water-system"
+    },
+    {
+      "id": "fm_notransfer",
+      "display_name": "Makeup water transfer to Primary Water tank prevented",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Manual closure of the valve prevented transfer of makeup water from the standpipe to the Primary Water tank.",
+      "match_key": "FailureMode:makeup-water-transfer-to-primary-water-tank-prevented"
+    },
+    {
+      "id": "fm_lowlevel",
+      "display_name": "Low primary water tank level signal",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Loss of makeup water transfer resulted in low primary water tank level, generating an automatic trip signal.",
+      "match_key": "FailureMode:low-primary-water-tank-level-signal"
+    },
+    {
+      "id": "fm_turbinetrip",
+      "display_name": "Automatic generator and turbine trip",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Low primary water tank level signal caused automatic generator and turbine trip.",
+      "match_key": "FailureMode:automatic-generator-and-turbine-trip"
+    },
+    {
+      "id": "cons_scram",
+      "display_name": "Automatic Reactor Scram / RPS actuation",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2020-12-11T12:04",
+      "end": "2020-12-13",
+      "duration": "~2 days hot shutdown",
+      "tz": "CT",
+      "match_key": "Consequence:automatic-reactor-scram-rps-actuation"
+    },
+    {
+      "id": "ca_standing_order",
+      "display_name": "Issue Standing Order detailing oversight for plant manipulations",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:issue-standing-order-detailing-oversight-for-plant-manipulations"
+    },
+    {
+      "id": "ca_procedure_revision",
+      "display_name": "Revise Primary Water system operating instruction with specific instructions for local manual standpipe level control",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-primary-water-system-operating-instruction-with-specific-instructions-for-local-manual-standpipe-level-control"
+    },
+    {
+      "id": "ca_enhu104",
+      "display_name": "Revise EN-HU-104 Technical Task Risk and Rigor procedure to require detailed risk-parameter table for high generation-risk engineering changes",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-en-hu-104-technical-task-risk-and-rigor-procedure-to-require-detailed-risk-parameter-table-for-high-generation-risk-engineering-changes"
+    },
+    {
+      "id": "ca_training",
+      "display_name": "Update long-range training plans for Primary Water System",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:update-long-range-training-plans-for-primary-water-system"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5072",
+      "display_name": "10 CFR 50.72(b)(2)(iv)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-2-iv-b"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ta",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_pw",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rps",
+      "evidence": null
+    },
+    {
+      "source": "c_lwrv",
+      "relation": "PART_OF",
+      "target": "sys_pw",
+      "evidence": null
+    },
+    {
+      "source": "fm_design",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_design",
+      "relation": "LEADS_TO",
+      "target": "fm_misdiagnose",
+      "evidence": null
+    },
+    {
+      "source": "fm_knowledge",
+      "relation": "LEADS_TO",
+      "target": "fm_misdiagnose",
+      "evidence": null
+    },
+    {
+      "source": "fm_misdiagnose",
+      "relation": "LEADS_TO",
+      "target": "fm_notransfer",
+      "evidence": null
+    },
+    {
+      "source": "fm_notransfer",
+      "relation": "LEADS_TO",
+      "target": "fm_lowlevel",
+      "evidence": null
+    },
+    {
+      "source": "fm_lowlevel",
+      "relation": "LEADS_TO",
+      "target": "fm_turbinetrip",
+      "evidence": null
+    },
+    {
+      "source": "fm_turbinetrip",
+      "relation": "LEADS_TO",
+      "target": "cons_scram",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_standing_order",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procedure_revision",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_enhu104",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_training",
+      "evidence": null
+    }
+  ],
+  "chain": "unclear EC 72780 valve-logic design [root cause] + inadequate crew knowledge of Primary Water System [root cause] -> operator misdiagnosed Leakage Water Return Valve response and closed it manually -> makeup water transfer to Primary Water tank prevented -> low primary water tank level signal -> automatic generator/turbine trip -> automatic Reactor Scram (hot shutdown ~2 days)",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code is TBD/provisional per FORM-366 fields; narrative describes two root causes (engineering-change design logic not fully understood, and inadequate operator knowledge of Primary Water System) plus a direct cause (operator misdiagnosis/manual valve closure) modeled as separate FailureMode nodes feeding into the misdiagnosis step. No SSCs were inoperable and no previous similar events were cited (narrative states 'None'), so no SIMILAR_TO stub LER was created. No backup systems were stated as operable during the event for this reactor-trip scenario, so no BACKED_UP_BY edges were added."
+}

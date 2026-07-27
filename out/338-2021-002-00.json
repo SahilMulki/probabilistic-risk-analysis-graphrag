@@ -1,0 +1,331 @@
+{
+  "ler_number": "338-2021-002-00",
+  "identity": {
+    "accession_number": "ML22035A167",
+    "docket": "05000338",
+    "plant_name": "North Anna",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2021-07-22",
+    "report_date": "2021-09-17",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2021-002-00 for North Anna Power Station, Unit 1 and 2, Unanalyzed Condition Due to App R Concerns with Cable Separation"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(ii)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "Appendix R Safe Shutdown Analysis identified a cable separation vulnerability involving the control cables associated with the EDG output breakers and Emergency Bus normal and alternate feeder breakers, creating an unanalyzed condition affecting a loss of all AC power scenario",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Appendix R cable separation / design vulnerability",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 338-2021-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "338-2021-002-00",
+      "stub": false,
+      "title": "Unanalyzed Condition Due to App R Concerns with Cable Separation",
+      "plant": null,
+      "match_key": "LER:338-2021-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "North Anna Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000338",
+      "match_key": "Unit:05000338"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Appendix R cable separation / design vulnerability",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_electrical",
+      "display_name": "Emergency Diesel Generator / Emergency Bus electrical distribution",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "affected; unanalyzed cable routing",
+      "match_key": "System:emergency-diesel-generator-emergency-bus-electrical-distribution"
+    },
+    {
+      "id": "sys_ba",
+      "display_name": "Auxiliary Feedwater",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup guidance; operable",
+      "match_key": "System:BA"
+    },
+    {
+      "id": "c_edg_bkr",
+      "display_name": "EDG output breaker control cables",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "EDG output breaker control cables",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:edg-output-breaker-control-cables"
+    },
+    {
+      "id": "c_bus_bkr",
+      "display_name": "Emergency Bus normal and alternate feeder breaker control cables",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "Emergency Bus normal/alternate feeder breaker control cables",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:emergency-bus-normal-and-alternate-feeder-breaker-control-cables"
+    },
+    {
+      "id": "c_tdafw_pump",
+      "display_name": "Turbine Driven Auxiliary Feedwater Pump",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "P",
+      "identifier": "TDAFW Pump",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:P|TDAFW Pump"
+    },
+    {
+      "id": "fm_cable_sep",
+      "display_name": "Inadequate cable separation between EDG output and Emergency Bus feeder breaker control cables",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Control cables associated with EDG output breakers and Emergency Bus normal/alternate feeder breakers did not meet Appendix R separation requirements",
+      "match_key": "FailureMode:inadequate-cable-separation-between-edg-output-and-emergency-bus-feeder-breaker-control-cables"
+    },
+    {
+      "id": "fm_unanalyzed",
+      "display_name": "Vulnerability during loss of all AC power scenario",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Cable separation deficiency creates a vulnerability that could affect the ability to achieve safe shutdown during a loss of all AC power event, per Appendix R Safe Shutdown Analysis",
+      "match_key": "FailureMode:vulnerability-during-loss-of-all-ac-power-scenario"
+    },
+    {
+      "id": "cons_unanalyzed",
+      "display_name": "Unanalyzed condition identified; RAS implemented pending design modification",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2021-07-22",
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:unanalyzed-condition-identified-ras-implemented-pending-design-modification"
+    },
+    {
+      "id": "ca_ras",
+      "display_name": "Develop Reasonable Assurance of Safety (RAS) with risk mitigating actions",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:develop-reasonable-assurance-of-safety-ras-with-risk-mitigating-actions"
+    },
+    {
+      "id": "ca_proc_review",
+      "display_name": "Review ECA-0.0 and Flex Support Guidelines to mitigate loss of all AC power",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:review-eca-0-0-and-flex-support-guidelines-to-mitigate-loss-of-all-ac-power"
+    },
+    {
+      "id": "ca_periodic_review",
+      "display_name": "Establish periodic reviews of applicable procedures and Fire Fighting Strategies for areas of concern",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:establish-periodic-reviews-of-applicable-procedures-and-fire-fighting-strategies-for-areas-of-concern"
+    },
+    {
+      "id": "ca_prestage_bdb",
+      "display_name": "Provide guidance to pre-stage Beyond Design Basis (BDB) Auxiliary Feedwater Pump prior to TDAFW pump unavailability",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:provide-guidance-to-pre-stage-beyond-design-basis-bdb-auxiliary-feedwater-pump-prior-to-tdafw-pump-unavailability"
+    },
+    {
+      "id": "ca_design_change",
+      "display_name": "Develop design changes to redesign circuits to eliminate the vulnerability",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:develop-design-changes-to-redesign-circuits-to-eliminate-the-vulnerability"
+    },
+    {
+      "id": "ca_modify_cables",
+      "display_name": "Modify control cables associated with EDG output breakers and Emergency Bus feeder breakers to regain Appendix R compliance",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:modify-control-cables-associated-with-edg-output-breakers-and-emergency-bus-feeder-breakers-to-regain-appendix-r-compliance"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(ii)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-ii-b"
+    },
+    {
+      "id": "rr_appr",
+      "display_name": "Appendix R Safe Shutdown Analysis",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:appendix-r-safe-shutdown-analysis"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_appr",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_electrical",
+      "evidence": null
+    },
+    {
+      "source": "c_edg_bkr",
+      "relation": "PART_OF",
+      "target": "sys_electrical",
+      "evidence": null
+    },
+    {
+      "source": "c_bus_bkr",
+      "relation": "PART_OF",
+      "target": "sys_electrical",
+      "evidence": null
+    },
+    {
+      "source": "fm_cable_sep",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_cable_sep",
+      "relation": "LEADS_TO",
+      "target": "fm_unanalyzed",
+      "evidence": null
+    },
+    {
+      "source": "fm_unanalyzed",
+      "relation": "LEADS_TO",
+      "target": "cons_unanalyzed",
+      "evidence": null
+    },
+    {
+      "source": "cons_unanalyzed",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_ba",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_ras",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_proc_review",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_periodic_review",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_prestage_bdb",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_design_change",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_modify_cables",
+      "evidence": null
+    }
+  ],
+  "chain": "cable separation deficiency (App R) [cause TBD/provisional] -> vulnerability during loss of all AC power scenario -> unanalyzed condition identified / RAS implemented pending design mod [backup: AFW / pre-staged BDB AFW pump]",
+  "golden_questions": [
+    "Q1",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code is TBD/provisional per FORM-366 fields; narrative does not provide an official cause code, only describes the Appendix R cable separation vulnerability. No component-level failure (e.g., breaker malfunction) occurred — this is a design/analysis discovery, not an equipment failure. EDG output breakers and Emergency Bus feeder breakers modeled as affected electrical distribution system per narrative; no distinct EIIS code given so system modeled non_eiis. TDAFW pump (EIIS P, System BA) cited as context for backup guidance (pre-staging BDB AFW pump), which is explicitly stated as an operable mitigation measure. No previous similar occurrence was identified per Section 7.0, so no SIMILAR_TO edge or stub LER node emitted."
+}

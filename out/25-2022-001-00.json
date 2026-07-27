@@ -1,0 +1,304 @@
+{
+  "ler_number": "25-2022-001-00",
+  "identity": {
+    "accession_number": "ML22336A125",
+    "docket": "05200025",
+    "plant_name": "Vogtle",
+    "unit": 3,
+    "reactor_type": "PWR",
+    "nss_vendor": "Westinghouse",
+    "event_date": "2022-10-06",
+    "report_date": "2022-12-02",
+    "operating_mode": null,
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Automatic Reactor Trip Signal due to Inadequate Procedure Guidance Causing Incorrect Opening of Division B DC Supply Breaker"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)",
+      "10 CFR 50.73(a)(2)(iv)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The cause of this event was inadequate procedural guidance. Specifically, procedure 3-IDSB-SOP-001, \"Class 1E DC System-Division B,\" included instructions within the same attachment for both the 24 hour and 72 hour battery subsystems and resulted in operation of an unintended component.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "procedure did not adequately separate 24-hour and 72-hour battery restoration steps, leading to operation of unintended component",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 05200025-2022-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "25-2022-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:25-2022-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Vogtle Unit 3",
+      "properties": {
+        "reactor_type": "PWR",
+        "nss_vendor": "Westinghouse"
+      },
+      "type": "Unit",
+      "key": "05200025",
+      "match_key": "Unit:05200025"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "procedure did not adequately separate 24-hour and 72-hour battery restoration steps, leading to operation of unintended component",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_rps",
+      "display_name": "Reactor Protection System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JD",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JD"
+    },
+    {
+      "id": "sys_ej",
+      "display_name": "Class 1E DC and Uninterruptible Power Supply System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "EJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:EJ"
+    },
+    {
+      "id": "sys_bp",
+      "display_name": "Passive Residual Heat Removal System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BP",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BP"
+    },
+    {
+      "id": "c_bus72",
+      "display_name": "Division B 72 hour DC bus",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "BU",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:BU"
+    },
+    {
+      "id": "c_breaker",
+      "display_name": "Breaker for Unit 3 Division B 24 hour DC distribution panel (3-IDSB-DD-1)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "72",
+      "identifier": "3-IDSB-DD-1",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:72|3-IDSB-DD-1"
+    },
+    {
+      "id": "c_fcv",
+      "display_name": "Division B PRHR Heat Exchanger Outlet Flow Control Valve (3-PXS-V108B)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "FCV",
+      "identifier": "3-PXS-V108B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:FCV|3-PXS-V108B"
+    },
+    {
+      "id": "fm_procedure",
+      "display_name": "Procedure lacked separation of 24hr and 72hr battery restoration steps",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Procedure 3-IDSB-SOP-001 included instructions for both 24 hour and 72 hour battery subsystems within the same attachment.",
+      "match_key": "FailureMode:procedure-lacked-separation-of-24hr-and-72hr-battery-restoration-steps"
+    },
+    {
+      "id": "fm_breaker_open",
+      "display_name": "System operator opened wrong breaker",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Non-licensed system operator opened the breaker for the Unit 3 Division B 24 hour DC distribution panel during restoration of the Division B 72 hour DC bus.",
+      "match_key": "FailureMode:system-operator-opened-wrong-breaker"
+    },
+    {
+      "id": "fm_avloss",
+      "display_name": "Loss of power to Division B safety-related air-operated valves",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Opening of the breaker resulted in loss of power to Division B powered safety related air-operated valves, causing them to reposition to their fail-safe, loss-of-power position.",
+      "match_key": "FailureMode:loss-of-power-to-division-b-safety-related-air-operated-valves"
+    },
+    {
+      "id": "fm_fcv_open",
+      "display_name": "PRHR HX outlet flow control valve (3-PXS-V108B) opened to fail-safe position",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Loss of power caused the Division B PRHR Heat Exchanger Outlet Flow Control Valve to reposition to its fail-safe, loss-of-power safety position.",
+      "match_key": "FailureMode:prhr-hx-outlet-flow-control-valve-3-pxs-v108b-opened-to-fail-safe-position"
+    },
+    {
+      "id": "cons_rps",
+      "display_name": "Automatic RPS actuation / reactor trip signal generated (defueled, no safety impact)",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2022-10-06T02:44",
+      "end": null,
+      "duration": null,
+      "tz": "EDT",
+      "match_key": "Consequence:automatic-rps-actuation-reactor-trip-signal-generated-defueled-no-safety-impact"
+    },
+    {
+      "id": "ca_revise_proc",
+      "display_name": "Revise procedure 3-IDSB-SOP-001 to separate 24hr and 72hr battery alignment steps into different attachments",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-procedure-3-idsb-sop-001-to-separate-24hr-and-72hr-battery-alignment-steps-into-different-attachments"
+    },
+    {
+      "id": "rr_5073ivA",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5073ivB",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-b"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073ivA",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073ivB",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rps",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ej",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bp",
+      "evidence": null
+    },
+    {
+      "source": "c_breaker",
+      "relation": "PART_OF",
+      "target": "sys_ej",
+      "evidence": null
+    },
+    {
+      "source": "c_fcv",
+      "relation": "PART_OF",
+      "target": "sys_bp",
+      "evidence": null
+    },
+    {
+      "source": "fm_procedure",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_procedure",
+      "relation": "LEADS_TO",
+      "target": "fm_breaker_open",
+      "evidence": null
+    },
+    {
+      "source": "fm_breaker_open",
+      "relation": "LEADS_TO",
+      "target": "fm_avloss",
+      "evidence": null
+    },
+    {
+      "source": "fm_avloss",
+      "relation": "LEADS_TO",
+      "target": "fm_fcv_open",
+      "evidence": null
+    },
+    {
+      "source": "fm_fcv_open",
+      "relation": "LEADS_TO",
+      "target": "cons_rps",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_revise_proc",
+      "evidence": null
+    }
+  ],
+  "chain": "inadequate procedural guidance [cause TBD] -> operator opens wrong DC distribution panel breaker -> loss of power to Division B safety-related air-operated valves -> PRHR HX outlet flow control valve (3-PXS-V108B) repositions to fail-safe open position -> automatic RPS actuation/reactor trip signal (no safety consequence, unit defueled)",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "No official cause code was provided in FORM-366 FIELDS (TBD/provisional); category left as 'provisional' per rule 4. No block_13 rows were provided. No previous similar events reported (narrative explicitly states none in last three years), so no stub LER/SIMILAR_TO edge created. Reactor trip breakers were already open at time of RPS signal so no state change occurred; modeled as part of the consequence context rather than a separate failure mode. No backup systems stated as operable during the inoperability window, so no BACKED_UP_BY edges emitted."
+}

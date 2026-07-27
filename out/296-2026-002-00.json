@@ -1,0 +1,273 @@
+{
+  "ler_number": "296-2026-002-00",
+  "identity": {
+    "accession_number": "ML26146A061",
+    "docket": "05000296",
+    "plant_name": "Browns Ferry",
+    "unit": 3,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2026-03-26",
+    "report_date": "2026-05-26",
+    "operating_mode": "2",
+    "power_level": 18,
+    "discovery_context": "inspection",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Technical Specification Prohibited Mode Change due to Inoperable Reactor Core Isolation Cooling System"
+  },
+  "reporting_basis": {
+    "reported_under": [],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The most likely cause of the inoperability of the RCIC system was a void in the system piping, which was insufficiently vented following system maintenance.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "inadequate fill-and-vent following maintenance leading to piping void",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 296-2026-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "296-2026-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:296-2026-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Browns Ferry Unit 3",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000296",
+      "match_key": "Unit:05000296"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "inadequate fill-and-vent following maintenance leading to piping void",
+      "proximate_text": "The most likely cause of the inoperability of the RCIC system was a void in the system piping, which was insufficiently vented following system maintenance.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_rcic",
+      "display_name": "Reactor Core Isolation Cooling",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BN",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "system involved; inoperable during event",
+      "match_key": "System:BN"
+    },
+    {
+      "id": "sys_hpci",
+      "display_name": "High Pressure Coolant Injection",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; operable throughout event",
+      "match_key": "System:BJ"
+    },
+    {
+      "id": "c_piping",
+      "display_name": "RCIC water side piping",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:rcic-water-side-piping"
+    },
+    {
+      "id": "c_turbine",
+      "display_name": "RCIC turbine",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:rcic-turbine"
+    },
+    {
+      "id": "fm_vent",
+      "display_name": "RCIC piping insufficiently vented following maintenance",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "System maintenance was followed by inadequate venting, leaving a void in the RCIC water side piping.",
+      "match_key": "FailureMode:rcic-piping-insufficiently-vented-following-maintenance"
+    },
+    {
+      "id": "fm_void",
+      "display_name": "Void present in RCIC water side piping",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "An unrecognized void formed in the RCIC water side piping.",
+      "match_key": "FailureMode:void-present-in-rcic-water-side-piping"
+    },
+    {
+      "id": "fm_overspeed",
+      "display_name": "RCIC turbine tripped on overspeed",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "During performance of 3-SR-3.5.3.3 rated flow test, the RCIC turbine tripped on overspeed as a result of the piping void.",
+      "match_key": "FailureMode:rcic-turbine-tripped-on-overspeed"
+    },
+    {
+      "id": "cons_inop",
+      "display_name": "RCIC inoperable during prohibited Mode 2 pressurization above 150 psig",
+      "properties": {
+        "note": "Unit 3 was pressurized above 150 psig while RCIC was inoperable, prohibited by TS LCO 3.5.3/3.0.4"
+      },
+      "type": "Consequence",
+      "start": "2026-03-26T09:28",
+      "end": "2026-03-26T09:33",
+      "duration": "00:05",
+      "tz": "CDT",
+      "match_key": "Consequence:rcic-inoperable-during-prohibited-mode-2-pressurization-above-150-psig"
+    },
+    {
+      "id": "ca_goi",
+      "display_name": "Revise Units 2 and 3 GOI procedures to add fill-and-vent instructions",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-units-2-and-3-goi-procedures-to-add-fill-and-vent-instructions"
+    },
+    {
+      "id": "ca_oi",
+      "display_name": "Revise 1-OI-71, 2-OI-71, 3-OI-71 to require ultrasonic testing to validate fill and vent",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-1-oi-71-2-oi-71-3-oi-71-to-require-ultrasonic-testing-to-validate-fill-and-vent"
+    },
+    {
+      "id": "rr_ts",
+      "display_name": "Unit 3 TS LCO 3.5.3 / LCO 3.0.4",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:unit-3-ts-lco-3-5-3-lco-3-0-4"
+    },
+    {
+      "id": "cr_2079352",
+      "display_name": "Condition Report 2079352",
+      "properties": {
+        "type": "standard/guidance"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:condition-report-2079352"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rcic",
+      "evidence": null
+    },
+    {
+      "source": "c_piping",
+      "relation": "PART_OF",
+      "target": "sys_rcic",
+      "evidence": null
+    },
+    {
+      "source": "c_turbine",
+      "relation": "PART_OF",
+      "target": "sys_rcic",
+      "evidence": null
+    },
+    {
+      "source": "fm_vent",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_vent",
+      "relation": "LEADS_TO",
+      "target": "fm_void",
+      "evidence": null
+    },
+    {
+      "source": "fm_void",
+      "relation": "LEADS_TO",
+      "target": "fm_overspeed",
+      "evidence": null
+    },
+    {
+      "source": "fm_overspeed",
+      "relation": "LEADS_TO",
+      "target": "cons_inop",
+      "evidence": null
+    },
+    {
+      "source": "cons_inop",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_hpci",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_goi",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_oi",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts",
+      "evidence": null
+    }
+  ],
+  "chain": "insufficient venting after maintenance [cause TBD] -> void forms in RCIC water side piping -> RCIC turbine trips on overspeed during rated flow test -> RCIC inoperable while Unit 3 pressurized above 150 psig in Mode 2 (TS-prohibited) [backup HPCI operable]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause_code and category are TBD in FORM-366 FIELDS; narrative provides only a 'most likely cause' statement, so cause node marked provisional per rule 4. No manufacturer, model, or block_13 data provided in source. No SIMILAR_TO edge emitted: narrative explicitly states a review of BFN CAP/LERs for Units 1-3 found no other instances of an unrecognized void causing an RCIC overspeed trip within the past three years -- there is no specific prior LER to stub. HPCI modeled as System because narrative explicitly states it 'remained operable throughout this event' (stated-operable backup), not merely design context."
+}

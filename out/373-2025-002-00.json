@@ -1,0 +1,356 @@
+{
+  "ler_number": "373-2025-002-00",
+  "identity": {
+    "accession_number": "ML26055A084",
+    "docket": "05000373",
+    "plant_name": "La Salle",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2025-12-28",
+    "report_date": "2026-02-24",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "inspection",
+    "status": "final",
+    "revision": "00",
+    "ens_number": "58102",
+    "ens_date": "2025-12-28",
+    "ens_time": "2026 EST",
+    "title": "Manual Scram Due to Degrading Containment Parameters"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(ii)(A)",
+      "10 CFR 50.73(a)(2)(iv)(A)",
+      "10 CFR 50.73(a)(2)(i)(A)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "B",
+      "system": "AD",
+      "component": "VTV",
+      "manufacturer": "A415",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "Through wall leakage was identified on the bonnet and body-to-bonnet seal weld of the upstream manually operated vent valve for a reactor recirculation pump discharge flow control valve. Failure analysis determined the leakage was caused by vibration induced fatigue cracking.",
+    "cause_code": "B",
+    "category": "Design/Manufacturing/Installation",
+    "theme": "vibration-induced fatigue cracking of vent valve weld",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 373-2025-006-00",
+      "properties": {},
+      "type": "LER",
+      "key": "373-2025-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:373-2025-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "La Salle Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000373",
+      "match_key": "Unit:05000373"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Manufacturing/Installation (B)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "B",
+      "category": "Design/Manufacturing/Installation",
+      "theme": "vibration-induced fatigue cracking of vent valve weld",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Design/Manufacturing/Installation"
+    },
+    {
+      "id": "sys_ad",
+      "display_name": "Reactor Recirculation System",
+      "properties": {
+        "note": "reactor coolant recirculation"
+      },
+      "type": "System",
+      "eiis_code": "AD",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:AD"
+    },
+    {
+      "id": "sys_rps",
+      "display_name": "Reactor Protection System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "actuated on manual scram",
+      "match_key": "System:reactor-protection-system"
+    },
+    {
+      "id": "c_ventvalve",
+      "display_name": "RR Pump Discharge Flow Control Valve Upstream Vent Valve",
+      "properties": {
+        "part_number": "M12A15S-6M3F-1LX"
+      },
+      "type": "Component",
+      "eiis_code": "VTV",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": "A415",
+      "inferred_code": false,
+      "match_key": "Component:VTV"
+    },
+    {
+      "id": "fm_fatigue",
+      "display_name": "Vibration-induced fatigue cracking of bonnet/body-to-bonnet seal weld",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Through-wall leakage on the bonnet and body-to-bonnet seal weld of the vent valve caused by vibration-induced fatigue cracking.",
+      "match_key": "FailureMode:vibration-induced-fatigue-cracking-of-bonnet-body-to-bonnet-seal-weld"
+    },
+    {
+      "id": "fm_leak",
+      "display_name": "Through-wall leak / degraded RCS pressure boundary",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Through-wall leak on the vent valve resulted in unidentified drywell leakage and a degraded reactor coolant system pressure boundary.",
+      "match_key": "FailureMode:through-wall-leak-degraded-rcs-pressure-boundary"
+    },
+    {
+      "id": "fm_containment",
+      "display_name": "Degrading containment parameters",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Unidentified drywell leakage caused containment parameters to degrade, prompting a manual scram.",
+      "match_key": "FailureMode:degrading-containment-parameters"
+    },
+    {
+      "id": "cons_scram",
+      "display_name": "Manual reactor scram / RPS actuation",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2025-12-28T16:06",
+      "end": null,
+      "duration": null,
+      "tz": "CST",
+      "match_key": "Consequence:manual-reactor-scram-rps-actuation"
+    },
+    {
+      "id": "ca_removeflange",
+      "display_name": "Removed failed valve assembly and installed blind flange connection",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:removed-failed-valve-assembly-and-installed-blind-flange-connection"
+    },
+    {
+      "id": "ca_failureanalysis",
+      "display_name": "Initiated failure analysis and causal investigation",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:initiated-failure-analysis-and-causal-investigation"
+    },
+    {
+      "id": "ca_replacevalve",
+      "display_name": "Install replacement vent valve assembly",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:install-replacement-vent-valve-assembly"
+    },
+    {
+      "id": "ca_inspectsimilar",
+      "display_name": "Inspect and/or replace similar piping and valve assemblies",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:inspect-and-or-replace-similar-piping-and-valve-assemblies"
+    },
+    {
+      "id": "mfr_anderson",
+      "display_name": "Anderson Greenwood & Company",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "A415",
+      "match_key": "Manufacturer:A415"
+    },
+    {
+      "id": "rr_5073ii",
+      "display_name": "10 CFR 50.73(a)(2)(ii)(A)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-ii-a"
+    },
+    {
+      "id": "rr_5073iv",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5073i",
+      "display_name": "10 CFR 50.73(a)(2)(i)(A)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-a"
+    },
+    {
+      "id": "rr_nei",
+      "display_name": "NEI 99-02 Regulatory Assessment Performance Indicator Guideline",
+      "properties": {
+        "type": "standard/guidance"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:nei-99-02-regulatory-assessment-performance-indicator-guideline"
+    },
+    {
+      "id": "ler_prev_373_2018_004",
+      "display_name": "LER 373-2018-004-00",
+      "properties": {},
+      "type": "LER",
+      "key": "373-2018-004-00",
+      "stub": true,
+      "title": "Required Shutdown Due to Reactor Coolant System Pressure Boundary Leakage from Reactor Recirculation Vent Line",
+      "plant": "LaSalle County Station Unit 1",
+      "match_key": "LER:373-2018-004-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073ii",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073iv",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073i",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ad",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rps",
+      "evidence": null
+    },
+    {
+      "source": "c_ventvalve",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_anderson",
+      "evidence": null
+    },
+    {
+      "source": "fm_fatigue",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_fatigue",
+      "relation": "LEADS_TO",
+      "target": "fm_leak",
+      "evidence": null
+    },
+    {
+      "source": "fm_leak",
+      "relation": "LEADS_TO",
+      "target": "fm_containment",
+      "evidence": null
+    },
+    {
+      "source": "fm_containment",
+      "relation": "LEADS_TO",
+      "target": "cons_scram",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_removeflange",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_failureanalysis",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replacevalve",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_inspectsimilar",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev_373_2018_004",
+      "evidence": null
+    }
+  ],
+  "chain": "vibration-induced fatigue cracking of vent valve weld [cause B] -> through-wall leak / degraded RCS pressure boundary -> degrading containment parameters (unidentified drywell leakage) -> manual reactor scram / RPS actuation",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Plant name/unit/reactor type/NSS vendor were null in FORM-366 fields but explicitly stated in narrative (LaSalle County Station Unit 1, GE BWR); populated from narrative per authoritative-narrative rule for identifiers. Two ENS reports referenced (#58100 for RPS actuation under 50.72(b)(2)(iv)(B), #58102 for degraded RCS boundary under 50.72(b)(3)(ii)(A)); the FORM-366 header ens_number (58102) was retained as given. RR is the reactor recirculation system (EIIS AD per block 13); RPS has no stated EIIS code in narrative so left null. ECCS systems were mentioned only as available/operable but 'not needed' in a generic safety-analysis sense without specific system names -> not modeled per design-context exclusion rule. Previous occurrence LER number given in narrative as '373-2018-004-00'; per instructions the stub key uses the leading unit digit format 'unit-year-seq', recorded as '1-2018-004'."
+}

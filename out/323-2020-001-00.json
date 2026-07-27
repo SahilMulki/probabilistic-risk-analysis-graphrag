@@ -1,0 +1,342 @@
+{
+  "ler_number": "323-2020-001-00",
+  "identity": {
+    "accession_number": "ML20100K071",
+    "docket": "05000323",
+    "plant_name": "Diablo Canyon",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2020-02-13",
+    "report_date": "2020-04-09",
+    "operating_mode": "3",
+    "power_level": 100,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Shutdown required by Technical Specifications"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(A)",
+      "10 CFR 50.73(a)(2)(ii)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "This event was a result of rod misalignment caused by a failure of a slave cycler decoder lift card to provide proper timing signals. Neither DCPP nor outside testing facility could reproduce the card anomaly in subsequent testing.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "unreproducible component malfunction",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 323-2020-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "323-2020-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:323-2020-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Diablo Canyon Unit 2",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000323",
+      "match_key": "Unit:05000323"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "unreproducible component malfunction",
+      "proximate_text": "This event was a result of rod misalignment caused by a failure of a slave cycler decoder lift card to provide proper timing signals. Neither DCPP nor outside testing facility could reproduce the card anomaly in subsequent testing.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_aa",
+      "display_name": "Rod Control System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "AA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:AA"
+    },
+    {
+      "id": "c_logic_cabinet",
+      "display_name": "Logic Cabinet",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:logic-cabinet"
+    },
+    {
+      "id": "c_slave_cycler",
+      "display_name": "Slave Cycler",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:slave-cycler"
+    },
+    {
+      "id": "c_card",
+      "display_name": "Unit 2 A410 Slave Cycler Decoder Lift Card",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "CARD",
+      "identifier": "A410",
+      "model": null,
+      "manufacturer_code": "WEC",
+      "inferred_code": false,
+      "match_key": "Component:CARD|A410"
+    },
+    {
+      "id": "c_power_cabinet",
+      "display_name": "Power Cabinet",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:power-cabinet"
+    },
+    {
+      "id": "c_crdm",
+      "display_name": "Control Rod Drive Mechanism (CRDM)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:control-rod-drive-mechanism-crdm"
+    },
+    {
+      "id": "fm_card_fail",
+      "display_name": "Slave Cycler Decoder Lift card failed to provide proper timing signals",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "A410 card malfunctioned during surveillance and shutdown, sending incorrect timing signals to affected rods.",
+      "match_key": "FailureMode:slave-cycler-decoder-lift-card-failed-to-provide-proper-timing-signals"
+    },
+    {
+      "id": "fm_sbb_misalign",
+      "display_name": "Shutdown Bank B Group 1 misaligned >12 steps",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Group 1 rods misaligned greater than 12 steps from group demand position during quarterly surveillance test.",
+      "match_key": "FailureMode:shutdown-bank-b-group-1-misaligned-12-steps"
+    },
+    {
+      "id": "fm_cbd_misalign",
+      "display_name": "Control Bank D Group 1 misaligned during shutdown ramp",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "During the Mode 3 ramp, Control Bank D Group 1 did not respond to rods-out demand while Group 2 responded, causing Bank D misalignment.",
+      "match_key": "FailureMode:control-bank-d-group-1-misaligned-during-shutdown-ramp"
+    },
+    {
+      "id": "cons_shutdown",
+      "display_name": "Unit 2 shutdown to Mode 3 required by Technical Specifications",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2020-02-13T12:33:00",
+      "end": "2020-02-13T15:45:00",
+      "duration": "3:12",
+      "tz": "PST",
+      "match_key": "Consequence:unit-2-shutdown-to-mode-3-required-by-technical-specifications"
+    },
+    {
+      "id": "ca_replace_card",
+      "display_name": "Replace failed slave cycler decoder lift card",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-failed-slave-cycler-decoder-lift-card"
+    },
+    {
+      "id": "ca_cap_followup",
+      "display_name": "Manage follow-up corrective actions via Corrective Action Program",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:manage-follow-up-corrective-actions-via-corrective-action-program"
+    },
+    {
+      "id": "mfr_wec",
+      "display_name": "Westinghouse Electric Company",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "WEC",
+      "match_key": "Manufacturer:WEC"
+    },
+    {
+      "id": "rr_5073a2i A",
+      "display_name": "10 CFR 50.73(a)(2)(i)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-a"
+    },
+    {
+      "id": "rr_5073a2ii B",
+      "display_name": "10 CFR 50.73(a)(2)(ii)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-ii-b"
+    },
+    {
+      "id": "rr_ts314",
+      "display_name": "Technical Specification 3.1.4, Rod Group Alignment Limits",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-3-1-4-rod-group-alignment-limits"
+    },
+    {
+      "id": "rr_nureg1022",
+      "display_name": "NUREG-1022, Revision 3",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "standard/guidance",
+      "match_key": "RegulatoryReference:nureg-1022-revision-3"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073a2i A",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073a2ii B",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts314",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_nureg1022",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_aa",
+      "evidence": null
+    },
+    {
+      "source": "c_card",
+      "relation": "PART_OF",
+      "target": "c_slave_cycler",
+      "evidence": null
+    },
+    {
+      "source": "c_slave_cycler",
+      "relation": "PART_OF",
+      "target": "c_logic_cabinet",
+      "evidence": null
+    },
+    {
+      "source": "fm_card_fail",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_card_fail",
+      "relation": "LEADS_TO",
+      "target": "fm_sbb_misalign",
+      "evidence": null
+    },
+    {
+      "source": "fm_card_fail",
+      "relation": "LEADS_TO",
+      "target": "fm_cbd_misalign",
+      "evidence": null
+    },
+    {
+      "source": "fm_sbb_misalign",
+      "relation": "LEADS_TO",
+      "target": "cons_shutdown",
+      "evidence": null
+    },
+    {
+      "source": "fm_cbd_misalign",
+      "relation": "LEADS_TO",
+      "target": "cons_shutdown",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_card",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_cap_followup",
+      "evidence": null
+    },
+    {
+      "source": "c_card",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_wec",
+      "evidence": null
+    }
+  ],
+  "chain": "unreproducible card malfunction [cause TBD] -> A410 Slave Cycler Decoder Lift card fails to provide proper timing signals -> Shutdown Bank B Group 1 misaligned & Control Bank D Group 1 misaligned -> TS 3.1.4 Action D shutdown to Mode 3 required",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code is TBD/provisional in FORM-366 fields despite a clearly identified proximate cause (card malfunction) because the anomaly could not be reproduced in subsequent testing, so an official root cause code could not be assigned. Block 13 system code 'AA' and component 'CARD' with manufacturer 'WEC' copied verbatim. No backup systems were explicitly described as operable during this event window (all rods remained operable but no distinct backup ECCS/system applies to rod control) so no BACKED_UP_BY edge was created. No previous similar occurrence reported ('no similar events... in previous three years'), so no SIMILAR_TO/stub LER emitted."
+}

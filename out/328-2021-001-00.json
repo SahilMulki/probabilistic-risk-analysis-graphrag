@@ -1,0 +1,338 @@
+{
+  "ler_number": "328-2021-001-00",
+  "identity": {
+    "accession_number": "ML21350A186",
+    "docket": "05000328",
+    "plant_name": "Sequoyah",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2021-07-25",
+    "report_date": "2021-09-22",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Ice Bed Inoperable Due to Exceeding Surveillance Requirement Frequency"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "X",
+      "system": "BC",
+      "component": "MPX",
+      "manufacturer": "Y006",
+      "reportable": "N"
+    }
+  ],
+  "cause": {
+    "proximate_text": "the failure of the ice bed temperature monitoring system remote scanner due to an internal power supply failure",
+    "cause_code": "X",
+    "category": "Other",
+    "theme": "instrumentation component failure (internal power supply)",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 328-2021-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "328-2021-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:328-2021-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Sequoyah Unit 2",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000328",
+      "match_key": "Unit:05000328"
+    },
+    {
+      "id": "cause",
+      "display_name": "Other (X)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "X",
+      "category": "Other",
+      "theme": "instrumentation component failure (internal power supply)",
+      "proximate_text": "the failure of the ice bed temperature monitoring system remote scanner due to an internal power supply failure",
+      "provisional": false,
+      "match_key": "Cause:Other"
+    },
+    {
+      "id": "sys_bc",
+      "display_name": "Ice Bed / Ice Condenser Temperature Monitoring System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BC"
+    },
+    {
+      "id": "c_scanner",
+      "display_name": "Remote scanner (SQN-2-XS-061-0138B)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "MPX",
+      "identifier": "SQN-2-XS-061-0138B",
+      "model": "38826-232-12/NS-SR",
+      "manufacturer_code": "Y006",
+      "inferred_code": false,
+      "match_key": "Component:MPX|SQN-2-XS-061-0138B"
+    },
+    {
+      "id": "fm_powersupply",
+      "display_name": "Remote scanner internal power supply failure",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Internal power supply failure within the ice bed temperature monitoring system remote scanner",
+      "match_key": "FailureMode:remote-scanner-internal-power-supply-failure"
+    },
+    {
+      "id": "fm_nonfunctional",
+      "display_name": "Ice bed temperature monitoring system became nonfunctional",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Temperature monitoring system stopped providing accurate ice bed temperature data",
+      "match_key": "FailureMode:ice-bed-temperature-monitoring-system-became-nonfunctional"
+    },
+    {
+      "id": "fm_srexceeded",
+      "display_name": "Surveillance Requirement 3.6.12.1 frequency exceeded",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Conditional performance of backup monitoring procedure took longer than the SR 3.0.2 extended frequency, exceeding it by 20 minutes",
+      "match_key": "FailureMode:surveillance-requirement-3-6-12-1-frequency-exceeded"
+    },
+    {
+      "id": "cons_icebed",
+      "display_name": "Unit 2 ice bed declared inoperable",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2021-07-25T12:38",
+      "end": "2021-07-25T12:58",
+      "duration": "0:20",
+      "tz": "EDT",
+      "match_key": "Consequence:unit-2-ice-bed-declared-inoperable"
+    },
+    {
+      "id": "ca_procedure",
+      "display_name": "Develop procedural guidance for response to nonfunctional ice bed temperature monitoring system",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:develop-procedural-guidance-for-response-to-nonfunctional-ice-bed-temperature-monitoring-system"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace obsolete instrumentation in the ice bed temperature monitoring system",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-obsolete-instrumentation-in-the-ice-bed-temperature-monitoring-system"
+    },
+    {
+      "id": "ca_backup",
+      "display_name": "Authorize conditional performance of Backup Ice Condenser Temperature Monitoring (2-SI-IXX-061-138.0)",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:authorize-conditional-performance-of-backup-ice-condenser-temperature-monitoring-2-si-ixx-061-138-0"
+    },
+    {
+      "id": "mfr_yokogawa",
+      "display_name": "Yokogawa Corporation of America",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "Y006",
+      "match_key": "Manufacturer:Y006"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(v)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v"
+    },
+    {
+      "id": "rr_5072",
+      "display_name": "10 CFR 50.72(b)(3)(v)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-3-v"
+    },
+    {
+      "id": "rr_nureg1022",
+      "display_name": "NUREG-1022, Revision 3, Section 3.2.7",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "standard/guidance",
+      "match_key": "RegulatoryReference:nureg-1022-revision-3-section-3-2-7"
+    },
+    {
+      "id": "rr_ts36121",
+      "display_name": "TS Surveillance Requirement 3.6.12.1 / SR 3.0.2 / SR 3.0.1",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-surveillance-requirement-3-6-12-1-sr-3-0-2-sr-3-0-1"
+    },
+    {
+      "id": "ler_prev1",
+      "display_name": "LER 328-2020-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "328-2020-001-00",
+      "stub": true,
+      "title": "Inoperable Unit 2 ice bed due to Auxiliary Glycol Cooling System skid gasket failure",
+      "plant": "Sequoyah Nuclear Plant Unit 2",
+      "match_key": "LER:328-2020-001-00"
+    },
+    {
+      "id": "ler_prev2",
+      "display_name": "LER 327-2021-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "327-2021-002-00",
+      "stub": true,
+      "title": "Inoperable Unit 1 ice bed due to ice bed temperature monitoring system temperature recorder failure",
+      "plant": "Sequoyah Nuclear Plant Unit 1",
+      "match_key": "LER:327-2021-002-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_nureg1022",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts36121",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bc",
+      "evidence": null
+    },
+    {
+      "source": "c_scanner",
+      "relation": "PART_OF",
+      "target": "sys_bc",
+      "evidence": null
+    },
+    {
+      "source": "c_scanner",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_yokogawa",
+      "evidence": null
+    },
+    {
+      "source": "fm_powersupply",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_powersupply",
+      "relation": "LEADS_TO",
+      "target": "fm_nonfunctional",
+      "evidence": null
+    },
+    {
+      "source": "fm_nonfunctional",
+      "relation": "LEADS_TO",
+      "target": "fm_srexceeded",
+      "evidence": null
+    },
+    {
+      "source": "fm_srexceeded",
+      "relation": "LEADS_TO",
+      "target": "cons_icebed",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_backup",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procedure",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev1",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev2",
+      "evidence": null
+    }
+  ],
+  "chain": "remote scanner internal power supply failure [cause X] -> ice bed temperature monitoring system nonfunctional -> conditional/backup monitoring performed but SR 3.6.12.1 frequency exceeded -> Unit 2 ice bed declared inoperable for 20 minutes [no redundant train available; ice remained below 27F, no loss of safety function]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Single-train ice bed system with no redundant backup system; therefore no BACKED_UP_BY edge modeled (the backup temperature-monitoring procedure 2-SI-IXX-061-138.0 is a manual data-collection method, modeled as a CorrectiveAction/immediate action rather than a System backup). Cause code X (Other) governs category per official coding despite narrative pointing to a specific component failure; theme captures the internal power-supply failure detail. Two previous similar LERs referenced with keys copied exactly as stated in narrative ('2-2020-001-00' and '1-2021-002-00'), including the unit-digit prefix convention used by the licensee."
+}

@@ -1,0 +1,301 @@
+{
+  "ler_number": "443-2021-001-00",
+  "identity": {
+    "accession_number": "ML21140A411",
+    "docket": "05000443",
+    "plant_name": "Seabrook",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2021-03-25",
+    "report_date": "2021-05-20",
+    "operating_mode": "4",
+    "power_level": 100,
+    "discovery_context": "inspection",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2021-001-00 for Seabrook Station, Pressurizer Safety Valve Outside of Technical Specification Limits Discovered During  As-Found Set Point Testing"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "A combination of minor changes such as these over time, when not alongside of a single clear cause of a valve set point failure, is commonly considered \"set point drift.\" The cause of this event is being attributed to set point drift.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "spring set-point drift",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 443-2021-001-00",
+      "properties": {
+        "match_key": "LER:443-2021-001-00"
+      },
+      "type": "LER",
+      "key": "443-2021-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:443-2021-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Seabrook Unit 1",
+      "properties": {
+        "match_key": "Unit:05000443",
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000443",
+      "match_key": "Unit:05000443"
+    },
+    {
+      "id": "cause",
+      "display_name": "Set Point Drift (TBD)",
+      "properties": {
+        "match_key": "Cause:provisional"
+      },
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "spring set-point drift",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_rv",
+      "display_name": "Pressurizer Safety Valves",
+      "properties": {
+        "match_key": "System:RV"
+      },
+      "type": "System",
+      "eiis_code": "RV",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:RV"
+    },
+    {
+      "id": "sys_ab",
+      "display_name": "Reactor Coolant System",
+      "properties": {
+        "match_key": "System:AB"
+      },
+      "type": "System",
+      "eiis_code": "AB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "context; pressure remained within normal limits",
+      "match_key": "System:AB"
+    },
+    {
+      "id": "c_psv",
+      "display_name": "Pressurizer Safety Valve",
+      "properties": {
+        "match_key": "Component:RV|PSV"
+      },
+      "type": "Component",
+      "eiis_code": "RV",
+      "identifier": null,
+      "model": "Size 6M6, Style HB-BP 86",
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:RV"
+    },
+    {
+      "id": "c_spring",
+      "display_name": "PSV Spring",
+      "properties": {
+        "match_key": "Component:psv-spring"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:psv-spring"
+    },
+    {
+      "id": "fm_material",
+      "display_name": "Notable changes in spring material characteristics over time",
+      "properties": {
+        "match_key": "FailureMode:spring-material-changes"
+      },
+      "type": "FailureMode",
+      "description": "Measurement data between 2015 and 2021 spring tests showed notable, though individually acceptable, changes suggestive of material property drift.",
+      "match_key": "FailureMode:notable-changes-in-spring-material-characteristics-over-time"
+    },
+    {
+      "id": "fm_setpoint",
+      "display_name": "PSV as-found set point out of Technical Specification limits",
+      "properties": {
+        "match_key": "FailureMode:psv-set-point-out-of-limits"
+      },
+      "type": "FailureMode",
+      "description": "As-found lift set point was -4.2%, outside the +/-3% TS 3.4.2.2 allowable band.",
+      "match_key": "FailureMode:psv-as-found-set-point-out-of-technical-specification-limits"
+    },
+    {
+      "id": "cons_ts",
+      "display_name": "TS 3.4.2.2 out-of-service/completion time exceeded for inoperable PSV",
+      "properties": {
+        "match_key": "Consequence:ts-completion-time-exceeded"
+      },
+      "type": "Consequence",
+      "start": "2018-10-25T00:00",
+      "end": "2020-04-01T00:00",
+      "duration": "condition assumed to exist for entire service period, longer than TS 15-minute action completion time",
+      "tz": null,
+      "match_key": "Consequence:ts-3-4-2-2-out-of-service-completion-time-exceeded-for-inoperable-psv"
+    },
+    {
+      "id": "ca_spring",
+      "display_name": "Replace PSV spring and retest",
+      "properties": {
+        "match_key": "CorrectiveAction:replace-psv-spring-and-retest"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-psv-spring-and-retest"
+    },
+    {
+      "id": "mfr_crosby",
+      "display_name": "Crosby Valve and Gage Co.",
+      "properties": {
+        "match_key": "Manufacturer:crosby-valve-and-gage-co"
+      },
+      "type": "Manufacturer",
+      "code": null,
+      "match_key": "Manufacturer:crosby-valve-and-gage-co"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion",
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts3422",
+      "display_name": "Technical Specification 3.4.2.2",
+      "properties": {
+        "type": "license-basis",
+        "match_key": "RegulatoryReference:ts-3-4-2-2"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:technical-specification-3-4-2-2"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "LER 2018-001-00",
+      "properties": {
+        "match_key": "LER:2018-001-00"
+      },
+      "type": "LER",
+      "key": "2018-001-00",
+      "stub": true,
+      "title": "Pressurizer Safety Valve as-found set point testing exceeded Technical Specification requirements",
+      "plant": "Seabrook Station",
+      "match_key": "LER:2018-001-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts3422",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rv",
+      "evidence": null
+    },
+    {
+      "source": "c_psv",
+      "relation": "PART_OF",
+      "target": "sys_rv",
+      "evidence": null
+    },
+    {
+      "source": "c_spring",
+      "relation": "PART_OF",
+      "target": "c_psv",
+      "evidence": null
+    },
+    {
+      "source": "c_psv",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_crosby",
+      "evidence": null
+    },
+    {
+      "source": "fm_material",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_material",
+      "relation": "LEADS_TO",
+      "target": "fm_setpoint",
+      "evidence": null
+    },
+    {
+      "source": "fm_setpoint",
+      "relation": "LEADS_TO",
+      "target": "cons_ts",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_spring",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    }
+  ],
+  "chain": "spring material property drift over service life [cause TBD] -> PSV as-found set point measured -4.2%, outside +/-3% TS band -> TS 3.4.2.2 out-of-service/completion time exceeded (assumed, no actual overpressure event; RCS pressure never approached as-found set point) [no safety consequence]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code left TBD/provisional per official field despite narrative attributing the event to 'set point drift'; category kept as 'provisional' per FORM-366 authoritative value. RCS system included as it is explicitly discussed (pressure remained within normal limits, valve never required to lift) rather than pure design-context boilerplate. Previous LER 2018-001-00 modeled as stub per instructions; key copied exactly as stated in narrative (no unit digit prefix given)."
+}

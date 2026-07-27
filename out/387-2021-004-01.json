@@ -1,0 +1,368 @@
+{
+  "ler_number": "387-2021-004-01",
+  "identity": {
+    "accession_number": "ML22080A216",
+    "docket": "05000387",
+    "plant_name": "Susquehanna",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2021-10-07",
+    "report_date": "2022-03-21",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "inspection",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2021-004-01 for Susquehanna Unit 1, Loss of 1B RHRSW Pump due to Cable Damage During Excavation Activities"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)",
+      "10 CFR 50.73(a)(2)(v)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "D",
+      "system": "BI",
+      "component": "CBL",
+      "manufacturer": "K080",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The direct cause of the event was determined to be that Cable FF1S0601A was struck through an inadvertent puncture of unidentified conduit F1F104 during excavation activities. The apparent cause of the failure was that methods for reviewing the condition of Cable FF1S0601A following damage were flawed, resulting in an inaccurate assessment and non-conservative decisions.",
+    "cause_code": "D",
+    "category": "Defective Procedure",
+    "theme": "flawed post-damage assessment procedure led to non-conservative decision to keep cable in service",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 387-2021-004-01",
+      "properties": {},
+      "type": "LER",
+      "key": "387-2021-004-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:387-2021-004-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Susquehanna Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000387",
+      "match_key": "Unit:05000387"
+    },
+    {
+      "id": "cause",
+      "display_name": "Defective Procedure (D)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "D",
+      "category": "Defective Procedure",
+      "theme": "flawed post-damage assessment procedure led to non-conservative decision to keep cable in service",
+      "proximate_text": "The direct cause of the event was determined to be that Cable FF1S0601A was struck through an inadvertent puncture of unidentified conduit F1F104 during excavation activities. The apparent cause of the failure was that methods for reviewing the condition of Cable FF1S0601A following damage were flawed, resulting in an inaccurate assessment and non-conservative decisions.",
+      "provisional": false,
+      "match_key": "Cause:Defective Procedure"
+    },
+    {
+      "id": "sys_bi",
+      "display_name": "Residual Heat Removal Service Water",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BI",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected system; Unit 1 'B' subsystem inoperable",
+      "match_key": "System:BI"
+    },
+    {
+      "id": "sys_bi_a",
+      "display_name": "Residual Heat Removal Service Water - Unit 1 'A' subsystem",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BI",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "concurrently inoperable subsystem due to valve alignment for UHS nozzle cleaning",
+      "match_key": "System:BI"
+    },
+    {
+      "id": "c_cnd",
+      "display_name": "Conduit F1F104",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "CND",
+      "identifier": "F1F104",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:CND|F1F104"
+    },
+    {
+      "id": "c_cbl",
+      "display_name": "Power Cable FF1S0601A",
+      "properties": {
+        "description": "1/C AWG 4/0 5kV Cable"
+      },
+      "type": "Component",
+      "eiis_code": "CBL",
+      "identifier": "FF1S0601A",
+      "model": null,
+      "manufacturer_code": "K080",
+      "inferred_code": false,
+      "match_key": "Component:CBL|FF1S0601A"
+    },
+    {
+      "id": "c_pump",
+      "display_name": "1B RHRSW Pump (1P506B)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "P",
+      "identifier": "1P506B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:P|1P506B"
+    },
+    {
+      "id": "fm_puncture",
+      "display_name": "Conduit F1F104 punctured during excavation",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Personnel at SSES punctured a 4-inch conduit line during excavation activities to support unrelated piping replacement work.",
+      "match_key": "FailureMode:conduit-f1f104-punctured-during-excavation"
+    },
+    {
+      "id": "fm_cable_damage",
+      "display_name": "Cable FF1S0601A damaged / grounded on B-phase",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Cable FF1S0601A within conduit F1F104 was damaged by the puncture, resulting in a ground on the B-phase of the cable.",
+      "match_key": "FailureMode:cable-ff1s0601a-damaged-grounded-on-b-phase"
+    },
+    {
+      "id": "fm_assessment",
+      "display_name": "Flawed post-damage assessment led to cable remaining in service",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Methods for reviewing the condition of Cable FF1S0601A following the September 23 damage were flawed, resulting in an inaccurate assessment and non-conservative decision not to remove the cable/pump from service.",
+      "match_key": "FailureMode:flawed-post-damage-assessment-led-to-cable-remaining-in-service"
+    },
+    {
+      "id": "cons_pump",
+      "display_name": "1B RHRSW Pump inoperable / TS 3.7.1 Condition B entered",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2021-09-23T00:00",
+      "end": "2021-10-11T07:33",
+      "duration": "approximately 18 days",
+      "tz": null,
+      "match_key": "Consequence:1b-rhrsw-pump-inoperable-ts-3-7-1-condition-b-entered"
+    },
+    {
+      "id": "cons_concurrent",
+      "display_name": "Both Unit 1 RHRSW subsystems concurrently inoperable (Sept 29 - Oct 7 overlap)",
+      "properties": {
+        "note": "Unit 1 'A' RHRSW subsystem declared inoperable Sept 29 due to UHS spray array/bypass valve alignment for nozzle cleaning, concurrent with 'B' subsystem inoperability"
+      },
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:both-unit-1-rhrsw-subsystems-concurrently-inoperable-sept-29-oct-7-overlap"
+    },
+    {
+      "id": "ca_repair",
+      "display_name": "Repair damaged conduit and replace damaged cable",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:repair-damaged-conduit-and-replace-damaged-cable"
+    },
+    {
+      "id": "ca_drawings",
+      "display_name": "Update controlled plant drawings to reflect actual field measurements",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:update-controlled-plant-drawings-to-reflect-actual-field-measurements"
+    },
+    {
+      "id": "ca_procedure",
+      "display_name": "Revise station procedures to require reassessment of risk for changing field conditions and describe limitations of damage assessment methods",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-station-procedures-to-require-reassessment-of-risk-for-changing-field-conditions-and-describe-limitations-of-damage-assessment-methods"
+    },
+    {
+      "id": "mfr_kerite",
+      "display_name": "Kerite",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "K080",
+      "match_key": "Manufacturer:K080"
+    },
+    {
+      "id": "rr_5073i",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_5073v",
+      "display_name": "10 CFR 50.73(a)(2)(v)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-b"
+    },
+    {
+      "id": "rr_ts371",
+      "display_name": "Technical Specification 3.7.1, RHRSW System and UHS",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-3-7-1-rhrsw-system-and-uhs"
+    },
+    {
+      "id": "rr_adams",
+      "display_name": "ADAMS Accession No. ML081000255 (accident analysis basis for 3-hour valve realignment)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:adams-accession-no-ml081000255-accident-analysis-basis-for-3-hour-valve-realignment"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073i",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073v",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bi",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bi_a",
+      "evidence": null
+    },
+    {
+      "source": "c_cbl",
+      "relation": "PART_OF",
+      "target": "c_cnd",
+      "evidence": "F1F104 contains cable FF1S0601A"
+    },
+    {
+      "source": "fm_puncture",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_puncture",
+      "relation": "LEADS_TO",
+      "target": "fm_cable_damage",
+      "evidence": null
+    },
+    {
+      "source": "fm_cable_damage",
+      "relation": "LEADS_TO",
+      "target": "fm_assessment",
+      "evidence": null
+    },
+    {
+      "source": "fm_assessment",
+      "relation": "LEADS_TO",
+      "target": "cons_pump",
+      "evidence": null
+    },
+    {
+      "source": "cons_pump",
+      "relation": "LEADS_TO",
+      "target": "cons_concurrent",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_repair",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_drawings",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procedure",
+      "evidence": null
+    },
+    {
+      "source": "c_cbl",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_kerite",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts371",
+      "evidence": null
+    },
+    {
+      "source": "cons_concurrent",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_adams",
+      "evidence": null
+    }
+  ],
+  "chain": "excavation activity punctures unidentified conduit F1F104 [cause D: flawed damage-assessment procedure] -> Cable FF1S0601A damaged/grounded on B-phase -> non-conservative decision keeps cable/pump in service -> 1B RHRSW Pump inoperable (Sept 23 - Oct 11) -> concurrent with Unit 1 'A' RHRSW subsystem inoperable (Sept 29 onward) for valve alignment [not counted as SSFF; 'A' subsystem could still perform safety function within 3-hr realignment window]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "The direct/apparent cause distinction in the narrative maps to a single official cause code D (Defective Procedure), governing category per the flawed damage-assessment methodology. The 'A' RHRSW subsystem inoperability was due to valve alignment for planned nozzle-cleaning maintenance, not a failure, but is modeled as a System node and Consequence because the narrative explicitly discusses its concurrent inoperability and safety significance; no BACKED_UP_BY edge asserted since 'A' subsystem was itself inoperable (valve-misaligned) during the overlap, not an operable backup. No previous occurrences reported by licensee, so no stub LER/SIMILAR_TO edge emitted."
+}

@@ -1,0 +1,392 @@
+{
+  "ler_number": "443-2023-04-00",
+  "identity": {
+    "accession_number": "ML23270B916",
+    "docket": "05000443",
+    "plant_name": "Seabrook",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2023-07-30",
+    "report_date": "2023-09-27",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2023-04-00 for Seabrook Station, Manual Reactor Trip due to Main Turbine Electro-Hydraulic Control Oil Level"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "B",
+      "system": "TG",
+      "component": "PSV",
+      "manufacturer": "G080",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "Cap screws on the manifold failed because the equipment manufacturer did not use the parts specified by GE for EHC system trip manifold assemblies... the cap screws were consistent with alternate design ASTM A574 material but had zinc coating which causes low toughness and absorption of hydrogen into the screws... the most probable modes of failure were determined to be inadequate material and/or over torquing of the cap screws.",
+    "cause_code": "B",
+    "category": "Design/Manufacturing/Installation",
+    "theme": "Incorrect/nonconforming fastener material supplied in vendor sub-assembly",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 443-2023-004-00",
+      "properties": {
+        "match_key": "LER:443-2023-004-00"
+      },
+      "type": "LER",
+      "key": "443-2023-04-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:443-2023-04-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Seabrook Unit 1",
+      "properties": {
+        "match_key": "Unit:05000443",
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000443",
+      "match_key": "Unit:05000443"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Manufacturing/Installation (B)",
+      "properties": {
+        "match_key": "Cause:Design/Manufacturing/Installation"
+      },
+      "type": "Cause",
+      "cause_code": "B",
+      "category": "Design/Manufacturing/Installation",
+      "theme": "Incorrect/nonconforming fastener material supplied in vendor sub-assembly",
+      "proximate_text": "Cap screws on the manifold failed because the equipment manufacturer did not use the parts specified by GE for EHC system trip manifold assemblies... the cap screws were consistent with alternate design ASTM A574 material but had zinc coating which causes low toughness and absorption of hydrogen into the screws... the most probable modes of failure were determined to be inadequate material and/or over torquing of the cap screws.",
+      "provisional": false,
+      "match_key": "Cause:Design/Manufacturing/Installation"
+    },
+    {
+      "id": "sys_tg",
+      "display_name": "Main Turbine Electro-Hydraulic Control",
+      "properties": {
+        "match_key": "System:TG"
+      },
+      "type": "System",
+      "eiis_code": "TG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:TG"
+    },
+    {
+      "id": "sys_ba",
+      "display_name": "Emergency Feedwater",
+      "properties": {
+        "match_key": "System:BA"
+      },
+      "type": "System",
+      "eiis_code": "BA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "actuated as expected on low steam generator level",
+      "match_key": "System:BA"
+    },
+    {
+      "id": "sys_ta",
+      "display_name": "Turbine System",
+      "properties": {
+        "match_key": "System:TA"
+      },
+      "type": "System",
+      "eiis_code": "TA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "design context; EHC interfaces with turbine system",
+      "match_key": "System:TA"
+    },
+    {
+      "id": "c_solenoid",
+      "display_name": "Electrical trip solenoid",
+      "properties": {
+        "match_key": "Component:SOL"
+      },
+      "type": "Component",
+      "eiis_code": "SOL",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:SOL"
+    },
+    {
+      "id": "c_pcv",
+      "display_name": "EHC header dump valve",
+      "properties": {
+        "match_key": "Component:PCV"
+      },
+      "type": "Component",
+      "eiis_code": "PCV",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:PCV"
+    },
+    {
+      "id": "c_capscrews",
+      "display_name": "Trip manifold cap screws",
+      "properties": {
+        "match_key": "Component:trip-manifold-cap-screws"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": "ASTM A574 (zinc plated, nonconforming)",
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:trip-manifold-cap-screws"
+    },
+    {
+      "id": "c_fcv",
+      "display_name": "Steam inlet valves (HP/LP turbine)",
+      "properties": {
+        "role": "design context; would close on low EHC pressure",
+        "match_key": "Component:FCV"
+      },
+      "type": "Component",
+      "eiis_code": "FCV",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:FCV"
+    },
+    {
+      "id": "fm_capscrew",
+      "display_name": "Trip manifold cap screws fail (inadequate material / over-torque)",
+      "properties": {
+        "match_key": "FailureMode:trip-manifold-cap-screws-fail"
+      },
+      "type": "FailureMode",
+      "description": "Nonconforming ASTM A574 zinc-coated cap screws with low toughness and hydrogen absorption failed in the trip manifold assembly.",
+      "match_key": "FailureMode:trip-manifold-cap-screws-fail-inadequate-material-over-torque"
+    },
+    {
+      "id": "fm_separation",
+      "display_name": "Trip solenoid separates from EHC header dump valve",
+      "properties": {
+        "match_key": "FailureMode:trip-solenoid-separation"
+      },
+      "type": "FailureMode",
+      "description": "Cap screw failure allowed the electrical trip solenoid to separate from the EHC header dump valve.",
+      "match_key": "FailureMode:trip-solenoid-separates-from-ehc-header-dump-valve"
+    },
+    {
+      "id": "fm_pressure",
+      "display_name": "EHC hydraulic header pressure decrease (80 psig)",
+      "properties": {
+        "match_key": "FailureMode:ehc-header-pressure-decrease"
+      },
+      "type": "FailureMode",
+      "description": "Solenoid/dump valve separation led to an 80-psig decrease in hydraulic fluid header pressure.",
+      "match_key": "FailureMode:ehc-hydraulic-header-pressure-decrease-80-psig"
+    },
+    {
+      "id": "fm_lowlevel",
+      "display_name": "Low EHC fluid reservoir level alarm",
+      "properties": {
+        "match_key": "FailureMode:low-ehc-reservoir-level-alarm"
+      },
+      "type": "FailureMode",
+      "description": "Header pressure decrease caused low main turbine EHC fluid reservoir level, alarming to operators.",
+      "match_key": "FailureMode:low-ehc-fluid-reservoir-level-alarm"
+    },
+    {
+      "id": "cons_trip",
+      "display_name": "Manual reactor trip / EFW actuation",
+      "properties": {
+        "match_key": "Consequence:manual-reactor-trip-efw-actuation"
+      },
+      "type": "Consequence",
+      "start": "2023-07-30T15:26",
+      "end": null,
+      "duration": null,
+      "tz": "EDT",
+      "match_key": "Consequence:manual-reactor-trip-efw-actuation"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace failed EHC trip manifold assembly with new GE-ordered assembly",
+      "properties": {
+        "match_key": "CorrectiveAction:replace-ehc-trip-manifold-assembly"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-failed-ehc-trip-manifold-assembly-with-new-ge-ordered-assembly"
+    },
+    {
+      "id": "ca_revise_wo",
+      "display_name": "Revise model work order for EHC and Feedwater dump valve assemblies for correct cap screws",
+      "properties": {
+        "match_key": "CorrectiveAction:revise-model-work-order-cap-screws"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-model-work-order-for-ehc-and-feedwater-dump-valve-assemblies-for-correct-cap-screws"
+    },
+    {
+      "id": "ca_replace_screws",
+      "display_name": "Replace ASTM A574 zinc-plated screws on trip manifold assemblies with GE-compliant cap screws",
+      "properties": {
+        "match_key": "CorrectiveAction:replace-zinc-plated-screws"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-astm-a574-zinc-plated-screws-on-trip-manifold-assemblies-with-ge-compliant-cap-screws"
+    },
+    {
+      "id": "mfr_ge",
+      "display_name": "General Electric",
+      "properties": {
+        "match_key": "Manufacturer:G080"
+      },
+      "type": "Manufacturer",
+      "code": "G080",
+      "match_key": "Manufacturer:G080"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_tg",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ba",
+      "evidence": null
+    },
+    {
+      "source": "c_solenoid",
+      "relation": "PART_OF",
+      "target": "sys_tg",
+      "evidence": null
+    },
+    {
+      "source": "c_pcv",
+      "relation": "PART_OF",
+      "target": "sys_tg",
+      "evidence": null
+    },
+    {
+      "source": "c_capscrews",
+      "relation": "PART_OF",
+      "target": "c_pcv",
+      "evidence": null
+    },
+    {
+      "source": "fm_capscrew",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_capscrew",
+      "relation": "LEADS_TO",
+      "target": "fm_separation",
+      "evidence": null
+    },
+    {
+      "source": "fm_separation",
+      "relation": "LEADS_TO",
+      "target": "fm_pressure",
+      "evidence": null
+    },
+    {
+      "source": "fm_pressure",
+      "relation": "LEADS_TO",
+      "target": "fm_lowlevel",
+      "evidence": null
+    },
+    {
+      "source": "fm_lowlevel",
+      "relation": "LEADS_TO",
+      "target": "cons_trip",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_revise_wo",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_screws",
+      "evidence": null
+    },
+    {
+      "source": "c_capscrews",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_ge",
+      "evidence": null
+    }
+  ],
+  "chain": "nonconforming ASTM A574 zinc-coated cap screws [cause B, design/manufacturing] -> cap screws fail (hydrogen embrittlement/over-torque) -> trip solenoid separates from EHC header dump valve -> EHC header pressure drops 80 psig -> low EHC reservoir level alarm -> operators manually trip reactor / EFW actuates on low SG level",
+  "golden_questions": [
+    "Q1",
+    "Q2",
+    "Q3",
+    "Q4"
+  ],
+  "notes": "No inoperable SSCs contributed to the event; EFW actuation was an expected response to low SG level following the turbine/reactor trip, not itself a failure. Turbine system (TA) and steam inlet valves (FCV) to HP/LP turbine are mentioned only in the Safety Significance passage describing EHC/turbine design interface (what would happen if pressure decreased further) -- treated as design context per rule 6, but FCV was still modeled as a Component since it is explicitly EIIS-tagged and part of the safety-significance discussion of this specific failure path; no BACKED_UP_BY edges asserted since no operable backup system is stated for this design-basis trip path. No previous similar event was identified (explicitly stated), so no stub LER/SIMILAR_TO edge emitted."
+}

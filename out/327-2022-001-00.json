@@ -1,0 +1,318 @@
+{
+  "ler_number": "327-2022-001-00",
+  "identity": {
+    "accession_number": "ML22258A065",
+    "docket": "05000327",
+    "plant_name": "Sequoyah",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2022-07-22",
+    "report_date": "2022-09-15",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Failure of 1B-B Centrifugal Charging Pump Results in Condition Prohibited by Technical Specifications"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "X",
+      "system": "CB",
+      "component": "P",
+      "manufacturer": "P025",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "Disassembly of the 1B-B CCP element showed severe wear on impellers 11 through 6 and less severe wear on impellers 5 through 1... indicative of shaft bow. Dye penetrant examination of the shaft showed a crack in the split-ring keeper key groove at the 11th stage impeller. Pending completion of the destructive analysis, the most likely cause of the failure is low stress, high cycle fatigue.",
+    "cause_code": "X",
+    "category": "Other",
+    "theme": "shaft fatigue cracking leading to pump element failure",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 327-2022-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "327-2022-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:327-2022-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Sequoyah Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000327",
+      "match_key": "Unit:05000327"
+    },
+    {
+      "id": "cause",
+      "display_name": "Other (X)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "X",
+      "category": "Other",
+      "theme": "shaft fatigue cracking leading to pump element failure",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Other"
+    },
+    {
+      "id": "sys_cb",
+      "display_name": "Chemical and Volume Control / Centrifugal Charging",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "CB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:CB"
+    },
+    {
+      "id": "sys_ab",
+      "display_name": "Reactor Coolant Pump Seal Injection",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "AB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:AB"
+    },
+    {
+      "id": "c_ccp1b",
+      "display_name": "1B-B Centrifugal Charging Pump",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "P",
+      "identifier": "1B-B CCP",
+      "model": "2.5 RLIJ-11 stage horizontal pump",
+      "manufacturer_code": "P025",
+      "inferred_code": false,
+      "match_key": "Component:P|1B-B CCP"
+    },
+    {
+      "id": "c_ccp1a",
+      "display_name": "1A-A Centrifugal Charging Pump",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "P",
+      "identifier": "1A-A CCP",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:P|1A-A CCP"
+    },
+    {
+      "id": "c_shaft",
+      "display_name": "CCP pump shaft",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:ccp-pump-shaft"
+    },
+    {
+      "id": "c_impellers",
+      "display_name": "CCP impellers (stages 1-11)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:ccp-impellers-stages-1-11"
+    },
+    {
+      "id": "fm_fatigue",
+      "display_name": "Low stress, high cycle fatigue crack in shaft split-ring keeper key groove",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Dye penetrant examination showed a crack in the split-ring keeper key groove at the 11th stage impeller, indicative of shaft bow.",
+      "match_key": "FailureMode:low-stress-high-cycle-fatigue-crack-in-shaft-split-ring-keeper-key-groove"
+    },
+    {
+      "id": "fm_bow",
+      "display_name": "Shaft bow causing uneven impeller wear",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Severe wear on impellers 11 through 6 and less severe on impellers 5 through 1, on one side (180 degrees around circumference), indicative of shaft bow.",
+      "match_key": "FailureMode:shaft-bow-causing-uneven-impeller-wear"
+    },
+    {
+      "id": "fm_ccpfail",
+      "display_name": "1B-B CCP degraded performance / declared inoperable",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Pressurizer level slowly lowering, low RCP seal flow alarm, leading to declaration of 1B-B CCP inoperable.",
+      "match_key": "FailureMode:1b-b-ccp-degraded-performance-declared-inoperable"
+    },
+    {
+      "id": "cons_tsviol",
+      "display_name": "1B-B CCP inoperable; condition prohibited by Technical Specifications (ECCS train inoperable beyond CT, unit not placed in Mode 3 within required time)",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2022-07-18T22:30",
+      "end": "2022-07-24T16:35",
+      "duration": "approximately 138 hours",
+      "tz": "EDT",
+      "match_key": "Consequence:1b-b-ccp-inoperable-condition-prohibited-by-technical-specifications-eccs-train-inoperable-beyond-ct-unit-not-placed-in-mode-3-within-required-time"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace 1B-B CCP element and test pump",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-1b-b-ccp-element-and-test-pump"
+    },
+    {
+      "id": "ca_pm",
+      "display_name": "Implement preventative maintenance tasks to periodically replace CCP shafts",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:implement-preventative-maintenance-tasks-to-periodically-replace-ccp-shafts"
+    },
+    {
+      "id": "mfr_pacific",
+      "display_name": "Pacific Pump Company (now Flowserve)",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "P025",
+      "match_key": "Manufacturer:P025"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_tslco",
+      "display_name": "TS LCO 3.5.2",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ts-lco-3-5-2"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_tslco",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_cb",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_ccp1b",
+      "evidence": null
+    },
+    {
+      "source": "c_ccp1b",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_pacific",
+      "evidence": null
+    },
+    {
+      "source": "fm_fatigue",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_fatigue",
+      "relation": "LEADS_TO",
+      "target": "fm_bow",
+      "evidence": null
+    },
+    {
+      "source": "fm_bow",
+      "relation": "LEADS_TO",
+      "target": "fm_ccpfail",
+      "evidence": null
+    },
+    {
+      "source": "fm_ccpfail",
+      "relation": "LEADS_TO",
+      "target": "cons_tsviol",
+      "evidence": null
+    },
+    {
+      "source": "cons_tsviol",
+      "relation": "BACKED_UP_BY",
+      "target": "c_ccp1a",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_pm",
+      "evidence": null
+    }
+  ],
+  "chain": "shaft fatigue crack in split-ring keeper key groove [cause X] -> shaft bow -> uneven impeller wear / 1B-B CCP degraded -> 1B-B CCP declared inoperable -> ECCS train inoperable beyond TS completion time, unit not placed in Mode 3 within required time (~138h) [backup 1A-A CCP started]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code X (Other) governs category despite narrative describing a mechanical fatigue failure; destructive analysis was pending completion at time of report, so 'most likely cause' language used throughout. RCP 1 seal flow low alarm and pressurizer level alarms are symptoms/discovery indicators of the CCP degradation, not separate failure modes. No PART_OF edges asserted since narrative does not explicitly state shaft/impellers are subcomponents of the pump in containment language beyond normal component description; treated as related components via LEADS_TO chain instead. 1A-A CCP modeled as backup via BACKED_UP_BY per explicit statement it was operable and placed in service."
+}

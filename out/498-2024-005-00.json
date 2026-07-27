@@ -1,0 +1,284 @@
+{
+  "ler_number": "498-2024-005-00",
+  "identity": {
+    "accession_number": "ML24318C508",
+    "docket": "05000498",
+    "plant_name": "South Texas",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2024-09-16",
+    "report_date": "2024-11-13",
+    "operating_mode": "3",
+    "power_level": 100,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Condition Prohibited by Technical Specifications"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The miscalculation was the result of using temperature-corrected data that was normalized in a spreadsheet instead of using the raw data of actual resistance values; using Mode 3 temperature-corrected cross-calibration data of resistance values to calculate the new slope and offset values, which is acceptable for cross-calibration activities but is not suitable for design purposes.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Calibration methodology error (misuse of cross-calibration data for design adjustment)",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 498-2024-005-00",
+      "properties": {},
+      "type": "LER",
+      "key": "498-2024-005-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:498-2024-005-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "South Texas Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000498",
+      "match_key": "Unit:05000498"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Calibration methodology error (misuse of cross-calibration data for design adjustment)",
+      "proximate_text": "The miscalculation was the result of using temperature-corrected data that was normalized in a spreadsheet instead of using the raw data of actual resistance values.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_ab",
+      "display_name": "Reactor Coolant System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "AB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:AB"
+    },
+    {
+      "id": "sys_rts",
+      "display_name": "Reactor Trip System Instrumentation",
+      "properties": {
+        "note": "TS 3.3.1 governed instrumentation"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:reactor-trip-system-instrumentation"
+    },
+    {
+      "id": "sys_esfas",
+      "display_name": "Engineered Safety Features Actuation System",
+      "properties": {
+        "note": "TS 3.3.2 governed instrumentation"
+      },
+      "type": "System",
+      "eiis_code": "JE",
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JE"
+    },
+    {
+      "id": "c_te",
+      "display_name": "Temperature Element B1RCTE0430Z",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "TE",
+      "identifier": "B1RCTE0430Z",
+      "model": "21232-1",
+      "manufacturer_code": "R135",
+      "inferred_code": false,
+      "match_key": "Component:TE|B1RCTE0430Z"
+    },
+    {
+      "id": "fm_miscalc",
+      "display_name": "Slope and offset values miscalculated using normalized temperature-corrected data",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "New slope and offset values for B1RCTE0430Z were calculated using Mode 3 temperature-corrected cross-calibration resistance data normalized in a spreadsheet, which is not suitable for design adjustment purposes, amplifying the calculated values.",
+      "match_key": "FailureMode:slope-and-offset-values-miscalculated-using-normalized-temperature-corrected-data"
+    },
+    {
+      "id": "fm_outoftol",
+      "display_name": "Loop 3 Delta T / T Average channel reading out of tolerance",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Power indication point read approximately 97.2% when approximately 100% was expected, placing the channel outside tolerance and exceeding TS Table 2.2-1 limits.",
+      "match_key": "FailureMode:loop-3-delta-t-t-average-channel-reading-out-of-tolerance"
+    },
+    {
+      "id": "cons_condition",
+      "display_name": "Loop 3 Delta T/T Average channel inoperable beyond allowed outage time; Unit 1 in condition prohibited by Technical Specifications",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2024-09-09T13:11",
+      "end": "2024-09-18T12:00",
+      "duration": "8 days, 22 hours, 49 minutes",
+      "tz": "CDT",
+      "match_key": "Consequence:loop-3-delta-t-t-average-channel-inoperable-beyond-allowed-outage-time-unit-1-in-condition-prohibited-by-technical-specifications"
+    },
+    {
+      "id": "ca_recalibrate",
+      "display_name": "Re-calibrate temperature element B1RCTE0430Z with corrected slope and offset values",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:re-calibrate-temperature-element-b1rcte0430z-with-corrected-slope-and-offset-values"
+    },
+    {
+      "id": "ca_guidance",
+      "display_name": "Review and update slope/offset adjustment guidance to require raw resistance data for design adjustments",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:review-and-update-slope-offset-adjustment-guidance-to-require-raw-resistance-data-for-design-adjustments"
+    },
+    {
+      "id": "mfr_rdf",
+      "display_name": "RDF Corp",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "R135",
+      "match_key": "Manufacturer:R135"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts331",
+      "display_name": "TS 3.3.1 Reactor Trip System Instrumentation",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-3-3-1-reactor-trip-system-instrumentation"
+    },
+    {
+      "id": "rr_ts332",
+      "display_name": "TS 3.3.2 Engineered Safety Features Actuation System Instrumentation",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-3-3-2-engineered-safety-features-actuation-system-instrumentation"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts331",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts332",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ab",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rts",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_esfas",
+      "evidence": null
+    },
+    {
+      "source": "c_te",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_rdf",
+      "evidence": null
+    },
+    {
+      "source": "fm_miscalc",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_miscalc",
+      "relation": "LEADS_TO",
+      "target": "fm_outoftol",
+      "evidence": null
+    },
+    {
+      "source": "fm_outoftol",
+      "relation": "LEADS_TO",
+      "target": "cons_condition",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_recalibrate",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_guidance",
+      "evidence": null
+    }
+  ],
+  "chain": "calibration methodology error using normalized temperature-corrected data [cause TBD] -> slope/offset values miscalculated -> Loop 3 Delta T/T Average channel reads out of tolerance -> channel inoperable beyond allowed outage time -> Unit 1 in condition prohibited by Technical Specifications",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4"
+  ],
+  "notes": "Official cause code is TBD in FORM-366 FIELDS, so cause node is provisional. No component material failure occurred (per narrative Section II.A/D: 'There was no component failure'); the failure chain is a calibration/methodology error, not a physical component defect, but is still modeled as FailureMode nodes per the causal chain requirement. No backup systems stated operable during the inoperability window, so no BACKED_UP_BY edges emitted. No previous similar events were identified in the narrative, so no SIMILAR_TO edge or stub LER node created."
+}

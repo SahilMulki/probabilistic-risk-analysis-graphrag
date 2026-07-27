@@ -1,0 +1,337 @@
+{
+  "ler_number": "382-2024-004-01",
+  "identity": {
+    "accession_number": "ML25226A260",
+    "docket": "05000382",
+    "plant_name": "Waterford",
+    "unit": 3,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2024-06-16",
+    "report_date": "2025-08-14",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Automatic Reactor Trip Due to Lightning Strike Waterford Steam Electric Station, Unit 3 NRC Docket No. 50-382 Renewed Facility Operating License No. NPF-38"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)",
+      "10 CFR 50.73(a)(2)(iv)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "Based on industry operating experience, plant data, the lightning strike timing, the Ground Grid Integrity Test, and the Sequence of Events log at WF3, the plant trip was most likely due to the multiple lightning strikes that occurred in the area.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Lightning-induced instrumentation transient causing spurious CPC trip signals",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 382-2024-004-01",
+      "properties": {
+        "match_key": "LER:382-2024-004-01"
+      },
+      "type": "LER",
+      "key": "382-2024-004-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:382-2024-004-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Waterford Unit 3",
+      "properties": {
+        "match_key": "Unit:05000382",
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000382",
+      "match_key": "Unit:05000382"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {
+        "match_key": "Cause:provisional"
+      },
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Lightning-induced instrumentation transient causing spurious CPC trip signals",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_jc",
+      "display_name": "Reactor Protection System",
+      "properties": {
+        "match_key": "System:JC"
+      },
+      "type": "System",
+      "eiis_code": "JC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JC"
+    },
+    {
+      "id": "sys_ab",
+      "display_name": "Reactor Coolant System",
+      "properties": {
+        "match_key": "System:AB"
+      },
+      "type": "System",
+      "eiis_code": "AB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:AB"
+    },
+    {
+      "id": "sys_ujx",
+      "display_name": "Static Uninterruptible Power Supplies",
+      "properties": {
+        "match_key": "System:UJX"
+      },
+      "type": "System",
+      "eiis_code": "UJX",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:UJX"
+    },
+    {
+      "id": "c_rtd",
+      "display_name": "RCS RTDs (cold leg and hot leg)",
+      "properties": {
+        "match_key": "Component:AB|DET",
+        "note": "two cold leg RTDs and one hot leg RTD showed intermittent temperature drop"
+      },
+      "type": "Component",
+      "eiis_code": "DET",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:DET"
+    },
+    {
+      "id": "c_cpc",
+      "display_name": "Core Protection Calculator (Channels B and D)",
+      "properties": {
+        "match_key": "Component:core-protection-calculator-channels-b-and-d"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:core-protection-calculator-channels-b-and-d"
+    },
+    {
+      "id": "c_mcc",
+      "display_name": "Motor Control Centers (power SUPS)",
+      "properties": {
+        "match_key": "Component:MCC"
+      },
+      "type": "Component",
+      "eiis_code": "MCC",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:MCC"
+    },
+    {
+      "id": "fm_lightning",
+      "display_name": "Lightning strikes near ground grid",
+      "properties": {
+        "match_key": "FailureMode:lightning-strikes-near-ground-grid"
+      },
+      "type": "FailureMode",
+      "description": "Eight lightning strikes recorded between 1232 and 1234 CDT near WF3's grounding grid, coinciding closely with the reactor trip.",
+      "match_key": "FailureMode:lightning-strikes-near-ground-grid"
+    },
+    {
+      "id": "fm_rtd_transient",
+      "display_name": "Intermittent RTD temperature drop",
+      "properties": {
+        "match_key": "FailureMode:intermittent-rtd-temperature-drop"
+      },
+      "type": "FailureMode",
+      "description": "Intermittent temperature drop on two RCS cold leg RTDs and one hot leg RTD, resulting in calculated reactor power perturbations from 93.72% to 103.28%.",
+      "match_key": "FailureMode:intermittent-rtd-temperature-drop"
+    },
+    {
+      "id": "fm_cpc_trip",
+      "display_name": "CPC B and D auxiliary trip signals generated",
+      "properties": {
+        "match_key": "FailureMode:cpc-b-and-d-auxiliary-trip-signals-generated"
+      },
+      "type": "FailureMode",
+      "description": "Sequence triggered by both an Asymmetrical Steam Generator Transient (ASGT) and a Variable Overpower Trip.",
+      "match_key": "FailureMode:cpc-b-and-d-auxiliary-trip-signals-generated"
+    },
+    {
+      "id": "cons_trip",
+      "display_name": "Automatic reactor protection system actuation / reactor trip",
+      "properties": {
+        "match_key": "Consequence:automatic-reactor-protection-system-actuation-reactor-trip",
+        "note": "Also a valid actuation of the Emergency Feedwater System (EN 57175)"
+      },
+      "type": "Consequence",
+      "start": "2024-06-16T12:33:00",
+      "end": null,
+      "duration": null,
+      "tz": "CDT",
+      "match_key": "Consequence:automatic-reactor-protection-system-actuation-reactor-trip"
+    },
+    {
+      "id": "ca_ggt",
+      "display_name": "Perform Ground Grid Integrity Test per IEEE Standard 81, Section 10.2",
+      "properties": {
+        "match_key": "CorrectiveAction:perform-ground-grid-integrity-test",
+        "result": "existing grounds are adequate for the WF3 grid"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:perform-ground-grid-integrity-test-per-ieee-standard-81-section-10-2"
+    },
+    {
+      "id": "ca_cpc_delay",
+      "display_name": "Implement CPC time delay for auxiliary trips",
+      "properties": {
+        "match_key": "CorrectiveAction:implement-cpc-time-delay-for-auxiliary-trips",
+        "purpose": "aid in preventing spurious plant trips"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:implement-cpc-time-delay-for-auxiliary-trips"
+    },
+    {
+      "id": "rr_5073_iv_a",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {
+        "type": "reporting-criterion",
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5073_iv_b",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(B)",
+      "properties": {
+        "type": "reporting-criterion",
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-b"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-b"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_iv_a",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_iv_b",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ab",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ujx",
+      "evidence": null
+    },
+    {
+      "source": "c_rtd",
+      "relation": "PART_OF",
+      "target": "sys_ab",
+      "evidence": null
+    },
+    {
+      "source": "fm_lightning",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_lightning",
+      "relation": "LEADS_TO",
+      "target": "fm_rtd_transient",
+      "evidence": null
+    },
+    {
+      "source": "fm_rtd_transient",
+      "relation": "LEADS_TO",
+      "target": "fm_cpc_trip",
+      "evidence": null
+    },
+    {
+      "source": "fm_cpc_trip",
+      "relation": "LEADS_TO",
+      "target": "cons_trip",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_ggt",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_cpc_delay",
+      "evidence": null
+    }
+  ],
+  "chain": "lightning strikes near ground grid [cause TBD] -> intermittent RTD temperature drop -> CPC B/D auxiliary trip signals (ASGT + Variable Overpower) -> automatic RPS actuation / reactor trip",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code remains TBD/provisional per form fields; narrative attributes the trip 'most likely' to lightning strikes, but engineering investigation of RTDs, SUPS, and Process Analog Control cabinets found no faults, so the mechanism is inferential (correlation in timing) rather than a confirmed physical fault. No previous similar occurrences were reported (explicitly stated 'None'), so no SIMILAR_TO edge or stub LER was created. MCC evaluated as a possible transient conduit but no fault found; included as a Component since narrative explicitly investigated it, but not linked into the causal chain since no fault was confirmed there. Plant name/unit/reactor type not in FORM-366 FIELDS identity block but taken from title and docket (05000382 = Waterford 3, CE PWR)."
+}

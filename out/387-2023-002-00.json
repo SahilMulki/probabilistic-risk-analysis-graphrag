@@ -1,0 +1,312 @@
+{
+  "ler_number": "387-2023-002-00",
+  "identity": {
+    "accession_number": "ML23157A176",
+    "docket": "05000387",
+    "plant_name": "Susquehanna",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2023-04-07",
+    "report_date": "2023-06-06",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "inspection",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Unplanned lnoperability of the High Pressure Coolant Injection (HPCI) System due Failure of the HPCI Turbine Stop Valve to Fully Close, Most Likely Due to Internal Corrosion and....."
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)(D)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "/",
+      "system": "/",
+      "component": "I",
+      "manufacturer": "I",
+      "reportable": null
+    },
+    {
+      "cause": "I",
+      "system": "BJ",
+      "component": "I",
+      "manufacturer": "SHV",
+      "reportable": null
+    },
+    {
+      "cause": "S075",
+      "system": "I",
+      "component": "y",
+      "manufacturer": "I",
+      "reportable": null
+    }
+  ],
+  "cause": {
+    "proximate_text": "Failure of the HPCI Turbine Stop Valve to fully close, most likely due to internal corrosion",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Valve internal corrosion",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 387-2023-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "387-2023-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:387-2023-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Susquehanna Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000387",
+      "match_key": "Unit:05000387"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Valve internal corrosion",
+      "proximate_text": "Failure of the HPCI Turbine Stop Valve to fully close, most likely due to internal corrosion",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_bj",
+      "display_name": "High Pressure Coolant Injection",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BJ"
+    },
+    {
+      "id": "c_stopvalve",
+      "display_name": "HPCI Turbine Stop Valve",
+      "properties": {
+        "valve_type": "Inverted, Oil-Operated, Semi-Balanced Globe-Type Stop Valve"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "FV15612",
+      "model": null,
+      "manufacturer_code": "SHV",
+      "inferred_code": false,
+      "match_key": "Component:hpci-turbine-stop-valve"
+    },
+    {
+      "id": "c_cylinder",
+      "display_name": "HPCI Turbine Stop Valve hydraulic operating cylinder",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:hpci-turbine-stop-valve-hydraulic-operating-cylinder"
+    },
+    {
+      "id": "c_steamsupply",
+      "display_name": "HPCI Turbine Steam Supply Valve",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:hpci-turbine-steam-supply-valve"
+    },
+    {
+      "id": "fm_corrosion",
+      "display_name": "Internal corrosion of HPCI Turbine Stop Valve",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Most likely cause of the stop valve failing to fully close",
+      "match_key": "FailureMode:internal-corrosion-of-hpci-turbine-stop-valve"
+    },
+    {
+      "id": "fm_stopvalve_fail",
+      "display_name": "HPCI Turbine Stop Valve fails to fully close",
+      "properties": {},
+      "type": "FailureMode",
+      "description": null,
+      "match_key": "FailureMode:hpci-turbine-stop-valve-fails-to-fully-close"
+    },
+    {
+      "id": "fm_steamleak",
+      "display_name": "Steam leak past HPCI Turbine Steam Supply Valve seat",
+      "properties": {},
+      "type": "FailureMode",
+      "description": null,
+      "match_key": "FailureMode:steam-leak-past-hpci-turbine-steam-supply-valve-seat"
+    },
+    {
+      "id": "cons_hpci",
+      "display_name": "HPCI system inoperable",
+      "properties": {},
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:hpci-system-inoperable"
+    },
+    {
+      "id": "ca_repair_stopvalve",
+      "display_name": "Repair HPCI Turbine Stop Valve and hydraulic operating cylinder",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:repair-hpci-turbine-stop-valve-and-hydraulic-operating-cylinder"
+    },
+    {
+      "id": "ca_replace_steamsupply",
+      "display_name": "Replace HPCI Turbine Steam Supply Valve",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-hpci-turbine-steam-supply-valve"
+    },
+    {
+      "id": "ca_weekly_inspection",
+      "display_name": "Weekly inspection of HPCI Turbine Stop Valve (interim condition monitoring)",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:weekly-inspection-of-hpci-turbine-stop-valve-interim-condition-monitoring"
+    },
+    {
+      "id": "ca_reassess_risk",
+      "display_name": "Re-assess risks associated with steam leak past Steam Supply Valve seat and develop bridging/elimination strategies",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:re-assess-risks-associated-with-steam-leak-past-steam-supply-valve-seat-and-develop-bridging-elimination-strategies"
+    },
+    {
+      "id": "mfr_sk",
+      "display_name": "Schuttle and Koerting Co.",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "SHV",
+      "match_key": "Manufacturer:SHV"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bj",
+      "evidence": null
+    },
+    {
+      "source": "fm_corrosion",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_corrosion",
+      "relation": "LEADS_TO",
+      "target": "fm_stopvalve_fail",
+      "evidence": null
+    },
+    {
+      "source": "fm_stopvalve_fail",
+      "relation": "LEADS_TO",
+      "target": "cons_hpci",
+      "evidence": null
+    },
+    {
+      "source": "fm_steamleak",
+      "relation": "LEADS_TO",
+      "target": "cons_hpci",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_repair_stopvalve",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_steamsupply",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_weekly_inspection",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_reassess_risk",
+      "evidence": null
+    },
+    {
+      "source": "c_stopvalve",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_sk",
+      "evidence": null
+    }
+  ],
+  "chain": "internal corrosion of HPCI Turbine Stop Valve [cause TBD] -> stop valve fails to fully close -> HPCI system inoperable; parallel steam leak past HPCI Turbine Steam Supply Valve seat -> HPCI system inoperable",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code is TBD/provisional per form fields; narrative attributes failure most likely to internal corrosion but this has not been confirmed. Steam Supply Valve steam leak is treated as a separate, parallel failure mode per rule 5 since it is a distinct defect from the stop valve failing to close, both contributing to HPCI inoperability. Block 13 rows are garbled OCR (e.g. 'S075' cause code, 'y' component) and are copied verbatim without reinterpretation. No previous occurrences reported; no backup systems stated as operable during the event in the narrative, so no BACKED_UP_BY edges emitted."
+}

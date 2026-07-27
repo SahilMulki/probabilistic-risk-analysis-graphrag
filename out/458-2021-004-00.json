@@ -1,0 +1,332 @@
+{
+  "ler_number": "458-2021-004-00",
+  "identity": {
+    "accession_number": "ML21228A240",
+    "docket": "05000458",
+    "plant_name": "River Bend",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2021-06-17",
+    "report_date": "2021-08-16",
+    "operating_mode": null,
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Entergy Operations, Inc. River Bend Station 5485 U.S. Highway 61N St. Francisville, LA 70775 Tel 225-381-4374"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "GNF did not accurately account for loss coefficients at those core locations causing a local overprediction in MCPR margin resulting in exceeding the MCPR TS limit",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "vendor core-analysis calculation error (Side Entry Orifice loss coefficients)",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 05000458-2021-004-00",
+      "properties": {
+        "match_key": "LER:05000458-2021-004-00"
+      },
+      "type": "LER",
+      "key": "458-2021-004-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:458-2021-004-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "River Bend Unit 1",
+      "properties": {
+        "match_key": "Unit:05000458",
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000458",
+      "match_key": "Unit:05000458"
+    },
+    {
+      "id": "cause",
+      "display_name": "TBD (provisional)",
+      "properties": {
+        "match_key": "Cause:provisional"
+      },
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "vendor core-analysis calculation error (Side Entry Orifice loss coefficients)",
+      "proximate_text": "GNF did not accurately account for loss coefficients at those core locations causing a local overprediction in MCPR margin resulting in exceeding the MCPR TS limit",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_core",
+      "display_name": "Reactor Core / Fuel Bundle Design",
+      "properties": {
+        "match_key": "System:reactor-core-fuel-bundle-design",
+        "note": "core analysis / fuel bundle configuration, not an EIIS-coded plant system"
+      },
+      "type": "System",
+      "eiis_code": "AC",
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:AC"
+    },
+    {
+      "id": "c_seo",
+      "display_name": "Side Entry Orifice (SEO)",
+      "properties": {
+        "match_key": "Component:side-entry-orifice"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:side-entry-orifice-seo"
+    },
+    {
+      "id": "fm_calc_error",
+      "display_name": "Underprediction of SEO loss coefficients in core analyses (2-beam corner locations)",
+      "properties": {
+        "match_key": "FailureMode:seo-loss-coefficient-underprediction"
+      },
+      "type": "FailureMode",
+      "description": "GNF's SEO loss coefficients for fuel bundle locations adjacent to 2-beam (corner) locations were higher than the design basis value applied, an unaccounted meta-stable pressure loss effect.",
+      "match_key": "FailureMode:underprediction-of-seo-loss-coefficients-in-core-analyses-2-beam-corner-locations"
+    },
+    {
+      "id": "fm_mcpr_overpred",
+      "display_name": "Local overprediction of MCPR margin",
+      "properties": {
+        "match_key": "FailureMode:local-mcpr-overprediction"
+      },
+      "type": "FailureMode",
+      "description": "The underpredicted loss coefficients led to an overprediction of MCPR margin at limiting bundle locations, reducing actual margin by greater than 0.01 in Critical Power Ratio.",
+      "match_key": "FailureMode:local-overprediction-of-mcpr-margin"
+    },
+    {
+      "id": "fm_mflcpr_exceed",
+      "display_name": "MFLCPR exceeded 1.0 for more than 6 hours (multiple periods, Cycles 20-21)",
+      "properties": {
+        "match_key": "FailureMode:mflcpr-exceeded-tsrequirement"
+      },
+      "type": "FailureMode",
+      "description": "Retrospective review found multiple periods during Cycle 20 and Cycle 21 where MFLCPR (corrected for SC 21-04) exceeded 1.0 for longer than 6 hours, meaning TS 3.2.2 requirements were not met.",
+      "match_key": "FailureMode:mflcpr-exceeded-1-0-for-more-than-6-hours-multiple-periods-cycles-20-21"
+    },
+    {
+      "id": "cons_tslimit",
+      "display_name": "TS 3.2.2 MCPR limit not met / potential for exceeding SLMCPR if limiting transient occurred",
+      "properties": {
+        "match_key": "Consequence:mcpr-ts-limit-not-met"
+      },
+      "type": "Consequence",
+      "start": "2018-05",
+      "end": "2021-02",
+      "duration": "Cycles 20-21 (multiple periods)",
+      "tz": null,
+      "match_key": "Consequence:ts-3-2-2-mcpr-limit-not-met-potential-for-exceeding-slmcpr-if-limiting-transient-occurred"
+    },
+    {
+      "id": "ca_standing_order",
+      "display_name": "Issue standing order implementing reduced administrative MFLCPR",
+      "properties": {
+        "match_key": "CorrectiveAction:issue-standing-order-reduced-mflcpr"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:issue-standing-order-implementing-reduced-administrative-mflcpr"
+    },
+    {
+      "id": "ca_olmcpr_penalty",
+      "display_name": "Implement OLMCPR penalty in core monitoring system databank per SC 21-04 Rev 1",
+      "properties": {
+        "match_key": "CorrectiveAction:implement-olmcpr-penalty"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:implement-olmcpr-penalty-in-core-monitoring-system-databank-per-sc-21-04-rev-1"
+    },
+    {
+      "id": "ca_colr_update",
+      "display_name": "Update COLR and associated documents for SC 21-04 Rev 1 penalties",
+      "properties": {
+        "match_key": "CorrectiveAction:update-colr"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:update-colr-and-associated-documents-for-sc-21-04-rev-1-penalties"
+    },
+    {
+      "id": "ca_supplier_qa",
+      "display_name": "Add CR-HQN-2021-01048 and SC 21-04 R1 to Qualified Supplier List comments for GEH/GNF follow-up audit",
+      "properties": {
+        "match_key": "CorrectiveAction:supplier-qa-follow-up"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:add-cr-hqn-2021-01048-and-sc-21-04-r1-to-qualified-supplier-list-comments-for-geh-gnf-follow-up-audit"
+    },
+    {
+      "id": "mfr_gnf",
+      "display_name": "Global Nuclear Fuels (GNF) / GE Hitachi (GEH)",
+      "properties": {
+        "match_key": "Manufacturer:gnf-geh"
+      },
+      "type": "Manufacturer",
+      "code": null,
+      "match_key": "Manufacturer:global-nuclear-fuels-gnf-ge-hitachi-geh"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2"
+    },
+    {
+      "id": "rr_part21",
+      "display_name": "10 CFR Part 21.21(a)(2) / 21.21(b)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-part-21-21"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-part-21-21-a-2-21-21-b"
+    },
+    {
+      "id": "rr_ts",
+      "display_name": "RBS Technical Specifications (TS 2.1, TS 3.2.2)",
+      "properties": {
+        "match_key": "RegulatoryReference:rbs-ts-2-1-3-2-2"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:rbs-technical-specifications-ts-2-1-ts-3-2-2"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_part21",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_core",
+      "evidence": null
+    },
+    {
+      "source": "c_seo",
+      "relation": "PART_OF",
+      "target": "sys_core",
+      "evidence": null
+    },
+    {
+      "source": "fm_calc_error",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_calc_error",
+      "relation": "LEADS_TO",
+      "target": "fm_mcpr_overpred",
+      "evidence": null
+    },
+    {
+      "source": "fm_mcpr_overpred",
+      "relation": "LEADS_TO",
+      "target": "fm_mflcpr_exceed",
+      "evidence": null
+    },
+    {
+      "source": "fm_mflcpr_exceed",
+      "relation": "LEADS_TO",
+      "target": "cons_tslimit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_standing_order",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_olmcpr_penalty",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_colr_update",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_supplier_qa",
+      "evidence": null
+    },
+    {
+      "source": "c_seo",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_gnf",
+      "evidence": null
+    },
+    {
+      "source": "cons_tslimit",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts",
+      "evidence": null
+    }
+  ],
+  "chain": "GNF SEO loss-coefficient calculation error [cause TBD] -> local overprediction of MCPR margin -> MFLCPR exceeded 1.0 >6hr (Cycles 20-21, TS 3.2.2 not met) -> potential to exceed SLMCPR if limiting transient occurred (no actual Safety Limit violation)",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "This LER concerns a vendor (GNF/GEH) Part 21 notification about a legacy core-analysis calculation error, not a plant equipment failure; no SSCs were inoperable. Cause code left TBD/provisional per FORM-366 fields (category 'provisional'), consistent with the narrative characterizing this as a vendor design/calculation error outside Entergy's control. No EIIS-coded system/component applies; SEO and core/fuel bundle grid modeled as non-EIIS design-context nodes since they are directly implicated in the failure chain (not merely background design description). No previous similar events reported. No Safety System Functional Failure determined."
+}

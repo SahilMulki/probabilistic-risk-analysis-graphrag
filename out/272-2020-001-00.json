@@ -1,0 +1,293 @@
+{
+  "ler_number": "272-2020-001-00",
+  "identity": {
+    "accession_number": "ML20147A243",
+    "docket": "05000272",
+    "plant_name": "Salem",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2020-03-25",
+    "report_date": "2020-05-26",
+    "operating_mode": "3",
+    "power_level": 17,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Salem Unit 1 Manual Reactor Trip and Auxiliary Feed Water System Actuation"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The direct cause of the loss of field for the 11 MG set was due to the open circuit created when its internal 1R resistors failed.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "internal resistor open circuit causing loss of MG field / voltage regulator malfunction",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 272-2020-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "272-2020-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:272-2020-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Salem Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000272",
+      "match_key": "Unit:05000272"
+    },
+    {
+      "id": "cause",
+      "display_name": "Component/Equipment Failure (B)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "internal resistor open circuit causing loss of MG field / voltage regulator malfunction",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_aa",
+      "display_name": "Rod Control Motor Generator",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "AA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:AA"
+    },
+    {
+      "id": "sys_ba",
+      "display_name": "Auxiliary Feedwater",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "actuated post-trip; operated as expected",
+      "match_key": "System:BA"
+    },
+    {
+      "id": "c_mg",
+      "display_name": "11 Rod Control Motor Generator",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "MG",
+      "identifier": null,
+      "model": "77-S-905",
+      "manufacturer_code": "E120",
+      "inferred_code": false,
+      "match_key": "Component:MG"
+    },
+    {
+      "id": "c_vr",
+      "display_name": "Voltage Regulator",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:voltage-regulator"
+    },
+    {
+      "id": "c_1r",
+      "display_name": "Internal 1R Resistors",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:internal-1r-resistors"
+    },
+    {
+      "id": "c_sg",
+      "display_name": "Steam Generator",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "SG",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:SG"
+    },
+    {
+      "id": "fm_resistor",
+      "display_name": "1R resistors failed open-circuit",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Internal 1R resistors in the 11 MG set voltage regulator failed, creating an open circuit.",
+      "match_key": "FailureMode:1r-resistors-failed-open-circuit"
+    },
+    {
+      "id": "fm_lossfield",
+      "display_name": "Loss of field for 11 MG set",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Open circuit resulted in loss of field excitation to the 11 Rod Control Motor Generator.",
+      "match_key": "FailureMode:loss-of-field-for-11-mg-set"
+    },
+    {
+      "id": "fm_mgfail",
+      "display_name": "11 Rod Control Motor Generator failure",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "MG failure resulting from voltage regulator malfunction.",
+      "match_key": "FailureMode:11-rod-control-motor-generator-failure"
+    },
+    {
+      "id": "cons_trip",
+      "display_name": "Manual reactor trip and AFW actuation",
+      "properties": {
+        "note": "Reactor manually tripped; AFW actuated on low SG level; unit stabilized in Mode 3"
+      },
+      "type": "Consequence",
+      "start": "2020-03-25T00:56",
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:manual-reactor-trip-and-afw-actuation"
+    },
+    {
+      "id": "ca_repair",
+      "display_name": "Repair of the 11 MG set",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:repair-of-the-11-mg-set"
+    },
+    {
+      "id": "mfr_emm",
+      "display_name": "Electric Machinery Manufacturing Company",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "E120",
+      "match_key": "Manufacturer:E120"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_aa",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ba",
+      "evidence": null
+    },
+    {
+      "source": "c_mg",
+      "relation": "PART_OF",
+      "target": "sys_aa",
+      "evidence": null
+    },
+    {
+      "source": "c_vr",
+      "relation": "PART_OF",
+      "target": "c_mg",
+      "evidence": null
+    },
+    {
+      "source": "c_1r",
+      "relation": "PART_OF",
+      "target": "c_vr",
+      "evidence": null
+    },
+    {
+      "source": "fm_resistor",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_resistor",
+      "relation": "LEADS_TO",
+      "target": "fm_lossfield",
+      "evidence": null
+    },
+    {
+      "source": "fm_lossfield",
+      "relation": "LEADS_TO",
+      "target": "fm_mgfail",
+      "evidence": null
+    },
+    {
+      "source": "fm_mgfail",
+      "relation": "LEADS_TO",
+      "target": "cons_trip",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_repair",
+      "evidence": null
+    },
+    {
+      "source": "c_mg",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_emm",
+      "evidence": null
+    }
+  ],
+  "chain": "1R resistors fail open-circuit [cause B] -> loss of field for 11 MG set -> 11 Rod Control Motor Generator failure -> manual reactor trip and AFW actuation",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "No previous similar events reported in the past three years, so no SIMILAR_TO edge or stub LER emitted per rule 9 (only applicable when a previous event is actually referenced). AFW system modeled as INVOLVES (event involves it via actuation) rather than BACKED_UP_BY, since AFW actuated as a direct consequence of the trip rather than serving as a stated operable backup during an inoperability window. Steam Generator (SG) included as component context for AFW actuation trigger (low level) but not tied into failure chain since it was not itself a failed component."
+}

@@ -1,0 +1,379 @@
+{
+  "ler_number": "254-2024-001-00",
+  "identity": {
+    "accession_number": "ML25021A090",
+    "docket": "05000254",
+    "plant_name": "Quad Cities",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2024-11-22",
+    "report_date": "2025-01-21",
+    "operating_mode": "5",
+    "power_level": 0,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Technical Specification 3.5.2 Action Not Performed Due to Inadequate Procedure Adherence"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "A",
+      "system": "AA",
+      "component": "V",
+      "manufacturer": "G080",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "Operators failed to properly apply fundamental behaviors in procedure use and adherence in the execution of the operation procedure. The procedure was not place-kept, nor were all the required physical actions taken in the field.",
+    "cause_code": "A",
+    "category": "Personnel Error",
+    "theme": "Procedure use and adherence / human performance failure",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 254-2024-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "254-2024-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:254-2024-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Quad Cities Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric",
+        "thermal_power_mwt": "2957"
+      },
+      "type": "Unit",
+      "key": "05000254",
+      "match_key": "Unit:05000254"
+    },
+    {
+      "id": "cause",
+      "display_name": "Personnel Error (A)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "A",
+      "category": "Personnel Error",
+      "theme": "Procedure use and adherence / human performance failure",
+      "proximate_text": "Operators failed to properly apply fundamental behaviors in procedure use and adherence in the execution of the operation procedure. The procedure was not place-kept, nor were all the required physical actions taken in the field.",
+      "provisional": false,
+      "match_key": "Cause:Personnel Error"
+    },
+    {
+      "id": "sys_aa",
+      "display_name": "RPV Water Inventory Control",
+      "properties": {
+        "note": "Reactor Pressure Vessel Water Inventory Control per TS 3.5.2"
+      },
+      "type": "System",
+      "eiis_code": "AA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:AA"
+    },
+    {
+      "id": "sys_hcu",
+      "display_name": "Hydraulic Control Units",
+      "properties": {
+        "note": "HCU, acronym only, 177 units"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:hydraulic-control-units"
+    },
+    {
+      "id": "sys_crd",
+      "display_name": "Control Rod Drive",
+      "properties": {
+        "note": "CRD, acronym only"
+      },
+      "type": "System",
+      "eiis_code": "AA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:AA"
+    },
+    {
+      "id": "sys_core_spray",
+      "display_name": "Core Spray",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BM",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; operable",
+      "match_key": "System:BM"
+    },
+    {
+      "id": "c_vent_valve",
+      "display_name": "CRD Accumulator Vent Valve 1-0305-107",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "V",
+      "identifier": "1-0305-107",
+      "model": null,
+      "manufacturer_code": "G080",
+      "inferred_code": false,
+      "match_key": "Component:V|1-0305-107"
+    },
+    {
+      "id": "fm_valve_not_reclosed",
+      "display_name": "HCU vent valves left open (not re-closed per procedure)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "1-0305-107 valves on each of the 177 HCUs, which the procedure directs to be re-closed after discharging to isolate the HCUs prior to the scram, were left open.",
+      "match_key": "FailureMode:hcu-vent-valves-left-open-not-re-closed-per-procedure"
+    },
+    {
+      "id": "fm_drain_path",
+      "display_name": "Drain path established from RPV through CRDs to Reactor Building",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "This established a drain path from the Reactor Vessel through the CRDs and to the Reactor Building ground floor area, when the scram was inserted.",
+      "match_key": "FailureMode:drain-path-established-from-rpv-through-crds-to-reactor-building"
+    },
+    {
+      "id": "fm_ts_not_entered",
+      "display_name": "Failure to recognize need to enter TS 3.5.2 Condition E",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The inadequate procedure usage was unrecognized during the event; no drain time calculations were performed per SR 3.5.2.1, and the Required Action to initiate restoration of drain time was not completed.",
+      "match_key": "FailureMode:failure-to-recognize-need-to-enter-ts-3-5-2-condition-e"
+    },
+    {
+      "id": "cons_drain",
+      "display_name": "Inadvertent RPV inventory loss / TS 3.5.2 Condition E entry not addressed",
+      "properties": {
+        "note": "Reactor water level dropped from ~184.5 in to ~179 in; recovered by Low Flow Feedwater Regulating Valve opening; remained 321 in above Top of Active Fuel."
+      },
+      "type": "Consequence",
+      "start": "2023-03-28T09:46",
+      "end": "2023-03-28T09:52",
+      "duration": "00:06",
+      "tz": "CDT",
+      "match_key": "Consequence:inadvertent-rpv-inventory-loss-ts-3-5-2-condition-e-entry-not-addressed"
+    },
+    {
+      "id": "ca_reset",
+      "display_name": "Reset scram to isolate drain path and close HCU vent valves",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:reset-scram-to-isolate-drain-path-and-close-hcu-vent-valves"
+    },
+    {
+      "id": "ca_cleanup",
+      "display_name": "Clean up contaminated RPV water on reactor building ground level",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:clean-up-contaminated-rpv-water-on-reactor-building-ground-level"
+    },
+    {
+      "id": "ca_hu_reinforce",
+      "display_name": "Reinforce Human Performance and Procedure Use/Adherence practices",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:reinforce-human-performance-and-procedure-use-adherence-practices"
+    },
+    {
+      "id": "ca_procedure_update",
+      "display_name": "Update QCOP 0500-04 to screen for RPV WIC applicability and add valve-position cautions",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:update-qcop-0500-04-to-screen-for-rpv-wic-applicability-and-add-valve-position-cautions"
+    },
+    {
+      "id": "mfr_g080",
+      "display_name": "Manufacturer G080",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "G080",
+      "match_key": "Manufacturer:G080"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts352",
+      "display_name": "Technical Specification 3.5.2 (RPV Water Inventory Control)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-3-5-2-rpv-water-inventory-control"
+    },
+    {
+      "id": "rr_ufsar",
+      "display_name": "UFSAR Chapter 15",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:ufsar-chapter-15"
+    },
+    {
+      "id": "rr_nei",
+      "display_name": "NEI 99-02",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "standard/guidance",
+      "match_key": "RegulatoryReference:nei-99-02"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "LER 254-2021-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "254-2021-001-00",
+      "stub": true,
+      "title": "Automatic Initiation of Emergency Diesel Generator Due to Transformer Maintenance",
+      "plant": "Quad Cities Nuclear Power Station",
+      "match_key": "LER:254-2021-001-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_aa",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_hcu",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_crd",
+      "evidence": null
+    },
+    {
+      "source": "c_vent_valve",
+      "relation": "PART_OF",
+      "target": "sys_hcu",
+      "evidence": null
+    },
+    {
+      "source": "c_vent_valve",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_g080",
+      "evidence": null
+    },
+    {
+      "source": "fm_valve_not_reclosed",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_valve_not_reclosed",
+      "relation": "LEADS_TO",
+      "target": "fm_drain_path",
+      "evidence": null
+    },
+    {
+      "source": "fm_drain_path",
+      "relation": "LEADS_TO",
+      "target": "fm_ts_not_entered",
+      "evidence": null
+    },
+    {
+      "source": "fm_ts_not_entered",
+      "relation": "LEADS_TO",
+      "target": "cons_drain",
+      "evidence": null
+    },
+    {
+      "source": "cons_drain",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_core_spray",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_reset",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_cleanup",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_hu_reinforce",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procedure_update",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    }
+  ],
+  "chain": "inadequate procedure use/adherence [cause A] -> HCU vent valves left open (not re-closed) -> drain path established from RPV through CRDs to Reactor Building -> failure to recognize TS 3.5.2 Condition E entry -> inadvertent RPV inventory loss (6 min, level dropped 184.5in->179in) [backup Core Spray available; scram reset isolated path]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Event occurred 2023-03-28 but was NRC-identified and reported as discovered 2024-11-22; LER number uses discovery-year convention (254-2024-001-00) per docket/report date. HCU and CRD are acronym-only per narrative (no bracket EIIS code given for HCU/CRD themselves, only the vent valve component carries [V]); AA system code taken from block 13 for RPV WIC. Core Spray named in Safety Analysis as operable/available during the event (not just design context) so modeled as backup. No equipment failure occurred; this is a pure human-performance/procedure-adherence event, hence single valve-related FailureMode chain driven entirely by personnel error rather than a hardware defect."
+}

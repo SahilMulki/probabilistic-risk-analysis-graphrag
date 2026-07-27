@@ -1,0 +1,393 @@
+{
+  "ler_number": "400-2021-005-00",
+  "identity": {
+    "accession_number": "ML21235A012",
+    "docket": "05000400",
+    "plant_name": "Shearon Harris",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2021-06-22",
+    "report_date": "2021-08-23",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Past Inoperability of Effluent Accident Monitor Exceeded Time Allowed by Technical Specifications"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "maintenance personnel did not recognize a note in the Radiation Monitor Data Sheet Library that requires substitute values to be entered when the flow transmitter for this radiation monitor is inoperable; the radiation monitoring surveillance test procedure did not have guidance to compare the as-left database values to the as-found values, and the process for tracking equipment that impacts radiation monitor operability is inadequate",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "procedure guidance gap / inadequate equipment-status tracking process",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 400-2021-005-00",
+      "properties": {},
+      "type": "LER",
+      "key": "400-2021-005-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:400-2021-005-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Shearon Harris Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000400",
+      "match_key": "Unit:05000400"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "procedure guidance gap / inadequate equipment-status tracking process",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_ne",
+      "display_name": "Waste Processing Building",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "NE",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:NE"
+    },
+    {
+      "id": "sys_il",
+      "display_name": "Radiation Monitoring System",
+      "properties": {
+        "note": "referenced as [IL] and full name RMS in narrative"
+      },
+      "type": "System",
+      "eiis_code": "IL",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:IL"
+    },
+    {
+      "id": "c_mon5a",
+      "display_name": "WPB Vent Stack 5A High Range Noble Gas Radiation Monitor",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "MON",
+      "identifier": "5A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:MON|5A"
+    },
+    {
+      "id": "c_ft",
+      "display_name": "Flow Transmitter for Monitor 5A",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "FT",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:FT"
+    },
+    {
+      "id": "c_cha",
+      "display_name": "Inoperable channel(s)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "CHA",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:CHA"
+    },
+    {
+      "id": "sys_5",
+      "display_name": "WPB Vent Stack 5 High Range Noble Gas Radiation Monitor",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "backup; operable",
+      "match_key": "System:wpb-vent-stack-5-high-range-noble-gas-radiation-monitor"
+    },
+    {
+      "id": "fm_ft_inop",
+      "display_name": "Flow transmitter inoperable since July 7, 2020",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Flow transmitter for radiation monitor 5A became inoperable, requiring substitute database values to maintain monitor operability.",
+      "match_key": "FailureMode:flow-transmitter-inoperable-since-july-7-2020"
+    },
+    {
+      "id": "fm_entry_error",
+      "display_name": "Incorrect database values entered during surveillance test",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "On October 6, 2020, personnel conducting a surveillance test inadvertently entered incorrect (non-substitute) database flow values, missing a required note in the Radiation Monitor Data Sheet Library.",
+      "match_key": "FailureMode:incorrect-database-values-entered-during-surveillance-test"
+    },
+    {
+      "id": "fm_undetected",
+      "display_name": "Error undetected due to inadequate procedure and tracking process",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The surveillance test procedure lacked guidance to compare as-left to as-found database values, and the process for tracking equipment affecting radiation monitor operability was inadequate, allowing the error to persist undetected until June 22, 2021.",
+      "match_key": "FailureMode:error-undetected-due-to-inadequate-procedure-and-tracking-process"
+    },
+    {
+      "id": "fm_mon_inop",
+      "display_name": "Radiation monitor 5A rendered inoperable",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Incorrect database flow values rendered the WPB Vent Stack 5A High Range Noble Gas Radiation Monitor inoperable from October 6, 2020 until discovery on June 22, 2021.",
+      "match_key": "FailureMode:radiation-monitor-5a-rendered-inoperable"
+    },
+    {
+      "id": "cons_tsviol",
+      "display_name": "TS 3.3.3.6 time-allowed inoperability exceeded / LCO 3.0.4 entries prohibited",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2020-10-06",
+      "end": "2021-06-22",
+      "duration": "~8.5 months",
+      "tz": null,
+      "match_key": "Consequence:ts-3-3-3-6-time-allowed-inoperability-exceeded-lco-3-0-4-entries-prohibited"
+    },
+    {
+      "id": "ca_correct_values",
+      "display_name": "Immediately correct database values and restore operability",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:immediately-correct-database-values-and-restore-operability"
+    },
+    {
+      "id": "ca_counsel",
+      "display_name": "Counsel personnel on equipment-status verification expectations",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:counsel-personnel-on-equipment-status-verification-expectations"
+    },
+    {
+      "id": "ca_shift_order",
+      "display_name": "Issue shift order for RMS technicians to verify equipment status with Control Room",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:issue-shift-order-for-rms-technicians-to-verify-equipment-status-with-control-room"
+    },
+    {
+      "id": "ca_standing_order",
+      "display_name": "Issue standing order to compare as-found to as-left flow monitor database values",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:issue-standing-order-to-compare-as-found-to-as-left-flow-monitor-database-values"
+    },
+    {
+      "id": "ca_revise_procedure",
+      "display_name": "Revise surveillance test procedure to add as-left/as-found comparison guidance",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-surveillance-test-procedure-to-add-as-left-as-found-comparison-guidance"
+    },
+    {
+      "id": "ca_tracking_process",
+      "display_name": "Implement improved process for tracking equipment affecting radiation monitor operability",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:implement-improved-process-for-tracking-equipment-affecting-radiation-monitor-operability"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts3336",
+      "display_name": "Technical Specification 3.3.3.6 (Accident Monitoring Instrumentation)",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:technical-specification-3-3-3-6-accident-monitoring-instrumentation"
+    },
+    {
+      "id": "rr_lco304",
+      "display_name": "TS LCO 3.0.4",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ts-lco-3-0-4"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts3336",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_lco304",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ne",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_il",
+      "evidence": null
+    },
+    {
+      "source": "c_mon5a",
+      "relation": "PART_OF",
+      "target": "sys_ne",
+      "evidence": null
+    },
+    {
+      "source": "fm_ft_inop",
+      "relation": "LEADS_TO",
+      "target": "fm_entry_error",
+      "evidence": null
+    },
+    {
+      "source": "fm_entry_error",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_entry_error",
+      "relation": "LEADS_TO",
+      "target": "fm_undetected",
+      "evidence": null
+    },
+    {
+      "source": "fm_undetected",
+      "relation": "LEADS_TO",
+      "target": "fm_mon_inop",
+      "evidence": null
+    },
+    {
+      "source": "fm_mon_inop",
+      "relation": "LEADS_TO",
+      "target": "cons_tsviol",
+      "evidence": null
+    },
+    {
+      "source": "cons_tsviol",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_5",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_correct_values",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_counsel",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_shift_order",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_standing_order",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_revise_procedure",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_tracking_process",
+      "evidence": null
+    }
+  ],
+  "chain": "flow transmitter [FT] inoperable since 2020-07-07 -> incorrect (non-substitute) database values entered during 2020-10-06 surveillance test [cause TBD] -> error undetected due to inadequate procedure/tracking process -> WPB Vent Stack 5A radiation monitor rendered inoperable -> TS 3.3.3.6 time limit exceeded / LCO 3.0.4 entries prohibited (discovered 2021-06-22) [backup: WPB Vent Stack 5 monitor / alternate preplanned method available]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code is TBD/provisional per FORM-366 fields; narrative describes a personnel-error/procedure-adequacy theme but no official cause code was assigned, so cause node is marked provisional per rule 4. The event involved a single continuous inoperability condition discovered June 22, 2021, spanning back to October 6, 2020; LCO 3.0.4 entries during subsequent outages are modeled as part of the same Consequence rather than separate nodes. No component manufacturer or Block 13 data provided in FORM-366 fields (empty array). WPB Vent Stack 5 monitor and its alternate preplanned monitoring method are treated as operable backups per narrative statement that they were available/implemented throughout the condition."
+}

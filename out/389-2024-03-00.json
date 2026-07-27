@@ -1,0 +1,273 @@
+{
+  "ler_number": "389-2024-03-00",
+  "identity": {
+    "accession_number": "ML24218A080",
+    "docket": "05000389",
+    "plant_name": "Saint Lucie",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2024-06-04",
+    "report_date": "2024-08-05",
+    "operating_mode": "1",
+    "power_level": 92,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Unplanned Reactor Scram"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "B",
+      "system": "NN",
+      "component": "IEF",
+      "manufacturer": null,
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The 282 CWP trip was caused by the inability of the interlock circuit to provide the inhibiting function from the condenser outlet motor operated valve limit switch auxiliary contact.",
+    "cause_code": "B",
+    "category": "Design/Manufacturing/Installation",
+    "theme": "limit switch/interlock circuit design deficiency",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 389-2024-003-00",
+      "properties": {},
+      "type": "LER",
+      "key": "389-2024-03-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:389-2024-03-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Saint Lucie Unit 2",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000389",
+      "match_key": "Unit:05000389"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Manufacturing/Installation (B)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "B",
+      "category": "Design/Manufacturing/Installation",
+      "theme": "limit switch/interlock circuit design deficiency",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Design/Manufacturing/Installation"
+    },
+    {
+      "id": "sys_nn",
+      "display_name": "Circulating Water System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "NN",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:NN"
+    },
+    {
+      "id": "sys_condenser",
+      "display_name": "Main Condenser",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SG"
+    },
+    {
+      "id": "c_cwp282",
+      "display_name": "Circulating Water Pump 282 (CWP)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "P",
+      "identifier": "282",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:P|282"
+    },
+    {
+      "id": "c_mov",
+      "display_name": "Condenser Outlet Motor Operated Valve MV-21-5A2",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "V",
+      "identifier": "MV-21-5A2",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:V|MV-21-5A2"
+    },
+    {
+      "id": "c_limitswitch",
+      "display_name": "Limit switch auxiliary contact",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "IEF",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:IEF"
+    },
+    {
+      "id": "fm_limitswitch",
+      "display_name": "Condenser outlet valve limit switch malfunction",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Malfunction of MV-21-5A2 limit switch prevented interlock circuit from receiving inhibiting signal via auxiliary contact",
+      "match_key": "FailureMode:condenser-outlet-valve-limit-switch-malfunction"
+    },
+    {
+      "id": "fm_interlock",
+      "display_name": "Interlock circuit unable to provide inhibiting function",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Interlock circuit could not inhibit CWP trip due to loss of limit switch auxiliary contact signal",
+      "match_key": "FailureMode:interlock-circuit-unable-to-provide-inhibiting-function"
+    },
+    {
+      "id": "fm_cwptrip",
+      "display_name": "282 CWP trip",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Circulating water pump 282 tripped",
+      "match_key": "FailureMode:282-cwp-trip"
+    },
+    {
+      "id": "fm_lossvacuum",
+      "display_name": "Loss of condenser vacuum",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Loss of condenser vacuum resulting from the CWP trip",
+      "match_key": "FailureMode:loss-of-condenser-vacuum"
+    },
+    {
+      "id": "cons_scram",
+      "display_name": "Manual reactor trip / unplanned scram",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2024-06-04T13:52:00",
+      "end": null,
+      "duration": null,
+      "tz": "EDT",
+      "match_key": "Consequence:manual-reactor-trip-unplanned-scram"
+    },
+    {
+      "id": "ca_fuses",
+      "display_name": "Revise operating procedures to require removal of control fuses from CWP breaker",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-operating-procedures-to-require-removal-of-control-fuses-from-cwp-breaker"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_nn",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_condenser",
+      "evidence": null
+    },
+    {
+      "source": "c_limitswitch",
+      "relation": "PART_OF",
+      "target": "c_mov",
+      "evidence": null
+    },
+    {
+      "source": "fm_limitswitch",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_limitswitch",
+      "relation": "LEADS_TO",
+      "target": "fm_interlock",
+      "evidence": null
+    },
+    {
+      "source": "fm_interlock",
+      "relation": "LEADS_TO",
+      "target": "fm_cwptrip",
+      "evidence": null
+    },
+    {
+      "source": "fm_cwptrip",
+      "relation": "LEADS_TO",
+      "target": "fm_lossvacuum",
+      "evidence": null
+    },
+    {
+      "source": "fm_lossvacuum",
+      "relation": "LEADS_TO",
+      "target": "cons_scram",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_fuses",
+      "evidence": null
+    }
+  ],
+  "chain": "limit switch/interlock design deficiency [cause B] -> condenser outlet valve limit switch malfunction -> interlock circuit fails to inhibit -> 282 CWP trips -> loss of condenser vacuum -> manual reactor trip/scram",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "No previous similar occurrence identified per licensee's 5-year review, so no SIMILAR_TO edge or stub LER emitted. Plant name/unit not present in FORM-366 FIELDS identity block but derivable from narrative ('St. Lucie Unit 2') and docket 05000389; filled in accordingly. No manufacturer or model information given in narrative for limit switch or MOV, so no Manufacturer node emitted."
+}

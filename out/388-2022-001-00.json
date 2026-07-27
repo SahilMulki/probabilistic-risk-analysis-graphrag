@@ -1,0 +1,314 @@
+{
+  "ler_number": "388-2022-001-00",
+  "identity": {
+    "accession_number": "ML22327A176",
+    "docket": "05000388",
+    "plant_name": "Susquehanna",
+    "unit": 2,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2022-09-26",
+    "report_date": "2022-11-23",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2022-001-00 for Susquehanna Steam Electric Station, Unit 2 re Inadequate Performance of Loss of Safety Determination Resulting in Both Divisions of Core Spray Being Inoperable"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)(D)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The cause of the event was determined to be inadequate performance of a loss of safety function determination by the Operator. The review failed to identify a loss of safety function resulting from concurrent inoperability of both divisions of Core Spray, Division 1 of Core Spray for planned maintenance and Division 2 of Core Spray due to performance of a surveillance. This cause was attributed to human performance.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "inadequate loss-of-safety-function determination",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 388-2022-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "388-2022-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:388-2022-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Susquehanna Unit 2",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000388",
+      "match_key": "Unit:05000388"
+    },
+    {
+      "id": "cause",
+      "display_name": "Human Performance (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "inadequate loss-of-safety-function determination",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_bg",
+      "display_name": "Core Spray System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BG"
+    },
+    {
+      "id": "sys_bi",
+      "display_name": "Emergency Service Water",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BI",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BI"
+    },
+    {
+      "id": "sys_cc_tbccw",
+      "display_name": "Turbine Building Closed Cooling Water",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "CC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:CC"
+    },
+    {
+      "id": "sys_cc_rbccw",
+      "display_name": "Reactor Building Closed Cooling Water",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "CC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:CC"
+    },
+    {
+      "id": "c_isv",
+      "display_name": "ESW to TBCCW/RBCCW Isolation Valves",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:ISV"
+    },
+    {
+      "id": "c_hx",
+      "display_name": "RBCCW Heat Exchangers",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "HX",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:HX"
+    },
+    {
+      "id": "fm_div1_maint",
+      "display_name": "Division 1 Core Spray out of service for planned maintenance",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "LCO 3.5.1 Condition A entered to support planned maintenance on Unit 2, Division 1 Core Spray beginning 09/25/2022 ~19:45.",
+      "match_key": "FailureMode:division-1-core-spray-out-of-service-for-planned-maintenance"
+    },
+    {
+      "id": "fm_stale_proc",
+      "display_name": "Loss-of-safety-function determination performed with outdated procedure copy",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Operations used a previously completed copy of the station procedure, which did not identify the Unit 2, Division 1 Core Spray ongoing planned maintenance.",
+      "match_key": "FailureMode:loss-of-safety-function-determination-performed-with-outdated-procedure-copy"
+    },
+    {
+      "id": "fm_no_peer_check",
+      "display_name": "Missing required peer check for LCO entry",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "A peer check for entry into LCO 3.7.2 Condition C was not received as required by station procedures.",
+      "match_key": "FailureMode:missing-required-peer-check-for-lco-entry"
+    },
+    {
+      "id": "fm_esw_surveillance",
+      "display_name": "ESW Division 2 stroke-time surveillance rendered Division 2 Core Spray inoperable",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Performance of the quarterly stroke time testing of ESW to TBCCW/RBCCW isolation valves results in inoperability of Unit 2, Division 2 Core Spray.",
+      "match_key": "FailureMode:esw-division-2-stroke-time-surveillance-rendered-division-2-core-spray-inoperable"
+    },
+    {
+      "id": "cons_loss_safety",
+      "display_name": "Both divisions of Core Spray inoperable / loss of safety function",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2022-09-26T14:08",
+      "end": "2022-09-26T14:17",
+      "duration": "0:09",
+      "tz": null,
+      "match_key": "Consequence:both-divisions-of-core-spray-inoperable-loss-of-safety-function"
+    },
+    {
+      "id": "ca_coaching",
+      "display_name": "Coaching performed with applicable operators",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:coaching-performed-with-applicable-operators"
+    },
+    {
+      "id": "ca_revoke",
+      "display_name": "Revoked licensed operator qualifications pending remediation",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revoked-licensed-operator-qualifications-pending-remediation"
+    },
+    {
+      "id": "ca_focused_obs",
+      "display_name": "Perform focused observations of loss of safety function determinations",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:perform-focused-observations-of-loss-of-safety-function-determinations"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bg",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bi",
+      "evidence": null
+    },
+    {
+      "source": "c_isv",
+      "relation": "PART_OF",
+      "target": "sys_bi",
+      "evidence": null
+    },
+    {
+      "source": "c_hx",
+      "relation": "PART_OF",
+      "target": "sys_cc_rbccw",
+      "evidence": null
+    },
+    {
+      "source": "fm_div1_maint",
+      "relation": "LEADS_TO",
+      "target": "fm_stale_proc",
+      "evidence": null
+    },
+    {
+      "source": "fm_stale_proc",
+      "relation": "LEADS_TO",
+      "target": "fm_no_peer_check",
+      "evidence": null
+    },
+    {
+      "source": "fm_esw_surveillance",
+      "relation": "LEADS_TO",
+      "target": "fm_no_peer_check",
+      "evidence": null
+    },
+    {
+      "source": "fm_no_peer_check",
+      "relation": "LEADS_TO",
+      "target": "cons_loss_safety",
+      "evidence": null
+    },
+    {
+      "source": "fm_stale_proc",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_coaching",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_revoke",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_focused_obs",
+      "evidence": null
+    }
+  ],
+  "chain": "inadequate loss-of-safety-function determination [cause TBD/human performance] -> stale procedure copy used, missed Div 1 Core Spray maintenance -> missing required peer check for LCO 3.7.2 entry (concurrent with ESW surveillance disabling Div 2 Core Spray) -> both divisions of Core Spray inoperable, loss of safety function (~9 min) [no backup asserted; engineering analysis found Div 2 Core Spray could still have performed its function]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code TBD/provisional per FORM-366 fields; category left as 'provisional' per instructions even though narrative attributes cause to human performance. No component failure occurred (component failure info: not applicable); this is a procedural/human-performance event. No previous occurrences reported, so no SIMILAR_TO edge or stub LER created. ESW surveillance and Division 1 planned maintenance are treated as two parallel failure-mode branches converging on the missing-peer-check step, which is the proximate trigger for the loss of safety function; the origin of the causal chain (stale procedure use) is linked CAUSED_BY to the Cause node per the human-performance determination. No BACKED_UP_BY edge asserted since no system was stated as an operable backup during the 9-minute window — engineering analysis after the fact found Division 2 Core Spray could have functioned, but this is an analysis conclusion, not a stated-operable backup during the event."
+}

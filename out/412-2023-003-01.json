@@ -1,0 +1,394 @@
+{
+  "ler_number": "412-2023-003-01",
+  "identity": {
+    "accession_number": "ML24051A155",
+    "docket": "05000412",
+    "plant_name": "Beaver Valley",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2023-06-11",
+    "report_date": "2024-02-20",
+    "operating_mode": "5",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Beaver Valley Power Station, Unit No. 2 Docket No. 50-412, License No. NPF-73 LER 2023-003-01"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)",
+      "10 CFR 50.73(a)(2)(ii)(B)",
+      "10 CFR 50.73(a)(2)(v)(B)",
+      "10 CFR 50.73(a)(2)(vii)(B)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The direct cause of the door being left open is station personnel did not adequately track ownership of the door over the multi-day evolution... personnel not following the procedure when they did not assume ownership over the position of the door and did not shut the door at the end of the work activity. Additionally, a specific procedure did not exist for opening and closing this door. The root cause is the organization did not have a clear and concise process for controlling ownership and responsibility for missile shield doors should they need to be opened temporarily.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "loss of ownership/administrative control over a temporarily opened missile barrier door",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 412-2023-003-01",
+      "properties": {},
+      "type": "LER",
+      "key": "412-2023-003-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:412-2023-003-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Beaver Valley Unit 2",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000412",
+      "match_key": "Unit:05000412"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "loss of ownership/administrative control over a temporarily opened missile barrier door",
+      "proximate_text": "The direct cause of the door being left open is station personnel did not adequately track ownership of the door over the multi-day evolution... personnel not following the procedure when they did not assume ownership over the position of the door and did not shut the door at the end of the work activity. Additionally, a specific procedure did not exist for opening and closing this door. The root cause is the organization did not have a clear and concise process for controlling ownership and responsibility for missile shield doors should they need to be opened temporarily.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_cc",
+      "display_name": "Primary Component Cooling Water",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "CC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "system rendered inoperable",
+      "match_key": "System:CC"
+    },
+    {
+      "id": "c_door",
+      "display_name": "Tornado missile barrier door A-35-5A",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "NF-DR",
+      "identifier": "A-35-5A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:NF-DR|A-35-5A"
+    },
+    {
+      "id": "fm_notclosed1",
+      "display_name": "First work group failed to close door after work activity (Apr 6-7, 2023)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Responsible work group completed task and did not close door as required by 1/2-ADM-2021; no closure reported to control room; no Narrative Log entry stating door was shut.",
+      "match_key": "FailureMode:first-work-group-failed-to-close-door-after-work-activity-apr-6-7-2023"
+    },
+    {
+      "id": "fm_logloss",
+      "display_name": "Narrative Log authorization not carried over to later shifts",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The Narrative Log entry authorizing the door to be opened was not carried over to later shifts, contributing to loss of tracked ownership.",
+      "match_key": "FailureMode:narrative-log-authorization-not-carried-over-to-later-shifts"
+    },
+    {
+      "id": "fm_notclosed2",
+      "display_name": "Second work group left door open (Apr 7, 2023)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Second work group found door already open, determined prior authorization existed and had not been closed, and left it open as found after completing their own work.",
+      "match_key": "FailureMode:second-work-group-left-door-open-apr-7-2023"
+    },
+    {
+      "id": "fm_ownershiplost",
+      "display_name": "Responsibility and control of door position lost",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Since the door was not closed by either work group and log entries were not carried over, responsibility for the door and control of its position were lost.",
+      "match_key": "FailureMode:responsibility-and-control-of-door-position-lost"
+    },
+    {
+      "id": "fm_openthruoutage",
+      "display_name": "Door remained open through refueling outage and Mode transitions",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Door A-35-5A remained open throughout 2R23 (from April 9, 2023) and Mode 4 was entered on May 14, 2023 with the door still open.",
+      "match_key": "FailureMode:door-remained-open-through-refueling-outage-and-mode-transitions"
+    },
+    {
+      "id": "cons_lossoffunc",
+      "display_name": "CCP System loss of safety function / both trains inoperable (tornado missile protection breach)",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2023-04-07T18:00",
+      "end": "2023-06-11T00:00",
+      "duration": "~35 hours (Apr 7 1800 - Apr 9 0502) plus ~27 days (May 14 2137 - Jun 11)",
+      "tz": null,
+      "match_key": "Consequence:ccp-system-loss-of-safety-function-both-trains-inoperable-tornado-missile-protection-breach"
+    },
+    {
+      "id": "ca_close",
+      "display_name": "Close and latch door A-35-5A",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:close-and-latch-door-a-35-5a"
+    },
+    {
+      "id": "ca_tourlog",
+      "display_name": "Add door A-35-5A closure check to daily operator tour logs",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:add-door-a-35-5a-closure-check-to-daily-operator-tour-logs"
+    },
+    {
+      "id": "ca_procedures",
+      "display_name": "Create procedures for opening/closing doors A-35-5A and F-66-3",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:create-procedures-for-opening-closing-doors-a-35-5a-and-f-66-3"
+    },
+    {
+      "id": "ca_admcontrols",
+      "display_name": "Add dedicated closure team requirement and additional door controls to 1/2-ADM-2021 for A-35-5A and F-66-3",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:add-dedicated-closure-team-requirement-and-additional-door-controls-to-1-2-adm-2021-for-a-35-5a-and-f-66-3"
+    },
+    {
+      "id": "rr_5073i",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_5073ii",
+      "display_name": "10 CFR 50.73(a)(2)(ii)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-ii-b"
+    },
+    {
+      "id": "rr_5073v",
+      "display_name": "10 CFR 50.73(a)(2)(v)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-b"
+    },
+    {
+      "id": "rr_5073vii",
+      "display_name": "10 CFR 50.73(a)(2)(vii)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-vii-b"
+    },
+    {
+      "id": "rr_ts377",
+      "display_name": "TS LCO 3.7.7 (CCP operability)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-lco-3-7-7-ccp-operability"
+    },
+    {
+      "id": "ler_2014_005",
+      "display_name": "LER 2014-005-00",
+      "properties": {},
+      "type": "LER",
+      "key": "2014-005-00",
+      "stub": true,
+      "title": "Containment Equipment Hatch Missile Shield Removal Inadvertently Results in Exceeding Technical Specification 3.6.1 Required Completion Times",
+      "plant": "Beaver Valley Power Station",
+      "match_key": "LER:2014-005-00"
+    },
+    {
+      "id": "ler_2017_001",
+      "display_name": "LER 2017-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "2017-001-00",
+      "stub": true,
+      "title": "Inadequate Tornado Missile Protection Identified Due to Non-Conforming Design Conditions",
+      "plant": "Beaver Valley Power Station",
+      "match_key": "LER:2017-001-00"
+    },
+    {
+      "id": "ler_2020_001",
+      "display_name": "LER 2020-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "2020-001-00",
+      "stub": true,
+      "title": "Intake Structure Interconnecting Flood Door Found Open Resulting in a Loss of Train Separation for the Reactor Plant River Water System",
+      "plant": "Beaver Valley Power Station",
+      "match_key": "LER:2020-001-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073i",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073ii",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073v",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073vii",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_cc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_door",
+      "evidence": null
+    },
+    {
+      "source": "cons_lossoffunc",
+      "relation": "MITIGATED_BY",
+      "target": "rr_ts377",
+      "evidence": null
+    },
+    {
+      "source": "fm_notclosed1",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_notclosed1",
+      "relation": "LEADS_TO",
+      "target": "fm_logloss",
+      "evidence": null
+    },
+    {
+      "source": "fm_logloss",
+      "relation": "LEADS_TO",
+      "target": "fm_notclosed2",
+      "evidence": null
+    },
+    {
+      "source": "fm_notclosed2",
+      "relation": "LEADS_TO",
+      "target": "fm_ownershiplost",
+      "evidence": null
+    },
+    {
+      "source": "fm_ownershiplost",
+      "relation": "LEADS_TO",
+      "target": "fm_openthruoutage",
+      "evidence": null
+    },
+    {
+      "source": "fm_openthruoutage",
+      "relation": "LEADS_TO",
+      "target": "cons_lossoffunc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_close",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_tourlog",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procedures",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_admcontrols",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_2014_005",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_2017_001",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_2020_001",
+      "evidence": null
+    }
+  ],
+  "chain": "no clear ownership/control process for temporarily opened missile doors [cause TBD] -> work group fails to close door A-35-5A after task -> Narrative Log authorization not carried over -> second work group leaves door open as found -> responsibility/control of door lost -> door remains open through outage and Mode 4 entry -> CCP System loss of safety function, both trains inoperable (~35 hrs + ~27 days)",
+  "golden_questions": [
+    "Q1",
+    "Q2",
+    "Q5",
+    "Q7",
+    "Q9"
+  ],
+  "notes": "This is Revision 01 correcting the inoperability window/dates and confirming completion of corrective actions from the original 2023-003-00 LER. Official cause code is TBD/provisional per FORM-366 fields even though narrative describes a clear direct/root cause (personnel/procedural ownership failure); category left as 'provisional' per rule 4. No equipment failure occurred; this is a purely administrative/procedural failure chain affecting a passive missile barrier and consequent CCP train inoperability. No backup system is stated as compensating for the loss of CCP safety function (the very-low-risk determination rests on PRA/tornado-missile probability analysis, not on an operable backup system), so no BACKED_UP_BY edge is asserted. ADS/HPCI not applicable to this PWR CCP event."
+}

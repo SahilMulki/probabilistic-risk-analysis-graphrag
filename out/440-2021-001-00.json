@@ -1,0 +1,283 @@
+{
+  "ler_number": "440-2021-001-00",
+  "identity": {
+    "accession_number": "ML21209A105",
+    "docket": "05000440",
+    "plant_name": "Perry",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2021-06-01",
+    "report_date": "2021-06-27",
+    "operating_mode": "3",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Perry Nuclear Power Plant Docket No. 50-440, License No. NPF-58 Licensee Event Report Submittal"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "B",
+      "system": "EK",
+      "component": "RG",
+      "manufacturer": "B093",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The most plausible cause for the erratic output voltage falling below the allowable band during startup is an internal infant component mortality failure of the voltage regulator.",
+    "cause_code": "B",
+    "category": "Design/Manufacturing/Installation",
+    "theme": "infant mortality failure of newly-replaced voltage regulator",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 440-2021-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "440-2021-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:440-2021-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Perry Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000440",
+      "match_key": "Unit:05000440"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Manufacturing/Installation (B)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "B",
+      "category": "Design/Manufacturing/Installation",
+      "theme": "infant mortality failure of newly-replaced voltage regulator",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Design/Manufacturing/Installation"
+    },
+    {
+      "id": "sys_ek",
+      "display_name": "Division 3 Diesel Generator",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "EK",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "Division 3 standby diesel generator",
+      "match_key": "System:EK"
+    },
+    {
+      "id": "c_rg",
+      "display_name": "Voltage Regulator",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "RG",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": "B093",
+      "inferred_code": false,
+      "match_key": "Component:RG"
+    },
+    {
+      "id": "fm_infant",
+      "display_name": "Voltage regulator internal infant-mortality component failure",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Newly replaced voltage regulator (installed May 15, 2021) failed internally shortly after installation, causing erratic output voltage below the allowable band during DG startup.",
+      "match_key": "FailureMode:voltage-regulator-internal-infant-mortality-component-failure"
+    },
+    {
+      "id": "fm_erratic",
+      "display_name": "Erratic Division 3 DG output voltage during start",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Erratic output voltage noted for approximately 45 seconds after start during monthly Division 3 DG run.",
+      "match_key": "FailureMode:erratic-division-3-dg-output-voltage-during-start"
+    },
+    {
+      "id": "fm_ts_miss",
+      "display_name": "TS 3.8.1 Condition B/F actions not entered/completed",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Entry into TS 3.8.1 Condition B and accompanying actions did not occur when erratic voltage was first noted; SR 3.8.1.1 not performed within one hour; subsequent Condition F action (Mode 3 in 12 hours) not met.",
+      "match_key": "FailureMode:ts-3-8-1-condition-b-f-actions-not-entered-completed"
+    },
+    {
+      "id": "cons_inop",
+      "display_name": "Division 3 DG declared inoperable and unavailable",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2021-06-03T18:15",
+      "end": "2021-06-04T21:25",
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:division-3-dg-declared-inoperable-and-unavailable"
+    },
+    {
+      "id": "cons_tsviol",
+      "display_name": "Operation prohibited by Technical Specifications (TS 3.8.1 Condition F not met)",
+      "properties": {},
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:operation-prohibited-by-technical-specifications-ts-3-8-1-condition-f-not-met"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace voltage regulator and satisfactorily test",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-voltage-regulator-and-satisfactorily-test"
+    },
+    {
+      "id": "ca_failure_analysis",
+      "display_name": "Send defective voltage regulator for failure analysis testing",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:send-defective-voltage-regulator-for-failure-analysis-testing"
+    },
+    {
+      "id": "mfr_b093",
+      "display_name": "Manufacturer B093",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "B093",
+      "match_key": "Manufacturer:B093"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_rg1174",
+      "display_name": "Regulatory Guide 1.174",
+      "properties": {
+        "type": "standard/guidance"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:regulatory-guide-1-174"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ek",
+      "evidence": null
+    },
+    {
+      "source": "c_rg",
+      "relation": "PART_OF",
+      "target": "sys_ek",
+      "evidence": null
+    },
+    {
+      "source": "c_rg",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_b093",
+      "evidence": null
+    },
+    {
+      "source": "fm_infant",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_infant",
+      "relation": "LEADS_TO",
+      "target": "fm_erratic",
+      "evidence": null
+    },
+    {
+      "source": "fm_erratic",
+      "relation": "LEADS_TO",
+      "target": "fm_ts_miss",
+      "evidence": null
+    },
+    {
+      "source": "fm_erratic",
+      "relation": "LEADS_TO",
+      "target": "cons_inop",
+      "evidence": null
+    },
+    {
+      "source": "fm_ts_miss",
+      "relation": "LEADS_TO",
+      "target": "cons_tsviol",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_failure_analysis",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_rg1174",
+      "evidence": null
+    }
+  ],
+  "chain": "voltage regulator infant-mortality failure [cause B] -> erratic Division 3 DG output voltage at start -> TS 3.8.1 Condition B/F actions not entered/completed -> DG declared inoperable (6/3 18:15-6/4 21:25) & TS operation prohibited (reportable under 50.73(a)(2)(i)(B))",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "No previous similar events were identified in the narrative (section present but empty), so no stub LER/SIMILAR_TO edge was created. Plant name/unit/reactor type/vendor inferred from known Perry Nuclear Power Plant details (docket 05000440) since FORM-366 FIELDS left them null. No backup system explicitly stated as operable during this event window in the narrative, so no BACKED_UP_BY edge was added. Voltage regulator [RG] linked to Division 3 DG [EK] via PART_OF since it is a subcomponent of the diesel generator per narrative context."
+}

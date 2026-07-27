@@ -1,0 +1,257 @@
+{
+  "ler_number": "263-2023-003-00",
+  "identity": {
+    "accession_number": "ML23338A184",
+    "docket": "05000263",
+    "plant_name": "Monticello",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2023-10-10",
+    "report_date": "2023-12-04",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2023-003-00 for Monticello Nuclear Generating Plant, Condition Prohibited by Technical Specifications due to Inoperable Main Steam Line Low Pressure Isolation Switch"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The cause of the failure of the B1 Channel switch was instrument drift. Since no specific failure mechanism was identified, a performance at half of the required SR 3.3.6.1.4 channel calibration procedure period was performed.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "instrument drift, no specific failure mechanism identified",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 263-2023-003-00",
+      "properties": {},
+      "type": "LER",
+      "key": "263-2023-003-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:263-2023-003-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Monticello Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000263",
+      "match_key": "Unit:05000263"
+    },
+    {
+      "id": "cause",
+      "display_name": "Instrument Drift (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "instrument drift, no specific failure mechanism identified",
+      "proximate_text": "The cause of the failure of the B1 Channel switch was instrument drift. Since no specific failure mechanism was identified, a performance at half of the required SR 3.3.6.1.4 channel calibration procedure period was performed.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_jm",
+      "display_name": "Primary Containment Isolation Instrumentation",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JM",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "MSL low pressure isolation trip function",
+      "match_key": "System:JM"
+    },
+    {
+      "id": "c_ps2134b",
+      "display_name": "PS-2-134B, B1 Channel Main Steam Line Low Pressure Isolation Switch",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "JM",
+      "identifier": "PS-2-134B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:JM|PS-2-134B"
+    },
+    {
+      "id": "c_ps2134a",
+      "display_name": "PS-2-134A, A1 Channel Main Steam Line Low Pressure Isolation Switch",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "JM",
+      "identifier": "PS-2-134A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:JM|PS-2-134A"
+    },
+    {
+      "id": "fm_drift",
+      "display_name": "B1 Channel switch trip setpoint drifted below TS allowable value",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "During plant startup on October 7, 2023, the B1 Channel switch reset prior to 686.7 psig, indicating the switch had drifted below the TS minimum allowable value of 815 psig; as-found value on October 10, 2023 was 641.6 psig.",
+      "match_key": "FailureMode:b1-channel-switch-trip-setpoint-drifted-below-ts-allowable-value"
+    },
+    {
+      "id": "fm_undetected",
+      "display_name": "Inoperable channel condition not identified upon Mode 1 entry",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The plant entered Mode 1 on October 7, 2023 at 0228 without knowledge that the B1 Channel switch was inoperable, so the required TS action to place the channel in trip was not taken.",
+      "match_key": "FailureMode:inoperable-channel-condition-not-identified-upon-mode-1-entry"
+    },
+    {
+      "id": "cons_ts",
+      "display_name": "Condition prohibited by Technical Specifications (TS 3.3.6.1) / channel inoperable in Mode 1 without required action",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2023-10-07T02:28",
+      "end": "2023-10-10T09:01",
+      "duration": "3 days 6 hours 33 minutes",
+      "tz": "CDT",
+      "match_key": "Consequence:condition-prohibited-by-technical-specifications-ts-3-3-6-1-channel-inoperable-in-mode-1-without-required-action"
+    },
+    {
+      "id": "ca_retest",
+      "display_name": "Perform SR 3.3.6.1.4 channel calibration at half the required surveillance frequency",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:perform-sr-3-3-6-1-4-channel-calibration-at-half-the-required-surveillance-frequency"
+    },
+    {
+      "id": "ca_bringintol",
+      "display_name": "Bring B1 Channel switch within tolerance",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:bring-b1-channel-switch-within-tolerance"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts33361",
+      "display_name": "TS 3.3.6.1, Primary Containment Isolation Instrumentation",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-3-3-6-1-primary-containment-isolation-instrumentation"
+    },
+    {
+      "id": "rr_sr33614",
+      "display_name": "SR 3.3.6.1.4 Channel Calibration Procedure",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:sr-3-3-6-1-4-channel-calibration-procedure"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts33361",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_sr33614",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jm",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_ps2134b",
+      "evidence": null
+    },
+    {
+      "source": "fm_drift",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_drift",
+      "relation": "LEADS_TO",
+      "target": "fm_undetected",
+      "evidence": null
+    },
+    {
+      "source": "fm_undetected",
+      "relation": "LEADS_TO",
+      "target": "cons_ts",
+      "evidence": null
+    },
+    {
+      "source": "cons_ts",
+      "relation": "MITIGATED_BY",
+      "target": "ca_bringintol",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_retest",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_bringintol",
+      "evidence": null
+    }
+  ],
+  "chain": "instrument drift (cause TBD) -> B1 Channel switch trip setpoint drifted below TS allowable value -> inoperable channel condition not identified upon Mode 1 entry -> condition prohibited by TS (channel inoperable in Mode 1 without required action taken) [mitigated by bringing switch into tolerance; three other MSL Low Pressure channels remained operable]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4"
+  ],
+  "notes": "No specific failure mechanism was identified for the instrument drift; official cause code remains TBD/provisional per Form 366 fields. PS-2-134A is included as a related component referenced in the narrative (calibrated same day, unaffected) but is not part of the causal chain. No SIMILAR_TO edge emitted since the 'Previous Similar Events' section is blank in the narrative. No manufacturer, backup system, or PART_OF relationships were explicitly stated for these switches."
+}

@@ -1,0 +1,371 @@
+{
+  "ler_number": "259-2022-002-01",
+  "identity": {
+    "accession_number": "ML23285A192",
+    "docket": "05000259",
+    "plant_name": "Browns Ferry",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2022-07-12",
+    "report_date": "2023-10-12",
+    "operating_mode": "1",
+    "power_level": 97,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "– High Pressure Coolant"
+  },
+  "reporting_basis": {
+    "reported_under": [],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "D",
+      "system": "BJ",
+      "component": "FCV",
+      "manufacturer": "T147",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The procedural guidance in MPI-0-073-TRB001, \"High Pressure Coolant Injection (HPCI) Turbine Preventive Maintenance\", was less than adequate to ensure that visual inspection tasks identify adverse conditions prior to failure. Additionally, the maintenance strategy was not aligned with industry best practices and was insufficient for making risk-based decisions related to the reliability of the U1 HPCI EGR.",
+    "cause_code": "D",
+    "category": "Defective Procedure",
+    "theme": "Inadequate visual-inspection acceptance criteria and PM strategy misalignment",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 259-2022-006-01",
+      "properties": {
+        "match_key": "LER:259-2022-006-01"
+      },
+      "type": "LER",
+      "key": "259-2022-002-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:259-2022-002-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Browns Ferry Unit 1",
+      "properties": {
+        "match_key": "Unit:05000259",
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000259",
+      "match_key": "Unit:05000259"
+    },
+    {
+      "id": "cause",
+      "display_name": "Defective Procedure (D)",
+      "properties": {
+        "match_key": "Cause:Defective Procedure"
+      },
+      "type": "Cause",
+      "cause_code": "D",
+      "category": "Defective Procedure",
+      "theme": "Inadequate visual-inspection acceptance criteria and PM strategy misalignment",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Defective Procedure"
+    },
+    {
+      "id": "sys_bj",
+      "display_name": "High Pressure Coolant Injection",
+      "properties": {
+        "match_key": "System:BJ"
+      },
+      "type": "System",
+      "eiis_code": "BJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BJ"
+    },
+    {
+      "id": "sys_bn",
+      "display_name": "Reactor Core Isolation Cooling",
+      "properties": {
+        "match_key": "System:BN"
+      },
+      "type": "System",
+      "eiis_code": "BN",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; operable throughout event except June 1, 2022 surveillance window",
+      "match_key": "System:BN"
+    },
+    {
+      "id": "sys_ads",
+      "display_name": "Automatic Depressurization System",
+      "properties": {
+        "match_key": "System:automatic-depressurization-system"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "backup; available throughout event",
+      "match_key": "System:automatic-depressurization-system"
+    },
+    {
+      "id": "c_p",
+      "display_name": "HPCI auxiliary oil pump",
+      "properties": {
+        "match_key": "Component:P"
+      },
+      "type": "Component",
+      "eiis_code": "P",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:P"
+    },
+    {
+      "id": "c_fcv",
+      "display_name": "HPCI Control Valve (Governor Valve) 1-FCV-073-0019",
+      "properties": {
+        "match_key": "Component:FCV|1-FCV-073-0019"
+      },
+      "type": "Component",
+      "eiis_code": "FCV",
+      "identifier": "1-FCV-073-0019",
+      "model": null,
+      "manufacturer_code": "T147",
+      "inferred_code": false,
+      "match_key": "Component:FCV|1-FCV-073-0019"
+    },
+    {
+      "id": "c_egr",
+      "display_name": "Electro-Governor Remote Hydraulic Actuator (EGR)",
+      "properties": {
+        "match_key": "Component:SM"
+      },
+      "type": "Component",
+      "eiis_code": "SM",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:SM"
+    },
+    {
+      "id": "fm_corrosion",
+      "display_name": "Corrosion product accumulation around EGR pilot plunger",
+      "properties": {
+        "match_key": "FailureMode:corrosion-product-accumulation-around-egr-pilot-plunger"
+      },
+      "type": "FailureMode",
+      "description": "Rust/corrosion accumulated on the pilot valve and inner bore of the EGR, reducing required clearances.",
+      "match_key": "FailureMode:corrosion-product-accumulation-around-egr-pilot-plunger"
+    },
+    {
+      "id": "fm_binding",
+      "display_name": "EGR mechanical binding",
+      "properties": {
+        "match_key": "FailureMode:egr-mechanical-binding"
+      },
+      "type": "FailureMode",
+      "description": "Reduced clearances caused the EGR pilot plunger to bind mechanically, preventing hydraulic oil supply to the governor valve.",
+      "match_key": "FailureMode:egr-mechanical-binding"
+    },
+    {
+      "id": "fm_valvefail",
+      "display_name": "Governor valve failed to open",
+      "properties": {
+        "match_key": "FailureMode:governor-valve-failed-to-open"
+      },
+      "type": "FailureMode",
+      "description": "HPCI governor valve (1-FCV-073-0019) did not open as expected during startup checks because the EGR did not supply hydraulic oil.",
+      "match_key": "FailureMode:governor-valve-failed-to-open"
+    },
+    {
+      "id": "cons_hpci",
+      "display_name": "HPCI inoperable / unable to inject",
+      "properties": {
+        "match_key": "Consequence:hpci-inoperable-unable-to-inject"
+      },
+      "type": "Consequence",
+      "start": "2022-07-12T09:13:00",
+      "end": "2022-07-15T09:15:00",
+      "duration": "~48 days (T/2 exposure + 3-day repair)",
+      "tz": "CDT",
+      "match_key": "Consequence:hpci-inoperable-unable-to-inject"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace EGR and remote servo",
+      "properties": {
+        "match_key": "CorrectiveAction:replace-egr-and-remote-servo"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-egr-and-remote-servo"
+    },
+    {
+      "id": "ca_procrevise",
+      "display_name": "Revise MPI-0-073-TRB001 EGR visual inspection acceptance criteria",
+      "properties": {
+        "match_key": "CorrectiveAction:revise-mpi-0-073-trb001-egr-visual-inspection"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-mpi-0-073-trb001-egr-visual-inspection-acceptance-criteria"
+    },
+    {
+      "id": "ca_lubetirevise",
+      "display_name": "Revise 0-TI-230L Lubrication Oil Analysis & Monitoring Program moisture limits",
+      "properties": {
+        "match_key": "CorrectiveAction:revise-0-ti-230l-moisture-limits"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-0-ti-230l-lubrication-oil-analysis-monitoring-program-moisture-limits"
+    },
+    {
+      "id": "ca_newpm",
+      "display_name": "Establish biweekly HPCI ALOP run to recoat EGR internals",
+      "properties": {
+        "match_key": "CorrectiveAction:establish-biweekly-alop-run"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:establish-biweekly-hpci-alop-run-to-recoat-egr-internals"
+    },
+    {
+      "id": "mfr_terry",
+      "display_name": "Terry Steam Turbine Company",
+      "properties": {
+        "match_key": "Manufacturer:T147"
+      },
+      "type": "Manufacturer",
+      "code": "T147",
+      "match_key": "Manufacturer:T147"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bj",
+      "evidence": null
+    },
+    {
+      "source": "c_fcv",
+      "relation": "PART_OF",
+      "target": "sys_bj",
+      "evidence": null
+    },
+    {
+      "source": "c_fcv",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_terry",
+      "evidence": null
+    },
+    {
+      "source": "fm_corrosion",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_corrosion",
+      "relation": "LEADS_TO",
+      "target": "fm_binding",
+      "evidence": null
+    },
+    {
+      "source": "fm_binding",
+      "relation": "LEADS_TO",
+      "target": "fm_valvefail",
+      "evidence": null
+    },
+    {
+      "source": "fm_valvefail",
+      "relation": "LEADS_TO",
+      "target": "cons_hpci",
+      "evidence": null
+    },
+    {
+      "source": "cons_hpci",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_bn",
+      "evidence": null
+    },
+    {
+      "source": "cons_hpci",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_ads",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procrevise",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_lubetirevise",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_newpm",
+      "evidence": null
+    }
+  ],
+  "chain": "inadequate PM/inspection procedure & maintenance strategy [cause D] -> corrosion accumulation on EGR pilot plunger -> EGR mechanical binding -> governor valve fails to open -> HPCI inoperable ~48 days [backups RCIC (operable except brief June 1 test window), ADS available]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Component/system EIIS codes taken from bracketed narrative tags (BJ, P, FCV, SM, BN, BO, BM); LPCI (BO) and Core Spray (BM) mentioned only in Analysis-of-event design-context passage describing HPCI's role relative to low-pressure ECCS, not as stated-operable backups during this event, so per rule 6 they are omitted as System nodes/edges. Section VII states no similar previous events were found at BFN over the last five years, so no SIMILAR_TO/stub LER is emitted. Title field in FORM-366 was truncated ('– High Pressure Coolant'); reconstructed a descriptive title from narrative content. LER number derived from docket/event year/sequence with revision suffix per accession letter (01)."
+}

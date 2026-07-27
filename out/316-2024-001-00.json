@@ -1,0 +1,422 @@
+{
+  "ler_number": "316-2024-001-00",
+  "identity": {
+    "accession_number": "ML24141A120",
+    "docket": "05000316",
+    "plant_name": "D.C. Cook",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2024-03-22",
+    "report_date": "2024-05-20",
+    "operating_mode": null,
+    "power_level": null,
+    "discovery_context": "inspection",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Reactor Trip due to Main Turbine Trip from a High-High Thrust Bearing Position Trip"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "X",
+      "system": "IT",
+      "component": null,
+      "manufacturer": null,
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "the Hi-Hi Thrust Bearing Position trip was caused by the Input/Output cards inside the Turbine Supervisory Instrumentation (TSI) providing a trip signal from a combination of the 'B' Main Turbine Thrust Probe Hi-Hi Position and a bad quality input from the 1X Main Turbine Vibration Probe. The system logic should have required a 2 out of 2 Hi-Hi Thrust Bearing Position condition to trip. However, the trip logic inappropriately factored in an input from a bad quality vibration probe.",
+    "cause_code": "X",
+    "category": "Other",
+    "theme": "TSI trip-logic design flaw allowed bad-quality vibration input to satisfy 2-of-2 trip logic",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 316-2024-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "316-2024-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:316-2024-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "D.C. Cook Unit 2",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000316",
+      "match_key": "Unit:05000316"
+    },
+    {
+      "id": "cause",
+      "display_name": "Other (X)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "X",
+      "category": "Other",
+      "theme": "TSI trip-logic design flaw allowed bad-quality vibration input to satisfy 2-of-2 trip logic",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Other"
+    },
+    {
+      "id": "sys_ta",
+      "display_name": "Main Turbine",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "TA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:TA"
+    },
+    {
+      "id": "sys_jj",
+      "display_name": "Turbine Supervisory Instrumentation (TSI)",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JJ"
+    },
+    {
+      "id": "sys_jg",
+      "display_name": "Reactor Protection System (RPS)",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JG"
+    },
+    {
+      "id": "sys_ba",
+      "display_name": "Auxiliary Feedwater System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; operable",
+      "match_key": "System:BA"
+    },
+    {
+      "id": "sys_jl",
+      "display_name": "Steam Dump System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JL",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; operable",
+      "match_key": "System:JL"
+    },
+    {
+      "id": "sys_iel",
+      "display_name": "Power Range Neutron Flux (P-8) Interlock",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "IEL",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:IEL"
+    },
+    {
+      "id": "c_thrustprobe_b",
+      "display_name": "'B' Main Turbine Thrust Probe (2-TZP-202B-TB)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "2-TZP-202B-TB",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:b-main-turbine-thrust-probe-2-tzp-202b-tb"
+    },
+    {
+      "id": "c_vibprobe_1x",
+      "display_name": "1X Main Turbine Vibration Probe (2-TVI-201-R-X)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "2-TVI-201-R-X",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:1x-main-turbine-vibration-probe-2-tvi-201-r-x"
+    },
+    {
+      "id": "c_iocards",
+      "display_name": "TSI Input/Output cards",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:tsi-input-output-cards"
+    },
+    {
+      "id": "c_afwpump",
+      "display_name": "Auxiliary Feedwater Pumps",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "P",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:P"
+    },
+    {
+      "id": "fm_badvib",
+      "display_name": "1X vibration probe provided bad-quality input",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The 1X Main Turbine Vibration Probe supplied a bad quality input signal to the TSI I/O cards.",
+      "match_key": "FailureMode:1x-vibration-probe-provided-bad-quality-input"
+    },
+    {
+      "id": "fm_logicflaw",
+      "display_name": "TSI trip logic inappropriately incorporated bad-quality vibration input into 2-of-2 thrust trip logic",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The TSI I/O card logic combined the bad-quality vibration probe input with the valid 'B' Thrust Probe Hi-Hi position trip, satisfying the 2 out of 2 logic though only one valid thrust signal existed.",
+      "match_key": "FailureMode:tsi-trip-logic-inappropriately-incorporated-bad-quality-vibration-input-into-2-of-2-thrust-trip-logic"
+    },
+    {
+      "id": "fm_turbinetrip",
+      "display_name": "Main Turbine automatic trip on false Hi-Hi Thrust Bearing Position signal",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "A Main Turbine trip was actuated by the erroneous Hi-Hi Thrust Bearing Position trip signal.",
+      "match_key": "FailureMode:main-turbine-automatic-trip-on-false-hi-hi-thrust-bearing-position-signal"
+    },
+    {
+      "id": "cons_trip",
+      "display_name": "Automatic Reactor Trip with RPS and AFW actuation",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2024-03-22T08:52",
+      "end": null,
+      "duration": null,
+      "tz": "EDT",
+      "match_key": "Consequence:automatic-reactor-trip-with-rps-and-afw-actuation"
+    },
+    {
+      "id": "ca_logic",
+      "display_name": "Update system logic to require 2-of-2 Hi-Hi Thrust Bearing Position and remove vibration probe input from trip condition",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:update-system-logic-to-require-2-of-2-hi-hi-thrust-bearing-position-and-remove-vibration-probe-input-from-trip-condition"
+    },
+    {
+      "id": "ca_probes",
+      "display_name": "Replace 'A' and 'B' thrust probes",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-a-and-b-thrust-probes"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5072b2",
+      "display_name": "10 CFR 50.72(b)(2)(iv)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-2-iv-b"
+    },
+    {
+      "id": "rr_5072b3",
+      "display_name": "10 CFR 50.72(b)(3)(iv)(A)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-3-iv-a"
+    },
+    {
+      "id": "rr_imc0609",
+      "display_name": "NRC Inspection Manual Chapter (IMC) 0609",
+      "properties": {
+        "type": "standard/guidance"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:nrc-inspection-manual-chapter-imc-0609"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072b2",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072b3",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ta",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jj",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jg",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ba",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jl",
+      "evidence": null
+    },
+    {
+      "source": "c_iocards",
+      "relation": "PART_OF",
+      "target": "sys_jj",
+      "evidence": null
+    },
+    {
+      "source": "c_afwpump",
+      "relation": "PART_OF",
+      "target": "sys_ba",
+      "evidence": null
+    },
+    {
+      "source": "fm_badvib",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_badvib",
+      "relation": "LEADS_TO",
+      "target": "fm_logicflaw",
+      "evidence": null
+    },
+    {
+      "source": "fm_logicflaw",
+      "relation": "LEADS_TO",
+      "target": "fm_turbinetrip",
+      "evidence": null
+    },
+    {
+      "source": "fm_turbinetrip",
+      "relation": "LEADS_TO",
+      "target": "cons_trip",
+      "evidence": null
+    },
+    {
+      "source": "cons_trip",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_ba",
+      "evidence": null
+    },
+    {
+      "source": "cons_trip",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_jl",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_logic",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_probes",
+      "evidence": null
+    },
+    {
+      "source": "c_thrustprobe_b",
+      "relation": "PART_OF",
+      "target": "sys_ta",
+      "evidence": null
+    },
+    {
+      "source": "c_vibprobe_1x",
+      "relation": "PART_OF",
+      "target": "sys_ta",
+      "evidence": null
+    }
+  ],
+  "chain": "bad-quality 1X vibration probe input [cause X] -> TSI trip logic erroneously satisfies 2-of-2 Hi-Hi Thrust Bearing logic using bad-quality signal + valid 'B' thrust probe trip -> Main Turbine automatic trip -> Reactor trip with RPS/AFW actuation [backups AFW, Steam Dump available]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code X / category 'Other' governs despite the narrative describing what reads like a design/logic deficiency; an Apparent Cause Evaluation was still in progress at time of writing, so a supplement may follow. No previous similar events found per licensee review of past five years, so no SIMILAR_TO stub LER emitted. Reactor power level (48%) taken from narrative, not the form fields which left it null."
+}

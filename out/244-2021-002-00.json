@@ -1,0 +1,281 @@
+{
+  "ler_number": "244-2021-002-00",
+  "identity": {
+    "accession_number": "ML21336A082",
+    "docket": "05000244",
+    "plant_name": "Ginna",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2021-10-04",
+    "report_date": "2021-12-02",
+    "operating_mode": "1",
+    "power_level": 52,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Valid Auxiliary Feedwater System Actuation on Lowered Steam Generator Level due to Failure to Control Main Feed Water Flow and Delay in Closing Main Steam Isolation Valves"
+  },
+  "reporting_basis": {
+    "reported_under": [],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "Operators did not close the 'B' Main Feedwater Regulating Valve Bypass Valve following Reactor Trip resulting in a cooldown and did not promptly close the Main Steam Isolation Valves",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Operator failure to control feedwater and promptly isolate steam flow following reactor trip",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 244-2021-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "244-2021-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:244-2021-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Ginna Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000244",
+      "match_key": "Unit:05000244"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Operator failure to control feedwater and promptly isolate steam flow following reactor trip",
+      "proximate_text": "Operators did not close the 'B' Main Feedwater Regulating Valve Bypass Valve following Reactor Trip resulting in a cooldown and did not promptly close the Main Steam Isolation Valves",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_sj",
+      "display_name": "Main Feedwater System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "involved; source of overfeed and delayed valve closure",
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "sys_afw",
+      "display_name": "Auxiliary Feedwater System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "actuated; already in service and aligned",
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "sys_msiv",
+      "display_name": "Main Steam Isolation Valve System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "manually closed to arrest cooldown",
+      "match_key": "System:main-steam-isolation-valve-system"
+    },
+    {
+      "id": "c_frv_bypass",
+      "display_name": "'B' Feedwater Regulating Valve Bypass Valve",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "FCV",
+      "identifier": "B FRV Bypass Valve",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:FCV|B FRV Bypass Valve"
+    },
+    {
+      "id": "c_msiv",
+      "display_name": "Main Steam Isolation Valves",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:main-steam-isolation-valves"
+    },
+    {
+      "id": "fm_bfrv_manual",
+      "display_name": "'B' FRV Bypass Valve placed in manual and did not close on reactor trip",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Prior to the reactor trip, the 'B' FRV Bypass Valve was placed in manual; when in manual, FRVs and FRV Bypass Valves will not automatically close on a reactor trip, so it did not close following the trip.",
+      "match_key": "FailureMode:b-frv-bypass-valve-placed-in-manual-and-did-not-close-on-reactor-trip"
+    },
+    {
+      "id": "fm_bsg_overfeed",
+      "display_name": "'B' Steam Generator overfed",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "'B' S/G level rose to a maximum of 63% over 8 minutes before the FRV Bypass Valve was manually closed by operators, causing Tavg to lower.",
+      "match_key": "FailureMode:b-steam-generator-overfed"
+    },
+    {
+      "id": "fm_delayed_msiv",
+      "display_name": "Delay in closing Main Steam Isolation Valves",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Operators did not promptly close the MSIVs to limit secondary side steam flows, allowing 'A' S/G level to lower to 6% and Tavg to continue falling.",
+      "match_key": "FailureMode:delay-in-closing-main-steam-isolation-valves"
+    },
+    {
+      "id": "cons_asg_low",
+      "display_name": "'A' S/G low level causes valid AFW actuation and RCS Loop inoperability",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2021-10-04T00:31",
+      "end": "2021-10-04T00:46",
+      "duration": "0:14",
+      "tz": null,
+      "match_key": "Consequence:a-s-g-low-level-causes-valid-afw-actuation-and-rcs-loop-inoperability"
+    },
+    {
+      "id": "ca_ops_guidance",
+      "display_name": "Add operations guidance for closure of FRVs and MSIVs to shutdown procedures",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:add-operations-guidance-for-closure-of-frvs-and-msivs-to-shutdown-procedures"
+    },
+    {
+      "id": "ca_training",
+      "display_name": "Training solutions to address temperature control gaps following reactor trip",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:training-solutions-to-address-temperature-control-gaps-following-reactor-trip"
+    },
+    {
+      "id": "rr_lco",
+      "display_name": "LCO 3.4.5, RCS Loops - MODES 1 (<=8.5% RTP), 2, and 3",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:lco-3-4-5-rcs-loops-modes-1-8-5-rtp-2-and-3"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sj",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_afw",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_msiv",
+      "evidence": null
+    },
+    {
+      "source": "c_frv_bypass",
+      "relation": "PART_OF",
+      "target": "sys_sj",
+      "evidence": null
+    },
+    {
+      "source": "c_msiv",
+      "relation": "PART_OF",
+      "target": "sys_msiv",
+      "evidence": null
+    },
+    {
+      "source": "fm_bfrv_manual",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_bfrv_manual",
+      "relation": "LEADS_TO",
+      "target": "fm_bsg_overfeed",
+      "evidence": null
+    },
+    {
+      "source": "fm_bsg_overfeed",
+      "relation": "LEADS_TO",
+      "target": "fm_delayed_msiv",
+      "evidence": null
+    },
+    {
+      "source": "fm_delayed_msiv",
+      "relation": "LEADS_TO",
+      "target": "cons_asg_low",
+      "evidence": null
+    },
+    {
+      "source": "cons_asg_low",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_afw",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_ops_guidance",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_training",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_lco",
+      "evidence": null
+    }
+  ],
+  "chain": "'B' FRV Bypass Valve left in manual [cause TBD] -> does not auto-close on reactor trip -> 'B' S/G overfed (Tavg lowers) -> delayed MSIV closure -> 'A' S/G level drops to 6% -> valid AFW actuation / 'A' RCS Loop inoperable (14 min) [backup AFW already in service]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code is TBD/provisional per FORM-366 fields; narrative attributes the event to operator action (failure to close FRV bypass valve in manual, and delayed MSIV closure) rather than a hardware failure - Section VI.A states 'Failed Components: None'. No previous similar LERs identified (searched, none found), so no SIMILAR_TO stub LER emitted. AFW modeled as involved/actuated system rather than a backup to a failed system, since it was the responding safety system itself; BACKED_UP_BY edge reflects that AFW was already operating and available throughout, per narrative's explicit statement."
+}

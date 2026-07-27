@@ -1,0 +1,309 @@
+{
+  "ler_number": "328-2025-001-00",
+  "identity": {
+    "accession_number": "ML25071A010",
+    "docket": "05000328",
+    "plant_name": "Sequoyah",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2025-01-16",
+    "report_date": "2025-03-11",
+    "operating_mode": "3",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": "198544",
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Reactor Trip Breakers Opened due to Group 2 of Control Rod Bank D Failing to Withdraw"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(b)(3)(iv)(A)",
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The rod control urgent failure was determined to be a blown fuse in Power Cabinet 2BD... The rod control failure was misinterpreted as a failure of a group demand indicator.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Blown fuse causing rod control urgent failure, misinterpreted as group demand indicator failure",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 328-2025-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "328-2025-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:328-2025-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Sequoyah Unit 2",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000328",
+      "match_key": "Unit:05000328"
+    },
+    {
+      "id": "cause",
+      "display_name": "TBD (provisional)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Blown fuse causing rod control urgent failure, misinterpreted as group demand indicator failure",
+      "proximate_text": "The rod control urgent failure was determined to be a blown fuse in Power Cabinet 2BD... The rod control failure was misinterpreted as a failure of a group demand indicator.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_aa",
+      "display_name": "Rod Control System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "AA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:AA"
+    },
+    {
+      "id": "sys_jc",
+      "display_name": "Reactor Protection System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JC"
+    },
+    {
+      "id": "c_cabinet",
+      "display_name": "Power Cabinet 2BD",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "BD",
+      "identifier": "SQN-2-PNL-085-L117",
+      "model": "916E646G01",
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:BD|SQN-2-PNL-085-L117"
+    },
+    {
+      "id": "c_fuse",
+      "display_name": "Fuse",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "FU",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:FU"
+    },
+    {
+      "id": "fm_fuse_blown",
+      "display_name": "Fuse blown in Power Cabinet 2BD",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "A blown fuse in Power Cabinet 2BD caused the Rod Control System Urgent Failure alarm.",
+      "match_key": "FailureMode:fuse-blown-in-power-cabinet-2bd"
+    },
+    {
+      "id": "fm_group2_nostep",
+      "display_name": "Group 2 step counter failed to step",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Control Bank D Group 2 did not step during rod drop testing while Group 1 stepped out 2 steps.",
+      "match_key": "FailureMode:group-2-step-counter-failed-to-step"
+    },
+    {
+      "id": "fm_misinterpret",
+      "display_name": "Group demand position indicator misinterpreted as nonfunctional",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Operators declared the Group 2 step counter nonfunctional per TRM 8.1.3; subsequent investigation determined the group demand position indicator remained functional during the event.",
+      "match_key": "FailureMode:group-demand-position-indicator-misinterpreted-as-nonfunctional"
+    },
+    {
+      "id": "cons_rtb_open",
+      "display_name": "Reactor trip breakers opened / RPS actuation, all control rods fully inserted",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2025-01-16T09:50:00",
+      "end": null,
+      "duration": null,
+      "tz": "EST",
+      "match_key": "Consequence:reactor-trip-breakers-opened-rps-actuation-all-control-rods-fully-inserted"
+    },
+    {
+      "id": "ca_replace_fuse",
+      "display_name": "Replace blown fuse and return Rod Control System to service",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-blown-fuse-and-return-rod-control-system-to-service"
+    },
+    {
+      "id": "ca_training",
+      "display_name": "Complete operator training/simulation to clarify TRM 8.1.3 requirements",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:complete-operator-training-simulation-to-clarify-trm-8-1-3-requirements"
+    },
+    {
+      "id": "mfr_westinghouse_hagan",
+      "display_name": "Westinghouse Electric Corporation / Hagan",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": null,
+      "match_key": "Manufacturer:westinghouse-electric-corporation-hagan"
+    },
+    {
+      "id": "rr_5073b3iv",
+      "display_name": "10 CFR 50.73(b)(3)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-b-3-iv-a"
+    },
+    {
+      "id": "rr_5073a2iv",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_trm813",
+      "display_name": "TRM 8.1.3",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:trm-8-1-3"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073b3iv",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073a2iv",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_aa",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jc",
+      "evidence": null
+    },
+    {
+      "source": "c_cabinet",
+      "relation": "PART_OF",
+      "target": "sys_aa",
+      "evidence": null
+    },
+    {
+      "source": "c_fuse",
+      "relation": "PART_OF",
+      "target": "c_cabinet",
+      "evidence": null
+    },
+    {
+      "source": "c_cabinet",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_westinghouse_hagan",
+      "evidence": null
+    },
+    {
+      "source": "fm_fuse_blown",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_fuse_blown",
+      "relation": "LEADS_TO",
+      "target": "fm_group2_nostep",
+      "evidence": null
+    },
+    {
+      "source": "fm_group2_nostep",
+      "relation": "LEADS_TO",
+      "target": "fm_misinterpret",
+      "evidence": null
+    },
+    {
+      "source": "fm_misinterpret",
+      "relation": "LEADS_TO",
+      "target": "cons_rtb_open",
+      "evidence": null
+    },
+    {
+      "source": "cons_rtb_open",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_fuse",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_fuse",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_training",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_trm813",
+      "evidence": null
+    }
+  ],
+  "chain": "blown fuse in Power Cabinet 2BD [cause TBD] -> Group 2 step counter fails to step -> group demand position indicator misinterpreted as nonfunctional (TRM 8.1.3 entry) -> reactor trip breakers manually opened / RPS actuation, all rods inserted [no backups needed - all rods fully inserted; decay heat removed by AFW/Steam Dump]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code is TBD/provisional per FORM-366 fields; narrative describes a blown fuse triggering an urgent failure alarm that was misinterpreted as a group demand indicator failure per TRM 8.1.3, leading to manual reactor trip breaker opening. Subsequent investigation confirmed the indicator was actually functional throughout. No backup systems modeled since all control rods fully inserted during the RPS actuation and no train of a safety system was rendered inoperable; AFW/Steam Dump removing decay heat is design-context, not a backup to the failed component. No previous similar events reported at SQN within three years, so no SIMILAR_TO/stub LER emitted."
+}

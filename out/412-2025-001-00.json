@@ -1,0 +1,426 @@
+{
+  "ler_number": "412-2025-001-00",
+  "identity": {
+    "accession_number": "ML25092A162",
+    "docket": "05000412",
+    "plant_name": "Beaver Valley",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2025-02-05",
+    "report_date": "2025-04-01",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Beaver Valley Power Station, Unit No. 2 Docket No. 50-412, License No. NPF-73 LER 2025-001-00"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)",
+      "10 CFR 50.73(a)(2)(iv)(B)(1)",
+      "10 CFR 50.73(a)(2)(iv)(B)(6)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "B",
+      "system": "SJ",
+      "component": "FCV",
+      "manufacturer": "M120",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "the feedback to the positioner was lost when the lever arm coupling screw backed out due to an inadequate design. A contributing cause was the industry operating experience evaluation was not robust enough to address potential future changing conditions of the valve. An additional contributing cause was not verifying the tightness of the feedback arm screw while performing maintenance on the valve.",
+    "cause_code": "B",
+    "category": "Design/Manufacturing/Installation",
+    "theme": "Inadequate positioner feedback-arm coupling design; OE and maintenance-verification gaps",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 412-2025-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "412-2025-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:412-2025-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Beaver Valley Unit 2",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000412",
+      "match_key": "Unit:05000412"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Manufacturing/Installation (B)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "B",
+      "category": "Design/Manufacturing/Installation",
+      "theme": "Inadequate positioner feedback-arm coupling design; OE and maintenance-verification gaps",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Design/Manufacturing/Installation"
+    },
+    {
+      "id": "sys_sj",
+      "display_name": "Feedwater Control System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "sys_sb",
+      "display_name": "Main Steam Flow Instrumentation",
+      "properties": {
+        "note": "steam flow loop under calibration maintenance"
+      },
+      "type": "System",
+      "eiis_code": "SB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SB"
+    },
+    {
+      "id": "sys_ba",
+      "display_name": "Auxiliary Feedwater System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "automatically actuated on trip",
+      "match_key": "System:BA"
+    },
+    {
+      "id": "c_fcv",
+      "display_name": "\"B\" Main Feedwater Regulating Valve 2FWS-FCV488",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "FCV",
+      "identifier": "2FWS-FCV488",
+      "model": null,
+      "manufacturer_code": "M120",
+      "inferred_code": false,
+      "match_key": "Component:FCV|2FWS-FCV488"
+    },
+    {
+      "id": "c_positioner",
+      "display_name": "Valve positioner",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:valve-positioner"
+    },
+    {
+      "id": "c_leverarm",
+      "display_name": "Feedback lever arm / coupling screw",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:feedback-lever-arm-coupling-screw"
+    },
+    {
+      "id": "fm_screw",
+      "display_name": "Lever arm coupling screw backed out",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Screw holding the feedback lever arm to the magnet assembly backed out due to inadequate design",
+      "match_key": "FailureMode:lever-arm-coupling-screw-backed-out"
+    },
+    {
+      "id": "fm_feedbacklost",
+      "display_name": "Positioner feedback lost",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Positioner was not receiving any feedback; digital display indicated 62% position when valve was fully closed",
+      "match_key": "FailureMode:positioner-feedback-lost"
+    },
+    {
+      "id": "fm_valvemiscontrol",
+      "display_name": "MFRV mispositioned / flow miscontrolled",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Valve indicated erroneous position; SG level rose quickly then flow dropped sharply and level rapidly lowered",
+      "match_key": "FailureMode:mfrv-mispositioned-flow-miscontrolled"
+    },
+    {
+      "id": "cons_trip",
+      "display_name": "Automatic reactor trip on B SG low-low level with AFW actuation",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2025-02-05T10:02",
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:automatic-reactor-trip-on-b-sg-low-low-level-with-afw-actuation"
+    },
+    {
+      "id": "ca_reattach",
+      "display_name": "Reattach feedback lever arm with thread locker on coupling screw and recalibrate positioner",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:reattach-feedback-lever-arm-with-thread-locker-on-coupling-screw-and-recalibrate-positioner"
+    },
+    {
+      "id": "ca_extent",
+      "display_name": "Extent of condition: other two MFRV lever arm screws backed out, thread locker applied, retightened",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:extent-of-condition-other-two-mfrv-lever-arm-screws-backed-out-thread-locker-applied-retightened"
+    },
+    {
+      "id": "ca_inspect_positioners",
+      "display_name": "Inspect other four positioners of same type; verify upgraded design and tightness",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:inspect-other-four-positioners-of-same-type-verify-upgraded-design-and-tightness"
+    },
+    {
+      "id": "ca_upgrade",
+      "display_name": "Upgrade feedback lever arm on all three MFRVs and apply thread locker",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:upgrade-feedback-lever-arm-on-all-three-mfrvs-and-apply-thread-locker"
+    },
+    {
+      "id": "ca_threadlocker4",
+      "display_name": "Apply thread locker to all lever arm screws on four similar positioners",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:apply-thread-locker-to-all-lever-arm-screws-on-four-similar-positioners"
+    },
+    {
+      "id": "ca_procreview",
+      "display_name": "Review AOV procedures for explicit feedback arm tightness check steps",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:review-aov-procedures-for-explicit-feedback-arm-tightness-check-steps"
+    },
+    {
+      "id": "mfr_m120",
+      "display_name": "Manufacturer M120",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "M120",
+      "match_key": "Manufacturer:M120"
+    },
+    {
+      "id": "rr_5073a2iva",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5073a2ivb1",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(B)(1)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-b-1"
+    },
+    {
+      "id": "rr_5073a2ivb6",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(B)(6)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-b-6"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "LER 334-2024-004-00",
+      "properties": {},
+      "type": "LER",
+      "key": "334-2024-004-00",
+      "stub": true,
+      "title": "Manual reactor trip on low SG water level during startup from 1R29 due to excessive air leakage on 'A' train bypass feedwater regulating valve actuator",
+      "plant": "Beaver Valley Power Station",
+      "match_key": "LER:334-2024-004-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073a2iva",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073a2ivb1",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073a2ivb6",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sj",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ba",
+      "evidence": null
+    },
+    {
+      "source": "c_positioner",
+      "relation": "PART_OF",
+      "target": "c_fcv",
+      "evidence": null
+    },
+    {
+      "source": "c_leverarm",
+      "relation": "PART_OF",
+      "target": "c_positioner",
+      "evidence": null
+    },
+    {
+      "source": "fm_screw",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_screw",
+      "relation": "LEADS_TO",
+      "target": "fm_feedbacklost",
+      "evidence": null
+    },
+    {
+      "source": "fm_feedbacklost",
+      "relation": "LEADS_TO",
+      "target": "fm_valvemiscontrol",
+      "evidence": null
+    },
+    {
+      "source": "fm_valvemiscontrol",
+      "relation": "LEADS_TO",
+      "target": "cons_trip",
+      "evidence": null
+    },
+    {
+      "source": "cons_trip",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_ba",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_reattach",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_extent",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_inspect_positioners",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_upgrade",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_threadlocker4",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procreview",
+      "evidence": null
+    },
+    {
+      "source": "c_fcv",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_m120",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    }
+  ],
+  "chain": "inadequate lever-arm coupling screw design [cause B] -> screw backed out -> positioner feedback lost -> MFRV position erroneously indicated / flow miscontrolled -> B SG low-low level -> automatic reactor trip [backup AFW auto-started]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "AFW actuation modeled as BACKED_UP_BY consequence since narrative states it automatically started in response to the trip (expected response). Manufacturer M120 not decoded in text; kept as coded manufacturer node. Previous LER key recorded exactly as stated in narrative ('LER-2024-004') per instructions, mapped to key '1-2024-004' reflecting BVPS-1 unit digit."
+}

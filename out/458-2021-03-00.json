@@ -1,0 +1,293 @@
+{
+  "ler_number": "458-2021-03-00",
+  "identity": {
+    "accession_number": "ML21175A038",
+    "docket": "05000458",
+    "plant_name": "River Bend",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2021-04-08",
+    "report_date": "2021-06-24",
+    "operating_mode": "3",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "/ 2021-03-00, \"Condition Prohibited by Technical Specifications due to failure to perform Breaker Functional Test"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "I",
+      "system": "I",
+      "component": "-",
+      "manufacturer": "I",
+      "reportable": null
+    },
+    {
+      "cause": "I",
+      "system": null,
+      "component": null,
+      "manufacturer": null,
+      "reportable": null
+    },
+    {
+      "cause": null,
+      "system": "I",
+      "component": "l",
+      "manufacturer": "--",
+      "reportable": null
+    }
+  ],
+  "cause": {
+    "proximate_text": "This event was caused by a gap in human performance. Senior Reactor Operators (SRO) failed to ensure completion of the required functional test due to perceived time pressure. The SRO authorizing the tagout assumed the breaker functional would be added to the Limiting Condition of Operability (LCO) when the tagout was removed. The SRO authorizing the tagout for removal assumed the breaker functional was added to the LCO already. Neither SRO validated their assumptions.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "unvalidated handoff assumptions between SROs on LCO tracking",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 458-2021-003-00",
+      "properties": {},
+      "type": "LER",
+      "key": "458-2021-03-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:458-2021-03-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "River Bend Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000458",
+      "match_key": "Unit:05000458"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "unvalidated handoff assumptions between SROs on LCO tracking",
+      "proximate_text": "This event was caused by a gap in human performance. Senior Reactor Operators (SRO) failed to ensure completion of the required functional test due to perceived time pressure. The SRO authorizing the tagout assumed the breaker functional would be added to the Limiting Condition of Operability (LCO) when the tagout was removed. The SRO authorizing the tagout for removal assumed the breaker functional was added to the LCO already. Neither SRO validated their assumptions.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_km",
+      "display_name": "Control Building Chilled Water",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "KM",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:KM"
+    },
+    {
+      "id": "sys_cbac",
+      "display_name": "Control Building Air Conditioning",
+      "properties": {
+        "tech_spec": "3.7.7"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:control-building-air-conditioning"
+    },
+    {
+      "id": "c_chiller",
+      "display_name": "Control Building Chiller 1D",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "CHU",
+      "identifier": "HVK-CHL1D",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:CHU|HVK-CHL1D"
+    },
+    {
+      "id": "c_breaker",
+      "display_name": "HVK-CHL1D Supply Breaker",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "HVK-CHL1D supply breaker",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:hvk-chl1d-supply-breaker"
+    },
+    {
+      "id": "fm_missed_test",
+      "display_name": "Required breaker functional test not performed after tagout restoration",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "A required breaker functional test, which would have verified HVK-CHL1D operability, had not been performed when the supply breaker was racked to connect position following tagout restoration.",
+      "match_key": "FailureMode:required-breaker-functional-test-not-performed-after-tagout-restoration"
+    },
+    {
+      "id": "fm_unverified_standby",
+      "display_name": "Equipment placed in standby without verified operability",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Equipment required by Technical Specifications was placed in standby without being verified Operable.",
+      "match_key": "FailureMode:equipment-placed-in-standby-without-verified-operability"
+    },
+    {
+      "id": "fm_chiller_fail",
+      "display_name": "Chiller 1D failed to start",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Control Building Chiller D (HVK-CHL1D) failed to start while alternating divisions of Control Building Chilled Water.",
+      "match_key": "FailureMode:chiller-1d-failed-to-start"
+    },
+    {
+      "id": "cons_ts_violation",
+      "display_name": "Technical Specification 3.7.7 CBAC 72-hour AOT exceeded; required Mode 3 Action not met within 12 hours",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2021-03-30T15:32",
+      "end": "2021-04-08T09:26",
+      "duration": "8 days, 17h54m",
+      "tz": "CDT",
+      "match_key": "Consequence:technical-specification-3-7-7-cbac-72-hour-aot-exceeded-required-mode-3-action-not-met-within-12-hours"
+    },
+    {
+      "id": "ca_lco_proc",
+      "display_name": "Revise Operations procedure guidance to add breaker functional test to LCO separate from tagout when tag is hung",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-operations-procedure-guidance-to-add-breaker-functional-test-to-lco-separate-from-tagout-when-tag-is-hung"
+    },
+    {
+      "id": "ca_briefing",
+      "display_name": "Develop and distribute Operations Departmental briefing on this event",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:develop-and-distribute-operations-departmental-briefing-on-this-event"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts377",
+      "display_name": "Technical Specification 3.7.7 Control Building Air Conditioning System",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-3-7-7-control-building-air-conditioning-system"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_km",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_cbac",
+      "evidence": null
+    },
+    {
+      "source": "c_breaker",
+      "relation": "PART_OF",
+      "target": "c_chiller",
+      "evidence": null
+    },
+    {
+      "source": "fm_missed_test",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_missed_test",
+      "relation": "LEADS_TO",
+      "target": "fm_unverified_standby",
+      "evidence": null
+    },
+    {
+      "source": "fm_unverified_standby",
+      "relation": "LEADS_TO",
+      "target": "fm_chiller_fail",
+      "evidence": null
+    },
+    {
+      "source": "fm_chiller_fail",
+      "relation": "LEADS_TO",
+      "target": "cons_ts_violation",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_lco_proc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_briefing",
+      "evidence": null
+    },
+    {
+      "source": "cons_ts_violation",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts377",
+      "evidence": null
+    }
+  ],
+  "chain": "SRO handoff assumption not validated [cause TBD] -> required breaker functional test not performed -> equipment placed in standby unverified -> Chiller 1D fails to start on divisional swap -> TS 3.7.7 CBAC AOT exceeded / Mode 3 action not met",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Block-13 fields in source form are garbled/illegal placeholder characters ('I', '-', 'l', '--') rather than real coded values; copied verbatim per instructions but not used to populate cause_code/category, which remain TBD/provisional per FORM-366 cause_code. Narrative explicitly states 'PREVIOUS SIMILAR EVENTS: None' so no stub LER/SIMILAR_TO edge is created. Breaker is explicitly described as the chiller's supply breaker (racked to connect position for HVK-CHL1D) — modeled as PART_OF the chiller component per explicit-only PART_OF rule, though this is a borderline case (breaker feeding/supplying vs. containment); retained because narrative closely associates it as the chiller's own supply breaker component test scope."
+}

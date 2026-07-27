@@ -1,0 +1,326 @@
+{
+  "ler_number": "446-2025-001-00",
+  "identity": {
+    "accession_number": "ML25286A003",
+    "docket": "05000446",
+    "plant_name": "Comanche Peak",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2025-08-12",
+    "report_date": "2025-10-13",
+    "operating_mode": null,
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Comanche Peak Nuclear Power Plant (CPNPP) Docket No. 50-446"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)",
+      "10 CFR 50.73(a)(2)(v)(C)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": null,
+      "system": null,
+      "component": null,
+      "manufacturer": null,
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "the NEO failed to properly rack in and verify the CSP breaker connection in accordance with the System Operating Procedure (SOP)...the attention to detail regarding indications of the breaker being fully racked in was less than adequate",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "inadequate procedure use and adherence during breaker racking",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 446-2025-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "446-2025-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:446-2025-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Comanche Peak Unit 2",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000446",
+      "match_key": "Unit:05000446"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "inadequate procedure use and adherence during breaker racking",
+      "proximate_text": "the NEO failed to properly rack in and verify the CSP breaker connection in accordance with the System Operating Procedure (SOP)...the attention to detail regarding indications of the breaker being fully racked in was less than adequate",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_be",
+      "display_name": "Containment Spray System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BE",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "Train B, inoperable",
+      "match_key": "System:BE"
+    },
+    {
+      "id": "c_csp",
+      "display_name": "Containment Spray Pump 2-04",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "P",
+      "identifier": "2-04",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:P|2-04"
+    },
+    {
+      "id": "c_bkr",
+      "display_name": "CSP Breaker",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "BKR",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:BKR"
+    },
+    {
+      "id": "fm_rackin",
+      "display_name": "NEO failed to fully rack in and verify breaker connection per SOP",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "On March 25, 2025, NEO did not properly rack in and verify CSP breaker connection in accordance with the System Operating Procedure.",
+      "match_key": "FailureMode:neo-failed-to-fully-rack-in-and-verify-breaker-connection-per-sop"
+    },
+    {
+      "id": "fm_misalign",
+      "display_name": "Breaker left partially racked in / misaligned",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Breaker was left partially racked in and not fully connected, allowing initial connection of auxiliary contacts.",
+      "match_key": "FailureMode:breaker-left-partially-racked-in-misaligned"
+    },
+    {
+      "id": "fm_auxcontacts",
+      "display_name": "Auxiliary contacts failed to remain connected after cycling",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "As a result of the misalignment, the breaker auxiliary contacts failed to remain connected following several cycles.",
+      "match_key": "FailureMode:auxiliary-contacts-failed-to-remain-connected-after-cycling"
+    },
+    {
+      "id": "fm_pumpfail",
+      "display_name": "CSP pump 2-04 failed to start",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "On August 12, 2025, the Unit 2 Train B containment spray pump 2-04 failed to start.",
+      "match_key": "FailureMode:csp-pump-2-04-failed-to-start"
+    },
+    {
+      "id": "cons_csp",
+      "display_name": "Train B Containment Spray system inoperable",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2025-03-25T10:52",
+      "end": "2025-08-12T22:11",
+      "duration": "approximately 140 days",
+      "tz": null,
+      "match_key": "Consequence:train-b-containment-spray-system-inoperable"
+    },
+    {
+      "id": "cons_lossoffunction",
+      "display_name": "Concurrent loss of Containment Spray safety function (both trains)",
+      "properties": {},
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": "approximately 48 hours 8 minutes",
+      "tz": null,
+      "match_key": "Consequence:concurrent-loss-of-containment-spray-safety-function-both-trains"
+    },
+    {
+      "id": "ca_extent",
+      "display_name": "Extent-of-condition verification of all safety-related 6.9kV breakers for correct locking collar position",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:extent-of-condition-verification-of-all-safety-related-6-9kv-breakers-for-correct-locking-collar-position"
+    },
+    {
+      "id": "ca_coach",
+      "display_name": "Operations coaching to responsible individuals to reinforce expectations",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:operations-coaching-to-responsible-individuals-to-reinforce-expectations"
+    },
+    {
+      "id": "ca_requal",
+      "display_name": "NEO requalification training on breaker racking in onsite breaker laboratory",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:neo-requalification-training-on-breaker-racking-in-onsite-breaker-laboratory"
+    },
+    {
+      "id": "rr_5073i",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_5073v",
+      "display_name": "10 CFR 50.73(a)(2)(v)(C)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-c"
+    },
+    {
+      "id": "rr_rg1174",
+      "display_name": "Regulatory Guide 1.174",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:regulatory-guide-1-174"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073i",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073v",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_be",
+      "evidence": null
+    },
+    {
+      "source": "c_csp",
+      "relation": "PART_OF",
+      "target": "sys_be",
+      "evidence": null
+    },
+    {
+      "source": "fm_rackin",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_rackin",
+      "relation": "LEADS_TO",
+      "target": "fm_misalign",
+      "evidence": null
+    },
+    {
+      "source": "fm_misalign",
+      "relation": "LEADS_TO",
+      "target": "fm_auxcontacts",
+      "evidence": null
+    },
+    {
+      "source": "fm_auxcontacts",
+      "relation": "LEADS_TO",
+      "target": "fm_pumpfail",
+      "evidence": null
+    },
+    {
+      "source": "fm_pumpfail",
+      "relation": "LEADS_TO",
+      "target": "cons_csp",
+      "evidence": null
+    },
+    {
+      "source": "cons_csp",
+      "relation": "LEADS_TO",
+      "target": "cons_lossoffunction",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_extent",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_coach",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_requal",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_rg1174",
+      "evidence": null
+    },
+    {
+      "source": "cons_lossoffunction",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    }
+  ],
+  "chain": "NEO failed to properly rack in and verify CSP breaker per SOP [cause TBD] -> breaker left partially racked in/misaligned -> auxiliary contacts fail to remain connected after cycling -> CSP pump 2-04 fails to start -> Train B Containment Spray inoperable (~140 days) -> concurrent loss of Containment Spray safety function during Train A maintenance (~48h8m) [no backup available; manual operator action credited]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q9"
+  ],
+  "notes": "Official cause code not provided in FORM-366 fields (TBD); category left provisional per rule 4. No component/system/manufacturer codes were populated in block_13 source data - only 'reportable: Y' was present. Component Cooling Water, Safety Chilled Water, Emergency Diesel Generator, and Solid State Protection System (Train A) are mentioned only in the duration-overlap table to establish the concurrent loss-of-function window; per rule 6/design-context guidance, they are not independently failed or explicitly stated as operable backups to CSP, so they were not modeled as System nodes to avoid implying an unsupported causal or backup relationship. No BACKED_UP_BY edge asserted since narrative states no automatic backup existed (manual operator action only, which is not a System). Previous similar events section explicitly states none found in past three years, so no stub LER/SIMILAR_TO edge created per rule 9's conditional applicability."
+}

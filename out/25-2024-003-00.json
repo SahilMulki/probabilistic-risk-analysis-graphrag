@@ -1,0 +1,360 @@
+{
+  "ler_number": "25-2024-003-00",
+  "identity": {
+    "accession_number": "ML24323A169",
+    "docket": "05200025",
+    "plant_name": "Vogtle",
+    "unit": 3,
+    "reactor_type": "PWR",
+    "nss_vendor": "Westinghouse",
+    "event_date": "2024-09-17",
+    "report_date": "2024-11-18",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Automatic Reactor Protection System and Manual Safeguards Actuation Due to a Failed Open Flow Control Valve"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "X",
+      "system": "EJ",
+      "component": "FU",
+      "manufacturer": "0000",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The loss of power was caused by a premature (A4J3 3 amp) fuse failure (EIIS: EJ/FU) which resulted in a loss of airflow to the valve controller and actuation of the PRHR HX outlet FCV to the fail-safe open position.",
+    "cause_code": "X",
+    "category": "Other",
+    "theme": "premature fuse failure",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 05200025-2024-003-00",
+      "properties": {
+        "match_key": "LER:05200025-2024-003-00"
+      },
+      "type": "LER",
+      "key": "25-2024-003-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:25-2024-003-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Vogtle Unit 3",
+      "properties": {
+        "match_key": "Unit:05200025",
+        "reactor_type": "PWR",
+        "nss_vendor": "Westinghouse"
+      },
+      "type": "Unit",
+      "key": "05200025",
+      "match_key": "Unit:05200025"
+    },
+    {
+      "id": "cause",
+      "display_name": "Other (X)",
+      "properties": {
+        "match_key": "Cause:Other"
+      },
+      "type": "Cause",
+      "cause_code": "X",
+      "category": "Other",
+      "theme": "premature fuse failure",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Other"
+    },
+    {
+      "id": "sys_jc",
+      "display_name": "Reactor Protection System",
+      "properties": {
+        "match_key": "System:JC"
+      },
+      "type": "System",
+      "eiis_code": "JC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JC"
+    },
+    {
+      "id": "sys_je",
+      "display_name": "Engineered Safety Features Actuation System",
+      "properties": {
+        "match_key": "System:JE"
+      },
+      "type": "System",
+      "eiis_code": "JE",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "manual safeguards actuation",
+      "match_key": "System:JE"
+    },
+    {
+      "id": "sys_ej",
+      "display_name": "Passive Residual Heat Removal (PRHR)",
+      "properties": {
+        "match_key": "System:EJ"
+      },
+      "type": "System",
+      "eiis_code": "EJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "involved system; performed decay heat removal",
+      "match_key": "System:EJ"
+    },
+    {
+      "id": "c_fcv",
+      "display_name": "PRHR HX outlet flow control valve (FCV)",
+      "properties": {
+        "match_key": "Component:prhr-hx-outlet-fcv"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:prhr-hx-outlet-flow-control-valve-fcv"
+    },
+    {
+      "id": "c_solenoid",
+      "display_name": "Air operated solenoid",
+      "properties": {
+        "match_key": "Component:EJ|solenoid"
+      },
+      "type": "Component",
+      "eiis_code": "EJ",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:EJ"
+    },
+    {
+      "id": "c_fuse",
+      "display_name": "Fuse (A4J3, 3 amp)",
+      "properties": {
+        "match_key": "Component:FU|A4J3"
+      },
+      "type": "Component",
+      "eiis_code": "FU",
+      "identifier": "A4J3",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:FU|A4J3"
+    },
+    {
+      "id": "c_cim",
+      "display_name": "Component Interface Module (CIM)",
+      "properties": {
+        "match_key": "Component:component-interface-module"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:component-interface-module-cim"
+    },
+    {
+      "id": "fm_fusefail",
+      "display_name": "Premature fuse failure",
+      "properties": {
+        "match_key": "FailureMode:premature-fuse-failure"
+      },
+      "type": "FailureMode",
+      "description": "A4J3 3 amp fuse failed prematurely, cutting DC power to the FCV solenoid circuit.",
+      "match_key": "FailureMode:premature-fuse-failure"
+    },
+    {
+      "id": "fm_lossairflow",
+      "display_name": "Loss of airflow to valve controller",
+      "properties": {
+        "match_key": "FailureMode:loss-of-airflow-to-valve-controller"
+      },
+      "type": "FailureMode",
+      "description": null,
+      "match_key": "FailureMode:loss-of-airflow-to-valve-controller"
+    },
+    {
+      "id": "fm_fcvopen",
+      "display_name": "PRHR HX outlet FCV fails open (fail-safe actuation)",
+      "properties": {
+        "match_key": "FailureMode:prhr-fcv-fails-open"
+      },
+      "type": "FailureMode",
+      "description": null,
+      "match_key": "FailureMode:prhr-hx-outlet-fcv-fails-open-fail-safe-actuation"
+    },
+    {
+      "id": "cons_rpstrip",
+      "display_name": "Automatic RPS actuation / reactor trip and manual safeguards actuation",
+      "properties": {
+        "match_key": "Consequence:automatic-rps-actuation-manual-safeguards-actuation"
+      },
+      "type": "Consequence",
+      "start": "2024-09-17T01:27",
+      "end": null,
+      "duration": null,
+      "tz": "EDT",
+      "match_key": "Consequence:automatic-rps-actuation-reactor-trip-and-manual-safeguards-actuation"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace PRHR FCV power supply circuit components (solenoid, fuses, CIM, CIM baseplate) and perform current signature analysis",
+      "properties": {
+        "match_key": "CorrectiveAction:replace-prhr-fcv-power-supply-components"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-prhr-fcv-power-supply-circuit-components-solenoid-fuses-cim-cim-baseplate-and-perform-current-signature-analysis"
+    },
+    {
+      "id": "ca_extent",
+      "display_name": "Extent of condition review for similar fuse use/replacement",
+      "properties": {
+        "match_key": "CorrectiveAction:extent-of-condition-fuse-review"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:extent-of-condition-review-for-similar-fuse-use-replacement"
+    },
+    {
+      "id": "ca_design",
+      "display_name": "Design changes to eliminate single fuse failure opening PRHR FCV",
+      "properties": {
+        "match_key": "CorrectiveAction:design-change-eliminate-single-fuse-failure"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:design-changes-to-eliminate-single-fuse-failure-opening-prhr-fcv"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ej",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_je",
+      "evidence": null
+    },
+    {
+      "source": "c_fuse",
+      "relation": "PART_OF",
+      "target": "c_solenoid",
+      "evidence": null
+    },
+    {
+      "source": "fm_fusefail",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_fusefail",
+      "relation": "LEADS_TO",
+      "target": "fm_lossairflow",
+      "evidence": null
+    },
+    {
+      "source": "fm_lossairflow",
+      "relation": "LEADS_TO",
+      "target": "fm_fcvopen",
+      "evidence": null
+    },
+    {
+      "source": "fm_fcvopen",
+      "relation": "LEADS_TO",
+      "target": "cons_rpstrip",
+      "evidence": null
+    },
+    {
+      "source": "cons_rpstrip",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_ej",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_extent",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_design",
+      "evidence": null
+    }
+  ],
+  "chain": "premature fuse failure (A4J3, 3A) [cause X/Other] -> loss of DC power to FCV solenoid -> loss of airflow to valve controller -> PRHR HX outlet FCV fails open (fail-safe) -> automatic RPS trip / manual safeguards actuation [backup: PRHR HX removed decay heat]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code X/Other governs category despite a clearly identified proximate hardware failure (fuse). PRHR is both the involved system whose valve failed AND functioned as the passive safety system that removed decay heat post-trip (design fail-safe-open behavior), so it is modeled both as INVOLVES and as a BACKED_UP_BY target for the consequence, per its stated performance ('Decay heat was removed by the PRHR HX'). No previous similar events reported. Plant/unit/reactor type inferred from title/context since FORM-366 identity fields were largely null."
+}

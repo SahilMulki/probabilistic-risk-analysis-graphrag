@@ -1,0 +1,378 @@
+{
+  "ler_number": "325-2020-001-00",
+  "identity": {
+    "accession_number": "ML20141L763",
+    "docket": "05000325",
+    "plant_name": "Brunswick",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2020-03-22",
+    "report_date": "2020-05-20",
+    "operating_mode": "2",
+    "power_level": 2,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Brunswick Steam Electric Plant, Unit No. 1 Renewed Facility Operating License No. DPR-71 Docket No. 50-325 Licensee Event Report 1-2020-001"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)",
+      "10 CFR 50.73(a)(2)(iv)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "This event resulted from a less than adequate technical review of procedure 0GP-01, \"Prestartup Checklist,\" during development for the TCS upgrade project. In addition, there was a lack of proficiency in adjusting pressure set.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "procedure development error / TCS pressure setpoint miscalibration",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 325-2020-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "325-2020-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:325-2020-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Brunswick Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000325",
+      "match_key": "Unit:05000325"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "procedure development error / TCS pressure setpoint miscalibration",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_jj",
+      "display_name": "Turbine Control System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JJ"
+    },
+    {
+      "id": "sys_ji",
+      "display_name": "Main Turbine Bypass Valve System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JI",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JI"
+    },
+    {
+      "id": "sys_jc",
+      "display_name": "Reactor Protection System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JC"
+    },
+    {
+      "id": "sys_jm",
+      "display_name": "Main Steam Line Isolation System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JM",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; operable",
+      "match_key": "System:JM"
+    },
+    {
+      "id": "sys_sd",
+      "display_name": "Condensate System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SD",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; operable",
+      "match_key": "System:SD"
+    },
+    {
+      "id": "sys_bo",
+      "display_name": "Residual Heat Removal (Shutdown Cooling)",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BO",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; operable",
+      "match_key": "System:BO"
+    },
+    {
+      "id": "c_bpv",
+      "display_name": "Main Turbine Bypass Valves (four)",
+      "properties": {
+        "note": "all four BPVs"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:main-turbine-bypass-valves-four"
+    },
+    {
+      "id": "fm_setpoint",
+      "display_name": "TCS pressure setpoint incorrectly set to 1 psig instead of 100 psig",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Procedure 0GP-01 required setpoint of 100 psig; actual setpoint was set to 1 psig.",
+      "match_key": "FailureMode:tcs-pressure-setpoint-incorrectly-set-to-1-psig-instead-of-100-psig"
+    },
+    {
+      "id": "fm_undetected",
+      "display_name": "Incorrect setpoint undetected until low condenser vacuum isolation signal cleared",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Error remained undetected because the low main condenser vacuum isolation signal masked the effect until it cleared during startup.",
+      "match_key": "FailureMode:incorrect-setpoint-undetected-until-low-condenser-vacuum-isolation-signal-cleared"
+    },
+    {
+      "id": "fm_bpvopen",
+      "display_name": "All four BPVs fully opened unexpectedly",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Once the isolation signal cleared, the miscalibrated setpoint caused all four bypass valves to fully open.",
+      "match_key": "FailureMode:all-four-bpvs-fully-opened-unexpectedly"
+    },
+    {
+      "id": "cons_scram",
+      "display_name": "Unexpected reactor depressurization/cooldown leading to manual reactor scram",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2020-03-22T12:55",
+      "end": null,
+      "duration": null,
+      "tz": "EDT",
+      "match_key": "Consequence:unexpected-reactor-depressurization-cooldown-leading-to-manual-reactor-scram"
+    },
+    {
+      "id": "ca_setpoint",
+      "display_name": "Reset Unit 1 TCS pressure setpoint to 100 psig per 0GP-01/1OP-25",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:reset-unit-1-tcs-pressure-setpoint-to-100-psig-per-0gp-01-1op-25"
+    },
+    {
+      "id": "ca_disseminate",
+      "display_name": "Disseminate lessons learned from event to Operations Department personnel",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:disseminate-lessons-learned-from-event-to-operations-department-personnel"
+    },
+    {
+      "id": "ca_procrevise",
+      "display_name": "Revise 0GP-01 to reference 1OP-25 for TCS setpoint adjustment and designate step as critical",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-0gp-01-to-reference-1op-25-for-tcs-setpoint-adjustment-and-designate-step-as-critical"
+    },
+    {
+      "id": "ca_training",
+      "display_name": "Provide TCS adjustment training to Operations Department personnel",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:provide-tcs-adjustment-training-to-operations-department-personnel"
+    },
+    {
+      "id": "rr_5073ivA",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5073ivB",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-b"
+    },
+    {
+      "id": "rr_5072ivB",
+      "display_name": "10 CFR 50.72(b)(2)(iv)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-2-iv-b"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073ivA",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073ivB",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072ivB",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jj",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ji",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jc",
+      "evidence": null
+    },
+    {
+      "source": "c_bpv",
+      "relation": "PART_OF",
+      "target": "sys_ji",
+      "evidence": null
+    },
+    {
+      "source": "fm_setpoint",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_setpoint",
+      "relation": "LEADS_TO",
+      "target": "fm_undetected",
+      "evidence": null
+    },
+    {
+      "source": "fm_undetected",
+      "relation": "LEADS_TO",
+      "target": "fm_bpvopen",
+      "evidence": null
+    },
+    {
+      "source": "fm_bpvopen",
+      "relation": "LEADS_TO",
+      "target": "cons_scram",
+      "evidence": null
+    },
+    {
+      "source": "cons_scram",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_jm",
+      "evidence": null
+    },
+    {
+      "source": "cons_scram",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_sd",
+      "evidence": null
+    },
+    {
+      "source": "cons_scram",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_bo",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_setpoint",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_disseminate",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procrevise",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_training",
+      "evidence": null
+    }
+  ],
+  "chain": "inadequate technical review of 0GP-01 procedure during TCS upgrade + lack of setpoint proficiency [cause TBD] -> TCS pressure setpoint incorrectly set to 1 psig -> error undetected until low condenser vacuum isolation signal cleared -> all four BPVs fully open -> unexpected depressurization/cooldown -> manual reactor scram [backups MSIVs, condensate system, RHR shutdown cooling]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "No official cause code was assigned in FORM-366 FIELDS (TBD/provisional); narrative attributes the event to inadequate procedure review during a TCS upgrade project plus lack of operator proficiency in setpoint adjustment, but no letter code (A-E/X) is given, so cause node marked provisional. Block 13 was empty in the source form. No previous similar events section content was provided (section present but blank), so no SIMILAR_TO edge or stub LER emitted. MSIVs, condensate system, and RHR shutdown cooling are explicitly stated as having been placed in operation / remaining aligned during the event, hence modeled as operable backups rather than mere design context."
+}

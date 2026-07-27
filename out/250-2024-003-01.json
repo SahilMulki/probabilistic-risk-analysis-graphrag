@@ -1,0 +1,288 @@
+{
+  "ler_number": "250-2024-003-01",
+  "identity": {
+    "accession_number": "ML25065A080",
+    "docket": "05000250",
+    "plant_name": "Turkey Point",
+    "unit": 3,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2024-11-17",
+    "report_date": "2025-03-06",
+    "operating_mode": "1",
+    "power_level": 48,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Condition Prohibited by Technical Specifications"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "X",
+      "system": "JD",
+      "component": "JI",
+      "manufacturer": null,
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "Water intrusion into NI N-3-43 cabling.",
+    "cause_code": "X",
+    "category": "Other",
+    "theme": "Water intrusion into instrument signal cable",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 250-2024-052-01",
+      "properties": {
+        "match_key": "LER:250-2024-052-01"
+      },
+      "type": "LER",
+      "key": "250-2024-003-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:250-2024-003-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Turkey Point Unit 3",
+      "properties": {
+        "match_key": "Unit:05000250",
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000250",
+      "match_key": "Unit:05000250"
+    },
+    {
+      "id": "cause",
+      "display_name": "Other (X)",
+      "properties": {
+        "match_key": "Cause:Other"
+      },
+      "type": "Cause",
+      "cause_code": "X",
+      "category": "Other",
+      "theme": "Water intrusion into instrument signal cable",
+      "proximate_text": "Water intrusion into NI N-3-43 cabling.",
+      "provisional": false,
+      "match_key": "Cause:Other"
+    },
+    {
+      "id": "sys_jd",
+      "display_name": "Nuclear Instrumentation",
+      "properties": {
+        "match_key": "System:JD"
+      },
+      "type": "System",
+      "eiis_code": "JD",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JD"
+    },
+    {
+      "id": "c_n343",
+      "display_name": "Nuclear Instrument Channel N-3-43 Upper Detector",
+      "properties": {
+        "match_key": "Component:JI|N-3-43"
+      },
+      "type": "Component",
+      "eiis_code": "JI",
+      "identifier": "N-3-43",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:JI|N-3-43"
+    },
+    {
+      "id": "c_cable",
+      "display_name": "N-3-43 signal cable",
+      "properties": {
+        "match_key": "Component:n-3-43-signal-cable"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:n-3-43-signal-cable"
+    },
+    {
+      "id": "fm_waterintrusion",
+      "display_name": "Water intrusion into N-3-43 signal cable",
+      "properties": {
+        "match_key": "FailureMode:water-intrusion-n-3-43-signal-cable"
+      },
+      "type": "FailureMode",
+      "description": "Water entered the signal cable for NI channel N-3-43, causing the Upper Detector to read lower than expected.",
+      "match_key": "FailureMode:water-intrusion-into-n-3-43-signal-cable"
+    },
+    {
+      "id": "fm_niinop",
+      "display_name": "NI channel N-3-43 inoperable (undetected)",
+      "properties": {
+        "match_key": "FailureMode:ni-channel-n-3-43-inoperable-undetected"
+      },
+      "type": "FailureMode",
+      "description": "The instrument was inoperable from November 14 to 19, 2024, and the condition was not identified until a calibration on November 17.",
+      "match_key": "FailureMode:ni-channel-n-3-43-inoperable-undetected"
+    },
+    {
+      "id": "fm_tsactionmissed",
+      "display_name": "TS Actions 3.3.1.E/3.3.1.T not completed within required times",
+      "properties": {
+        "match_key": "FailureMode:ts-action-not-completed"
+      },
+      "type": "FailureMode",
+      "description": "Because the inoperable condition was unrecognized, the required TS actions to trip the channel within 6 hours (3.3.1.E) or place the unit in Mode 3 within 6 hours (3.3.1.T) were not completed.",
+      "match_key": "FailureMode:ts-actions-3-3-1-e-3-3-1-t-not-completed-within-required-times"
+    },
+    {
+      "id": "cons_tsviolation",
+      "display_name": "Condition Prohibited by Technical Specifications",
+      "properties": {
+        "match_key": "Consequence:condition-prohibited-by-technical-specifications"
+      },
+      "type": "Consequence",
+      "start": "2024-11-14",
+      "end": "2024-11-19",
+      "duration": "5 days",
+      "tz": null,
+      "match_key": "Consequence:condition-prohibited-by-technical-specifications"
+    },
+    {
+      "id": "ca_purge",
+      "display_name": "Purge N-3-43 signal cable of water",
+      "properties": {
+        "match_key": "CorrectiveAction:purge-n-3-43-signal-cable-of-water"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:purge-n-3-43-signal-cable-of-water"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts3311",
+      "display_name": "TS 3.3.1, Reactor Trip System Instrumentation",
+      "properties": {
+        "match_key": "RegulatoryReference:ts-3-3-1-rts-instrumentation"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-3-3-1-reactor-trip-system-instrumentation"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "LER 2020-05-01",
+      "properties": {
+        "match_key": "LER:2020-05-01"
+      },
+      "type": "LER",
+      "key": "2020-05-01",
+      "stub": true,
+      "title": "Technical Specification Action Not Taken for Unrecognized Inoperable Source Range Channel",
+      "plant": "Turkey Point",
+      "match_key": "LER:2020-05-01"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts3311",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jd",
+      "evidence": null
+    },
+    {
+      "source": "c_n343",
+      "relation": "PART_OF",
+      "target": "sys_jd",
+      "evidence": null
+    },
+    {
+      "source": "fm_waterintrusion",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_waterintrusion",
+      "relation": "LEADS_TO",
+      "target": "fm_niinop",
+      "evidence": null
+    },
+    {
+      "source": "fm_niinop",
+      "relation": "LEADS_TO",
+      "target": "fm_tsactionmissed",
+      "evidence": null
+    },
+    {
+      "source": "fm_tsactionmissed",
+      "relation": "LEADS_TO",
+      "target": "cons_tsviolation",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_purge",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    }
+  ],
+  "chain": "water intrusion into N-3-43 signal cable [cause X] -> NI channel N-3-43 inoperable (undetected) -> TS Actions 3.3.1.E/3.3.1.T not completed within required times -> Condition Prohibited by Technical Specifications [3 redundant channels remained operable throughout]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "No BACKED_UP_BY edge modeled for the three redundant NI channels since they are not separately identified/named systems in the narrative beyond generic 'redundant channels' — safety significance text notes they remained operable but no distinct System/Component node is warranted. Cause code X (Other) governs category per official code despite narrative describing a physical water-intrusion mechanism; theme captures that mechanism. Component EIIS code JI taken directly from block 13 system/component table."
+}

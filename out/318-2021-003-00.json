@@ -1,0 +1,310 @@
+{
+  "ler_number": "318-2021-003-00",
+  "identity": {
+    "accession_number": "ML21266A021",
+    "docket": "05000318",
+    "plant_name": "Calvert Cliffs",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2021-08-10",
+    "report_date": "2021-09-23",
+    "operating_mode": "3",
+    "power_level": null,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2021-003-00 for Calvert Cliffs Nuclear Power Plant, Unit No. 2, Auxiliary Feedwater Pump Inoperable Due to Improper Reset of Trip Throttle Valve."
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "D",
+      "system": "BA",
+      "component": "P",
+      "manufacturer": "T147",
+      "reportable": "N"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The cause of the improper reset of 22 AFWP trip throttle valve was due to inadequate procedural guidance...The procedure directed verifying the trip hook and latch-up lever were \"fully engaged\" but did not provide adequate procedural guidance and visual cues to ensure no ambiguity on full engagement.",
+    "cause_code": "D",
+    "category": "Defective Procedure",
+    "theme": "ambiguous procedural acceptance criteria for valve reset",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 318-2021-003-00",
+      "properties": {},
+      "type": "LER",
+      "key": "318-2021-003-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:318-2021-003-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Calvert Cliffs Unit 2",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000318",
+      "match_key": "Unit:05000318"
+    },
+    {
+      "id": "cause",
+      "display_name": "Defective Procedure (D)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "D",
+      "category": "Defective Procedure",
+      "theme": "ambiguous procedural acceptance criteria for valve reset",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Defective Procedure"
+    },
+    {
+      "id": "sys_ba",
+      "display_name": "Auxiliary Feedwater",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BA"
+    },
+    {
+      "id": "c_22afwp",
+      "display_name": "22 Auxiliary Feed Water Pump (steam-driven)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "P",
+      "identifier": "22 AFWP",
+      "model": null,
+      "manufacturer_code": "T147",
+      "inferred_code": false,
+      "match_key": "Component:P|22 AFWP"
+    },
+    {
+      "id": "c_ttv",
+      "display_name": "Trip throttle valve (overspeed trip mechanism)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:trip-throttle-valve-overspeed-trip-mechanism"
+    },
+    {
+      "id": "c_21afwp",
+      "display_name": "21 Auxiliary Feed Water Pump (steam-driven, operable train)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "P",
+      "identifier": "21 AFWP",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:P|21 AFWP"
+    },
+    {
+      "id": "fm_procedure",
+      "display_name": "Procedure lacked adequate guidance/visual cues for full engagement verification",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Procedure directed verifying trip hook and latch-up lever were \"fully engaged\" but did not provide adequate guidance/visual cues to remove ambiguity",
+      "match_key": "FailureMode:procedure-lacked-adequate-guidance-visual-cues-for-full-engagement-verification"
+    },
+    {
+      "id": "fm_reset",
+      "display_name": "Trip throttle valve improperly reset",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "On March 20, 2021, trip hook and latch-up lever were not fully engaged/aligned when the trip throttle valve was reset",
+      "match_key": "FailureMode:trip-throttle-valve-improperly-reset"
+    },
+    {
+      "id": "fm_conditionA",
+      "display_name": "Required Action of TS 3.7.3.A not performed within completion time",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Remaining operable steam-driven AFW pump (21 AFWP) was not aligned to automatic status within 72 hours because inoperability of 22 AFWP was unrecognized",
+      "match_key": "FailureMode:required-action-of-ts-3-7-3-a-not-performed-within-completion-time"
+    },
+    {
+      "id": "cons_inop",
+      "display_name": "22 AFWP inoperable / TS 3.7.3 Conditions A and E not entered/met",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2021-03-20",
+      "end": "2021-03-26",
+      "duration": "6 days",
+      "tz": null,
+      "match_key": "Consequence:22-afwp-inoperable-ts-3-7-3-conditions-a-and-e-not-entered-met"
+    },
+    {
+      "id": "ca_reset",
+      "display_name": "Reset 22 AFWP trip throttle valve properly, confirming full engagement",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:reset-22-afwp-trip-throttle-valve-properly-confirming-full-engagement"
+    },
+    {
+      "id": "ca_procedure",
+      "display_name": "Update procedure with additional detail to ensure full engagement is achieved",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:update-procedure-with-additional-detail-to-ensure-full-engagement-is-achieved"
+    },
+    {
+      "id": "mfr_terry",
+      "display_name": "Terry Turbine Company",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "T147",
+      "match_key": "Manufacturer:T147"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts3733",
+      "display_name": "Technical Specification LCO 3.7.3 (Auxiliary Feedwater System)",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:technical-specification-lco-3-7-3-auxiliary-feedwater-system"
+    },
+    {
+      "id": "rr_nureg1022",
+      "display_name": "NUREG-1022, Revision 3",
+      "properties": {
+        "type": "standard/guidance"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:nureg-1022-revision-3"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts3733",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_nureg1022",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ba",
+      "evidence": null
+    },
+    {
+      "source": "c_22afwp",
+      "relation": "PART_OF",
+      "target": "sys_ba",
+      "evidence": null
+    },
+    {
+      "source": "c_ttv",
+      "relation": "PART_OF",
+      "target": "c_22afwp",
+      "evidence": null
+    },
+    {
+      "source": "c_22afwp",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_terry",
+      "evidence": null
+    },
+    {
+      "source": "fm_procedure",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_procedure",
+      "relation": "LEADS_TO",
+      "target": "fm_reset",
+      "evidence": null
+    },
+    {
+      "source": "fm_reset",
+      "relation": "LEADS_TO",
+      "target": "fm_conditionA",
+      "evidence": null
+    },
+    {
+      "source": "fm_conditionA",
+      "relation": "LEADS_TO",
+      "target": "cons_inop",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_reset",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procedure",
+      "evidence": null
+    }
+  ],
+  "chain": "inadequate procedural guidance [cause D] -> trip throttle valve improperly reset (trip hook/latch-up lever not fully engaged) -> 22 AFWP TS-inoperable and required action (align 21 AFWP to automatic within 72h) missed unbeknownst to operators -> TS 3.7.3 Conditions A/E not entered/met for ~6 days -> discovered via NRC inspection report",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4"
+  ],
+  "notes": "Event was identified retroactively via NRC Inspection Report received August 10, 2021; the actual physical inoperability window was March 20-26, 2021. No PART_OF edge asserted between 21 AFWP and system beyond standard membership; c_21afwp is included only as context for the missed required action, not part of the failure chain itself. Block-13 component code 'P' (pump) and system 'BA' (AFW) copied verbatim. No previous occurrence LER referenced in narrative (Section G blank) — no SIMILAR_TO edge emitted."
+}

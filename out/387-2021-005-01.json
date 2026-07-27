@@ -1,0 +1,337 @@
+{
+  "ler_number": "387-2021-005-01",
+  "identity": {
+    "accession_number": "ML22089A238",
+    "docket": "05000387",
+    "plant_name": "Susquehanna",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2021-11-30",
+    "report_date": "2022-03-30",
+    "operating_mode": null,
+    "power_level": null,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Automatic Reactor Scram due to Turbine Control Valve Fast Closure"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(B)",
+      "10 CFR 50.73(a)(2)",
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "Component Identification - SV10150D Wiring; Component Name - Control Valve 4 Fast Acting Solenoid; damaged wiring for CV-4 led to fast closure of the turbine control valve",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "damaged wiring on turbine control valve fast-acting solenoid",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 387-2021-005-01",
+      "properties": {},
+      "type": "LER",
+      "key": "387-2021-005-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:387-2021-005-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Susquehanna Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000387",
+      "match_key": "Unit:05000387"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "damaged wiring on turbine control valve fast-acting solenoid",
+      "proximate_text": "Component Identification - SV10150D Wiring; Component Name - Control Valve 4 Fast Acting Solenoid; damaged wiring for CV-4 led to fast closure of the turbine control valve",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_turbine",
+      "display_name": "Main Turbine",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "TA",
+      "non_eiis": true,
+      "provisional": false,
+      "role": "system involved in event",
+      "match_key": "System:TA"
+    },
+    {
+      "id": "c_cv4",
+      "display_name": "Control Valve 4",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "CV-4",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:control-valve-4"
+    },
+    {
+      "id": "c_solenoid",
+      "display_name": "Control Valve 4 Fast Acting Solenoid",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "SV10150D",
+      "model": "D3W4BVY13X1555",
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:control-valve-4-fast-acting-solenoid"
+    },
+    {
+      "id": "c_wiring",
+      "display_name": "SV10150D Wiring",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "SV10150D Wiring",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:sv10150d-wiring"
+    },
+    {
+      "id": "fm_wiring_damage",
+      "display_name": "Damaged wiring for CV-4 solenoid",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Wiring for the Control Valve 4 fast acting solenoid (SV10150D) was damaged.",
+      "match_key": "FailureMode:damaged-wiring-for-cv-4-solenoid"
+    },
+    {
+      "id": "fm_solenoid_fault",
+      "display_name": "Fast acting solenoid faulted, causing control valve fast closure",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Damaged wiring caused the CV-4 fast acting solenoid to actuate, resulting in fast closure of the turbine control valve.",
+      "match_key": "FailureMode:fast-acting-solenoid-faulted-causing-control-valve-fast-closure"
+    },
+    {
+      "id": "cons_scram",
+      "display_name": "Automatic reactor scram due to turbine control valve fast closure",
+      "properties": {},
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:automatic-reactor-scram-due-to-turbine-control-valve-fast-closure"
+    },
+    {
+      "id": "ca_rewire",
+      "display_name": "Replace damaged wiring for CV-4",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-damaged-wiring-for-cv-4"
+    },
+    {
+      "id": "ca_orifices",
+      "display_name": "Install orifices per GE TIL 1212-2 guidance",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:install-orifices-per-ge-til-1212-2-guidance"
+    },
+    {
+      "id": "ca_extent",
+      "display_name": "Perform Extent of Condition for Unit 1 and 2 main turbine steam valves",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:perform-extent-of-condition-for-unit-1-and-2-main-turbine-steam-valves"
+    },
+    {
+      "id": "ca_pm",
+      "display_name": "Develop preventative maintenance tasks for critical wiring on main turbine steam valves",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:develop-preventative-maintenance-tasks-for-critical-wiring-on-main-turbine-steam-valves"
+    },
+    {
+      "id": "ca_spv",
+      "display_name": "Revise EHC Single Point Vulnerability Mitigation Plan",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-ehc-single-point-vulnerability-mitigation-plan"
+    },
+    {
+      "id": "mfr_parker",
+      "display_name": "Parker Hannifin",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": null,
+      "match_key": "Manufacturer:parker-hannifin"
+    },
+    {
+      "id": "rr_5073_iv_a",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5073_iv_b",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-b"
+    },
+    {
+      "id": "rr_5073_a2",
+      "display_name": "10 CFR 50.73(a)(2)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_iv_a",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_iv_b",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_a2",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_turbine",
+      "evidence": null
+    },
+    {
+      "source": "c_cv4",
+      "relation": "PART_OF",
+      "target": "sys_turbine",
+      "evidence": null
+    },
+    {
+      "source": "c_solenoid",
+      "relation": "PART_OF",
+      "target": "c_cv4",
+      "evidence": null
+    },
+    {
+      "source": "fm_wiring_damage",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_wiring_damage",
+      "relation": "LEADS_TO",
+      "target": "fm_solenoid_fault",
+      "evidence": null
+    },
+    {
+      "source": "fm_solenoid_fault",
+      "relation": "LEADS_TO",
+      "target": "cons_scram",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_rewire",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_orifices",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_extent",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_pm",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_spv",
+      "evidence": null
+    },
+    {
+      "source": "c_wiring",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_parker",
+      "evidence": null
+    },
+    {
+      "source": "c_wiring",
+      "relation": "PART_OF",
+      "target": "c_solenoid",
+      "evidence": null
+    }
+  ],
+  "chain": "damaged wiring for CV-4 fast acting solenoid [cause TBD] -> solenoid faults, causes turbine control valve fast closure -> automatic reactor scram",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code not provided in FORM-366 fields (TBD/provisional). Component failure information ties SV10150D wiring to the CV-4 fast acting solenoid (Parker Hannifin, model D3W4BVY13X1555); modeled wiring as PART_OF the solenoid component, and solenoid PART_OF Control Valve 4, per explicit component hierarchy given. No previous occurrences reported, so no SIMILAR_TO edge or stub LER emitted. Turbine system left as non-EIIS System node since no bracket code given and this is the involved system, not backup/design-context only."
+}

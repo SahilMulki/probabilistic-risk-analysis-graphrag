@@ -1,0 +1,323 @@
+{
+  "ler_number": "388-2021-005-01",
+  "identity": {
+    "accession_number": "ML22101A186",
+    "docket": "05000388",
+    "plant_name": "Susquehanna",
+    "unit": 2,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2021-12-15",
+    "report_date": "2022-04-11",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Condition Prohibited by Technical Specification Due to Setpoint Drift Attributed to Age Related Degradation"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "X",
+      "system": "JC",
+      "component": "LIS",
+      "manufacturer": "B080",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "an increase in instrument drift due to age related degradation of LISB212N024B internal micro switch 1A. Contributing to this was that a work order was previously generated to replace the switch but not scheduled.",
+    "cause_code": "X",
+    "category": "Other",
+    "theme": "age-related instrument drift; deferred replacement work order",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 388-2021-005-01",
+      "properties": {
+        "match_key": "LER:388-2021-005-01"
+      },
+      "type": "LER",
+      "key": "388-2021-005-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:388-2021-005-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Susquehanna Unit 2",
+      "properties": {
+        "match_key": "Unit:05000388",
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000388",
+      "match_key": "Unit:05000388"
+    },
+    {
+      "id": "cause",
+      "display_name": "Other (X)",
+      "properties": {
+        "match_key": "Cause:Other"
+      },
+      "type": "Cause",
+      "cause_code": "X",
+      "category": "Other",
+      "theme": "age-related instrument drift; deferred replacement work order",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Other"
+    },
+    {
+      "id": "sys_jc",
+      "display_name": "Reactor Protection System",
+      "properties": {
+        "match_key": "System:JC"
+      },
+      "type": "System",
+      "eiis_code": "JC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JC"
+    },
+    {
+      "id": "sys_jm",
+      "display_name": "Primary Containment Isolation System",
+      "properties": {
+        "match_key": "System:JM"
+      },
+      "type": "System",
+      "eiis_code": "JM",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "also declared inoperable",
+      "match_key": "System:JM"
+    },
+    {
+      "id": "c_lis",
+      "display_name": "Reactor Vessel Water Level Narrow Range Indicator LISB212N024B",
+      "properties": {
+        "serial_no": "28879",
+        "match_key": "Component:LIS|LISB212N024B"
+      },
+      "type": "Component",
+      "eiis_code": "LIS",
+      "identifier": "LISB212N024B",
+      "model": "288A",
+      "manufacturer_code": "B080",
+      "inferred_code": false,
+      "match_key": "Component:LIS|LISB212N024B"
+    },
+    {
+      "id": "c_switch",
+      "display_name": "Internal micro switch 1A",
+      "properties": {
+        "match_key": "Component:internal-micro-switch-1a"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:internal-micro-switch-1a"
+    },
+    {
+      "id": "fm_drift",
+      "display_name": "Age-related degradation of micro switch 1A causing setpoint drift",
+      "properties": {
+        "match_key": "FailureMode:age-related-degradation-micro-switch-1a"
+      },
+      "type": "FailureMode",
+      "description": "Increase in instrument drift due to age related degradation of internal micro switch 1A",
+      "match_key": "FailureMode:age-related-degradation-of-micro-switch-1a-causing-setpoint-drift"
+    },
+    {
+      "id": "fm_setpoint",
+      "display_name": "LISB212N024B setpoint drifted outside TS Allowable Value",
+      "properties": {
+        "match_key": "FailureMode:setpoint-drifted-outside-ts-av"
+      },
+      "type": "FailureMode",
+      "description": null,
+      "match_key": "FailureMode:lisb212n024b-setpoint-drifted-outside-ts-allowable-value"
+    },
+    {
+      "id": "cons_inop",
+      "display_name": "RPS and Primary Containment Isolation System declared inoperable; condition prohibited by TS",
+      "properties": {
+        "match_key": "Consequence:rps-pcis-inoperable-ts-prohibited"
+      },
+      "type": "Consequence",
+      "start": "2021-12-15T13:50",
+      "end": "2021-12-15T15:42",
+      "duration": "1:52",
+      "tz": null,
+      "match_key": "Consequence:rps-and-primary-containment-isolation-system-declared-inoperable-condition-prohibited-by-ts"
+    },
+    {
+      "id": "ca_adjust",
+      "display_name": "Adjust LISB212N024B setpoint to within TS Allowable Value",
+      "properties": {
+        "match_key": "CorrectiveAction:adjust-setpoint-within-av"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:adjust-lisb212n024b-setpoint-to-within-ts-allowable-value"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace LISB212N024B including internal micro switches 1A and 1B",
+      "properties": {
+        "match_key": "CorrectiveAction:replace-lis-b212n024b"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-lisb212n024b-including-internal-micro-switches-1a-and-1b"
+    },
+    {
+      "id": "mfr_barton",
+      "display_name": "Barton",
+      "properties": {
+        "match_key": "Manufacturer:B080"
+      },
+      "type": "Manufacturer",
+      "code": "B080",
+      "match_key": "Manufacturer:B080"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts3311",
+      "display_name": "TS 3.3.1.1 Reactor Protection System Instrumentation",
+      "properties": {
+        "match_key": "RegulatoryReference:ts-3-3-1-1"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-3-3-1-1-reactor-protection-system-instrumentation"
+    },
+    {
+      "id": "rr_ts3361",
+      "display_name": "TS 3.3.6.1 Primary Containment Isolation Instrumentation",
+      "properties": {
+        "match_key": "RegulatoryReference:ts-3-3-6-1"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-3-3-6-1-primary-containment-isolation-instrumentation"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts3311",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts3361",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jm",
+      "evidence": null
+    },
+    {
+      "source": "c_switch",
+      "relation": "PART_OF",
+      "target": "c_lis",
+      "evidence": null
+    },
+    {
+      "source": "c_lis",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_barton",
+      "evidence": null
+    },
+    {
+      "source": "fm_drift",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_drift",
+      "relation": "LEADS_TO",
+      "target": "fm_setpoint",
+      "evidence": null
+    },
+    {
+      "source": "fm_setpoint",
+      "relation": "LEADS_TO",
+      "target": "cons_inop",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_adjust",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    }
+  ],
+  "chain": "age-related degradation of internal micro switch 1A [cause X] -> LISB212N024B setpoint drifts outside TS Allowable Value -> RPS and Primary Containment Isolation System declared inoperable, TS condition prohibited (1h52m)",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "No backups modeled: the narrative describes the redundant trip system channel as remaining available (with a brief 6.5-hour surveillance outage of its own), but this is analysis/safety-significance discussion of the OTHER RPS trip channel, not a distinct backup system per rule 6 — omitted per guidance to avoid over-modeling design/analysis context as BACKED_UP_BY. No previous occurrences reported. Deferred work order to replace the switch is captured within the cause proximate_text as a contributing factor rather than a separate FailureMode, since it did not itself produce a distinct physical failure step in the chain."
+}

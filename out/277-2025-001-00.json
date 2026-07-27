@@ -1,0 +1,392 @@
+{
+  "ler_number": "277-2025-001-00",
+  "identity": {
+    "accession_number": "ML25281A097",
+    "docket": "05000277",
+    "plant_name": "Peach Bottom",
+    "unit": 2,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2025-08-20",
+    "report_date": "2025-10-08",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "inspection",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Licensee Event Report (LER) 2025-001-00 Invalid Actuation Due to Bus Failure"
+  },
+  "reporting_basis": {
+    "reported_under": [],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "E",
+      "system": "EA",
+      "component": "BU",
+      "manufacturer": "P310",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "multiple degraded connections were observed. These deteriorations resulted from water intrusion through a degraded seal, leading to corrosion. The degraded seal allowed moisture to enter the bus duct, accelerating the corrosion process and adversely affecting the integrity of the electrical connections. The bus duct heater, which is designed to minimize condensation in the bus assembly, was found to be non-functional.",
+    "cause_code": "E",
+    "category": "Management/QA Deficiency",
+    "theme": "degraded seal + non-functional heater allowed moisture ingress/corrosion of bus duct connections",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 277-2025-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "277-2025-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:277-2025-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Peach Bottom Unit 2",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000277",
+      "match_key": "Unit:05000277"
+    },
+    {
+      "id": "cause",
+      "display_name": "Management/QA Deficiency (E)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "E",
+      "category": "Management/QA Deficiency",
+      "theme": "degraded seal + non-functional heater allowed moisture ingress/corrosion of bus duct connections",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Management/QA Deficiency"
+    },
+    {
+      "id": "sys_ea",
+      "display_name": "Startup Switchgear",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "EA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "supplies power to administrative buildings and cooling towers",
+      "match_key": "System:EA"
+    },
+    {
+      "id": "sys_jm",
+      "display_name": "Primary Containment Isolation System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JM",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JM"
+    },
+    {
+      "id": "sys_ce",
+      "display_name": "Reactor Water Cleanup System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "CE",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:CE"
+    },
+    {
+      "id": "c_busduct",
+      "display_name": "Metal enclosed bus duct",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "BU",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": "P310",
+      "inferred_code": false,
+      "match_key": "Component:BU"
+    },
+    {
+      "id": "c_seal",
+      "display_name": "Bus duct seal",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:bus-duct-seal"
+    },
+    {
+      "id": "c_heater",
+      "display_name": "Bus duct heater",
+      "properties": {
+        "note": "designed to minimize condensation in bus assembly"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:bus-duct-heater"
+    },
+    {
+      "id": "c_liftpumpA",
+      "display_name": "'A' Cooling Tower Lift Pump",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:a-cooling-tower-lift-pump"
+    },
+    {
+      "id": "c_liftpumpB",
+      "display_name": "'B' Cooling Tower Lift Pump",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:b-cooling-tower-lift-pump"
+    },
+    {
+      "id": "fm_sealdegrade",
+      "display_name": "Degraded bus duct seal allowed water intrusion",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Water intrusion through a degraded seal led to corrosion of connections",
+      "match_key": "FailureMode:degraded-bus-duct-seal-allowed-water-intrusion"
+    },
+    {
+      "id": "fm_heaterfail",
+      "display_name": "Bus duct heater non-functional",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Heater intended to minimize condensation was found non-functional, accelerating corrosion",
+      "match_key": "FailureMode:bus-duct-heater-non-functional"
+    },
+    {
+      "id": "fm_corrosion",
+      "display_name": "Corrosion/degraded electrical connections in bus duct",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Moisture ingress and lack of condensation control led to corroded, degraded connections",
+      "match_key": "FailureMode:corrosion-degraded-electrical-connections-in-bus-duct"
+    },
+    {
+      "id": "fm_electricalfault",
+      "display_name": "Electrical fault in bus duct",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Fault in metal enclosed bus duct resulted in loss of startup switchgear",
+      "match_key": "FailureMode:electrical-fault-in-bus-duct"
+    },
+    {
+      "id": "fm_transient",
+      "display_name": "Electrical transient from switchgear loss",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Loss of startup switchgear produced an electrical transient affecting both units",
+      "match_key": "FailureMode:electrical-transient-from-switchgear-loss"
+    },
+    {
+      "id": "cons_pcis",
+      "display_name": "Partial invalid PCIS isolation on Units 2 and 3, RWCU isolation, cooling tower lift pump trips",
+      "properties": {
+        "unit2_effect": "PCIS Group II and III outboard valve actuation, RWCU isolation",
+        "unit3_effect": "PCIS Group II and III inboard valve actuation, RWCU isolation"
+      },
+      "type": "Consequence",
+      "start": "2025-08-20T04:30",
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:partial-invalid-pcis-isolation-on-units-2-and-3-rwcu-isolation-cooling-tower-lift-pump-trips"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Install new bus bar and bus duct",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:install-new-bus-bar-and-bus-duct"
+    },
+    {
+      "id": "ca_inspect",
+      "display_name": "Establish routine inspection of this portion of the bus",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:establish-routine-inspection-of-this-portion-of-the-bus"
+    },
+    {
+      "id": "mfr_p310",
+      "display_name": "Manufacturer P310",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "P310",
+      "match_key": "Manufacturer:P310"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "LER 277-2019-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "277-2019-001-00",
+      "stub": true,
+      "title": "Invalid actuations due to an emergency bus breaker relay failure",
+      "plant": "Peach Bottom Atomic Power Station",
+      "match_key": "LER:277-2019-001-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ea",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jm",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ce",
+      "evidence": null
+    },
+    {
+      "source": "c_busduct",
+      "relation": "PART_OF",
+      "target": "sys_ea",
+      "evidence": null
+    },
+    {
+      "source": "c_seal",
+      "relation": "PART_OF",
+      "target": "c_busduct",
+      "evidence": null
+    },
+    {
+      "source": "c_heater",
+      "relation": "PART_OF",
+      "target": "c_busduct",
+      "evidence": null
+    },
+    {
+      "source": "fm_sealdegrade",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_sealdegrade",
+      "relation": "LEADS_TO",
+      "target": "fm_corrosion",
+      "evidence": null
+    },
+    {
+      "source": "fm_heaterfail",
+      "relation": "LEADS_TO",
+      "target": "fm_corrosion",
+      "evidence": null
+    },
+    {
+      "source": "fm_corrosion",
+      "relation": "LEADS_TO",
+      "target": "fm_electricalfault",
+      "evidence": null
+    },
+    {
+      "source": "fm_electricalfault",
+      "relation": "LEADS_TO",
+      "target": "fm_transient",
+      "evidence": null
+    },
+    {
+      "source": "fm_transient",
+      "relation": "LEADS_TO",
+      "target": "cons_pcis",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_inspect",
+      "evidence": null
+    },
+    {
+      "source": "c_busduct",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_p310",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    }
+  ],
+  "chain": "degraded seal + non-functional heater [cause E] -> moisture ingress/corrosion of bus duct connections -> electrical fault in bus duct -> loss of startup switchgear -> electrical transient -> partial invalid PCIS isolation, RWCU isolation, cooling tower lift pump trips on Units 2 & 3",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Event affected both Unit 2 and Unit 3, but LER is filed under Unit 2 docket per FORM-366 fields; Unit 3 effects noted as consequence detail but not modeled as a separate Unit node since only one docket/unit is authoritative per fields provided. Previous similar event referenced only by year/title, not full docket - modeled as stub LER with key '2-2019-001-00' per report's own numbering convention (unit-year-sequence-rev), since no explicit unit digit was stated in narrative; used '2' matching PBAPS Unit 2 docket context. Cause code E (Management/QA Deficiency) governs category despite narrative emphasizing physical seal/heater degradation - theme captures the physical mechanism per the official code."
+}

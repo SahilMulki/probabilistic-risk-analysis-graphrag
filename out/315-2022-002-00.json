@@ -1,0 +1,298 @@
+{
+  "ler_number": "315-2022-002-00",
+  "identity": {
+    "accession_number": "ML22263A029",
+    "docket": "05000315",
+    "plant_name": "D.C. Cook",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2022-07-20",
+    "report_date": "2022-09-20",
+    "operating_mode": "3",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Ice Condenser Door Inoperable Resulting in a Condition Prohibited by Technical Specifications"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "X",
+      "system": "BC",
+      "component": "DR",
+      "manufacturer": "cw",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The limitation of IDD movement was determined to be the result of an obstruction, created by a bracket which holds an ice condenser vent curtain in place, thus preventing IDD 23-H from opening completely.",
+    "cause_code": "X",
+    "category": "Other",
+    "theme": "Physical obstruction from mis-positioned vent curtain bracket left after ice basket servicing",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 315-2022-004-00",
+      "properties": {
+        "match_key": "LER:315-2022-004-00"
+      },
+      "type": "LER",
+      "key": "315-2022-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:315-2022-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "D.C. Cook Unit 1",
+      "properties": {
+        "match_key": "Unit:05000315",
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000315",
+      "match_key": "Unit:05000315"
+    },
+    {
+      "id": "cause",
+      "display_name": "Other (X)",
+      "properties": {
+        "match_key": "Cause:Other"
+      },
+      "type": "Cause",
+      "cause_code": "X",
+      "category": "Other",
+      "theme": "Physical obstruction from mis-positioned vent curtain bracket left after ice basket servicing",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Other"
+    },
+    {
+      "id": "sys_bc",
+      "display_name": "Ice Condenser",
+      "properties": {
+        "match_key": "System:BC",
+        "note": "annular ice condenser compartment; limits containment peak pressure/temp during DBA"
+      },
+      "type": "System",
+      "eiis_code": "BC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BC"
+    },
+    {
+      "id": "sys_nh",
+      "display_name": "Containment",
+      "properties": {
+        "match_key": "System:NH"
+      },
+      "type": "System",
+      "eiis_code": "NH",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:NH"
+    },
+    {
+      "id": "c_idd23h",
+      "display_name": "Ice Condenser Bay #23 Intermediate Deck Door 'H' (1-ICEDOOR-I-23H)",
+      "properties": {
+        "match_key": "Component:DR|1-ICEDOOR-I-23H"
+      },
+      "type": "Component",
+      "eiis_code": "DR",
+      "identifier": "1-ICEDOOR-I-23H",
+      "model": null,
+      "manufacturer_code": "cw",
+      "inferred_code": false,
+      "match_key": "Component:DR|1-ICEDOOR-I-23H"
+    },
+    {
+      "id": "c_bracket",
+      "display_name": "Ice condenser vent curtain bracket",
+      "properties": {
+        "match_key": "Component:vent-curtain-bracket"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:ice-condenser-vent-curtain-bracket"
+    },
+    {
+      "id": "c_ventcurtain",
+      "display_name": "Ice condenser vent curtain",
+      "properties": {
+        "match_key": "Component:vent-curtain"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:ice-condenser-vent-curtain"
+    },
+    {
+      "id": "fm_bracket_obstruct",
+      "display_name": "Vent curtain bracket obstructing door travel",
+      "properties": {
+        "match_key": "FailureMode:vent-curtain-bracket-obstruction"
+      },
+      "type": "FailureMode",
+      "description": "Bracket holding the ice condenser vent curtain in place was left in a position that obstructed the door's opening path after ice basket servicing.",
+      "match_key": "FailureMode:vent-curtain-bracket-obstructing-door-travel"
+    },
+    {
+      "id": "fm_door_limited",
+      "display_name": "IDD 23-H unable to open beyond ~15% of travel",
+      "properties": {
+        "match_key": "FailureMode:idd-23h-limited-travel"
+      },
+      "type": "FailureMode",
+      "description": "Intermediate Deck Door 23-H was found incapable of opening greater than approximately 15 percent of its travel path.",
+      "match_key": "FailureMode:idd-23-h-unable-to-open-beyond-15-of-travel"
+    },
+    {
+      "id": "cons_ts_violation",
+      "display_name": "IDD 23-H inoperable; condition prohibited by Technical Specifications (LCO 3.6.12)",
+      "properties": {
+        "match_key": "Consequence:idd-inoperable-ts-prohibited",
+        "note": "Duration exceeded LCO 3.6.12 completion times (14 days + 48 hours) for restoring IDD to operable status"
+      },
+      "type": "Consequence",
+      "start": "2022-05-18",
+      "end": "2022-07-20",
+      "duration": "62 days",
+      "tz": null,
+      "match_key": "Consequence:idd-23-h-inoperable-condition-prohibited-by-technical-specifications-lco-3-6-12"
+    },
+    {
+      "id": "ca_remove_obstruction",
+      "display_name": "Remove obstruction and verify door free of other obstructions",
+      "properties": {
+        "match_key": "CorrectiveAction:remove-obstruction-verify-door"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:remove-obstruction-and-verify-door-free-of-other-obstructions"
+    },
+    {
+      "id": "ca_revise_surveillance",
+      "display_name": "Revise surveillance procedure to identify similar issues during future surveillance",
+      "properties": {
+        "match_key": "CorrectiveAction:revise-surveillance-procedure"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-surveillance-procedure-to-identify-similar-issues-during-future-surveillance"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_lco",
+      "display_name": "LCO 3.6.12, Ice Condenser Doors",
+      "properties": {
+        "match_key": "RegulatoryReference:lco-3-6-12"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:lco-3-6-12-ice-condenser-doors"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_lco",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bc",
+      "evidence": null
+    },
+    {
+      "source": "c_idd23h",
+      "relation": "PART_OF",
+      "target": "sys_bc",
+      "evidence": null
+    },
+    {
+      "source": "fm_bracket_obstruct",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_bracket_obstruct",
+      "relation": "LEADS_TO",
+      "target": "fm_door_limited",
+      "evidence": null
+    },
+    {
+      "source": "fm_door_limited",
+      "relation": "LEADS_TO",
+      "target": "cons_ts_violation",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_remove_obstruction",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_revise_surveillance",
+      "evidence": null
+    }
+  ],
+  "chain": "vent curtain bracket left obstructing door path [cause X] -> IDD 23-H limited to ~15% travel -> IDD inoperable for 62 days -> condition prohibited by Technical Specifications (LCO 3.6.12 completion times exceeded)",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4"
+  ],
+  "notes": "No backup systems modeled: PRA discussion of inlet doors and ice condenser function is design/analysis context (risk assessment discussing negligible-risk failure mechanisms), not a stated-operable backup during the inoperability window, per rule 6. NH (containment) included only as system referenced for the doors' safety function context, not as an INVOLVES target since the event narrowly concerns the ice condenser door. Manufacturer code 'cw' in block 13 not expanded in narrative; no Manufacturer node created since no manufacturer name/context given beyond the bare code."
+}

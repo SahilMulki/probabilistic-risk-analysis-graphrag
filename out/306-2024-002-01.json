@@ -1,0 +1,322 @@
+{
+  "ler_number": "306-2024-002-01",
+  "identity": {
+    "accession_number": "ML25314A119",
+    "docket": "05000306",
+    "plant_name": "Prairie Island",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2024-10-29",
+    "report_date": "2025-11-10",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Reactor Trip and auto-start actuation of Auxiliary Feedwater due to High Negative Neutron Flux Rate Trip"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "the most likely cause of the control rods fully inserting and causing the High Negative Neutron Flux Rate Trip was the back plane connectors of the control card cage in the 22AC power cabinet that were found outside the desired tolerance criteria",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "connector tolerance degradation in control cabinet",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 306-2024-006-01",
+      "properties": {},
+      "type": "LER",
+      "key": "306-2024-002-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:306-2024-002-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Prairie Island Unit 2",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000306",
+      "match_key": "Unit:05000306"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "connector tolerance degradation in control cabinet",
+      "proximate_text": "the most likely cause of the control rods fully inserting and causing the High Negative Neutron Flux Rate Trip was the back plane connectors of the control card cage in the 22AC power cabinet that were found outside the desired tolerance criteria",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_aa",
+      "display_name": "Control Rod Drive System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "AA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:AA"
+    },
+    {
+      "id": "sys_jd",
+      "display_name": "Reactor Protection System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JD",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JD"
+    },
+    {
+      "id": "sys_ba",
+      "display_name": "Auxiliary Feedwater",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "auto-actuated on Low-Low Steam Generator Levels",
+      "match_key": "System:BA"
+    },
+    {
+      "id": "c_cabinet",
+      "display_name": "22AC power cabinet",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "22AC",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:22ac-power-cabinet"
+    },
+    {
+      "id": "c_cardcage",
+      "display_name": "Control card cage",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:control-card-cage"
+    },
+    {
+      "id": "c_backplane",
+      "display_name": "Back plane connectors",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:back-plane-connectors"
+    },
+    {
+      "id": "c_bankc2",
+      "display_name": "Bank C Group 2 control rods",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:bank-c-group-2-control-rods"
+    },
+    {
+      "id": "fm_connector",
+      "display_name": "Back plane connector pins out of tolerance",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Back plane connectors in the 22AC power cabinet control card cage found outside desired tolerance criteria",
+      "match_key": "FailureMode:back-plane-connector-pins-out-of-tolerance"
+    },
+    {
+      "id": "fm_rodinsert",
+      "display_name": "Bank C Group 2 control rods fully inserted unexpectedly",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Loss of proper gripper coil power/control caused Bank C Group 2 rods to insert early relative to other groups",
+      "match_key": "FailureMode:bank-c-group-2-control-rods-fully-inserted-unexpectedly"
+    },
+    {
+      "id": "fm_fluxtrip",
+      "display_name": "High Negative Neutron Flux Rate Trip actuation",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Two-out-of-four Power Range Nuclear Instruments detected a drop of 5 percent or more in less than 2 seconds, generating an automatic RPS scram signal",
+      "match_key": "FailureMode:high-negative-neutron-flux-rate-trip-actuation"
+    },
+    {
+      "id": "cons_trip",
+      "display_name": "Automatic Reactor Trip and AFW actuation",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2024-10-29T10:23",
+      "end": null,
+      "duration": null,
+      "tz": "CDT",
+      "match_key": "Consequence:automatic-reactor-trip-and-afw-actuation"
+    },
+    {
+      "id": "ca_reform",
+      "display_name": "Reform back plane connector pins to Westinghouse specifications and re-measure",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:reform-back-plane-connector-pins-to-westinghouse-specifications-and-re-measure"
+    },
+    {
+      "id": "ca_replace_reg",
+      "display_name": "Replace all five gripper regulation cards in 22AC power cabinet with new design",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-all-five-gripper-regulation-cards-in-22ac-power-cabinet-with-new-design"
+    },
+    {
+      "id": "ca_replace_phase",
+      "display_name": "Replace stationary and movable phase control cards for Bank C Group 2",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-stationary-and-movable-phase-control-cards-for-bank-c-group-2"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_aa",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jd",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ba",
+      "evidence": null
+    },
+    {
+      "source": "c_backplane",
+      "relation": "PART_OF",
+      "target": "c_cardcage",
+      "evidence": null
+    },
+    {
+      "source": "c_cardcage",
+      "relation": "PART_OF",
+      "target": "c_cabinet",
+      "evidence": null
+    },
+    {
+      "source": "fm_connector",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_connector",
+      "relation": "LEADS_TO",
+      "target": "fm_rodinsert",
+      "evidence": null
+    },
+    {
+      "source": "fm_rodinsert",
+      "relation": "LEADS_TO",
+      "target": "fm_fluxtrip",
+      "evidence": null
+    },
+    {
+      "source": "fm_fluxtrip",
+      "relation": "LEADS_TO",
+      "target": "cons_trip",
+      "evidence": null
+    },
+    {
+      "source": "cons_trip",
+      "relation": "MITIGATED_BY",
+      "target": "sys_ba",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_reform",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_reg",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_phase",
+      "evidence": null
+    }
+  ],
+  "chain": "back plane connector pins out of tolerance [cause TBD] -> Bank C Group 2 control rods fully insert unexpectedly -> two-of-four Power Range Nuclear Instruments detect rapid flux drop -> High Negative Neutron Flux Rate Trip -> automatic Reactor Trip and AFW auto-actuation",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code remains TBD/provisional per FORM-366; narrative identifies most-likely proximate cause as out-of-tolerance back plane connectors in the 22AC power cabinet control card cage, though testing of individual control cards found them fully functional, so root cause is not definitively established. AFW modeled as both an INVOLVES system (auto-actuated) and a mitigating response to the trip consequence, consistent with narrative describing it as an expected automatic response rather than a pre-event backup. No previous similar events reported in past three years, so no SIMILAR_TO stub LER was created. Bank C Group 2 control rods modeled as a Component (not System) since narrative treats them as physical rods sharing a common power/control cabinet."
+}

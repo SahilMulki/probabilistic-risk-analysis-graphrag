@@ -1,0 +1,335 @@
+{
+  "ler_number": "530-2024-003-00",
+  "identity": {
+    "accession_number": "ML24347A138",
+    "docket": "05000530",
+    "plant_name": "Palo Verde",
+    "unit": 3,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2024-04-13",
+    "report_date": "2024-12-12",
+    "operating_mode": null,
+    "power_level": 0,
+    "discovery_context": "inspection",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Violation of Technical Specifications 3.9.2 and 3.3.12"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The direct cause of the event was degraded components in the high voltage power supply for excore startup channel 2. Subsequently, use of station procedure, \"Operations Operability Determination Process,\" failed to properly consider reduced reliability when evaluating reasonable expectation of operability of the Unit 3 excore startup range channel 2 detector. The apparent cause of the event was a knowledge gap for implementation of the operability determination procedure.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "degraded HV power supply component plus procedure-implementation knowledge gap in operability determination",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 530-2024-003-00",
+      "properties": {},
+      "type": "LER",
+      "key": "530-2024-003-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:530-2024-003-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Palo Verde Unit 3",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000530",
+      "match_key": "Unit:05000530"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "degraded HV power supply component plus procedure-implementation knowledge gap in operability determination",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_ig",
+      "display_name": "Excore Startup Channel Nuclear Instrumentation",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "IG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:IG"
+    },
+    {
+      "id": "sys_bdas",
+      "display_name": "Boron Dilution Alarm System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:boron-dilution-alarm-system"
+    },
+    {
+      "id": "c_chan2",
+      "display_name": "Excore Startup Range Channel 2 Detector",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "IG",
+      "identifier": "Channel 2",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:IG|Channel 2"
+    },
+    {
+      "id": "c_hvps",
+      "display_name": "High Voltage Power Supply (excore startup channel 2)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:high-voltage-power-supply-excore-startup-channel-2"
+    },
+    {
+      "id": "c_bdas_ch2",
+      "display_name": "BDAS Channel 2",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:bdas-channel-2"
+    },
+    {
+      "id": "fm_hvps_degraded",
+      "display_name": "High voltage power supply components degraded",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Degraded components in the high voltage power supply for excore startup channel 2 caused an instantaneous signal drop from 8 to 0 cps.",
+      "match_key": "FailureMode:high-voltage-power-supply-components-degraded"
+    },
+    {
+      "id": "fm_signal_loss",
+      "display_name": "Excore startup channel 2 signal loss / degraded indication",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Startup channel 2 instantaneously dropped to 0 cps then instantaneously restored to 8 cps approximately 3 hours later, indicating an intermittent/degraded condition.",
+      "match_key": "FailureMode:excore-startup-channel-2-signal-loss-degraded-indication"
+    },
+    {
+      "id": "fm_od_failure",
+      "display_name": "Failure to properly apply operability determination procedure",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Operations Operability Determination Process was not followed correctly; reduced reliability of the instrument was not considered when declaring the channel operable and recommencing core alterations.",
+      "match_key": "FailureMode:failure-to-properly-apply-operability-determination-procedure"
+    },
+    {
+      "id": "cons_tsviol",
+      "display_name": "TS LCOs 3.9.2.A and 3.3.12.A exited without reasonable expectation of operability; fuel movement resumed with one excore channel and one BDAS channel inoperable",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2024-04-13T23:47",
+      "end": null,
+      "duration": null,
+      "tz": "MST",
+      "match_key": "Consequence:ts-lcos-3-9-2-a-and-3-3-12-a-exited-without-reasonable-expectation-of-operability-fuel-movement-resumed-with-one-excore-channel-and-one-bdas-channel-inoperable"
+    },
+    {
+      "id": "ca_replace_hvps",
+      "display_name": "Replace excore startup range channel 2 high voltage power supply and perform channel calibration",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-excore-startup-range-channel-2-high-voltage-power-supply-and-perform-channel-calibration"
+    },
+    {
+      "id": "ca_newsflash",
+      "display_name": "Issue Operations newsflash with relevant operating experience to all operating crews",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:issue-operations-newsflash-with-relevant-operating-experience-to-all-operating-crews"
+    },
+    {
+      "id": "ca_tna",
+      "display_name": "Conduct Training Needs Analysis to address knowledge gaps in affected training programs",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:conduct-training-needs-analysis-to-address-knowledge-gaps-in-affected-training-programs"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ufsar15",
+      "display_name": "UFSAR Chapter 15, Revision 22",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:ufsar-chapter-15-revision-22"
+    },
+    {
+      "id": "rr_ts392",
+      "display_name": "TS LCO 3.9.2.A",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-lco-3-9-2-a"
+    },
+    {
+      "id": "rr_ts3312",
+      "display_name": "TS LCO 3.3.12.A",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-lco-3-3-12-a"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ig",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bdas",
+      "evidence": null
+    },
+    {
+      "source": "c_chan2",
+      "relation": "PART_OF",
+      "target": "sys_ig",
+      "evidence": null
+    },
+    {
+      "source": "c_bdas_ch2",
+      "relation": "PART_OF",
+      "target": "sys_bdas",
+      "evidence": null
+    },
+    {
+      "source": "sys_bdas",
+      "relation": "MITIGATED_BY",
+      "target": "rr_ufsar15",
+      "evidence": null
+    },
+    {
+      "source": "fm_hvps_degraded",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_hvps_degraded",
+      "relation": "LEADS_TO",
+      "target": "fm_signal_loss",
+      "evidence": null
+    },
+    {
+      "source": "fm_signal_loss",
+      "relation": "LEADS_TO",
+      "target": "fm_od_failure",
+      "evidence": null
+    },
+    {
+      "source": "fm_od_failure",
+      "relation": "LEADS_TO",
+      "target": "cons_tsviol",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_hvps",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_newsflash",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_tna",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts392",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts3312",
+      "evidence": null
+    },
+    {
+      "source": "c_hvps",
+      "relation": "PART_OF",
+      "target": "c_chan2",
+      "evidence": null
+    }
+  ],
+  "chain": "degraded HV power supply components [cause TBD] -> excore startup channel 2 signal loss/degraded indication -> failure to properly apply operability determination procedure -> TS LCOs 3.9.2.A/3.3.12.A exited without reasonable expectation of operability, core alterations resumed with inoperable channel [backup: excore channel 1 / BDAS channel 1 remained operable]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code is TBD/provisional per FORM-366 despite the narrative providing both a direct cause (degraded HV power supply) and an apparent cause (procedure-implementation knowledge gap); cause node marked provisional accordingly. Two distinct failure modes modeled in the chain per rule 5: the hardware degradation and the separate procedural/operability-determination failure. Excore channel 1 and BDAS channel 1 were not modeled as BACKED_UP_BY systems (no separate node) but noted textually in the chain summary since no explicit 'backup' system name/EIIS distinct node was warranted beyond restating channel 1 status; left as narrative note rather than duplicate System/Component nodes to avoid inventing entities beyond what's described. No manufacturer, model, or Block 13 codes were provided in FORM-366 fields (empty array), so no Manufacturer node emitted."
+}

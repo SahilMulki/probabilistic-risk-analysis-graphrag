@@ -1,0 +1,292 @@
+{
+  "ler_number": "306-2021-001-00",
+  "identity": {
+    "accession_number": "ML21322A283",
+    "docket": "05000306",
+    "plant_name": "Prairie Island",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2021-10-03",
+    "report_date": "2021-11-18",
+    "operating_mode": "5",
+    "power_level": 0,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "22 Turbine Driven Auxiliary Feedwater Pump Actuation Signal Due to Procedure Error"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The cause of this event was a latent procedure error in SP 2083A from when the procedure was changed from testing both trains of the system to testing each of the trains separately.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "procedure revision left prerequisite step out of alignment with new single-train test scope",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 306-2021-001-00",
+      "properties": {
+        "match_key": "LER:306-2021-001-00"
+      },
+      "type": "LER",
+      "key": "306-2021-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:306-2021-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Prairie Island Unit 2",
+      "properties": {
+        "match_key": "Unit:05000306",
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000306",
+      "match_key": "Unit:05000306"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {
+        "match_key": "Cause:provisional"
+      },
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "procedure revision left prerequisite step out of alignment with new single-train test scope",
+      "proximate_text": "The cause of this event was a latent procedure error in SP 2083A from when the procedure was changed from testing both trains of the system to testing each of the trains separately.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_ba",
+      "display_name": "Auxiliary Feedwater System",
+      "properties": {
+        "note": "two redundant trains: turbine-driven and motor-driven AFW pumps",
+        "match_key": "System:BA"
+      },
+      "type": "System",
+      "eiis_code": "BA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BA"
+    },
+    {
+      "id": "c_22afwp",
+      "display_name": "22 Turbine Driven Auxiliary Feedwater Pump",
+      "properties": {
+        "match_key": "Component:22-turbine-driven-afw-pump"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "22",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:22-turbine-driven-auxiliary-feedwater-pump"
+    },
+    {
+      "id": "c_sel_switch",
+      "display_name": "22 Turbine Driven AFW Pump Selector Switch",
+      "properties": {
+        "match_key": "Component:22-tdafw-selector-switch"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:22-turbine-driven-afw-pump-selector-switch"
+    },
+    {
+      "id": "c_steam_block_valve",
+      "display_name": "22 Turbine Driven AFW Pump Steam Block Valve",
+      "properties": {
+        "match_key": "Component:22-tdafw-steam-block-valve"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:22-turbine-driven-afw-pump-steam-block-valve"
+    },
+    {
+      "id": "proc_sp2083a",
+      "display_name": "Surveillance Procedure SP 2083A",
+      "properties": {
+        "match_key": "Component:sp-2083a",
+        "note": "Unit 2 Integrated SI Test with a Simulated Loss of Offsite Power Train A"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:surveillance-procedure-sp-2083a"
+    },
+    {
+      "id": "fm_proc_error",
+      "display_name": "Latent procedure error in SP 2083A prerequisite checklist",
+      "properties": {
+        "match_key": "FailureMode:latent-procedure-error-sp2083a"
+      },
+      "type": "FailureMode",
+      "description": "Prerequisite checklist not updated when SP 2083A was changed from testing both AFW trains together to testing each train separately, leaving the 22 TDAFW pump selector switch position instruction inconsistent with single-train testing.",
+      "match_key": "FailureMode:latent-procedure-error-in-sp-2083a-prerequisite-checklist"
+    },
+    {
+      "id": "fm_switch_placed_auto",
+      "display_name": "22 TDAFW selector switch placed in Shutdown Auto with buses isolated",
+      "properties": {
+        "match_key": "FailureMode:switch-placed-shutdown-auto"
+      },
+      "type": "FailureMode",
+      "description": "Following the erroneous checklist step, operators placed the 22 Turbine Driven AFW Pump selector switch in Shutdown Auto from Manual while Non-Safety Related 4160V buses 21 and 22 were isolated for maintenance, completing the automatic start signal.",
+      "match_key": "FailureMode:22-tdafw-selector-switch-placed-in-shutdown-auto-with-buses-isolated"
+    },
+    {
+      "id": "fm_unplanned_actuation",
+      "display_name": "Unplanned AFW actuation signal / steam block valve opened",
+      "properties": {
+        "match_key": "FailureMode:unplanned-actuation-steam-block-valve-opened"
+      },
+      "type": "FailureMode",
+      "description": "The completed automatic start signal caused the 22 Turbine Driven AFW Pump Steam Block Valve to open; the turbine and pump did not turn because the equipment was out of service with steam supply valves closed.",
+      "match_key": "FailureMode:unplanned-afw-actuation-signal-steam-block-valve-opened"
+    },
+    {
+      "id": "cons_actuation",
+      "display_name": "Valid PWR AFW actuation signal (reportable event)",
+      "properties": {
+        "match_key": "Consequence:valid-afw-actuation-signal",
+        "note": "Steam block valve returned to closed on Low Pump discharge pressure signal; no challenge to safe shutdown"
+      },
+      "type": "Consequence",
+      "start": "2021-10-03T15:25",
+      "end": null,
+      "duration": null,
+      "tz": "CDT",
+      "match_key": "Consequence:valid-pwr-afw-actuation-signal-reportable-event"
+    },
+    {
+      "id": "ca_update_checklist",
+      "display_name": "Update SP 2083A prerequisite checklist to place 22 TDAFW selector switch to Manual",
+      "properties": {
+        "match_key": "CorrectiveAction:update-sp2083a-checklist"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:update-sp-2083a-prerequisite-checklist-to-place-22-tdafw-selector-switch-to-manual"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_nureg1022",
+      "display_name": "NUREG 1022, Revision 3",
+      "properties": {
+        "match_key": "RegulatoryReference:nureg-1022-rev-3"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "standard/guidance",
+      "match_key": "RegulatoryReference:nureg-1022-revision-3"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_nureg1022",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ba",
+      "evidence": null
+    },
+    {
+      "source": "c_22afwp",
+      "relation": "PART_OF",
+      "target": "sys_ba",
+      "evidence": null
+    },
+    {
+      "source": "fm_proc_error",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_proc_error",
+      "relation": "LEADS_TO",
+      "target": "fm_switch_placed_auto",
+      "evidence": null
+    },
+    {
+      "source": "fm_switch_placed_auto",
+      "relation": "LEADS_TO",
+      "target": "fm_unplanned_actuation",
+      "evidence": null
+    },
+    {
+      "source": "fm_unplanned_actuation",
+      "relation": "LEADS_TO",
+      "target": "cons_actuation",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_update_checklist",
+      "evidence": null
+    }
+  ],
+  "chain": "latent procedure error in SP 2083A [cause TBD] -> 22 TDAFW selector switch placed in Shutdown Auto with buses isolated -> automatic start signal completed / steam block valve opens (pump doesn't turn, out of service) -> valid AFW actuation signal reported",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code and category left as TBD/provisional per FORM-366 fields, which state cause_code TBD despite narrative clearly identifying a procedure error (personnel/procedure-type cause); category not re-derived per rule 4. No block_13 rows provided. No manufacturer, no backup system stated as operable during event (motor-driven AFW train not explicitly stated operable in narrative, so omitted per rule 6). 'Previous Similar Events' section present but empty/blank in narrative, so no SIMILAR_TO edge or stub LER emitted."
+}

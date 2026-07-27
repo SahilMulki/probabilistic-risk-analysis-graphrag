@@ -1,0 +1,262 @@
+{
+  "ler_number": "369-2020-001-00",
+  "identity": {
+    "accession_number": "ML20304A152",
+    "docket": "05000369",
+    "plant_name": "McGuire",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2020-06-29",
+    "report_date": "2020-08-27",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": "023372",
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Condition prohibited by Technical Specification 3.4.15, Reactor Coolant System (RCS) Leakage Detection Instrumentation"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)",
+      "10 CFR 50.73(a)(2)(I)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "Revision 0 of calculation MCC-1223.15-01-0015, Containment Floor and Equipment Sumps Volume Calculation, contained non-conservative assumptions that would have prevented the containment floor and equipment (CFAE) sump level monitors from detecting and alarming on a one gallon per minute input within one hour",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "non-conservative design calculation / setpoint error",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 369-2020-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "369-2020-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:369-2020-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "McGuire Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000369",
+      "match_key": "Unit:05000369"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "non-conservative design calculation / setpoint error",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_rcs",
+      "display_name": "Reactor Coolant System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "AB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "monitored system",
+      "match_key": "System:AB"
+    },
+    {
+      "id": "c_cfae_sump_monitor",
+      "display_name": "Containment Floor and Equipment (CFAE) Sump Level Monitor",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:containment-floor-and-equipment-cfae-sump-level-monitor"
+    },
+    {
+      "id": "c_calc",
+      "display_name": "Calculation MCC-1223.15-01-0015 (Containment Floor and Equipment Sumps Volume Calculation)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "MCC-1223.15-01-0015",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:calculation-mcc-1223-15-01-0015-containment-floor-and-equipment-sumps-volume-calculation"
+    },
+    {
+      "id": "fm_calc_error",
+      "display_name": "Non-conservative assumptions in sump volume calculation",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Revision 0 of calculation MCC-1223.15-01-0015 contained non-conservative assumptions that understated the required detection sensitivity.",
+      "match_key": "FailureMode:non-conservative-assumptions-in-sump-volume-calculation"
+    },
+    {
+      "id": "fm_setpoint_error",
+      "display_name": "Sump monitor rate-of-rise setpoint derived incorrectly",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "CFAE sump level monitor rate-of-rise setpoint, derived from the flawed calculation, would not detect and alarm on a 1 gpm leak within one hour as required.",
+      "match_key": "FailureMode:sump-monitor-rate-of-rise-setpoint-derived-incorrectly"
+    },
+    {
+      "id": "cons_inop",
+      "display_name": "CFAE sump level monitors (both units) inoperable / condition prohibited by TS 3.4.15",
+      "properties": {},
+      "type": "Consequence",
+      "start": "1994-04-15",
+      "end": "2020-06-29",
+      "duration": "approximately 26 years",
+      "tz": null,
+      "match_key": "Consequence:cfae-sump-level-monitors-both-units-inoperable-condition-prohibited-by-ts-3-4-15"
+    },
+    {
+      "id": "ca_revise_calc",
+      "display_name": "Revise calculation MCC-1223.15-01-0015",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-calculation-mcc-1223-15-01-0015"
+    },
+    {
+      "id": "ca_temp_alarm",
+      "display_name": "Implement temporary OAC alarm using revised setpoint on each unit",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:implement-temporary-oac-alarm-using-revised-setpoint-on-each-unit"
+    },
+    {
+      "id": "ca_ec_setpoint",
+      "display_name": "Implement Engineering Change to insert revised setpoint into Operator Aid Computer",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:implement-engineering-change-to-insert-revised-setpoint-into-operator-aid-computer"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts_3415",
+      "display_name": "Technical Specification 3.4.15, RCS Leakage Detection Instrumentation",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:technical-specification-3-4-15-rcs-leakage-detection-instrumentation"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts_3415",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rcs",
+      "evidence": null
+    },
+    {
+      "source": "c_cfae_sump_monitor",
+      "relation": "PART_OF",
+      "target": "sys_rcs",
+      "evidence": null
+    },
+    {
+      "source": "fm_calc_error",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_calc_error",
+      "relation": "LEADS_TO",
+      "target": "fm_setpoint_error",
+      "evidence": null
+    },
+    {
+      "source": "fm_setpoint_error",
+      "relation": "LEADS_TO",
+      "target": "cons_inop",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_revise_calc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_temp_alarm",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_ec_setpoint",
+      "evidence": null
+    },
+    {
+      "source": "c_calc",
+      "relation": "LEADS_TO",
+      "target": "fm_calc_error",
+      "evidence": null
+    }
+  ],
+  "chain": "non-conservative assumptions in Rev 0 calculation MCC-1223.15-01-0015 [cause TBD] -> incorrect CFAE sump monitor rate-of-rise setpoint derived -> CFAE sump level monitors (both units) inoperable, condition prohibited by TS 3.4.15 (since April 1994) [alternate leak detection means available: containment atmosphere particulate radioactivity monitor, ventilation unit condensate drain tank level, incore instrument sump level, frequent sump level monitoring/RCS leak rate calcs]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4"
+  ],
+  "notes": "Official cause code is TBD/provisional per FORM-366 fields; narrative provides no discrete causal-factors section beyond identifying the calculation error, so category remains provisional. Alternate detection means described in Safety Analysis are stated as 'available' during the event window and function as backup detection methods, but they are not EIIS systems/components tied to RCS leakage detection instrumentation per TS 3.4.15, and the narrative frames them as general design/monitoring context rather than a stated-operable backup system in the BACKED_UP_BY sense used for ECCS trains; therefore no BACKED_UP_BY edge was asserted, consistent with rule 6's caution about ambiguous operability context. No previous similar occurrence was identified per the CAP database search, so no SIMILAR_TO stub LER was created. No manufacturer, block_13, or component identifiers were given in the narrative beyond the calculation number and generic sump monitor reference; EIIS codes could not be determined and were left null per rule 2."
+}

@@ -1,0 +1,366 @@
+{
+  "ler_number": "260-2021-001-01",
+  "identity": {
+    "accession_number": "ML21232A618",
+    "docket": "05000260",
+    "plant_name": "Browns Ferry",
+    "unit": 2,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2021-04-22",
+    "report_date": "2021-08-20",
+    "operating_mode": "1",
+    "power_level": 17,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Inoperability of a TS-required Main Steam Isolation Valve"
+  },
+  "reporting_basis": {
+    "reported_under": [],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "X",
+      "system": "JM",
+      "component": "FSV",
+      "manufacturer": "A613",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "A grounding issue prevented the de-energization of the DC solenoid which maintains C Inboard MSIV in an open position.",
+    "cause_code": "X",
+    "category": "Other",
+    "theme": "electrical ground on DC solenoid wiring preventing valve closure",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 260-2021-001-01",
+      "properties": {},
+      "type": "LER",
+      "key": "260-2021-001-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:260-2021-001-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Browns Ferry Unit 2",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000260",
+      "match_key": "Unit:05000260"
+    },
+    {
+      "id": "cause",
+      "display_name": "Other (X)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "X",
+      "category": "Other",
+      "theme": "electrical ground on DC solenoid wiring preventing valve closure",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Other"
+    },
+    {
+      "id": "sys_jm",
+      "display_name": "Main Steam Isolation Valve System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JM",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JM"
+    },
+    {
+      "id": "sys_ei",
+      "display_name": "125/250 VDC Electrical Distribution (Battery Board 3)",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "EI",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:EI"
+    },
+    {
+      "id": "c_msiv_c_in",
+      "display_name": "C Inboard MSIV (BFN-2-FCV-001-0037)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "FCV",
+      "identifier": "BFN-2-FCV-001-0037",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:FCV|BFN-2-FCV-001-0037"
+    },
+    {
+      "id": "c_msiv_c_out",
+      "display_name": "C Outboard MSIV (BFN-2-FCV-001-0038)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "FCV",
+      "identifier": "BFN-2-FCV-001-0038",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:FCV|BFN-2-FCV-001-0038"
+    },
+    {
+      "id": "c_fsv",
+      "display_name": "DC Solenoid/Wiring (2-FSV-001-0037B)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "FSV",
+      "identifier": "2-FSV-001-0037B",
+      "model": "6910-050",
+      "manufacturer_code": "A613",
+      "inferred_code": false,
+      "match_key": "Component:FSV|2-FSV-001-0037B"
+    },
+    {
+      "id": "c_bybd3",
+      "display_name": "Battery Board 3",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "BYBD",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:BYBD"
+    },
+    {
+      "id": "fm_ground",
+      "display_name": "Ground on C Inboard MSIV DC solenoid/wiring",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "A -150 VDC ground developed on Battery Board 3, traced to the C Inboard MSIV DC solenoid/wiring",
+      "match_key": "FailureMode:ground-on-c-inboard-msiv-dc-solenoid-wiring"
+    },
+    {
+      "id": "fm_energized",
+      "display_name": "DC solenoid remains energized",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The ground prevented de-energization of the DC solenoid by PCIS logic or operator control switch",
+      "match_key": "FailureMode:dc-solenoid-remains-energized"
+    },
+    {
+      "id": "fm_valve_open",
+      "display_name": "C Inboard MSIV unable to close",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "With the DC solenoid unable to de-energize, the valve was incapable of closing upon a valid PCIS signal",
+      "match_key": "FailureMode:c-inboard-msiv-unable-to-close"
+    },
+    {
+      "id": "cons_inoperable",
+      "display_name": "C Inboard MSIV inoperable / TS 3.6.1.3 violation",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2021-04-22T14:37",
+      "end": "2021-06-05T10:13",
+      "duration": "44 days",
+      "tz": "CDT",
+      "match_key": "Consequence:c-inboard-msiv-inoperable-ts-3-6-1-3-violation"
+    },
+    {
+      "id": "ca_lift_wires",
+      "display_name": "Lift DC solenoid input wires and tag out to maintain de-energized state",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:lift-dc-solenoid-input-wires-and-tag-out-to-maintain-de-energized-state"
+    },
+    {
+      "id": "ca_tmod",
+      "display_name": "Install Temporary Modification (TMOD) BFN-2-2021-001-002 to mitigate adverse effects until permanent repair",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:install-temporary-modification-tmod-bfn-2-2021-001-002-to-mitigate-adverse-effects-until-permanent-repair"
+    },
+    {
+      "id": "ca_permanent",
+      "display_name": "Permanently address grounding condition during next refueling/maintenance outage",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:permanently-address-grounding-condition-during-next-refueling-maintenance-outage"
+    },
+    {
+      "id": "mfr_avc",
+      "display_name": "Automatic Valve Corporation",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "A613",
+      "match_key": "Manufacturer:A613"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts_3613",
+      "display_name": "TS LCO 3.6.1.3 Primary Containment Isolation Valves",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ts-lco-3-6-1-3-primary-containment-isolation-valves"
+    },
+    {
+      "id": "rr_ufsar46",
+      "display_name": "BFN UFSAR Chapter 4.6",
+      "properties": {
+        "type": "analysis-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:bfn-ufsar-chapter-4-6"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts_3613",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jm",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ei",
+      "evidence": null
+    },
+    {
+      "source": "c_msiv_c_in",
+      "relation": "PART_OF",
+      "target": "sys_jm",
+      "evidence": null
+    },
+    {
+      "source": "c_fsv",
+      "relation": "PART_OF",
+      "target": "c_msiv_c_in",
+      "evidence": null
+    },
+    {
+      "source": "c_bybd3",
+      "relation": "PART_OF",
+      "target": "sys_ei",
+      "evidence": null
+    },
+    {
+      "source": "fm_ground",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_ground",
+      "relation": "LEADS_TO",
+      "target": "fm_energized",
+      "evidence": null
+    },
+    {
+      "source": "fm_energized",
+      "relation": "LEADS_TO",
+      "target": "fm_valve_open",
+      "evidence": null
+    },
+    {
+      "source": "fm_valve_open",
+      "relation": "LEADS_TO",
+      "target": "cons_inoperable",
+      "evidence": null
+    },
+    {
+      "source": "cons_inoperable",
+      "relation": "BACKED_UP_BY",
+      "target": "c_msiv_c_out",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_lift_wires",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_tmod",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_permanent",
+      "evidence": null
+    },
+    {
+      "source": "c_fsv",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_avc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ufsar46",
+      "evidence": null
+    }
+  ],
+  "chain": "electrical ground on DC solenoid wiring [cause X] -> DC solenoid remains energized -> C Inboard MSIV unable to close on PCIS signal -> MSIV inoperable / TS 3.6.1.3 violation for 44 days [backup: C Outboard MSIV remained operable]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Time-of-failure was retroactively identified via Past Operability Evaluation (POE) as April 22, 2021, when the ground was first detected on Battery Board 3, though the valve re-opening was not observed until June 5, 2021 during TMOD installation. Duration of inoperability (44 days) spans this full period per the POE. C Outboard MSIV explicitly stated as remaining operable throughout the event, modeled as backup via BACKED_UP_BY rather than a System node since it is itself a component of the same MSIV system, not a distinct system-level backup; kept as Component per schema literal wording. Cause code X (Other) governs category despite narrative emphasizing an electrical grounding failure mechanism."
+}

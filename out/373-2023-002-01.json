@@ -1,0 +1,360 @@
+{
+  "ler_number": "373-2023-002-01",
+  "identity": {
+    "accession_number": "ML24283A102",
+    "docket": "05000373",
+    "plant_name": "La Salle",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2023-02-24",
+    "report_date": "2024-10-09",
+    "operating_mode": "5",
+    "power_level": null,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Supplement to Air Circuit Breaker (ACB) Mechanically Operated Contacts (MOC) switch failed to actuate"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "X",
+      "system": "EB",
+      "component": "BKR",
+      "manufacturer": "I005",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "Troubleshooting identified a misaligned linkage for the ACB 1422 MOC switch which resulted in the MOC switch contacts remaining open when they should have been closed.",
+    "cause_code": "X",
+    "category": "Other",
+    "theme": "Mechanical linkage misalignment from breaker rack-out maintenance",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 373-2023-002-01",
+      "properties": {},
+      "type": "LER",
+      "key": "373-2023-002-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:373-2023-002-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "La Salle Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000373",
+      "match_key": "Unit:05000373"
+    },
+    {
+      "id": "cause",
+      "display_name": "Other (X)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "X",
+      "category": "Other",
+      "theme": "Mechanical linkage misalignment from breaker rack-out maintenance",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Other"
+    },
+    {
+      "id": "sys_eb",
+      "display_name": "AC Power",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "EB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:EB"
+    },
+    {
+      "id": "c_acb1422",
+      "display_name": "ACB 1422 (Unit 1 SAT Main Feed to Unit 1 Division 2 AC Power, 142Y)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "BKR",
+      "identifier": "1AP06E-1",
+      "model": null,
+      "manufacturer_code": "I005",
+      "inferred_code": false,
+      "match_key": "Component:BKR|1AP06E-1"
+    },
+    {
+      "id": "c_moc",
+      "display_name": "MOC (Mechanically Operated Contacts) switch",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:moc-mechanically-operated-contacts-switch"
+    },
+    {
+      "id": "c_acb1424",
+      "display_name": "ACB 1424 (Unit 1 Division 2 Cross Tie breaker)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "BKR",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:BKR"
+    },
+    {
+      "id": "fm_linkage",
+      "display_name": "MOC switch linkage misaligned",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Misaligned linkage on ACB 1422 MOC switch occurred during breaker rack-out in the 2022 Unit 1 refueling outage.",
+      "match_key": "FailureMode:moc-switch-linkage-misaligned"
+    },
+    {
+      "id": "fm_moc_open",
+      "display_name": "MOC switch contacts remained open",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "MOC switch contacts on ACB 1422 remained in the open position when they should have been closed.",
+      "match_key": "FailureMode:moc-switch-contacts-remained-open"
+    },
+    {
+      "id": "fm_permissive",
+      "display_name": "ACB 1422 closing permissive not actuated",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Open MOC contacts prevented actuation of the ACB 1422 closing permissive.",
+      "match_key": "FailureMode:acb-1422-closing-permissive-not-actuated"
+    },
+    {
+      "id": "fm_acb1424_fail",
+      "display_name": "ACB 1424 failed to close",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Unit 1 Division 2 Cross Tie ACB 1424 failed to close during operability surveillance testing.",
+      "match_key": "FailureMode:acb-1424-failed-to-close"
+    },
+    {
+      "id": "fm_dv_inop",
+      "display_name": "Degraded voltage protection function inoperable",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Open MOC contacts also disabled the permissive enabling degraded voltage protection for Unit 1 Division 2 emergency AC power, 142Y, when 142Y fed from SAT and 142X fed from UAT.",
+      "match_key": "FailureMode:degraded-voltage-protection-function-inoperable"
+    },
+    {
+      "id": "cons_offsite",
+      "display_name": "Loss of offsite power source qualification / LCO 3.8.1 condition entered for Unit 2 Division 2 bus 242Y",
+      "properties": {
+        "note": "Failure of ACB 1424 to close resulted in inoperability of one of the two offsite power sources for Unit 2 Division 2 required by LCO 3.8.1."
+      },
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:loss-of-offsite-power-source-qualification-lco-3-8-1-condition-entered-for-unit-2-division-2-bus-242y"
+    },
+    {
+      "id": "cons_dv_lco",
+      "display_name": "LCO 3.3.8.1 Loss of Power Instrumentation condition entered (degraded voltage function inoperable)",
+      "properties": {},
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:lco-3-3-8-1-loss-of-power-instrumentation-condition-entered-degraded-voltage-function-inoperable"
+    },
+    {
+      "id": "ca_adjust",
+      "display_name": "Adjust MOC switch linkage and complete surveillance testing to restore operability",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:adjust-moc-switch-linkage-and-complete-surveillance-testing-to-restore-operability"
+    },
+    {
+      "id": "mfr_ite",
+      "display_name": "ITE",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "I005",
+      "match_key": "Manufacturer:I005"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_lco381",
+      "display_name": "LCO 3.8.1 (AC Sources - Operating)",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:lco-3-8-1-ac-sources-operating"
+    },
+    {
+      "id": "rr_lco382",
+      "display_name": "LCO 3.8.2 (AC Sources - Shutdown)",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:lco-3-8-2-ac-sources-shutdown"
+    },
+    {
+      "id": "rr_lco3381",
+      "display_name": "LCO 3.3.8.1 (Loss of Power Instrumentation)",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:lco-3-3-8-1-loss-of-power-instrumentation"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_eb",
+      "evidence": null
+    },
+    {
+      "source": "c_acb1422",
+      "relation": "PART_OF",
+      "target": "sys_eb",
+      "evidence": null
+    },
+    {
+      "source": "c_moc",
+      "relation": "PART_OF",
+      "target": "c_acb1422",
+      "evidence": null
+    },
+    {
+      "source": "c_acb1422",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_ite",
+      "evidence": null
+    },
+    {
+      "source": "fm_linkage",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_linkage",
+      "relation": "LEADS_TO",
+      "target": "fm_moc_open",
+      "evidence": null
+    },
+    {
+      "source": "fm_moc_open",
+      "relation": "LEADS_TO",
+      "target": "fm_permissive",
+      "evidence": null
+    },
+    {
+      "source": "fm_permissive",
+      "relation": "LEADS_TO",
+      "target": "fm_acb1424_fail",
+      "evidence": null
+    },
+    {
+      "source": "fm_acb1424_fail",
+      "relation": "LEADS_TO",
+      "target": "cons_offsite",
+      "evidence": null
+    },
+    {
+      "source": "fm_moc_open",
+      "relation": "LEADS_TO",
+      "target": "fm_dv_inop",
+      "evidence": null
+    },
+    {
+      "source": "fm_dv_inop",
+      "relation": "LEADS_TO",
+      "target": "cons_dv_lco",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_adjust",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_lco381",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_lco382",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_lco3381",
+      "evidence": null
+    }
+  ],
+  "chain": "MOC switch linkage misaligned during 2022 breaker rack-out [cause X] -> MOC switch contacts remained open -> ACB 1422 closing permissive not actuated -> ACB 1424 failed to close -> offsite power source inoperable for Unit 2 Division 2 bus 242Y (LCO 3.8.1); in parallel, open MOC contacts -> degraded voltage protection function inoperable (LCO 3.3.8.1)",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "This is a supplement (rev 01) to the original LER; docket 05000373 corresponds to LaSalle Unit 1, though the affected offsite-power consequence was for Unit 2 Division 2 bus 242Y via the cross-tie breaker ACB 1424. Unit anchor set to Unit 1 per docket/component ownership (ACB 1422 is a Unit 1 SAT feed breaker); Unit 2 impact captured in consequence text. No BACKED_UP_BY edges asserted since narrative does not state an alternate operable offsite source was available during the inoperability window; instead it describes LCO required actions not taken."
+}

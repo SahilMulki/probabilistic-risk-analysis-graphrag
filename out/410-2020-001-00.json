@@ -1,0 +1,284 @@
+{
+  "ler_number": "410-2020-001-00",
+  "identity": {
+    "accession_number": "ML20132A108",
+    "docket": "05000410",
+    "plant_name": "Nine Mile Point",
+    "unit": 2,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2020-03-04",
+    "report_date": "2020-05-04",
+    "operating_mode": "3",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "NMP2 Licensee Event Report 2020-001, Manual Scram due to an Electro­ Hydraulic Control Fluid Leak on the Turbine Control System"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "inadequate procedure quality that prevented the performance of appropriate preventative maintenance resulting in cyclic fatigue failure of the EHC line. The Main Turbine Electro-Hydraulic Control Accumulator Preventive Maintenance was inadequate in the identification of degraded Turbine Control Valve (TCV) accumulator performance in 2016 and 2018, resulting in missed opportunities to replace or rebuild the degraded accumulators' bladders.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "inadequate PM procedure for TCV accumulators",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 410-2020-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "410-2020-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:410-2020-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Nine Mile Point Unit 2",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000410",
+      "match_key": "Unit:05000410"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "inadequate PM procedure for TCV accumulators",
+      "proximate_text": "inadequate procedure quality that prevented the performance of appropriate preventative maintenance resulting in cyclic fatigue failure of the EHC line. The Main Turbine Electro-Hydraulic Control Accumulator Preventive Maintenance was inadequate in the identification of degraded Turbine Control Valve (TCV) accumulator performance in 2016 and 2018, resulting in missed opportunities to replace or rebuild the degraded accumulators' bladders.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_ehc",
+      "display_name": "Main Turbine Electro-Hydraulic Control System",
+      "properties": {
+        "acronym": "EHC",
+        "ieee805": "TG"
+      },
+      "type": "System",
+      "eiis_code": "TA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:TA"
+    },
+    {
+      "id": "c_acc",
+      "display_name": "Turbine Control Valve EHC Accumulators",
+      "properties": {
+        "ieee803_function_identifier": "ACC",
+        "ieee805_system": "TG"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "ACC",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:turbine-control-valve-ehc-accumulators"
+    },
+    {
+      "id": "c_tube",
+      "display_name": "3/4-inch stainless steel EHC supply tube (upstream of 2TMB-V157D)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "2TMB-V157D supply line",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:3-4-inch-stainless-steel-ehc-supply-tube-upstream-of-2tmb-v157d"
+    },
+    {
+      "id": "c_isovalve",
+      "display_name": "Manual isolation valve 2TMB-V157D",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": "2TMB-V157D",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": true,
+      "match_key": "Component:ISV|2TMB-V157D"
+    },
+    {
+      "id": "fm_accdegrade",
+      "display_name": "TCV accumulator bladder degradation undetected/unaddressed",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Degraded Turbine Control Valve accumulator performance identified in 2016 and 2018 surveillance but not corrected due to inadequate PM procedure.",
+      "match_key": "FailureMode:tcv-accumulator-bladder-degradation-undetected-unaddressed"
+    },
+    {
+      "id": "fm_accfail",
+      "display_name": "Accumulator bladder failure",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Accumulator bladders eventually failed, causing increased EHC system pressure pulsations and excessive vibrations.",
+      "match_key": "FailureMode:accumulator-bladder-failure"
+    },
+    {
+      "id": "fm_pulsation",
+      "display_name": "Increased EHC pressure pulsations and excessive vibration",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Failed accumulator bladders led to increased pressure pulsations and excessive vibrations in the EHC system.",
+      "match_key": "FailureMode:increased-ehc-pressure-pulsations-and-excessive-vibration"
+    },
+    {
+      "id": "fm_tubefatigue",
+      "display_name": "Cyclic fatigue failure of EHC supply line tube",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Excessive vibration caused cyclic fatigue failure of the 3/4-inch stainless steel EHC supply tube upstream of MSV 1D isolation valve.",
+      "match_key": "FailureMode:cyclic-fatigue-failure-of-ehc-supply-line-tube"
+    },
+    {
+      "id": "fm_leak",
+      "display_name": "Un-isolable EHC fluid leak",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Failed tube resulted in an un-isolable leak of EHC fluid, rapidly lowering EHC reservoir level.",
+      "match_key": "FailureMode:un-isolable-ehc-fluid-leak"
+    },
+    {
+      "id": "cons_scram",
+      "display_name": "Manual reactor scram / low reactor water level EOP entry",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2020-03-04T12:05",
+      "end": "2020-03-04T13:50",
+      "duration": "1:45",
+      "tz": null,
+      "match_key": "Consequence:manual-reactor-scram-low-reactor-water-level-eop-entry"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace failed EHC line and Turbine Control Valve accumulators",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-failed-ehc-line-and-turbine-control-valve-accumulators"
+    },
+    {
+      "id": "ca_revisepm",
+      "display_name": "Revise Main Turbine EHC Accumulator preventive maintenance procedure",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-main-turbine-ehc-accumulator-preventive-maintenance-procedure"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ehc",
+      "evidence": null
+    },
+    {
+      "source": "c_acc",
+      "relation": "PART_OF",
+      "target": "sys_ehc",
+      "evidence": null
+    },
+    {
+      "source": "fm_accdegrade",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_accdegrade",
+      "relation": "LEADS_TO",
+      "target": "fm_accfail",
+      "evidence": null
+    },
+    {
+      "source": "fm_accfail",
+      "relation": "LEADS_TO",
+      "target": "fm_pulsation",
+      "evidence": null
+    },
+    {
+      "source": "fm_pulsation",
+      "relation": "LEADS_TO",
+      "target": "fm_tubefatigue",
+      "evidence": null
+    },
+    {
+      "source": "fm_tubefatigue",
+      "relation": "LEADS_TO",
+      "target": "fm_leak",
+      "evidence": null
+    },
+    {
+      "source": "fm_leak",
+      "relation": "LEADS_TO",
+      "target": "cons_scram",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_revisepm",
+      "evidence": null
+    }
+  ],
+  "chain": "inadequate PM procedure quality [cause TBD] -> TCV accumulator degradation undetected (2016/2018) -> accumulator bladder failure -> increased EHC pressure pulsations/vibration -> cyclic fatigue failure of EHC supply tube -> un-isolable EHC leak -> manual reactor scram / low RPV level EOP entry",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code is TBD/provisional per FORM-366 fields (no official code assigned), despite a detailed narrative cause statement; category left as 'provisional' per rule 4. Plant name/unit inferred from narrative ('Nine Mile Point Unit 2') since FORM-366 identity fields were null. No previous similar LERs cited (explicitly 'None' in narrative), so no SIMILAR_TO edge/stub LER emitted. EHC modeled as non-EIIS System per narrative table showing 'N/A' EIIS identifier; accumulator component similarly has no EIIS code stated."
+}

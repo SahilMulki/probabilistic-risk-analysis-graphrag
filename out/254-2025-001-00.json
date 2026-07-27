@@ -1,0 +1,336 @@
+{
+  "ler_number": "254-2025-001-00",
+  "identity": {
+    "accession_number": "ML25066A110",
+    "docket": "05000254",
+    "plant_name": "Quad Cities",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2025-01-16",
+    "report_date": "2025-03-07",
+    "operating_mode": "1",
+    "power_level": 93,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Technical Specification 3.6.4.2 Action Not Performed Due to Tagout Boundary Placement Error"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The cause of the self-identified event was a failure to implement administrative controls for the SCIV left in an open position as part of the tagout.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "tagout administrative control failure / human performance",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 254-2025-001-00",
+      "properties": {
+        "match_key": "LER:254-2025-001-00"
+      },
+      "type": "LER",
+      "key": "254-2025-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:254-2025-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Quad Cities Unit 1",
+      "properties": {
+        "match_key": "Unit:05000254",
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric",
+        "thermal_power_mwt": "2957"
+      },
+      "type": "Unit",
+      "key": "05000254",
+      "match_key": "Unit:05000254"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional (TBD)",
+      "properties": {
+        "match_key": "Cause:provisional"
+      },
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "tagout administrative control failure / human performance",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_ce",
+      "display_name": "Reactor Water Cleanup",
+      "properties": {
+        "match_key": "System:CE"
+      },
+      "type": "System",
+      "eiis_code": "CE",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:CE"
+    },
+    {
+      "id": "c_scv",
+      "display_name": "Secondary Containment Isolation Valve 2-1279-21A (2A RWCU Filter Demineralizer Rad Waste Drain Valve)",
+      "properties": {
+        "match_key": "Component:ISV|2-1279-21A"
+      },
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": "2-1279-21A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:ISV|2-1279-21A"
+    },
+    {
+      "id": "fm_tagplace",
+      "display_name": "Tagout hung leaving SCIV in Open position without recognizing secondary containment impact",
+      "properties": {
+        "match_key": "FailureMode:tagout-placement-error"
+      },
+      "type": "FailureMode",
+      "description": "Operations team hanging the tagout did not fully recognize the secondary containment impacts noted on the EPN tag; necessary administrative controls not discussed in pre-job brief.",
+      "match_key": "FailureMode:tagout-hung-leaving-sciv-in-open-position-without-recognizing-secondary-containment-impact"
+    },
+    {
+      "id": "fm_reviewfail",
+      "display_name": "Incomplete review of tagout documents by SRO and NSO",
+      "properties": {
+        "match_key": "FailureMode:incomplete-tagout-review"
+      },
+      "type": "FailureMode",
+      "description": "SRO was overly confident and preoccupied with a different tag; NSO reviewed documents but lacked attention to detail and failed to recognize TS implications, assuming the valve would ultimately be closed.",
+      "match_key": "FailureMode:incomplete-review-of-tagout-documents-by-sro-and-nso"
+    },
+    {
+      "id": "fm_novalveclose",
+      "display_name": "SCIV left open beyond TS completion time",
+      "properties": {
+        "match_key": "FailureMode:sciv-left-open-exceeds-ct"
+      },
+      "type": "FailureMode",
+      "description": "Valve 2-1279-21A remained open from 0409 on 1/13/2025 until 1801 on 1/16/2025 (85 hours 52 minutes), exceeding the 8-hour TS 3.6.4.2 Condition A completion time.",
+      "match_key": "FailureMode:sciv-left-open-beyond-ts-completion-time"
+    },
+    {
+      "id": "cons_ts",
+      "display_name": "TS 3.6.4.2 Condition A Action A.1 not completed within required time",
+      "properties": {
+        "match_key": "Consequence:ts-3-6-4-2-action-not-performed"
+      },
+      "type": "Consequence",
+      "start": "2025-01-13T04:09",
+      "end": "2025-01-16T18:01",
+      "duration": "85:52",
+      "tz": "CDT",
+      "match_key": "Consequence:ts-3-6-4-2-condition-a-action-a-1-not-completed-within-required-time"
+    },
+    {
+      "id": "ca_close",
+      "display_name": "Closed SCIV 2-1279-21A",
+      "properties": {
+        "match_key": "CorrectiveAction:closed-sciv"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:closed-sciv-2-1279-21a"
+    },
+    {
+      "id": "ca_tagout_improve",
+      "display_name": "Improve tagout to more prominently highlight requirements for administrative controls when SCIV left open",
+      "properties": {
+        "match_key": "CorrectiveAction:improve-tagout-sciv"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:improve-tagout-to-more-prominently-highlight-requirements-for-administrative-controls-when-sciv-left-open"
+    },
+    {
+      "id": "ca_labeling",
+      "display_name": "Improve labeling of SCIVs to indicate administrative controls required when left open",
+      "properties": {
+        "match_key": "CorrectiveAction:improve-sciv-labeling"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:improve-labeling-of-scivs-to-indicate-administrative-controls-required-when-left-open"
+    },
+    {
+      "id": "ca_qual",
+      "display_name": "Removed qualifications of workers involved and performed remediations",
+      "properties": {
+        "match_key": "CorrectiveAction:removed-qualifications"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:removed-qualifications-of-workers-involved-and-performed-remediations"
+    },
+    {
+      "id": "ca_perfmgmt",
+      "display_name": "Performance Management applied to workers involved",
+      "properties": {
+        "match_key": "CorrectiveAction:performance-management"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:performance-management-applied-to-workers-involved"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ufsar",
+      "display_name": "UFSAR Section 6.2.3.1",
+      "properties": {
+        "match_key": "RegulatoryReference:ufsar-6-2-3-1"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:ufsar-section-6-2-3-1"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "LER 254/2024-001-00",
+      "properties": {
+        "match_key": "LER:254/2024-001-00"
+      },
+      "type": "LER",
+      "key": "254/2024-001-00",
+      "stub": true,
+      "title": "Technical Specification 3.5.2 Action Not Performed Due to Inadequate Procedure Adherence",
+      "plant": "Quad Cities Nuclear Power Station Unit 1",
+      "match_key": "LER:254/2024-001-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ce",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_scv",
+      "evidence": null
+    },
+    {
+      "source": "c_scv",
+      "relation": "PART_OF",
+      "target": "sys_ce",
+      "evidence": null
+    },
+    {
+      "source": "fm_tagplace",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_tagplace",
+      "relation": "LEADS_TO",
+      "target": "fm_reviewfail",
+      "evidence": null
+    },
+    {
+      "source": "fm_reviewfail",
+      "relation": "LEADS_TO",
+      "target": "fm_novalveclose",
+      "evidence": null
+    },
+    {
+      "source": "fm_novalveclose",
+      "relation": "LEADS_TO",
+      "target": "cons_ts",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_close",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_tagout_improve",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_labeling",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_qual",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_perfmgmt",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    }
+  ],
+  "chain": "tagout hung with SCIV left open, secondary containment impact not recognized [cause TBD] -> incomplete review by SRO/NSO fails to catch TS implication -> SCIV 2-1279-21A remains open beyond 8-hr completion time (85h52m) -> TS 3.6.4.2 Condition A action not performed",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code TBD/provisional per FORM-366 fields; category left as 'provisional' since no official code assigned. No component failure occurred (administrative/human performance event); block_13 empty per source. No backups modeled since Standby Gas Treatment and Reactor Building Ventilation are described only in the Safety Analysis / System Design context confirming secondary containment remained capable, not as operability backups during an inoperability window of the SCIV function itself -- per rule 6 these are design-context statements, not asserted BACKED_UP_BY relationships tied to the failed component's function."
+}

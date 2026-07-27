@@ -1,0 +1,331 @@
+{
+  "ler_number": "251-2025-05-00",
+  "identity": {
+    "accession_number": "ML25295A315",
+    "docket": "05000251",
+    "plant_name": "Turkey Point",
+    "unit": 4,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2025-03-01",
+    "report_date": "2025-10-22",
+    "operating_mode": "3",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "4A Main Steam Isolation Valve Failed to Fully Close resulting in Loss of Safety Function"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "the failure of both in-parallel MSIV actuator exhaust solenoid valves...The simultaneous failure of both air exhaust solenoid valves when minimal steam flow was present in the header prevented the 4A MSIV from adequately venting and fully closing",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "dual solenoid valve failure preventing actuator venting",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 251-2025-005-00",
+      "properties": {
+        "match_key": "LER:251-2025-005-00"
+      },
+      "type": "LER",
+      "key": "251-2025-05-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:251-2025-05-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Turkey Point Unit 4",
+      "properties": {
+        "match_key": "Unit:05000251",
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000251",
+      "match_key": "Unit:05000251"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {
+        "match_key": "Cause:provisional"
+      },
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "dual solenoid valve failure preventing actuator venting",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_sb",
+      "display_name": "Main Steam System",
+      "properties": {
+        "match_key": "System:SB"
+      },
+      "type": "System",
+      "eiis_code": "SB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SB"
+    },
+    {
+      "id": "c_msiv",
+      "display_name": "4A Main Steam Isolation Valve",
+      "properties": {
+        "match_key": "Component:ISV|4A"
+      },
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": "4A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:ISV|4A"
+    },
+    {
+      "id": "c_sol1",
+      "display_name": "4A MSIV Actuator Exhaust Solenoid Valve (train 1)",
+      "properties": {
+        "match_key": "Component:PDSV|4A-1"
+      },
+      "type": "Component",
+      "eiis_code": "PDSV",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:PDSV"
+    },
+    {
+      "id": "c_sol2",
+      "display_name": "4A MSIV Actuator Exhaust Solenoid Valve (train 2)",
+      "properties": {
+        "match_key": "Component:PDSV|4A-2"
+      },
+      "type": "Component",
+      "eiis_code": "PDSV",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:PDSV"
+    },
+    {
+      "id": "fm_sol1",
+      "display_name": "First MSIV actuator exhaust solenoid valve failed to open on closure demand",
+      "properties": {
+        "match_key": "FailureMode:first-solenoid-fails-to-open"
+      },
+      "type": "FailureMode",
+      "description": "Solenoid valve did not de-energize/open to vent the actuator as required.",
+      "match_key": "FailureMode:first-msiv-actuator-exhaust-solenoid-valve-failed-to-open-on-closure-demand"
+    },
+    {
+      "id": "fm_sol2",
+      "display_name": "Second (parallel) MSIV actuator exhaust solenoid valve failed to open on closure demand",
+      "properties": {
+        "match_key": "FailureMode:second-solenoid-fails-to-open"
+      },
+      "type": "FailureMode",
+      "description": "Redundant in-parallel solenoid valve also did not open to vent the actuator.",
+      "match_key": "FailureMode:second-parallel-msiv-actuator-exhaust-solenoid-valve-failed-to-open-on-closure-demand"
+    },
+    {
+      "id": "fm_novent",
+      "display_name": "Actuator failed to vent, minimal closing force from steam flow",
+      "properties": {
+        "match_key": "FailureMode:actuator-failed-to-vent"
+      },
+      "type": "FailureMode",
+      "description": "With both exhaust solenoids failed and turbine stop/control valves closed (minimal steam flow), the actuator could not vent and the additional closing force from steam flow was absent.",
+      "match_key": "FailureMode:actuator-failed-to-vent-minimal-closing-force-from-steam-flow"
+    },
+    {
+      "id": "fm_notclosed",
+      "display_name": "4A MSIV failed to fully close on demand",
+      "properties": {
+        "match_key": "FailureMode:msiv-failed-to-fully-close"
+      },
+      "type": "FailureMode",
+      "description": "Dual indication observed; valve nearly but not fully closed following manual closure demand.",
+      "match_key": "FailureMode:4a-msiv-failed-to-fully-close-on-demand"
+    },
+    {
+      "id": "cons_lossfn",
+      "display_name": "4A MSIV safety function lost (isolation capability)",
+      "properties": {
+        "match_key": "Consequence:msiv-safety-function-lost"
+      },
+      "type": "Consequence",
+      "start": "2025-03-01T01:01:00",
+      "end": "2025-03-01T03:36:00",
+      "duration": "2:35",
+      "tz": null,
+      "match_key": "Consequence:4a-msiv-safety-function-lost-isolation-capability"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace both air exhaust solenoid valves for the 4A MSIV",
+      "properties": {
+        "match_key": "CorrectiveAction:replace-solenoid-valves"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-both-air-exhaust-solenoid-valves-for-the-4a-msiv"
+    },
+    {
+      "id": "ca_pmt",
+      "display_name": "Post-maintenance testing and IST of 4A MSIV",
+      "properties": {
+        "match_key": "CorrectiveAction:post-maintenance-testing"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:post-maintenance-testing-and-ist-of-4a-msiv"
+    },
+    {
+      "id": "ca_pm_schedule",
+      "display_name": "Establish preventative maintenance schedule to replace solenoid valves before failure",
+      "properties": {
+        "match_key": "CorrectiveAction:pm-schedule-solenoid-replacement"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:establish-preventative-maintenance-schedule-to-replace-solenoid-valves-before-failure"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(v)(B)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-b"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-b"
+    },
+    {
+      "id": "rr_ts372",
+      "display_name": "Technical Specification 3.7.2",
+      "properties": {
+        "match_key": "RegulatoryReference:ts-3-7-2"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-3-7-2"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts372",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_msiv",
+      "evidence": null
+    },
+    {
+      "source": "c_msiv",
+      "relation": "PART_OF",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "fm_sol1",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_sol1",
+      "relation": "LEADS_TO",
+      "target": "fm_novent",
+      "evidence": null
+    },
+    {
+      "source": "fm_sol2",
+      "relation": "LEADS_TO",
+      "target": "fm_novent",
+      "evidence": null
+    },
+    {
+      "source": "fm_novent",
+      "relation": "LEADS_TO",
+      "target": "fm_notclosed",
+      "evidence": null
+    },
+    {
+      "source": "fm_notclosed",
+      "relation": "LEADS_TO",
+      "target": "cons_lossfn",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_pmt",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_pm_schedule",
+      "evidence": null
+    }
+  ],
+  "chain": "dual in-parallel exhaust solenoid valve failure [cause TBD] -> actuator fails to vent (minimal steam flow closing force absent) -> 4A MSIV fails to fully close on demand -> loss of MSIV isolation safety function (2h35m)",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code is TBD/provisional per form-366 fields, despite narrative providing a clear proximate mechanical cause (dual solenoid failure); category kept as 'provisional' per rule 4. Two parallel solenoid valves modeled as distinct FailureMode nodes per rule 5 since both independently failed to open, converging on the same downstream failure (actuator could not vent). No operable backup system is stated for MSIV isolation function during the inoperability window, so no BACKED_UP_BY edge emitted. Narrative explicitly states no similar events found in past 5 years, so no stub LER/SIMILAR_TO edge created. Turbine stop/control valves and steam flow are described as contributing conditions, not separate failed components, and are captured in FailureMode descriptions rather than as Component nodes."
+}

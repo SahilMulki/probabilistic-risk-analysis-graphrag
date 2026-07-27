@@ -1,0 +1,376 @@
+{
+  "ler_number": "254-2020-001-00",
+  "identity": {
+    "accession_number": "ML20163A145",
+    "docket": "05000254",
+    "plant_name": "Quad Cities",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2020-04-14",
+    "report_date": "2020-06-11",
+    "operating_mode": null,
+    "power_level": 100,
+    "discovery_context": "inspection",
+    "status": "final",
+    "revision": "00",
+    "ens_number": "54665",
+    "ens_date": "2020-04-16",
+    "ens_time": null,
+    "title": "Control Room Emergency Ventilation Air Conditioning System Inoperable Due to Incorrect Breaker Setting"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)(D)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "Reportable",
+      "system": "to",
+      "component": "ICES",
+      "manufacturer": "Reportable",
+      "reportable": null
+    }
+  ],
+  "cause": {
+    "proximate_text": "failure to adequately update guidance documents in a timely manner and maintenance not adequately documenting the difference between as-found and work instruction breaker setting value during the RCU feed breaker PM in 2013",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "engineering-change/PM documentation gap causing incorrect breaker trip setting",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 254-2020-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "254-2020-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:254-2020-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Quad Cities Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric",
+        "thermal_power_mwt": "2957"
+      },
+      "type": "Unit",
+      "key": "05000254",
+      "match_key": "Unit:05000254"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "engineering-change/PM documentation gap causing incorrect breaker trip setting",
+      "proximate_text": "failure to adequately update guidance documents in a timely manner and maintenance not adequately documenting the difference between as-found and work instruction breaker setting value during the RCU feed breaker PM in 2013",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_crev",
+      "display_name": "Control Room Emergency Ventilation",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "VI",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected; safety-related, single train",
+      "match_key": "System:VI"
+    },
+    {
+      "id": "sys_rfu",
+      "display_name": "Refrigeration",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "RFU",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:RFU"
+    },
+    {
+      "id": "sys_ma",
+      "display_name": "Main Control Room",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "NA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:NA"
+    },
+    {
+      "id": "sys_traina",
+      "display_name": "Train A Control Room HVAC",
+      "properties": {
+        "non_eiis": true
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "backup; available throughout event",
+      "match_key": "System:train-a-control-room-hvac"
+    },
+    {
+      "id": "c_rcu",
+      "display_name": "CREV Refrigeration Condensing Unit (RCU) 0-9400-102",
+      "properties": {
+        "manufacturer": "Carrier",
+        "type": "reciprocating compressor, 90 tons"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "0-9400-102",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:crev-refrigeration-condensing-unit-rcu-0-9400-102"
+    },
+    {
+      "id": "c_breaker",
+      "display_name": "RCU feed breaker",
+      "properties": {
+        "voltage": "480V"
+      },
+      "type": "Component",
+      "eiis_code": "52",
+      "identifier": null,
+      "model": "KD3250",
+      "manufacturer_code": "Cutler-Hammer/Eaton",
+      "inferred_code": false,
+      "match_key": "Component:52"
+    },
+    {
+      "id": "c_light",
+      "display_name": "Indicating light",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "IL",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:IL"
+    },
+    {
+      "id": "fm_ec_delay",
+      "display_name": "Engineering change to update Passport breaker trip setting not completed before PM",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The Engineering Change to update the Passport Database breaker trip setting was not completed until four days after the breaker PM work order task instructions were completed.",
+      "match_key": "FailureMode:engineering-change-to-update-passport-breaker-trip-setting-not-completed-before-pm"
+    },
+    {
+      "id": "fm_pm_mismatch",
+      "display_name": "As-found breaker setting (10) did not match PM work instruction value (8.8), undocumented",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "When the breaker PM was completed in October 2013, the breaker trip setting was found to be a 10, which did not match the work instruction value. No Issue Report was generated to document the difference.",
+      "match_key": "FailureMode:as-found-breaker-setting-10-did-not-match-pm-work-instruction-value-8-8-undocumented"
+    },
+    {
+      "id": "fm_setting_reverted",
+      "display_name": "Breaker thermal trip setting changed back to 8.8",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Maintenance changed the breaker trip setting back to 8.8 to match their work instruction value and the calculations performed per the maintenance breaker trip setting procedure.",
+      "match_key": "FailureMode:breaker-thermal-trip-setting-changed-back-to-8-8"
+    },
+    {
+      "id": "fm_breaker_trip",
+      "display_name": "RCU feed breaker tripped (insufficient margin)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Operator found the breaker in a tripped condition with the RCU having no power; breaker trip setting was found set at 8.8 rather than 10.",
+      "match_key": "FailureMode:rcu-feed-breaker-tripped-insufficient-margin"
+    },
+    {
+      "id": "cons_crev",
+      "display_name": "CREV AC system inoperable / safety function not assured",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2020-04-14T16:45",
+      "end": "2020-04-16T04:53",
+      "duration": null,
+      "tz": "CDT",
+      "match_key": "Consequence:crev-ac-system-inoperable-safety-function-not-assured"
+    },
+    {
+      "id": "ca_pm",
+      "display_name": "Performed full breaker PM and returned trip setting to 2012 margin setting of 10",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:performed-full-breaker-pm-and-returned-trip-setting-to-2012-margin-setting-of-10"
+    },
+    {
+      "id": "ca_procedure",
+      "display_name": "Update maintenance breaker PM procedure to require IR/ECR when as-found differs from work instruction setting",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:update-maintenance-breaker-pm-procedure-to-require-ir-ecr-when-as-found-differs-from-work-instruction-setting"
+    },
+    {
+      "id": "mfr_eaton",
+      "display_name": "Cutler-Hammer/Eaton",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": null,
+      "match_key": "Manufacturer:cutler-hammer-eaton"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "rr_ufsar",
+      "display_name": "UFSAR Section 6.4, Habitability Systems",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:ufsar-section-6-4-habitability-systems"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "LER 254/2012-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "254/2012-001-00",
+      "stub": true,
+      "title": "Control Room Emergency Ventilation Air Conditioning System Inoperable",
+      "plant": "Quad Cities Nuclear Power Station Unit 1",
+      "match_key": "LER:254/2012-001-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_crev",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rfu",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ma",
+      "evidence": null
+    },
+    {
+      "source": "c_rcu",
+      "relation": "PART_OF",
+      "target": "sys_crev",
+      "evidence": null
+    },
+    {
+      "source": "c_breaker",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_eaton",
+      "evidence": null
+    },
+    {
+      "source": "fm_ec_delay",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_ec_delay",
+      "relation": "LEADS_TO",
+      "target": "fm_pm_mismatch",
+      "evidence": null
+    },
+    {
+      "source": "fm_pm_mismatch",
+      "relation": "LEADS_TO",
+      "target": "fm_setting_reverted",
+      "evidence": null
+    },
+    {
+      "source": "fm_setting_reverted",
+      "relation": "LEADS_TO",
+      "target": "fm_breaker_trip",
+      "evidence": null
+    },
+    {
+      "source": "fm_breaker_trip",
+      "relation": "LEADS_TO",
+      "target": "cons_crev",
+      "evidence": null
+    },
+    {
+      "source": "cons_crev",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_traina",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_pm",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procedure",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ufsar",
+      "evidence": null
+    }
+  ],
+  "chain": "engineering change delayed after 2012 trip-setting revision [cause TBD] -> as-found breaker setting (10) mismatched PM work instructions (8.8), undocumented -> maintenance reverted setting to 8.8 -> insufficient trip margin -> RCU feed breaker trips -> CREV AC inoperable [backup: Train A Control Room HVAC available]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Form-366 fields for block_13 and cause_code are garbled/placeholder ('Reportable','to','ICES') in the source data and were copied verbatim per rule 1; cause_code left TBD/provisional since no valid official code was provided. Carrier and CREV RCU details are System Design context except where they describe the actual event chain (backup Train A HVAC explicitly stated available throughout event, so BACKED_UP_BY asserted). AFU/filtration and manual-action UFSAR passage is design context only, not modeled as involved system since filtration capability was not lost and not part of the failure chain."
+}

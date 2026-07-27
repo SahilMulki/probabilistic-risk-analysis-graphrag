@@ -1,0 +1,390 @@
+{
+  "ler_number": "443-2024-001-00",
+  "identity": {
+    "accession_number": "ML24110A087",
+    "docket": "05000443",
+    "plant_name": "Seabrook",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2024-03-04",
+    "report_date": "2024-04-19",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Condition Prohibited by Technical Specifications - Transformer Bushing Failure - Offsite AC Sources"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The direct cause of the issue was a failure of the 'B' phase high voltage bushing on the 3B RAT. The key cause was the failure of the 'B' phase of the 345kV high voltage transformer bushing.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "high-voltage bushing failure on offsite power transformer",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 443-2024-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "443-2024-001-00",
+      "stub": false,
+      "title": "Condition Prohibited by Technical Specifications - Transformer Bushing Failure - Offsite AC Sources",
+      "plant": null,
+      "match_key": "LER:443-2024-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Seabrook Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000443",
+      "match_key": "Unit:05000443"
+    },
+    {
+      "id": "cause",
+      "display_name": "Cause TBD - Transformer Bushing Failure",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "high-voltage bushing failure on offsite power transformer",
+      "proximate_text": "The direct cause of the issue was a failure of the 'B' phase high voltage bushing on the 3B RAT. The key cause was the failure of the 'B' phase of the 345kV high voltage transformer bushing.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_xfmr",
+      "display_name": "Reserve Auxiliary Transformer",
+      "properties": {
+        "note": "offsite power transformer(s), 3A and 3B RAT"
+      },
+      "type": "System",
+      "eiis_code": "EA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:EA"
+    },
+    {
+      "id": "sys_uat",
+      "display_name": "Unit Auxiliary Transformer",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "EA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; operable, powered safety buses 5 and 6",
+      "match_key": "System:EA"
+    },
+    {
+      "id": "sys_dg",
+      "display_name": "Emergency Diesel Generator",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "EK",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; available/capable of powering buses 5 and 6",
+      "match_key": "System:EK"
+    },
+    {
+      "id": "c_bkr695c",
+      "display_name": "345 kV Breaker 695 'C'",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "BKR",
+      "identifier": "695C",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:BKR|695C"
+    },
+    {
+      "id": "c_bkr52k",
+      "display_name": "345 kV Breaker 52 'K'",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "BKR",
+      "identifier": "52K",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:BKR|52K"
+    },
+    {
+      "id": "c_rat3b",
+      "display_name": "3B Reserve Auxiliary Transformer",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "XFMR",
+      "identifier": "3B RAT",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:XFMR|3B RAT"
+    },
+    {
+      "id": "c_rat3a",
+      "display_name": "3A Reserve Auxiliary Transformer",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "XFMR",
+      "identifier": "3A RAT",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:XFMR|3A RAT"
+    },
+    {
+      "id": "c_bushing",
+      "display_name": "'B' phase high voltage bushing (3B RAT)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "B phase HV bushing",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:b-phase-high-voltage-bushing-3b-rat"
+    },
+    {
+      "id": "fm_bushing_fail",
+      "display_name": "'B' phase high voltage bushing failure on 3B RAT",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Failure of the 'B' phase high voltage bushing on the 3B RAT, causing sudden pressure relay and low oil level alarms.",
+      "match_key": "FailureMode:b-phase-high-voltage-bushing-failure-on-3b-rat"
+    },
+    {
+      "id": "fm_breaker_trip",
+      "display_name": "345 kV breakers 695C/52K actuate, isolating both RATs",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Actuation of 345 kV breakers 695 'C' and 52 'K' isolated both Reserve Auxiliary Transformers (3A and 3B RAT).",
+      "match_key": "FailureMode:345-kv-breakers-695c-52k-actuate-isolating-both-rats"
+    },
+    {
+      "id": "fm_internal_damage",
+      "display_name": "Transformer internal contamination and damage",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Bushing failure resulted in contamination of the transformer internals with porcelain fragments and internal damage requiring transformer replacement.",
+      "match_key": "FailureMode:transformer-internal-contamination-and-damage"
+    },
+    {
+      "id": "cons_aot",
+      "display_name": "Unplanned entry into 72-hour AOT / loss of a single offsite power source",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2024-03-01T05:42",
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:unplanned-entry-into-72-hour-aot-loss-of-a-single-offsite-power-source"
+    },
+    {
+      "id": "cons_ts_prohibited",
+      "display_name": "Condition Prohibited by Technical Specifications (AOT exceeded pending emergency LAR approval)",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2024-03-04",
+      "end": "2024-03-08",
+      "duration": "4 days",
+      "tz": null,
+      "match_key": "Consequence:condition-prohibited-by-technical-specifications-aot-exceeded-pending-emergency-lar-approval"
+    },
+    {
+      "id": "ca_noed",
+      "display_name": "Request and receive Notice of Enforcement Discretion (NOED)",
+      "properties": {
+        "reference": "ML24064A077"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:request-and-receive-notice-of-enforcement-discretion-noed"
+    },
+    {
+      "id": "ca_lar",
+      "display_name": "Submit and obtain Emergency License Amendment Request (LAR) for one-time AOT extension",
+      "properties": {
+        "reference": "ML24064A247"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:submit-and-obtain-emergency-license-amendment-request-lar-for-one-time-aot-extension"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace 3B RAT with on-site spare transformer",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-3b-rat-with-on-site-spare-transformer"
+    },
+    {
+      "id": "ca_forensics",
+      "display_name": "Send failed bushing offsite for forensic analysis",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:send-failed-bushing-offsite-for-forensic-analysis"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts381",
+      "display_name": "Technical Specification 3.8.1.1.a",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:technical-specification-3-8-1-1-a"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts381",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_xfmr",
+      "evidence": null
+    },
+    {
+      "source": "c_rat3b",
+      "relation": "PART_OF",
+      "target": "sys_xfmr",
+      "evidence": null
+    },
+    {
+      "source": "c_rat3a",
+      "relation": "PART_OF",
+      "target": "sys_xfmr",
+      "evidence": null
+    },
+    {
+      "source": "c_bushing",
+      "relation": "PART_OF",
+      "target": "c_rat3b",
+      "evidence": null
+    },
+    {
+      "source": "fm_bushing_fail",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_bushing_fail",
+      "relation": "LEADS_TO",
+      "target": "fm_breaker_trip",
+      "evidence": null
+    },
+    {
+      "source": "fm_bushing_fail",
+      "relation": "LEADS_TO",
+      "target": "fm_internal_damage",
+      "evidence": null
+    },
+    {
+      "source": "fm_breaker_trip",
+      "relation": "LEADS_TO",
+      "target": "cons_aot",
+      "evidence": null
+    },
+    {
+      "source": "cons_aot",
+      "relation": "LEADS_TO",
+      "target": "cons_ts_prohibited",
+      "evidence": null
+    },
+    {
+      "source": "cons_aot",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_uat",
+      "evidence": null
+    },
+    {
+      "source": "cons_aot",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_dg",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_noed",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_lar",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_forensics",
+      "evidence": null
+    }
+  ],
+  "chain": "high voltage bushing failure [cause TBD] -> 'B' phase bushing fails on 3B RAT -> breakers 695C/52K trip, isolating both RATs -> loss of single offsite power source / 72-hr AOT entered -> AOT expires before emergency LAR approved -> condition prohibited by Technical Specifications [backups UAT, EDGs available for safety buses 5 and 6]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code is TBD/provisional per FORM-366 fields; narrative gives only a direct/key cause statement (bushing failure) without an official root-cause category, so cause node marked provisional. No block_13 data was provided in FORM-366 fields (empty array), so none synthesized. UAT and EDG are explicitly stated as remaining operable/available during the event and are modeled as BACKED_UP_BY; no separate System node created for the onsite Class 1E Distribution System or offsite transmission network since these are design-context descriptions, not operable backups tied to the failure chain. No previous similar occurrence found per licensee's 20-year review, so no stub LER/SIMILAR_TO edge emitted."
+}

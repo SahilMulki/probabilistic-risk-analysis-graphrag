@@ -1,0 +1,310 @@
+{
+  "ler_number": "423-2020-005-00",
+  "identity": {
+    "accession_number": "ML20324A632",
+    "docket": "05000423",
+    "plant_name": "Millstone",
+    "unit": 3,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2020-10-01",
+    "report_date": "2020-11-19",
+    "operating_mode": "4",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2020-005-00 for Millstone Power Station Unit 3, LOSS OF SAFETY FUNCTION - Secondary Containment"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)(C)",
+      "10 CFR 50.73(a)(2)(v)(D)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The cause was identified to be a weakness in the process of notifying the Control Room prior to blocking open a door as it is not fully bounded by procedures and lacks clear ownership.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "procedural weakness / unclear ownership for door-blocking notification",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 423-2020-005-00",
+      "properties": {},
+      "type": "LER",
+      "key": "423-2020-005-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:423-2020-005-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Millstone Unit 3",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000423",
+      "match_key": "Unit:05000423"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "procedural weakness / unclear ownership for door-blocking notification",
+      "proximate_text": "The cause was identified to be a weakness in the process of notifying the Control Room prior to blocking open a door as it is not fully bounded by procedures and lacks clear ownership.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_nh",
+      "display_name": "Secondary Containment",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "NH",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected system - rendered inoperable",
+      "match_key": "System:NH"
+    },
+    {
+      "id": "sys_nf",
+      "display_name": "Auxiliary Building",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "NF",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "location of new RCA entrance / blocked door",
+      "match_key": "System:NF"
+    },
+    {
+      "id": "sys_slcrs",
+      "display_name": "Supplemental Leak Collection and Release System",
+      "properties": {
+        "additional_codes": [
+          "VG",
+          "VH"
+        ]
+      },
+      "type": "System",
+      "eiis_code": "VF",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "SLCRS - additional codes VG, VH also cited",
+      "match_key": "System:VF"
+    },
+    {
+      "id": "c_door",
+      "display_name": "Door 311 (A-24-9)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "DR",
+      "identifier": "311 (A-24-9)",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:DR|311 (A-24-9)"
+    },
+    {
+      "id": "fm_blocked",
+      "display_name": "Security door 311 blocked open without notifying Control Room",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "As part of COVID-19 preventative measures, RCA entry traffic was redirected through Door 311; the door was blocked open at 18:42 on October 1, 2020 without notifying the Control Room.",
+      "match_key": "FailureMode:security-door-311-blocked-open-without-notifying-control-room"
+    },
+    {
+      "id": "fm_noaction",
+      "display_name": "Control Room did not log Secondary Containment inoperable / enter TS Action Statement",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Because the Control Room was not notified, operators did not log Secondary Containment as inoperable and did not enter the Technical Specification Action Statement for approximately 15 hours.",
+      "match_key": "FailureMode:control-room-did-not-log-secondary-containment-inoperable-enter-ts-action-statement"
+    },
+    {
+      "id": "cons_secctmt",
+      "display_name": "Secondary Containment inoperable / loss of safety function",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2020-10-01T18:42",
+      "end": "2020-10-02T09:55",
+      "duration": "~15:13",
+      "tz": null,
+      "match_key": "Consequence:secondary-containment-inoperable-loss-of-safety-function"
+    },
+    {
+      "id": "ca_close",
+      "display_name": "Close blocked-open door and restore Secondary Containment to operable status",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:close-blocked-open-door-and-restore-secondary-containment-to-operable-status"
+    },
+    {
+      "id": "ca_cap",
+      "display_name": "Additional corrective actions per Corrective Action Program",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:additional-corrective-actions-per-corrective-action-program"
+    },
+    {
+      "id": "rr_5073v_c",
+      "display_name": "10 CFR 50.73(a)(2)(v)(C)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-c"
+    },
+    {
+      "id": "rr_5073v_d",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "rr_ts3662",
+      "display_name": "Technical Specification 3.6.6.2",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-3-6-6-2"
+    },
+    {
+      "id": "rr_5067",
+      "display_name": "10 CFR 50.67",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:10-cfr-50-67"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "LER 423-2017-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "423-2017-001-00",
+      "stub": true,
+      "title": "Failure of SLCRS door latch mechanism preventing door from fully closing, rendering Secondary Containment inoperable",
+      "plant": "Millstone Power Station Unit 3",
+      "match_key": "LER:423-2017-001-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073v_c",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073v_d",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_nh",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_nf",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_slcrs",
+      "evidence": null
+    },
+    {
+      "source": "c_door",
+      "relation": "PART_OF",
+      "target": "sys_nh",
+      "evidence": "Door 311 is part of the Secondary Containment boundary"
+    },
+    {
+      "source": "fm_blocked",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_blocked",
+      "relation": "LEADS_TO",
+      "target": "fm_noaction",
+      "evidence": null
+    },
+    {
+      "source": "fm_noaction",
+      "relation": "LEADS_TO",
+      "target": "cons_secctmt",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_close",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_cap",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts3662",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5067",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    }
+  ],
+  "chain": "procedural weakness / unclear notification ownership [cause TBD] -> door 311 blocked open without Control Room notification -> Control Room fails to log inoperability / enter TS Action Statement -> Secondary Containment inoperable ~15h [no backups asserted; SLCRS retained slight negative pressure with one train running during troubleshooting]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code left TBD/provisional per FORM-366 fields, though narrative gives a clear proximate cause statement (procedural/notification weakness) - captured in proximate_text and theme. SLCRS trains (VF/VG/VH) and Auxiliary Building filter system are discussed largely as design-context / safety-analysis basis for consequence severity, not as failed or backup-operable systems during the event window, so no BACKED_UP_BY edges were asserted; SLCRS itself is modeled as an involved/affected system since its operability was 'challenged' by the event. Security personnel posted at the door were capable of closing it but this is described as inherent capability, not an activated backup system, so not modeled as a System node. Previous occurrence LER key recorded exactly as stated in narrative: '2017-001-00' -> normalized with unit digit per instructions as '3-2017-001-00'."
+}

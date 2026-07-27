@@ -1,0 +1,303 @@
+{
+  "ler_number": "259-2023-003-00",
+  "identity": {
+    "accession_number": "ML24029A241",
+    "docket": "05000259",
+    "plant_name": "Browns Ferry",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2023-01-18",
+    "report_date": "2024-01-29",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "– Standby Liquid Control Inoperable due to Demineralized Water In-leakage"
+  },
+  "reporting_basis": {
+    "reported_under": [],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The cause of this event was leakage past valve 1-SHV-002-1208 that allowed demineralized water to dilute the SPB solution in the SLC tank.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "valve in-leakage diluting SLC boron solution",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 259-2023-XXX-00",
+      "properties": {},
+      "type": "LER",
+      "key": "259-2023-003-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:259-2023-003-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Browns Ferry Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000259",
+      "match_key": "Unit:05000259"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "valve in-leakage diluting SLC boron solution",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_br",
+      "display_name": "Standby Liquid Control",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BR",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BR"
+    },
+    {
+      "id": "sys_kc",
+      "display_name": "Demineralized Water",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "KC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:KC"
+    },
+    {
+      "id": "c_valve",
+      "display_name": "SLC Demin Water Supply Shutoff Valve 1-SHV-002-1208",
+      "properties": {
+        "note": "one-of-a-kind ratchet valve, no backstop"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "1-SHV-002-1208",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:slc-demin-water-supply-shutoff-valve-1-shv-002-1208"
+    },
+    {
+      "id": "c_tank",
+      "display_name": "SLC Tank",
+      "properties": {
+        "note": "common tank to both SLC subsystems"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:slc-tank"
+    },
+    {
+      "id": "fm_leak",
+      "display_name": "Demineralized water leaked past shutoff valve into SLC tank",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "In-leakage of demineralized water through 1-SHV-002-1208 diluted the SLC tank contents.",
+      "match_key": "FailureMode:demineralized-water-leaked-past-shutoff-valve-into-slc-tank"
+    },
+    {
+      "id": "fm_dilute",
+      "display_name": "SPB concentration diluted below TS minimum",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "SLC tank SPB concentration dropped below 8.0% by weight required by TS SR 3.1.7.3, reaching a minimum of 7.96%.",
+      "match_key": "FailureMode:spb-concentration-diluted-below-ts-minimum"
+    },
+    {
+      "id": "cons_inop",
+      "display_name": "SLC system inoperable (TS SR 3.1.7.3 not met)",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2023-01-18T20:32",
+      "end": "2023-01-19T14:05",
+      "duration": "17.5 hours",
+      "tz": "CST",
+      "match_key": "Consequence:slc-system-inoperable-ts-sr-3-1-7-3-not-met"
+    },
+    {
+      "id": "ca_stop",
+      "display_name": "Stop demineralized water in-leakage and add SPB to restore concentration",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:stop-demineralized-water-in-leakage-and-add-spb-to-restore-concentration"
+    },
+    {
+      "id": "ca_ecp",
+      "display_name": "Implement ECP BFN-23-029-01 to physically isolate demin water supply with blind flange",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:implement-ecp-bfn-23-029-01-to-physically-isolate-demin-water-supply-with-blind-flange"
+    },
+    {
+      "id": "ca_ti",
+      "display_name": "Revise 0-TI-18 to require SLC sample before chemical addition to tank of unknown concentration",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-0-ti-18-to-require-slc-sample-before-chemical-addition-to-tank-of-unknown-concentration"
+    },
+    {
+      "id": "rr_5073c",
+      "display_name": "10 CFR 50.73(a)(2)(v)(C)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-c"
+    },
+    {
+      "id": "rr_5073d",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "rr_ts317",
+      "display_name": "TS 3.1.7 / SR 3.1.7.3 Standby Liquid Control System",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-3-1-7-sr-3-1-7-3-standby-liquid-control-system"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "Similar November 2023 SLC dilution event at Browns Ferry Unit 1",
+      "properties": {},
+      "type": "LER",
+      "key": "1-2023-XXX",
+      "stub": true,
+      "title": "Similar SLC tank dilution event (November 2023)",
+      "plant": "Browns Ferry Nuclear Plant, Unit 1",
+      "match_key": "LER:1-2023-XXX"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073c",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073d",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_br",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_kc",
+      "evidence": null
+    },
+    {
+      "source": "c_valve",
+      "relation": "PART_OF",
+      "target": "sys_kc",
+      "evidence": null
+    },
+    {
+      "source": "fm_leak",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_leak",
+      "relation": "LEADS_TO",
+      "target": "fm_dilute",
+      "evidence": null
+    },
+    {
+      "source": "fm_dilute",
+      "relation": "LEADS_TO",
+      "target": "cons_inop",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_stop",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_ecp",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_ti",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    },
+    {
+      "source": "cons_inop",
+      "relation": "MITIGATED_BY",
+      "target": "rr_ts317",
+      "evidence": null
+    }
+  ],
+  "chain": "leakage past 1-SHV-002-1208 [cause TBD] -> demineralized water dilutes SLC tank -> SPB concentration drops below TS SR 3.1.7.3 minimum (7.96% < 8.0%) -> SLC system inoperable for ~17.5 hours [no operable backup identified; sufficient SPB determined available via past-operability evaluation]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause_code/category not provided in FORM-366 FIELDS (TBD/provisional) despite narrative clearly attributing the event to valve in-leakage; per rules, copied verbatim as TBD/provisional rather than re-derived. LER number itself not given in FORM-366 FIELDS; docket 05000259 and event date used to construct a placeholder ler_number/key of '259-2023-XXX-00' since the actual sequence number was not provided in the input. Previous similar event (November 2023) is referenced only descriptively without an LER number, so a stub LER was created with a placeholder key '1-2023-XXX' per rule 9, though the exact LER number was not stated in the narrative -- this is a best-effort placeholder, not an invented docket-based key. No component manufacturer/model data given in Block 13 or narrative sections D/G (both blank in source). No BACKED_UP_BY edge asserted since no separate operable system is stated to have backed up SLC during the inoperability window; instead, the past operability evaluation found sufficient SPB volume remained despite dilution."
+}

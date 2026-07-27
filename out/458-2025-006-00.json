@@ -1,0 +1,392 @@
+{
+  "ler_number": "458-2025-006-00",
+  "identity": {
+    "accession_number": "ML25293A255",
+    "docket": "05000458",
+    "plant_name": "River Bend",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2025-08-23",
+    "report_date": "2025-10-20",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "/ 2025-006-00, Potential Loss of Safety Function of Control Building Chillers Due to a Valve Mispositioned"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)(A)",
+      "10 CFR 50.73(a)(2)(v)(D)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "A",
+      "system": "VI",
+      "component": "CHU",
+      "manufacturer": "W120",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The direct cause of this event was due to the misposition of HVK-FTY5B-V2L that resulted in the valve being left in the closed position by I&C Technicians.",
+    "cause_code": "A",
+    "category": "Personnel Error",
+    "theme": "valve mispositioning / configuration control failure",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 458-2025-006-00",
+      "properties": {},
+      "type": "LER",
+      "key": "458-2025-006-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:458-2025-006-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "River Bend Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000458",
+      "match_key": "Unit:05000458"
+    },
+    {
+      "id": "cause",
+      "display_name": "Personnel Error (A)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "A",
+      "category": "Personnel Error",
+      "theme": "valve mispositioning / configuration control failure",
+      "proximate_text": "The direct cause of this event was due to the misposition of HVK-FTY5B-V2L that resulted in the valve being left in the closed position by I&C Technicians.",
+      "provisional": false,
+      "match_key": "Cause:Personnel Error"
+    },
+    {
+      "id": "sys_vi",
+      "display_name": "Control Building Chilled Water System (HVK)",
+      "properties": {
+        "note": "serves Division I and II Control Building HVAC"
+      },
+      "type": "System",
+      "eiis_code": "VI",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:VI"
+    },
+    {
+      "id": "c_chl1a",
+      "display_name": "Control Building Chiller A (HVK-CHL1A)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "CHU",
+      "identifier": "HVK-CHL1A",
+      "model": null,
+      "manufacturer_code": "W120",
+      "inferred_code": false,
+      "match_key": "Component:CHU|HVK-CHL1A"
+    },
+    {
+      "id": "c_chl1b",
+      "display_name": "Control Building Chiller B (HVK-CHL1B)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "CHU",
+      "identifier": "HVK-CHL1B",
+      "model": null,
+      "manufacturer_code": "W120",
+      "inferred_code": false,
+      "match_key": "Component:CHU|HVK-CHL1B"
+    },
+    {
+      "id": "c_chl1c",
+      "display_name": "Control Building Chiller C (HVK-CHL1C)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "CHU",
+      "identifier": "HVK-CHL1C",
+      "model": null,
+      "manufacturer_code": "W120",
+      "inferred_code": false,
+      "match_key": "Component:CHU|HVK-CHL1C"
+    },
+    {
+      "id": "c_valve",
+      "display_name": "HVK Low Side Isolation Valve (HVK-FTY5B-V2L)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": "HVK-FTY5B-V2L",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": true,
+      "match_key": "Component:ISV|HVK-FTY5B-V2L"
+    },
+    {
+      "id": "fm_mispos",
+      "display_name": "Isolation valve left closed after maintenance (undocumented reposition)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "I&C Technicians manipulated HVK-FTY5B-V2L closed during transmitter fill/vent work and failed to document the position change or return it to open per EN-MA-157.",
+      "match_key": "FailureMode:isolation-valve-left-closed-after-maintenance-undocumented-reposition"
+    },
+    {
+      "id": "fm_noflow",
+      "display_name": "Loss of low-flow signal from transmitter",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Closed isolation valve prevented a 'low flow' signal from the transmitter.",
+      "match_key": "FailureMode:loss-of-low-flow-signal-from-transmitter"
+    },
+    {
+      "id": "fm_chla_fail",
+      "display_name": "HVK-CHL1A fails to start",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "HVK-CHL1A failed to start during transfer from HVK-CHL1B due to the closed isolation valve.",
+      "match_key": "FailureMode:hvk-chl1a-fails-to-start"
+    },
+    {
+      "id": "cons_inop",
+      "display_name": "Division I Control Building Chilled Water System declared inoperable (potential loss of safety function)",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2025-08-23T14:33",
+      "end": null,
+      "duration": null,
+      "tz": "CDT",
+      "match_key": "Consequence:division-i-control-building-chilled-water-system-declared-inoperable-potential-loss-of-safety-function"
+    },
+    {
+      "id": "ca_standdown",
+      "display_name": "Maintenance Department stand-down for standards reset",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:maintenance-department-stand-down-for-standards-reset"
+    },
+    {
+      "id": "ca_oversight",
+      "display_name": "100% Supervisor job oversight maintained for 2 weeks following event",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:100-supervisor-job-oversight-maintained-for-2-weeks-following-event"
+    },
+    {
+      "id": "ca_perfmgmt",
+      "display_name": "Performance management actions to reinforce behaviors and prevent recurrence",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:performance-management-actions-to-reinforce-behaviors-and-prevent-recurrence"
+    },
+    {
+      "id": "ca_observations",
+      "display_name": "Observations of procedure use/adherence for human performance standards",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:observations-of-procedure-use-adherence-for-human-performance-standards"
+    },
+    {
+      "id": "mfr_w120",
+      "display_name": "Manufacturer W120",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "W120",
+      "match_key": "Manufacturer:W120"
+    },
+    {
+      "id": "rr_5073a2vA",
+      "display_name": "10 CFR 50.73(a)(2)(v)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-a"
+    },
+    {
+      "id": "rr_5073a2vD",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "rr_lco373",
+      "display_name": "LCO 3.7.3 Control Room Air Conditioning System",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:lco-3-7-3-control-room-air-conditioning-system"
+    },
+    {
+      "id": "rr_lco377",
+      "display_name": "LCO 3.7.7 Control Building Air Conditioning System",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:lco-3-7-7-control-building-air-conditioning-system"
+    },
+    {
+      "id": "rr_enma157",
+      "display_name": "EN-MA-157 Maintenance Configuration Control",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "standard/guidance",
+      "match_key": "RegulatoryReference:en-ma-157-maintenance-configuration-control"
+    },
+    {
+      "id": "rr_enhu102",
+      "display_name": "EN-HU-102 Human Performance Traps & Tools",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "standard/guidance",
+      "match_key": "RegulatoryReference:en-hu-102-human-performance-traps-tools"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "LER 050/458-2020-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "050/458-2020-001-00",
+      "stub": true,
+      "title": "Post modification test resulting in both Division I and II Control Building Chilled Water Systems inoperable due to HVK-CHL1A trip on Phase Reversal alarm",
+      "plant": "River Bend Station Unit 1",
+      "match_key": "LER:050/458-2020-001-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073a2vA",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073a2vD",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_vi",
+      "evidence": null
+    },
+    {
+      "source": "c_chl1a",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_w120",
+      "evidence": null
+    },
+    {
+      "source": "c_chl1b",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_w120",
+      "evidence": null
+    },
+    {
+      "source": "c_chl1c",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_w120",
+      "evidence": null
+    },
+    {
+      "source": "fm_mispos",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_mispos",
+      "relation": "LEADS_TO",
+      "target": "fm_noflow",
+      "evidence": null
+    },
+    {
+      "source": "fm_noflow",
+      "relation": "LEADS_TO",
+      "target": "fm_chla_fail",
+      "evidence": null
+    },
+    {
+      "source": "fm_chla_fail",
+      "relation": "LEADS_TO",
+      "target": "cons_inop",
+      "evidence": null
+    },
+    {
+      "source": "cons_inop",
+      "relation": "BACKED_UP_BY",
+      "target": "c_chl1b",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_standdown",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_oversight",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_perfmgmt",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_observations",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    }
+  ],
+  "chain": "I&C technicians close isolation valve HVK-FTY5B-V2L during transmitter fill/vent and fail to document per EN-MA-157 [cause A] -> low-flow signal lost -> HVK-CHL1A fails to start during divisional transfer -> Division I Control Building Chilled Water System declared inoperable (potential loss of safety function) [backup HVK-CHL1B alternated back into service]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Component eiis code CHU/system VI taken from block 13 per FORM-366 fields; narrative brackets [VI:CHU] confirm this pairing for the chillers. Isolation valve itself given no eiis code (none stated in narrative). Both Division I chillers (CHL1A, CHL1C) were rendered inoperable by the closed valve; CHL1C modeled implicitly via consequence text but not separately failed since narrative doesn't describe a distinct failure mode for it beyond inoperability status shared with CHL1A. Previous occurrence LER key preserved exactly as stated (050/458-2020-001-00) per rule 9."
+}

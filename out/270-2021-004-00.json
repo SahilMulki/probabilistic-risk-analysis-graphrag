@@ -1,0 +1,435 @@
+{
+  "ler_number": "270-2021-004-00",
+  "identity": {
+    "accession_number": "ML22038A970",
+    "docket": "05000270",
+    "plant_name": "Oconee",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2021-12-09",
+    "report_date": "2022-02-07",
+    "operating_mode": "1",
+    "power_level": 73,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Revision 00 – More Than One Axial Power"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "It is suspected that the 2 APSRs at locations F-12 and L-12 are uncoupled from their CRD and therefore were always fully inserted during the Unit 2 startup from the refueling outage.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Suspected APSR-to-CRD uncoupling causing rod position indication to disagree with actual (fully-inserted) rod position",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 270-2021-004-00",
+      "properties": {
+        "match_key": "LER:270-2021-004-00"
+      },
+      "type": "LER",
+      "key": "270-2021-004-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:270-2021-004-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Oconee Unit 2",
+      "properties": {
+        "match_key": "Unit:05000270",
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000270",
+      "match_key": "Unit:05000270"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {
+        "match_key": "Cause:provisional"
+      },
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Suspected APSR-to-CRD uncoupling causing rod position indication to disagree with actual (fully-inserted) rod position",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_rdcs",
+      "display_name": "Rod Drive Control System",
+      "properties": {
+        "match_key": "System:rod-drive-control-system"
+      },
+      "type": "System",
+      "eiis_code": "AA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:AA"
+    },
+    {
+      "id": "c_crdm",
+      "display_name": "Control Rod Drive Mechanism",
+      "properties": {
+        "match_key": "Component:DRIV"
+      },
+      "type": "Component",
+      "eiis_code": "DRIV",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:DRIV"
+    },
+    {
+      "id": "c_plc",
+      "display_name": "Programmable Logic Controller (relative position indication)",
+      "properties": {
+        "match_key": "Component:PMC"
+      },
+      "type": "Component",
+      "eiis_code": "PMC",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:PMC"
+    },
+    {
+      "id": "c_ni",
+      "display_name": "Power Range Nuclear Instruments (2NI-5,-6,-7,-8)",
+      "properties": {
+        "match_key": "Component:DET"
+      },
+      "type": "Component",
+      "eiis_code": "DET",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:DET"
+    },
+    {
+      "id": "c_apsr",
+      "display_name": "Axial Power Shaping Rods (Group 8) at F-12 and L-12",
+      "properties": {
+        "match_key": "Component:apsr-f12-l12"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "F-12, L-12",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:axial-power-shaping-rods-group-8-at-f-12-and-l-12"
+    },
+    {
+      "id": "fm_uncoupled",
+      "display_name": "Two APSRs (F-12, L-12) uncoupled from CRD leadscrew",
+      "properties": {
+        "match_key": "FailureMode:apsr-uncoupled-from-crd"
+      },
+      "type": "FailureMode",
+      "description": "Suspected uncoupling of the APSR from its control rod drive, causing the rod to remain fully inserted instead of withdrawing with the group.",
+      "match_key": "FailureMode:two-apsrs-f-12-l-12-uncoupled-from-crd-leadscrew"
+    },
+    {
+      "id": "fm_misindicated",
+      "display_name": "Rod position indication falsely showed APSRs withdrawn",
+      "properties": {
+        "match_key": "FailureMode:apsr-position-misindication"
+      },
+      "type": "FailureMode",
+      "description": "Multiple diverse APSR position indications incorrectly indicated the two rods were withdrawn along with the rest of Group 8, masking the actual fully-inserted position.",
+      "match_key": "FailureMode:rod-position-indication-falsely-showed-apsrs-withdrawn"
+    },
+    {
+      "id": "fm_misaligned",
+      "display_name": "More than one APSR misaligned from Group 8 average position",
+      "properties": {
+        "match_key": "FailureMode:apsr-misaligned"
+      },
+      "type": "FailureMode",
+      "description": "Two of eight APSRs remained fully inserted while the rest of the group withdrew, exceeding TS 3.1.6 alignment limits.",
+      "match_key": "FailureMode:more-than-one-apsr-misaligned-from-group-8-average-position"
+    },
+    {
+      "id": "cons_pidc",
+      "display_name": "PIDC acceptance criteria not met / power ascension halted",
+      "properties": {
+        "match_key": "Consequence:pidc-not-met-power-ascension-halted"
+      },
+      "type": "Consequence",
+      "start": "2021-12-08T16:54",
+      "end": "2021-12-09T19:43",
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:pidc-acceptance-criteria-not-met-power-ascension-halted"
+    },
+    {
+      "id": "cons_tsviol",
+      "display_name": "TS 3.1.6 exceeded; LCO 3.0.3 and LCO 3.0.4 violations (Operation/Condition Prohibited by TS)",
+      "properties": {
+        "match_key": "Consequence:lco-3-0-3-3-0-4-violation"
+      },
+      "type": "Consequence",
+      "start": "2021-12-07T09:21",
+      "end": "2021-12-09T19:43",
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:ts-3-1-6-exceeded-lco-3-0-3-and-lco-3-0-4-violations-operation-condition-prohibited-by-ts"
+    },
+    {
+      "id": "ca_insert",
+      "display_name": "Confirm all APSRs fully inserted to ensure alignment and operability",
+      "properties": {
+        "match_key": "CorrectiveAction:confirm-apsrs-fully-inserted"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:confirm-all-apsrs-fully-inserted-to-ensure-alignment-and-operability"
+    },
+    {
+      "id": "ca_nfe_eval",
+      "display_name": "Nuclear Fuels Engineering evaluation of operation with APSRs fully inserted through 100 EFPD",
+      "properties": {
+        "match_key": "CorrectiveAction:nfe-evaluation-100-efpd"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:nuclear-fuels-engineering-evaluation-of-operation-with-apsrs-fully-inserted-through-100-efpd"
+    },
+    {
+      "id": "ca_powerdist",
+      "display_name": "Collect full-power core power distribution measurement (12/14/21)",
+      "properties": {
+        "match_key": "CorrectiveAction:full-power-core-power-distribution-measurement"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:collect-full-power-core-power-distribution-measurement-12-14-21"
+    },
+    {
+      "id": "ca_cycle_analysis",
+      "display_name": "Perform analysis for remainder of Unit 2 operating cycle with APSRs fully inserted",
+      "properties": {
+        "match_key": "CorrectiveAction:cycle-analysis-apsrs-fully-inserted"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:perform-analysis-for-remainder-of-unit-2-operating-cycle-with-apsrs-fully-inserted"
+    },
+    {
+      "id": "ca_cause_eval",
+      "display_name": "Complete Cause Evaluation for uncoupled rods",
+      "properties": {
+        "match_key": "CorrectiveAction:cause-evaluation-uncoupled-rods"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:complete-cause-evaluation-for-uncoupled-rods"
+    },
+    {
+      "id": "ca_inspect",
+      "display_name": "Perform inspections of F-12 and L-12 fuel assemblies and APSRs",
+      "properties": {
+        "match_key": "CorrectiveAction:inspect-f12-l12-fuel-assemblies-apsrs"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:perform-inspections-of-f-12-and-l-12-fuel-assemblies-and-apsrs"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion",
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts316",
+      "display_name": "TS 3.1.6 (APSR alignment)",
+      "properties": {
+        "type": "license-basis",
+        "match_key": "RegulatoryReference:ts-3-1-6"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ts-3-1-6-apsr-alignment"
+    },
+    {
+      "id": "rr_lco303",
+      "display_name": "LCO 3.0.3",
+      "properties": {
+        "type": "license-basis",
+        "match_key": "RegulatoryReference:lco-3-0-3"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:lco-3-0-3"
+    },
+    {
+      "id": "rr_lco304",
+      "display_name": "LCO 3.0.4",
+      "properties": {
+        "type": "license-basis",
+        "match_key": "RegulatoryReference:lco-3-0-4"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:lco-3-0-4"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rdcs",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_apsr",
+      "evidence": null
+    },
+    {
+      "source": "c_crdm",
+      "relation": "PART_OF",
+      "target": "sys_rdcs",
+      "evidence": null
+    },
+    {
+      "source": "fm_uncoupled",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_uncoupled",
+      "relation": "LEADS_TO",
+      "target": "fm_misindicated",
+      "evidence": null
+    },
+    {
+      "source": "fm_misindicated",
+      "relation": "LEADS_TO",
+      "target": "fm_misaligned",
+      "evidence": null
+    },
+    {
+      "source": "fm_misaligned",
+      "relation": "LEADS_TO",
+      "target": "cons_pidc",
+      "evidence": null
+    },
+    {
+      "source": "fm_misaligned",
+      "relation": "LEADS_TO",
+      "target": "cons_tsviol",
+      "evidence": null
+    },
+    {
+      "source": "cons_tsviol",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts316",
+      "evidence": null
+    },
+    {
+      "source": "cons_tsviol",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_lco303",
+      "evidence": null
+    },
+    {
+      "source": "cons_tsviol",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_lco304",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_insert",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_nfe_eval",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_powerdist",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_cycle_analysis",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_cause_eval",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_inspect",
+      "evidence": null
+    }
+  ],
+  "chain": "suspected APSR-to-CRD uncoupling [cause TBD] -> two APSRs (F-12, L-12) remain fully inserted -> rod position indication falsely shows them withdrawn -> more than one APSR misaligned beyond TS 3.1.6 limits -> PIDC test failures / power ascension halted and LCO 3.0.3 / 3.0.4 violations (Operation Prohibited by TS)",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "No block-13 component-failure data was provided (component field explicitly 'N/A'), and cause code is officially TBD/provisional pending a future Cause Evaluation and outage inspection of the F-12/L-12 assemblies, so the Cause node is marked provisional. No backup system is modeled: no system is stated to be an operable backup for APSR alignment/PIDC function - APSRs are a unique axial-shaping function, not backed up by another system in this event. PLC and NI EIIS codes ([PMC], [DET]) and CRDM code [DRIV] are copied verbatim from narrative bracket notation."
+}

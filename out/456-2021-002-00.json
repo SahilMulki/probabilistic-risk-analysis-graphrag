@@ -1,0 +1,191 @@
+{
+  "ler_number": "456-2021-002-00",
+  "identity": {
+    "accession_number": "ML21230A030",
+    "docket": "05000456",
+    "plant_name": "Braidwood",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2021-06-21",
+    "report_date": "2021-08-18",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": "55320",
+    "ens_date": "2021-06-21",
+    "ens_time": null,
+    "title": "Unit Trip on Generator Load Rejection Due to Lightning Strike Within the Unit Switchyard Exceeding the Capabilities of the Switchyard Grounding System"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)",
+      "10 CFR 50.73(a)(2)(iv)(B)(1)",
+      "10 CFR 50.73(a)(2)(iv)(B)(6)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "NIA",
+      "system": "NIA",
+      "component": "NIA",
+      "manufacturer": "NIA",
+      "reportable": null
+    },
+    {
+      "cause": "NIA",
+      "system": "NIA",
+      "component": "NIA",
+      "manufacturer": "NIA",
+      "reportable": null
+    }
+  ],
+  "cause": {
+    "proximate_text": "Unit trip on generator load rejection due to a lightning strike within the unit switchyard exceeding the capabilities of the switchyard grounding system",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "lightning strike exceeding switchyard grounding design capability",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 456-2021-006-00",
+      "properties": {},
+      "type": "LER",
+      "key": "456-2021-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:456-2021-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Braidwood Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000456",
+      "match_key": "Unit:05000456"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "lightning strike exceeding switchyard grounding design capability",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_switchyard",
+      "display_name": "Unit Switchyard Grounding System",
+      "properties": {
+        "note": "electrical switchyard grounding infrastructure"
+      },
+      "type": "System",
+      "eiis_code": "FK",
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:FK"
+    },
+    {
+      "id": "sys_generator",
+      "display_name": "Main Generator",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "TB",
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:TB"
+    },
+    {
+      "id": "fm_lightning",
+      "display_name": "Lightning strike within unit switchyard exceeded grounding system capability",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "A lightning strike occurred within the unit switchyard, exceeding the design/capacity of the switchyard grounding system",
+      "match_key": "FailureMode:lightning-strike-within-unit-switchyard-exceeded-grounding-system-capability"
+    },
+    {
+      "id": "fm_loadreject",
+      "display_name": "Generator load rejection",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The disturbance in the switchyard caused a generator load rejection event",
+      "match_key": "FailureMode:generator-load-rejection"
+    },
+    {
+      "id": "cons_trip",
+      "display_name": "Unit trip",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2021-06-21",
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:unit-trip"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_switchyard",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_generator",
+      "evidence": null
+    },
+    {
+      "source": "fm_lightning",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_lightning",
+      "relation": "LEADS_TO",
+      "target": "fm_loadreject",
+      "evidence": null
+    },
+    {
+      "source": "fm_loadreject",
+      "relation": "LEADS_TO",
+      "target": "cons_trip",
+      "evidence": null
+    }
+  ],
+  "chain": "lightning strike in switchyard exceeds grounding system capability [cause TBD] -> generator load rejection -> unit trip",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Narrative text provided is heavily truncated/garbled (only header, Previous Occurrences and Component Failure Data section fragments with 'N/A' entries visible; no detailed sequence-of-events text was supplied). Cause code and category are TBD/provisional per FORM-366 fields since no official cause code was assigned in the input. No component failure data, manufacturer, or corrective actions were present in the supplied narrative fragment, so no Component, CorrectiveAction, or Manufacturer nodes were created. Plant name/unit/reactor type/nss_vendor inferred from docket 05000456 (Braidwood Station Unit 1, Westinghouse PWR) since FORM-366 fields left them null but narrative header confirms 'Braidwood Station, Unit 1 05000456'. No previous occurrence LER details were given despite a 'Previous Occurrences' header, so no stub LER/SIMILAR_TO edge was created."
+}

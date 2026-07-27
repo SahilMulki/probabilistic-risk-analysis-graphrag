@@ -1,0 +1,386 @@
+{
+  "ler_number": "391-2020-001-00",
+  "identity": {
+    "accession_number": "ML20197A177",
+    "docket": "05000391",
+    "plant_name": "Watts Bar",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2020-05-19",
+    "report_date": "2020-07-15",
+    "operating_mode": "3",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Control Room Emergency Ventilation System Inoperable due to Main Control Room Door Being Left Open"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)(D)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The event was the result of individuals operating the boundary door failing to properly close the door and confirm its closure (lack of self check).",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "human performance / self-check failure on boundary door closure",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 391-2020-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "391-2020-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:391-2020-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Watts Bar Unit 2",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000391",
+      "match_key": "Unit:05000391"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "human performance / self-check failure on boundary door closure",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_vi",
+      "display_name": "Control Room Emergency Ventilation System (CREVS)",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "VI",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected system",
+      "match_key": "System:VI"
+    },
+    {
+      "id": "c_door",
+      "display_name": "Control Room Envelope Boundary Door C036",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "DR",
+      "identifier": "C036",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:DR|C036"
+    },
+    {
+      "id": "fm_notconfirmed",
+      "display_name": "Individuals failed to confirm MCR envelope door properly latched",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Human performance error; personnel traversing the control building complex failed to confirm the door was properly latched (lack of self-check).",
+      "match_key": "FailureMode:individuals-failed-to-confirm-mcr-envelope-door-properly-latched"
+    },
+    {
+      "id": "fm_dooropen",
+      "display_name": "CRE boundary door left ajar",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Door C036 was found ajar, breaching the control room envelope pressure boundary.",
+      "match_key": "FailureMode:cre-boundary-door-left-ajar"
+    },
+    {
+      "id": "cons_crevs",
+      "display_name": "CREVS declared inoperable (both trains) / TS 3.7.10 Condition B entered",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2020-05-19T13:29:00",
+      "end": "2020-05-19T13:31:00",
+      "duration": "00:02:00",
+      "tz": "EDT",
+      "match_key": "Consequence:crevs-declared-inoperable-both-trains-ts-3-7-10-condition-b-entered"
+    },
+    {
+      "id": "ca_close",
+      "display_name": "Identify and promptly close open control room door",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:identify-and-promptly-close-open-control-room-door"
+    },
+    {
+      "id": "ca_peer",
+      "display_name": "Post door peer checkers at MCR door",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:post-door-peer-checkers-at-mcr-door"
+    },
+    {
+      "id": "ca_coach",
+      "display_name": "Coach involved individuals on door-challenge requirement",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:coach-involved-individuals-on-door-challenge-requirement"
+    },
+    {
+      "id": "ca_brief",
+      "display_name": "Conduct briefings for task-managed supplemental craft personnel",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:conduct-briefings-for-task-managed-supplemental-craft-personnel"
+    },
+    {
+      "id": "ca_inprocess",
+      "display_name": "Brief all in-processed personnel on pressure boundary door sensitivity and closure expectations",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:brief-all-in-processed-personnel-on-pressure-boundary-door-sensitivity-and-closure-expectations"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "rr_tsl",
+      "display_name": "TS LCO 3.7.10 (CREVS)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-lco-3-7-10-crevs"
+    },
+    {
+      "id": "rr_gdc19",
+      "display_name": "10 CFR 50 Appendix A, Criterion 19",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:10-cfr-50-appendix-a-criterion-19"
+    },
+    {
+      "id": "ler_stub_2019_001",
+      "display_name": "LER 390/2019-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "390/2019-001-00",
+      "stub": true,
+      "title": "Control room boundary door left open due to personnel error",
+      "plant": "Watts Bar Nuclear Plant",
+      "match_key": "LER:390/2019-001-00"
+    },
+    {
+      "id": "ler_stub_2019_004",
+      "display_name": "LER 390/2019-004-00",
+      "properties": {},
+      "type": "LER",
+      "key": "390/2019-004-00",
+      "stub": true,
+      "title": "Two instances where a control room boundary door had been left open due to personnel error",
+      "plant": "Watts Bar Nuclear Plant",
+      "match_key": "LER:390/2019-004-00"
+    },
+    {
+      "id": "ler_stub_2018_003",
+      "display_name": "LER 390/2018-003-00",
+      "properties": {},
+      "type": "LER",
+      "key": "390/2018-003-00",
+      "stub": true,
+      "title": "MCR door event with similar cause",
+      "plant": "Watts Bar Nuclear Plant",
+      "match_key": "LER:390/2018-003-00"
+    },
+    {
+      "id": "ler_stub_2018_004",
+      "display_name": "LER 390/2018-004-00",
+      "properties": {},
+      "type": "LER",
+      "key": "390/2018-004-00",
+      "stub": true,
+      "title": "MCR door event with similar cause",
+      "plant": "Watts Bar Nuclear Plant",
+      "match_key": "LER:390/2018-004-00"
+    },
+    {
+      "id": "ler_stub_2017_007",
+      "display_name": "LER 390/2017-007-001",
+      "properties": {},
+      "type": "LER",
+      "key": "390/2017-007-001",
+      "stub": true,
+      "title": "MCR door event with similar cause",
+      "plant": "Watts Bar Nuclear Plant",
+      "match_key": "LER:390/2017-007-001"
+    },
+    {
+      "id": "ler_stub_2017_014",
+      "display_name": "LER 390/2017-014-00",
+      "properties": {},
+      "type": "LER",
+      "key": "390/2017-014-00",
+      "stub": true,
+      "title": "MCR door event with similar cause",
+      "plant": "Watts Bar Nuclear Plant",
+      "match_key": "LER:390/2017-014-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_tsl",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_gdc19",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_vi",
+      "evidence": null
+    },
+    {
+      "source": "c_door",
+      "relation": "PART_OF",
+      "target": "sys_vi",
+      "evidence": null
+    },
+    {
+      "source": "fm_notconfirmed",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_notconfirmed",
+      "relation": "LEADS_TO",
+      "target": "fm_dooropen",
+      "evidence": null
+    },
+    {
+      "source": "fm_dooropen",
+      "relation": "LEADS_TO",
+      "target": "cons_crevs",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_close",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_peer",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_coach",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_brief",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_inprocess",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_stub_2019_001",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_stub_2019_004",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_stub_2018_003",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_stub_2018_004",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_stub_2017_007",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_stub_2017_014",
+      "evidence": null
+    }
+  ],
+  "chain": "human performance error (lack of self-check) [cause TBD] -> personnel failed to confirm MCR boundary door C036 latched -> CRE boundary door left ajar -> CREVS declared inoperable both trains / TS 3.7.10 Condition B entered (2 min, promptly closed)",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code is TBD/provisional per FORM-366 fields; narrative attributes the event to a human performance/self-check failure, but this is not codified as an official cause code, so category remains provisional per rule 4. No component failures were reported in Block 13 (empty). CRE boundary restored within ~2 minutes; no explicit statement of an alternate operable backup system distinct from CREVS itself (narrative states 'balance of the CRE equipment...remained operable' but this refers to the same system's other equipment, not a distinct backup system), so no BACKED_UP_BY edge was created. Previous similar occurrences captured as six stub LER nodes per the narrative's Section VII list, using the LER numbers exactly as stated (390/... format, Watts Bar Unit 1)."
+}

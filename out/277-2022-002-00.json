@@ -1,0 +1,483 @@
+{
+  "ler_number": "277-2022-002-00",
+  "identity": {
+    "accession_number": "ML22349A084",
+    "docket": "05000277",
+    "plant_name": "Peach Bottom",
+    "unit": 2,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2022-10-17",
+    "report_date": "2022-12-15",
+    "operating_mode": "4",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Licensee Event Report (LER) 2022-002-00 Automatic Depressurization System Safety Relief Valve Actuator Diaphragm Degraded"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)",
+      "10 CFR 50.73(a)(2)(ii)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "X",
+      "system": "SB",
+      "component": "RV",
+      "manufacturer": "T020",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "thermal degradation of its resilient components. The prolonged exposure to elevated temperatures was the result of a steam leak in its immediate vicinity",
+    "cause_code": "X",
+    "category": "Other",
+    "theme": "steam leak causing localized thermal degradation of elastomer diaphragm",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 277-2022-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "277-2022-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:277-2022-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Peach Bottom Unit 2",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000277",
+      "match_key": "Unit:05000277"
+    },
+    {
+      "id": "cause",
+      "display_name": "Other (X)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "X",
+      "category": "Other",
+      "theme": "steam leak causing localized thermal degradation of elastomer diaphragm",
+      "proximate_text": "thermal degradation of its resilient components. The prolonged exposure to elevated temperatures was the result of a steam leak in its immediate vicinity",
+      "provisional": false,
+      "match_key": "Cause:Other"
+    },
+    {
+      "id": "sys_sb",
+      "display_name": "Safety Relief Valves",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "ADS function",
+      "match_key": "System:SB"
+    },
+    {
+      "id": "sys_ads",
+      "display_name": "Automatic Depressurization System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "affected function",
+      "match_key": "System:automatic-depressurization-system"
+    },
+    {
+      "id": "c_rv71b",
+      "display_name": "B Safety Relief Valve (RV-71B)",
+      "properties": {
+        "serial_number": "024"
+      },
+      "type": "Component",
+      "eiis_code": "RV",
+      "identifier": "RV-2-02-071B",
+      "model": "Target Rock Model 67F pilot operated safety/relief valve",
+      "manufacturer_code": "T020",
+      "inferred_code": false,
+      "match_key": "Component:RV|RV-2-02-071B"
+    },
+    {
+      "id": "c_pilotfilter",
+      "display_name": "Pilot filter plug threaded connection",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:pilot-filter-plug-threaded-connection"
+    },
+    {
+      "id": "c_pneumop",
+      "display_name": "Pneumatic operator",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:pneumatic-operator"
+    },
+    {
+      "id": "c_diaphragm",
+      "display_name": "Actuator diaphragm (elastomer)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:actuator-diaphragm-elastomer"
+    },
+    {
+      "id": "fm_threadwear",
+      "display_name": "Pilot filter fastener thread wear",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Fastener threads slightly worn over operating life, widening thread gaps",
+      "match_key": "FailureMode:pilot-filter-fastener-thread-wear"
+    },
+    {
+      "id": "fm_gasketfail",
+      "display_name": "Pilot filter plug outer gasket compromised by steam cutting",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Widening thread gaps enabled steam cutting that compromised the outer gasket",
+      "match_key": "FailureMode:pilot-filter-plug-outer-gasket-compromised-by-steam-cutting"
+    },
+    {
+      "id": "fm_steamleak",
+      "display_name": "Small steam leak into drywell impinging on insulation",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Leakage past fastener threads created flow path for main steam into drywell, impinging on insulation blankets",
+      "match_key": "FailureMode:small-steam-leak-into-drywell-impinging-on-insulation"
+    },
+    {
+      "id": "fm_thermalexposure",
+      "display_name": "Pneumatic operator exposed to elevated temperatures",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Wet vapor flow exited enclosure aperture where pneumatic operator protrudes, subjecting it to elevated temperatures",
+      "match_key": "FailureMode:pneumatic-operator-exposed-to-elevated-temperatures"
+    },
+    {
+      "id": "fm_diaphragmdeg",
+      "display_name": "Actuator diaphragm embrittled and delaminated",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Diaphragm elastomer embrittled and delaminated, enabling gross air leakage",
+      "match_key": "FailureMode:actuator-diaphragm-embrittled-and-delaminated"
+    },
+    {
+      "id": "fm_adsloss",
+      "display_name": "Loss of ADS function for RV-71B",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Gross leakage inhibited S/RV manual operation capability, representing loss of ADS function",
+      "match_key": "FailureMode:loss-of-ads-function-for-rv-71b"
+    },
+    {
+      "id": "cons_adsinop",
+      "display_name": "One of five ADS S/RVs inoperable beyond TS-permitted time",
+      "properties": {},
+      "type": "Consequence",
+      "start": "indeterminate",
+      "end": "2022-10-17",
+      "duration": "indeterminate, exceeded TS completion time",
+      "tz": null,
+      "match_key": "Consequence:one-of-five-ads-s-rvs-inoperable-beyond-ts-permitted-time"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace RV-71B in kind with refurbished, tested, qualified S/RV",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-rv-71b-in-kind-with-refurbished-tested-qualified-s-rv"
+    },
+    {
+      "id": "ca_inspect",
+      "display_name": "Visually inspect all other S/RVs for insulation installation and steam leaks",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:visually-inspect-all-other-s-rvs-for-insulation-installation-and-steam-leaks"
+    },
+    {
+      "id": "ca_test",
+      "display_name": "In-situ test all S/RV pneumatic operators for function and resilient parts integrity",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:in-situ-test-all-s-rv-pneumatic-operators-for-function-and-resilient-parts-integrity"
+    },
+    {
+      "id": "ca_reviewpkg",
+      "display_name": "Review refurbishment/testing work package documentation for outage-replaced S/RVs",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:review-refurbishment-testing-work-package-documentation-for-outage-replaced-s-rvs"
+    },
+    {
+      "id": "ca_analysis",
+      "display_name": "Analyze failed resilient parts for compliance with design specifications",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:analyze-failed-resilient-parts-for-compliance-with-design-specifications"
+    },
+    {
+      "id": "ca_causal",
+      "display_name": "Review causal evaluation results with refurbishment vendor and OEM",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:review-causal-evaluation-results-with-refurbishment-vendor-and-oem"
+    },
+    {
+      "id": "mfr_targetrock",
+      "display_name": "Target Rock",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "T020",
+      "match_key": "Manufacturer:T020"
+    },
+    {
+      "id": "rr_5073i",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_5073ii",
+      "display_name": "10 CFR 50.73(a)(2)(ii)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-ii-b"
+    },
+    {
+      "id": "rr_ts351",
+      "display_name": "TS 3.5.1 ECCS/ADS LCO",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-3-5-1-eccs-ads-lco"
+    },
+    {
+      "id": "rr_ts343",
+      "display_name": "TS 3.4.3 SRVs and SVs LCO",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-3-4-3-srvs-and-svs-lco"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "LER 11-003-00",
+      "properties": {},
+      "type": "LER",
+      "key": "11-003-00",
+      "stub": true,
+      "title": "Automatic Depressurization System Safety Relief Valve Actuator Diaphragm Thread Seal Leak",
+      "plant": "Peach Bottom Atomic Power Station",
+      "match_key": "LER:11-003-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073i",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073ii",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ads",
+      "evidence": null
+    },
+    {
+      "source": "c_rv71b",
+      "relation": "PART_OF",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "c_pneumop",
+      "relation": "PART_OF",
+      "target": "c_rv71b",
+      "evidence": null
+    },
+    {
+      "source": "c_diaphragm",
+      "relation": "PART_OF",
+      "target": "c_pneumop",
+      "evidence": null
+    },
+    {
+      "source": "c_pilotfilter",
+      "relation": "PART_OF",
+      "target": "c_rv71b",
+      "evidence": null
+    },
+    {
+      "source": "fm_threadwear",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_threadwear",
+      "relation": "LEADS_TO",
+      "target": "fm_gasketfail",
+      "evidence": null
+    },
+    {
+      "source": "fm_gasketfail",
+      "relation": "LEADS_TO",
+      "target": "fm_steamleak",
+      "evidence": null
+    },
+    {
+      "source": "fm_steamleak",
+      "relation": "LEADS_TO",
+      "target": "fm_thermalexposure",
+      "evidence": null
+    },
+    {
+      "source": "fm_thermalexposure",
+      "relation": "LEADS_TO",
+      "target": "fm_diaphragmdeg",
+      "evidence": null
+    },
+    {
+      "source": "fm_diaphragmdeg",
+      "relation": "LEADS_TO",
+      "target": "fm_adsloss",
+      "evidence": null
+    },
+    {
+      "source": "fm_adsloss",
+      "relation": "LEADS_TO",
+      "target": "cons_adsinop",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_inspect",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_test",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_reviewpkg",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_analysis",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_causal",
+      "evidence": null
+    },
+    {
+      "source": "c_rv71b",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_targetrock",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts351",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts343",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    }
+  ],
+  "chain": "pilot filter fastener thread wear [cause X] -> outer gasket compromised by steam cutting -> steam leak impinges on insulation/pneumatic operator area -> pneumatic operator exposed to elevated temperatures -> actuator diaphragm embrittled/delaminated -> loss of ADS function on RV-71B -> one of five ADS S/RVs inoperable beyond TS time [remaining 4 ADS valves verified operable]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code X (Other) governs category per Block 13; narrative describes a thermal/mechanical degradation mechanism rather than personnel error or design deficiency. ADS modeled as non-EIIS System per rule 3. Remaining four ADS-capable S/RVs were verified operable but are not individually modeled as distinct System/Component nodes since they are not the failed unit; no BACKED_UP_BY edge asserted since narrative frames them as verification of continued function within the same ADS system rather than a distinct backup system. RV-71G/J/K reviewed only for documentation, not separately modeled as failure chain participants."
+}

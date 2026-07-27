@@ -1,0 +1,197 @@
+{
+  "ler_number": "266-2020-001-00",
+  "identity": {
+    "accession_number": "ML20330A283",
+    "docket": "05000266",
+    "plant_name": "Point Beach",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2020-10-03",
+    "report_date": "2020-11-25",
+    "operating_mode": null,
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": "54930",
+    "ens_date": "2020-10-03",
+    "ens_time": null,
+    "title": "LER 2020-001-00 for Point Beach Nuclear Plant, Unit 1 Reactor Coolant System Pressure Boundary Leak on Steam Generator Bowl Drain Line Results in operation prohibited by Technical Specifications"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(ii)(A)",
+      "10 CFR 50.73(a)(2)(i)(B)",
+      "10 CFR 50.73(a)(2)(H)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": null,
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Reactor coolant system pressure boundary leak on steam generator bowl drain line",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 266-2020-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "266-2020-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:266-2020-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Point Beach Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000266",
+      "match_key": "Unit:05000266"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Reactor coolant system pressure boundary leak on steam generator bowl drain line",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_rcs",
+      "display_name": "Reactor Coolant System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "AB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:AB"
+    },
+    {
+      "id": "c_bowl_drain",
+      "display_name": "Steam Generator Bowl Drain Line",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:steam-generator-bowl-drain-line"
+    },
+    {
+      "id": "fm_leak",
+      "display_name": "Reactor coolant system pressure boundary leak on steam generator bowl drain line",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "A pressure boundary leak occurred on the steam generator bowl drain line.",
+      "match_key": "FailureMode:reactor-coolant-system-pressure-boundary-leak-on-steam-generator-bowl-drain-line"
+    },
+    {
+      "id": "cons_prohibited",
+      "display_name": "Operation prohibited by Technical Specifications",
+      "properties": {},
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:operation-prohibited-by-technical-specifications"
+    },
+    {
+      "id": "rr_5073_ii_a",
+      "display_name": "10 CFR 50.73(a)(2)(ii)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-ii-a"
+    },
+    {
+      "id": "rr_5073_i_b",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_5073_h_a",
+      "display_name": "10 CFR 50.73(a)(2)(H)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-h-a"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_ii_a",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_i_b",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_h_a",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rcs",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_bowl_drain",
+      "evidence": null
+    },
+    {
+      "source": "fm_leak",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_leak",
+      "relation": "LEADS_TO",
+      "target": "cons_prohibited",
+      "evidence": null
+    }
+  ],
+  "chain": "unknown cause [TBD] -> reactor coolant system pressure boundary leak on steam generator bowl drain line -> operation prohibited by Technical Specifications",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Narrative text (366A) was not provided in the input, only the FORM-366 fields and title. No component/system identifiers, timing, corrective actions, EIIS codes, or previous occurrence data were available beyond what could be inferred from the title. Cause code is TBD/provisional per FORM-366. Modeled minimal chain (leak -> TS-prohibited operation) based solely on the title text. No corrective actions, manufacturers, or backup systems could be identified without narrative detail."
+}

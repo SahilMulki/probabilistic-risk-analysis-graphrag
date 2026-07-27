@@ -1,0 +1,312 @@
+{
+  "ler_number": "423-2023-004-00",
+  "identity": {
+    "accession_number": "ML23353A063",
+    "docket": "05000423",
+    "plant_name": "Millstone",
+    "unit": 3,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2023-10-20",
+    "report_date": "2023-12-19",
+    "operating_mode": "5",
+    "power_level": null,
+    "discovery_context": "inspection",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2023-004-00 For Millstone Power Station, Unit 3 Regarding Reactor Coolant System Pressure Isolation Valves Operational Leakage Exceeded the Acceptance Criteria Resulting in a Condition Prohibited by Technical Specifications"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "No obvious signs of damage or wear that would have resulted in the excessive leakage observed from the associated RCS check valves was found. The likely cause of the excessive leak rate was age related degradation that resulted in leakage past the seat of 3RCS*V070, 3RCS*V106 and 3RCS*V145.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "age-related valve seat degradation",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 423-2023-004-00",
+      "properties": {},
+      "type": "LER",
+      "key": "423-2023-004-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:423-2023-004-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Millstone Unit 3",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000423",
+      "match_key": "Unit:05000423"
+    },
+    {
+      "id": "cause",
+      "display_name": "Age-related degradation (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "age-related valve seat degradation",
+      "proximate_text": "No obvious signs of damage or wear that would have resulted in the excessive leakage observed from the associated RCS check valves was found. The likely cause of the excessive leak rate was age related degradation that resulted in leakage past the seat of 3RCS*V070, 3RCS*V106 and 3RCS*V145.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_ab",
+      "display_name": "Reactor Coolant System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "AB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "system containing failed PIVs",
+      "match_key": "System:AB"
+    },
+    {
+      "id": "sys_sih",
+      "display_name": "Safety Injection System (SIH)",
+      "properties": {
+        "note": "high-pressure SI lines feeding through check valves; design context / involved in safety consequence discussion"
+      },
+      "type": "System",
+      "eiis_code": "BP",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BP"
+    },
+    {
+      "id": "c_v70",
+      "display_name": "RCS Pressure Isolation Valve 3RCS*V70",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": "3RCS*V70",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:ISV|3RCS*V70"
+    },
+    {
+      "id": "c_v106",
+      "display_name": "RCS Pressure Isolation Valve 3RCS*V106",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": "3RCS*V106",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:ISV|3RCS*V106"
+    },
+    {
+      "id": "c_v145",
+      "display_name": "RCS Pressure Isolation Valve 3RCS*V145",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": "3RCS*V145",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:ISV|3RCS*V145"
+    },
+    {
+      "id": "c_v29",
+      "display_name": "RCS Pressure Isolation Valve 3RCS*V29",
+      "properties": {
+        "note": "included in prior combined-group leakage test; not individually over acceptance limit in this event"
+      },
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": "3RCS*V29",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:ISV|3RCS*V29"
+    },
+    {
+      "id": "fm_seat_leak",
+      "display_name": "Age-related seat degradation causing back-leakage in three PIVs",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Leakage past the seat of 3RCS*V070, 3RCS*V106 and 3RCS*V145 exceeded TS acceptance criteria of 0.75 gpm per valve.",
+      "match_key": "FailureMode:age-related-seat-degradation-causing-back-leakage-in-three-pivs"
+    },
+    {
+      "id": "fm_prolonged",
+      "display_name": "Undetected degradation persisting through prior operating cycle",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Common failure mode across all three valves indicates the discrepancy arose earlier during the operating cycle, meaning the PIVs were inoperable for longer than the 4-hour TS allowed outage time.",
+      "match_key": "FailureMode:undetected-degradation-persisting-through-prior-operating-cycle"
+    },
+    {
+      "id": "cons_ts_violation",
+      "display_name": "PIVs inoperable beyond TS allowed outage time / condition prohibited by Technical Specifications",
+      "properties": {
+        "detail": "TS 3.4.6.2.2 leakage limits exceeded for three PIVs; reportable under 10 CFR 50.73(a)(2)(i)(B)"
+      },
+      "type": "Consequence",
+      "start": "2023-10-20T14:28",
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:pivs-inoperable-beyond-ts-allowed-outage-time-condition-prohibited-by-technical-specifications"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace and retest RCS check valves 3RCS*V70, 3RCS*V106, 3RCS*V145",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-and-retest-rcs-check-valves-3rcs-v70-3rcs-v106-3rcs-v145"
+    },
+    {
+      "id": "ca_cap",
+      "display_name": "Additional corrective actions per Corrective Action Program",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:additional-corrective-actions-per-corrective-action-program"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts34622",
+      "display_name": "TS 3.4.6.2.2 Reactor Coolant System Operational Leakage",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-3-4-6-2-2-reactor-coolant-system-operational-leakage"
+    },
+    {
+      "id": "rr_fsar15",
+      "display_name": "FSAR Chapter 15 Safety Analysis",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:fsar-chapter-15-safety-analysis"
+    },
+    {
+      "id": "rr_nureg1022",
+      "display_name": "NUREG 1022 Event Report Guidelines",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "standard/guidance",
+      "match_key": "RegulatoryReference:nureg-1022-event-report-guidelines"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts34622",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ab",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sih",
+      "evidence": null
+    },
+    {
+      "source": "c_v70",
+      "relation": "PART_OF",
+      "target": "sys_ab",
+      "evidence": null
+    },
+    {
+      "source": "c_v106",
+      "relation": "PART_OF",
+      "target": "sys_ab",
+      "evidence": null
+    },
+    {
+      "source": "c_v145",
+      "relation": "PART_OF",
+      "target": "sys_ab",
+      "evidence": null
+    },
+    {
+      "source": "fm_seat_leak",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_seat_leak",
+      "relation": "LEADS_TO",
+      "target": "fm_prolonged",
+      "evidence": null
+    },
+    {
+      "source": "fm_prolonged",
+      "relation": "LEADS_TO",
+      "target": "cons_ts_violation",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_cap",
+      "evidence": null
+    }
+  ],
+  "chain": "age-related seat degradation [cause TBD] -> excessive back-leakage in 3RCS*V70/V106/V145 exceeding TS limit -> degradation persisted undetected through operating cycle (inoperable beyond 4hr AOT) -> condition prohibited by Technical Specifications (reportable, no actual safety-function challenge per FSAR Ch.15 analysis)",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause_code remains TBD/provisional per FORM-366 fields; narrative attributes leakage to likely age-related seat degradation but no definitive inspection finding was made (borescope showed no obvious damage). SIH system and MV8801 MOVs are discussed mainly in the safety-consequence analysis; SIH modeled as System node since it directly participates in the leakage/back-flow discussion, but MV8801 MOVs themselves are not modeled as separate Components since they are described only in the design/safety-analysis context, not as failed or operable-backup components. No previous similar occurrences reported (none in past 5 years), so no stub LER/SIMILAR_TO edge emitted. EIIS codes AB and ISV taken directly from narrative's EIIS code list."
+}

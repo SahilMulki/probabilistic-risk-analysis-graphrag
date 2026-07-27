@@ -1,0 +1,384 @@
+{
+  "ler_number": "315-2023-002-00",
+  "identity": {
+    "accession_number": "ML23346A154",
+    "docket": "05000315",
+    "plant_name": "D.C. Cook",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2023-10-15",
+    "report_date": "2023-12-12",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Failure of Unit 1 West Auxiliary Feedwater Pump to Restart during Load Sequencer Testing"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "A",
+      "system": "BA",
+      "component": "NIA",
+      "manufacturer": "NIA",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The control circuit cable, supplying the Unit 1 West MDAFP circuit breaker, had been cut during a previous unrelated plant modification due to the cable being designated in error as a spare, many years prior.",
+    "cause_code": "A",
+    "category": "Personnel Error",
+    "theme": "Mis-designated cable cut during unrelated plant modification",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 315-2023-002-00",
+      "properties": {
+        "match_key": "LER:315-2023-002-00"
+      },
+      "type": "LER",
+      "key": "315-2023-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:315-2023-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "D.C. Cook Unit 1",
+      "properties": {
+        "match_key": "Unit:05000315",
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000315",
+      "match_key": "Unit:05000315"
+    },
+    {
+      "id": "cause",
+      "display_name": "Personnel Error (A)",
+      "properties": {
+        "match_key": "Cause:Personnel Error"
+      },
+      "type": "Cause",
+      "cause_code": "A",
+      "category": "Personnel Error",
+      "theme": "Mis-designated cable cut during unrelated plant modification",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Personnel Error"
+    },
+    {
+      "id": "sys_ba",
+      "display_name": "Auxiliary Feedwater System",
+      "properties": {
+        "match_key": "System:BA"
+      },
+      "type": "System",
+      "eiis_code": "BA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BA"
+    },
+    {
+      "id": "sys_ek",
+      "display_name": "Diesel Generator System",
+      "properties": {
+        "match_key": "System:EK"
+      },
+      "type": "System",
+      "eiis_code": "EK",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "provides load-sequencing signal",
+      "match_key": "System:EK"
+    },
+    {
+      "id": "c_pump",
+      "display_name": "Unit 1 West Motor Driven Auxiliary Feedwater Pump",
+      "properties": {
+        "match_key": "Component:P|1-PP-3W"
+      },
+      "type": "Component",
+      "eiis_code": "P",
+      "identifier": "1-PP-3W",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:P|1-PP-3W"
+    },
+    {
+      "id": "c_dg",
+      "display_name": "Diesel Generator 1AB",
+      "properties": {
+        "match_key": "Component:DG|1AB"
+      },
+      "type": "Component",
+      "eiis_code": "DG",
+      "identifier": "1AB",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:DG|1AB"
+    },
+    {
+      "id": "c_breaker",
+      "display_name": "Unit 1 West MDAFP circuit breaker",
+      "properties": {
+        "match_key": "Component:unit-1-west-mdafp-circuit-breaker"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:unit-1-west-mdafp-circuit-breaker"
+    },
+    {
+      "id": "c_cable",
+      "display_name": "Control circuit cable to Unit 1 West MDAFP breaker",
+      "properties": {
+        "match_key": "Component:control-circuit-cable-to-unit-1-west-mdafp-breaker"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:control-circuit-cable-to-unit-1-west-mdafp-breaker"
+    },
+    {
+      "id": "fm_mislabel",
+      "display_name": "Cable erroneously designated as spare",
+      "properties": {
+        "match_key": "FailureMode:cable-erroneously-designated-as-spare"
+      },
+      "type": "FailureMode",
+      "description": "The control circuit cable was designated in error as a spare cable many years prior.",
+      "match_key": "FailureMode:cable-erroneously-designated-as-spare"
+    },
+    {
+      "id": "fm_cablecut",
+      "display_name": "Control circuit cable cut during unrelated plant modification",
+      "properties": {
+        "match_key": "FailureMode:control-circuit-cable-cut-during-unrelated-plant-modification"
+      },
+      "type": "FailureMode",
+      "description": "The cable supplying the close signal to the Unit 1 West MDAFP breaker was cut in March 2022 during an unrelated plant modification.",
+      "match_key": "FailureMode:control-circuit-cable-cut-during-unrelated-plant-modification"
+    },
+    {
+      "id": "fm_nosignal",
+      "display_name": "Breaker close signal not delivered on DG run relay pickup",
+      "properties": {
+        "match_key": "FailureMode:breaker-close-signal-not-delivered-on-dg-run-relay-pickup"
+      },
+      "type": "FailureMode",
+      "description": "With the supply cable severed, the close signal could not reach the Unit 1 West MDAFP breaker upon DG run relay pickup.",
+      "match_key": "FailureMode:breaker-close-signal-not-delivered-on-dg-run-relay-pickup"
+    },
+    {
+      "id": "fm_failstart",
+      "display_name": "Unit 1 West MDAFP failed to automatically restart",
+      "properties": {
+        "match_key": "FailureMode:unit-1-west-mdafp-failed-to-automatically-restart"
+      },
+      "type": "FailureMode",
+      "description": "Pump failed to automatically restart upon actuation of degraded grid relays during DG 1AB load sequencing testing.",
+      "match_key": "FailureMode:unit-1-west-mdafp-failed-to-automatically-restart"
+    },
+    {
+      "id": "cons_inop",
+      "display_name": "Unit 1 West MDAFP train inoperable beyond TS allowed outage time",
+      "properties": {
+        "match_key": "Consequence:unit-1-west-mdafp-train-inoperable-beyond-ts-allowed-outage-time",
+        "note": "Declared inoperable on discovery 2023-10-15; past operability review found inoperable since Mode 3 entry on 2022-05-19 (U1C31) until Mode 4 entry 2023-10-14 (U1C32), exceeding TS 3.7.5 allowed outage time."
+      },
+      "type": "Consequence",
+      "start": "2022-05-19",
+      "end": "2023-10-14",
+      "duration": "approximately 17 months",
+      "tz": null,
+      "match_key": "Consequence:unit-1-west-mdafp-train-inoperable-beyond-ts-allowed-outage-time"
+    },
+    {
+      "id": "ca_replace_cable",
+      "display_name": "Replace signal cable to Unit 1 West MDAFP breaker",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-signal-cable-to-unit-1-west-mdafp-breaker"
+    },
+    {
+      "id": "ca_correspondence",
+      "display_name": "Issue controlled correspondence requiring Maintenance Director approval for mid-length cable cuts",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:issue-controlled-correspondence-requiring-maintenance-director-approval-for-mid-length-cable-cuts"
+    },
+    {
+      "id": "ca_procedure",
+      "display_name": "Revise station cable cutting procedure",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-station-cable-cutting-procedure"
+    },
+    {
+      "id": "ca_rce",
+      "display_name": "Complete Root Cause Evaluation",
+      "properties": {
+        "note": "RCE in progress at time of report; supplement to follow if new insights found."
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:complete-root-cause-evaluation"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts375",
+      "display_name": "Technical Specification 3.7.5 (AFW)",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:technical-specification-3-7-5-afw"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts375",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ba",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ek",
+      "evidence": null
+    },
+    {
+      "source": "c_pump",
+      "relation": "PART_OF",
+      "target": "sys_ba",
+      "evidence": null
+    },
+    {
+      "source": "c_dg",
+      "relation": "PART_OF",
+      "target": "sys_ek",
+      "evidence": null
+    },
+    {
+      "source": "fm_mislabel",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_mislabel",
+      "relation": "LEADS_TO",
+      "target": "fm_cablecut",
+      "evidence": null
+    },
+    {
+      "source": "fm_cablecut",
+      "relation": "LEADS_TO",
+      "target": "fm_nosignal",
+      "evidence": null
+    },
+    {
+      "source": "fm_nosignal",
+      "relation": "LEADS_TO",
+      "target": "fm_failstart",
+      "evidence": null
+    },
+    {
+      "source": "fm_failstart",
+      "relation": "LEADS_TO",
+      "target": "cons_inop",
+      "evidence": null
+    },
+    {
+      "source": "cons_inop",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_cable",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_correspondence",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procedure",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_rce",
+      "evidence": null
+    }
+  ],
+  "chain": "cable erroneously labeled spare [cause A] -> cable cut during unrelated modification (2022-03) -> breaker close signal not delivered on DG run relay pickup -> Unit 1 West MDAFP fails to auto-restart during DG 1AB load sequencing -> AFW train inoperable ~17 months, exceeding TS 3.7.5 AOT [manual start capability retained; East MDAFP/TDAFP available, no Loss of Safety Function]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Discovery occurred during DG 1AB load sequencing test in U1C32 refueling outage; past operability review extended the inoperability window back to May 19, 2022 (previous outage U1C31 Mode 3 entry). Manual start from control room remained available throughout, but this is an operator-action mitigation, not a distinct System/backup node per the narrative's framing (no separate ECCS/backup system named as operable substitute for the train itself). RCE was in progress at time of report; cause code A (Personnel Error) is provisional per licensee pending RCE, but FORM-366 cause_code is not 'TBD' so provisional flag left false per rule 4. No previous similar events per licensee 3-year review."
+}

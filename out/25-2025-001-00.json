@@ -1,0 +1,282 @@
+{
+  "ler_number": "25-2025-001-00",
+  "identity": {
+    "accession_number": "ML25240B635",
+    "docket": "05200025",
+    "plant_name": "Vogtle",
+    "unit": 3,
+    "reactor_type": "PWR",
+    "nss_vendor": "Westinghouse",
+    "event_date": "2025-07-02",
+    "report_date": "2025-08-28",
+    "operating_mode": "5",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Condition Prohibited by Technical Specification Due to Pressurizer Safety Valves Lift Pressure Setpoint Drift"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "X",
+      "system": "AB",
+      "component": "RV",
+      "manufacturer": "C711",
+      "reportable": "N"
+    }
+  ],
+  "cause": {
+    "proximate_text": "Setpoint drift of the PSV (Manufacturer Crosby Model HB-86 BP, serial numbers N900028-00-009 and N900028-00-0010) was determined to be the most likely cause of the failure.",
+    "cause_code": "X",
+    "category": "Other",
+    "theme": "PSV setpoint drift discovered during off-site testing",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 0025-2025-001-00",
+      "properties": {
+        "match_key": "LER:0025-2025-001-00"
+      },
+      "type": "LER",
+      "key": "25-2025-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:25-2025-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Vogtle Unit 3",
+      "properties": {
+        "match_key": "Unit:05200025",
+        "reactor_type": "PWR",
+        "nss_vendor": "Westinghouse"
+      },
+      "type": "Unit",
+      "key": "05200025",
+      "match_key": "Unit:05200025"
+    },
+    {
+      "id": "cause",
+      "display_name": "Other (X)",
+      "properties": {
+        "match_key": "Cause:Other"
+      },
+      "type": "Cause",
+      "cause_code": "X",
+      "category": "Other",
+      "theme": "PSV setpoint drift discovered during off-site testing",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Other"
+    },
+    {
+      "id": "sys_ab",
+      "display_name": "Reactor Coolant System",
+      "properties": {
+        "match_key": "System:AB"
+      },
+      "type": "System",
+      "eiis_code": "AB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:AB"
+    },
+    {
+      "id": "c_psv1",
+      "display_name": "Pressurizer Safety Relief Valve (serial N900028-00-009)",
+      "properties": {
+        "match_key": "Component:RV|N900028-00-009"
+      },
+      "type": "Component",
+      "eiis_code": "RV",
+      "identifier": "N900028-00-009",
+      "model": "HB-86 BP",
+      "manufacturer_code": "C711",
+      "inferred_code": false,
+      "match_key": "Component:RV|N900028-00-009"
+    },
+    {
+      "id": "c_psv2",
+      "display_name": "Pressurizer Safety Relief Valve (serial N900028-00-0010)",
+      "properties": {
+        "match_key": "Component:RV|N900028-00-0010"
+      },
+      "type": "Component",
+      "eiis_code": "RV",
+      "identifier": "N900028-00-0010",
+      "model": "HB-86 BP",
+      "manufacturer_code": "C711",
+      "inferred_code": false,
+      "match_key": "Component:RV|N900028-00-0010"
+    },
+    {
+      "id": "fm_setpoint_drift",
+      "display_name": "PSV lift pressure setpoint drift",
+      "properties": {
+        "match_key": "FailureMode:psv-lift-pressure-setpoint-drift"
+      },
+      "type": "FailureMode",
+      "description": "As-found lift pressures of 2395.7 psig and 2381.7 psig, outside TS 3.4.6 allowable lift pressure settings (2460-2510 psig)",
+      "match_key": "FailureMode:psv-lift-pressure-setpoint-drift"
+    },
+    {
+      "id": "fm_ts_exceed",
+      "display_name": "PSVs outside TS allowable lift pressure limits / inoperable",
+      "properties": {
+        "match_key": "FailureMode:psvs-outside-ts-allowable-lift-pressure-limits-inoperable"
+      },
+      "type": "FailureMode",
+      "description": "PSV lift pressure setpoints were likely outside TS limits (and therefore inoperable) for longer than allowed completion times",
+      "match_key": "FailureMode:psvs-outside-ts-allowable-lift-pressure-limits-inoperable"
+    },
+    {
+      "id": "cons_prohibited",
+      "display_name": "Condition prohibited by Technical Specification (TS 3.4.6)",
+      "properties": {
+        "match_key": "Consequence:condition-prohibited-by-technical-specification-ts-3-4-6"
+      },
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:condition-prohibited-by-technical-specification-ts-3-4-6"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace two affected PSVs",
+      "properties": {
+        "match_key": "CorrectiveAction:replace-two-affected-psvs"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-two-affected-psvs"
+    },
+    {
+      "id": "mfr_crosby",
+      "display_name": "Crosby",
+      "properties": {
+        "match_key": "Manufacturer:C711"
+      },
+      "type": "Manufacturer",
+      "code": "C711",
+      "match_key": "Manufacturer:C711"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts346",
+      "display_name": "Technical Specification 3.4.6",
+      "properties": {
+        "match_key": "RegulatoryReference:ts-3-4-6"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-3-4-6"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ab",
+      "evidence": null
+    },
+    {
+      "source": "c_psv1",
+      "relation": "PART_OF",
+      "target": "sys_ab",
+      "evidence": null
+    },
+    {
+      "source": "c_psv2",
+      "relation": "PART_OF",
+      "target": "sys_ab",
+      "evidence": null
+    },
+    {
+      "source": "c_psv1",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_crosby",
+      "evidence": null
+    },
+    {
+      "source": "c_psv2",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_crosby",
+      "evidence": null
+    },
+    {
+      "source": "fm_setpoint_drift",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_setpoint_drift",
+      "relation": "LEADS_TO",
+      "target": "fm_ts_exceed",
+      "evidence": null
+    },
+    {
+      "source": "fm_ts_exceed",
+      "relation": "LEADS_TO",
+      "target": "cons_prohibited",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "cons_prohibited",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts346",
+      "evidence": null
+    }
+  ],
+  "chain": "PSV setpoint drift [cause X] -> PSV lift pressures outside TS 3.4.6 limits / inoperable -> condition prohibited by Technical Specification [no backups; replaced both PSVs]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "As-found condition discovered at off-site test facility during 3R01 refueling outage (Oct 2024); notification/report timing keyed to July 2, 2025 discovery date at 100% power per form. No firm evidence of when the drift actually occurred. No safety consequences; no loss of safety function. No previous similar occurrences reported. Vogtle Units 1, 2, 4 unaffected — not modeled as separate entities since narrative only states they were unaffected."
+}

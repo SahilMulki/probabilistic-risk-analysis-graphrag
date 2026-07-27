@@ -1,0 +1,332 @@
+{
+  "ler_number": "328-2023-001-00",
+  "identity": {
+    "accession_number": "ML23158A170",
+    "docket": "05000328",
+    "plant_name": "Sequoyah",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2023-04-11",
+    "report_date": "2023-06-07",
+    "operating_mode": "3",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Inoperable Ice Condenser"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The cause of the event was an error trap in the SI procedure, in that, the acceptance criteria in the SI procedure were not distinct for the particular door being tested to alert the performer and the reviewer of the acceptable values.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Procedure error trap / communication gap in surveillance review",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 328-2023-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "328-2023-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:328-2023-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Sequoyah Unit 2",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000328",
+      "match_key": "Unit:05000328"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Procedure error trap / communication gap in surveillance review",
+      "proximate_text": "The cause of the event was an error trap in the SI procedure, in that, the acceptance criteria in the SI procedure were not distinct for the particular door being tested to alert the performer and the reviewer of the acceptable values.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_bc",
+      "display_name": "Ice Condenser",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BC"
+    },
+    {
+      "id": "c_deckdoors",
+      "display_name": "Intermediate Deck Doors",
+      "properties": {
+        "affected_doors": "Door 2 in bays 13, 15, 16, and 17",
+        "total_doors": 192
+      },
+      "type": "Component",
+      "eiis_code": "DR",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:DR"
+    },
+    {
+      "id": "fm_procedure",
+      "display_name": "SI procedure acceptance criteria not distinct per door",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The surveillance instruction did not clearly specify door-specific lifting-force acceptance criteria, creating an error trap for performers and reviewers.",
+      "match_key": "FailureMode:si-procedure-acceptance-criteria-not-distinct-per-door"
+    },
+    {
+      "id": "fm_commgap",
+      "display_name": "Missed hand-off between SI performer and SRO reviewer",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Review was for completeness of information rather than accuracy, causing the exceeded acceptance criteria to go unrecognized by both Maintenance Services and Operations (SRO) reviewers, and later an independent reviewer.",
+      "match_key": "FailureMode:missed-hand-off-between-si-performer-and-sro-reviewer"
+    },
+    {
+      "id": "fm_doorsexceed",
+      "display_name": "Four intermediate deck doors exceeded lifting-force acceptance criteria",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Door 2 in ice condenser bays 13, 15, 16, and 17 exceeded the 33.8 lb lifting force acceptance criteria, rendering them inoperable per TS 3.6.13.",
+      "match_key": "FailureMode:four-intermediate-deck-doors-exceeded-lifting-force-acceptance-criteria"
+    },
+    {
+      "id": "fm_modeentry",
+      "display_name": "Unit entered TS-applicable Mode 4 with LCO 3.6.13 not met",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "SQN Unit 2 entered Mode 4 at 2035 on 04/11/23 without TS LCO 3.6.13 being met, a condition prohibited by TS.",
+      "match_key": "FailureMode:unit-entered-ts-applicable-mode-4-with-lco-3-6-13-not-met"
+    },
+    {
+      "id": "cons_ice",
+      "display_name": "Ice condenser inoperable / TS-prohibited condition (four intermediate deck doors inoperable)",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2023-04-11T20:35",
+      "end": "2023-04-14T14:46",
+      "duration": "~65 hours",
+      "tz": "EDT",
+      "match_key": "Consequence:ice-condenser-inoperable-ts-prohibited-condition-four-intermediate-deck-doors-inoperable"
+    },
+    {
+      "id": "ca_liftverify",
+      "display_name": "Conditional performance of SI to verify door lifting force met acceptance criteria",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:conditional-performance-of-si-to-verify-door-lifting-force-met-acceptance-criteria"
+    },
+    {
+      "id": "ca_icebedtemp",
+      "display_name": "Complete TS LCO 3.6.13 Required Action B.1 (verify ice bed temperature <=27F)",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:complete-ts-lco-3-6-13-required-action-b-1-verify-ice-bed-temperature-27f"
+    },
+    {
+      "id": "ca_reviseSI",
+      "display_name": "Revise SI procedure to list specific acceptance criteria per door",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-si-procedure-to-list-specific-acceptance-criteria-per-door"
+    },
+    {
+      "id": "ca_coaching",
+      "display_name": "Coaching provided to SI performers and reviewer",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:coaching-provided-to-si-performers-and-reviewer"
+    },
+    {
+      "id": "ca_learning",
+      "display_name": "Share learnings with Operations and Maintenance Services via Nuclear Fleet Learning process",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:share-learnings-with-operations-and-maintenance-services-via-nuclear-fleet-learning-process"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_lco304",
+      "display_name": "TS LCO 3.0.4",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-lco-3-0-4"
+    },
+    {
+      "id": "rr_ts36136",
+      "display_name": "TS SR 3.6.13.6",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-sr-3-6-13-6"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "LER 327 and 328/2021-003",
+      "properties": {},
+      "type": "LER",
+      "key": "327 and 328/2021-003",
+      "stub": true,
+      "title": "Exceeding an auxiliary building secondary containment enclosure (ABSCE) breach margin",
+      "plant": "Sequoyah Nuclear Plant",
+      "match_key": "LER:327 and 328/2021-003"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_lco304",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts36136",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bc",
+      "evidence": null
+    },
+    {
+      "source": "c_deckdoors",
+      "relation": "PART_OF",
+      "target": "sys_bc",
+      "evidence": null
+    },
+    {
+      "source": "fm_procedure",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_procedure",
+      "relation": "LEADS_TO",
+      "target": "fm_commgap",
+      "evidence": null
+    },
+    {
+      "source": "fm_commgap",
+      "relation": "LEADS_TO",
+      "target": "fm_doorsexceed",
+      "evidence": null
+    },
+    {
+      "source": "fm_doorsexceed",
+      "relation": "LEADS_TO",
+      "target": "fm_modeentry",
+      "evidence": null
+    },
+    {
+      "source": "fm_modeentry",
+      "relation": "LEADS_TO",
+      "target": "cons_ice",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_liftverify",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_icebedtemp",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_reviseSI",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_coaching",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_learning",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    }
+  ],
+  "chain": "SI procedure error trap (acceptance criteria not distinct per door) [cause TBD] -> missed hand-off between performer and SRO reviewer -> four intermediate deck doors exceed lifting-force criteria -> unit enters Mode 4 without meeting TS LCO 3.6.13 -> ice condenser condition prohibited by TS (~65 hr) [188 of 192 doors remained operable; ice bed stayed <=27F]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "No component failed; official cause code left TBD/provisional per FORM-366 fields, though narrative attributes cause to a procedural error trap and communication/hand-off gap (human performance, procedures/communications factors). Ice condenser and door counts (192 total, 188 operable, 24 bays x 8 doors) preserved as context. Previous similar LER key recorded exactly as stated in narrative: '327 and 328/2021-003'."
+}

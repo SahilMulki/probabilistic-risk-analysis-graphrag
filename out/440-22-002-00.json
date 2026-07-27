@@ -1,0 +1,298 @@
+{
+  "ler_number": "440-22-002-00",
+  "identity": {
+    "accession_number": "ML22339A029",
+    "docket": "05000440",
+    "plant_name": "Perry",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2022-10-07",
+    "report_date": "2022-12-05",
+    "operating_mode": null,
+    "power_level": 8,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Perry Nuclear Power Plant Docket No. 50-440, License No. NPF-58 Licensee Event Report Submittal"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "X",
+      "system": "JI",
+      "component": "CBD",
+      "manufacturer": "G080",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "the direct cause of the failure of the MCFLC Light was the \"B\" flow demand circuit card based on the voltage readings and observable damage found on the card during replacement; the likely cause of failure of the circuit card is age-related failure of the components as they are plant original parts",
+    "cause_code": "X",
+    "category": "Other",
+    "theme": "age-related component degradation",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 440-2022-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "440-22-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:440-22-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Perry Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000440",
+      "match_key": "Unit:05000440"
+    },
+    {
+      "id": "cause",
+      "display_name": "Other (X)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "X",
+      "category": "Other",
+      "theme": "age-related component degradation",
+      "proximate_text": "the direct cause of the failure of the MCFLC Light was the \"B\" flow demand circuit card based on the voltage readings and observable damage found on the card during replacement; the likely cause of failure of the circuit card is age-related failure of the components as they are plant original parts",
+      "provisional": false,
+      "match_key": "Cause:Other"
+    },
+    {
+      "id": "sys_ji",
+      "display_name": "Steam Bypass and Pressure Regulating System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JI",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected system; two-channel pressure regulation",
+      "match_key": "System:JI"
+    },
+    {
+      "id": "sys_tg",
+      "display_name": "Main Turbine",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "TG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "downstream of bypass system",
+      "match_key": "System:TG"
+    },
+    {
+      "id": "c_cbd",
+      "display_name": "\"B\" Flow Demand Circuit Card",
+      "properties": {
+        "channel": "B"
+      },
+      "type": "Component",
+      "eiis_code": "CBD",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": "G080",
+      "inferred_code": false,
+      "match_key": "Component:CBD"
+    },
+    {
+      "id": "c_cbd_a",
+      "display_name": "\"A\" Flow Demand Circuit Card",
+      "properties": {
+        "channel": "A",
+        "note": "similar age to B card; scheduled for replacement"
+      },
+      "type": "Component",
+      "eiis_code": "CBD",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:CBD"
+    },
+    {
+      "id": "fm_degrade",
+      "display_name": "Age-related degradation of \"B\" flow demand circuit card components",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Observable charring at several resistors on the circuit card and degraded output voltage",
+      "match_key": "FailureMode:age-related-degradation-of-b-flow-demand-circuit-card-components"
+    },
+    {
+      "id": "fm_mcflc",
+      "display_name": "\"B\" channel circuitry degradation causing MCFLC light illumination",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Degradation in the circuitry of the B channel resulted in illumination of the MCFLC light; MCFLC signal could limit B channel, preventing bypass valves from responding to a pressure perturbation",
+      "match_key": "FailureMode:b-channel-circuitry-degradation-causing-mcflc-light-illumination"
+    },
+    {
+      "id": "fm_inop",
+      "display_name": "\"B\" channel main turbine bypass system inoperable",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "When the B channel was in control, the main turbine bypass system was not operable per TS 3.7.6",
+      "match_key": "FailureMode:b-channel-main-turbine-bypass-system-inoperable"
+    },
+    {
+      "id": "cons_ts",
+      "display_name": "Condition prohibited by Technical Specifications (TS 3.7.6 required actions not taken)",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2022-10-07T17:40",
+      "end": "2022-10-13",
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:condition-prohibited-by-technical-specifications-ts-3-7-6-required-actions-not-taken"
+    },
+    {
+      "id": "ca_replace_b",
+      "display_name": "Replace \"B\" flow demand circuit card",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-b-flow-demand-circuit-card"
+    },
+    {
+      "id": "ca_replace_a",
+      "display_name": "Replace \"A\" flow demand circuit card during 2023 refuel outage",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-a-flow-demand-circuit-card-during-2023-refuel-outage"
+    },
+    {
+      "id": "mfr_g080",
+      "display_name": "Manufacturer G080",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "G080",
+      "match_key": "Manufacturer:G080"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts376",
+      "display_name": "Technical Specification 3.7.6",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:technical-specification-3-7-6"
+    },
+    {
+      "id": "rr_rg1174",
+      "display_name": "Regulatory Guide 1.174",
+      "properties": {
+        "type": "standard/guidance"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:regulatory-guide-1-174"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts376",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ji",
+      "evidence": null
+    },
+    {
+      "source": "c_cbd",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_g080",
+      "evidence": null
+    },
+    {
+      "source": "fm_degrade",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_degrade",
+      "relation": "LEADS_TO",
+      "target": "fm_mcflc",
+      "evidence": null
+    },
+    {
+      "source": "fm_mcflc",
+      "relation": "LEADS_TO",
+      "target": "fm_inop",
+      "evidence": null
+    },
+    {
+      "source": "fm_inop",
+      "relation": "LEADS_TO",
+      "target": "cons_ts",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_b",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_a",
+      "evidence": null
+    }
+  ],
+  "chain": "age-related component degradation [cause X] -> B flow demand circuit card resistors charred/degraded output -> B channel circuitry degradation illuminates MCFLC light and limits bypass valve response -> main turbine bypass system inoperable on B channel -> TS 3.7.6 required actions not taken (condition prohibited by TS)",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code X (Other) governs category per official coding despite narrative describing age-related component failure; theme captures that nuance. Main turbine [TG] and condenser are named only to describe the downstream effect of the limiter being in control (design/functional description), not as an involved failing system, so no BACKED_UP_BY or failure-chain edge was added beyond a System node capturing the affected relationship context. No previous similar events reported. Corrective action to replace the still-serviceable 'A' card is planned due to shared age/origin with the failed 'B' card, not because it failed."
+}

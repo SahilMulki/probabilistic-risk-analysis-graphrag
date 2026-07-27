@@ -1,0 +1,354 @@
+{
+  "ler_number": "458-2021-002-00",
+  "identity": {
+    "accession_number": "ML21152A033",
+    "docket": "05000458",
+    "plant_name": "River Bend",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2021-04-02",
+    "report_date": "2021-05-28",
+    "operating_mode": null,
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "I 2021-02-00, ‘Automatic Reactor Scram due to Turbine Control System Communication Fault”"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "This event was caused by a remote communications module that erroneously sent a turbine front standard manual pushbutton trip signal by making the normally energized input appear de-energized.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "spurious communication fault causing false turbine trip signal",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 458-2021-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "458-2021-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:458-2021-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "River Bend Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000458",
+      "match_key": "Unit:05000458"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "spurious communication fault causing false turbine trip signal",
+      "proximate_text": "This event was caused by a remote communications module that erroneously sent a turbine front standard manual pushbutton trip signal by making the normally energized input appear de-energized.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_jj",
+      "display_name": "Ovation Turbine Control System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JJ"
+    },
+    {
+      "id": "sys_ta",
+      "display_name": "Main Turbine",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "TA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:TA"
+    },
+    {
+      "id": "sys_ji",
+      "display_name": "Turbine Bypass Valves",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JI",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; operable",
+      "match_key": "System:JI"
+    },
+    {
+      "id": "sys_sj",
+      "display_name": "Feedwater",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; operable",
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "c_module",
+      "display_name": "Remote communications module",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:remote-communications-module"
+    },
+    {
+      "id": "c_pushbutton",
+      "display_name": "Turbine front standard manual pushbutton (trip input)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:turbine-front-standard-manual-pushbutton-trip-input"
+    },
+    {
+      "id": "fm_commfault",
+      "display_name": "Remote communications module sends erroneous de-energized signal",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Remote communications module erroneously made a normally energized input appear de-energized, sending a false turbine front standard manual pushbutton trip signal.",
+      "match_key": "FailureMode:remote-communications-module-sends-erroneous-de-energized-signal"
+    },
+    {
+      "id": "fm_undetected",
+      "display_name": "Spurious alarms undetected due to lack of alarm log review",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Communication errors caused random, spurious Ovation alarms that did not last long enough to trigger a control room annunciator, and no procedure required periodic review of the Ovation alarm log, so the degrading condition went undetected.",
+      "match_key": "FailureMode:spurious-alarms-undetected-due-to-lack-of-alarm-log-review"
+    },
+    {
+      "id": "fm_turbinetrip",
+      "display_name": "Main Turbine trip",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "False trip signal caused the Main Turbine to trip.",
+      "match_key": "FailureMode:main-turbine-trip"
+    },
+    {
+      "id": "cons_scram",
+      "display_name": "Automatic reactor scram",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2021-04-02T10:17",
+      "end": null,
+      "duration": null,
+      "tz": "CT",
+      "match_key": "Consequence:automatic-reactor-scram"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace defective remote communication module",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-defective-remote-communication-module"
+    },
+    {
+      "id": "ca_tempmod",
+      "display_name": "Install temporary modification to eliminate Front Standard Ovation pushbutton inputs as turbine trip signals",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:install-temporary-modification-to-eliminate-front-standard-ovation-pushbutton-inputs-as-turbine-trip-signals"
+    },
+    {
+      "id": "ca_shutdown_proc",
+      "display_name": "Revise procedures for improved Ovation system shutdown and restoration instructions",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-procedures-for-improved-ovation-system-shutdown-and-restoration-instructions"
+    },
+    {
+      "id": "ca_alarm_proc",
+      "display_name": "Revise procedures for improved Ovation alarm monitoring guidance",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-procedures-for-improved-ovation-alarm-monitoring-guidance"
+    },
+    {
+      "id": "ca_controllers_proc",
+      "display_name": "Revise procedures to direct placing Ovation controllers in service before turbine shell/chest warming",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-procedures-to-direct-placing-ovation-controllers-in-service-before-turbine-shell-chest-warming"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_usar",
+      "display_name": "Updated Safety Analysis Report - Main Turbine Trip with Steam Bypass Valves/Pressure Regulators in Service",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:updated-safety-analysis-report-main-turbine-trip-with-steam-bypass-valves-pressure-regulators-in-service"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jj",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ta",
+      "evidence": null
+    },
+    {
+      "source": "fm_commfault",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_commfault",
+      "relation": "LEADS_TO",
+      "target": "fm_undetected",
+      "evidence": null
+    },
+    {
+      "source": "fm_commfault",
+      "relation": "LEADS_TO",
+      "target": "fm_turbinetrip",
+      "evidence": null
+    },
+    {
+      "source": "fm_undetected",
+      "relation": "LEADS_TO",
+      "target": "fm_turbinetrip",
+      "evidence": null
+    },
+    {
+      "source": "fm_turbinetrip",
+      "relation": "LEADS_TO",
+      "target": "cons_scram",
+      "evidence": null
+    },
+    {
+      "source": "cons_scram",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_ji",
+      "evidence": null
+    },
+    {
+      "source": "cons_scram",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_sj",
+      "evidence": null
+    },
+    {
+      "source": "c_pushbutton",
+      "relation": "PART_OF",
+      "target": "sys_jj",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_tempmod",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_shutdown_proc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_alarm_proc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_controllers_proc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_usar",
+      "evidence": null
+    }
+  ],
+  "chain": "remote communications module fault [cause TBD] -> false de-energized pushbutton trip signal -> spurious alarms undetected (no annunciator trigger, no log review procedure) -> Main Turbine trip -> automatic reactor scram [backups Turbine Bypass Valves, Feedwater]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code is TBD/provisional per FORM-366 fields; narrative provides a clear proximate cause statement but no official cause code was assigned. Ovation Front Standard pushbutton input identified as a single-point vulnerability; PART_OF edge asserted because pushbutton input is explicitly part of the Ovation (JJ) system architecture. No previous similar events reported (narrative states 'None'), so no SIMILAR_TO edge or stub LER created."
+}

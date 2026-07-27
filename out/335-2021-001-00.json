@@ -1,0 +1,345 @@
+{
+  "ler_number": "335-2021-001-00",
+  "identity": {
+    "accession_number": "ML22035A033",
+    "docket": "05000335",
+    "plant_name": "Saint Lucie",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2021-12-10",
+    "report_date": "2022-02-04",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2021-001-00 for St. Lucie Unit 1, Manual Reactor Trip Due to Insufficient Feed Flow to Steam Generators"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "A",
+      "system": "SN",
+      "component": "PDIS",
+      "manufacturer": "I204",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "Due to the emergent nature of this work, some of the normal preplanned mitigation measures were not in place... During electrical connection of the new instrument, the technician inadvertently touched the wire to the enclosure. This resulted in a blown power supply fuse and closure of the 1C MSR drain collector level control valve, which caused a reduction of Steam Generator feed flow.",
+    "cause_code": "A",
+    "category": "Personnel Error",
+    "theme": "Inadequate work planning/mitigation for emergent maintenance",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 335-2021-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "335-2021-001-00",
+      "stub": false,
+      "title": "Manual Reactor Trip Due to Insufficient Feed Flow to Steam Generators",
+      "plant": null,
+      "match_key": "LER:335-2021-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Saint Lucie Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000335",
+      "match_key": "Unit:05000335"
+    },
+    {
+      "id": "cause",
+      "display_name": "Personnel Error (A)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "A",
+      "category": "Personnel Error",
+      "theme": "Inadequate work planning/mitigation for emergent maintenance",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Personnel Error"
+    },
+    {
+      "id": "sys_sn",
+      "display_name": "Feedwater Heater Level Control System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SN",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SN"
+    },
+    {
+      "id": "sys_sj",
+      "display_name": "Main Feedwater",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; operable",
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "sys_msr",
+      "display_name": "Moisture Separator Reheater",
+      "properties": {
+        "acronym": "MSR"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:moisture-separator-reheater"
+    },
+    {
+      "id": "sys_rps",
+      "display_name": "Reactor Protection System",
+      "properties": {
+        "acronym": "RPS"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "actuated; performed intended safety function",
+      "match_key": "System:reactor-protection-system"
+    },
+    {
+      "id": "c_pdis",
+      "display_name": "Pressure Differential Indicating Switch PDIS-11-30D1",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "PDIS",
+      "identifier": "PDIS-11-30D1",
+      "model": "288A (0-100 psig)",
+      "manufacturer_code": "I204",
+      "inferred_code": false,
+      "match_key": "Component:PDIS|PDIS-11-30D1"
+    },
+    {
+      "id": "c_fuse",
+      "display_name": "Power supply fuse",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "FU",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:FU"
+    },
+    {
+      "id": "c_lcv1c",
+      "display_name": "1C MSR Drain Collector Level Control Valve",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:1c-msr-drain-collector-level-control-valve"
+    },
+    {
+      "id": "fm_contact",
+      "display_name": "Technician made inadvertent contact between wire and enclosure housing",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "During electrical connection of the new PDIS, the technician inadvertently touched the wire to the enclosure.",
+      "match_key": "FailureMode:technician-made-inadvertent-contact-between-wire-and-enclosure-housing"
+    },
+    {
+      "id": "fm_fuseblown",
+      "display_name": "Power supply fuse blown",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Inadvertent contact resulted in a blown supply fuse.",
+      "match_key": "FailureMode:power-supply-fuse-blown"
+    },
+    {
+      "id": "fm_lossctrl",
+      "display_name": "Loss of 1C MSR drain collector level control (valve closure)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Blown fuse caused closure of the 1C MSR drain collector level control valve, losing level control.",
+      "match_key": "FailureMode:loss-of-1c-msr-drain-collector-level-control-valve-closure"
+    },
+    {
+      "id": "fm_feedreduction",
+      "display_name": "Reduction of Steam Generator feed flow",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Loss of MSR drain collector level control caused a reduction of Steam Generator feedwater flow.",
+      "match_key": "FailureMode:reduction-of-steam-generator-feed-flow"
+    },
+    {
+      "id": "cons_trip",
+      "display_name": "Manual Reactor Trip due to lowering Steam Generator water level",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2021-12-10T10:24",
+      "end": null,
+      "duration": null,
+      "tz": "EST",
+      "match_key": "Consequence:manual-reactor-trip-due-to-lowering-steam-generator-water-level"
+    },
+    {
+      "id": "ca_procedure",
+      "display_name": "Revise maintenance control procedures to add Senior Reactor Operator reviews for certain emergent work",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-maintenance-control-procedures-to-add-senior-reactor-operator-reviews-for-certain-emergent-work"
+    },
+    {
+      "id": "mfr_itt",
+      "display_name": "ITT - Barton Instrument",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "I204",
+      "match_key": "Manufacturer:I204"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_ufsar",
+      "display_name": "UFSAR - Anticipated Operational Occurrences",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:ufsar-anticipated-operational-occurrences"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sn",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_msr",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rps",
+      "evidence": null
+    },
+    {
+      "source": "c_pdis",
+      "relation": "PART_OF",
+      "target": "sys_sn",
+      "evidence": null
+    },
+    {
+      "source": "c_lcv1c",
+      "relation": "PART_OF",
+      "target": "sys_msr",
+      "evidence": null
+    },
+    {
+      "source": "c_pdis",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_itt",
+      "evidence": null
+    },
+    {
+      "source": "fm_contact",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_contact",
+      "relation": "LEADS_TO",
+      "target": "fm_fuseblown",
+      "evidence": null
+    },
+    {
+      "source": "fm_fuseblown",
+      "relation": "LEADS_TO",
+      "target": "fm_lossctrl",
+      "evidence": null
+    },
+    {
+      "source": "fm_lossctrl",
+      "relation": "LEADS_TO",
+      "target": "fm_feedreduction",
+      "evidence": null
+    },
+    {
+      "source": "fm_feedreduction",
+      "relation": "LEADS_TO",
+      "target": "cons_trip",
+      "evidence": null
+    },
+    {
+      "source": "cons_trip",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_sj",
+      "evidence": null
+    },
+    {
+      "source": "cons_trip",
+      "relation": "MITIGATED_BY",
+      "target": "sys_rps",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procedure",
+      "evidence": null
+    }
+  ],
+  "chain": "inadequate work planning for emergent maintenance [cause A] -> technician inadvertently contacts wire to enclosure -> power supply fuse blows -> 1C MSR drain collector level control valve closes -> Steam Generator feed flow reduced -> manual reactor trip [operators restored level via main feedwater; RPS actuated successfully]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "No previous similar occurrence reported (Similar Events: None) - no SIMILAR_TO edge or stub LER emitted. RPS modeled as System node since it explicitly actuated and performed its safety function during the event, distinct from design-context mention. Main feedwater (SJ) modeled as backup since operators explicitly restored level using it post-trip."
+}

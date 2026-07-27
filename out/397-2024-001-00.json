@@ -1,0 +1,99 @@
+{
+  "ler_number": "397-2024-001-00",
+  "identity": {
+    "accession_number": "ML24022A224",
+    "docket": "05000397",
+    "plant_name": "Columbia Generating Station",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2023-11-21",
+    "report_date": "2024-01-22",
+    "operating_mode": null,
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "COLUMBIA GENERATING STATION, DOCKET NO. 50-397 LICENSEE EVENT REPORT NO. 2024-001-00"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": null,
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": null,
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 397-2024-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "397-2024-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:397-2024-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Columbia Generating Station Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000397",
+      "match_key": "Unit:05000397"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": null,
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    }
+  ],
+  "chain": null,
+  "golden_questions": [],
+  "notes": "NARRATIVE (366A) field was empty in the provided input, and no ABSTRACT was supplied. FORM-366 FIELDS also provided no block_13 data and cause_code/category are both TBD/provisional. Without narrative text describing the event, failure modes, components, systems, consequences, or corrective actions, no substantive graph content beyond the identity/anchor nodes and reporting basis can be responsibly extracted -- fabricating causal chain, component, or system details would violate the no-invention constraints. This record should be revised/supplemented once narrative text is available."
+}

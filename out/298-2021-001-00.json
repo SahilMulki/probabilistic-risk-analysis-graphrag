@@ -1,0 +1,466 @@
+{
+  "ler_number": "298-2021-001-00",
+  "identity": {
+    "accession_number": "ML21102A278",
+    "docket": "05000298",
+    "plant_name": "Cooper",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2021-02-09",
+    "report_date": "2021-04-12",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Licensee Event Report No. 2021-001-00"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)",
+      "10 CFR 50.73(a)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "D",
+      "system": "NG",
+      "component": null,
+      "manufacturer": null,
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "Reactor Building d/p controller 'A' has not been tuned to quickly respond to changing environmental conditions, and there were no interim actions in place bridging the gap identified from previous events",
+    "cause_code": "D",
+    "category": "Defective Procedure",
+    "theme": "controller tuning / lack of interim corrective action from prior events",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 298-2021-001-00",
+      "properties": {
+        "match_key": "LER:298-2021-001-00"
+      },
+      "type": "LER",
+      "key": "298-2021-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:298-2021-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Cooper Unit 1",
+      "properties": {
+        "match_key": "Unit:05000298",
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000298",
+      "match_key": "Unit:05000298"
+    },
+    {
+      "id": "cause",
+      "display_name": "Defective Procedure (D)",
+      "properties": {
+        "match_key": "Cause:Defective Procedure"
+      },
+      "type": "Cause",
+      "cause_code": "D",
+      "category": "Defective Procedure",
+      "theme": "controller tuning / lack of interim corrective action from prior events",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Defective Procedure"
+    },
+    {
+      "id": "sys_ng",
+      "display_name": "Reactor Building (Secondary Containment)",
+      "properties": {
+        "match_key": "System:NG"
+      },
+      "type": "System",
+      "eiis_code": "NG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "primary system involved",
+      "match_key": "System:NG"
+    },
+    {
+      "id": "sys_nh",
+      "display_name": "Primary Containment",
+      "properties": {
+        "match_key": "System:NH"
+      },
+      "type": "System",
+      "eiis_code": "NH",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "enclosed by Reactor Building",
+      "match_key": "System:NH"
+    },
+    {
+      "id": "c_rbfan_a",
+      "display_name": "Reactor Building Exhaust Fan 'A'",
+      "properties": {
+        "match_key": "Component:COMP|reactor-building-exhaust-fan-a"
+      },
+      "type": "Component",
+      "eiis_code": "COMP",
+      "identifier": "Reactor Building Exhaust Fan A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:COMP|Reactor Building Exhaust Fan A"
+    },
+    {
+      "id": "c_rbfan_b",
+      "display_name": "Reactor Building Exhaust Fan 'B'",
+      "properties": {
+        "match_key": "Component:COMP|reactor-building-exhaust-fan-b"
+      },
+      "type": "Component",
+      "eiis_code": "COMP",
+      "identifier": "Reactor Building Exhaust Fan B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:COMP|Reactor Building Exhaust Fan B"
+    },
+    {
+      "id": "c_dpctrl_a",
+      "display_name": "Reactor Building d/p Controller 'A'",
+      "properties": {
+        "match_key": "Component:reactor-building-d-p-controller-a"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "Reactor Building d/p Controller A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:reactor-building-d-p-controller-a"
+    },
+    {
+      "id": "c_deadtime",
+      "display_name": "Dead Time monitor (rolling average function block)",
+      "properties": {
+        "match_key": "Component:dead-time-monitor"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:dead-time-monitor-rolling-average-function-block"
+    },
+    {
+      "id": "fm_slowtune",
+      "display_name": "d/p controller 'A' not tuned for rapid transient response (18-second moving average delay)",
+      "properties": {
+        "match_key": "FailureMode:controller-not-tuned-for-transient-response"
+      },
+      "type": "FailureMode",
+      "description": "The Dead Time monitor's 18-second moving average delayed the controller's responsiveness to transient barometric pressure changes.",
+      "match_key": "FailureMode:d-p-controller-a-not-tuned-for-rapid-transient-response-18-second-moving-average-delay"
+    },
+    {
+      "id": "fm_nointerim",
+      "display_name": "No interim corrective actions from prior similar events",
+      "properties": {
+        "match_key": "FailureMode:no-interim-actions-from-prior-events"
+      },
+      "type": "FailureMode",
+      "description": "The slow controller response had been identified in evaluations of previous similar conditions, but no interim actions were developed to prevent recurrence pending scheduled corrective maintenance.",
+      "match_key": "FailureMode:no-interim-corrective-actions-from-prior-similar-events"
+    },
+    {
+      "id": "fm_dp_exceed",
+      "display_name": "Reactor Building d/p failed to respond fast enough to barometric transients, exceeding TS limit",
+      "properties": {
+        "match_key": "FailureMode:dp-exceeded-ts-limit"
+      },
+      "type": "FailureMode",
+      "description": "As barometric pressure fluctuated, the controller could not increase exhaust fan flow quickly enough, causing d/p to exceed -0.25 inches wg for four transient excursions each less than one minute.",
+      "match_key": "FailureMode:reactor-building-d-p-failed-to-respond-fast-enough-to-barometric-transients-exceeding-ts-limit"
+    },
+    {
+      "id": "cons_sc_inop",
+      "display_name": "Secondary Containment momentarily inoperable (four transient d/p excursions above TS limit)",
+      "properties": {
+        "match_key": "Consequence:secondary-containment-momentarily-inoperable"
+      },
+      "type": "Consequence",
+      "start": "2021-02-09T02:00",
+      "end": "2021-02-09T02:35",
+      "duration": "each excursion <1 minute; resolved by 02:35 via fan swap",
+      "tz": null,
+      "match_key": "Consequence:secondary-containment-momentarily-inoperable-four-transient-d-p-excursions-above-ts-limit"
+    },
+    {
+      "id": "ca_tune",
+      "display_name": "Optimally tune Reactor Building d/p controller 'A'",
+      "properties": {
+        "match_key": "CorrectiveAction:optimally-tune-controller-a"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:optimally-tune-reactor-building-d-p-controller-a"
+    },
+    {
+      "id": "ca_shiftfan",
+      "display_name": "Shift Reactor Building exhaust fans to fan 'B' to restore d/p margin",
+      "properties": {
+        "match_key": "CorrectiveAction:shift-to-fan-b"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:shift-reactor-building-exhaust-fans-to-fan-b-to-restore-d-p-margin"
+    },
+    {
+      "id": "rr_5073av",
+      "display_name": "10 CFR 50.73(a)(2)(v)",
+      "properties": {
+        "type": "reporting-criterion",
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v"
+    },
+    {
+      "id": "rr_5073a",
+      "display_name": "10 CFR 50.73(a)",
+      "properties": {
+        "type": "reporting-criterion",
+        "match_key": "RegulatoryReference:10-cfr-50-73-a"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a"
+    },
+    {
+      "id": "rr_ts3641",
+      "display_name": "TS Surveillance Requirement 3.6.4.1.1",
+      "properties": {
+        "type": "license-basis",
+        "match_key": "RegulatoryReference:ts-sr-3-6-4-1-1"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ts-surveillance-requirement-3-6-4-1-1"
+    },
+    {
+      "id": "ler_2020_004",
+      "display_name": "LER 2020-004-00",
+      "properties": {
+        "match_key": "LER:2020-004-00",
+        "event_date": "2020-11-11"
+      },
+      "type": "LER",
+      "key": "2020-004-00",
+      "stub": true,
+      "title": "Secondary Containment declared inoperable due to a rise in differential pressure",
+      "plant": "Cooper Nuclear Station Unit 1",
+      "match_key": "LER:2020-004-00"
+    },
+    {
+      "id": "ler_2020_002",
+      "display_name": "LER 2020-002-00",
+      "properties": {
+        "match_key": "LER:2020-002-00",
+        "event_date": "2020-08-06"
+      },
+      "type": "LER",
+      "key": "2020-002-00",
+      "stub": true,
+      "title": "Secondary Containment declared inoperable due to a rise in differential pressure",
+      "plant": "Cooper Nuclear Station Unit 1",
+      "match_key": "LER:2020-002-00"
+    },
+    {
+      "id": "ler_2020_001",
+      "display_name": "LER 2020-001-00",
+      "properties": {
+        "match_key": "LER:2020-001-00",
+        "event_date": "2020-05-01"
+      },
+      "type": "LER",
+      "key": "2020-001-00",
+      "stub": true,
+      "title": "Secondary Containment breached due to both airlock doors in the Reactor Building being inadvertently opened simultaneously",
+      "plant": "Cooper Nuclear Station Unit 1",
+      "match_key": "LER:2020-001-00"
+    },
+    {
+      "id": "ler_2019_002",
+      "display_name": "LER 2019-002-00",
+      "properties": {
+        "match_key": "LER:2019-002-00",
+        "event_date": "2019-08-08"
+      },
+      "type": "LER",
+      "key": "2019-002-00",
+      "stub": true,
+      "title": "Secondary Containment declared inoperable due to a rise in differential pressure",
+      "plant": "Cooper Nuclear Station Unit 1",
+      "match_key": "LER:2019-002-00"
+    },
+    {
+      "id": "ler_2014_001",
+      "display_name": "LER 2014-001-00",
+      "properties": {
+        "match_key": "LER:2014-001-00",
+        "event_date": "2014-01-06"
+      },
+      "type": "LER",
+      "key": "2014-001-00",
+      "stub": true,
+      "title": "Secondary Containment declared inoperable due to a rise in differential pressure",
+      "plant": "Cooper Nuclear Station Unit 1",
+      "match_key": "LER:2014-001-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073av",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073a",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ng",
+      "evidence": null
+    },
+    {
+      "source": "c_rbfan_a",
+      "relation": "PART_OF",
+      "target": "sys_ng",
+      "evidence": null
+    },
+    {
+      "source": "c_rbfan_b",
+      "relation": "PART_OF",
+      "target": "sys_ng",
+      "evidence": null
+    },
+    {
+      "source": "c_dpctrl_a",
+      "relation": "PART_OF",
+      "target": "sys_ng",
+      "evidence": null
+    },
+    {
+      "source": "c_deadtime",
+      "relation": "PART_OF",
+      "target": "c_dpctrl_a",
+      "evidence": null
+    },
+    {
+      "source": "sys_ng",
+      "relation": "PART_OF",
+      "target": "sys_nh",
+      "evidence": "Reactor Building encloses Primary Containment"
+    },
+    {
+      "source": "fm_slowtune",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_slowtune",
+      "relation": "LEADS_TO",
+      "target": "fm_dp_exceed",
+      "evidence": null
+    },
+    {
+      "source": "fm_nointerim",
+      "relation": "LEADS_TO",
+      "target": "fm_dp_exceed",
+      "evidence": null
+    },
+    {
+      "source": "fm_dp_exceed",
+      "relation": "LEADS_TO",
+      "target": "cons_sc_inop",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_tune",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_shiftfan",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_2020_004",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_2020_002",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_2020_001",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_2019_002",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_2014_001",
+      "evidence": null
+    }
+  ],
+  "chain": "d/p controller 'A' untuned for transients [cause D] + no interim actions from prior events -> controller can't keep pace with barometric transients -> Reactor Building d/p exceeds -0.25\" wg (4 brief excursions) -> Secondary Containment momentarily inoperable [restored by shifting to Fan 'B' and later retuning controller; Standby Gas Treatment integrity unaffected]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Two parallel causal factors (untuned controller and lack of interim actions) both feed the same downstream failure (d/p exceedance), modeled as separate FailureMode nodes both LEADS_TO the exceedance node per rule 5. No backup ECCS/HVAC system is stated as operable substitute during the event window (Fan 'B' is the same system's redundant train, and Standby Gas Treatment is discussed only as unaffected design capability, not an operating backup during the transient) so no BACKED_UP_BY edges emitted. Five previous similar LERs referenced as stubs with keys copied verbatim from narrative (e.g., '2020-004-00') since unit-prefixed format not used in text."
+}

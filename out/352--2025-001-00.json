@@ -1,0 +1,313 @@
+{
+  "ler_number": "352--2025-001-00",
+  "identity": {
+    "accession_number": "ML25111A262",
+    "docket": "05000352",
+    "plant_name": "Limerick",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2025-02-19",
+    "report_date": "2025-04-21",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Bypass Leakage on the B Train of Standby Gas Treatment System HEPA Filters Exceeded Technical Specification Value"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The HEPA filters failed because Engineering did not ensure maintenance was scheduled and executed prior to exceeding the TS limit.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "maintenance scheduling / engineering oversight failure",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 352-2025-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "352--2025-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:352--2025-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Limerick Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000352",
+      "match_key": "Unit:05000352"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "maintenance scheduling / engineering oversight failure",
+      "proximate_text": "The HEPA filters failed because Engineering did not ensure maintenance was scheduled and executed prior to exceeding the TS limit.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_bh_b",
+      "display_name": "Standby Gas Treatment System - B Train",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BH",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected train",
+      "match_key": "System:BH"
+    },
+    {
+      "id": "sys_bh_a",
+      "display_name": "Standby Gas Treatment System - A Train",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BH",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "redundant train; also inoperable during overlapping period",
+      "match_key": "System:BH"
+    },
+    {
+      "id": "c_hepa_up",
+      "display_name": "Upstream HEPA Filter Bank (B train)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "FLT",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:FLT"
+    },
+    {
+      "id": "c_hepa_down",
+      "display_name": "Downstream HEPA Filter Bank (B train)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "FLT",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:FLT"
+    },
+    {
+      "id": "c_charcoal",
+      "display_name": "Charcoal Adsorber Bank (B train)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:charcoal-adsorber-bank-b-train"
+    },
+    {
+      "id": "fm_maint_not_sched",
+      "display_name": "Maintenance not scheduled/executed prior to exceeding TS limit",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Engineering did not ensure HEPA filter replacement maintenance was scheduled and executed before bypass leakage exceeded TS acceptance criteria, despite a 2020 test showing leakage trending close to the limit.",
+      "match_key": "FailureMode:maintenance-not-scheduled-executed-prior-to-exceeding-ts-limit"
+    },
+    {
+      "id": "fm_ir_not_flagged",
+      "display_name": "Issue Report not flagged as system health issue",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The issue report documenting the degraded HEPA filter bank leakage was not flagged as a system health issue, and subsequent reviews did not identify the challenge to the TS limit.",
+      "match_key": "FailureMode:issue-report-not-flagged-as-system-health-issue"
+    },
+    {
+      "id": "fm_hepa_degraded",
+      "display_name": "HEPA filter bank bypass leakage degraded over time",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Upstream and downstream HEPA filter bank bypass leakage increased from 0.044%/0.046% (2020 test) to 0.11%/0.16% (2025 test), exceeding the TS acceptance criteria.",
+      "match_key": "FailureMode:hepa-filter-bank-bypass-leakage-degraded-over-time"
+    },
+    {
+      "id": "fm_dual_inop_missed",
+      "display_name": "Overlapping dual-train inoperability not entered into action tracking",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Because the exact date the B train became inoperable could not be determined, there were times both A and B SGTS trains were inoperable concurrently, and the required action for that condition was not entered.",
+      "match_key": "FailureMode:overlapping-dual-train-inoperability-not-entered-into-action-tracking"
+    },
+    {
+      "id": "cons_ts_exceed",
+      "display_name": "B train SGTS HEPA filter bypass leakage exceeded TS limit",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2025-02-19T08:40",
+      "end": "2025-02-20T11:44",
+      "duration": "unknown (indeterminate onset); declared operable after ~27h04m from test start",
+      "tz": null,
+      "match_key": "Consequence:b-train-sgts-hepa-filter-bypass-leakage-exceeded-ts-limit"
+    },
+    {
+      "id": "ca_replace_hepa",
+      "display_name": "Replace HEPA filters on B train SGTS and retest",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-hepa-filters-on-b-train-sgts-and-retest"
+    },
+    {
+      "id": "ca_review_deficiencies",
+      "display_name": "Review open deficiencies on TS equipment for proper scheduling",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:review-open-deficiencies-on-ts-equipment-for-proper-scheduling"
+    },
+    {
+      "id": "ca_add_trending",
+      "display_name": "Add post-test trending analysis task to Charcoal/HEPA surveillance work packages",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:add-post-test-trending-analysis-task-to-charcoal-hepa-surveillance-work-packages"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bh_b",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bh_a",
+      "evidence": null
+    },
+    {
+      "source": "c_hepa_up",
+      "relation": "PART_OF",
+      "target": "sys_bh_b",
+      "evidence": null
+    },
+    {
+      "source": "c_hepa_down",
+      "relation": "PART_OF",
+      "target": "sys_bh_b",
+      "evidence": null
+    },
+    {
+      "source": "c_charcoal",
+      "relation": "PART_OF",
+      "target": "sys_bh_b",
+      "evidence": null
+    },
+    {
+      "source": "fm_maint_not_sched",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_maint_not_sched",
+      "relation": "LEADS_TO",
+      "target": "fm_hepa_degraded",
+      "evidence": null
+    },
+    {
+      "source": "fm_maint_not_sched",
+      "relation": "LEADS_TO",
+      "target": "fm_ir_not_flagged",
+      "evidence": null
+    },
+    {
+      "source": "fm_hepa_degraded",
+      "relation": "LEADS_TO",
+      "target": "cons_ts_exceed",
+      "evidence": null
+    },
+    {
+      "source": "fm_ir_not_flagged",
+      "relation": "LEADS_TO",
+      "target": "cons_ts_exceed",
+      "evidence": null
+    },
+    {
+      "source": "cons_ts_exceed",
+      "relation": "LEADS_TO",
+      "target": "fm_dual_inop_missed",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_hepa",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_review_deficiencies",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_add_trending",
+      "evidence": null
+    }
+  ],
+  "chain": "Engineering failed to schedule/execute maintenance despite trending leakage [cause TBD] -> HEPA filter bypass leakage degraded (0.044/0.046% -> 0.11/0.16%) & Issue Report not flagged as system health issue -> B train SGTS HEPA leakage exceeds TS limit -> overlapping dual-train (A&B) inoperability not entered into action tracking",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4"
+  ],
+  "notes": "Cause code is TBD/provisional per FORM-366 fields; category kept as 'provisional' verbatim. No component identifier or manufacturer given in Component Data section. No BACKED_UP_BY edges emitted: narrative states the B train filter train remained available to perform its design basis function despite the exceedance, but this describes the same train's continued function, not a distinct backup system providing coverage during inoperability -- and the A train is itself flagged as inoperable during overlapping periods, so it cannot be modeled as an operable backup. No previous similar occurrences reported (narrative explicitly states none in past ten years), so no stub LER/SIMILAR_TO edge emitted."
+}

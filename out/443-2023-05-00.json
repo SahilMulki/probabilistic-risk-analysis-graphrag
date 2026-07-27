@@ -1,0 +1,270 @@
+{
+  "ler_number": "443-2023-05-00",
+  "identity": {
+    "accession_number": "ML23354A067",
+    "docket": "05000443",
+    "plant_name": "Seabrook",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2023-11-07",
+    "report_date": "2023-12-20",
+    "operating_mode": null,
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Auxiliary Feedwater System Inoperable"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)(B)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The loss of control power to the flow control valve was a result of a failed transformer in the motor control center.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Component failure - failed transformer",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 443-2023-005-00",
+      "properties": {},
+      "type": "LER",
+      "key": "443-2023-05-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:443-2023-05-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Seabrook Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000443",
+      "match_key": "Unit:05000443"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Component failure - failed transformer",
+      "proximate_text": "The loss of control power to the flow control valve was a result of a failed transformer in the motor control center.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_ba",
+      "display_name": "Emergency Feedwater",
+      "properties": {
+        "note": "steam-generator auxiliary/emergency feedwater system"
+      },
+      "type": "System",
+      "eiis_code": "BA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BA"
+    },
+    {
+      "id": "c_fcv_b",
+      "display_name": "Train B EFW Flow Control Valve 1-FW-FV-4244B",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "FCV",
+      "identifier": "1-FW-FV-4244B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:FCV|1-FW-FV-4244B"
+    },
+    {
+      "id": "c_xfmr",
+      "display_name": "Motor Control Center Transformer",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": "0.100 kVA 480/120V",
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:motor-control-center-transformer"
+    },
+    {
+      "id": "c_efw_pump",
+      "display_name": "Emergency Feedwater Pumps",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "P",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:P"
+    },
+    {
+      "id": "fm_xfmr_fail",
+      "display_name": "Transformer failed in motor control center",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "A 0.100 kVA 480/120V transformer failed, removing control power to Train B.",
+      "match_key": "FailureMode:transformer-failed-in-motor-control-center"
+    },
+    {
+      "id": "fm_loss_power",
+      "display_name": "Loss of control power to Train B flow control valve",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Without control power, the automatic high-flow isolation design function for the Train B valve was challenged; red open indicating lights were not illuminated.",
+      "match_key": "FailureMode:loss-of-control-power-to-train-b-flow-control-valve"
+    },
+    {
+      "id": "cons_efw_inop",
+      "display_name": "EFW system declared inoperable (TS SR 4.7.1.2.1.c not met)",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2023-11-07T12:00",
+      "end": null,
+      "duration": null,
+      "tz": "EST",
+      "match_key": "Consequence:efw-system-declared-inoperable-ts-sr-4-7-1-2-1-c-not-met"
+    },
+    {
+      "id": "ca_replace_xfmr",
+      "display_name": "Replace failed transformer",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-failed-transformer"
+    },
+    {
+      "id": "mfr_gould",
+      "display_name": "Gould ITE",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": null,
+      "match_key": "Manufacturer:gould-ite"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(v)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-b"
+    },
+    {
+      "id": "rr_ts_sr",
+      "display_name": "TS Surveillance Requirement 4.7.1.2.1.c",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ts-surveillance-requirement-4-7-1-2-1-c"
+    },
+    {
+      "id": "rr_nei",
+      "display_name": "NEI 99-02",
+      "properties": {
+        "type": "standard/guidance"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:nei-99-02"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts_sr",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ba",
+      "evidence": null
+    },
+    {
+      "source": "c_fcv_b",
+      "relation": "PART_OF",
+      "target": "sys_ba",
+      "evidence": null
+    },
+    {
+      "source": "fm_xfmr_fail",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_xfmr_fail",
+      "relation": "LEADS_TO",
+      "target": "fm_loss_power",
+      "evidence": null
+    },
+    {
+      "source": "fm_loss_power",
+      "relation": "LEADS_TO",
+      "target": "cons_efw_inop",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_xfmr",
+      "evidence": null
+    },
+    {
+      "source": "c_xfmr",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_gould",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_nei",
+      "evidence": null
+    }
+  ],
+  "chain": "failed motor control center transformer [cause TBD] -> loss of control power to Train B EFW flow control valve -> EFW system declared inoperable (TS SR 4.7.1.2.1.c not met) [Train A control power / series valve redundancy preserved safety function]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code left as TBD/provisional since FORM-366 fields provide no official cause code; narrative attributes the event to a failed MCC transformer but no formal cause classification (e.g., component failure code) was given in block 13/cause fields. Train A control power and series-valve arrangement are explicitly stated as remaining available/operable during the event, so no separate System node was created for a 'backup' beyond noting redundancy in the consequence chain; the two flow control valves in series on the same branch line are part of EFW design redundancy, not a distinct backup system requiring a BACKED_UP_BY edge, since both belong to the same EFW system. No similar prior events were reported (explicitly stated none in past three years), so no SIMILAR_TO stub LER was created."
+}

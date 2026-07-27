@@ -1,0 +1,530 @@
+{
+  "ler_number": "259-2024-004-00",
+  "identity": {
+    "accession_number": "ML25010A346",
+    "docket": "05000259",
+    "plant_name": "Browns Ferry",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2024-11-12",
+    "report_date": "2025-01-10",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "– Main Steam Relief Valves Lift"
+  },
+  "reporting_basis": {
+    "reported_under": [],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "MSRV 1-PCV-001-0005 failed above its setpoint due to corrosion bonding to the valve seat and a non-quantifiable leakage known as simmering, generally the result of low stellite in the seat; MSRV 1-PCV-001-0180 lifted below its setpoint due to relaxation of the setpoint spring over time",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "MSRV pilot valve setpoint drift (corrosion bonding/simmering and spring relaxation)",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 259-2024-004-00",
+      "properties": {
+        "match_key": "LER:259-2024-004-00"
+      },
+      "type": "LER",
+      "key": "259-2024-004-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:259-2024-004-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Browns Ferry Unit 1",
+      "properties": {
+        "match_key": "Unit:05000259",
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000259",
+      "match_key": "Unit:05000259"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {
+        "match_key": "Cause:provisional"
+      },
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "MSRV pilot valve setpoint drift (corrosion bonding/simmering and spring relaxation)",
+      "proximate_text": "MSRV 1-PCV-001-0005 failed above its setpoint due to corrosion bonding to the valve seat and a non-quantifiable leakage known as simmering, generally the result of low stellite in the seat; MSRV 1-PCV-001-0180 lifted below its setpoint due to relaxation of the setpoint spring over time",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_rv",
+      "display_name": "Main Steam Relief Valves",
+      "properties": {
+        "match_key": "System:RV"
+      },
+      "type": "System",
+      "eiis_code": "RV",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "safety/relief function",
+      "match_key": "System:RV"
+    },
+    {
+      "id": "c_msrv1",
+      "display_name": "Main Steam Relief Valve Pilot 1-PCV-001-0005",
+      "properties": {
+        "match_key": "Component:RV|1-PCV-001-0005"
+      },
+      "type": "Component",
+      "eiis_code": "RV",
+      "identifier": "1-PCV-001-0005",
+      "model": "7567F",
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:RV|1-PCV-001-0005"
+    },
+    {
+      "id": "c_msrv2",
+      "display_name": "Main Steam Relief Valve Pilot 1-PCV-001-0180",
+      "properties": {
+        "match_key": "Component:RV|1-PCV-001-0180"
+      },
+      "type": "Component",
+      "eiis_code": "RV",
+      "identifier": "1-PCV-001-0180",
+      "model": "7567F",
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:RV|1-PCV-001-0180"
+    },
+    {
+      "id": "fm_corrosion",
+      "display_name": "Corrosion bonding to valve seat / simmering causes setpoint drift high",
+      "properties": {
+        "match_key": "FailureMode:corrosion-bonding-simmering"
+      },
+      "type": "FailureMode",
+      "description": "Corrosion bonding to the valve seat alters mechanical setpoint, causing simmering (non-quantifiable leakage) and setpoint drift; generally results from low stellite in seat.",
+      "match_key": "FailureMode:corrosion-bonding-to-valve-seat-simmering-causes-setpoint-drift-high"
+    },
+    {
+      "id": "fm_liftabove",
+      "display_name": "MSRV 1-PCV-001-0005 lift setting above +3% band",
+      "properties": {
+        "match_key": "FailureMode:msrv-0005-lift-above-band"
+      },
+      "type": "FailureMode",
+      "description": "As-found lift setting of 1227.0 psig vs setpoint 1145 psig, +7.16% deviation, outside TS 3.4.3 +/-3% band.",
+      "match_key": "FailureMode:msrv-1-pcv-001-0005-lift-setting-above-3-band"
+    },
+    {
+      "id": "fm_springrelax",
+      "display_name": "Setpoint spring relaxation over time",
+      "properties": {
+        "match_key": "FailureMode:spring-relaxation"
+      },
+      "type": "FailureMode",
+      "description": "Relaxation of the setpoint spring over time caused MSRV 1-PCV-001-0180 to lift below its setpoint.",
+      "match_key": "FailureMode:setpoint-spring-relaxation-over-time"
+    },
+    {
+      "id": "fm_liftbelow",
+      "display_name": "MSRV 1-PCV-001-0180 lift setting below -3% band",
+      "properties": {
+        "match_key": "FailureMode:msrv-0180-lift-below-band"
+      },
+      "type": "FailureMode",
+      "description": "As-found lift setting of 1114.6 psig vs setpoint 1155 psig, -3.50% deviation, outside TS 3.4.3 +/-3% band.",
+      "match_key": "FailureMode:msrv-1-pcv-001-0180-lift-setting-below-3-band"
+    },
+    {
+      "id": "cons_ts",
+      "display_name": "Two MSRVs outside TS 3.4.3 lift setpoint band for an indeterminate period; TS-prohibited condition",
+      "properties": {
+        "match_key": "Consequence:msrv-ts-violation"
+      },
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": "indeterminate",
+      "tz": null,
+      "match_key": "Consequence:two-msrvs-outside-ts-3-4-3-lift-setpoint-band-for-an-indeterminate-period-ts-prohibited-condition"
+    },
+    {
+      "id": "sys_actlogic",
+      "display_name": "MSRV Automatic Actuation Logic",
+      "properties": {
+        "non_eiis": true,
+        "match_key": "System:msrv-automatic-actuation-logic"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "non-safety related defense-in-depth electrical actuation logic",
+      "match_key": "System:msrv-automatic-actuation-logic"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace all thirteen MSRV pilot valves with refurbished valves during U1R15",
+      "properties": {
+        "match_key": "CorrectiveAction:replace-pilot-valves"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-all-thirteen-msrv-pilot-valves-with-refurbished-valves-during-u1r15"
+    },
+    {
+      "id": "ca_bwrog",
+      "display_name": "Incorporate BWROG-suggested corrective actions for platinum coating adhesion to correct setpoint drift",
+      "properties": {
+        "match_key": "CorrectiveAction:bwrog-coating-improvement"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:incorporate-bwrog-suggested-corrective-actions-for-platinum-coating-adhesion-to-correct-setpoint-drift"
+    },
+    {
+      "id": "ca_seatrebuild",
+      "display_name": "Perform pilot seat rebuilds on valves with low stellite in the seat",
+      "properties": {
+        "match_key": "CorrectiveAction:seat-rebuild-low-stellite"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:perform-pilot-seat-rebuilds-on-valves-with-low-stellite-in-the-seat"
+    },
+    {
+      "id": "ca_springtest",
+      "display_name": "Verify springs associated with each low liftpoint pass Spring Rate testing or are replaced",
+      "properties": {
+        "match_key": "CorrectiveAction:spring-rate-testing"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:verify-springs-associated-with-each-low-liftpoint-pass-spring-rate-testing-or-are-replaced"
+    },
+    {
+      "id": "mfr_targetrock",
+      "display_name": "Target Rock Corporation",
+      "properties": {
+        "match_key": "Manufacturer:target-rock-corporation"
+      },
+      "type": "Manufacturer",
+      "code": null,
+      "match_key": "Manufacturer:target-rock-corporation"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts343",
+      "display_name": "TS 3.4.3 Safety/Relief Valves",
+      "properties": {
+        "match_key": "RegulatoryReference:ts-3-4-3"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-3-4-3-safety-relief-valves"
+    },
+    {
+      "id": "rr_ts304",
+      "display_name": "TS LCO 3.0.4",
+      "properties": {
+        "match_key": "RegulatoryReference:ts-lco-3-0-4"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-lco-3-0-4"
+    },
+    {
+      "id": "ler_prev1",
+      "display_name": "LER 296-2024-003-00",
+      "properties": {
+        "match_key": "LER:3-2024-003-00"
+      },
+      "type": "LER",
+      "key": "296-2024-003-00",
+      "stub": true,
+      "title": "MSRV lift settings outside TS required setpoints",
+      "plant": "Browns Ferry Nuclear Plant, Unit 3",
+      "match_key": "LER:296-2024-003-00"
+    },
+    {
+      "id": "ler_prev2",
+      "display_name": "LER 260-2023-002-00",
+      "properties": {
+        "match_key": "LER:2-2023-002-00"
+      },
+      "type": "LER",
+      "key": "260-2023-002-00",
+      "stub": true,
+      "title": "MSRV lift settings outside TS required setpoints",
+      "plant": "Browns Ferry Nuclear Plant, Unit 2",
+      "match_key": "LER:260-2023-002-00"
+    },
+    {
+      "id": "ler_prev3",
+      "display_name": "LER 259-2022-003-00",
+      "properties": {
+        "match_key": "LER:1-2022-003-00"
+      },
+      "type": "LER",
+      "key": "259-2022-003-00",
+      "stub": true,
+      "title": "MSRV lift settings outside TS required setpoints",
+      "plant": "Browns Ferry Nuclear Plant, Unit 1",
+      "match_key": "LER:259-2022-003-00"
+    },
+    {
+      "id": "ler_prev4",
+      "display_name": "LER 296-2022-001-00",
+      "properties": {
+        "match_key": "LER:3-2022-001-00"
+      },
+      "type": "LER",
+      "key": "296-2022-001-00",
+      "stub": true,
+      "title": "MSRV lift settings outside TS required setpoints",
+      "plant": "Browns Ferry Nuclear Plant, Unit 3",
+      "match_key": "LER:296-2022-001-00"
+    },
+    {
+      "id": "ler_prev5",
+      "display_name": "LER 260-2021-002-00",
+      "properties": {
+        "match_key": "LER:2-2021-002-00"
+      },
+      "type": "LER",
+      "key": "260-2021-002-00",
+      "stub": true,
+      "title": "MSRV lift settings outside TS required setpoints; platinum coated pilot disc flaking issue",
+      "plant": "Browns Ferry Nuclear Plant, Unit 2",
+      "match_key": "LER:260-2021-002-00"
+    },
+    {
+      "id": "ler_prev6",
+      "display_name": "LER 259-2020-003-01",
+      "properties": {
+        "match_key": "LER:1-2020-003-01"
+      },
+      "type": "LER",
+      "key": "259-2020-003-01",
+      "stub": true,
+      "title": "MSRV lift settings outside TS required setpoints",
+      "plant": "Browns Ferry Nuclear Plant, Unit 1",
+      "match_key": "LER:259-2020-003-01"
+    },
+    {
+      "id": "ler_prev7",
+      "display_name": "LER 296-2020-002-00",
+      "properties": {
+        "match_key": "LER:3-2020-002-00"
+      },
+      "type": "LER",
+      "key": "296-2020-002-00",
+      "stub": true,
+      "title": "MSRV lift settings outside TS required setpoints",
+      "plant": "Browns Ferry Nuclear Plant, Unit 3",
+      "match_key": "LER:296-2020-002-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rv",
+      "evidence": null
+    },
+    {
+      "source": "c_msrv1",
+      "relation": "PART_OF",
+      "target": "sys_rv",
+      "evidence": null
+    },
+    {
+      "source": "c_msrv2",
+      "relation": "PART_OF",
+      "target": "sys_rv",
+      "evidence": null
+    },
+    {
+      "source": "c_msrv1",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_targetrock",
+      "evidence": null
+    },
+    {
+      "source": "c_msrv2",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_targetrock",
+      "evidence": null
+    },
+    {
+      "source": "fm_corrosion",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_springrelax",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_corrosion",
+      "relation": "LEADS_TO",
+      "target": "fm_liftabove",
+      "evidence": null
+    },
+    {
+      "source": "fm_springrelax",
+      "relation": "LEADS_TO",
+      "target": "fm_liftbelow",
+      "evidence": null
+    },
+    {
+      "source": "fm_liftabove",
+      "relation": "LEADS_TO",
+      "target": "cons_ts",
+      "evidence": null
+    },
+    {
+      "source": "fm_liftbelow",
+      "relation": "LEADS_TO",
+      "target": "cons_ts",
+      "evidence": null
+    },
+    {
+      "source": "cons_ts",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_actlogic",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts343",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts304",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_bwrog",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_seatrebuild",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_springtest",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev1",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev2",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev3",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev4",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev5",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev6",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev7",
+      "evidence": null
+    }
+  ],
+  "chain": "MSRV pilot valve setpoint drift [cause TBD] -> corrosion bonding/simmering (0005) -> lift setting +7.16% above band; spring relaxation (0180) -> lift setting -3.50% below band -> two of thirteen MSRVs outside TS 3.4.3 +/-3% band for indeterminate time (TS-prohibited condition) [backup: non-safety MSRV Automatic Actuation Logic; valves remained capable of safety function]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code is TBD/provisional per FORM-366 fields, despite narrative giving specific mechanistic causes (corrosion bonding/simmering and spring relaxation) - these are captured in proximate_text/theme per rule 4. Two distinct failure modes modeled separately per rule 5 since they are physically distinct valves/mechanisms (one high, one low) rather than merged. MSRV Automatic Actuation Logic is modeled as non-EIIS System since narrative states it provides defense-in-depth and would function via independent electrical actuation, distinct from the failed pilot valve mechanical setpoint mechanism - treated as an operable backup per rule 6, not mere design context, since it is described as actually installed and functioning independently. No block_13 rows were provided in FORM-366 fields (empty array) despite two components failing; block_13 left empty per authoritative source. Title text stripped of a leading en-dash artifact from OCR."
+}

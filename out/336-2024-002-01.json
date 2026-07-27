@@ -1,0 +1,435 @@
+{
+  "ler_number": "336-2024-002-01",
+  "identity": {
+    "accession_number": "ML25079A251",
+    "docket": "05000336",
+    "plant_name": "Millstone",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2024-10-01",
+    "report_date": "2025-03-20",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Two Main Steam Safety Valves Failed To Lift Within The Acceptance Criteria Resulting In A Condition Prohibited By Technical Specifications"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "B",
+      "system": "SB",
+      "component": "RV",
+      "manufacturer": "C568",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The most probable cause of the failure is a combination of vibrations in the system piping and setpoint drift: 1: Vibrations of Main Steam system piping...could affect the trigger point of the Set Pressure Verification Device (SPVD)...2: Setpoint Drift: Setpoint drift is a known phenomenon affecting relief valves. This causes the valve set pressure to vary from its previous 'as-left' value.",
+    "cause_code": "B",
+    "category": "Design/Manufacturing/Installation",
+    "theme": "piping-induced test-instrument disturbance combined with relief-valve setpoint drift",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 336-2024-002-01",
+      "properties": {},
+      "type": "LER",
+      "key": "336-2024-002-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:336-2024-002-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Millstone Unit 2",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000336",
+      "match_key": "Unit:05000336"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Manufacturing/Installation (B)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "B",
+      "category": "Design/Manufacturing/Installation",
+      "theme": "piping-induced test-instrument disturbance combined with relief-valve setpoint drift",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Design/Manufacturing/Installation"
+    },
+    {
+      "id": "sys_sb",
+      "display_name": "Main Steam",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SB"
+    },
+    {
+      "id": "c_ms249",
+      "display_name": "Main Steam Safety Valve 2-MS-249",
+      "properties": {
+        "serial_number": "BN4966",
+        "nameplate_set_pressure_psig": 1000.3
+      },
+      "type": "Component",
+      "eiis_code": "RV",
+      "identifier": "2-MS-249",
+      "model": null,
+      "manufacturer_code": "C568",
+      "inferred_code": false,
+      "match_key": "Component:RV|2-MS-249"
+    },
+    {
+      "id": "c_ms251",
+      "display_name": "Main Steam Safety Valve 2-MS-251",
+      "properties": {
+        "serial_number": "BN4974",
+        "nameplate_set_pressure_psig": 1020.3
+      },
+      "type": "Component",
+      "eiis_code": "RV",
+      "identifier": "2-MS-251",
+      "model": null,
+      "manufacturer_code": "C568",
+      "inferred_code": false,
+      "match_key": "Component:RV|2-MS-251"
+    },
+    {
+      "id": "c_spvd",
+      "display_name": "Set Pressure Verification Device (SPVD) / LVDT",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:set-pressure-verification-device-spvd-lvdt"
+    },
+    {
+      "id": "fm_vibration",
+      "display_name": "Main Steam piping vibration affecting SPVD/LVDT trigger point",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Vibrations on the 'A' Main Steam header, caused by the throttled Turbine Control Valve, could affect the trigger point of the SPVD used in testing by causing movement in the LVDT used to determine stem movement.",
+      "match_key": "FailureMode:main-steam-piping-vibration-affecting-spvd-lvdt-trigger-point"
+    },
+    {
+      "id": "fm_setpointdrift",
+      "display_name": "MSSV setpoint drift",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Setpoint drift is a known phenomenon affecting relief valves, causing valve set pressure to vary from its previous 'as-left' value in either direction.",
+      "match_key": "FailureMode:mssv-setpoint-drift"
+    },
+    {
+      "id": "fm_asfound_249",
+      "display_name": "2-MS-249 as-found lift setting outside +/-3% tolerance",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "As-found test result 4% lower than nameplate set pressure (10.2 psi outside acceptance range), declared inoperable.",
+      "match_key": "FailureMode:2-ms-249-as-found-lift-setting-outside-3-tolerance"
+    },
+    {
+      "id": "fm_asfound_251",
+      "display_name": "2-MS-251 as-found lift setting outside +/-3% tolerance",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "As-found test result 3.3% lower than nameplate set pressure (3.0 psi outside acceptance range), declared inoperable.",
+      "match_key": "FailureMode:2-ms-251-as-found-lift-setting-outside-3-tolerance"
+    },
+    {
+      "id": "cons_tsviol",
+      "display_name": "Condition prohibited by Technical Specifications (MSSVs inoperable beyond assumed 4-hr AOT)",
+      "properties": {
+        "note": "TSAS 3.7.1.1.a.1 entered for 2-MS-249 at 1251 and 2-MS-251 at 1510; exited at 1445 and 1524 respectively. NUREG-1022 guidance indicates multiple test failures suggest inoperability likely existed longer than the 4-hour TS allowed outage time."
+      },
+      "type": "Consequence",
+      "start": "2024-10-01T12:51",
+      "end": "2024-10-01T15:24",
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:condition-prohibited-by-technical-specifications-mssvs-inoperable-beyond-assumed-4-hr-aot"
+    },
+    {
+      "id": "ca_adjust249",
+      "display_name": "Adjust and retest 2-MS-249 to as-left criteria",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:adjust-and-retest-2-ms-249-to-as-left-criteria"
+    },
+    {
+      "id": "ca_retest251",
+      "display_name": "Retest 2-MS-251 without adjustment to as-left criteria",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:retest-2-ms-251-without-adjustment-to-as-left-criteria"
+    },
+    {
+      "id": "ca_scope",
+      "display_name": "Test scope expansion of remaining MSSVs on 'A' and 'B' Main Steam headers",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:test-scope-expansion-of-remaining-mssvs-on-a-and-b-main-steam-headers"
+    },
+    {
+      "id": "ca_insitu",
+      "display_name": "Perform in-situ testing on 2-MS-249 and 2-MS-251 during next refueling outage (2R30) MSSV simmer testing",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:perform-in-situ-testing-on-2-ms-249-and-2-ms-251-during-next-refueling-outage-2r30-mssv-simmer-testing"
+    },
+    {
+      "id": "ca_vendor",
+      "display_name": "Send 2-MS-249 and 2-MS-251 to vendor for additional testing and analysis to inform probable cause",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:send-2-ms-249-and-2-ms-251-to-vendor-for-additional-testing-and-analysis-to-inform-probable-cause"
+    },
+    {
+      "id": "mfr_dresser",
+      "display_name": "Dresser Industries",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "C568",
+      "match_key": "Manufacturer:C568"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts371",
+      "display_name": "MPS2 Technical Specification 3.7.1.1 / Table 4.7-1",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:mps2-technical-specification-3-7-1-1-table-4-7-1"
+    },
+    {
+      "id": "rr_nureg1022",
+      "display_name": "NUREG-1022 Rev. 3",
+      "properties": {
+        "type": "standard/guidance"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:nureg-1022-rev-3"
+    },
+    {
+      "id": "rr_fsar14",
+      "display_name": "FSAR Chapter 14",
+      "properties": {
+        "type": "analysis-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:fsar-chapter-14"
+    },
+    {
+      "id": "prev_ler",
+      "display_name": "LER 2020-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "2020-001-00",
+      "stub": true,
+      "title": "MSSVs 2-MS-242 and 2-MS-245 as-found test failure (seat sticking causing higher lift pressure)",
+      "plant": "Millstone Power Station Unit 2",
+      "match_key": "LER:2020-001-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts371",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_nureg1022",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_fsar14",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "c_ms249",
+      "relation": "PART_OF",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "c_ms251",
+      "relation": "PART_OF",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "fm_vibration",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_vibration",
+      "relation": "LEADS_TO",
+      "target": "fm_asfound_249",
+      "evidence": null
+    },
+    {
+      "source": "fm_vibration",
+      "relation": "LEADS_TO",
+      "target": "fm_asfound_251",
+      "evidence": null
+    },
+    {
+      "source": "fm_setpointdrift",
+      "relation": "LEADS_TO",
+      "target": "fm_asfound_249",
+      "evidence": null
+    },
+    {
+      "source": "fm_setpointdrift",
+      "relation": "LEADS_TO",
+      "target": "fm_asfound_251",
+      "evidence": null
+    },
+    {
+      "source": "fm_asfound_249",
+      "relation": "LEADS_TO",
+      "target": "cons_tsviol",
+      "evidence": null
+    },
+    {
+      "source": "fm_asfound_251",
+      "relation": "LEADS_TO",
+      "target": "cons_tsviol",
+      "evidence": null
+    },
+    {
+      "source": "c_spvd",
+      "relation": "INVOLVES",
+      "target": "fm_vibration",
+      "evidence": "vibrations could affect the trigger point of the SPVD used in testing by causing movement in the LVDT"
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_adjust249",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_retest251",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_scope",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_insitu",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_vendor",
+      "evidence": null
+    },
+    {
+      "source": "c_ms249",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_dresser",
+      "evidence": null
+    },
+    {
+      "source": "c_ms251",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_dresser",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "prev_ler",
+      "evidence": null
+    }
+  ],
+  "chain": "piping vibration [SPVD/LVDT disturbance] + setpoint drift [cause B] -> 2-MS-249 as-found lift outside +/-3% -> TS-prohibited condition (inoperable >4hr AOT); setpoint drift -> 2-MS-251 as-found lift outside +/-3% -> same TS-prohibited condition [both valves adjusted/retested to as-left criteria]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Two MSSVs (2-MS-249, 2-MS-251) independently failed as-found acceptance criteria on the same surveillance test date, modeled as two parallel FailureMode nodes fed by the same two root causes (vibration effect on test instrumentation, and setpoint drift) per rule 5. No BACKED_UP_BY edges emitted: ADVs and other MSSVs are discussed only as design/safety-analysis bounding context (FSAR Ch.14), not as stated-operable backups during the inoperability window itself. SPVD/LVDT modeled as Component since it is a specific test-measurement device implicated directly in the failure mechanism, not a system. Cause code B (Design/Manufacturing/Installation) taken verbatim from Block 13/cause_code field, though narrative reads as a mixed vibration/drift phenomenon; theme captures this nuance without overriding the official code per rule 4."
+}

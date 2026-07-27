@@ -1,0 +1,383 @@
+{
+  "ler_number": "412-2022-001-00",
+  "identity": {
+    "accession_number": "ML22251A354",
+    "docket": "05000412",
+    "plant_name": "Beaver Valley",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2022-07-13",
+    "report_date": "2022-09-08",
+    "operating_mode": null,
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Beaver Valley Power Station, Unit No. 2 Docket No. 50-412, License No. NPF-73 LER 2022-001-00"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)",
+      "10 CFR 50.73(a)(2)(v)(A)",
+      "10 CFR 50.73(a)(2)(v)(D)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The direct cause was a lack of guidance in station procedures to proactively open the gravity drain line vent valve(s)... The root cause was that the organization did not recognize the need to proactively open the gravity drain line vent valve(s) each time fuel is added to the fuel oil storage tank.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "procedure/organizational gap - missing venting guidance",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 412-2022-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "412-2022-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:412-2022-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Beaver Valley Unit 2",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000412",
+      "match_key": "Unit:05000412"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "procedure/organizational gap - missing venting guidance",
+      "proximate_text": "The direct cause was a lack of guidance in station procedures to proactively open the gravity drain line vent valve(s)... The root cause was that the organization did not recognize the need to proactively open the gravity drain line vent valve(s) each time fuel is added to the fuel oil storage tank.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_ek",
+      "display_name": "Emergency Diesel Generator",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "EK",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "EDG 2-2 train, primary system involved",
+      "match_key": "System:EK"
+    },
+    {
+      "id": "c_edg22",
+      "display_name": "EDG 2-2",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "2-2",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:edg-2-2"
+    },
+    {
+      "id": "c_fopump",
+      "display_name": "EDG fuel oil injection pumps",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "DC-P",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:DC-P"
+    },
+    {
+      "id": "c_fotank",
+      "display_name": "Underground fuel oil storage tank",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "DE-TK",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:DE-TK"
+    },
+    {
+      "id": "c_gravdrain",
+      "display_name": "Gravity drain line (fuel oil pumps to storage tank)",
+      "properties": {
+        "note": "inverted U-shaped section with normally closed vent valve"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:gravity-drain-line-fuel-oil-pumps-to-storage-tank"
+    },
+    {
+      "id": "c_ventvalve",
+      "display_name": "Gravity drain line vent valve",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:gravity-drain-line-vent-valve"
+    },
+    {
+      "id": "c_lubeoil",
+      "display_name": "Engine lube oil system",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "LA",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:LA"
+    },
+    {
+      "id": "fm_novent",
+      "display_name": "Vent valve not proactively opened during tank refill",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Station procedures lacked guidance to proactively open the gravity drain line vent valve(s) during the October 2021 refueling outage fuel oil tank drain/fill activity.",
+      "match_key": "FailureMode:vent-valve-not-proactively-opened-during-tank-refill"
+    },
+    {
+      "id": "fm_airbound",
+      "display_name": "Gravity drain line became air bound",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The gravity drain from the fuel oil injection pumps to the underground tank was air bound, preventing excess fuel oil from draining back to the tank.",
+      "match_key": "FailureMode:gravity-drain-line-became-air-bound"
+    },
+    {
+      "id": "fm_fuelbuildup",
+      "display_name": "Fuel oil buildup in fuel pump push rod cavities",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Excess fuel oil could not return to the tank and built up in the fuel pump push rod cavities during operation.",
+      "match_key": "FailureMode:fuel-oil-buildup-in-fuel-pump-push-rod-cavities"
+    },
+    {
+      "id": "fm_intrusion",
+      "display_name": "Fuel oil intrusion into lube oil",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Fuel oil was introduced into the engine lube oil, degrading lube oil quality/viscosity.",
+      "match_key": "FailureMode:fuel-oil-intrusion-into-lube-oil"
+    },
+    {
+      "id": "cons_inop",
+      "display_name": "EDG 2-2 inoperable (past operability not supported ~9 months)",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2021-10",
+      "end": "2022-07-13T20:55",
+      "duration": "approximately 9 months (retroactive); declared inoperable 2022-07-13 2055 hours",
+      "tz": null,
+      "match_key": "Consequence:edg-2-2-inoperable-past-operability-not-supported-9-months"
+    },
+    {
+      "id": "ca_oilchange",
+      "display_name": "Change EDG 2-2 lube oil and vent air from gravity drain line",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:change-edg-2-2-lube-oil-and-vent-air-from-gravity-drain-line"
+    },
+    {
+      "id": "ca_samples",
+      "display_name": "Obtain follow-up lube oil samples confirming correction",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:obtain-follow-up-lube-oil-samples-confirming-correction"
+    },
+    {
+      "id": "ca_replace_pumps",
+      "display_name": "Replace three fuel oil injection pumps",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-three-fuel-oil-injection-pumps"
+    },
+    {
+      "id": "ca_procrevise",
+      "display_name": "Revise station procedures to add vent valve guidance after tank fill",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-station-procedures-to-add-vent-valve-guidance-after-tank-fill"
+    },
+    {
+      "id": "rr_5073i",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_5073va",
+      "display_name": "10 CFR 50.73(a)(2)(v)(A)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-a"
+    },
+    {
+      "id": "rr_5073vd",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "rr_ts381",
+      "display_name": "TS 3.8.1 AC Sources - Operating",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ts-3-8-1-ac-sources-operating"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073i",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073va",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073vd",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ek",
+      "evidence": null
+    },
+    {
+      "source": "c_edg22",
+      "relation": "PART_OF",
+      "target": "sys_ek",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts381",
+      "evidence": null
+    },
+    {
+      "source": "fm_novent",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_novent",
+      "relation": "LEADS_TO",
+      "target": "fm_airbound",
+      "evidence": null
+    },
+    {
+      "source": "fm_airbound",
+      "relation": "LEADS_TO",
+      "target": "fm_fuelbuildup",
+      "evidence": null
+    },
+    {
+      "source": "fm_fuelbuildup",
+      "relation": "LEADS_TO",
+      "target": "fm_intrusion",
+      "evidence": null
+    },
+    {
+      "source": "fm_intrusion",
+      "relation": "LEADS_TO",
+      "target": "cons_inop",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_oilchange",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_samples",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_pumps",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procrevise",
+      "evidence": null
+    }
+  ],
+  "chain": "lack of proactive vent-valve-opening guidance [cause TBD] -> gravity drain line air bound (Oct 2021 refill) -> fuel oil buildup in pump push rod cavities -> fuel oil intrusion into lube oil -> lube oil viscosity degraded -> EDG 2-2 declared inoperable, past operability not supported ~9 months",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Form-366 cause_code/category are TBD/provisional per authoritative header; narrative describes a direct cause (procedural gap) and root cause (organizational failure to recognize need) but no official cause-code letter was provided, so cause node is marked provisional per rule 4. EDG 2-1 also showed the air-bound condition but was corrected during the outage after PMT identification; this is background/contrast, not a separate failure chain for this LER, so no additional FailureMode node was created for EDG 2-1. PART_OF asserted for EDG 2-2 -> EDG system per explicit train/system framing in background section (EDG 2-2 is one of the two EDG train units described)."
+}

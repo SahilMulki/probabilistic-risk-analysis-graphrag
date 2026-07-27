@@ -1,0 +1,338 @@
+{
+  "ler_number": "416-2024-002-00",
+  "identity": {
+    "accession_number": "ML24149A159",
+    "docket": "05000416",
+    "plant_name": "Grand Gulf",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2024-03-26",
+    "report_date": "2024-05-28",
+    "operating_mode": "4",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Grand Gulf Nuclear Station, Unit 1 Licensee Event Report 2024-002-00, Automatic Actuation of Reactor Protection System"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)",
+      "10 CFR 50.73(a)(2)(iv)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The cause of the event was RWCU blowdown discharge flow path was isolated with the RCS at high pressure. Operators believed that the RWCU blowdown flow path to the main condenser could be isolated before aligning a discharge flow path to the radwaste system.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "operator misjudgment during RWCU discharge flow-path transfer",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 416-2024-002-00",
+      "properties": {
+        "match_key": "LER:416-2024-002-00"
+      },
+      "type": "LER",
+      "key": "416-2024-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:416-2024-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Grand Gulf Unit 1",
+      "properties": {
+        "match_key": "Unit:05000416",
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000416",
+      "match_key": "Unit:05000416"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional (TBD)",
+      "properties": {
+        "match_key": "Cause:provisional"
+      },
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "operator misjudgment during RWCU discharge flow-path transfer",
+      "proximate_text": "The cause of the event was RWCU blowdown discharge flow path was isolated with the RCS at high pressure. Operators believed that the RWCU blowdown flow path to the main condenser could be isolated before aligning a discharge flow path to the radwaste system.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_rwcu",
+      "display_name": "Reactor Water Cleanup",
+      "properties": {
+        "match_key": "System:reactor-water-cleanup"
+      },
+      "type": "System",
+      "eiis_code": "CE",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "involved; blowdown flow path being transferred",
+      "match_key": "System:CE"
+    },
+    {
+      "id": "sys_rcs",
+      "display_name": "Reactor Coolant System",
+      "properties": {
+        "match_key": "System:reactor-coolant-system"
+      },
+      "type": "System",
+      "eiis_code": "AB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "pressure boundary affected",
+      "match_key": "System:AB"
+    },
+    {
+      "id": "sys_crd",
+      "display_name": "Control Rod Drive",
+      "properties": {
+        "match_key": "System:control-rod-drive"
+      },
+      "type": "System",
+      "eiis_code": "AA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "used to maintain RCS pressure",
+      "match_key": "System:AA"
+    },
+    {
+      "id": "sys_rps",
+      "display_name": "Reactor Protection System",
+      "properties": {
+        "match_key": "System:reactor-protection-system"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "automatically actuated on high RCS pressure",
+      "match_key": "System:reactor-protection-system"
+    },
+    {
+      "id": "sys_radwaste",
+      "display_name": "Radwaste System",
+      "properties": {
+        "match_key": "System:radwaste-system"
+      },
+      "type": "System",
+      "eiis_code": "NE",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "intended alternate discharge path for RWCU blowdown",
+      "match_key": "System:NE"
+    },
+    {
+      "id": "fm_isolate",
+      "display_name": "RWCU blowdown discharge flow path isolated while RCS at high pressure",
+      "properties": {
+        "match_key": "FailureMode:rwcu-blowdown-discharge-path-isolated"
+      },
+      "type": "FailureMode",
+      "description": "During transfer of RWCU blowdown from main condenser to radwaste, the discharge flow path was isolated before the new path was established, with RCS at high pressure.",
+      "match_key": "FailureMode:rwcu-blowdown-discharge-flow-path-isolated-while-rcs-at-high-pressure"
+    },
+    {
+      "id": "fm_pressure_rise",
+      "display_name": "RCS pressure rise not rapidly controlled by reduced CRD flow",
+      "properties": {
+        "match_key": "FailureMode:rcs-pressure-rise-not-controlled"
+      },
+      "type": "FailureMode",
+      "description": "Operators reduced CRD flow to counter rising RCS pressure but pressure did not reduce rapidly.",
+      "match_key": "FailureMode:rcs-pressure-rise-not-rapidly-controlled-by-reduced-crd-flow"
+    },
+    {
+      "id": "cons_rps",
+      "display_name": "Automatic RPS actuation on high RCS pressure",
+      "properties": {
+        "match_key": "Consequence:automatic-rps-actuation"
+      },
+      "type": "Consequence",
+      "start": "2024-03-26",
+      "end": "2024-03-26",
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:automatic-rps-actuation-on-high-rcs-pressure"
+    },
+    {
+      "id": "ca_restore",
+      "display_name": "Re-establish RWCU discharge flow path",
+      "properties": {
+        "match_key": "CorrectiveAction:re-establish-rwcu-discharge-flow-path"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:re-establish-rwcu-discharge-flow-path"
+    },
+    {
+      "id": "ca_reset",
+      "display_name": "Reset RPS",
+      "properties": {
+        "match_key": "CorrectiveAction:reset-rps"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:reset-rps"
+    },
+    {
+      "id": "ca_procedure",
+      "display_name": "Revise procedure 03-1-01-6 to add guidance for swapping RWCU discharge flow paths",
+      "properties": {
+        "match_key": "CorrectiveAction:revise-procedure-03-1-01-6"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-procedure-03-1-01-6-to-add-guidance-for-swapping-rwcu-discharge-flow-paths"
+    },
+    {
+      "id": "rr_5073_iv_a",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5073_iv_b",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(B)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-b"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-b"
+    },
+    {
+      "id": "rr_5072",
+      "display_name": "10 CFR 50.72(b)(2)(iv)(B)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-72-b-2-iv-b"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-2-iv-b"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_iv_a",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_iv_b",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rwcu",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rcs",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_crd",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rps",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_radwaste",
+      "evidence": null
+    },
+    {
+      "source": "fm_isolate",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_isolate",
+      "relation": "LEADS_TO",
+      "target": "fm_pressure_rise",
+      "evidence": null
+    },
+    {
+      "source": "fm_pressure_rise",
+      "relation": "LEADS_TO",
+      "target": "cons_rps",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_restore",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_reset",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procedure",
+      "evidence": null
+    }
+  ],
+  "chain": "operator misjudgment on RWCU discharge transfer [cause TBD] -> RWCU blowdown discharge path isolated at high RCS pressure -> RCS pressure rise not rapidly controlled by reduced CRD flow -> automatic RPS actuation on high RCS pressure",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4"
+  ],
+  "notes": "No official cause code was assigned in the source fields (TBD/provisional), consistent with the narrative's operator-belief-based cause statement. No previous similar events were cited (narrative states 'None'), so no SIMILAR_TO edge or stub LER node was created. RWCU, RCS, CRD, RPS, and Radwaste are named only by acronym/full name in the narrative with no bracket EIIS codes given, so eiis_code is left null per rule 2."
+}

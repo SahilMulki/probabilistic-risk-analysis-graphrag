@@ -1,0 +1,333 @@
+{
+  "ler_number": "412-2021-002-00",
+  "identity": {
+    "accession_number": "ML21337A224",
+    "docket": "05000412",
+    "plant_name": "Beaver Valley",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2021-10-05",
+    "report_date": "2021-12-03",
+    "operating_mode": "3",
+    "power_level": 90,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Beaver Valley Power Station, Unit No. 2 Docket No. 50-412, License No. NPF-73 LER 2021-002-00"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)",
+      "10 CFR 50.73(a)(2)(iv)(B)(1)",
+      "10 CFR 50.73(a)(2)(iv)(B)(6)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The apparent cause was a premature failure of the Train A SSPS ULB due to manufacturing defects with the solder joints which may have resulted in an intermittent loss of connection.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "manufacturing defect in solder joints causing intermittent connection loss",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 412-2021-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "412-2021-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:412-2021-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Beaver Valley Unit 2",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000412",
+      "match_key": "Unit:05000412"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "manufacturing defect in solder joints causing intermittent connection loss",
+      "proximate_text": "The apparent cause was a premature failure of the Train A SSPS ULB due to manufacturing defects with the solder joints which may have resulted in an intermittent loss of connection.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_jg",
+      "display_name": "Solid State Protection System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "involved; failed",
+      "match_key": "System:JG"
+    },
+    {
+      "id": "sys_ba",
+      "display_name": "Auxiliary Feedwater System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "automatically actuated as designed",
+      "match_key": "System:BA"
+    },
+    {
+      "id": "c_ulb_a403",
+      "display_name": "Universal Logic Board A403 (Train A SSPS)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "A403",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:universal-logic-board-a403-train-a-ssps"
+    },
+    {
+      "id": "c_ulb_other",
+      "display_name": "Additional Universal Logic Boards (Train A and B SSPS, extent of condition)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:additional-universal-logic-boards-train-a-and-b-ssps-extent-of-condition"
+    },
+    {
+      "id": "fm_solder",
+      "display_name": "Manufacturing defect in ULB solder joints",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Manufacturing defects with the solder joints on the Train A SSPS universal logic board (ULB) may have resulted in an intermittent loss of connection.",
+      "match_key": "FailureMode:manufacturing-defect-in-ulb-solder-joints"
+    },
+    {
+      "id": "fm_intermittent",
+      "display_name": "Intermittent internal failure of SSPS Train A ULB A403",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Intermittent internal failure of the Train A SSPS ULB (A403), resulting in loss of the reactor trip system interlock for power range neutron flux (P-10) and associated power range trip block signals.",
+      "match_key": "FailureMode:intermittent-internal-failure-of-ssps-train-a-ulb-a403"
+    },
+    {
+      "id": "fm_p10loss",
+      "display_name": "Loss of P-10 interlock and power range trip block signals",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Loss of the reactor trip system interlock for power range neutron flux (P-10) and associated power range trip block signals generated within Train A SSPS.",
+      "match_key": "FailureMode:loss-of-p-10-interlock-and-power-range-trip-block-signals"
+    },
+    {
+      "id": "cons_trip",
+      "display_name": "Automatic reactor trip (Power Range Low Setpoint Neutron Flux High) and automatic AFW actuation",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2021-10-05T06:32",
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:automatic-reactor-trip-power-range-low-setpoint-neutron-flux-high-and-automatic-afw-actuation"
+    },
+    {
+      "id": "ca_replace3",
+      "display_name": "Replace 3 suspect SSPS ULBs and send for WABTS testing",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-3-suspect-ssps-ulbs-and-send-for-wabts-testing"
+    },
+    {
+      "id": "ca_replace15",
+      "display_name": "Replace additional 15 ULBs from both SSPS trains as extent of condition and send for WABTS testing",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-additional-15-ulbs-from-both-ssps-trains-as-extent-of-condition-and-send-for-wabts-testing"
+    },
+    {
+      "id": "ca_evaluate",
+      "display_name": "Evaluate final Westinghouse WABTS test reports for additional actions",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:evaluate-final-westinghouse-wabts-test-reports-for-additional-actions"
+    },
+    {
+      "id": "ca_periodic",
+      "display_name": "Establish periodic WABTS testing maintenance plans for both units",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:establish-periodic-wabts-testing-maintenance-plans-for-both-units"
+    },
+    {
+      "id": "mfr_westinghouse",
+      "display_name": "Westinghouse",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": null,
+      "match_key": "Manufacturer:westinghouse"
+    },
+    {
+      "id": "rr_5073a2iva",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5073a2ivb1",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(B)(1)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-b-1"
+    },
+    {
+      "id": "rr_5073a2ivb6",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(B)(6)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-b-6"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073a2iva",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073a2ivb1",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073a2ivb6",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jg",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ba",
+      "evidence": null
+    },
+    {
+      "source": "c_ulb_a403",
+      "relation": "PART_OF",
+      "target": "sys_jg",
+      "evidence": null
+    },
+    {
+      "source": "fm_solder",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_solder",
+      "relation": "LEADS_TO",
+      "target": "fm_intermittent",
+      "evidence": null
+    },
+    {
+      "source": "fm_intermittent",
+      "relation": "LEADS_TO",
+      "target": "fm_p10loss",
+      "evidence": null
+    },
+    {
+      "source": "fm_p10loss",
+      "relation": "LEADS_TO",
+      "target": "cons_trip",
+      "evidence": null
+    },
+    {
+      "source": "cons_trip",
+      "relation": "MITIGATED_BY",
+      "target": "sys_ba",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace3",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace15",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_evaluate",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_periodic",
+      "evidence": null
+    },
+    {
+      "source": "c_ulb_a403",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_westinghouse",
+      "evidence": null
+    }
+  ],
+  "chain": "manufacturing defect in ULB solder joints [cause TBD] -> intermittent internal failure of Train A SSPS ULB A403 -> loss of P-10 interlock and power range trip block signals -> automatic reactor trip and AFW actuation [mitigated by AFW auto-start]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4"
+  ],
+  "notes": "Cause code is TBD/provisional per FORM-366 fields; category set to 'provisional' per authoritative header data even though narrative provides a specific apparent cause (manufacturing defect in solder joints). AFW modeled as both an involved system (auto-actuated) and a mitigating factor since it started as designed and stabilized the plant; no explicit statement of it being a pre-existing 'backup' during an inoperability window, so BACKED_UP_BY was not used -- instead MITIGATED_BY reflects its role in responding to the trip. No block_13 data provided in FORM-366 fields (empty array), so none included beyond header info. No previous similar events identified per narrative -- no stub LER node created."
+}

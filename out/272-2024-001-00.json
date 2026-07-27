@@ -1,0 +1,235 @@
+{
+  "ler_number": "272-2024-001-00",
+  "identity": {
+    "accession_number": "ML24130A090",
+    "docket": "05000272",
+    "plant_name": "Salem",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2024-04-18",
+    "report_date": "2024-05-09",
+    "operating_mode": null,
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Pressure Boundary Leakage through a Reactor Coolant Pump Thermal Barrier Heat Exchanger"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "Manufactunir",
+      "system": "X",
+      "component": "AB",
+      "manufacturer": "p",
+      "reportable": null
+    }
+  ],
+  "cause": {
+    "proximate_text": "Unknown. Leakage through the 12 RCP TBHX allowed radioactivity to enter the CCW system, but the cause of the leak is not known.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "unexplained thermal barrier heat exchanger leak",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 272-2024-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "272-2024-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:272-2024-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Salem Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000272",
+      "match_key": "Unit:05000272"
+    },
+    {
+      "id": "cause",
+      "display_name": "Unknown / Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "unexplained thermal barrier heat exchanger leak",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_ab",
+      "display_name": "Reactor Coolant System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "AB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:AB"
+    },
+    {
+      "id": "sys_ccw",
+      "display_name": "Component Cooling Water",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "CC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected system - receives leakage",
+      "match_key": "System:CC"
+    },
+    {
+      "id": "c_rcp",
+      "display_name": "Reactor Coolant Pump",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "P",
+      "identifier": "12 RCP",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:P|12 RCP"
+    },
+    {
+      "id": "c_tbhx",
+      "display_name": "Thermal Barrier Heat Exchanger",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:thermal-barrier-heat-exchanger"
+    },
+    {
+      "id": "fm_tbhxleak",
+      "display_name": "TBHX pressure boundary leak (RCS to CCW)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Vendor pressure-drop testing with helium confirmed a small leak from the RCS side to the CCW side of the TBHX; cause of the flaw is unknown.",
+      "match_key": "FailureMode:tbhx-pressure-boundary-leak-rcs-to-ccw"
+    },
+    {
+      "id": "fm_radincrease",
+      "display_name": "Radioactivity ingress into CCW system",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Tritium/radioactivity levels in CCW slowly rose beginning December 2022, detected via CCW process radiation monitors.",
+      "match_key": "FailureMode:radioactivity-ingress-into-ccw-system"
+    },
+    {
+      "id": "cons_leak",
+      "display_name": "Pressure boundary leakage (RCS to CCW), estimated 0.2 gpd or less",
+      "properties": {
+        "note": "No safety consequences; leakage not detectable by mass balance or online leak rate methods"
+      },
+      "type": "Consequence",
+      "start": "2022-12",
+      "end": "2023-fall (RCP replaced)",
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:pressure-boundary-leakage-rcs-to-ccw-estimated-0-2-gpd-or-less"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace affected reactor coolant pump",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-affected-reactor-coolant-pump"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ab",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ccw",
+      "evidence": null
+    },
+    {
+      "source": "c_tbhx",
+      "relation": "PART_OF",
+      "target": "c_rcp",
+      "evidence": null
+    },
+    {
+      "source": "fm_tbhxleak",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_tbhxleak",
+      "relation": "LEADS_TO",
+      "target": "fm_radincrease",
+      "evidence": null
+    },
+    {
+      "source": "fm_radincrease",
+      "relation": "LEADS_TO",
+      "target": "cons_leak",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    }
+  ],
+  "chain": "unknown TBHX flaw [cause TBD] -> RCS-to-CCW pressure boundary leak through 12 RCP thermal barrier heat exchanger -> radioactivity ingress into CCW detected via process radiation monitors -> pressure boundary leakage (~0.2 gpd, no safety consequence) [mitigated by RCP replacement]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause is officially TBD/unknown per narrative ('Cause of Event: Unknown') and Block 13 cause field ('Manufacturer' garbled/illegible in OCR); category kept as provisional per schema default since no definitive cause code was assigned. No previous similar events reported in past three years, so no SIMILAR_TO/stub LER emitted. CCW and downstream isolation valves (check valves, MOV, expansion tank vent valve) are described only as design/safety-analysis protective features that were not actuated during this slow, undetected leak event - therefore treated as design context and not modeled as System/Component nodes per rule 6."
+}

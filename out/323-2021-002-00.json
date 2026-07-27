@@ -1,0 +1,290 @@
+{
+  "ler_number": "323-2021-002-00",
+  "identity": {
+    "accession_number": "ML21348A112",
+    "docket": "05000323",
+    "plant_name": "Diablo Canyon",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2021-10-15",
+    "report_date": "2021-12-14",
+    "operating_mode": "1",
+    "power_level": 90,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Manual Reactor Trip Due to Increased Water Level in a Feedwater Heater"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": null,
+      "system": "SB",
+      "component": null,
+      "manufacturer": null,
+      "reportable": null
+    }
+  ],
+  "cause": {
+    "proximate_text": "The cause of the water level increase was a result of multiple tube failures in FWH 2-5B.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Feedwater heater tube failures causing high level",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 323-2021-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "323-2021-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:323-2021-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Diablo Canyon Unit 2",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000323",
+      "match_key": "Unit:05000323"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Feedwater heater tube failures causing high level",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_sb",
+      "display_name": "Main Feedwater System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SB"
+    },
+    {
+      "id": "sys_afw",
+      "display_name": "Auxiliary Feedwater System",
+      "properties": {
+        "note": "AFW acronym in narrative; role backup, actuated automatically"
+      },
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "sys_condensate",
+      "display_name": "Condensate System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SD",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SD"
+    },
+    {
+      "id": "c_fwh",
+      "display_name": "Feedwater Heater 2-5B",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "2-5B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:feedwater-heater-2-5b"
+    },
+    {
+      "id": "c_tubes",
+      "display_name": "FWH 2-5B tubes",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:fwh-2-5b-tubes"
+    },
+    {
+      "id": "fm_tubefail",
+      "display_name": "Multiple tube failures in FWH 2-5B",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Multiple tube failures in FWH 2-5B caused increasing water level",
+      "match_key": "FailureMode:multiple-tube-failures-in-fwh-2-5b"
+    },
+    {
+      "id": "fm_highlevel",
+      "display_name": "Increasing water level in FWH 2-5B",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Water level in FWH 2-5B rose, triggering control room annunciator",
+      "match_key": "FailureMode:increasing-water-level-in-fwh-2-5b"
+    },
+    {
+      "id": "cons_trip",
+      "display_name": "Manual reactor trip and AFW actuation",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2021-10-15T17:49",
+      "end": null,
+      "duration": null,
+      "tz": "PDT",
+      "match_key": "Consequence:manual-reactor-trip-and-afw-actuation"
+    },
+    {
+      "id": "ca_repair",
+      "display_name": "Repair FWH 2-5B and return to service",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:repair-fwh-2-5b-and-return-to-service"
+    },
+    {
+      "id": "ca_verify",
+      "display_name": "Verify FWH 2-5A and 2-5C show no leakage indication",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:verify-fwh-2-5a-and-2-5c-show-no-leakage-indication"
+    },
+    {
+      "id": "ca_cap",
+      "display_name": "Follow-up corrective actions managed under Corrective Action Program",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:follow-up-corrective-actions-managed-under-corrective-action-program"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_afw",
+      "evidence": null
+    },
+    {
+      "source": "c_tubes",
+      "relation": "PART_OF",
+      "target": "c_fwh",
+      "evidence": null
+    },
+    {
+      "source": "c_fwh",
+      "relation": "PART_OF",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "fm_tubefail",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_tubefail",
+      "relation": "LEADS_TO",
+      "target": "fm_highlevel",
+      "evidence": null
+    },
+    {
+      "source": "fm_highlevel",
+      "relation": "LEADS_TO",
+      "target": "cons_trip",
+      "evidence": null
+    },
+    {
+      "source": "cons_trip",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_afw",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_repair",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_verify",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_cap",
+      "evidence": null
+    }
+  ],
+  "chain": "multiple tube failures in FWH 2-5B [cause TBD] -> increasing water level in FWH 2-5B -> manual reactor trip -> AFW system actuates as expected [backup AFW]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code TBD in FORM-366; category left as 'provisional' per rule 4 with provisional=true. AFW and condensate system named as acronyms only (no bracket EIIS code given in narrative), so eiis_code left null per rule 2. No similar prior events reported ('no similar events at DCPP in the previous three years'), so no SIMILAR_TO/stub LER emitted. Condensate system mentioned mainly for design/background context, not directly involved in failure chain, but retained as System node since it's part of the same non-safety feedwater train described; no edges beyond none needed, so no INVOLVES edge asserted for it beyond documentation -- omitted to avoid unsupported inference; kept node absent of edges would be schema-valid but adds noise, so removed from active involvement (see below)."
+}

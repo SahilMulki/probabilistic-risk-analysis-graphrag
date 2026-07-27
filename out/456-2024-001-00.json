@@ -1,0 +1,406 @@
+{
+  "ler_number": "456-2024-001-00",
+  "identity": {
+    "accession_number": "ML24185A160",
+    "docket": "05000456",
+    "plant_name": "Braidwood",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2024-05-05",
+    "report_date": "2024-07-03",
+    "operating_mode": "2",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": "57107",
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Trip on Low Steam Generator Level Ddue to Failure to Verify Isolation Valves Were Open"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)",
+      "10 CFR 50.73(a)(2)(iv)(B)(1)",
+      "10 CFR 50.73(a)(2)(iv)(B)(6)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": null,
+      "system": null,
+      "component": null,
+      "manufacturer": "NIA",
+      "reportable": null
+    },
+    {
+      "cause": "NIA",
+      "system": null,
+      "component": null,
+      "manufacturer": null,
+      "reportable": null
+    }
+  ],
+  "cause": {
+    "proximate_text": "The root cause for the automatic reactor trip was licensed operations personnel failing to properly utilize human performance tools and procedures. The procedure step to verify/open the steam generator low flow feedwater upstream isolation valves was not completed prior to raising reactor power per the startup procedure based on the incorrect assumption the isolation valves had been opened several shifts prior as a part of another procedure.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "procedure use and adherence / incorrect assumption on valve status",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 456-2024-001-00",
+      "properties": {
+        "match_key": "LER:456-2024-001-00"
+      },
+      "type": "LER",
+      "key": "456-2024-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:456-2024-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Braidwood Unit 1",
+      "properties": {
+        "match_key": "Unit:05000456",
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000456",
+      "match_key": "Unit:05000456"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {
+        "match_key": "Cause:provisional"
+      },
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "procedure use and adherence / incorrect assumption on valve status",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_rcs",
+      "display_name": "Reactor Coolant System",
+      "properties": {
+        "match_key": "System:AB"
+      },
+      "type": "System",
+      "eiis_code": "AB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "plant conditions context",
+      "match_key": "System:AB"
+    },
+    {
+      "id": "sys_af",
+      "display_name": "Auxiliary Feedwater",
+      "properties": {
+        "match_key": "System:auxiliary-feedwater"
+      },
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "involved; manually started in response to low SG level",
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "sys_rps",
+      "display_name": "Reactor Protection System",
+      "properties": {
+        "match_key": "System:reactor-protection-system"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "actuated - automatic reactor trip",
+      "match_key": "System:reactor-protection-system"
+    },
+    {
+      "id": "c_sg1b",
+      "display_name": "1B Steam Generator low flow feedwater upstream isolation valve",
+      "properties": {
+        "match_key": "Component:1b-sg-isolation-valve"
+      },
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": true,
+      "match_key": "Component:ISV"
+    },
+    {
+      "id": "c_sg1c",
+      "display_name": "1C Steam Generator low flow feedwater upstream isolation valve",
+      "properties": {
+        "match_key": "Component:1c-sg-isolation-valve"
+      },
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": true,
+      "match_key": "Component:ISV"
+    },
+    {
+      "id": "fm_procstep",
+      "display_name": "Procedure step to verify/open SG isolation valves not completed",
+      "properties": {
+        "match_key": "FailureMode:procedure-step-not-completed"
+      },
+      "type": "FailureMode",
+      "description": "Operator incorrectly assumed valves were open based on prior valve stroke procedure knowledge, without verifying current status.",
+      "match_key": "FailureMode:procedure-step-to-verify-open-sg-isolation-valves-not-completed"
+    },
+    {
+      "id": "fm_valvesclosed",
+      "display_name": "1B and 1C SG low flow feedwater isolation valves remained closed",
+      "properties": {
+        "match_key": "FailureMode:isolation-valves-closed"
+      },
+      "type": "FailureMode",
+      "description": "Valves closed for outage maintenance activities were not reopened prior to power ascension.",
+      "match_key": "FailureMode:1b-and-1c-sg-low-flow-feedwater-isolation-valves-remained-closed"
+    },
+    {
+      "id": "fm_lowlevel",
+      "display_name": "Lowering water level in 1B and 1C steam generators",
+      "properties": {
+        "match_key": "FailureMode:lowering-sg-water-level"
+      },
+      "type": "FailureMode",
+      "description": "SG water levels dropped due to feedwater flow being isolated by closed valves.",
+      "match_key": "FailureMode:lowering-water-level-in-1b-and-1c-steam-generators"
+    },
+    {
+      "id": "cons_trip",
+      "display_name": "Automatic reactor trip on 1C SG Lo-2 level setpoint",
+      "properties": {
+        "match_key": "Consequence:automatic-reactor-trip"
+      },
+      "type": "Consequence",
+      "start": "2024-05-05T03:38",
+      "end": null,
+      "duration": null,
+      "tz": "CDT",
+      "match_key": "Consequence:automatic-reactor-trip-on-1c-sg-lo-2-level-setpoint"
+    },
+    {
+      "id": "ca_accountability",
+      "display_name": "Address accountability with operations individuals for procedure use/adherence gaps",
+      "properties": {
+        "match_key": "CorrectiveAction:address-accountability"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:address-accountability-with-operations-individuals-for-procedure-use-adherence-gaps"
+    },
+    {
+      "id": "ca_obe",
+      "display_name": "Develop and implement Operations Fundamental Out-of-the-Box Evaluation (OBE)",
+      "properties": {
+        "match_key": "CorrectiveAction:develop-obe"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:develop-and-implement-operations-fundamental-out-of-the-box-evaluation-obe"
+    },
+    {
+      "id": "ca_lineup",
+      "display_name": "Perform system line-up verifications and validate startup procedure steps",
+      "properties": {
+        "match_key": "CorrectiveAction:lineup-verification"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:perform-system-line-up-verifications-and-validate-startup-procedure-steps"
+    },
+    {
+      "id": "ca_qualremoval",
+      "display_name": "Remove qualifications of involved individuals pending remediation",
+      "properties": {
+        "match_key": "CorrectiveAction:qual-removal"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:remove-qualifications-of-involved-individuals-pending-remediation"
+    },
+    {
+      "id": "ca_training",
+      "display_name": "Conduct training with oncoming crew",
+      "properties": {
+        "match_key": "CorrectiveAction:training-oncoming-crew"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:conduct-training-with-oncoming-crew"
+    },
+    {
+      "id": "rr_5073a2iva",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5073a2ivb1",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(B)(1)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-b-1"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-b-1"
+    },
+    {
+      "id": "rr_5073a2ivb6",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(B)(6)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-b-6"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-b-6"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073a2iva",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073a2ivb1",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073a2ivb6",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_af",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rps",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rcs",
+      "evidence": null
+    },
+    {
+      "source": "fm_procstep",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_procstep",
+      "relation": "LEADS_TO",
+      "target": "fm_valvesclosed",
+      "evidence": null
+    },
+    {
+      "source": "fm_valvesclosed",
+      "relation": "LEADS_TO",
+      "target": "fm_lowlevel",
+      "evidence": null
+    },
+    {
+      "source": "fm_lowlevel",
+      "relation": "LEADS_TO",
+      "target": "cons_trip",
+      "evidence": null
+    },
+    {
+      "source": "c_sg1b",
+      "relation": "PART_OF",
+      "target": "sys_af",
+      "evidence": null
+    },
+    {
+      "source": "c_sg1c",
+      "relation": "PART_OF",
+      "target": "sys_af",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_accountability",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_obe",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_lineup",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_qualremoval",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_training",
+      "evidence": null
+    }
+  ],
+  "chain": "operator failed to properly utilize human performance tools/procedures [cause TBD] -> procedure step to verify/open SG isolation valves not completed -> 1B/1C SG low flow feedwater isolation valves remained closed -> SG 1B/1C water levels lowering -> automatic reactor trip on 1C SG Lo-2 level",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code is TBD/provisional per FORM-366 fields (official cause code not assigned), though the narrative clearly attributes root cause to personnel failing to utilize human performance tools/procedures (a personnel-error type theme). Block 13 rows contain only N/A/NIA entries — no specific system/component/manufacturer coded, consistent with this being a procedural/human-performance event rather than an equipment failure. No previous occurrences referenced (Section F is blank) — no SIMILAR_TO edge or stub LER emitted. AF pumps (1A, 1B) were manually started as an operator response, not a failure; not modeled as failure modes. No backup systems stated as operable during an inoperability window (RPS functioned as designed, not a 'backup' in the BACKED_UP_BY sense) — no BACKED_UP_BY edges emitted."
+}

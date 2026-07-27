@@ -1,0 +1,370 @@
+{
+  "ler_number": "318-2023-001-01",
+  "identity": {
+    "accession_number": "ML23272A104",
+    "docket": "05000318",
+    "plant_name": "Calvert Cliffs",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2023-03-11",
+    "report_date": "2023-09-29",
+    "operating_mode": "3",
+    "power_level": 2,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Condition Prohibited by Technical Specifications due to Inoperable Nuclear Instrumentation at Very Low Power"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "B",
+      "system": "IG",
+      "component": "AMP",
+      "manufacturer": "G030",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "the most likely cause for the signal being pegged low at very low power levels is due to degraded conditions in the signal processing circuits...degraded instrumentation in the measurement channel which caused inconsistent operation/indication of the WRNI at very low power levels, which did not support assumptions in the Operability Evaluation",
+    "cause_code": "B",
+    "category": "Design/Manufacturing/Installation",
+    "theme": "Degraded instrument signal-processing circuits invalidated Operability Evaluation assumptions",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 318-2023-001-01",
+      "properties": {
+        "match_key": "LER:318-2023-001-01"
+      },
+      "type": "LER",
+      "key": "318-2023-001-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:318-2023-001-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Calvert Cliffs Unit 2",
+      "properties": {
+        "match_key": "Unit:05000318",
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000318",
+      "match_key": "Unit:05000318"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Manufacturing/Installation (B)",
+      "properties": {
+        "match_key": "Cause:Design/Manufacturing/Installation"
+      },
+      "type": "Cause",
+      "cause_code": "B",
+      "category": "Design/Manufacturing/Installation",
+      "theme": "Degraded instrument signal-processing circuits invalidated Operability Evaluation assumptions",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Design/Manufacturing/Installation"
+    },
+    {
+      "id": "sys_ig",
+      "display_name": "Wide Range Nuclear Instrumentation",
+      "properties": {
+        "match_key": "System:IG"
+      },
+      "type": "System",
+      "eiis_code": "IG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:IG"
+    },
+    {
+      "id": "sys_rps",
+      "display_name": "Reactor Protection System",
+      "properties": {
+        "match_key": "System:AB"
+      },
+      "type": "System",
+      "eiis_code": "AB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "protective system affected",
+      "match_key": "System:AB"
+    },
+    {
+      "id": "c_chd",
+      "display_name": "WRNI Channel D Amplifier",
+      "properties": {
+        "match_key": "Component:AMP|Channel-D"
+      },
+      "type": "Component",
+      "eiis_code": "AMP",
+      "identifier": "Channel D",
+      "model": null,
+      "manufacturer_code": "G030",
+      "inferred_code": false,
+      "match_key": "Component:AMP|Channel D"
+    },
+    {
+      "id": "fm_degraded",
+      "display_name": "Degraded signal-processing circuits in WRNI Channel D",
+      "properties": {
+        "match_key": "FailureMode:degraded-signal-processing-circuits-wrni-channel-d"
+      },
+      "type": "FailureMode",
+      "description": "Signal processing circuit degradation caused Channel D indication to remain pegged low at very low reactor power",
+      "match_key": "FailureMode:degraded-signal-processing-circuits-in-wrni-channel-d"
+    },
+    {
+      "id": "fm_pegged",
+      "display_name": "WRNI Channel D indication remained pegged low, failing to recover as assumed",
+      "properties": {
+        "match_key": "FailureMode:wrni-channel-d-pegged-low"
+      },
+      "type": "FailureMode",
+      "description": "Channel D did not return to normal indication near 1E-6% reactor power as assumed by the Operability Evaluation",
+      "match_key": "FailureMode:wrni-channel-d-indication-remained-pegged-low-failing-to-recover-as-assumed"
+    },
+    {
+      "id": "fm_opeval",
+      "display_name": "Operability Evaluation assumptions invalidated / incorrect utilization of OPEVAL process",
+      "properties": {
+        "match_key": "FailureMode:opeval-assumptions-invalidated"
+      },
+      "type": "FailureMode",
+      "description": "Reasonable assurance of operability, based on prior performance and completed maintenance, no longer existed once actual behavior differed from assumptions; Channel Checks were not performed per TS Surveillance Requirements due to incorrect utilization of the operability evaluation process",
+      "match_key": "FailureMode:operability-evaluation-assumptions-invalidated-incorrect-utilization-of-opeval-process"
+    },
+    {
+      "id": "fm_tsviol",
+      "display_name": "TS Required Actions/Completion Times not met; LCO 3.0.4 mode entry violation",
+      "properties": {
+        "match_key": "FailureMode:ts-required-actions-not-met"
+      },
+      "type": "FailureMode",
+      "description": "With Channel D (and later Channel B in bypass) inoperable, TS 3.3.2 and TS 3.3.1 required actions were not completed within required completion times, and Unit 2 entered Mode 2 without satisfying LCO 3.0.4",
+      "match_key": "FailureMode:ts-required-actions-completion-times-not-met-lco-3-0-4-mode-entry-violation"
+    },
+    {
+      "id": "cons_prohibited",
+      "display_name": "Condition prohibited by Technical Specifications (TS 3.3.1/3.3.2 non-compliance)",
+      "properties": {
+        "match_key": "Consequence:condition-prohibited-by-technical-specifications"
+      },
+      "type": "Consequence",
+      "start": "2023-03-11T20:27",
+      "end": "2023-03-12T22:50",
+      "duration": "~26:23",
+      "tz": null,
+      "match_key": "Consequence:condition-prohibited-by-technical-specifications-ts-3-3-1-3-3-2-non-compliance"
+    },
+    {
+      "id": "ca_opeval_rev",
+      "display_name": "Revise Operability Evaluation to incorporate pegged-low behavior at very low power",
+      "properties": {
+        "match_key": "CorrectiveAction:revise-operability-evaluation"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-operability-evaluation-to-incorporate-pegged-low-behavior-at-very-low-power"
+    },
+    {
+      "id": "ca_training",
+      "display_name": "Enhance operator training on operability evaluation process implementation",
+      "properties": {
+        "match_key": "CorrectiveAction:enhance-operator-training"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:enhance-operator-training-on-operability-evaluation-process-implementation"
+    },
+    {
+      "id": "ca_troubleshoot",
+      "display_name": "Troubleshoot and repair Channel D instrumentation prior to next RFO startup",
+      "properties": {
+        "match_key": "CorrectiveAction:troubleshoot-repair-channel-d"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:troubleshoot-and-repair-channel-d-instrumentation-prior-to-next-rfo-startup"
+    },
+    {
+      "id": "mfr_gamma",
+      "display_name": "Gamma Metrics",
+      "properties": {
+        "match_key": "Manufacturer:G030"
+      },
+      "type": "Manufacturer",
+      "code": "G030",
+      "match_key": "Manufacturer:G030"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion",
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_nureg",
+      "display_name": "NUREG-1022, Revision 3",
+      "properties": {
+        "type": "standard/guidance",
+        "match_key": "RegulatoryReference:nureg-1022-rev-3"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:nureg-1022-revision-3"
+    },
+    {
+      "id": "rr_ts331",
+      "display_name": "TS 3.3.1 RPS Instrumentation-Operating",
+      "properties": {
+        "type": "license-basis",
+        "match_key": "RegulatoryReference:ts-3-3-1"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ts-3-3-1-rps-instrumentation-operating"
+    },
+    {
+      "id": "rr_ts332",
+      "display_name": "TS 3.3.2 RPS Instrumentation-Shutdown",
+      "properties": {
+        "type": "license-basis",
+        "match_key": "RegulatoryReference:ts-3-3-2"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ts-3-3-2-rps-instrumentation-shutdown"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_nureg",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ig",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rps",
+      "evidence": null
+    },
+    {
+      "source": "c_chd",
+      "relation": "PART_OF",
+      "target": "sys_ig",
+      "evidence": null
+    },
+    {
+      "source": "c_chd",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_gamma",
+      "evidence": null
+    },
+    {
+      "source": "fm_degraded",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_degraded",
+      "relation": "LEADS_TO",
+      "target": "fm_pegged",
+      "evidence": null
+    },
+    {
+      "source": "fm_pegged",
+      "relation": "LEADS_TO",
+      "target": "fm_opeval",
+      "evidence": null
+    },
+    {
+      "source": "fm_opeval",
+      "relation": "LEADS_TO",
+      "target": "fm_tsviol",
+      "evidence": null
+    },
+    {
+      "source": "fm_tsviol",
+      "relation": "LEADS_TO",
+      "target": "cons_prohibited",
+      "evidence": null
+    },
+    {
+      "source": "cons_prohibited",
+      "relation": "MITIGATED_BY",
+      "target": "ca_opeval_rev",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_opeval_rev",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_training",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_troubleshoot",
+      "evidence": null
+    }
+  ],
+  "chain": "degraded signal-processing circuits [cause B] -> WRNI Channel D indication pegged low, failed to recover as assumed -> Operability Evaluation assumptions invalidated / OPEVAL process misapplied -> TS 3.3.1/3.3.2 required actions and LCO 3.0.4 not met -> condition prohibited by Technical Specifications",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Event date discrepancy: form block gives 2023-03-11 (when RTCBs closed / condition existed retroactively), but declaration of inoperability occurred 2023-03-12 10:40; narrative's condition-prior-to-event section also cites 2023-03-11. Plant/unit/reactor-type/vendor not populated in FORM-366 FIELDS identity block but taken from narrative header ('Combustion Engineering Pressurized Water Reactor'). No previous similar occurrences found per licensee's 10-year review (Section G) — therefore no SIMILAR_TO edge or stub LER emitted. EIIS code AB (RPS) and IG (WRNI) both explicitly given in narrative/block-13; AMP is the component code for the amplifier per Section H component failure data table."
+}

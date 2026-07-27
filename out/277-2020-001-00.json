@@ -1,0 +1,306 @@
+{
+  "ler_number": "277-2020-001-00",
+  "identity": {
+    "accession_number": "ML20115E369",
+    "docket": "05000277",
+    "plant_name": "Peach Bottom",
+    "unit": 2,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2020-02-26",
+    "report_date": "2020-04-24",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Licensee Event Report (LER) 2-20-001"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The cause of the event was inadequate venting of the intercooler coolant system during maintenance. Venting was performed during the start of one of the initial PMT runs and not performed when the engine was hot.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "inadequate post-maintenance venting procedure",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 277-2020-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "277-2020-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:277-2020-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Peach Bottom Unit 2",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000277",
+      "match_key": "Unit:05000277"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "inadequate post-maintenance venting procedure",
+      "proximate_text": "The cause of the event was inadequate venting of the intercooler coolant system during maintenance. Venting was performed during the start of one of the initial PMT runs and not performed when the engine was hot.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_dg",
+      "display_name": "Emergency Diesel Generator",
+      "properties": {
+        "unit_designator": "E-1"
+      },
+      "type": "System",
+      "eiis_code": "DG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:DG"
+    },
+    {
+      "id": "c_intercooler",
+      "display_name": "Intercooler coolant system",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "E-1 intercooler coolant system",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:intercooler-coolant-system"
+    },
+    {
+      "id": "c_pump",
+      "display_name": "Intercooler coolant pump",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:intercooler-coolant-pump"
+    },
+    {
+      "id": "fm_air_intro",
+      "display_name": "Air introduced into intercooler coolant system during maintenance",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Air entered the intercooler coolant and jacket water systems when they were drained and refilled for planned maintenance beginning 1/26/20.",
+      "match_key": "FailureMode:air-introduced-into-intercooler-coolant-system-during-maintenance"
+    },
+    {
+      "id": "fm_inadequate_vent",
+      "display_name": "Inadequate venting following maintenance",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Venting was performed during an initial PMT run rather than when the engine was hot/loaded, failing to remove entrained air; vendor later recommended venting be done when hot and loaded.",
+      "match_key": "FailureMode:inadequate-venting-following-maintenance"
+    },
+    {
+      "id": "fm_air_remained",
+      "display_name": "Residual air remained in coolant system undetected",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Post-maintenance testing did not identify the retained air condition prior to returning the diesel generator to operable status on 2/7/20.",
+      "match_key": "FailureMode:residual-air-remained-in-coolant-system-undetected"
+    },
+    {
+      "id": "fm_pump_no_pressure",
+      "display_name": "Coolant pump unable to establish normal system pressure",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Air in the intercooler coolant system prevented the pump from establishing normal system pressure during the 2/26/20 surveillance start.",
+      "match_key": "FailureMode:coolant-pump-unable-to-establish-normal-system-pressure"
+    },
+    {
+      "id": "fm_low_pressure_trip",
+      "display_name": "E-1 tripped on low intercooler coolant pressure",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Engine automatically tripped at approximately 2129 on 2/26/20 due to low intercooler coolant pressure after reaching full speed.",
+      "match_key": "FailureMode:e-1-tripped-on-low-intercooler-coolant-pressure"
+    },
+    {
+      "id": "cons_dg_inop",
+      "display_name": "E-1 Emergency Diesel Generator inoperable / TS 3.8.1 not complied with",
+      "properties": {
+        "tech_spec_noncompliance_duration": "19 days 18.7 hours (2/7/20 0230 to 2/26/20 2110)"
+      },
+      "type": "Consequence",
+      "start": "2020-02-07T02:30",
+      "end": "2020-02-27T20:30",
+      "duration": "20 days 18 hours",
+      "tz": null,
+      "match_key": "Consequence:e-1-emergency-diesel-generator-inoperable-ts-3-8-1-not-complied-with"
+    },
+    {
+      "id": "ca_vent",
+      "display_name": "Vent intercooler coolant system and return E-1 to operable",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:vent-intercooler-coolant-system-and-return-e-1-to-operable"
+    },
+    {
+      "id": "ca_revise_proc",
+      "display_name": "Revise procedures to require venting when engine is hot and loaded",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-procedures-to-require-venting-when-engine-is-hot-and-loaded"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts381",
+      "display_name": "TS LCO 3.8.1",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-lco-3-8-1"
+    },
+    {
+      "id": "ler_prev_e1",
+      "display_name": "Previous E-1 diesel generator air-in-system trip events (stub, no LER number cited)",
+      "properties": {},
+      "type": "LER",
+      "key": "unknown",
+      "stub": true,
+      "title": "Previous cases of E-1 tripping due to air in the system during maintenance outages",
+      "plant": "Peach Bottom Atomic Power Station",
+      "match_key": "LER:unknown"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts381",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_dg",
+      "evidence": null
+    },
+    {
+      "source": "c_intercooler",
+      "relation": "PART_OF",
+      "target": "sys_dg",
+      "evidence": null
+    },
+    {
+      "source": "c_pump",
+      "relation": "PART_OF",
+      "target": "c_intercooler",
+      "evidence": null
+    },
+    {
+      "source": "fm_air_intro",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_air_intro",
+      "relation": "LEADS_TO",
+      "target": "fm_inadequate_vent",
+      "evidence": null
+    },
+    {
+      "source": "fm_inadequate_vent",
+      "relation": "LEADS_TO",
+      "target": "fm_air_remained",
+      "evidence": null
+    },
+    {
+      "source": "fm_air_remained",
+      "relation": "LEADS_TO",
+      "target": "fm_pump_no_pressure",
+      "evidence": null
+    },
+    {
+      "source": "fm_pump_no_pressure",
+      "relation": "LEADS_TO",
+      "target": "fm_low_pressure_trip",
+      "evidence": null
+    },
+    {
+      "source": "fm_low_pressure_trip",
+      "relation": "LEADS_TO",
+      "target": "cons_dg_inop",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_vent",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_revise_proc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev_e1",
+      "evidence": null
+    }
+  ],
+  "chain": "air introduced into intercooler coolant system during maintenance [cause TBD] -> inadequate venting after maintenance -> residual air undetected during PMT -> pump unable to establish normal coolant pressure -> low intercooler pressure trip on 2/26/20 -> E-1 EDG inoperable for 20d18h, TS 3.8.1 not complied with",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4"
+  ],
+  "notes": "No official cause code was assigned in block 13/block 18 data provided (block_13 empty, cause_code TBD); cause node marked provisional per rule 4. Previous similar occurrences are described only generically ('there have been previous cases where E-1 has tripped due to air in the system') without a specific LER number, plant/unit, or title being cited, so the stub LER node uses key 'unknown' and captures the narrative description; if a specific prior LER number is later identified this stub should be corrected. No backup EDGs modeled as BACKED_UP_BY because the narrative describes E-2/E-3/E-4 surveillance tests as separate, unrelated activities, not as backups actively covering E-1's inoperability window in a stated-operable capacity for this failure chain (they were each briefly inoperable themselves during their own tests) -- TS analysis on multiple-DG-inoperable overlap is noted in Analysis but does not describe a backup relationship to the E-1 failure chain itself, so omitted per rule 6 ambiguity guidance really it's DESIGN CONTEXT / redundancy discussion, not a backup edge target for the E-1 consequence node."
+}

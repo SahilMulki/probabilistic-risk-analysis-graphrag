@@ -1,0 +1,438 @@
+{
+  "ler_number": "298-2023-002-01",
+  "identity": {
+    "accession_number": "ML24158A065",
+    "docket": "05000298",
+    "plant_name": "Cooper",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2023-10-22",
+    "report_date": "2024-06-06",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Licensee Event Report No. 2023-002-01 Cooper Nuclear Station, Docket No. 50-298, DPR-46"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The cause of the open hatch has been determined to be looseness of the latching mechanism likely due to normal vibrations from system operations.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "latch loosened by vibration, allowing exhaust duct hatch to open",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 298-2023-002-01",
+      "properties": {},
+      "type": "LER",
+      "key": "298-2023-002-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:298-2023-002-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Cooper Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000298",
+      "match_key": "Unit:05000298"
+    },
+    {
+      "id": "cause",
+      "display_name": "Undetermined / TBD",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "latch loosened by vibration, allowing exhaust duct hatch to open",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_sgt",
+      "display_name": "Standby Gas Treatment",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BH",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; operable throughout event",
+      "match_key": "System:BH"
+    },
+    {
+      "id": "sys_rbhv",
+      "display_name": "Reactor Building Heating and Ventilation",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "VA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "system involved; controls Secondary Containment pressure",
+      "match_key": "System:VA"
+    },
+    {
+      "id": "sys_rb",
+      "display_name": "Reactor Building",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "NG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "Secondary Containment subsystem",
+      "match_key": "System:NG"
+    },
+    {
+      "id": "sys_secondary_containment",
+      "display_name": "Secondary Containment",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "system declared inoperable",
+      "match_key": "System:secondary-containment"
+    },
+    {
+      "id": "c_fan",
+      "display_name": "Exhaust Fan EF-R-1B",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "EF-R-1B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:exhaust-fan-ef-r-1b"
+    },
+    {
+      "id": "c_hatch",
+      "display_name": "First discharge duct hatch for EF-R-1B",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "first discharge duct hatch, EF-R-1B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:first-discharge-duct-hatch-for-ef-r-1b"
+    },
+    {
+      "id": "c_latch",
+      "display_name": "Hatch latching mechanism",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:hatch-latching-mechanism"
+    },
+    {
+      "id": "fm_latch_loose",
+      "display_name": "Latching mechanism loosened by vibration",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Looseness of the latching mechanism likely due to normal vibrations from system operations",
+      "match_key": "FailureMode:latching-mechanism-loosened-by-vibration"
+    },
+    {
+      "id": "fm_hatch_open",
+      "display_name": "Discharge duct hatch opened",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "First discharge duct hatch for EF-R-1B opened, allowing exhaust air to recirculate",
+      "match_key": "FailureMode:discharge-duct-hatch-opened"
+    },
+    {
+      "id": "fm_dp_transient",
+      "display_name": "Reduced exhaust flow / Secondary Containment DP transient",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Reduced mass air flow to atmosphere caused reduced vacuum and increased Secondary Containment pressure",
+      "match_key": "FailureMode:reduced-exhaust-flow-secondary-containment-dp-transient"
+    },
+    {
+      "id": "cons_sc_inop",
+      "display_name": "Secondary Containment declared inoperable",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2023-10-22T11:50",
+      "end": "2023-10-22T13:11",
+      "duration": "approximately 80 seconds above TS limit; ~81 minutes LCO entry",
+      "tz": null,
+      "match_key": "Consequence:secondary-containment-declared-inoperable"
+    },
+    {
+      "id": "ca_close_hatch",
+      "display_name": "Close and verify duct hatch secured",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:close-and-verify-duct-hatch-secured"
+    },
+    {
+      "id": "ca_examine_hatches",
+      "display_name": "Examine RB HV ventilation ductwork hatches and repair as needed",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:examine-rb-hv-ventilation-ductwork-hatches-and-repair-as-needed"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(v)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v"
+    },
+    {
+      "id": "rr_ts_3641",
+      "display_name": "TS LCO 3.6.4.1",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ts-lco-3-6-4-1"
+    },
+    {
+      "id": "ler_prev_2022",
+      "display_name": "Cooper Nuclear Station LER 2022-001-00 - Secondary Containment inoperable due to DP rise",
+      "properties": {},
+      "type": "LER",
+      "key": "298-2022-001-00",
+      "stub": true,
+      "title": "Secondary Containment declared inoperable due to a rise in differential pressure",
+      "plant": "Cooper Nuclear Station",
+      "match_key": "LER:298-2022-001-00"
+    },
+    {
+      "id": "ler_prev_2021",
+      "display_name": "Cooper Nuclear Station LER 2021-001-00 - Secondary Containment inoperable due to DP rise",
+      "properties": {},
+      "type": "LER",
+      "key": "298-2021-001-00",
+      "stub": true,
+      "title": "Secondary Containment declared inoperable due to a rise in differential pressure",
+      "plant": "Cooper Nuclear Station",
+      "match_key": "LER:298-2021-001-00"
+    },
+    {
+      "id": "ler_prev_2020_004",
+      "display_name": "Cooper Nuclear Station LER 2020-004-00 - Secondary Containment inoperable due to DP rise",
+      "properties": {},
+      "type": "LER",
+      "key": "298-2020-004-00",
+      "stub": true,
+      "title": "Secondary Containment declared inoperable due to a rise in differential pressure",
+      "plant": "Cooper Nuclear Station",
+      "match_key": "LER:298-2020-004-00"
+    },
+    {
+      "id": "ler_prev_2020_002",
+      "display_name": "Cooper Nuclear Station LER 2020-002-00 - Secondary Containment inoperable due to DP rise",
+      "properties": {},
+      "type": "LER",
+      "key": "298-2020-002-00",
+      "stub": true,
+      "title": "Secondary Containment declared inoperable due to a rise in differential pressure",
+      "plant": "Cooper Nuclear Station",
+      "match_key": "LER:298-2020-002-00"
+    },
+    {
+      "id": "ler_prev_2020_001",
+      "display_name": "Cooper Nuclear Station LER 2020-001-00 - Secondary Containment breached (airlock doors open)",
+      "properties": {},
+      "type": "LER",
+      "key": "298-2020-001-00",
+      "stub": true,
+      "title": "Secondary Containment breached due to both airlock doors in the Reactor Building being inadvertently open simultaneously",
+      "plant": "Cooper Nuclear Station",
+      "match_key": "LER:298-2020-001-00"
+    },
+    {
+      "id": "ler_prev_2019",
+      "display_name": "Cooper Nuclear Station LER 2019-002-00 - Secondary Containment inoperable due to DP rise",
+      "properties": {},
+      "type": "LER",
+      "key": "298-2019-002-00",
+      "stub": true,
+      "title": "Secondary Containment declared inoperable due to a rise in differential pressure",
+      "plant": "Cooper Nuclear Station",
+      "match_key": "LER:298-2019-002-00"
+    },
+    {
+      "id": "ler_prev_2014",
+      "display_name": "Cooper Nuclear Station LER 2014-001-00 - Secondary Containment inoperable due to DP rise",
+      "properties": {},
+      "type": "LER",
+      "key": "298-2014-001-00",
+      "stub": true,
+      "title": "Secondary Containment declared inoperable due to a rise in differential pressure",
+      "plant": "Cooper Nuclear Station",
+      "match_key": "LER:298-2014-001-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts_3641",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_secondary_containment",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rbhv",
+      "evidence": null
+    },
+    {
+      "source": "sys_rb",
+      "relation": "PART_OF",
+      "target": "sys_secondary_containment",
+      "evidence": null
+    },
+    {
+      "source": "c_hatch",
+      "relation": "PART_OF",
+      "target": "c_fan",
+      "evidence": null
+    },
+    {
+      "source": "fm_latch_loose",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_latch_loose",
+      "relation": "LEADS_TO",
+      "target": "fm_hatch_open",
+      "evidence": null
+    },
+    {
+      "source": "fm_hatch_open",
+      "relation": "LEADS_TO",
+      "target": "fm_dp_transient",
+      "evidence": null
+    },
+    {
+      "source": "fm_dp_transient",
+      "relation": "LEADS_TO",
+      "target": "cons_sc_inop",
+      "evidence": null
+    },
+    {
+      "source": "cons_sc_inop",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_sgt",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_close_hatch",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_examine_hatches",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev_2022",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev_2021",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev_2020_004",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev_2020_002",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev_2020_001",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev_2019",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev_2014",
+      "evidence": null
+    }
+  ],
+  "chain": "latching mechanism loosened by vibration [cause TBD] -> first discharge duct hatch for EF-R-1B opens -> exhaust air recirculates, reducing net exhaust flow -> Secondary Containment DP rises above -0.25 in wg -> Secondary Containment declared inoperable (~80 sec above TS limit) [backup SGT available/operable; auto-restored without operator action]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code is TBD/provisional per FORM-366 fields despite narrative providing a specific proximate cause (loose latch from vibration); category kept provisional per rule 4. Six previous similar events referenced by LER number stubs, keys copied exactly as stated with leading unit digit '1-'. Hatch is located inside Secondary Containment isolation boundary; engineering review found no loss of safety function, so this is modeled as a non-consequential DP excursion rather than an SSFF."
+}

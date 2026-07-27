@@ -1,0 +1,343 @@
+{
+  "ler_number": "250-2023-03-00",
+  "identity": {
+    "accession_number": "ML23324A275",
+    "docket": "05000250",
+    "plant_name": "Turkey Point",
+    "unit": 3,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2023-09-22",
+    "report_date": "2023-11-20",
+    "operating_mode": null,
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Grid Disturbance in Switchyard Causes Automatic Reactor Trip"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "C",
+      "system": "FK",
+      "component": "87",
+      "manufacturer": "W120",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The magnitude of the lightning strike caused a larger than normal voltage difference between the switchyard and plant ground grids. Because the string bus differential relay is tied to the switchyard ground system and the generator lockout is tied to the plant ground system, an induced voltage was created that arced across the differential relay contact.",
+    "cause_code": "C",
+    "category": "External Cause",
+    "theme": "Lightning-induced ground-grid voltage differential",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 250-2023-003-00",
+      "properties": {},
+      "type": "LER",
+      "key": "250-2023-03-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:250-2023-03-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Turkey Point Unit 3",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000250",
+      "match_key": "Unit:05000250"
+    },
+    {
+      "id": "cause",
+      "display_name": "External Cause (C)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "C",
+      "category": "External Cause",
+      "theme": "Lightning-induced ground-grid voltage differential",
+      "proximate_text": "The magnitude of the lightning strike caused a larger than normal voltage difference between the switchyard and plant ground grids. Because the string bus differential relay is tied to the switchyard ground system and the generator lockout is tied to the plant ground system, an induced voltage was created that arced across the differential relay contact.",
+      "provisional": false,
+      "match_key": "Cause:External Cause"
+    },
+    {
+      "id": "sys_fk",
+      "display_name": "Switchyard",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "FK",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:FK"
+    },
+    {
+      "id": "sys_gen",
+      "display_name": "Generator",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "GEN",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:GEN"
+    },
+    {
+      "id": "sys_trb",
+      "display_name": "Turbine",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "TRB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:TRB"
+    },
+    {
+      "id": "sys_je",
+      "display_name": "Reactor Protection System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JE",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JE"
+    },
+    {
+      "id": "sys_ba",
+      "display_name": "Auxiliary Feedwater System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "actuated to remove decay heat; operable",
+      "match_key": "System:BA"
+    },
+    {
+      "id": "c_relay87",
+      "display_name": "String bus differential relay",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "87",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": "W120",
+      "inferred_code": false,
+      "match_key": "Component:87"
+    },
+    {
+      "id": "c_contact93",
+      "display_name": "Relay contact",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "93",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:93"
+    },
+    {
+      "id": "fm_voltage",
+      "display_name": "Induced voltage differential between switchyard and plant ground grids",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Lightning strike caused larger than normal voltage difference between switchyard and plant ground systems",
+      "match_key": "FailureMode:induced-voltage-differential-between-switchyard-and-plant-ground-grids"
+    },
+    {
+      "id": "fm_arc",
+      "display_name": "Relay contact arced/bypassed",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Induced voltage arced across the differential relay contact, causing it to be bypassed",
+      "match_key": "FailureMode:relay-contact-arced-bypassed"
+    },
+    {
+      "id": "fm_lockout",
+      "display_name": "Generator lockout actuated",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Bypassed contact in string bus differential relay actuated a generator lockout",
+      "match_key": "FailureMode:generator-lockout-actuated"
+    },
+    {
+      "id": "fm_turbtrip",
+      "display_name": "Turbine trip",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Generator lockout tripped the turbine",
+      "match_key": "FailureMode:turbine-trip"
+    },
+    {
+      "id": "cons_trip",
+      "display_name": "Automatic RPS actuation / reactor trip",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2023-09-22T18:19",
+      "end": null,
+      "duration": null,
+      "tz": "EDT",
+      "match_key": "Consequence:automatic-rps-actuation-reactor-trip"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace string bus differential relay",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-string-bus-differential-relay"
+    },
+    {
+      "id": "ca_review",
+      "display_name": "Review ground grid and lightning protection scheme",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:review-ground-grid-and-lightning-protection-scheme"
+    },
+    {
+      "id": "mfr_w",
+      "display_name": "Westinghouse",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "W120",
+      "match_key": "Manufacturer:W120"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_fk",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_je",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ba",
+      "evidence": null
+    },
+    {
+      "source": "c_relay87",
+      "relation": "PART_OF",
+      "target": "sys_fk",
+      "evidence": null
+    },
+    {
+      "source": "c_contact93",
+      "relation": "PART_OF",
+      "target": "c_relay87",
+      "evidence": null
+    },
+    {
+      "source": "fm_voltage",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_voltage",
+      "relation": "LEADS_TO",
+      "target": "fm_arc",
+      "evidence": null
+    },
+    {
+      "source": "fm_arc",
+      "relation": "LEADS_TO",
+      "target": "fm_lockout",
+      "evidence": null
+    },
+    {
+      "source": "fm_lockout",
+      "relation": "LEADS_TO",
+      "target": "fm_turbtrip",
+      "evidence": null
+    },
+    {
+      "source": "fm_turbtrip",
+      "relation": "LEADS_TO",
+      "target": "cons_trip",
+      "evidence": null
+    },
+    {
+      "source": "cons_trip",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_ba",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_review",
+      "evidence": null
+    },
+    {
+      "source": "c_relay87",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_w",
+      "evidence": null
+    }
+  ],
+  "chain": "lightning-induced ground-grid voltage differential [cause C] -> relay contact arcs/bypassed -> generator lockout actuated -> turbine trip -> automatic RPS actuation / reactor trip [backup AFW actuated to remove decay heat]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "No previous similar occurrence identified per narrative's 5-year review; no stub LER emitted. Component code '87' for the differential relay and '93' for the contact taken directly from EIIS brackets in narrative. AFW actuation described as expected/normal post-trip response, treated as an operable backup during the event per narrative wording ('actuation of the AFW system to remove decay heat...expected condition after reactor trips')."
+}

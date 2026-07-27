@@ -1,0 +1,421 @@
+{
+  "ler_number": "244-2023-003-01",
+  "identity": {
+    "accession_number": "ML24067A253",
+    "docket": "05000244",
+    "plant_name": "Ginna",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2023-10-12",
+    "report_date": "2024-03-07",
+    "operating_mode": null,
+    "power_level": 20,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Supplement to LER 2023-003, Manual Reactor Trip due to Degraded Condenser Vacuum from Lowering Main Steam to Air Ejectors and Auxiliary Feedwater Actuation due to low Steam Generator Level"
+  },
+  "reporting_basis": {
+    "reported_under": [],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "the loss of supply air to the Main Air Ejector Steam Pressure Control valve was the result of the Instrument Air Pressure Control Valve failing to provide adequate output pressure to maintain the valve in the open position. A failure analysis concluded the supply air flow-path of the Instrument Air Pressure Control Valve was obstructed due to poor manufacturing quality resulting in lowered output pressure.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "manufacturing-defect-induced instrument air regulator failure",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 244-2023-003-01",
+      "properties": {
+        "match_key": "LER:244-2023-003-01"
+      },
+      "type": "LER",
+      "key": "244-2023-003-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:244-2023-003-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Ginna Unit 1",
+      "properties": {
+        "match_key": "Unit:05000244",
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000244",
+      "match_key": "Unit:05000244"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {
+        "match_key": "Cause:provisional"
+      },
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "manufacturing-defect-induced instrument air regulator failure",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_ia",
+      "display_name": "Instrument Air System",
+      "properties": {
+        "match_key": "System:LD"
+      },
+      "type": "System",
+      "eiis_code": "LD",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:LD"
+    },
+    {
+      "id": "sys_ms",
+      "display_name": "Main Steam / Air Ejector Steam Supply",
+      "properties": {
+        "match_key": "System:main-steam-air-ejector-steam-supply"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:main-steam-air-ejector-steam-supply"
+    },
+    {
+      "id": "sys_afw",
+      "display_name": "Auxiliary Feedwater System",
+      "properties": {
+        "match_key": "System:auxiliary-feedwater-system"
+      },
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "actuated on low SG level",
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "c_iapcv",
+      "display_name": "Instrument Air Pressure Control Valve",
+      "properties": {
+        "manufacturer_model": "Dresser Masoneilan Model 77-20",
+        "match_key": "Component:PCV|instrument-air-pressure-control-valve"
+      },
+      "type": "Component",
+      "eiis_code": "PCV",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:PCV"
+    },
+    {
+      "id": "c_maesv",
+      "display_name": "Main Air Ejector Steam Pressure Control AOV",
+      "properties": {
+        "match_key": "Component:main-air-ejector-steam-pressure-control-aov"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:main-air-ejector-steam-pressure-control-aov"
+    },
+    {
+      "id": "fm_manufacture",
+      "display_name": "Flow-path obstruction in Instrument Air Pressure Control Valve due to poor manufacturing quality",
+      "properties": {
+        "match_key": "FailureMode:flow-path-obstruction-poor-manufacturing"
+      },
+      "type": "FailureMode",
+      "description": null,
+      "match_key": "FailureMode:flow-path-obstruction-in-instrument-air-pressure-control-valve-due-to-poor-manufacturing-quality"
+    },
+    {
+      "id": "fm_lowoutput",
+      "display_name": "Instrument Air Pressure Control Valve fails to provide adequate output pressure",
+      "properties": {
+        "match_key": "FailureMode:iapcv-inadequate-output-pressure"
+      },
+      "type": "FailureMode",
+      "description": null,
+      "match_key": "FailureMode:instrument-air-pressure-control-valve-fails-to-provide-adequate-output-pressure"
+    },
+    {
+      "id": "fm_aovclose",
+      "display_name": "Main Air Ejector Steam Pressure Control AOV loses supply air and closes (~20% open, closing)",
+      "properties": {
+        "match_key": "FailureMode:maesv-closes-loss-of-air"
+      },
+      "type": "FailureMode",
+      "description": null,
+      "match_key": "FailureMode:main-air-ejector-steam-pressure-control-aov-loses-supply-air-and-closes-20-open-closing"
+    },
+    {
+      "id": "fm_lossvacuum",
+      "display_name": "Loss of steam supply to air ejectors / degraded condenser vacuum",
+      "properties": {
+        "match_key": "FailureMode:degraded-condenser-vacuum"
+      },
+      "type": "FailureMode",
+      "description": null,
+      "match_key": "FailureMode:loss-of-steam-supply-to-air-ejectors-degraded-condenser-vacuum"
+    },
+    {
+      "id": "fm_backpressure",
+      "display_name": "Main condenser back pressure exceeds 5-minute turbine operating restriction",
+      "properties": {
+        "match_key": "FailureMode:back-pressure-restriction-exceeded"
+      },
+      "type": "FailureMode",
+      "description": null,
+      "match_key": "FailureMode:main-condenser-back-pressure-exceeds-5-minute-turbine-operating-restriction"
+    },
+    {
+      "id": "cons_trip",
+      "display_name": "Manual reactor trip / AFW actuation on low SG level",
+      "properties": {
+        "match_key": "Consequence:manual-reactor-trip-afw-actuation"
+      },
+      "type": "Consequence",
+      "start": "2023-10-12T21:27",
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:manual-reactor-trip-afw-actuation-on-low-sg-level"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace Instrument Air Pressure Control Valve",
+      "properties": {
+        "match_key": "CorrectiveAction:replace-instrument-air-pressure-control-valve"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-instrument-air-pressure-control-valve"
+    },
+    {
+      "id": "ca_replace_spv",
+      "display_name": "Replace Dresser Masoneilan Model 77-20 regulators at SPV locations",
+      "properties": {
+        "match_key": "CorrectiveAction:replace-77-20-regulators-spv"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-dresser-masoneilan-model-77-20-regulators-at-spv-locations"
+    },
+    {
+      "id": "ca_challenge_team",
+      "display_name": "Create independent cross-functional SPV Challenge team",
+      "properties": {
+        "match_key": "CorrectiveAction:spv-challenge-team"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:create-independent-cross-functional-spv-challenge-team"
+    },
+    {
+      "id": "ca_leadership_training",
+      "display_name": "Conduct Leadership Training Case Study on event contributing causes",
+      "properties": {
+        "match_key": "CorrectiveAction:leadership-training-case-study"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:conduct-leadership-training-case-study-on-event-contributing-causes"
+    },
+    {
+      "id": "ca_upgrade_spv",
+      "display_name": "Upgrade Air Ejector Steam Control AOV from Low to Medium Risk SPV with elimination strategy",
+      "properties": {
+        "match_key": "CorrectiveAction:upgrade-aov-spv-risk"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:upgrade-air-ejector-steam-control-aov-from-low-to-medium-risk-spv-with-elimination-strategy"
+    },
+    {
+      "id": "mfr_masoneilan",
+      "display_name": "Dresser Masoneilan",
+      "properties": {
+        "model": "77-20",
+        "match_key": "Manufacturer:dresser-masoneilan"
+      },
+      "type": "Manufacturer",
+      "code": null,
+      "match_key": "Manufacturer:dresser-masoneilan"
+    },
+    {
+      "id": "rr_ufsar",
+      "display_name": "UFSAR 15.0.8.2",
+      "properties": {
+        "match_key": "RegulatoryReference:ufsar-15-0-8-2"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:ufsar-15-0-8-2"
+    },
+    {
+      "id": "rr_10cfr20",
+      "display_name": "10 CFR 20 - Standards for Protection Against Radiation",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-20"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "standard/guidance",
+      "match_key": "RegulatoryReference:10-cfr-20-standards-for-protection-against-radiation"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ia",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ms",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_afw",
+      "evidence": null
+    },
+    {
+      "source": "c_iapcv",
+      "relation": "PART_OF",
+      "target": "sys_ia",
+      "evidence": null
+    },
+    {
+      "source": "c_maesv",
+      "relation": "PART_OF",
+      "target": "sys_ms",
+      "evidence": null
+    },
+    {
+      "source": "fm_manufacture",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_manufacture",
+      "relation": "LEADS_TO",
+      "target": "fm_lowoutput",
+      "evidence": null
+    },
+    {
+      "source": "fm_lowoutput",
+      "relation": "LEADS_TO",
+      "target": "fm_aovclose",
+      "evidence": null
+    },
+    {
+      "source": "fm_aovclose",
+      "relation": "LEADS_TO",
+      "target": "fm_lossvacuum",
+      "evidence": null
+    },
+    {
+      "source": "fm_lossvacuum",
+      "relation": "LEADS_TO",
+      "target": "fm_backpressure",
+      "evidence": null
+    },
+    {
+      "source": "fm_backpressure",
+      "relation": "LEADS_TO",
+      "target": "cons_trip",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_spv",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_challenge_team",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_leadership_training",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_upgrade_spv",
+      "evidence": null
+    },
+    {
+      "source": "c_iapcv",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_masoneilan",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ufsar",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_10cfr20",
+      "evidence": null
+    }
+  ],
+  "chain": "poor manufacturing quality obstructs IAPCV flow-path [cause TBD] -> IAPCV fails to provide adequate output pressure -> Main Air Ejector Steam Pressure Control AOV loses air and closes -> loss of steam to air ejectors / degraded condenser vacuum -> back-pressure 5-min restriction exceeded -> manual reactor trip / AFW actuation on low SG level",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code and category left TBD/provisional per FORM-366 fields, despite narrative attributing root cause to manufacturing defect (would suggest category B/Design in other reports) and organizational factors (SPV program). No block_13 rows provided in FORM-366 fields, so left empty. No previous similar LERs were identified per narrative section VI.B, so no SIMILAR_TO edge or stub LER node was created. AFW modeled as involved system since it actuated during the event; other systems described only in passing (e.g., generic condenser) were not modeled."
+}

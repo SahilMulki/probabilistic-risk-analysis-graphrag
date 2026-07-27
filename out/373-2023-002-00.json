@@ -1,0 +1,485 @@
+{
+  "ler_number": "373-2023-002-00",
+  "identity": {
+    "accession_number": "ML23338A183",
+    "docket": "05000373",
+    "plant_name": "La Salle",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2023-10-18",
+    "report_date": "2023-12-04",
+    "operating_mode": null,
+    "power_level": null,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Turbine Stop Valve Limit Switch Failure due to Lubricant Degradation"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "B",
+      "system": "TA",
+      "component": "33",
+      "manufacturer": "N007",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "Analysis attributed the failure to the switch shaft and shaft bearing degraded lubrication causing the shaft to bind in the actuated (Turbine Stop Valve open) position. The cause of the limit switch lubricant degradation was elevated temperatures due to a steam leak in close proximity.",
+    "cause_code": "B",
+    "category": "Design/Manufacturing/Installation",
+    "theme": "Lubricant degradation from steam-leak-induced heat exposure",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 373-2023-002-00",
+      "properties": {
+        "match_key": "LER:373-2023-002-00"
+      },
+      "type": "LER",
+      "key": "373-2023-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:373-2023-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "La Salle Unit 1",
+      "properties": {
+        "match_key": "Unit:05000373",
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000373",
+      "match_key": "Unit:05000373"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Manufacturing/Installation (B)",
+      "properties": {
+        "match_key": "Cause:Design/Manufacturing/Installation"
+      },
+      "type": "Cause",
+      "cause_code": "B",
+      "category": "Design/Manufacturing/Installation",
+      "theme": "Lubricant degradation from steam-leak-induced heat exposure",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Design/Manufacturing/Installation"
+    },
+    {
+      "id": "sys_ta",
+      "display_name": "Main Turbine System",
+      "properties": {
+        "match_key": "System:TA"
+      },
+      "type": "System",
+      "eiis_code": "TA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:TA"
+    },
+    {
+      "id": "sys_rps",
+      "display_name": "Reactor Protection System",
+      "properties": {
+        "match_key": "System:reactor-protection-system"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "affected safety function",
+      "match_key": "System:reactor-protection-system"
+    },
+    {
+      "id": "sys_eocrpt",
+      "display_name": "End of Cycle Recirculation Pump Trip",
+      "properties": {
+        "match_key": "System:eoc-rpt"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "affected safety function",
+      "match_key": "System:end-of-cycle-recirculation-pump-trip"
+    },
+    {
+      "id": "c_limitswitch",
+      "display_name": "Turbine Stop Valve #4 Limit Switch (1C71-N006G)",
+      "properties": {
+        "cat_id": "1791228",
+        "channel": "RPS A2",
+        "match_key": "Component:33|1C71-N006G"
+      },
+      "type": "Component",
+      "eiis_code": "33",
+      "identifier": "1C71-N006G",
+      "model": "EA700-80154",
+      "manufacturer_code": "N007",
+      "inferred_code": false,
+      "match_key": "Component:33|1C71-N006G"
+    },
+    {
+      "id": "c_tsv4",
+      "display_name": "Turbine Stop Valve #4",
+      "properties": {
+        "match_key": "Component:turbine-stop-valve-4"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:turbine-stop-valve-4"
+    },
+    {
+      "id": "fm_steamleak",
+      "display_name": "Steam leak in close proximity to limit switch",
+      "properties": {
+        "match_key": "FailureMode:steam-leak-proximity"
+      },
+      "type": "FailureMode",
+      "description": "A nearby steam leak circumvented previous corrective actions (high-temperature switches, housing modifications), exposing the limit switch to elevated temperatures.",
+      "match_key": "FailureMode:steam-leak-in-close-proximity-to-limit-switch"
+    },
+    {
+      "id": "fm_lubedegrade",
+      "display_name": "Switch shaft/bearing lubricant degraded",
+      "properties": {
+        "match_key": "FailureMode:lubricant-degraded"
+      },
+      "type": "FailureMode",
+      "description": "Elevated temperatures degraded the lubricant in the limit switch shaft and shaft bearing.",
+      "match_key": "FailureMode:switch-shaft-bearing-lubricant-degraded"
+    },
+    {
+      "id": "fm_shaftbind",
+      "display_name": "Switch shaft bound in actuated position",
+      "properties": {
+        "match_key": "FailureMode:shaft-bound-actuated"
+      },
+      "type": "FailureMode",
+      "description": "Degraded lubrication caused the shaft to bind in the actuated (TSV open) position, preventing the switch from returning to shelf state on TSV closure.",
+      "match_key": "FailureMode:switch-shaft-bound-in-actuated-position"
+    },
+    {
+      "id": "fm_switchfail",
+      "display_name": "Limit switch failed to actuate/open during surveillance",
+      "properties": {
+        "match_key": "FailureMode:switch-failed-to-actuate"
+      },
+      "type": "FailureMode",
+      "description": "1C71-N006G failed to actuate (open) upon TSV-4 closure during the September 7, 2023 surveillance test.",
+      "match_key": "FailureMode:limit-switch-failed-to-actuate-open-during-surveillance"
+    },
+    {
+      "id": "cons_inop",
+      "display_name": "RPS Channel A2 (TSV-4) and one EOC-RPT channel inoperable beyond TS completion time",
+      "properties": {
+        "match_key": "Consequence:rps-eocrpt-channel-inoperable"
+      },
+      "type": "Consequence",
+      "start": "2023-09-07",
+      "end": "2023-10-18",
+      "duration": "past inoperability period exceeding 12-hour LCO 3.3.1.1 Condition A completion time",
+      "tz": null,
+      "match_key": "Consequence:rps-channel-a2-tsv-4-and-one-eoc-rpt-channel-inoperable-beyond-ts-completion-time"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace limit switch component and restore channel to OPERABLE",
+      "properties": {
+        "match_key": "CorrectiveAction:replace-limit-switch"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-limit-switch-component-and-restore-channel-to-operable"
+    },
+    {
+      "id": "ca_failanalysis",
+      "display_name": "Perform offsite component failure analysis",
+      "properties": {
+        "match_key": "CorrectiveAction:offsite-failure-analysis"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:perform-offsite-component-failure-analysis"
+    },
+    {
+      "id": "ca_testfreq",
+      "display_name": "Increase testing frequency from 90 to 45 days for Unit 1 RPS A channel switches",
+      "properties": {
+        "match_key": "CorrectiveAction:increase-test-frequency"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:increase-testing-frequency-from-90-to-45-days-for-unit-1-rps-a-channel-switches"
+    },
+    {
+      "id": "ca_reeval",
+      "display_name": "Reevaluate testing frequency following steam leak repairs in next refueling outage",
+      "properties": {
+        "match_key": "CorrectiveAction:reevaluate-test-frequency"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:reevaluate-testing-frequency-following-steam-leak-repairs-in-next-refueling-outage"
+    },
+    {
+      "id": "mfr_namco",
+      "display_name": "NAMCO Controls Corporation",
+      "properties": {
+        "match_key": "Manufacturer:N007"
+      },
+      "type": "Manufacturer",
+      "code": "N007",
+      "match_key": "Manufacturer:N007"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_lco3311",
+      "display_name": "TS LCO 3.3.1.1 (RPS)",
+      "properties": {
+        "match_key": "RegulatoryReference:lco-3-3-1-1"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-lco-3-3-1-1-rps"
+    },
+    {
+      "id": "rr_lco3341",
+      "display_name": "TS LCO 3.3.4.1 (EOC-RPT)",
+      "properties": {
+        "match_key": "RegulatoryReference:lco-3-3-4-1"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-lco-3-3-4-1-eoc-rpt"
+    },
+    {
+      "id": "ler_2019_001",
+      "display_name": "LaSalle Unit 1 LER 373-2019-001-00",
+      "properties": {
+        "match_key": "LER:1-2019-001"
+      },
+      "type": "LER",
+      "key": "373-2019-001-00",
+      "stub": true,
+      "title": "TSV limit switch 1C71-N006C degraded performance and failure due to lubricant degradation",
+      "plant": "LaSalle County Station",
+      "match_key": "LER:373-2019-001-00"
+    },
+    {
+      "id": "ler_2019_002",
+      "display_name": "LaSalle Unit 1 LER 373-2019-002-00",
+      "properties": {
+        "match_key": "LER:1-2019-002"
+      },
+      "type": "LER",
+      "key": "373-2019-002-00",
+      "stub": true,
+      "title": "TSV number 3 limit switch failure due to insufficient lubrication",
+      "plant": "LaSalle County Station",
+      "match_key": "LER:373-2019-002-00"
+    },
+    {
+      "id": "ler_2022_002_u2",
+      "display_name": "LaSalle Unit 2 LER 374-2022-002-00",
+      "properties": {
+        "match_key": "LER:2-2022-002"
+      },
+      "type": "LER",
+      "key": "374-2022-002-00",
+      "stub": true,
+      "title": "TSV number 4 limit switch failure due to dried out grease",
+      "plant": "LaSalle County Station",
+      "match_key": "LER:374-2022-002-00"
+    },
+    {
+      "id": "ler_2022_001",
+      "display_name": "LaSalle Unit 1 LER 373-2022-001-00",
+      "properties": {
+        "match_key": "LER:1-2022-001"
+      },
+      "type": "LER",
+      "key": "373-2022-001-00",
+      "stub": true,
+      "title": "TSV limit switch 1C71-N006C failure due to lubricant degradation",
+      "plant": "LaSalle County Station",
+      "match_key": "LER:373-2022-001-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_lco3311",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_lco3341",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ta",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rps",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_eocrpt",
+      "evidence": null
+    },
+    {
+      "source": "c_limitswitch",
+      "relation": "PART_OF",
+      "target": "c_tsv4",
+      "evidence": null
+    },
+    {
+      "source": "c_limitswitch",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_namco",
+      "evidence": null
+    },
+    {
+      "source": "fm_steamleak",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_steamleak",
+      "relation": "LEADS_TO",
+      "target": "fm_lubedegrade",
+      "evidence": null
+    },
+    {
+      "source": "fm_lubedegrade",
+      "relation": "LEADS_TO",
+      "target": "fm_shaftbind",
+      "evidence": null
+    },
+    {
+      "source": "fm_shaftbind",
+      "relation": "LEADS_TO",
+      "target": "fm_switchfail",
+      "evidence": null
+    },
+    {
+      "source": "fm_switchfail",
+      "relation": "LEADS_TO",
+      "target": "cons_inop",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_failanalysis",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_testfreq",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_reeval",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_2019_001",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_2019_002",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_2022_002_u2",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_2022_001",
+      "evidence": null
+    }
+  ],
+  "chain": "steam leak near TSV-4 limit switch [cause B] -> elevated temperature degrades switch shaft/bearing lubricant -> shaft binds in actuated position -> limit switch fails to actuate on TSV-4 closure -> RPS channel A2 & one EOC-RPT channel inoperable beyond TS completion time [backup: redundant B2/other channels remained OPERABLE]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Recurring failure mode across multiple LaSalle TSV limit switches (2019, 2019, 2022 Unit1, 2022 Unit2) all tied to lubricant degradation from heat exposure; this event's steam leak specifically circumvented prior corrective actions (high-temp switches, housing mods). RPS and EOC-RPT modeled as non-EIIS Systems since they are the affected safety functions, not the failed component's EIIS system (TA/main turbine). Redundant B2 channel and other TSV channels remained OPERABLE, but narrative doesn't name a distinct backup System node to attach BACKED_UP_BY to beyond noting redundancy in the consequence description."
+}

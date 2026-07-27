@@ -1,0 +1,356 @@
+{
+  "ler_number": "395-2025-005-01",
+  "identity": {
+    "accession_number": "ML26119A537",
+    "docket": "05000395",
+    "plant_name": "Summer",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2025-11-15",
+    "report_date": "2026-04-29",
+    "operating_mode": null,
+    "power_level": null,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2025-005-01 for Virgil C. Summer Nuclear Station, Unit 1 (VCSNS), Condition Prohibited by Technical Specifications"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The overspeed trip was caused by binding and degraded responsiveness of the turbine speed control governor valve assembly. Wear was discovered on the valve stem, valve stem connector, cam crank, and cam crank support. The RCE findings indicate that the governing procedure (MMP-300.015) lacks sufficient detail to ensure proper disassembly, inspection, reassembly, and alignment of the governor valve linkage.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Inadequate maintenance procedure detail leading to governor valve linkage wear/binding",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 395-2025-005-01",
+      "properties": {},
+      "type": "LER",
+      "key": "395-2025-005-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:395-2025-005-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Summer Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000395",
+      "match_key": "Unit:05000395"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Inadequate maintenance procedure detail leading to governor valve linkage wear/binding",
+      "proximate_text": "The overspeed trip was caused by binding and degraded responsiveness of the turbine speed control governor valve assembly. Wear was discovered on the valve stem, valve stem connector, cam crank, and cam crank support. The RCE findings indicate that the governing procedure (MMP-300.015) lacks sufficient detail to ensure proper disassembly, inspection, reassembly, and alignment of the governor valve linkage.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_efw",
+      "display_name": "Emergency Feedwater System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "system involved; TDEFP is part of this system",
+      "match_key": "System:BA"
+    },
+    {
+      "id": "c_tdefp",
+      "display_name": "Turbine Driven Emergency Feedwater Pump (TDEFP)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "TPP0008",
+      "model": "GS-2",
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:turbine-driven-emergency-feedwater-pump-tdefp"
+    },
+    {
+      "id": "c_govvlv",
+      "display_name": "Turbine Speed Control Governor Valve (XVM11025-EF)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "XVM11025-EF",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:turbine-speed-control-governor-valve-xvm11025-ef"
+    },
+    {
+      "id": "c_linkage",
+      "display_name": "Governor valve linkage (valve stem, valve stem connector, cam crank, cam crank support)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:governor-valve-linkage-valve-stem-valve-stem-connector-cam-crank-cam-crank-support"
+    },
+    {
+      "id": "fm_wear",
+      "display_name": "Wear on valve stem, valve stem connector, cam crank, and cam crank support",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Wear discovered on governor valve linkage components",
+      "match_key": "FailureMode:wear-on-valve-stem-valve-stem-connector-cam-crank-and-cam-crank-support"
+    },
+    {
+      "id": "fm_binding",
+      "display_name": "Binding and degraded responsiveness of governor valve assembly",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Governor valve assembly exhibited binding and degraded responsiveness due to wear",
+      "match_key": "FailureMode:binding-and-degraded-responsiveness-of-governor-valve-assembly"
+    },
+    {
+      "id": "fm_overspeed",
+      "display_name": "TDEFP overspeed trip",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "TDEFP tripped on an overspeed condition during surveillance test startup",
+      "match_key": "FailureMode:tdefp-overspeed-trip"
+    },
+    {
+      "id": "cons_inop",
+      "display_name": "TDEFP declared inoperable / TS action extension via Enforcement Discretion",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2025-11-12T02:08",
+      "end": "2025-11-16T17:47",
+      "duration": "approximately 2 days 15h39m",
+      "tz": "EST",
+      "match_key": "Consequence:tdefp-declared-inoperable-ts-action-extension-via-enforcement-discretion"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace worn governor and valve control linkage components",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-worn-governor-and-valve-control-linkage-components"
+    },
+    {
+      "id": "ca_instrument",
+      "display_name": "Install instrumentation to record TDEFP turbine speed and discharge flow",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:install-instrumentation-to-record-tdefp-turbine-speed-and-discharge-flow"
+    },
+    {
+      "id": "ca_procedure",
+      "display_name": "Revise MMP-300.015 with detailed disassembly/inspection/reassembly instructions for governor linkage",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-mmp-300-015-with-detailed-disassembly-inspection-reassembly-instructions-for-governor-linkage"
+    },
+    {
+      "id": "ca_partsreplace",
+      "display_name": "Replace governor linkage assembly parts at next opportunity",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-governor-linkage-assembly-parts-at-next-opportunity"
+    },
+    {
+      "id": "mfr_terry",
+      "display_name": "Terry",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": null,
+      "match_key": "Manufacturer:terry"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ned",
+      "display_name": "NRC Enforcement Manual, Appendix F, Notices of Enforcement Discretion",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "standard/guidance",
+      "match_key": "RegulatoryReference:nrc-enforcement-manual-appendix-f-notices-of-enforcement-discretion"
+    },
+    {
+      "id": "rr_ts",
+      "display_name": "TS Limiting Condition for Operation 3.7.1.2",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-limiting-condition-for-operation-3-7-1-2"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "LER 395-2025-003-00",
+      "properties": {},
+      "type": "LER",
+      "key": "395-2025-003-00",
+      "stub": true,
+      "title": "Previous TDEFP run failure on August 19, 2025, caused by excessive wear of Overspeed Trip Device tappet nut",
+      "plant": "Virgil C. Summer Nuclear Station",
+      "match_key": "LER:395-2025-003-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ned",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_efw",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_tdefp",
+      "evidence": null
+    },
+    {
+      "source": "c_tdefp",
+      "relation": "PART_OF",
+      "target": "sys_efw",
+      "evidence": null
+    },
+    {
+      "source": "c_govvlv",
+      "relation": "PART_OF",
+      "target": "c_tdefp",
+      "evidence": null
+    },
+    {
+      "source": "c_linkage",
+      "relation": "PART_OF",
+      "target": "c_govvlv",
+      "evidence": null
+    },
+    {
+      "source": "fm_wear",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_wear",
+      "relation": "LEADS_TO",
+      "target": "fm_binding",
+      "evidence": null
+    },
+    {
+      "source": "fm_binding",
+      "relation": "LEADS_TO",
+      "target": "fm_overspeed",
+      "evidence": null
+    },
+    {
+      "source": "fm_overspeed",
+      "relation": "LEADS_TO",
+      "target": "cons_inop",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_instrument",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procedure",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_partsreplace",
+      "evidence": null
+    },
+    {
+      "source": "c_tdefp",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_terry",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    }
+  ],
+  "chain": "inadequate maintenance procedure detail (MMP-300.015) [cause TBD] -> wear on valve stem/connector/cam crank/support -> binding and degraded responsiveness of governor valve assembly -> TDEFP overspeed trip -> TDEFP declared inoperable, TS action extended via Enforcement Discretion (~2 days) [no backup asserted; normal offsite power maintained throughout]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code is TBD/provisional per FORM-366 fields; narrative attributes the failure to inadequate procedure detail (personnel/procedure theme) but this is not converted into a definitive cause code per rule 4. No BACKED_UP_BY edge asserted: narrative states EFW motor-driven pumps would be inoperable in a loss-of-power scenario that TDEFP is designed to cover, but does not state an operable backup was available during this specific inoperability window; instead, normal offsite power (not itself a modeled System) mitigated safety significance. Previous occurrence stub LER key '1-2025-003' recorded exactly as referenced (LER-2025-003) with leading unit digit per rule 9, though the narrative text omits the unit prefix -- inferred unit 1 from context since this is a Unit 1 report and no other unit is mentioned."
+}

@@ -1,0 +1,411 @@
+{
+  "ler_number": "352-2023-001-00",
+  "identity": {
+    "accession_number": "ML23177A232",
+    "docket": "05000352",
+    "plant_name": "Limerick",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2023-02-27",
+    "report_date": "2023-06-26",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Unit 1 Emergency Diesel Generator Lube Oil Pressure Sensing Line Leak Resulting in a Condition Prohibited by Technical Specifications"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(ii)(B)",
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "B",
+      "system": "EK",
+      "component": "PSF",
+      "manufacturer": null,
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The cause of the failure was determined to be high cyclic fatigue driven by the change in the vibration of the 4-inch engine driven lube oil pump discharge piping.",
+    "cause_code": "B",
+    "category": "Design/Manufacturing/Installation",
+    "theme": "vibration-induced fatigue cracking of instrument line fitting",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 352-2023-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "352-2023-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:352-2023-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Limerick Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000352",
+      "match_key": "Unit:05000352"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Manufacturing/Installation (B)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "B",
+      "category": "Design/Manufacturing/Installation",
+      "theme": "vibration-induced fatigue cracking of instrument line fitting",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Design/Manufacturing/Installation"
+    },
+    {
+      "id": "sys_ek",
+      "display_name": "Emergency On-Site Power Supply System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "EK",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:EK"
+    },
+    {
+      "id": "c_d11edg",
+      "display_name": "D11 Emergency Diesel Generator",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "D11",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:d11-emergency-diesel-generator"
+    },
+    {
+      "id": "c_pipefitting",
+      "display_name": "Oil pressure indicator instrument line pipe fitting",
+      "properties": {
+        "manufacturer": "N/A",
+        "note": "1/4 inch threaded pipe nipple teeing off 4-inch main lube oil piping near engine driven lube oil pump discharge"
+      },
+      "type": "Component",
+      "eiis_code": "PSF",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:PSF"
+    },
+    {
+      "id": "c_lopump",
+      "display_name": "Engine driven lube oil pump discharge piping (4-inch)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:engine-driven-lube-oil-pump-discharge-piping-4-inch"
+    },
+    {
+      "id": "c_ubolt",
+      "display_name": "U-bolt pipe clamp",
+      "properties": {
+        "note": "clamp on 4-inch discharge piping adjacent to instrument line connection"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:u-bolt-pipe-clamp"
+    },
+    {
+      "id": "fm_ubolt_loose",
+      "display_name": "U-bolt clamp nuts loosened over time",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Vibration caused loosening of the U-bolt clamp nuts on the 4-inch lube oil discharge piping, with no maintenance activity identified as the cause.",
+      "match_key": "FailureMode:u-bolt-clamp-nuts-loosened-over-time"
+    },
+    {
+      "id": "fm_vib_change",
+      "display_name": "Vibration signature of discharge piping changed",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Comparison of 2023 vibration data to 2020 baseline showed the piping vibration signature had changed, making the line susceptible to the same failure mechanism previously seen on D24 EDG.",
+      "match_key": "FailureMode:vibration-signature-of-discharge-piping-changed"
+    },
+    {
+      "id": "fm_fatigue_crack",
+      "display_name": "Fatigue crack in threaded pipe nipple",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Forensic analysis found a fatigue fracture starting at the root of the last engaged thread, consistent with unidirectional cyclic bending loads due to vibration.",
+      "match_key": "FailureMode:fatigue-crack-in-threaded-pipe-nipple"
+    },
+    {
+      "id": "fm_oilleak",
+      "display_name": "Lube oil leak at instrument line fitting",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Oil leak identified at the threaded fitting for the oil pressure indicator instrument line during a planned 24-hour endurance run.",
+      "match_key": "FailureMode:lube-oil-leak-at-instrument-line-fitting"
+    },
+    {
+      "id": "cons_edg_inop",
+      "display_name": "D11 EDG declared inoperable / TS 3.8.1.1 condition prohibited by TS not met",
+      "properties": {
+        "detail": "D11 EDG inoperable from last completed surveillance test on 1/31/23 until repair on 2/28/23; concurrent with D13 EDG outage 2/12-2/19/23, exceeding 72-hour TS 3.8.1.1.b action time."
+      },
+      "type": "Consequence",
+      "start": "2023-01-31",
+      "end": "2023-02-28",
+      "duration": "~28 days",
+      "tz": null,
+      "match_key": "Consequence:d11-edg-declared-inoperable-ts-3-8-1-1-condition-prohibited-by-ts-not-met"
+    },
+    {
+      "id": "sys_d13edg",
+      "display_name": "D13 Emergency Diesel Generator",
+      "properties": {
+        "note": "not a backup; contributed to TS violation, not a mitigating backup"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "concurrently inoperable, planned outage",
+      "match_key": "System:d13-emergency-diesel-generator"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace failed oil pressure indicator instrument line on D11 EDG in kind",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-failed-oil-pressure-indicator-instrument-line-on-d11-edg-in-kind"
+    },
+    {
+      "id": "ca_relocate_others",
+      "display_name": "Relocate affected oil pressure indicator instrument line on all EDGs except D24",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:relocate-affected-oil-pressure-indicator-instrument-line-on-all-edgs-except-d24"
+    },
+    {
+      "id": "ca_relocate_d24",
+      "display_name": "Relocate affected oil pressure indicator instrument line on D24 EDG",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:relocate-affected-oil-pressure-indicator-instrument-line-on-d24-edg"
+    },
+    {
+      "id": "rr_5073_ii_b",
+      "display_name": "10 CFR 50.73(a)(2)(ii)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-ii-b"
+    },
+    {
+      "id": "rr_5073_i_b",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts_3811",
+      "display_name": "TS 3.8.1.1 (AC Sources - Operating)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-3-8-1-1-ac-sources-operating"
+    },
+    {
+      "id": "ler_prev_d13_2016",
+      "display_name": "Previous D13 EDG oil pressure instrument line failure (2016)",
+      "properties": {},
+      "type": "LER",
+      "key": "1-2016",
+      "stub": true,
+      "title": null,
+      "plant": "Limerick Generating Station",
+      "match_key": "LER:1-2016"
+    },
+    {
+      "id": "ler_prev_d24_2013",
+      "display_name": "Previous D24 EDG oil pressure instrument line failure (2013)",
+      "properties": {},
+      "type": "LER",
+      "key": "1-2013",
+      "stub": true,
+      "title": null,
+      "plant": "Limerick Generating Station",
+      "match_key": "LER:1-2013"
+    },
+    {
+      "id": "ler_prev_d24_2019_002",
+      "display_name": "D24 EDG oil pressure instrument line failure (July 2019)",
+      "properties": {},
+      "type": "LER",
+      "key": "352-2019-002-00",
+      "stub": true,
+      "title": null,
+      "plant": "Limerick Generating Station",
+      "match_key": "LER:352-2019-002-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_ii_b",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_i_b",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts_3811",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ek",
+      "evidence": null
+    },
+    {
+      "source": "c_pipefitting",
+      "relation": "PART_OF",
+      "target": "c_lopump",
+      "evidence": null
+    },
+    {
+      "source": "fm_ubolt_loose",
+      "relation": "LEADS_TO",
+      "target": "fm_vib_change",
+      "evidence": null
+    },
+    {
+      "source": "fm_vib_change",
+      "relation": "LEADS_TO",
+      "target": "fm_fatigue_crack",
+      "evidence": null
+    },
+    {
+      "source": "fm_fatigue_crack",
+      "relation": "LEADS_TO",
+      "target": "fm_oilleak",
+      "evidence": null
+    },
+    {
+      "source": "fm_oilleak",
+      "relation": "LEADS_TO",
+      "target": "cons_edg_inop",
+      "evidence": null
+    },
+    {
+      "source": "fm_ubolt_loose",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "cons_edg_inop",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_relocate_others",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_relocate_d24",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev_d13_2016",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev_d24_2013",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev_d24_2019_002",
+      "evidence": null
+    },
+    {
+      "source": "cons_edg_inop",
+      "relation": "INVOLVES",
+      "target": "sys_d13edg",
+      "evidence": null
+    }
+  ],
+  "chain": "vibration causes U-bolt clamp nuts to loosen [cause B] -> piping vibration signature changes -> unidirectional cyclic bending fatigue crack in threaded pipe nipple -> lube oil leak at instrument line fitting -> D11 EDG declared inoperable, TS 3.8.1.1 action times exceeded (concurrent D13 outage) [no backup EDG asserted; remaining EDGs operable but not modeled as backups]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "D13 EDG is modeled as a System node participating in the consequence (concurrent inoperability driving the TS 3.8.1.1.b 72-hour violation) rather than as a BACKED_UP_BY backup, since it was itself inoperable during the overlap window, not an available backup. The 'remaining Limerick Unit 1 EDGs were operable during this period' statement is generic design-context/safety-consequence language, not a specific stated backup relationship for the failure chain, so no BACKED_UP_BY edge was asserted. Previous occurrence LER keys were taken as literally stated in the narrative (2016, 2013, and 2019-002-00); the two undated failures (2016, 2013) lack full LER numbers so key format approximates 'unit-year'."
+}

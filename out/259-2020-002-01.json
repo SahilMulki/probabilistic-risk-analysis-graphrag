@@ -1,0 +1,362 @@
+{
+  "ler_number": "259-2020-002-01",
+  "identity": {
+    "accession_number": "ML21043A098",
+    "docket": "05000259",
+    "plant_name": "Browns Ferry",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2020-10-13",
+    "report_date": "2021-02-12",
+    "operating_mode": "5",
+    "power_level": 0,
+    "discovery_context": "inspection",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2020-002-01 for Browns Ferry Nuclear Plant, Units 1, 2, and 3,   Standby Gas Treatment System Train B Inoperable Longer Than Allowed by Technical Specifications"
+  },
+  "reporting_basis": {
+    "reported_under": [],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The direct cause of this event was a loose wire and lug, on the rear of the breaker, which was unlikely to have been visible during installation. The apparent cause of this event was lack of specific guidance on when to remove molded case breakers for inspection for maintenance workers when performing troubleshooting on such breakers.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "loose breaker terminal wire / inadequate troubleshooting guidance",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 259-2020-002-01",
+      "properties": {},
+      "type": "LER",
+      "key": "259-2020-002-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:259-2020-002-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Browns Ferry Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000259",
+      "match_key": "Unit:05000259"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "loose breaker terminal wire / inadequate troubleshooting guidance",
+      "proximate_text": "The direct cause of this event was a loose wire and lug, on the rear of the breaker, which was unlikely to have been visible during installation. The apparent cause of this event was lack of specific guidance on when to remove molded case breakers for inspection for maintenance workers when performing troubleshooting on such breakers.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_bh",
+      "display_name": "Standby Gas Treatment System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BH",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected system, train B",
+      "match_key": "System:BH"
+    },
+    {
+      "id": "sys_bh_a",
+      "display_name": "Standby Gas Treatment System Train A",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BH",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; remained operable",
+      "match_key": "System:BH"
+    },
+    {
+      "id": "sys_bh_c",
+      "display_name": "Standby Gas Treatment System Train C",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BH",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; remained operable",
+      "match_key": "System:BH"
+    },
+    {
+      "id": "c_bkr",
+      "display_name": "RH Heater breaker",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "BKR",
+      "identifier": "SGT B RH Heater breaker",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:BKR|SGT B RH Heater breaker"
+    },
+    {
+      "id": "c_panel",
+      "display_name": "Electrical panel (BD)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "BD",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:BD"
+    },
+    {
+      "id": "fm_loose",
+      "display_name": "Loose wire/lug at breaker terminal",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Loose lead wire at the lug termination on the rear of the breaker, not visible during installation",
+      "match_key": "FailureMode:loose-wire-lug-at-breaker-terminal"
+    },
+    {
+      "id": "fm_trip1",
+      "display_name": "RH heater breaker trips (first occurrence, 10/13)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "SGT B RH Heater breaker discovered tripped; no equipment fault found during troubleshooting; breaker reset",
+      "match_key": "FailureMode:rh-heater-breaker-trips-first-occurrence-10-13"
+    },
+    {
+      "id": "fm_nonconservative",
+      "display_name": "Non-conservative declaration of operability",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Non-conservative decision making and procedural non-compliance in declaring SGT B operable after troubleshooting did not identify an actual cause for the trip",
+      "match_key": "FailureMode:non-conservative-declaration-of-operability"
+    },
+    {
+      "id": "fm_trip2",
+      "display_name": "RH heater breaker trips (second occurrence, 10/19)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "SGT B RH Heater breaker tripped a second time",
+      "match_key": "FailureMode:rh-heater-breaker-trips-second-occurrence-10-19"
+    },
+    {
+      "id": "cons_lco",
+      "display_name": "SGT Train B inoperable longer than TS allowed outage time",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2020-10-13T12:00",
+      "end": "2020-10-20T13:30",
+      "duration": "7 days 1.5 hours",
+      "tz": "CDT",
+      "match_key": "Consequence:sgt-train-b-inoperable-longer-than-ts-allowed-outage-time"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace breaker",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-breaker"
+    },
+    {
+      "id": "ca_tighten",
+      "display_name": "Tighten loose wire on load side of terminal",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:tighten-loose-wire-on-load-side-of-terminal"
+    },
+    {
+      "id": "ca_procedure",
+      "display_name": "Revise procedures for molded case breaker troubleshooting checklist",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-procedures-for-molded-case-breaker-troubleshooting-checklist"
+    },
+    {
+      "id": "ca_infoshare",
+      "display_name": "Information sharing with Senior Reactor Operators on troubleshooting requirements",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:information-sharing-with-senior-reactor-operators-on-troubleshooting-requirements"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts3643",
+      "display_name": "TS LCO 3.6.4.3",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-lco-3-6-4-3"
+    },
+    {
+      "id": "ler_prev1",
+      "display_name": "LER 259-2018-006-00",
+      "properties": {},
+      "type": "LER",
+      "key": "259-2018-006-00",
+      "stub": true,
+      "title": "Standby Gas Treatment System Train C Inoperable Longer Than Allowed by Technical Specifications",
+      "plant": "Browns Ferry Nuclear Plant Unit 1",
+      "match_key": "LER:259-2018-006-00"
+    },
+    {
+      "id": "ler_prev2",
+      "display_name": "LER 259-2012-008-01",
+      "properties": {},
+      "type": "LER",
+      "key": "259-2012-008-01",
+      "stub": true,
+      "title": "Standby Gas Treatment System Train C Inoperable Longer Than Allowed by Technical Specifications",
+      "plant": "Browns Ferry Nuclear Plant Unit 1",
+      "match_key": "LER:259-2012-008-01"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts3643",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bh",
+      "evidence": null
+    },
+    {
+      "source": "c_bkr",
+      "relation": "PART_OF",
+      "target": "sys_bh",
+      "evidence": null
+    },
+    {
+      "source": "fm_loose",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_loose",
+      "relation": "LEADS_TO",
+      "target": "fm_trip1",
+      "evidence": null
+    },
+    {
+      "source": "fm_trip1",
+      "relation": "LEADS_TO",
+      "target": "fm_nonconservative",
+      "evidence": null
+    },
+    {
+      "source": "fm_nonconservative",
+      "relation": "LEADS_TO",
+      "target": "fm_trip2",
+      "evidence": null
+    },
+    {
+      "source": "fm_trip2",
+      "relation": "LEADS_TO",
+      "target": "cons_lco",
+      "evidence": null
+    },
+    {
+      "source": "cons_lco",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_bh_a",
+      "evidence": null
+    },
+    {
+      "source": "cons_lco",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_bh_c",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_tighten",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procedure",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_infoshare",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev1",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev2",
+      "evidence": null
+    }
+  ],
+  "chain": "loose wire/lug at breaker terminal [cause TBD] -> breaker trips (10/13) -> non-conservative declaration of operability without root cause found -> breaker trips again (10/19) -> SGT Train B inoperable beyond 7-day TS AOT [backups SGT A, SGT C operable]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code is TBD/provisional per FORM-366 fields; narrative gives direct/apparent/contributing causes but no formal cause_code letter was assigned in the source data, so category remains provisional per rule 4. Two distinct failure events (10/13 and 10/19 trips) modeled as separate FailureMode nodes connected via the intervening non-conservative operability declaration, per rule 5. SGT B itself (the affected train) is represented via sys_bh; SGT A and C are backup trains explicitly stated to have remained operable/available throughout. Previous occurrence LER keys preserved exactly as cited in narrative (50-259/2018-006-00 -> '1-2018-006-00', 50-259/2012-008-01 -> '1-2012-008-01') per rule 9."
+}

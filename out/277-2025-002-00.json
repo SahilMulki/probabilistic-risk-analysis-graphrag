@@ -1,0 +1,343 @@
+{
+  "ler_number": "277-2025-002-00",
+  "identity": {
+    "accession_number": "ML25281A104",
+    "docket": "05000277",
+    "plant_name": "Peach Bottom",
+    "unit": 2,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2025-09-04",
+    "report_date": "2025-10-08",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": "57899",
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Licensee Event Report (LER) 2025-002-00 Uncoordinated DC Circuits Cause Unanalyzed Condition"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(ii)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "B",
+      "system": "EI",
+      "component": "FU",
+      "manufacturer": "R352",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "the circuits were uncoordinated due to inadequate fuse sizing, meaning that during a postulated fire, the circuit's fuse may not act to protect the circuit from a fire-induced hot short... The cause is an inadequate design dating back to original construction.",
+    "cause_code": "B",
+    "category": "Design/Manufacturing/Installation",
+    "theme": "inadequate fuse coordination in DC circuits from original design",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 277-2025-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "277-2025-002-00",
+      "stub": false,
+      "title": "Uncoordinated DC Circuits Cause Unanalyzed Condition",
+      "plant": null,
+      "match_key": "LER:277-2025-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Peach Bottom Unit 2",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000277",
+      "match_key": "Unit:05000277"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Manufacturing/Installation (B)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "B",
+      "category": "Design/Manufacturing/Installation",
+      "theme": "inadequate fuse coordination in DC circuits from original design",
+      "proximate_text": "the circuits were uncoordinated due to inadequate fuse sizing, meaning that during a postulated fire, the circuit's fuse may not act to protect the circuit from a fire-induced hot short... The cause is an inadequate design dating back to original construction.",
+      "provisional": false,
+      "match_key": "Cause:Design/Manufacturing/Installation"
+    },
+    {
+      "id": "sys_ei",
+      "display_name": "Direct Current Distribution",
+      "properties": {
+        "note": "DC circuits associated with safe shutdown capability"
+      },
+      "type": "System",
+      "eiis_code": "EI",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:EI"
+    },
+    {
+      "id": "c_cables",
+      "display_name": "DC circuit cables (six cables, Units 2 and 3)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:dc-circuit-cables-six-cables-units-2-and-3"
+    },
+    {
+      "id": "c_fuse",
+      "display_name": "Overcurrent protection fuse",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "FU",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": "R352",
+      "inferred_code": false,
+      "match_key": "Component:FU"
+    },
+    {
+      "id": "fm_design",
+      "display_name": "Inadequate fuse sizing at original design/construction",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Fuses sized inadequately, leaving DC circuits uncoordinated since original construction.",
+      "match_key": "FailureMode:inadequate-fuse-sizing-at-original-design-construction"
+    },
+    {
+      "id": "fm_uncoord",
+      "display_name": "DC circuits uncoordinated / lack adequate overcurrent protection",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Fuse may not act to protect the circuit from a fire-induced hot short, allowing excessive current through the circuit.",
+      "match_key": "FailureMode:dc-circuits-uncoordinated-lack-adequate-overcurrent-protection"
+    },
+    {
+      "id": "fm_noncompliance",
+      "display_name": "Non-compliance with 10 CFR 50 Appendix R, Section III.G.2",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Six cables associated with DC circuits at Units 2 and 3 found non-compliant with fire protection of safe shutdown capability requirements.",
+      "match_key": "FailureMode:non-compliance-with-10-cfr-50-appendix-r-section-iii-g-2"
+    },
+    {
+      "id": "cons_unanalyzed",
+      "display_name": "Unanalyzed condition: potential loss of safe shutdown capability outside Appendix R Fire Safe Shutdown Analysis bounds",
+      "properties": {
+        "detail": "A fire-induced hot short could cause excessive current, secondary fire damage in another fire area, challenging ability to achieve and maintain safe shutdown; no actual consequences occurred."
+      },
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:unanalyzed-condition-potential-loss-of-safe-shutdown-capability-outside-appendix-r-fire-safe-shutdown-analysis-bounds"
+    },
+    {
+      "id": "ca_compensatory",
+      "display_name": "Implement Fire Protection Program compensatory measures for affected fire areas",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:implement-fire-protection-program-compensatory-measures-for-affected-fire-areas"
+    },
+    {
+      "id": "ca_modify",
+      "display_name": "Modify affected circuits to ensure proper coordination",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:modify-affected-circuits-to-ensure-proper-coordination"
+    },
+    {
+      "id": "mfr_r352",
+      "display_name": "Manufacturer R352",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "R352",
+      "match_key": "Manufacturer:R352"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(ii)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-ii-b"
+    },
+    {
+      "id": "rr_5072",
+      "display_name": "10 CFR 50.72(b)(3)(ii)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-3-ii-b"
+    },
+    {
+      "id": "rr_appr",
+      "display_name": "10 CFR 50 Appendix R, Section III.G.2",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:10-cfr-50-appendix-r-section-iii-g-2"
+    },
+    {
+      "id": "ler_2018",
+      "display_name": "Peach Bottom LER 2-18-001",
+      "properties": {},
+      "type": "LER",
+      "key": "2-18-001",
+      "stub": true,
+      "title": "Unanalyzed condition due to valve cables not being protected from spurious operation during a postulated fire",
+      "plant": "Peach Bottom Atomic Power Station Unit 2",
+      "match_key": "LER:2-18-001"
+    },
+    {
+      "id": "ler_2014",
+      "display_name": "Peach Bottom LER 2-14-001",
+      "properties": {},
+      "type": "LER",
+      "key": "2-14-001",
+      "stub": true,
+      "title": "Unanalyzed condition due to broken wires in breakers credited in the Appendix R Post-Fire Safe Shutdown Analysis",
+      "plant": "Peach Bottom Atomic Power Station Unit 2",
+      "match_key": "LER:2-14-001"
+    },
+    {
+      "id": "ler_2012",
+      "display_name": "Peach Bottom LER 3-11-04",
+      "properties": {},
+      "type": "LER",
+      "key": "3-11-04",
+      "stub": true,
+      "title": "Unanalyzed condition due to an error in cable routing which affected the Post-Fire Safe Shutdown Analysis",
+      "plant": "Peach Bottom Atomic Power Station Unit 3",
+      "match_key": "LER:3-11-04"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_appr",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ei",
+      "evidence": null
+    },
+    {
+      "source": "c_cables",
+      "relation": "PART_OF",
+      "target": "sys_ei",
+      "evidence": null
+    },
+    {
+      "source": "fm_design",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_design",
+      "relation": "LEADS_TO",
+      "target": "fm_uncoord",
+      "evidence": null
+    },
+    {
+      "source": "fm_uncoord",
+      "relation": "LEADS_TO",
+      "target": "fm_noncompliance",
+      "evidence": null
+    },
+    {
+      "source": "fm_noncompliance",
+      "relation": "LEADS_TO",
+      "target": "cons_unanalyzed",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_compensatory",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_modify",
+      "evidence": null
+    },
+    {
+      "source": "c_fuse",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_r352",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_2018",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_2014",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_2012",
+      "evidence": null
+    }
+  ],
+  "chain": "inadequate design/fuse sizing from original construction [cause B] -> DC circuits uncoordinated / inadequate overcurrent protection -> non-compliance with Appendix R III.G.2 -> unanalyzed condition: potential loss of safe shutdown capability across fire areas [compensatory measures implemented; no actual consequences]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Event involves both PBAPS Units 2 and 3 (six cables across both units), but LER is filed under Unit 2 docket 05000277; Unit 3 is referenced but no separate Unit node created per docket-based identity. Fuse sizing/coordination issue traces to original construction design, consistent with cause code B (Design/Manufacturing/Installation) despite no acute equipment failure. No actual consequence occurred; consequence node models the potential/unanalyzed condition per the report's framing. Compensatory actions and circuit modification are corrective actions; three previous similar LERs cited as stubs with exact keys as stated in text."
+}

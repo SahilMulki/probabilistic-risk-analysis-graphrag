@@ -1,0 +1,368 @@
+{
+  "ler_number": "254-2025-003-01",
+  "identity": {
+    "accession_number": "ML25241A295",
+    "docket": "05000254",
+    "plant_name": "Quad Cities",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2025-03-12",
+    "report_date": "2025-08-27",
+    "operating_mode": "5",
+    "power_level": 0,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Main Steam Isolation Valves Local Leak Rate Test Exceed Technical Specification Limits\" Supplement"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "X",
+      "system": "SB",
+      "component": "ISV",
+      "manufacturer": "C684",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The cause is attributed to pilot rotation causing stem nut wear which leads to a leakage path.",
+    "cause_code": "X",
+    "category": "Other",
+    "theme": "MSIV pilot rotation / stem nut wear leakage path",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 254-2025-003-01",
+      "properties": {},
+      "type": "LER",
+      "key": "254-2025-003-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:254-2025-003-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Quad Cities Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric",
+        "thermal_power_mwt": "2957"
+      },
+      "type": "Unit",
+      "key": "05000254",
+      "match_key": "Unit:05000254"
+    },
+    {
+      "id": "cause",
+      "display_name": "Other (X)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "X",
+      "category": "Other",
+      "theme": "MSIV pilot rotation / stem nut wear leakage path",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Other"
+    },
+    {
+      "id": "sys_sb",
+      "display_name": "Main Steam",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SB"
+    },
+    {
+      "id": "c_1c",
+      "display_name": "MSIV 1C (C MSL Inboard)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": "1C",
+      "model": null,
+      "manufacturer_code": "C684",
+      "inferred_code": false,
+      "match_key": "Component:ISV|1C"
+    },
+    {
+      "id": "c_2a",
+      "display_name": "MSIV 2A (A MSL Outboard)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": "2A",
+      "model": null,
+      "manufacturer_code": "C684",
+      "inferred_code": false,
+      "match_key": "Component:ISV|2A"
+    },
+    {
+      "id": "c_2c",
+      "display_name": "MSIV 2C (C MSL Outboard)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": "2C",
+      "model": null,
+      "manufacturer_code": "C684",
+      "inferred_code": false,
+      "match_key": "Component:ISV|2C"
+    },
+    {
+      "id": "c_2d",
+      "display_name": "MSIV 2D (D MSL Outboard)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": "2D",
+      "model": null,
+      "manufacturer_code": "C684",
+      "inferred_code": false,
+      "match_key": "Component:ISV|2D"
+    },
+    {
+      "id": "fm_pilot_rotation",
+      "display_name": "MSIV pilot rotation",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Pilot rotation within the valve actuator assembly, absent an anti-rotation key modification.",
+      "match_key": "FailureMode:msiv-pilot-rotation"
+    },
+    {
+      "id": "fm_stemnut_wear",
+      "display_name": "Stem nut wear",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Pilot rotation caused wear of the stem nut.",
+      "match_key": "FailureMode:stem-nut-wear"
+    },
+    {
+      "id": "fm_leak_path",
+      "display_name": "MSIV seat leakage path develops",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Stem nut wear created a leakage path through the valve seat/seal.",
+      "match_key": "FailureMode:msiv-seat-leakage-path-develops"
+    },
+    {
+      "id": "cons_llrt",
+      "display_name": "MSIV as-found LLRT exceeds TS SR 3.6.1.3.10 limits",
+      "properties": {
+        "detail": "C MSL exceeded individual path limit (>80 scfh vs 62.4 scfh limit); combined total 215.1 scfh vs 156 scfh limit; TS 3.6.1.3 Condition D Required Action D.1 8-hour completion time conservatively not met."
+      },
+      "type": "Consequence",
+      "start": "2025-03-10",
+      "end": "2025-03-12T22:56",
+      "duration": null,
+      "tz": "CST",
+      "match_key": "Consequence:msiv-as-found-llrt-exceeds-ts-sr-3-6-1-3-10-limits"
+    },
+    {
+      "id": "ca_overhaul",
+      "display_name": "Valve overhauls and repairs on 1C, 2A, 2C, 2D MSIVs; post-maintenance testing performed",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:valve-overhauls-and-repairs-on-1c-2a-2c-2d-msivs-post-maintenance-testing-performed"
+    },
+    {
+      "id": "ca_antirotation",
+      "display_name": "Install anti-rotation modification on remaining MSIVs",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:install-anti-rotation-modification-on-remaining-msivs"
+    },
+    {
+      "id": "mfr_crane",
+      "display_name": "Crane Nuclear",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "C684",
+      "match_key": "Manufacturer:C684"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts_3613",
+      "display_name": "TS SR 3.6.1.3.10 / TS 3.6.1.3",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-sr-3-6-1-3-10-ts-3-6-1-3"
+    },
+    {
+      "id": "rr_appj",
+      "display_name": "10 CFR 50 Appendix J",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "standard/guidance",
+      "match_key": "RegulatoryReference:10-cfr-50-appendix-j"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "LER 265/2016-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "265/2016-001-00",
+      "stub": true,
+      "title": "Main Steam Isolation Valve Local Leak Rate Tests Exceed Technical Specification Limits",
+      "plant": "Quad Cities Nuclear Power Station",
+      "match_key": "LER:265/2016-001-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_1c",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_2a",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_2c",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_2d",
+      "evidence": null
+    },
+    {
+      "source": "fm_pilot_rotation",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_pilot_rotation",
+      "relation": "LEADS_TO",
+      "target": "fm_stemnut_wear",
+      "evidence": null
+    },
+    {
+      "source": "fm_stemnut_wear",
+      "relation": "LEADS_TO",
+      "target": "fm_leak_path",
+      "evidence": null
+    },
+    {
+      "source": "fm_leak_path",
+      "relation": "LEADS_TO",
+      "target": "cons_llrt",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_overhaul",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_antirotation",
+      "evidence": null
+    },
+    {
+      "source": "c_1c",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_crane",
+      "evidence": null
+    },
+    {
+      "source": "c_2a",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_crane",
+      "evidence": null
+    },
+    {
+      "source": "c_2c",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_crane",
+      "evidence": null
+    },
+    {
+      "source": "c_2d",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_crane",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts_3613",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_appj",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    }
+  ],
+  "chain": "pilot rotation [cause X] -> stem nut wear -> MSIV seat leakage path -> as-found LLRT exceeds TS limits (C MSL & combined total) -> valve overhauls performed; anti-rotation modification planned for remaining MSIVs",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "No SSFF flag conflict; cause code X (Other) governs category per rule 4, despite narrative attributing a specific mechanical mechanism (pilot rotation -> stem nut wear -> leak path), modeled as a FailureMode chain. Four MSIVs (1C, 2A, 2C, 2D) were overhauled/repaired; only these are modeled as involved components since the narrative specifically names them as affected/repaired. Previous occurrence LER key recorded exactly as stated in narrative ('265/2016-001-00'), including its own unit/docket prefix distinct from current docket 05000254. AD [reactor coolant] and containment-boundary/LOCA design-basis discussion are pure design context and not modeled per rule 6."
+}

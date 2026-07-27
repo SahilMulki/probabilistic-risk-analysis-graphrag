@@ -1,0 +1,175 @@
+{
+  "ler_number": "461-2025-004-00",
+  "identity": {
+    "accession_number": "ML26015A092",
+    "docket": "05000461",
+    "plant_name": "Clinton",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2025-11-14",
+    "report_date": "2026-01-13",
+    "operating_mode": "1",
+    "power_level": 99,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Emergency Diesel Generator Automatic Start due to Emergency Reserve Auxiliary Transformer Trip"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": ":,",
+      "system": "..",
+      "component": ";",
+      "manufacturer": "('•'",
+      "reportable": null
+    }
+  ],
+  "cause": {
+    "proximate_text": null,
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": null,
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 461-2025-011-00",
+      "properties": {},
+      "type": "LER",
+      "key": "461-2025-004-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:461-2025-004-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Clinton Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000461",
+      "match_key": "Unit:05000461"
+    },
+    {
+      "id": "cause",
+      "display_name": "Unknown/TBD Cause",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": null,
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_ert",
+      "display_name": "Emergency Reserve Auxiliary Transformer",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:emergency-reserve-auxiliary-transformer"
+    },
+    {
+      "id": "sys_edg",
+      "display_name": "Emergency Diesel Generator",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:emergency-diesel-generator"
+    },
+    {
+      "id": "fm_ert_trip",
+      "display_name": "Emergency Reserve Auxiliary Transformer trip",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Unspecified fault causing the ERAT to trip.",
+      "match_key": "FailureMode:emergency-reserve-auxiliary-transformer-trip"
+    },
+    {
+      "id": "cons_edg_start",
+      "display_name": "Emergency Diesel Generator automatic start",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2025-11-14",
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:emergency-diesel-generator-automatic-start"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ert",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_edg",
+      "evidence": null
+    },
+    {
+      "source": "fm_ert_trip",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_ert_trip",
+      "relation": "LEADS_TO",
+      "target": "cons_edg_start",
+      "evidence": null
+    }
+  ],
+  "chain": "unknown/TBD cause [TBD] -> Emergency Reserve Auxiliary Transformer trips -> Emergency Diesel Generator automatic start",
+  "golden_questions": [
+    "Q1",
+    "Q3"
+  ],
+  "notes": "No narrative text (366A) was provided, and FORM-366 block 13/cause fields were unreadable/garbled placeholders. Extraction is limited to the title and header fields; cause code left TBD/provisional per rule 4. System nodes for ERAT and EDG are modeled as non-EIIS since no bracket codes were available and no narrative existed to confirm EIIS codes."
+}

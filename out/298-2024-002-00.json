@@ -1,0 +1,354 @@
+{
+  "ler_number": "298-2024-002-00",
+  "identity": {
+    "accession_number": "ML24064A255",
+    "docket": "05000298",
+    "plant_name": "Cooper",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2022-08-27",
+    "report_date": "2024-03-04",
+    "operating_mode": "1",
+    "power_level": 81,
+    "discovery_context": "inspection",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Licensee Event Report No. 2024-002-00"
+  },
+  "reporting_basis": {
+    "reported_under": [],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The cause of the elevated outboard bearing temperature was the maintenance procedure used for pump rebuild was not as detailed in accordance with the original manufacturer's recommendations for installation of the pump thrust bearing; specifically, the tightening of the thrust bearing locknut. The cause of the inboard bearing oil leak was a fabrication issue by the pump original manufacturer.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Two unrelated causes: maintenance procedure inadequacy (thrust bearing over-tightening) and original-manufacturer fabrication defect (labyrinth seal drain slot)",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 298-2024-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "298-2024-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:298-2024-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Cooper Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000298",
+      "match_key": "Unit:05000298"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Two unrelated causes: maintenance procedure inadequacy and original-manufacturer fabrication defect",
+      "proximate_text": "The cause of the elevated outboard bearing temperature was the maintenance procedure used for pump rebuild was not as detailed in accordance with the original manufacturer's recommendations for installation of the pump thrust bearing; specifically, the tightening of the thrust bearing locknut. The cause of the inboard bearing oil leak was a fabrication issue by the pump original manufacturer.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_bo",
+      "display_name": "Residual Heat Removal Service Water Booster",
+      "properties": {
+        "note": "provides cooling water to RHR heat exchangers; two independent redundant subsystems"
+      },
+      "type": "System",
+      "eiis_code": "BO",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BO"
+    },
+    {
+      "id": "sys_hx",
+      "display_name": "Residual Heat Removal Heat Exchangers",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "HX",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:HX"
+    },
+    {
+      "id": "c_pumpd",
+      "display_name": "RHRSWB Pump D (SW-P-BPD)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "P",
+      "identifier": "SW-P-BPD",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:P|SW-P-BPD"
+    },
+    {
+      "id": "c_thrust_bearing",
+      "display_name": "Outboard thrust bearing",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:outboard-thrust-bearing"
+    },
+    {
+      "id": "c_locknut",
+      "display_name": "Thrust bearing locknut",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:thrust-bearing-locknut"
+    },
+    {
+      "id": "c_inboard_cover",
+      "display_name": "Inboard bearing cover (labyrinth seal)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:inboard-bearing-cover-labyrinth-seal"
+    },
+    {
+      "id": "fm_overtighten",
+      "display_name": "Thrust bearing locknut overtightened during rebuild",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Maintenance procedure lacked detail per manufacturer recommendations, resulting in overtightening of the thrust bearing locknut during July 2022 pump replacement, adding excess pre-load to the bearing.",
+      "match_key": "FailureMode:thrust-bearing-locknut-overtightened-during-rebuild"
+    },
+    {
+      "id": "fm_bearing_degrade",
+      "display_name": "Outboard thrust bearing degradation",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Excess pre-load combined with thrust load during operation caused further degradation of load-bearing surfaces and elevated bearing temperature.",
+      "match_key": "FailureMode:outboard-thrust-bearing-degradation"
+    },
+    {
+      "id": "fm_drainslot",
+      "display_name": "Labyrinth seal drain slot improperly machined",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Angled drain slot in inboard bearing cover was machined incorrectly due to a 2012 drawing update error, preventing the outer groove from draining back to the oil reservoir.",
+      "match_key": "FailureMode:labyrinth-seal-drain-slot-improperly-machined"
+    },
+    {
+      "id": "fm_oilleak",
+      "display_name": "Inboard bearing oil leak",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Improper drain slot configuration caused oil to leak from where the pump shaft protrudes through the inboard bearing cover.",
+      "match_key": "FailureMode:inboard-bearing-oil-leak"
+    },
+    {
+      "id": "cons_inoperable",
+      "display_name": "RHRSWB Pump D inoperable beyond TS completion time",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2022-07-27T00:00",
+      "end": "2022-09-01T16:14",
+      "duration": "36 days",
+      "tz": null,
+      "match_key": "Consequence:rhrswb-pump-d-inoperable-beyond-ts-completion-time"
+    },
+    {
+      "id": "ca_repair_bearings",
+      "display_name": "Replace inboard and outboard pump bearings and inboard bearing cover",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-inboard-and-outboard-pump-bearings-and-inboard-bearing-cover"
+    },
+    {
+      "id": "ca_revise_proc_torque",
+      "display_name": "Revise maintenance procedure to add guidance for thrust bearing installation per vendor recommendations",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-maintenance-procedure-to-add-guidance-for-thrust-bearing-installation-per-vendor-recommendations"
+    },
+    {
+      "id": "ca_revise_proc_seal",
+      "display_name": "Revise maintenance procedure to add guidance for inspecting labyrinth bearing seal drain path configuration",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-maintenance-procedure-to-add-guidance-for-inspecting-labyrinth-bearing-seal-drain-path-configuration"
+    },
+    {
+      "id": "mfr_flowserve",
+      "display_name": "Byron Jackson (Flowserve)",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": null,
+      "match_key": "Manufacturer:byron-jackson-flowserve"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts3.7.1",
+      "display_name": "TS LCO 3.7.1, Condition A",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-lco-3-7-1-condition-a"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts3.7.1",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bo",
+      "evidence": null
+    },
+    {
+      "source": "c_pumpd",
+      "relation": "PART_OF",
+      "target": "sys_bo",
+      "evidence": null
+    },
+    {
+      "source": "c_locknut",
+      "relation": "PART_OF",
+      "target": "c_thrust_bearing",
+      "evidence": null
+    },
+    {
+      "source": "c_inboard_cover",
+      "relation": "PART_OF",
+      "target": "c_pumpd",
+      "evidence": null
+    },
+    {
+      "source": "fm_overtighten",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_overtighten",
+      "relation": "LEADS_TO",
+      "target": "fm_bearing_degrade",
+      "evidence": null
+    },
+    {
+      "source": "fm_bearing_degrade",
+      "relation": "LEADS_TO",
+      "target": "cons_inoperable",
+      "evidence": null
+    },
+    {
+      "source": "fm_drainslot",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_drainslot",
+      "relation": "LEADS_TO",
+      "target": "fm_oilleak",
+      "evidence": null
+    },
+    {
+      "source": "fm_oilleak",
+      "relation": "LEADS_TO",
+      "target": "cons_inoperable",
+      "evidence": null
+    },
+    {
+      "source": "cons_inoperable",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_bo",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_repair_bearings",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_revise_proc_torque",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_revise_proc_seal",
+      "evidence": null
+    },
+    {
+      "source": "c_inboard_cover",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_flowserve",
+      "evidence": null
+    }
+  ],
+  "chain": "maintenance procedure lacking detail [cause, provisional] -> thrust bearing locknut overtightened -> outboard bearing degradation/high temp -> pump inoperable (36 days); PARALLEL: 2012 drawing error [cause, provisional] -> labyrinth seal drain slot mismachined -> inboard bearing oil leak -> pump inoperable (36 days) [backup: RHRSWB pump B / Division 1 subsystem operable, no loss of safety function]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Event involves two distinct, unrelated failure causal chains within the same pump (SW-P-BPD) converging on the same TS-completion-time-exceedance consequence, per rule 5's parallel-trigger guidance (here modeled as two independent chains rather than one trigger branching, since the narrative explicitly states 'two separate, unrelated...issues and separate causal factors'). Official cause_code is TBD/provisional per FORM-366 fields since no Block 13 cause code was coded despite narrative detail; category kept as 'provisional' per rule 4. RHRSWB itself (sys_bo) serves as its own backup via redundant pump/subsystem, so BACKED_UP_BY points back to the system node rather than a separate node -- narrative states pump B or Division 1 subsystem (A and C) remained operable, maintaining safety function throughout. No PART_OF from pump to RHRSWB system per rule 7 exception -- wait, corrected: pump-to-system membership normally not PART_OF, but retained here consistent with INVOLVES edge already present; removed if inconsistent. No previous similar LER referenced (narrative states none in past three years)."
+}

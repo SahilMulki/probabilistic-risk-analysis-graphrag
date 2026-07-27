@@ -1,0 +1,359 @@
+{
+  "ler_number": "321-2025-001-00",
+  "identity": {
+    "accession_number": "ML25210A397",
+    "docket": "05000321",
+    "plant_name": "Hatch",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2025-06-03",
+    "report_date": "2025-07-29",
+    "operating_mode": null,
+    "power_level": 98,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2025-001-00 for Edwin I. Hatch Nuclear Plant, Unit 1 High Pressure Coolant Injection System Inoperable"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)(D)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "X",
+      "system": "BJ",
+      "component": "V",
+      "manufacturer": "A372",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The cause of the TSV failing to open was a degraded reset spring located in the trip knob assembly of the valve. The degradation of the reset spring occurred because there was no preventive maintenance scheduled for replacing the spring. As a result, the degraded reset spring lacked the necessary spring force to assist in opening the valve.",
+    "cause_code": "X",
+    "category": "Other",
+    "theme": "missing PM task for spring replacement",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 321-2025-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "321-2025-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:321-2025-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Hatch Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000321",
+      "match_key": "Unit:05000321"
+    },
+    {
+      "id": "cause",
+      "display_name": "Other (X)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "X",
+      "category": "Other",
+      "theme": "missing PM task for spring replacement",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Other"
+    },
+    {
+      "id": "sys_bj",
+      "display_name": "High Pressure Coolant Injection",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BJ"
+    },
+    {
+      "id": "sys_bn",
+      "display_name": "Reactor Core Isolation Cooling",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BN",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; operable",
+      "match_key": "System:BN"
+    },
+    {
+      "id": "sys_eccs",
+      "display_name": "Low-Pressure Emergency Core Cooling Systems",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "backup; operable",
+      "match_key": "System:low-pressure-emergency-core-cooling-systems"
+    },
+    {
+      "id": "c_tsv",
+      "display_name": "Turbine Stop Valve (TSV)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "V",
+      "identifier": "1 E41 F3053",
+      "model": "69-XC-103",
+      "manufacturer_code": "A372",
+      "inferred_code": false,
+      "match_key": "Component:V|1 E41 F3053"
+    },
+    {
+      "id": "c_spring",
+      "display_name": "Reset spring (trip knob assembly)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:reset-spring-trip-knob-assembly"
+    },
+    {
+      "id": "fm_nopm",
+      "display_name": "No preventive maintenance scheduled for reset spring replacement",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "No PM task existed to replace the reset spring in the TSV trip knob assembly",
+      "match_key": "FailureMode:no-preventive-maintenance-scheduled-for-reset-spring-replacement"
+    },
+    {
+      "id": "fm_degraded",
+      "display_name": "Reset spring degraded",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Reset spring in the trip knob assembly degraded, lacking necessary spring force to assist valve opening",
+      "match_key": "FailureMode:reset-spring-degraded"
+    },
+    {
+      "id": "fm_tsvfail",
+      "display_name": "TSV failed to open",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Turbine stop valve failed to open during auxiliary oil pump testing",
+      "match_key": "FailureMode:tsv-failed-to-open"
+    },
+    {
+      "id": "cons_hpci",
+      "display_name": "HPCI inoperable",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2025-06-03T21:37",
+      "end": "2025-06-05T01:15",
+      "duration": "27:38",
+      "tz": "EDT",
+      "match_key": "Consequence:hpci-inoperable"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace degraded reset spring",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-degraded-reset-spring"
+    },
+    {
+      "id": "ca_test",
+      "display_name": "Test valve satisfactorily to restore operability",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:test-valve-satisfactorily-to-restore-operability"
+    },
+    {
+      "id": "ca_maint_proc",
+      "display_name": "Revise HPCI maintenance procedure to include reset spring replacement",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-hpci-maintenance-procedure-to-include-reset-spring-replacement"
+    },
+    {
+      "id": "ca_overhaul",
+      "display_name": "Revise HPCI twelve-year preventive maintenance overhaul to include reset spring replacement",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-hpci-twelve-year-preventive-maintenance-overhaul-to-include-reset-spring-replacement"
+    },
+    {
+      "id": "ca_surveillance",
+      "display_name": "Update HPCI surveillance procedure with more conservative spring force acceptance criteria",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:update-hpci-surveillance-procedure-with-more-conservative-spring-force-acceptance-criteria"
+    },
+    {
+      "id": "mfr_ametek",
+      "display_name": "AMETEK",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "A372",
+      "match_key": "Manufacturer:A372"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "rr_ufsar",
+      "display_name": "UFSAR Chapter 15",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:ufsar-chapter-15"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bj",
+      "evidence": null
+    },
+    {
+      "source": "c_tsv",
+      "relation": "PART_OF",
+      "target": "sys_bj",
+      "evidence": null
+    },
+    {
+      "source": "c_spring",
+      "relation": "PART_OF",
+      "target": "c_tsv",
+      "evidence": null
+    },
+    {
+      "source": "fm_nopm",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_nopm",
+      "relation": "LEADS_TO",
+      "target": "fm_degraded",
+      "evidence": null
+    },
+    {
+      "source": "fm_degraded",
+      "relation": "LEADS_TO",
+      "target": "fm_tsvfail",
+      "evidence": null
+    },
+    {
+      "source": "fm_tsvfail",
+      "relation": "LEADS_TO",
+      "target": "cons_hpci",
+      "evidence": null
+    },
+    {
+      "source": "cons_hpci",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_bn",
+      "evidence": null
+    },
+    {
+      "source": "cons_hpci",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_eccs",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_test",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_maint_proc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_overhaul",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_surveillance",
+      "evidence": null
+    },
+    {
+      "source": "c_tsv",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_ametek",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ufsar",
+      "evidence": null
+    }
+  ],
+  "chain": "no PM scheduled for reset spring replacement [cause X] -> reset spring degraded -> TSV failed to open during aux oil pump test -> HPCI inoperable (~27h38m) [backups RCIC, low-pressure ECCS available]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "No previous similar events cited in narrative ('None'), so no stub LER/SIMILAR_TO edge emitted. Cause code X (Other) governs category per form; narrative theme captures the missing-PM-task nature of the failure. RCIC and low-pressure ECCS explicitly stated as operable throughout the event, supporting BACKED_UP_BY edges."
+}

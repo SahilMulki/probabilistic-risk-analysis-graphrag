@@ -1,0 +1,366 @@
+{
+  "ler_number": "390-2020-002-00",
+  "identity": {
+    "accession_number": "ML20196L832",
+    "docket": "05000390",
+    "plant_name": "Watts Bar",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2020-05-20",
+    "report_date": "2020-07-14",
+    "operating_mode": "3",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Automatic Start of the Emergency Diesel Generators due to an Equipment Failure During Transfer of Power So.urce for the 1 B-B Shutdown Board"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "the apparent cause of the actuating arm to fast transfer switch alignment was determined to be inadequate procedural guidance to check/test the switch alignment in relation to final travel of the breaker actuating arm",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "inadequate maintenance procedure for breaker/fast-transfer-switch alignment",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 390-2020-002-00",
+      "properties": {
+        "match_key": "LER:390-2020-002-00"
+      },
+      "type": "LER",
+      "key": "390-2020-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:390-2020-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Watts Bar Unit 1",
+      "properties": {
+        "match_key": "Unit:05000390",
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000390",
+      "match_key": "Unit:05000390"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Procedural Deficiency (D)",
+      "properties": {
+        "match_key": "Cause:Design/Procedural Deficiency"
+      },
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "inadequate maintenance procedure for breaker/fast-transfer-switch alignment",
+      "proximate_text": "the apparent cause of the actuating arm to fast transfer switch alignment was determined to be inadequate procedural guidance to check/test the switch alignment in relation to final travel of the breaker actuating arm",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_ek",
+      "display_name": "Emergency Diesel Generator System",
+      "properties": {
+        "match_key": "System:EK"
+      },
+      "type": "System",
+      "eiis_code": "EK",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "automatically actuated safety system",
+      "match_key": "System:EK"
+    },
+    {
+      "id": "sys_eb",
+      "display_name": "1B-B 6.9kV Shutdown Board",
+      "properties": {
+        "match_key": "System:EB"
+      },
+      "type": "System",
+      "eiis_code": "EB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected electrical distribution system",
+      "match_key": "System:EB"
+    },
+    {
+      "id": "c_maint_bkr",
+      "display_name": "Maintenance supply breaker",
+      "properties": {
+        "match_key": "Component:BKR|maintenance-supply-breaker"
+      },
+      "type": "Component",
+      "eiis_code": "BKR",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:BKR"
+    },
+    {
+      "id": "c_norm_bkr",
+      "display_name": "Normal supply breaker",
+      "properties": {
+        "match_key": "Component:normal-supply-breaker"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:normal-supply-breaker"
+    },
+    {
+      "id": "c_fts",
+      "display_name": "Fast Transfer Switch, Model BZ-2RW82299-A2",
+      "properties": {
+        "match_key": "Component:52|fast-transfer-switch"
+      },
+      "type": "Component",
+      "eiis_code": "52",
+      "identifier": null,
+      "model": "BZ-2RW82299-A2",
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:52"
+    },
+    {
+      "id": "fm_arm",
+      "display_name": "Actuating arm on maintenance supply breaker not properly aligned with fast transfer switch",
+      "properties": {
+        "match_key": "FailureMode:actuating-arm-misalignment"
+      },
+      "type": "FailureMode",
+      "description": "The actuating arm on the maintenance supply breaker that engages the fast transfer switch associated with control circuitry for the normal supply breaker was not properly aligned.",
+      "match_key": "FailureMode:actuating-arm-on-maintenance-supply-breaker-not-properly-aligned-with-fast-transfer-switch"
+    },
+    {
+      "id": "fm_fts_fail",
+      "display_name": "Fast transfer switch fails to prevent normal breaker closure",
+      "properties": {
+        "match_key": "FailureMode:fast-transfer-switch-fails-to-block-closure"
+      },
+      "type": "FailureMode",
+      "description": "The misalignment prevented actuation of the fast transfer switch, so the switch did not function to keep the normal supply breaker from closing while the maintenance supply breaker was still closed.",
+      "match_key": "FailureMode:fast-transfer-switch-fails-to-prevent-normal-breaker-closure"
+    },
+    {
+      "id": "fm_premature_close",
+      "display_name": "Normal supply breaker closes prematurely, tripping both breakers",
+      "properties": {
+        "match_key": "FailureMode:premature-breaker-closure-and-trip"
+      },
+      "type": "FailureMode",
+      "description": "When the handswitch for closing the normal supply breaker was taken to close, the normal power supply breaker closed prematurely, resulting in tripping of both the normal and maintenance supply breakers.",
+      "match_key": "FailureMode:normal-supply-breaker-closes-prematurely-tripping-both-breakers"
+    },
+    {
+      "id": "cons_sdbd_loss",
+      "display_name": "Loss of power to 1B-B 6.9kV SDBD and automatic start of all four EDGs",
+      "properties": {
+        "match_key": "Consequence:sdbd-power-loss-edg-start"
+      },
+      "type": "Consequence",
+      "start": "2020-05-20T05:21:00",
+      "end": "2020-05-20T07:21:00",
+      "duration": "2:00",
+      "tz": "EDT",
+      "match_key": "Consequence:loss-of-power-to-1b-b-6-9kv-sdbd-and-automatic-start-of-all-four-edgs"
+    },
+    {
+      "id": "ca_quarantine",
+      "display_name": "Quarantine maintenance supply breaker until repairs completed",
+      "properties": {
+        "match_key": "CorrectiveAction:quarantine-breaker"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:quarantine-maintenance-supply-breaker-until-repairs-completed"
+    },
+    {
+      "id": "ca_repower",
+      "display_name": "Repower 1B-B SDBD from EDG and transfer back to offsite power",
+      "properties": {
+        "match_key": "CorrectiveAction:repower-sdbd-offsite"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:repower-1b-b-sdbd-from-edg-and-transfer-back-to-offsite-power"
+    },
+    {
+      "id": "ca_proc_revise",
+      "display_name": "Revise maintenance procedures for overhaul/installation of 6.9kV breakers to clarify checks of fast transfer switch and breaker actuating arm",
+      "properties": {
+        "match_key": "CorrectiveAction:revise-6-9kv-breaker-maintenance-procedures"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-maintenance-procedures-for-overhaul-installation-of-6-9kv-breakers-to-clarify-checks-of-fast-transfer-switch-and-breaker-actuating-arm"
+    },
+    {
+      "id": "mfr_ge",
+      "display_name": "General Electric",
+      "properties": {
+        "match_key": "Manufacturer:GE"
+      },
+      "type": "Manufacturer",
+      "code": "GE",
+      "match_key": "Manufacturer:GE"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {
+        "type": "reporting-criterion",
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_ufsar",
+      "display_name": "UFSAR Chapter 15",
+      "properties": {
+        "type": "analysis-basis",
+        "match_key": "RegulatoryReference:ufsar-ch-15"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ufsar-chapter-15"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "LER 390/2017-004-00",
+      "properties": {
+        "unit": 1,
+        "match_key": "LER:390/2017-004-00"
+      },
+      "type": "LER",
+      "key": "390/2017-004-00",
+      "stub": true,
+      "title": "Reactor manually tripped as a result of a failed Reactor Coolant Pump power transfer",
+      "plant": "Watts Bar Nuclear Plant",
+      "match_key": "LER:390/2017-004-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ek",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_eb",
+      "evidence": null
+    },
+    {
+      "source": "fm_arm",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_arm",
+      "relation": "LEADS_TO",
+      "target": "fm_fts_fail",
+      "evidence": null
+    },
+    {
+      "source": "fm_fts_fail",
+      "relation": "LEADS_TO",
+      "target": "fm_premature_close",
+      "evidence": null
+    },
+    {
+      "source": "fm_premature_close",
+      "relation": "LEADS_TO",
+      "target": "cons_sdbd_loss",
+      "evidence": null
+    },
+    {
+      "source": "cons_sdbd_loss",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_ek",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_quarantine",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_repower",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_proc_revise",
+      "evidence": null
+    },
+    {
+      "source": "c_fts",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_ge",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ufsar",
+      "evidence": null
+    }
+  ],
+  "chain": "inadequate procedural guidance on actuating-arm-to-fast-transfer-switch alignment [cause D] -> actuating arm misaligned -> fast transfer switch fails to block normal breaker closure -> normal breaker closes prematurely, both breakers trip -> loss of power to 1B-B SDBD, all 4 EDGs auto-start [backup: EDG System restores power to 1B-B SDBD; offsite power restored in ~2 hrs]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code D (per form) is left generic since no explicit category text was supplied in FORM-366 FIELDS (category field was 'provisional'); category retained as 'provisional' per verbatim copy rule while cause_code is copied as D. Sys EB (shutdown board) and component 52 (fast transfer switch)/BKR (breaker) taken from block 13 EIIS codes. Normal supply breaker has no explicit EIIS code given in narrative, left null. EDG system (EK) modeled both as involved system and as backup since it powered the SDBD during the outage window. Previous similar LER cited but explicitly noted as having a different underlying cause; captured as stub with SIMILAR_TO per instructions despite narrative caveat."
+}

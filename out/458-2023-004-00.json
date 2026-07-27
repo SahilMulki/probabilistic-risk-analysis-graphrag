@@ -1,0 +1,328 @@
+{
+  "ler_number": "458-2023-004-00",
+  "identity": {
+    "accession_number": "ML23362A034",
+    "docket": "05000458",
+    "plant_name": "River Bend",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2023-11-02",
+    "report_date": "2023-12-28",
+    "operating_mode": "4",
+    "power_level": 0,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "/ 2023-004-00, Drywell Post Accident Radiation Monitor Inoperable due to Unrecognized Surveillance Failure"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "A",
+      "system": "IP",
+      "component": "MON",
+      "manufacturer": "G036",
+      "reportable": "N"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The casual evaluation investigation has determined that the event was caused by a human performance error while performing the surveillance on February 28, 2023. The RBS technician performing the surveillance did not identify and correct a parameter that was found out of tolerance.",
+    "cause_code": "A",
+    "category": "Personnel Error",
+    "theme": "surveillance technician missed out-of-tolerance parameter",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 458-2023-004-00",
+      "properties": {
+        "match_key": "LER:458-2023-004-00"
+      },
+      "type": "LER",
+      "key": "458-2023-004-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:458-2023-004-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "River Bend Unit 1",
+      "properties": {
+        "match_key": "Unit:05000458",
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000458",
+      "match_key": "Unit:05000458"
+    },
+    {
+      "id": "cause",
+      "display_name": "Personnel Error (A)",
+      "properties": {
+        "match_key": "Cause:Personnel Error"
+      },
+      "type": "Cause",
+      "cause_code": "A",
+      "category": "Personnel Error",
+      "theme": "surveillance technician missed out-of-tolerance parameter",
+      "proximate_text": "The casual evaluation investigation has determined that the event was caused by a human performance error while performing the surveillance on February 28, 2023. The RBS technician performing the surveillance did not identify and correct a parameter that was found out of tolerance.",
+      "provisional": false,
+      "match_key": "Cause:Personnel Error"
+    },
+    {
+      "id": "sys_il",
+      "display_name": "Post Accident Monitoring / Radiation Monitoring System",
+      "properties": {
+        "match_key": "System:IL"
+      },
+      "type": "System",
+      "eiis_code": "IL",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected",
+      "match_key": "System:IL"
+    },
+    {
+      "id": "c_re20a",
+      "display_name": "Drywell Post Accident Radiation Monitor RMS-RE20A (Division I)",
+      "properties": {
+        "match_key": "Component:MON|RMS-RE20A"
+      },
+      "type": "Component",
+      "eiis_code": "MON",
+      "identifier": "RMS-RE20A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:MON|RMS-RE20A"
+    },
+    {
+      "id": "c_re20b",
+      "display_name": "Drywell Post Accident Radiation Monitor RMS-RE20B (Division II)",
+      "properties": {
+        "role": "redundant backup; operable",
+        "match_key": "Component:MON|RMS-RE20B"
+      },
+      "type": "Component",
+      "eiis_code": "MON",
+      "identifier": "RMS-RE20B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:MON|RMS-RE20B"
+    },
+    {
+      "id": "fm_missed",
+      "display_name": "Technician failed to identify/correct out-of-tolerance parameter during surveillance",
+      "properties": {
+        "match_key": "FailureMode:technician-missed-out-of-tolerance-parameter"
+      },
+      "type": "FailureMode",
+      "description": "During STP-511-4289 performance on Feb 28, 2023, the technician did not recognize an out-of-tolerance calibration parameter for RMS-RE20A.",
+      "match_key": "FailureMode:technician-failed-to-identify-correct-out-of-tolerance-parameter-during-surveillance"
+    },
+    {
+      "id": "fm_leftoot",
+      "display_name": "RMS-RE20A left in out-of-tolerance state, surveillance requirements not met",
+      "properties": {
+        "match_key": "FailureMode:re20a-left-out-of-tolerance"
+      },
+      "type": "FailureMode",
+      "description": "RMS-RE20A was left out of tolerance and did not satisfy STP-511-4289 requirements, rendering the surveillance failure unrecognized.",
+      "match_key": "FailureMode:rms-re20a-left-in-out-of-tolerance-state-surveillance-requirements-not-met"
+    },
+    {
+      "id": "fm_unrecognized",
+      "display_name": "Surveillance failure went unrecognized until later work-package review",
+      "properties": {
+        "match_key": "FailureMode:unrecognized-surveillance-failure"
+      },
+      "type": "FailureMode",
+      "description": "The failed surveillance was not identified as failed until a review of a previously performed work package on November 2, 2023.",
+      "match_key": "FailureMode:surveillance-failure-went-unrecognized-until-later-work-package-review"
+    },
+    {
+      "id": "cons_inop",
+      "display_name": "RMS-RE20A declared Inoperable retroactively / TS 3.3.3.1 prohibited-mode operation",
+      "properties": {
+        "note": "RBS operated in Modes 1/2 (applicable modes for LCO 3.3.3.1) from 2023-06-15 to 2023-10-29 with RMS-RE20A inoperable and undeclared, constituting operation prohibited by TS.",
+        "match_key": "Consequence:re20a-inoperable-ts-prohibited-operation"
+      },
+      "type": "Consequence",
+      "start": "2023-02-28",
+      "end": "2023-11-12",
+      "duration": "approximately 8.5 months",
+      "tz": null,
+      "match_key": "Consequence:rms-re20a-declared-inoperable-retroactively-ts-3-3-3-1-prohibited-mode-operation"
+    },
+    {
+      "id": "ca_sample",
+      "display_name": "Random sample review of 20 completed radiation monitor work orders (including 7 by same technician)",
+      "properties": {
+        "match_key": "CorrectiveAction:random-sample-review-work-orders"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:random-sample-review-of-20-completed-radiation-monitor-work-orders-including-7-by-same-technician"
+    },
+    {
+      "id": "ca_culpability",
+      "display_name": "Culpability review in accordance with station procedures",
+      "properties": {
+        "match_key": "CorrectiveAction:culpability-review"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:culpability-review-in-accordance-with-station-procedures"
+    },
+    {
+      "id": "ca_perfmgmt",
+      "display_name": "Individual performance management and practices review",
+      "properties": {
+        "match_key": "CorrectiveAction:individual-performance-management"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:individual-performance-management-and-practices-review"
+    },
+    {
+      "id": "mfr_g036",
+      "display_name": "Manufacturer G036",
+      "properties": {
+        "match_key": "Manufacturer:G036"
+      },
+      "type": "Manufacturer",
+      "code": "G036",
+      "match_key": "Manufacturer:G036"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts3331",
+      "display_name": "TS 3.3.3.1 Post Accident Monitoring Instrumentation",
+      "properties": {
+        "match_key": "RegulatoryReference:ts-3-3-3-1"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-3-3-3-1-post-accident-monitoring-instrumentation"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_il",
+      "evidence": null
+    },
+    {
+      "source": "c_re20a",
+      "relation": "PART_OF",
+      "target": "sys_il",
+      "evidence": null
+    },
+    {
+      "source": "fm_missed",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_missed",
+      "relation": "LEADS_TO",
+      "target": "fm_leftoot",
+      "evidence": null
+    },
+    {
+      "source": "fm_leftoot",
+      "relation": "LEADS_TO",
+      "target": "fm_unrecognized",
+      "evidence": null
+    },
+    {
+      "source": "fm_unrecognized",
+      "relation": "LEADS_TO",
+      "target": "cons_inop",
+      "evidence": null
+    },
+    {
+      "source": "cons_inop",
+      "relation": "BACKED_UP_BY",
+      "target": "c_re20b",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_sample",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_culpability",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_perfmgmt",
+      "evidence": null
+    },
+    {
+      "source": "c_re20a",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_g036",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts3331",
+      "evidence": null
+    }
+  ],
+  "chain": "technician human-performance error during Feb 28, 2023 surveillance [cause A] -> out-of-tolerance parameter not corrected -> RMS-RE20A left inoperable/undetected -> failure unrecognized until Nov 2, 2023 work-package review -> RMS-RE20A inoperable / TS-prohibited operation Jun 15-Oct 29, 2023 [backup RMS-RE20B operable throughout]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Discovery of the failure occurred Nov 2, 2023 during work-package review, but the underlying failure event (technician error) actually occurred Feb 28, 2023; both dates are captured in the consequence window. No previous similar occurrence LER is cited in this report despite the section heading, so no SIMILAR_TO edge or stub LER node was created. System IP/MON block-13 codes reflect radiation monitoring instrumentation; narrative bracket code [IL] used for system id per EIIS surface-form rule."
+}

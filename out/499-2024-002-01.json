@@ -1,0 +1,505 @@
+{
+  "ler_number": "499-2024-002-01",
+  "identity": {
+    "accession_number": "ML25132A132",
+    "docket": "05000499",
+    "plant_name": "South Texas",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2024-08-20",
+    "report_date": "2025-05-12",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Two Control Room Envelope HVAC Trains Inoperable Resulting in a Condition That Could Have Prevented Fulfillment of a Safety Function"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)(D)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The causes of the TCM failure were excessive equipment vibration conditions and age-related degradation of the electrolytic capacitors in the TCM panels. ... Cancellation of an existing preventative maintenance activity failed to evaluate the impact of the change to an existing 10-year requirement on aging of electrolytic capacitors internal to the TCMs.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Vibration-induced TCM degradation compounded by inadequate causal analysis, Maintenance Rule implementation, design change review, and PM cancellation",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 499-2024-002-01",
+      "properties": {
+        "match_key": "LER:499-2024-002-01"
+      },
+      "type": "LER",
+      "key": "499-2024-002-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:499-2024-002-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "South Texas Unit 2",
+      "properties": {
+        "match_key": "Unit:05000499",
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000499",
+      "match_key": "Unit:05000499"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {
+        "match_key": "Cause:provisional"
+      },
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Vibration-induced TCM degradation compounded by inadequate causal analysis, Maintenance Rule implementation, design change review, and PM cancellation",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_km",
+      "display_name": "Essential Chilled Water System",
+      "properties": {
+        "match_key": "System:KM"
+      },
+      "type": "System",
+      "eiis_code": "KM",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:KM"
+    },
+    {
+      "id": "sys_cre_hvac",
+      "display_name": "Control Room Envelope HVAC System",
+      "properties": {
+        "note": "3-train system; two of three trains required for safety function",
+        "match_key": "System:control-room-envelope-hvac-system"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:control-room-envelope-hvac-system"
+    },
+    {
+      "id": "c_chiller22b",
+      "display_name": "Essential Chiller 22B",
+      "properties": {
+        "match_key": "Component:essential-chiller-22b"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:essential-chiller-22b"
+    },
+    {
+      "id": "c_tcm",
+      "display_name": "Temperature Control Module (TCM) for Essential Chiller 22B",
+      "properties": {
+        "match_key": "Component:23|TCM-1A"
+      },
+      "type": "Component",
+      "eiis_code": "23",
+      "identifier": null,
+      "model": "TCM-1A",
+      "manufacturer_code": "B350",
+      "inferred_code": false,
+      "match_key": "Component:23"
+    },
+    {
+      "id": "c_capacitors",
+      "display_name": "Electrolytic capacitors in TCM panel",
+      "properties": {
+        "match_key": "Component:electrolytic-capacitors-tcm-panel"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:electrolytic-capacitors-in-tcm-panel"
+    },
+    {
+      "id": "fm_vibration",
+      "display_name": "Excessive equipment vibration on TCM due to lightly loaded chiller fluid stall",
+      "properties": {
+        "match_key": "FailureMode:excessive-vibration-tcm"
+      },
+      "type": "FailureMode",
+      "description": "When multiple Essential Chillers are in operation and one is in a slightly loaded condition, that chiller is susceptible to fluid stall which creates high vibrational load to the chiller, attached hardware, and TCM panels.",
+      "match_key": "FailureMode:excessive-equipment-vibration-on-tcm-due-to-lightly-loaded-chiller-fluid-stall"
+    },
+    {
+      "id": "fm_capacitor_degradation",
+      "display_name": "Age-related degradation of electrolytic capacitors in TCM",
+      "properties": {
+        "match_key": "FailureMode:capacitor-degradation"
+      },
+      "type": "FailureMode",
+      "description": null,
+      "match_key": "FailureMode:age-related-degradation-of-electrolytic-capacitors-in-tcm"
+    },
+    {
+      "id": "fm_tcm_failure",
+      "display_name": "TCM failure - unable to maintain chiller outlet temperature",
+      "properties": {
+        "match_key": "FailureMode:tcm-failure"
+      },
+      "type": "FailureMode",
+      "description": "The failure of the TCM resulted in the inability to maintain Essential Chiller 22B outlet temperature between 42 and 48 degrees Fahrenheit.",
+      "match_key": "FailureMode:tcm-failure-unable-to-maintain-chiller-outlet-temperature"
+    },
+    {
+      "id": "fm_chiller_oscillation",
+      "display_name": "Oscillating chilled water outlet temperature with cycling pre-rotation vanes and hot gas bypass valves",
+      "properties": {
+        "match_key": "FailureMode:chiller-oscillation"
+      },
+      "type": "FailureMode",
+      "description": null,
+      "match_key": "FailureMode:oscillating-chilled-water-outlet-temperature-with-cycling-pre-rotation-vanes-and-hot-gas-bypass-valves"
+    },
+    {
+      "id": "fm_ech_b_inop",
+      "display_name": "Essential Chilled Water Train B declared inoperable",
+      "properties": {
+        "match_key": "FailureMode:ech-train-b-inoperable"
+      },
+      "type": "FailureMode",
+      "description": null,
+      "match_key": "FailureMode:essential-chilled-water-train-b-declared-inoperable"
+    },
+    {
+      "id": "fm_cre_b_inop",
+      "display_name": "CRE HVAC Train B inoperable (cascading effect)",
+      "properties": {
+        "match_key": "FailureMode:cre-hvac-train-b-inoperable"
+      },
+      "type": "FailureMode",
+      "description": null,
+      "match_key": "FailureMode:cre-hvac-train-b-inoperable-cascading-effect"
+    },
+    {
+      "id": "cons_cre_hvac",
+      "display_name": "Only one of three CRE HVAC trains OPERABLE; potential failure to fulfill safety function",
+      "properties": {
+        "match_key": "Consequence:cre-hvac-two-trains-inoperable"
+      },
+      "type": "Consequence",
+      "start": "2024-08-20T20:10",
+      "end": "2024-08-21T11:34",
+      "duration": "15:24",
+      "tz": "CDT",
+      "match_key": "Consequence:only-one-of-three-cre-hvac-trains-operable-potential-failure-to-fulfill-safety-function"
+    },
+    {
+      "id": "ca_move_panels",
+      "display_name": "Relocate Essential Chiller Control Panels (including TCMs) to isolated location to limit vibration",
+      "properties": {
+        "match_key": "CorrectiveAction:relocate-control-panels"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:relocate-essential-chiller-control-panels-including-tcms-to-isolated-location-to-limit-vibration"
+    },
+    {
+      "id": "ca_teach",
+      "display_name": "Teaching and learning document for Maintenance Rule Expert panel",
+      "properties": {
+        "match_key": "CorrectiveAction:teaching-learning-document"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:teaching-and-learning-document-for-maintenance-rule-expert-panel"
+    },
+    {
+      "id": "ca_pm_tcm",
+      "display_name": "Establish 5-year PM to replace TCMs for all Essential Chillers, with 10-year capacitor service life basis",
+      "properties": {
+        "match_key": "CorrectiveAction:pm-tcm-replacement"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:establish-5-year-pm-to-replace-tcms-for-all-essential-chillers-with-10-year-capacitor-service-life-basis"
+    },
+    {
+      "id": "ca_replace_tcm_21c",
+      "display_name": "Replace TCM on Essential Chiller 21C with refurbished/upgraded model",
+      "properties": {
+        "match_key": "CorrectiveAction:replace-tcm-21c"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-tcm-on-essential-chiller-21c-with-refurbished-upgraded-model"
+    },
+    {
+      "id": "mfr_borgwarner",
+      "display_name": "Borg-Warner",
+      "properties": {
+        "match_key": "Manufacturer:B350"
+      },
+      "type": "Manufacturer",
+      "code": "B350",
+      "match_key": "Manufacturer:B350"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {
+        "type": "reporting-criterion",
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "rr_ts377",
+      "display_name": "Technical Specification 3.7.7",
+      "properties": {
+        "type": "license-basis",
+        "match_key": "RegulatoryReference:ts-3-7-7"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:technical-specification-3-7-7"
+    },
+    {
+      "id": "rr_rg1174",
+      "display_name": "Regulatory Guide 1.174",
+      "properties": {
+        "type": "standard/guidance",
+        "match_key": "RegulatoryReference:rg-1-174"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:regulatory-guide-1-174"
+    },
+    {
+      "id": "ler_stp1_2023_003",
+      "display_name": "STP Unit 1 LER 2023-003-00: Two Essential Chilled Water Trains Inoperable Resulting in a Condition That Could Have Prevented Fulfillment of a Safety Function",
+      "properties": {
+        "match_key": "LER:1-2023-003-00"
+      },
+      "type": "LER",
+      "key": "498-2023-003-00",
+      "stub": true,
+      "title": "Two Essential Chilled Water Trains Inoperable Resulting in a Condition That Could Have Prevented Fulfillment of a Safety Function",
+      "plant": "South Texas Project Unit 1",
+      "match_key": "LER:498-2023-003-00"
+    },
+    {
+      "id": "ler_stp2_2023_001",
+      "display_name": "STP Unit 2 LER 2023-001-00: Two Essential Chilled Water Trains Inoperable Resulting in a Condition That Could Have Prevented Fulfillment of a Safety Function",
+      "properties": {
+        "match_key": "LER:2-2023-001-00"
+      },
+      "type": "LER",
+      "key": "499-2023-001-00",
+      "stub": true,
+      "title": "Two Essential Chilled Water Trains Inoperable Resulting in a Condition That Could Have Prevented Fulfillment of a Safety Function",
+      "plant": "South Texas Project Unit 2",
+      "match_key": "LER:499-2023-001-00"
+    },
+    {
+      "id": "ler_stp1_2023_004",
+      "display_name": "STP Unit 1 LER 2023-004-00: Condition Prohibited by Technical Specifications Due to Inoperable Train of Essential Chilled Water",
+      "properties": {
+        "match_key": "LER:1-2023-004-00"
+      },
+      "type": "LER",
+      "key": "498-2023-004-00",
+      "stub": true,
+      "title": "Condition Prohibited by Technical Specifications Due to Inoperable Train of Essential Chilled Water",
+      "plant": "South Texas Project Unit 1",
+      "match_key": "LER:498-2023-004-00"
+    },
+    {
+      "id": "ler_stp1_2024_002",
+      "display_name": "STP Unit 1 LER 2024-002-00: Two Essential Chilled Water Trains Inoperable Resulting in a Condition That Could Have Prevented Fulfillment of a Safety Function",
+      "properties": {
+        "match_key": "LER:1-2024-002-00"
+      },
+      "type": "LER",
+      "key": "498-2024-002-00",
+      "stub": true,
+      "title": "Two Essential Chilled Water Trains Inoperable Resulting in a Condition That Could Have Prevented Fulfillment of a Safety Function",
+      "plant": "South Texas Project Unit 1",
+      "match_key": "LER:498-2024-002-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts377",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_km",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_cre_hvac",
+      "evidence": null
+    },
+    {
+      "source": "c_tcm",
+      "relation": "PART_OF",
+      "target": "c_chiller22b",
+      "evidence": null
+    },
+    {
+      "source": "c_capacitors",
+      "relation": "PART_OF",
+      "target": "c_tcm",
+      "evidence": null
+    },
+    {
+      "source": "c_tcm",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_borgwarner",
+      "evidence": null
+    },
+    {
+      "source": "fm_vibration",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_vibration",
+      "relation": "LEADS_TO",
+      "target": "fm_tcm_failure",
+      "evidence": null
+    },
+    {
+      "source": "fm_capacitor_degradation",
+      "relation": "LEADS_TO",
+      "target": "fm_tcm_failure",
+      "evidence": null
+    },
+    {
+      "source": "fm_tcm_failure",
+      "relation": "LEADS_TO",
+      "target": "fm_chiller_oscillation",
+      "evidence": null
+    },
+    {
+      "source": "fm_chiller_oscillation",
+      "relation": "LEADS_TO",
+      "target": "fm_ech_b_inop",
+      "evidence": null
+    },
+    {
+      "source": "fm_ech_b_inop",
+      "relation": "LEADS_TO",
+      "target": "fm_cre_b_inop",
+      "evidence": null
+    },
+    {
+      "source": "fm_cre_b_inop",
+      "relation": "LEADS_TO",
+      "target": "cons_cre_hvac",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_move_panels",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_teach",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_pm_tcm",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_tcm_21c",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_stp1_2023_003",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_stp2_2023_001",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_stp1_2023_004",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_stp1_2024_002",
+      "evidence": null
+    }
+  ],
+  "chain": "excessive vibration + age-related capacitor degradation [cause TBD] -> TCM failure on Chiller 22B -> chilled water outlet temp oscillation / vane & bypass valve cycling -> Essential Chilled Water Train B inoperable -> CRE HVAC Train B inoperable (cascading) + CRE HVAC Train C already inoperable for maintenance -> only 1 of 3 CRE HVAC trains OPERABLE (15h24m), potential inability to fulfill safety function",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "FORM-366 fields provided no plant_name/unit/reactor_type/cause_code; plant/unit/reactor type inferred from narrative (South Texas Project Unit 2, PWR) and docket 05000499. Cause code left TBD/provisional per official field despite narrative identifying four detailed apparent causes; theme captures the compound nature (vibration + capacitor aging + inadequate causal analysis/Maintenance Rule/design review/PM cancellation) without overriding the official TBD code. Block 13 system/component codes taken from Section II.D (KM/23/B350/TCM-1A); cause field there is not explicitly given so set to TBD to match header. No stated operable backup system for CRE HVAC trains during the event (Train A presumably operable but not explicitly stated as such in narrative) so no BACKED_UP_BY edge asserted. Previous similar events: six references listed in narrative; supplement LERs (2023-003-01, 2024-002-01) omitted as they revise/duplicate the -00 versions already captured as stubs with SIMILAR_TO; only distinct original event LER numbers were modeled to avoid redundant stub nodes for supplements of the same event."
+}

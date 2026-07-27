@@ -1,0 +1,36 @@
+# Reproducible Neo4j for pragraph's Live mode.
+#
+#   docker compose up -d            # start Neo4j (pinned version, configured from .env)
+#   python -m pragraph.load_graph   # rebuild the graph from the committed out/*.json  ($0)
+#   uvicorn pragraph.app:app        # run the app -> http://localhost:8000
+#
+# Credentials come from the git-ignored .env (NEO4J_USER / NEO4J_PASSWORD) — the same file
+# load_graph.py reads — so the app and the database share one source of truth. Copy
+# .env.example to .env first. Neo4j 5 requires the password to be at least 8 characters.
+
+services:
+  neo4j:
+    image: neo4j:5.26-community          # pinned LTS; the pinned driver (5.28.x) is 5.x-compatible
+    container_name: pragraph-neo4j
+    ports:
+      # override the host ports via .env (e.g. NEO4J_BOLT_PORT=7688) if 7474/7687 are taken;
+      # if you change the bolt port, update NEO4J_URI to match.
+      - "${NEO4J_HTTP_PORT:-7474}:7474"  # HTTP browser UI  -> http://localhost:7474
+      - "${NEO4J_BOLT_PORT:-7687}:7687"  # Bolt — the driver connects here (matches NEO4J_URI)
+    environment:
+      # community only supports the built-in `neo4j` user; NEO4J_USER should be `neo4j`.
+      NEO4J_AUTH: "${NEO4J_USER:-neo4j}/${NEO4J_PASSWORD:?set NEO4J_PASSWORD in .env (min 8 chars)}"
+    volumes:
+      - neo4j_data:/data                 # graph persists across restarts
+      - neo4j_logs:/logs
+    healthcheck:
+      # substituted from the host .env at `compose up`; the committed file keeps only placeholders.
+      test: ["CMD-SHELL", "cypher-shell -u ${NEO4J_USER:-neo4j} -p ${NEO4J_PASSWORD} 'RETURN 1' >/dev/null 2>&1 || exit 1"]
+      interval: 10s
+      timeout: 10s
+      retries: 12
+      start_period: 30s
+
+volumes:
+  neo4j_data:
+  neo4j_logs:

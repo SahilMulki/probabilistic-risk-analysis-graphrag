@@ -1,0 +1,372 @@
+{
+  "ler_number": "456-2020-001-00",
+  "identity": {
+    "accession_number": "ML20330A155",
+    "docket": "05000456",
+    "plant_name": "Braidwood",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2020-10-03",
+    "report_date": "2020-11-25",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "- The Unit 1 Train A Auxiliary Feedwater Pump was Inoperable Due to a Failed Suction Pressure Lead/Lag Card"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "x",
+      "system": "BA",
+      "component": null,
+      "manufacturer": "Westinghouse",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "an integrated circuit failure resulting in the card output change in input voltage being registered results in the output voltage remaining the same",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "integrated circuit component failure",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 456-2020-006-00",
+      "properties": {
+        "match_key": "LER:456-2020-006-00"
+      },
+      "type": "LER",
+      "key": "456-2020-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:456-2020-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Braidwood Unit 1",
+      "properties": {
+        "match_key": "Unit:05000456",
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000456",
+      "match_key": "Unit:05000456"
+    },
+    {
+      "id": "cause",
+      "display_name": "Component Failure (X)",
+      "properties": {
+        "match_key": "Cause:Component Failure"
+      },
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "integrated circuit component failure",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_ba",
+      "display_name": "Auxiliary Feedwater",
+      "properties": {
+        "match_key": "System:BA"
+      },
+      "type": "System",
+      "eiis_code": "BA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BA"
+    },
+    {
+      "id": "sys_ab",
+      "display_name": "Reactor Coolant System",
+      "properties": {
+        "match_key": "System:AB",
+        "note": "context; plant operating conditions description"
+      },
+      "type": "System",
+      "eiis_code": "AB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:AB"
+    },
+    {
+      "id": "sys_bi",
+      "display_name": "Essential Service Water",
+      "properties": {
+        "match_key": "System:BI"
+      },
+      "type": "System",
+      "eiis_code": "BI",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup suction source; available",
+      "match_key": "System:BI"
+    },
+    {
+      "id": "c_pump1a",
+      "display_name": "Train A Auxiliary Feedwater Pump (1A AF Pump)",
+      "properties": {
+        "match_key": "Component:BA|1A-AF-Pump"
+      },
+      "type": "Component",
+      "eiis_code": "BA",
+      "identifier": "1A AF",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:BA|1A AF"
+    },
+    {
+      "id": "c_pt",
+      "display_name": "Suction Pressure Transmitter 1PT-AF051",
+      "properties": {
+        "match_key": "Component:1PT-AF051"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "1PT-AF051",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:suction-pressure-transmitter-1pt-af051"
+    },
+    {
+      "id": "c_card",
+      "display_name": "Suction Pressure Lead/Lag Card 1PY-AF051C",
+      "properties": {
+        "match_key": "Component:1PY-AF051C"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "1PY-AF051C",
+      "model": null,
+      "manufacturer_code": "Westinghouse",
+      "inferred_code": false,
+      "match_key": "Component:suction-pressure-lead-lag-card-1py-af051c"
+    },
+    {
+      "id": "c_ic",
+      "display_name": "LM311P Analog Comparator Integrated Circuit (U18)",
+      "properties": {
+        "mfg_part": "4930A37H02",
+        "match_key": "Component:LM311P-U18"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "U18",
+      "model": "LM311P",
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:lm311p-analog-comparator-integrated-circuit-u18"
+    },
+    {
+      "id": "fm_ic",
+      "display_name": "Integrated circuit failure (output voltage stuck regardless of input change)",
+      "properties": {
+        "match_key": "FailureMode:integrated-circuit-failure"
+      },
+      "type": "FailureMode",
+      "description": "A change in input voltage to the card was not registered; output voltage remained constant.",
+      "match_key": "FailureMode:integrated-circuit-failure-output-voltage-stuck-regardless-of-input-change"
+    },
+    {
+      "id": "fm_cardfail",
+      "display_name": "Lead/lag card failed at constant output value",
+      "properties": {
+        "match_key": "FailureMode:lead-lag-card-failed-constant-value"
+      },
+      "type": "FailureMode",
+      "description": null,
+      "match_key": "FailureMode:lead-lag-card-failed-at-constant-output-value"
+    },
+    {
+      "id": "fm_ptinop",
+      "display_name": "Suction pressure indication 1PT-AF051 inoperable / no auto-transfer capability",
+      "properties": {
+        "match_key": "FailureMode:suction-pressure-indication-inoperable"
+      },
+      "type": "FailureMode",
+      "description": "1A AF pump suction source would not auto-transfer to SX suction if normal suction source was lost, without manual action.",
+      "match_key": "FailureMode:suction-pressure-indication-1pt-af051-inoperable-no-auto-transfer-capability"
+    },
+    {
+      "id": "cons_afinop",
+      "display_name": "Train A AF Pump inoperable / TS LCO 3.7.5 Condition A exceeded",
+      "properties": {
+        "match_key": "Consequence:train-a-af-pump-inoperable"
+      },
+      "type": "Consequence",
+      "start": "2020-09-17T19:31",
+      "end": "2020-10-04T01:11",
+      "duration": "approximately 15 days, 5.7 hours",
+      "tz": null,
+      "match_key": "Consequence:train-a-af-pump-inoperable-ts-lco-3-7-5-condition-a-exceeded"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace failed suction pressure lead/lag card",
+      "properties": {
+        "match_key": "CorrectiveAction:replace-lead-lag-card"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-failed-suction-pressure-lead-lag-card"
+    },
+    {
+      "id": "mfr_west",
+      "display_name": "Westinghouse",
+      "properties": {
+        "match_key": "Manufacturer:Westinghouse"
+      },
+      "type": "Manufacturer",
+      "code": "Westinghouse",
+      "match_key": "Manufacturer:Westinghouse"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion",
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_tslco375",
+      "display_name": "TS LCO 3.7.5, Auxiliary Feedwater (AF) System",
+      "properties": {
+        "type": "license-basis",
+        "match_key": "RegulatoryReference:ts-lco-3-7-5"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ts-lco-3-7-5-auxiliary-feedwater-af-system"
+    },
+    {
+      "id": "rr_tslco332",
+      "display_name": "TS 3.3.2, Engineered Safety Feature Actuation System (ESFAS) Instrumentation",
+      "properties": {
+        "type": "license-basis",
+        "match_key": "RegulatoryReference:ts-3-3-2"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ts-3-3-2-engineered-safety-feature-actuation-system-esfas-instrumentation"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_tslco375",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_tslco332",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ba",
+      "evidence": null
+    },
+    {
+      "source": "c_pump1a",
+      "relation": "PART_OF",
+      "target": "sys_ba",
+      "evidence": null
+    },
+    {
+      "source": "c_card",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_west",
+      "evidence": null
+    },
+    {
+      "source": "c_ic",
+      "relation": "PART_OF",
+      "target": "c_card",
+      "evidence": null
+    },
+    {
+      "source": "fm_ic",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_ic",
+      "relation": "LEADS_TO",
+      "target": "fm_cardfail",
+      "evidence": null
+    },
+    {
+      "source": "fm_cardfail",
+      "relation": "LEADS_TO",
+      "target": "fm_ptinop",
+      "evidence": null
+    },
+    {
+      "source": "fm_ptinop",
+      "relation": "LEADS_TO",
+      "target": "cons_afinop",
+      "evidence": null
+    },
+    {
+      "source": "cons_afinop",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_bi",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    }
+  ],
+  "chain": "integrated circuit failure (fixed output voltage) [cause X] -> lead/lag card 1PY-AF051C fails at constant value -> suction pressure indication 1PT-AF051 loses auto-transfer capability -> 1A AF pump inoperable, TS LCO 3.7.5 exceeded (~15 days) [backups: CST available, Train B AF/SX auto-swap available, manual swap possible]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Block-13 cause code and category left as officially provisional/undetermined ('X'/provisional) per FORM-366 authoritative fields, though narrative clearly attributes root cause to a hardware/IC component failure (theme captures this). Redundant Train B AF pump and CST were both explicitly stated as available/operable throughout, hence modeled as backups (SX only modeled as backup source referenced via auto-transfer function, not as an independent operable train). No previous occurrences section content was provided (blank in narrative), so no stub LER emitted."
+}

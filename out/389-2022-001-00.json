@@ -1,0 +1,295 @@
+{
+  "ler_number": "389-2022-001-00",
+  "identity": {
+    "accession_number": "ML22063A075",
+    "docket": "05000389",
+    "plant_name": "Saint Lucie",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2022-01-06",
+    "report_date": "2022-03-04",
+    "operating_mode": "1",
+    "power_level": 68,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2022-001-00 for St. Lucie Unit 2, Reactor Shutdown Required by Technical Specifications due to a Misaligned Control Element Assembly"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "X",
+      "system": "AA",
+      "component": "MO",
+      "manufacturer": "W120",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "the direct cause was a malfunction of the CEA #27 Control Element Drive Mechanism (CEDM) motor; a cylindrical metallic object was found between the upper gripper's movable latch magnet and the top of the pull-down magnet",
+    "cause_code": "X",
+    "category": "Other",
+    "theme": "foreign object interference in CEDM motor causing rod misalignment",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 389-2022-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "389-2022-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:389-2022-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Saint Lucie Unit 2",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000389",
+      "match_key": "Unit:05000389"
+    },
+    {
+      "id": "cause",
+      "display_name": "Other (X)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "X",
+      "category": "Other",
+      "theme": "foreign object interference in CEDM motor causing rod misalignment",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Other"
+    },
+    {
+      "id": "sys_aa",
+      "display_name": "Control Element Drive System (Rod Control)",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "AA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:AA"
+    },
+    {
+      "id": "c_cea27",
+      "display_name": "Control Element Assembly (CEA) #27",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "ROD",
+      "identifier": "CEA #27",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:ROD|CEA #27"
+    },
+    {
+      "id": "c_cedm27",
+      "display_name": "CEA #27 Control Element Drive Mechanism (CEDM) Motor",
+      "properties": {
+        "part_number_jack_assembly": "E-13172-163-001-1",
+        "part_number_motor_assembly": "SCEDM-163-202",
+        "serial_number": "N4720 S/N 158"
+      },
+      "type": "Component",
+      "eiis_code": "MO",
+      "identifier": "CEDM #27",
+      "model": null,
+      "manufacturer_code": "W120",
+      "inferred_code": false,
+      "match_key": "Component:MO|CEDM #27"
+    },
+    {
+      "id": "fm_foreign_object",
+      "display_name": "Cylindrical metallic foreign object lodged between upper gripper latch magnet and pull-down magnet",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "A cylindrical metallic object was found between the upper gripper's movable latch magnet and the top of the pull-down magnet upon inspection of the removed CEDM motor.",
+      "match_key": "FailureMode:cylindrical-metallic-foreign-object-lodged-between-upper-gripper-latch-magnet-and-pull-down-magnet"
+    },
+    {
+      "id": "fm_cedm_malfunction",
+      "display_name": "CEA #27 CEDM motor malfunction",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Malfunction of the CEA #27 Control Element Drive Mechanism motor prevented normal operation of the rod.",
+      "match_key": "FailureMode:cea-27-cedm-motor-malfunction"
+    },
+    {
+      "id": "fm_cea_slip",
+      "display_name": "CEA #27 slipped from 133 to 120 inches withdrawn",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "CEA #27 slipped while being exercised for surveillance testing, resulting in a position deviation greater than 15 inches from its group.",
+      "match_key": "FailureMode:cea-27-slipped-from-133-to-120-inches-withdrawn"
+    },
+    {
+      "id": "fm_realign_fail",
+      "display_name": "CEA #27 unable to be realigned within TS time limits",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Attempts to withdraw/realign CEA #27 at full and reduced power were unsuccessful within the time limitations of TSAS 3.1.3.1.e.",
+      "match_key": "FailureMode:cea-27-unable-to-be-realigned-within-ts-time-limits"
+    },
+    {
+      "id": "cons_shutdown",
+      "display_name": "Manual reactor shutdown required by Technical Specifications",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2022-01-06T08:24",
+      "end": "2022-01-06T19:37",
+      "duration": null,
+      "tz": "EST",
+      "match_key": "Consequence:manual-reactor-shutdown-required-by-technical-specifications"
+    },
+    {
+      "id": "ca_replace_motor",
+      "display_name": "Replace CEA #27 CEDM motor",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-cea-27-cedm-motor"
+    },
+    {
+      "id": "ca_forensic",
+      "display_name": "Offsite confirmatory inspection, disassembly and analysis of removed CEDM motor",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:offsite-confirmatory-inspection-disassembly-and-analysis-of-removed-cedm-motor"
+    },
+    {
+      "id": "mfr_westinghouse",
+      "display_name": "Westinghouse",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "W120",
+      "match_key": "Manufacturer:W120"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(A)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-a"
+    },
+    {
+      "id": "rr_ts",
+      "display_name": "Technical Specification Action Statement 3.1.3.1.e",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:technical-specification-action-statement-3-1-3-1-e"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_aa",
+      "evidence": null
+    },
+    {
+      "source": "c_cea27",
+      "relation": "PART_OF",
+      "target": "sys_aa",
+      "evidence": null
+    },
+    {
+      "source": "fm_foreign_object",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_foreign_object",
+      "relation": "LEADS_TO",
+      "target": "fm_cedm_malfunction",
+      "evidence": null
+    },
+    {
+      "source": "fm_cedm_malfunction",
+      "relation": "LEADS_TO",
+      "target": "fm_cea_slip",
+      "evidence": null
+    },
+    {
+      "source": "fm_cea_slip",
+      "relation": "LEADS_TO",
+      "target": "fm_realign_fail",
+      "evidence": null
+    },
+    {
+      "source": "fm_realign_fail",
+      "relation": "LEADS_TO",
+      "target": "cons_shutdown",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_motor",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_forensic",
+      "evidence": null
+    },
+    {
+      "source": "c_cedm27",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_westinghouse",
+      "evidence": null
+    }
+  ],
+  "chain": "foreign object interference in CEDM motor [cause X] -> CEDM #27 motor malfunction -> CEA #27 slips from 133\" to 120\" withdrawn -> CEA #27 unable to be realigned within TS time limits -> manual reactor shutdown required by Technical Specifications",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code X (Other) governs category per official coding, despite the narrative identifying a specific foreign-object-in-motor root cause; theme captures this detail. No backup systems are described as compensating for the misaligned CEA — this event is a TS-required manual shutdown with no safety system actuation, so no BACKED_UP_BY edges are asserted. Similar Events section explicitly states 'None,' so no SIMILAR_TO edge/stub LER created. Component identifiers (jack assembly and motor assembly part numbers) both pertain to the single CEDM #27 motor component and are captured as properties rather than separate component nodes, since the narrative does not describe them as physically distinct failure points."
+}

@@ -1,0 +1,384 @@
+{
+  "ler_number": "482-2021-004-00",
+  "identity": {
+    "accession_number": "ML21291A262",
+    "docket": "05000482",
+    "plant_name": "Wolf Creek",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2021-08-18",
+    "report_date": "2021-10-18",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": "55416",
+    "ens_date": null,
+    "ens_time": "1251 CDT",
+    "title": "Docket No. 50-482: Licensee Event Report 2021-004-00, “Low Steam"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)",
+      "10 CFR 50.73(a)(2)(iv)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The direct cause was a fatigue crack propagated through the stem of AEFCV0520, causing the stem to fracture, resulting in a loss of feed flow control to the 'B' Steam Generator. The root cause was tool marks within the thread root caused local stress risers, which allowed multiple cracks to initiate. In addition, the thread root was also cut deeper and narrower than allowed by specification.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "manufacturing defect (thread tool marks/undersized root) causing fatigue crack and valve stem fracture",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 482-2021-004-00",
+      "properties": {},
+      "type": "LER",
+      "key": "482-2021-004-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:482-2021-004-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Wolf Creek Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000482",
+      "match_key": "Unit:05000482"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "manufacturing defect (thread tool marks/undersized root) causing fatigue crack and valve stem fracture",
+      "proximate_text": "The direct cause was a fatigue crack propagated through the stem of AEFCV0520, causing the stem to fracture, resulting in a loss of feed flow control to the 'B' Steam Generator. The root cause was tool marks within the thread root caused local stress risers, which allowed multiple cracks to initiate. In addition, the thread root was also cut deeper and narrower than allowed by specification.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_sj",
+      "display_name": "Main Feedwater System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "sys_sb",
+      "display_name": "Steam Generator System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SB"
+    },
+    {
+      "id": "c_mfrv",
+      "display_name": "Main Feedwater Regulating Valve AEFCV0520",
+      "properties": {
+        "role": "MFRV feeding 'B' SG"
+      },
+      "type": "Component",
+      "eiis_code": "FCV",
+      "identifier": "AEFCV0520",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:FCV|AEFCV0520"
+    },
+    {
+      "id": "c_stem",
+      "display_name": "Valve stem (AEFCV0520 actuator)",
+      "properties": {
+        "material": "ASTM A276 Type 316 Condition B stainless steel",
+        "diameter": "1 inch",
+        "thread": "8 UNC-2A"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:valve-stem-aefcv0520-actuator"
+    },
+    {
+      "id": "c_actuator",
+      "display_name": "Copes-Vulcan actuator",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:copes-vulcan-actuator"
+    },
+    {
+      "id": "c_sg_b",
+      "display_name": "Steam Generator 'B'",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "SG",
+      "identifier": "B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:SG|B"
+    },
+    {
+      "id": "fm_toolmarks",
+      "display_name": "Tool marks / undersized thread root created stress risers",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Thread root cut deeper and narrower than specification allowed, creating local stress risers in valve stem threads",
+      "match_key": "FailureMode:tool-marks-undersized-thread-root-created-stress-risers"
+    },
+    {
+      "id": "fm_crackinit",
+      "display_name": "Multiple fatigue cracks initiated in thread root",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Stress risers allowed multiple cracks to initiate at the thread root",
+      "match_key": "FailureMode:multiple-fatigue-cracks-initiated-in-thread-root"
+    },
+    {
+      "id": "fm_crackprop",
+      "display_name": "Fatigue crack propagated through valve stem",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Cracks propagated into the body of the valve stem due to the additional stress riser",
+      "match_key": "FailureMode:fatigue-crack-propagated-through-valve-stem"
+    },
+    {
+      "id": "fm_stemfracture",
+      "display_name": "Valve stem fractured",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Stem fracture resulted in loss of feed flow control to 'B' Steam Generator",
+      "match_key": "FailureMode:valve-stem-fractured"
+    },
+    {
+      "id": "fm_lossflowcontrol",
+      "display_name": "Loss of feed flow control to SG 'B'",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Feedwater flow began dropping and valve position indication increased due to loss of stem control",
+      "match_key": "FailureMode:loss-of-feed-flow-control-to-sg-b"
+    },
+    {
+      "id": "cons_trip",
+      "display_name": "Automatic reactor trip, Main Feedwater Isolation, and Auxiliary Feedwater Actuation",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2021-08-18T10:35:00",
+      "end": "2021-08-18T10:36:00",
+      "duration": null,
+      "tz": "CDT",
+      "match_key": "Consequence:automatic-reactor-trip-main-feedwater-isolation-and-auxiliary-feedwater-actuation"
+    },
+    {
+      "id": "ca_replace_stem",
+      "display_name": "Disassemble AEFCV0520 and install replacement valve stem",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:disassemble-aefcv0520-and-install-replacement-valve-stem"
+    },
+    {
+      "id": "ca_dye_pen_new",
+      "display_name": "Dye penetrant test replacement stem prior to installation",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:dye-penetrant-test-replacement-stem-prior-to-installation"
+    },
+    {
+      "id": "ca_dye_pen_others",
+      "display_name": "Dye penetrant test stems of other three MFRVs for cracking",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:dye-penetrant-test-stems-of-other-three-mfrvs-for-cracking"
+    },
+    {
+      "id": "ca_pm_interval",
+      "display_name": "Create new PM activity to replace MFRV stems on 7.5-year interval",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:create-new-pm-activity-to-replace-mfrv-stems-on-7-5-year-interval"
+    },
+    {
+      "id": "ca_thread_verification",
+      "display_name": "Implement methodology/scope for verifying root depth of threads on replacement stems for critical valves",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:implement-methodology-scope-for-verifying-root-depth-of-threads-on-replacement-stems-for-critical-valves"
+    },
+    {
+      "id": "rr_5073iv",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5073iv_general",
+      "display_name": "10 CFR 50.73(a)(2)(iv)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073iv",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073iv_general",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sj",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "c_mfrv",
+      "relation": "PART_OF",
+      "target": "sys_sj",
+      "evidence": null
+    },
+    {
+      "source": "c_stem",
+      "relation": "PART_OF",
+      "target": "c_actuator",
+      "evidence": null
+    },
+    {
+      "source": "c_actuator",
+      "relation": "PART_OF",
+      "target": "c_mfrv",
+      "evidence": null
+    },
+    {
+      "source": "fm_toolmarks",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_toolmarks",
+      "relation": "LEADS_TO",
+      "target": "fm_crackinit",
+      "evidence": null
+    },
+    {
+      "source": "fm_crackinit",
+      "relation": "LEADS_TO",
+      "target": "fm_crackprop",
+      "evidence": null
+    },
+    {
+      "source": "fm_crackprop",
+      "relation": "LEADS_TO",
+      "target": "fm_stemfracture",
+      "evidence": null
+    },
+    {
+      "source": "fm_stemfracture",
+      "relation": "LEADS_TO",
+      "target": "fm_lossflowcontrol",
+      "evidence": null
+    },
+    {
+      "source": "fm_lossflowcontrol",
+      "relation": "LEADS_TO",
+      "target": "cons_trip",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_stem",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_dye_pen_new",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_dye_pen_others",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_pm_interval",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_thread_verification",
+      "evidence": null
+    }
+  ],
+  "chain": "manufacturing defect: tool marks/undersized thread root [cause TBD] -> stress risers in stem threads -> multiple fatigue cracks initiate -> crack propagates through stem body -> valve stem fractures -> loss of feed flow control to SG 'B' -> low SG level reactor trip, Main Feedwater Isolation, and Auxiliary Feedwater Actuation",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code was TBD/provisional in FORM-366 fields; narrative provides detailed direct/root cause statement re: manufacturing defect in valve stem threads. No previous similar occurrence referenced (Operating Experience/Previous Events section states 'None'), so no SIMILAR_TO edge or stub LER emitted. No manufacturer code given for stem/actuator in block_13 (empty), so no Manufacturer node created. AFW (auxiliary feedwater) actuation is part of the automatic ESFAS response described as a direct outcome, not a stated-operable backup invoked during an inoperability window, so it is captured within the Consequence node rather than as a BACKED_UP_BY system."
+}

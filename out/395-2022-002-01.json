@@ -1,0 +1,297 @@
+{
+  "ler_number": "395-2022-002-01",
+  "identity": {
+    "accession_number": "ML22342B247",
+    "docket": "05000395",
+    "plant_name": "Summer",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2022-02-09",
+    "report_date": "2022-12-08",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Condition Prohibited by Technical Specifications:  Inoperable 'B' Emergency Diesel Generator"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "s];}!",
+      "system": "B",
+      "component": "EK",
+      "manufacturer": "DG",
+      "reportable": null
+    }
+  ],
+  "cause": {
+    "proximate_text": "an intermittently connecting pin was discovered in a governor Amphenol connector, which was causing the kilowatt oscillations",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "connector pin intermittent connection / lack of strain relief",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 395-2022-001-01",
+      "properties": {},
+      "type": "LER",
+      "key": "395-2022-002-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:395-2022-002-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Summer Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000395",
+      "match_key": "Unit:05000395"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "connector pin intermittent connection / lack of strain relief",
+      "proximate_text": "an intermittently connecting pin was discovered in a governor Amphenol connector, which was causing the kilowatt oscillations",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_edg_b",
+      "display_name": "Emergency Diesel Generator - B Train",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "EK",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "safety-related on-site AC power supply",
+      "match_key": "System:EK"
+    },
+    {
+      "id": "sys_aac",
+      "display_name": "Alternate AC Power Source",
+      "properties": {
+        "non_eiis": true
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "backup; non-safety-related; available",
+      "match_key": "System:alternate-ac-power-source"
+    },
+    {
+      "id": "c_governor",
+      "display_name": "Governor",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:governor"
+    },
+    {
+      "id": "c_amphenol",
+      "display_name": "Governor Amphenol Connector",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:governor-amphenol-connector"
+    },
+    {
+      "id": "fm_pin",
+      "display_name": "Intermittently connecting pin in governor Amphenol connector",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "An intermittently connecting pin was discovered in the governor Amphenol connector, causing kW oscillations.",
+      "match_key": "FailureMode:intermittently-connecting-pin-in-governor-amphenol-connector"
+    },
+    {
+      "id": "fm_kwosc",
+      "display_name": "Kilowatt load oscillations on 'B' EDG",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "During STP-125.002B surveillance, kilowatt oscillations were observed in the load of the 'B' EDG.",
+      "match_key": "FailureMode:kilowatt-load-oscillations-on-b-edg"
+    },
+    {
+      "id": "cons_inoperable",
+      "display_name": "'B' EDG declared inoperable, TS 3.8.1.1.b condition prohibited",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2022-01-16",
+      "end": "2022-02-09",
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:b-edg-declared-inoperable-ts-3-8-1-1-b-condition-prohibited"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace governor Amphenol connector",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-governor-amphenol-connector"
+    },
+    {
+      "id": "ca_strain_relief",
+      "display_name": "Implement design changes providing strain relief on governor control signal wires for both EDGs",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:implement-design-changes-providing-strain-relief-on-governor-control-signal-wires-for-both-edgs"
+    },
+    {
+      "id": "ca_maint",
+      "display_name": "Continue routine maintenance and surveillance of EDGs",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:continue-routine-maintenance-and-surveillance-of-edgs"
+    },
+    {
+      "id": "mfr_colt",
+      "display_name": "Colt Industries, Fairbanks-Morse Engine Division",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "DG",
+      "match_key": "Manufacturer:DG"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts381",
+      "display_name": "VCSNS TS 3.8.1.1.b",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:vcsns-ts-3-8-1-1-b"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts381",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_edg_b",
+      "evidence": null
+    },
+    {
+      "source": "c_amphenol",
+      "relation": "PART_OF",
+      "target": "c_governor",
+      "evidence": null
+    },
+    {
+      "source": "fm_pin",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_pin",
+      "relation": "LEADS_TO",
+      "target": "fm_kwosc",
+      "evidence": null
+    },
+    {
+      "source": "fm_kwosc",
+      "relation": "LEADS_TO",
+      "target": "cons_inoperable",
+      "evidence": null
+    },
+    {
+      "source": "cons_inoperable",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_aac",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_strain_relief",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_maint",
+      "evidence": null
+    },
+    {
+      "source": "sys_edg_b",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_colt",
+      "evidence": null
+    }
+  ],
+  "chain": "intermittently connecting pin in governor Amphenol connector [cause TBD] -> kilowatt load oscillations -> 'B' EDG declared inoperable, TS 3.8.1.1.b prohibited condition (Jan 16 - Feb 9, 2022) [backup AAC available]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Block-13 cause field is garbled ('s];}!') in source form; treated as TBD/provisional per official cause_code=TBD. No previous similar occurrence identified (Section 7.0 states 'None'), so no SIMILAR_TO edge/stub LER emitted. AAC explicitly stated as available backup during EDG outage, not merely design context, so modeled with BACKED_UP_BY. Governor/Amphenol connector relationship modeled as PART_OF per explicit narrative statement ('governor Amphenol connector')."
+}

@@ -1,0 +1,312 @@
+{
+  "ler_number": "338-2024-003-01",
+  "identity": {
+    "accession_number": "ML25077A289",
+    "docket": "05000338",
+    "plant_name": "North Anna",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2024-11-12",
+    "report_date": "2025-03-18",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2024-003-01 for North Anna Power Station, Loss of Offsite Power Train A Relay Failure during Surveillance Testing"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "X",
+      "system": "ED",
+      "component": "27",
+      "manufacturer": "G080",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "the identified cause of the relay was vague procedural guidance that led to a failure to check for adequate mechanical clearance between the relay disk and coil/magnet assembly",
+    "cause_code": "X",
+    "category": "Other",
+    "theme": "vague procedural guidance / inadequate clearance verification step",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 338-2024-003-01",
+      "properties": {
+        "match_key": "LER:338-2024-003-01"
+      },
+      "type": "LER",
+      "key": "338-2024-003-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:338-2024-003-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "North Anna Unit 1",
+      "properties": {
+        "match_key": "Unit:05000338",
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000338",
+      "match_key": "Unit:05000338"
+    },
+    {
+      "id": "cause",
+      "display_name": "Other (X)",
+      "properties": {
+        "match_key": "Cause:Other"
+      },
+      "type": "Cause",
+      "cause_code": "X",
+      "category": "Other",
+      "theme": "vague procedural guidance / inadequate clearance verification step",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Other"
+    },
+    {
+      "id": "sys_ed_a",
+      "display_name": "Loss of Offsite Power - Train A",
+      "properties": {
+        "match_key": "System:ED-A"
+      },
+      "type": "System",
+      "eiis_code": "ED",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected train",
+      "match_key": "System:ED"
+    },
+    {
+      "id": "sys_ed_b",
+      "display_name": "Loss of Offsite Power - Train B",
+      "properties": {
+        "match_key": "System:ED-B"
+      },
+      "type": "System",
+      "eiis_code": "ED",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; remained operable",
+      "match_key": "System:ED"
+    },
+    {
+      "id": "c_relay",
+      "display_name": "Relay 1-EP-27A-1NNSF05-RELAY-F(0A-B)",
+      "properties": {
+        "match_key": "Component:27|1-EP-27A-1NNSF05-RELAY-F(0A-B)"
+      },
+      "type": "Component",
+      "eiis_code": "27",
+      "identifier": "1-EP-27A-1NNSF05-RELAY-F(0A-B)",
+      "model": null,
+      "manufacturer_code": "G080",
+      "inferred_code": false,
+      "match_key": "Component:27|1-EP-27A-1NNSF05-RELAY-F(0A-B)"
+    },
+    {
+      "id": "c_disk",
+      "display_name": "Relay induction disk",
+      "properties": {
+        "match_key": "Component:relay-induction-disk"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:relay-induction-disk"
+    },
+    {
+      "id": "fm_procedure",
+      "display_name": "Procedural step failed to require verification of disk/coil clearance",
+      "properties": {
+        "match_key": "FailureMode:vague-procedural-step"
+      },
+      "type": "FailureMode",
+      "description": "1-PT-36.17A checks for obstruction of moving parts but does not explicitly require verification of clearance between induction disk and magnet/coil assembly",
+      "match_key": "FailureMode:procedural-step-failed-to-require-verification-of-disk-coil-clearance"
+    },
+    {
+      "id": "fm_misalign",
+      "display_name": "Relay disk misaligned",
+      "properties": {
+        "match_key": "FailureMode:relay-disk-misaligned"
+      },
+      "type": "FailureMode",
+      "description": "Relay disk was misaligned, reducing mechanical clearance to coil/magnet assembly",
+      "match_key": "FailureMode:relay-disk-misaligned"
+    },
+    {
+      "id": "fm_relayfail",
+      "display_name": "Relay failed to actuate",
+      "properties": {
+        "match_key": "FailureMode:relay-failed-to-actuate"
+      },
+      "type": "FailureMode",
+      "description": "Relay 1-EP-27A-1NNSF05-RELAY-F(0A-B) failed to actuate during surveillance test",
+      "match_key": "FailureMode:relay-failed-to-actuate"
+    },
+    {
+      "id": "cons_train_a",
+      "display_name": "Train A Loss of Offsite Power function inoperable / Tech Spec condition prohibited",
+      "properties": {
+        "match_key": "Consequence:train-a-lopp-inoperable"
+      },
+      "type": "Consequence",
+      "start": "2024-11-12T09:27",
+      "end": "2024-11-12T15:42",
+      "duration": "06:15",
+      "tz": null,
+      "match_key": "Consequence:train-a-loss-of-offsite-power-function-inoperable-tech-spec-condition-prohibited"
+    },
+    {
+      "id": "ca_realign",
+      "display_name": "Realign and retest relay disk",
+      "properties": {
+        "match_key": "CorrectiveAction:realign-retest-relay-disk"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:realign-and-retest-relay-disk"
+    },
+    {
+      "id": "ca_procrevise",
+      "display_name": "Revise periodic testing and electrical preventative maintenance procedures to ensure rotational disk is free from obstructions and moves freely",
+      "properties": {
+        "match_key": "CorrectiveAction:revise-pm-procedures"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-periodic-testing-and-electrical-preventative-maintenance-procedures-to-ensure-rotational-disk-is-free-from-obstructions-and-moves-freely"
+    },
+    {
+      "id": "mfr_g080",
+      "display_name": "Manufacturer G080",
+      "properties": {
+        "match_key": "Manufacturer:G080"
+      },
+      "type": "Manufacturer",
+      "code": "G080",
+      "match_key": "Manufacturer:G080"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion",
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ed_a",
+      "evidence": null
+    },
+    {
+      "source": "c_relay",
+      "relation": "PART_OF",
+      "target": "sys_ed_a",
+      "evidence": null
+    },
+    {
+      "source": "c_disk",
+      "relation": "PART_OF",
+      "target": "c_relay",
+      "evidence": null
+    },
+    {
+      "source": "fm_procedure",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_procedure",
+      "relation": "LEADS_TO",
+      "target": "fm_misalign",
+      "evidence": null
+    },
+    {
+      "source": "fm_misalign",
+      "relation": "LEADS_TO",
+      "target": "fm_relayfail",
+      "evidence": null
+    },
+    {
+      "source": "fm_relayfail",
+      "relation": "LEADS_TO",
+      "target": "cons_train_a",
+      "evidence": null
+    },
+    {
+      "source": "cons_train_a",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_ed_b",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_realign",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procrevise",
+      "evidence": null
+    },
+    {
+      "source": "c_relay",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_g080",
+      "evidence": null
+    }
+  ],
+  "chain": "vague procedural guidance (no explicit clearance check) [cause X] -> relay disk misaligned -> relay fails to actuate -> Train A LOPP function inoperable/Tech Spec condition [backup Train B remained operable]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code X / category 'Other' governs despite narrative describing a procedural-adequacy issue; theme captures the procedural-gap angle. Relay disk explicitly described as a component of the relay (PART_OF asserted). Train B explicitly stated to have remained operable during the event -> BACKED_UP_BY. No previous similar occurrence referenced (Section 7.0 blank) so no SIMILAR_TO/stub LER emitted."
+}

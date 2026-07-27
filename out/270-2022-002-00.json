@@ -1,0 +1,410 @@
+{
+  "ler_number": "270-2022-002-00",
+  "identity": {
+    "accession_number": "ML22104A257",
+    "docket": "05000270",
+    "plant_name": "Oconee",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2022-02-13",
+    "report_date": "2022-04-14",
+    "operating_mode": "3",
+    "power_level": 0,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Revision 00 – Automatic Actuation of Emergency Feedwater System due to Main Feedwater Pump Malfunction"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The cause of this event was a fault state on the 2A FDW pump speed controls which prevented the pump from responding to demand inputs from ICS.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Undetected controller fault state on feedwater pump speed control",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 270-2022-002-00",
+      "properties": {
+        "match_key": "LER:270-2022-002-00"
+      },
+      "type": "LER",
+      "key": "270-2022-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:270-2022-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Oconee Unit 2",
+      "properties": {
+        "match_key": "Unit:05000270",
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000270",
+      "match_key": "Unit:05000270"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {
+        "match_key": "Cause:provisional"
+      },
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Undetected controller fault state on feedwater pump speed control",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_sj",
+      "display_name": "Main Feedwater System",
+      "properties": {
+        "match_key": "System:SJ"
+      },
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "sys_ba",
+      "display_name": "Emergency Feedwater System",
+      "properties": {
+        "match_key": "System:BA"
+      },
+      "type": "System",
+      "eiis_code": "BA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BA"
+    },
+    {
+      "id": "sys_ja",
+      "display_name": "Integrated Control System",
+      "properties": {
+        "match_key": "System:JA"
+      },
+      "type": "System",
+      "eiis_code": "JA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JA"
+    },
+    {
+      "id": "c_fdwpump2a",
+      "display_name": "2A Main Feedwater Pump",
+      "properties": {
+        "match_key": "Component:P|2A-FDW-pump"
+      },
+      "type": "Component",
+      "eiis_code": "P",
+      "identifier": "2A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:P|2A"
+    },
+    {
+      "id": "c_speedctrl",
+      "display_name": "2A FDW Pump Speed Controls",
+      "properties": {
+        "match_key": "Component:JK|2A-FDW-speed-controls"
+      },
+      "type": "Component",
+      "eiis_code": "JK",
+      "identifier": "2A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:JK|2A"
+    },
+    {
+      "id": "c_knifeswitch",
+      "display_name": "Knife switch in 2A FDW pump speed control servo circuit",
+      "properties": {
+        "match_key": "Component:knife-switch-2a-fdw-speed-control"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:knife-switch-in-2a-fdw-pump-speed-control-servo-circuit"
+    },
+    {
+      "id": "c_mdefw2a",
+      "display_name": "2A Motor Driven Emergency Feedwater Pump",
+      "properties": {
+        "match_key": "Component:P|2A-MDEFW-pump"
+      },
+      "type": "Component",
+      "eiis_code": "P",
+      "identifier": "2A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:P|2A"
+    },
+    {
+      "id": "c_mdefw2b",
+      "display_name": "2B Motor Driven Emergency Feedwater Pump",
+      "properties": {
+        "match_key": "Component:P|2B-MDEFW-pump"
+      },
+      "type": "Component",
+      "eiis_code": "P",
+      "identifier": "2B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:P|2B"
+    },
+    {
+      "id": "fm_faultstate",
+      "display_name": "Fault state present in 2A FDW pump speed controls",
+      "properties": {
+        "match_key": "FailureMode:2a-fdw-speed-control-fault-state"
+      },
+      "type": "FailureMode",
+      "description": "Fault state existed at time pump was placed in service, undetected by operators, halting servo movement per design.",
+      "match_key": "FailureMode:fault-state-present-in-2a-fdw-pump-speed-controls"
+    },
+    {
+      "id": "fm_noresponse",
+      "display_name": "2A FDW pump unable to respond to ICS speed demand",
+      "properties": {
+        "match_key": "FailureMode:2a-fdw-pump-no-speed-response"
+      },
+      "type": "FailureMode",
+      "description": "Because of the fault state, the pump continued to operate at constant (minimum) speed, not raising speed as MS pressure increased.",
+      "match_key": "FailureMode:2a-fdw-pump-unable-to-respond-to-ics-speed-demand"
+    },
+    {
+      "id": "fm_lowlevel",
+      "display_name": "SG level lowered due to boil-off from inadequate FDW flow",
+      "properties": {
+        "match_key": "FailureMode:sg-level-lowering-boil-off"
+      },
+      "type": "FailureMode",
+      "description": "When MS pressure exceeded 2A FDW pump discharge pressure, feedwater was no longer supplied to the SG and level lowered.",
+      "match_key": "FailureMode:sg-level-lowered-due-to-boil-off-from-inadequate-fdw-flow"
+    },
+    {
+      "id": "cons_efw",
+      "display_name": "Automatic actuation of MDEFW pumps on low SG level signal",
+      "properties": {
+        "match_key": "Consequence:efw-automatic-actuation"
+      },
+      "type": "Consequence",
+      "start": "2022-02-13T16:25",
+      "end": null,
+      "duration": null,
+      "tz": "Eastern Standard Time",
+      "match_key": "Consequence:automatic-actuation-of-mdefw-pumps-on-low-sg-level-signal"
+    },
+    {
+      "id": "ca_replace_switch",
+      "display_name": "Replace knife switch in 2A FDW pump speed control servo circuit",
+      "properties": {
+        "match_key": "CorrectiveAction:replace-knife-switch"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-knife-switch-in-2a-fdw-pump-speed-control-servo-circuit"
+    },
+    {
+      "id": "ca_reset_controls",
+      "display_name": "Reset 2A FDW speed controls and verify no fault conditions present",
+      "properties": {
+        "match_key": "CorrectiveAction:reset-2a-fdw-speed-controls"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:reset-2a-fdw-speed-controls-and-verify-no-fault-conditions-present"
+    },
+    {
+      "id": "ca_restore_service",
+      "display_name": "Restore 2A FDW pump to service",
+      "properties": {
+        "match_key": "CorrectiveAction:restore-2a-fdw-pump-service"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:restore-2a-fdw-pump-to-service"
+    },
+    {
+      "id": "ca_procedure_revision",
+      "display_name": "Revise FDW pump startup procedures for all three ONS Units to check for speed control faults before placing pump in service",
+      "properties": {
+        "match_key": "CorrectiveAction:revise-fdw-startup-procedures"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-fdw-pump-startup-procedures-for-all-three-ons-units-to-check-for-speed-control-faults-before-placing-pump-in-service"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5072",
+      "display_name": "10 CFR 50.72(b)(3)(iv)(A)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-72-b-3-iv-a"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-3-iv-a"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sj",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ba",
+      "evidence": null
+    },
+    {
+      "source": "c_fdwpump2a",
+      "relation": "PART_OF",
+      "target": "sys_sj",
+      "evidence": null
+    },
+    {
+      "source": "c_speedctrl",
+      "relation": "PART_OF",
+      "target": "c_fdwpump2a",
+      "evidence": null
+    },
+    {
+      "source": "c_knifeswitch",
+      "relation": "PART_OF",
+      "target": "c_speedctrl",
+      "evidence": null
+    },
+    {
+      "source": "c_mdefw2a",
+      "relation": "PART_OF",
+      "target": "sys_ba",
+      "evidence": null
+    },
+    {
+      "source": "c_mdefw2b",
+      "relation": "PART_OF",
+      "target": "sys_ba",
+      "evidence": null
+    },
+    {
+      "source": "fm_faultstate",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_faultstate",
+      "relation": "LEADS_TO",
+      "target": "fm_noresponse",
+      "evidence": null
+    },
+    {
+      "source": "fm_noresponse",
+      "relation": "LEADS_TO",
+      "target": "fm_lowlevel",
+      "evidence": null
+    },
+    {
+      "source": "fm_lowlevel",
+      "relation": "LEADS_TO",
+      "target": "cons_efw",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_switch",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_reset_controls",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_restore_service",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procedure_revision",
+      "evidence": null
+    }
+  ],
+  "chain": "undetected fault state on 2A FDW pump speed controls [cause TBD] -> pump unable to respond to ICS speed demand -> SG level lowers from boil-off -> automatic actuation of 2A/2B MDEFW pumps on low SG level signal",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code is TBD/provisional per FORM-366 fields; category marked provisional accordingly, though narrative provides a specific proximate cause (undetected controller fault state) captured in proximate_text/theme. Block 13 rows were empty in the source (N/A entries), so no block_13 rows populated. TDEFW pump, cross-unit EFW cross-connects, PSW, SSF, and portable FLEX equipment are mentioned only in the Safety Analysis as available defense-in-depth, not stated as operating backups during the actual inoperability window of the failed component -- per rule 6 these are design/defense-in-depth context, not modeled as BACKED_UP_BY since the EFW system itself was not inoperable (it actuated and worked as designed); only the FDW pump malfunctioned. No previous similar occurrence LER was identified (explicitly stated none found in CAP review), so no stub LER/SIMILAR_TO edge emitted."
+}

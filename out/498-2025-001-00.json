@@ -1,0 +1,462 @@
+{
+  "ler_number": "498-2025-001-00",
+  "identity": {
+    "accession_number": "ML25097A252",
+    "docket": "05000498",
+    "plant_name": "South Texas",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2025-02-19",
+    "report_date": "2025-04-07",
+    "operating_mode": null,
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Two Inoperable Emergency Core Cooling System Trains Resulting in Potential Loss of Safety Function"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)(D)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "A causal investigation is planned. A supplement to this report will include any causes of the event once the investigation is completed.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "leak at sample-line tee fitting drove a mitigating action that rendered a second ECCS train inoperable; root cause of leak/decision not yet determined",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 498-2025-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "498-2025-001-00",
+      "stub": false,
+      "title": null,
+      "plant": "South Texas Project Unit 1",
+      "match_key": "LER:498-2025-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "South Texas Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000498",
+      "match_key": "Unit:05000498"
+    },
+    {
+      "id": "cause",
+      "display_name": "Cause TBD (provisional)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "leak at sample-line tee fitting drove a mitigating action that rendered a second ECCS train inoperable; root cause of leak/decision not yet determined",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_eccs",
+      "display_name": "Emergency Core Cooling System",
+      "properties": {
+        "note": "trains B and C; ECCS acronym only, code not stated"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:emergency-core-cooling-system"
+    },
+    {
+      "id": "sys_bq",
+      "display_name": "High Pressure Safety Injection System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BQ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BQ"
+    },
+    {
+      "id": "sys_ecw",
+      "display_name": "Essential Chilled Water System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "KM",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "support system, Train C",
+      "match_key": "System:KM"
+    },
+    {
+      "id": "sys_cre_hvac",
+      "display_name": "Control Room Envelope HVAC",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:control-room-envelope-hvac"
+    },
+    {
+      "id": "c_teefitting",
+      "display_name": "Tee fitting downstream of valve SI-0126B",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:tee-fitting-downstream-of-valve-si-0126b"
+    },
+    {
+      "id": "c_valve",
+      "display_name": "Discharge Sample Valve SI-0126B",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "SMV",
+      "identifier": "SI-0126B",
+      "model": "G12A15S-3S3S-2R",
+      "manufacturer_code": "A415",
+      "inferred_code": false,
+      "match_key": "Component:SMV|SI-0126B"
+    },
+    {
+      "id": "c_hhsi1b",
+      "display_name": "High Head Safety Injection Pump 1B",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "HHSI Pump 1B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:high-head-safety-injection-pump-1b"
+    },
+    {
+      "id": "c_ecwpump1c",
+      "display_name": "Essential Cooling Water Pump 1C",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "Pump 1C",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:essential-cooling-water-pump-1c"
+    },
+    {
+      "id": "fm_c_planned_maint",
+      "display_name": "ECCS Train C inoperable for planned maintenance on Essential Chilled Water Train C",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Planned maintenance on Essential Cooling Water Pump 1C cascaded to Essential Chilled Water Train C inoperability, rendering ECCS Train C inoperable",
+      "match_key": "FailureMode:eccs-train-c-inoperable-for-planned-maintenance-on-essential-chilled-water-train-c"
+    },
+    {
+      "id": "fm_leak",
+      "display_name": "Sample-line tee fitting leak at valve SI-0126B",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Tee fitting downstream of normally-closed sample valve SI-0126B leaking; leak rate exceeded surveillance allowance and progressed to two pencil-sized streams once HHSI Pump 1B started",
+      "match_key": "FailureMode:sample-line-tee-fitting-leak-at-valve-si-0126b"
+    },
+    {
+      "id": "fm_trainb_inop",
+      "display_name": "ECCS/CRE HVAC Train B declared inoperable due to leakage",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "System leakage exceeding surveillance procedure limits led operations to declare ECCS and CRE HVAC Train B inoperable",
+      "match_key": "FailureMode:eccs-cre-hvac-train-b-declared-inoperable-due-to-leakage"
+    },
+    {
+      "id": "fm_pulltolock",
+      "display_name": "HHSI Pump 1B handswitch placed in Pull-to-Lock",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Operations placed HHSI Pump 1B Control Room Handswitch in Pull-to-Lock to comply with TS 3.7.7 Action e.1 mitigating-action requirement, prior to receiving Engineering recommendation that the leak did not render CRE inoperable",
+      "match_key": "FailureMode:hhsi-pump-1b-handswitch-placed-in-pull-to-lock"
+    },
+    {
+      "id": "cons_twotrains",
+      "display_name": "ECCS Trains B and C both inoperable (potential loss of safety function)",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2025-02-19T07:49",
+      "end": "2025-02-19T14:05",
+      "duration": "6:16",
+      "tz": "CST",
+      "match_key": "Consequence:eccs-trains-b-and-c-both-inoperable-potential-loss-of-safety-function"
+    },
+    {
+      "id": "ca_repair",
+      "display_name": "Complete corrective maintenance of leaking tee fitting and restore ECCS Train B to OPERABLE",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:complete-corrective-maintenance-of-leaking-tee-fitting-and-restore-eccs-train-b-to-operable"
+    },
+    {
+      "id": "ca_valve_maint",
+      "display_name": "Corrective maintenance for valve SI-0126B during next refueling outage",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:corrective-maintenance-for-valve-si-0126b-during-next-refueling-outage"
+    },
+    {
+      "id": "ca_causal_supp",
+      "display_name": "Supplemental report with causal investigation findings and additional corrective actions",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:supplemental-report-with-causal-investigation-findings-and-additional-corrective-actions"
+    },
+    {
+      "id": "mfr_ag",
+      "display_name": "Anderson Greenwood",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "A415",
+      "match_key": "Manufacturer:A415"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "rr_5072",
+      "display_name": "10 CFR 50.72(b)(3)(v)(D)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-3-v-d"
+    },
+    {
+      "id": "rr_ts352",
+      "display_name": "Technical Specification 3.5.2",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:technical-specification-3-5-2"
+    },
+    {
+      "id": "rr_ts377",
+      "display_name": "Technical Specification 3.7.7",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:technical-specification-3-7-7"
+    },
+    {
+      "id": "rr_ts306",
+      "display_name": "Technical Specification 3.0.6",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:technical-specification-3-0-6"
+    },
+    {
+      "id": "rr_rg1174",
+      "display_name": "Regulatory Guide 1.174",
+      "properties": {
+        "type": "standard/guidance"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:regulatory-guide-1-174"
+    },
+    {
+      "id": "prev_ler",
+      "display_name": "STP Condition Report 22-7700 - Active leakage at valve SI-0126B pipe-to-tubing adapter",
+      "properties": {},
+      "type": "LER",
+      "key": "22-7700",
+      "stub": true,
+      "title": null,
+      "plant": "South Texas Project",
+      "match_key": "LER:22-7700"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_eccs",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bq",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ecw",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_cre_hvac",
+      "evidence": null
+    },
+    {
+      "source": "c_valve",
+      "relation": "PART_OF",
+      "target": "sys_bq",
+      "evidence": null
+    },
+    {
+      "source": "c_teefitting",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_ag",
+      "evidence": null
+    },
+    {
+      "source": "c_valve",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_ag",
+      "evidence": null
+    },
+    {
+      "source": "fm_c_planned_maint",
+      "relation": "LEADS_TO",
+      "target": "cons_twotrains",
+      "evidence": null
+    },
+    {
+      "source": "fm_leak",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_leak",
+      "relation": "LEADS_TO",
+      "target": "fm_trainb_inop",
+      "evidence": null
+    },
+    {
+      "source": "fm_trainb_inop",
+      "relation": "LEADS_TO",
+      "target": "fm_pulltolock",
+      "evidence": null
+    },
+    {
+      "source": "fm_pulltolock",
+      "relation": "LEADS_TO",
+      "target": "cons_twotrains",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_repair",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_valve_maint",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_causal_supp",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts352",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts377",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts306",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_rg1174",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "prev_ler",
+      "evidence": null
+    }
+  ],
+  "chain": "ECCS Train C already inoperable for planned Essential Chilled Water maintenance -> [in parallel] sample-line tee fitting at SI-0126B leaks beyond surveillance limit -> ECCS/CRE HVAC Train B declared inoperable -> HHSI Pump 1B handswitch placed Pull-to-Lock to satisfy TS 3.7.7 mitigating-action requirement -> two ECCS trains (B and C) simultaneously inoperable, potential loss of safety function [cause TBD, causal investigation planned]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code TBD/provisional per form fields; narrative states causal investigation planned and supplement expected, but identity.status is 'final' per given FORM-366 fields so left as provided. ECCS and CRE HVAC are referenced only by acronym/name in narrative (no bracket EIIS code given) so eiis_code left null; BQ (High Pressure Safety Injection System) is the only explicit bracket code, tied to the failed component (sample valve). Essential Chilled Water/Essential Cooling Water are support systems explicitly involved in the cascading inoperability, not mere design-context mentions, so modeled as System nodes. No BACKED_UP_BY edges emitted: narrative does not state any ECCS/HVAC backup train was confirmed operable during the overlapping inoperability window (Train A status not discussed) — engineering later concluded CRE was actually operable throughout, but this was a post-hoc determination about a mis-assessed inoperability, not a stated available backup during the event; modeled as fm_pulltolock reflecting the mitigating action taken before that determination."
+}

@@ -1,0 +1,414 @@
+{
+  "ler_number": "333-2022-001-00",
+  "identity": {
+    "accession_number": "ML22179A366",
+    "docket": "05000333",
+    "plant_name": "FitzPatrick",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2022-04-29",
+    "report_date": "2022-06-28",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": "55871",
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Dear Sir or Madam:"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)(D)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The direct cause of this event was a failure of 23A-K31 from actuating 23P-141 to pump down the condensate water before it filled the HPCI exhaust drain pot.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "logic relay failure preventing auto-start of gland seal condensate pump",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 333-2022-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "333-2022-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:333-2022-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "FitzPatrick Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000333",
+      "match_key": "Unit:05000333"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Manufacture/Construction/Installation (B)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "logic relay failure preventing auto-start of gland seal condensate pump",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_bj",
+      "display_name": "High Pressure Coolant Injection",
+      "properties": {
+        "note": "steam-driven ECCS; part of ECCS"
+      },
+      "type": "System",
+      "eiis_code": "BJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BJ"
+    },
+    {
+      "id": "c_ls100",
+      "display_name": "Level Switch 23LS-100 (Gland Seal Condenser)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "23LS-100",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:level-switch-23ls-100-gland-seal-condenser"
+    },
+    {
+      "id": "c_rly",
+      "display_name": "HPCI Logic Relay 23A-K31",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "RLY",
+      "identifier": "23A-K31",
+      "model": "CR2820B SERIES A",
+      "manufacturer_code": "G080",
+      "inferred_code": false,
+      "match_key": "Component:RLY|23A-K31"
+    },
+    {
+      "id": "c_pump",
+      "display_name": "HPCI Gland Seal Condensate Pump 23P-141",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "23P-141",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:hpci-gland-seal-condensate-pump-23p-141"
+    },
+    {
+      "id": "c_drainpot",
+      "display_name": "HPCI Exhaust Drain Pot",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:hpci-exhaust-drain-pot"
+    },
+    {
+      "id": "c_turbcasing",
+      "display_name": "HPCI Turbine Casing",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:hpci-turbine-casing"
+    },
+    {
+      "id": "c_mov14",
+      "display_name": "HPCI Steam Admission Valve 23MOV-14",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "23MOV-14",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:hpci-steam-admission-valve-23mov-14"
+    },
+    {
+      "id": "fm_relay",
+      "display_name": "Logic relay 23A-K31 failed to actuate",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "23A-K31 failed to energize/start the HPCI Gland Seal Condensate pump on high level signal",
+      "match_key": "FailureMode:logic-relay-23a-k31-failed-to-actuate"
+    },
+    {
+      "id": "fm_nopump",
+      "display_name": "Gland Seal Condensate pump 23P-141 did not auto-start",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Failure of relay prevented pump from removing condensate from the drain pot",
+      "match_key": "FailureMode:gland-seal-condensate-pump-23p-141-did-not-auto-start"
+    },
+    {
+      "id": "fm_drainpotfill",
+      "display_name": "HPCI Exhaust Drain Pot filled with condensate",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Condensate from 23MOV-14 steam leakby accumulated because drain pot could not be pumped down",
+      "match_key": "FailureMode:hpci-exhaust-drain-pot-filled-with-condensate"
+    },
+    {
+      "id": "fm_wateraccum",
+      "display_name": "Water accumulated in HPCI turbine casing",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Overflow condensate backed up into the HPCI turbine casing",
+      "match_key": "FailureMode:water-accumulated-in-hpci-turbine-casing"
+    },
+    {
+      "id": "cons_hpci",
+      "display_name": "HPCI declared inoperable / condition could have prevented safety function",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2022-04-28T22:45",
+      "end": null,
+      "duration": "less than 14 hours",
+      "tz": null,
+      "match_key": "Consequence:hpci-declared-inoperable-condition-could-have-prevented-safety-function"
+    },
+    {
+      "id": "ca_drain",
+      "display_name": "Manually drained HPCI Drain Pot",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:manually-drained-hpci-drain-pot"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replaced HPCI Logic Relay 23A-K31",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replaced-hpci-logic-relay-23a-k31"
+    },
+    {
+      "id": "ca_pm",
+      "display_name": "Evaluate PM strategy for affected relay and condensate drain system",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:evaluate-pm-strategy-for-affected-relay-and-condensate-drain-system"
+    },
+    {
+      "id": "ca_analysis",
+      "display_name": "Perform further analysis on impacts of water in HPCI turbine casing",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:perform-further-analysis-on-impacts-of-water-in-hpci-turbine-casing"
+    },
+    {
+      "id": "ca_training",
+      "display_name": "Operations refresher training on Abnormal Condition Monitoring Plans",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:operations-refresher-training-on-abnormal-condition-monitoring-plans"
+    },
+    {
+      "id": "mfr_ge",
+      "display_name": "General Electric",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "G080",
+      "match_key": "Manufacturer:G080"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {
+        "ref_type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "rr_5072",
+      "display_name": "10 CFR 50.72(b)(3)(v)(D)",
+      "properties": {
+        "ref_type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-3-v-d"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "AR 04381156 - Suspected leakage past 23MOV-14",
+      "properties": {},
+      "type": "LER",
+      "key": "AR 04381156",
+      "stub": true,
+      "title": "Suspected leakage past 23MOV-14",
+      "plant": "James A. FitzPatrick Nuclear Power Plant",
+      "match_key": "LER:AR 04381156"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bj",
+      "evidence": null
+    },
+    {
+      "source": "c_rly",
+      "relation": "PART_OF",
+      "target": "sys_bj",
+      "evidence": null
+    },
+    {
+      "source": "c_pump",
+      "relation": "PART_OF",
+      "target": "sys_bj",
+      "evidence": null
+    },
+    {
+      "source": "c_drainpot",
+      "relation": "PART_OF",
+      "target": "sys_bj",
+      "evidence": null
+    },
+    {
+      "source": "c_turbcasing",
+      "relation": "PART_OF",
+      "target": "sys_bj",
+      "evidence": null
+    },
+    {
+      "source": "c_rly",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_ge",
+      "evidence": null
+    },
+    {
+      "source": "fm_relay",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_relay",
+      "relation": "LEADS_TO",
+      "target": "fm_nopump",
+      "evidence": null
+    },
+    {
+      "source": "fm_nopump",
+      "relation": "LEADS_TO",
+      "target": "fm_drainpotfill",
+      "evidence": null
+    },
+    {
+      "source": "fm_drainpotfill",
+      "relation": "LEADS_TO",
+      "target": "fm_wateraccum",
+      "evidence": null
+    },
+    {
+      "source": "fm_wateraccum",
+      "relation": "LEADS_TO",
+      "target": "cons_hpci",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_drain",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_pm",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_analysis",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_training",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    }
+  ],
+  "chain": "logic relay 23A-K31 fails [cause B] -> gland seal condensate pump 23P-141 fails to auto-start -> HPCI exhaust drain pot fills with condensate -> water accumulates in HPCI turbine casing -> HPCI declared inoperable (potential loss of safety function, <14 hrs)",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Block 13 cause code listed as 'B' on the form (Design/Manufacture/Construction/Installation) though FORM-366 FIELDS supplied cause_code TBD/provisional; per rule 4 the block-13/official code (B) governs and was used verbatim, overriding the placeholder TBD. 23MOV-14 modeled as component whose steam leakby was the source of the condensate but is design-context for leak origin, not part of the causal failure chain itself, so no separate FailureMode created for it. AR 04381156 modeled as stub LER per Similar Events section using the AR number as key since no formal LER number was given."
+}

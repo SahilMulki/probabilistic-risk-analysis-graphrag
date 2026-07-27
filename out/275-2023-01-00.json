@@ -1,0 +1,308 @@
+{
+  "ler_number": "275-2023-01-00",
+  "identity": {
+    "accession_number": "ML23331A967",
+    "docket": "05000275",
+    "plant_name": "Diablo Canyon",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2023-09-30",
+    "report_date": "2023-11-27",
+    "operating_mode": "1",
+    "power_level": 11,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Unit 1 Manual Reactor Trip at Low Power"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "X",
+      "system": "SM",
+      "component": "LCV",
+      "manufacturer": "Fisher",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The cause of the water level increase in FWH 1-5A was a result of dump valve LCV-9 remaining in the closed position.",
+    "cause_code": "X",
+    "category": "Other",
+    "theme": "Valve failed to open, causing feedwater heater high level",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 275-2023-006-00",
+      "properties": {},
+      "type": "LER",
+      "key": "275-2023-01-00",
+      "stub": false,
+      "title": "Unit 1 Manual Reactor Trip at Low Power",
+      "plant": "Diablo Canyon Power Plant",
+      "match_key": "LER:275-2023-01-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Diablo Canyon Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000275",
+      "match_key": "Unit:05000275"
+    },
+    {
+      "id": "cause",
+      "display_name": "Other (X)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "X",
+      "category": "Other",
+      "theme": "Valve failed to open, causing feedwater heater high level",
+      "proximate_text": "The cause of the water level increase in FWH 1-5A was a result of dump valve LCV-9 remaining in the closed position.",
+      "provisional": false,
+      "match_key": "Cause:Other"
+    },
+    {
+      "id": "sys_sm",
+      "display_name": "Condensate System / Main Feedwater System",
+      "properties": {
+        "note": "non-safety-related; supplies preheated feedwater to steam generators"
+      },
+      "type": "System",
+      "eiis_code": "SM",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SM"
+    },
+    {
+      "id": "sys_afw",
+      "display_name": "Auxiliary Feedwater System",
+      "properties": {
+        "acronym": "AFW"
+      },
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "manually actuated response to trip",
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "c_fwh",
+      "display_name": "Feedwater Heater 1-5A",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "1-5A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:feedwater-heater-1-5a"
+    },
+    {
+      "id": "c_lcv9",
+      "display_name": "Dump Valve LCV-9",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "LCV",
+      "identifier": "LCV-9",
+      "model": null,
+      "manufacturer_code": "Fisher",
+      "inferred_code": false,
+      "match_key": "Component:LCV|LCV-9"
+    },
+    {
+      "id": "fm_valve",
+      "display_name": "Dump valve LCV-9 remained closed",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Dump valve LCV-9 remained in the closed position, preventing normal level control drainage from the feedwater heater.",
+      "match_key": "FailureMode:dump-valve-lcv-9-remained-closed"
+    },
+    {
+      "id": "fm_level",
+      "display_name": "Increasing water level in FWH 1-5A",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Water level in feedwater heater 1-5A increased, triggering a control room annunciator.",
+      "match_key": "FailureMode:increasing-water-level-in-fwh-1-5a"
+    },
+    {
+      "id": "cons_trip",
+      "display_name": "Manual reactor trip and manual AFW actuation",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2023-09-30T20:14",
+      "end": null,
+      "duration": null,
+      "tz": "PDT",
+      "match_key": "Consequence:manual-reactor-trip-and-manual-afw-actuation"
+    },
+    {
+      "id": "ca_repair",
+      "display_name": "Repair dump valve LCV-9",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:repair-dump-valve-lcv-9"
+    },
+    {
+      "id": "ca_followup",
+      "display_name": "Manage additional follow-up actions via Corrective Action Program",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:manage-additional-follow-up-actions-via-corrective-action-program"
+    },
+    {
+      "id": "mfr_fisher",
+      "display_name": "Fisher",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "Fisher",
+      "match_key": "Manufacturer:Fisher"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_nureg1022",
+      "display_name": "NUREG-1022, Revision 3",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "standard/guidance",
+      "match_key": "RegulatoryReference:nureg-1022-revision-3"
+    },
+    {
+      "id": "rr_5072b2iv",
+      "display_name": "10 CFR 50.72(b)(2)(iv)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-2-iv-b"
+    },
+    {
+      "id": "rr_5072b3iv",
+      "display_name": "10 CFR 50.72(b)(3)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-3-iv-a"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072b2iv",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072b3iv",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_nureg1022",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sm",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_afw",
+      "evidence": null
+    },
+    {
+      "source": "c_lcv9",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_fisher",
+      "evidence": null
+    },
+    {
+      "source": "fm_valve",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_valve",
+      "relation": "LEADS_TO",
+      "target": "fm_level",
+      "evidence": null
+    },
+    {
+      "source": "fm_level",
+      "relation": "LEADS_TO",
+      "target": "cons_trip",
+      "evidence": null
+    },
+    {
+      "source": "cons_trip",
+      "relation": "MITIGATED_BY",
+      "target": "sys_afw",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_repair",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_followup",
+      "evidence": null
+    }
+  ],
+  "chain": "dump valve LCV-9 remains closed [cause X] -> water level rises in FWH 1-5A -> manual reactor trip & manual AFW actuation [mitigated by AFW]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code X (Other) governs category per official coding; narrative provides only a proximate equipment-failure statement without root-cause analysis, so cause node theme reflects the stated proximate cause. AFW modeled as System with acronym only (no EIIS code given in narrative) and as MITIGATED_BY per manual actuation in response to the trip, not as a pre-existing operable backup during an inoperability window, since AFW was not itself impaired -- it was the planned mitigating response. FWH 1-5A modeled as Component (no EIIS code stated); LCV-9 dump valve carries EIIS component code LCV from block 13. No previous similar occurrence referenced in narrative, so no stub LER/SIMILAR_TO edge emitted."
+}

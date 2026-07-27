@@ -1,0 +1,390 @@
+{
+  "ler_number": "352-2021-001-00",
+  "identity": {
+    "accession_number": "ML21326A008",
+    "docket": "05000352",
+    "plant_name": "Limerick",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2021-09-23",
+    "report_date": "2021-11-22",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Unit 1 HPCI Inoperable Due to Remote Shutdown Panel Switch Failure"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)(D)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The HPCI Emergency Shutdown Switch high resistance was attributed to mechanical switch degradation that was introduced by cycling the switch during the HPCI Logic System Functional Isolation Logic Test",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "switch mechanical degradation from cycling",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 352-2021-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "352-2021-001-00",
+      "stub": false,
+      "title": "Unit 1 HPCI Inoperable Due to Remote Shutdown Panel Switch Failure",
+      "plant": "Limerick Generating Station",
+      "match_key": "LER:352-2021-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Limerick Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000352",
+      "match_key": "Unit:05000352"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "switch mechanical degradation from cycling",
+      "proximate_text": "The HPCI Emergency Shutdown Switch high resistance was attributed to mechanical switch degradation that was introduced by cycling the switch during the HPCI Logic System Functional Isolation Logic Test",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_bj",
+      "display_name": "High Pressure Coolant Injection",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BJ"
+    },
+    {
+      "id": "sys_bn",
+      "display_name": "Reactor Core Isolation Cooling",
+      "properties": {
+        "acronym": "RCIC"
+      },
+      "type": "System",
+      "eiis_code": "BN",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; operable",
+      "match_key": "System:BN"
+    },
+    {
+      "id": "sys_ads",
+      "display_name": "Automatic Depressurization System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "backup; operable",
+      "match_key": "System:automatic-depressurization-system"
+    },
+    {
+      "id": "sys_rhr",
+      "display_name": "Residual Heat Removal",
+      "properties": {
+        "acronym": "RHR"
+      },
+      "type": "System",
+      "eiis_code": "BO",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; operable",
+      "match_key": "System:BO"
+    },
+    {
+      "id": "sys_cs",
+      "display_name": "Core Spray",
+      "properties": {
+        "acronym": "CS"
+      },
+      "type": "System",
+      "eiis_code": "BM",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; operable",
+      "match_key": "System:BM"
+    },
+    {
+      "id": "c_switch",
+      "display_name": "HPCI Emergency Shutdown Switch (Handswitch)",
+      "properties": {
+        "location": "Remote Shutdown Panel"
+      },
+      "type": "Component",
+      "eiis_code": "HS",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": "G223",
+      "inferred_code": false,
+      "match_key": "Component:HS"
+    },
+    {
+      "id": "c_egm",
+      "display_name": "HPCI EG-M module",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:hpci-eg-m-module"
+    },
+    {
+      "id": "c_rgsc",
+      "display_name": "Ramp Generator and Signal Converter (RGSC) module",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:ramp-generator-and-signal-converter-rgsc-module"
+    },
+    {
+      "id": "fm_switchdegrade",
+      "display_name": "Emergency Shutdown Switch mechanical degradation from cycling",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Switch cycling during isolation logic test introduced mechanical degradation leading to high contact resistance",
+      "match_key": "FailureMode:emergency-shutdown-switch-mechanical-degradation-from-cycling"
+    },
+    {
+      "id": "fm_highresistance",
+      "display_name": "High contact resistance in HPCI Emergency Shutdown Switch",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "High resistance affected 48Vdc power supply to EG-M module and governor flow controller demand signal wiring",
+      "match_key": "FailureMode:high-contact-resistance-in-hpci-emergency-shutdown-switch"
+    },
+    {
+      "id": "fm_speedindication",
+      "display_name": "Turbine speed indication downscale / governor control affected",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Indicated turbine speed on plant computer and control room tachometer was downscale during turbine start",
+      "match_key": "FailureMode:turbine-speed-indication-downscale-governor-control-affected"
+    },
+    {
+      "id": "fm_flowfail",
+      "display_name": "HPCI Pump unable to meet rated flow and discharge pressure requirements",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Test aborted when pump could not meet Technical Specification requirements for rated flow and discharge pressure",
+      "match_key": "FailureMode:hpci-pump-unable-to-meet-rated-flow-and-discharge-pressure-requirements"
+    },
+    {
+      "id": "cons_hpci",
+      "display_name": "HPCI inoperable",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2021-09-23T14:43",
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:hpci-inoperable"
+    },
+    {
+      "id": "ca_replace_u1",
+      "display_name": "Replace Unit 1 HPCI Emergency Shutdown Switch",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-unit-1-hpci-emergency-shutdown-switch"
+    },
+    {
+      "id": "ca_review_u2",
+      "display_name": "Review completed Unit 2 testing to verify switch operability",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:review-completed-unit-2-testing-to-verify-switch-operability"
+    },
+    {
+      "id": "ca_replace_u2",
+      "display_name": "Proactively replace Unit 2 HPCI Emergency Shutdown Switch during next scheduled System Outage",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:proactively-replace-unit-2-hpci-emergency-shutdown-switch-during-next-scheduled-system-outage"
+    },
+    {
+      "id": "ca_develop_test",
+      "display_name": "Develop testing to verify switch operability after HPCI Logic System Functional Test",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:develop-testing-to-verify-switch-operability-after-hpci-logic-system-functional-test"
+    },
+    {
+      "id": "mfr_grayhill",
+      "display_name": "Grayhill Inc",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "G223",
+      "match_key": "Manufacturer:G223"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bj",
+      "evidence": null
+    },
+    {
+      "source": "c_switch",
+      "relation": "PART_OF",
+      "target": "sys_bj",
+      "evidence": null
+    },
+    {
+      "source": "fm_switchdegrade",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_switchdegrade",
+      "relation": "LEADS_TO",
+      "target": "fm_highresistance",
+      "evidence": null
+    },
+    {
+      "source": "fm_highresistance",
+      "relation": "LEADS_TO",
+      "target": "fm_speedindication",
+      "evidence": null
+    },
+    {
+      "source": "fm_highresistance",
+      "relation": "LEADS_TO",
+      "target": "fm_flowfail",
+      "evidence": null
+    },
+    {
+      "source": "fm_speedindication",
+      "relation": "LEADS_TO",
+      "target": "fm_flowfail",
+      "evidence": null
+    },
+    {
+      "source": "fm_flowfail",
+      "relation": "LEADS_TO",
+      "target": "cons_hpci",
+      "evidence": null
+    },
+    {
+      "source": "cons_hpci",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_bn",
+      "evidence": null
+    },
+    {
+      "source": "cons_hpci",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_ads",
+      "evidence": null
+    },
+    {
+      "source": "cons_hpci",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_rhr",
+      "evidence": null
+    },
+    {
+      "source": "cons_hpci",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_cs",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_u1",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_review_u2",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_u2",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_develop_test",
+      "evidence": null
+    },
+    {
+      "source": "c_switch",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_grayhill",
+      "evidence": null
+    }
+  ],
+  "chain": "switch cycling during isolation logic test [cause TBD] -> mechanical degradation of Emergency Shutdown Switch -> high contact resistance in switch wiring -> turbine speed indication downscale & governor signal affected -> HPCI pump unable to meet rated flow/pressure -> HPCI inoperable [backups RCIC, ADS, RHR, CS available]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code not provided in FORM-366 fields (TBD/provisional per input); category left as 'provisional'. Component data table lists System BJ, Component HS (Handswitch), Manufacturer G223 Grayhill Inc, mapped to the Emergency Shutdown Switch component. RCIC, ADS, RHR, CS all stated explicitly as 'remained operable during the period that HPCI was inoperable' -> valid BACKED_UP_BY edges. No previous similar occurrence LER exists per narrative ('There have not been any similar occurrences of this switch failing at Limerick') so no stub LER/SIMILAR_TO edge emitted."
+}

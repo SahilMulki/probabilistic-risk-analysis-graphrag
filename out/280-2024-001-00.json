@@ -1,0 +1,325 @@
+{
+  "ler_number": "280-2024-001-00",
+  "identity": {
+    "accession_number": "ML24212A077",
+    "docket": "05000280",
+    "plant_name": "Surry",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2024-06-02",
+    "report_date": "2024-07-30",
+    "operating_mode": null,
+    "power_level": 13,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2024-001-00 for Surry Power Station, Troubleshooting Initiated Unknown Turbine Trip Feature in Control System"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The cause of the event was a flawed TCS trip logic design resulting in a TCS Remote IO Failure Trip. The trip logic was flawed in that a Remote IO failure was indicated on the TCS Remote IO Failure Trip where no failure existed. The trip logic was made up with the flawed Remote IO failure indicated concurrent with 2/2 Output Circuit Breakers (OCBs) indicating Bad quality.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "flawed digital control system trip logic design",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 280-2024-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "280-2024-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:280-2024-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Surry Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000280",
+      "match_key": "Unit:05000280"
+    },
+    {
+      "id": "cause",
+      "display_name": "Flawed TCS trip logic design (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "flawed digital control system trip logic design",
+      "proximate_text": "The cause of the event was a flawed TCS trip logic design resulting in a TCS Remote IO Failure Trip. The trip logic was flawed in that a Remote IO failure was indicated on the TCS Remote IO Failure Trip where no failure existed. The trip logic was made up with the flawed Remote IO failure indicated concurrent with 2/2 Output Circuit Breakers (OCBs) indicating Bad quality.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_jj",
+      "display_name": "Turbine Control System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "involved system; malfunctioned",
+      "match_key": "System:JJ"
+    },
+    {
+      "id": "c_dcc",
+      "display_name": "Digital Computer Control (TCS logic controller)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "DCC",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:DCC"
+    },
+    {
+      "id": "c_ocb",
+      "display_name": "Output Circuit Breakers (OCBs)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "2/2 OCBs",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:output-circuit-breakers-ocbs"
+    },
+    {
+      "id": "c_remoteio",
+      "display_name": "TCS Remote IO Failure Trip logic point",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:tcs-remote-io-failure-trip-logic-point"
+    },
+    {
+      "id": "fm_bct_active",
+      "display_name": "Breaker Cycling Test mode left active, inhibiting load control transition",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "TCS troubleshooting identified that the Breaker Cycling Test mode was active, inhibiting the control system response to breakers being closed, preventing transition to load control.",
+      "match_key": "FailureMode:breaker-cycling-test-mode-left-active-inhibiting-load-control-transition"
+    },
+    {
+      "id": "fm_offscan",
+      "display_name": "Breaker status points taken off scan during troubleshooting",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "While disabling Breaker Cycling Test mode per troubleshooting sheet, the breaker status points were taken off scan.",
+      "match_key": "FailureMode:breaker-status-points-taken-off-scan-during-troubleshooting"
+    },
+    {
+      "id": "fm_falseio",
+      "display_name": "Spurious Remote IO Failure indication with no actual failure",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The flawed trip logic rendered a Remote IO failure indication on the TCS Remote IO Failure Trip where no actual failure existed, concurrent with 2/2 OCBs indicating Bad quality.",
+      "match_key": "FailureMode:spurious-remote-io-failure-indication-with-no-actual-failure"
+    },
+    {
+      "id": "fm_turbtrip",
+      "display_name": "Unexpected turbine trip initiated",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Taking breaker status points off scan initiated an unexpected turbine trip via the flawed TCS trip logic.",
+      "match_key": "FailureMode:unexpected-turbine-trip-initiated"
+    },
+    {
+      "id": "cons_reactortrip",
+      "display_name": "Automatic reactor trip / RPS actuation",
+      "properties": {
+        "notes": "Uncomplicated automatic reactor trip, all control rods fully inserted; no ECCS or AFW actuation."
+      },
+      "type": "Consequence",
+      "start": "2024-06-02T17:08",
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:automatic-reactor-trip-rps-actuation"
+    },
+    {
+      "id": "ca_return_normal",
+      "display_name": "Return TCS to normal configuration for turbine startup (OCB points to scan, Breaker Cycling Test off, force cleared)",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:return-tcs-to-normal-configuration-for-turbine-startup-ocb-points-to-scan-breaker-cycling-test-off-force-cleared"
+    },
+    {
+      "id": "ca_vendor_review",
+      "display_name": "Vendor/Dominion Engineering review of Ovation System for additional unrecognized trips",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:vendor-dominion-engineering-review-of-ovation-system-for-additional-unrecognized-trips"
+    },
+    {
+      "id": "ca_proc_startup",
+      "display_name": "Revise Turbine-Generator Startup procedure to add TCS alarm/forced-point review steps and bypass/breaker cycling checks",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-turbine-generator-startup-procedure-to-add-tcs-alarm-forced-point-review-steps-and-bypass-breaker-cycling-checks"
+    },
+    {
+      "id": "ca_proc_ovation",
+      "display_name": "Revise TCS Ovation Operation procedure to enhance alarm screen and forced/off-scan point reviews",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-tcs-ovation-operation-procedure-to-enhance-alarm-screen-and-forced-off-scan-point-reviews"
+    },
+    {
+      "id": "ca_cacc",
+      "display_name": "Corrective Actions to Address Contributing Causes (procedural review, digital design change guidance, troubleshooting training, Owner's Review tracking/supervisory review)",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:corrective-actions-to-address-contributing-causes-procedural-review-digital-design-change-guidance-troubleshooting-training-owner-s-review-tracking-supervisory-review"
+    },
+    {
+      "id": "ca_fix_logic",
+      "display_name": "Correct flawed TCS trip logic for Unit 1 and Unit 2 Turbine Control Systems",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:correct-flawed-tcs-trip-logic-for-unit-1-and-unit-2-turbine-control-systems"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jj",
+      "evidence": null
+    },
+    {
+      "source": "c_dcc",
+      "relation": "PART_OF",
+      "target": "sys_jj",
+      "evidence": null
+    },
+    {
+      "source": "fm_bct_active",
+      "relation": "LEADS_TO",
+      "target": "fm_offscan",
+      "evidence": null
+    },
+    {
+      "source": "fm_offscan",
+      "relation": "LEADS_TO",
+      "target": "fm_falseio",
+      "evidence": null
+    },
+    {
+      "source": "fm_falseio",
+      "relation": "LEADS_TO",
+      "target": "fm_turbtrip",
+      "evidence": null
+    },
+    {
+      "source": "fm_turbtrip",
+      "relation": "LEADS_TO",
+      "target": "cons_reactortrip",
+      "evidence": null
+    },
+    {
+      "source": "fm_falseio",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_return_normal",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_vendor_review",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_proc_startup",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_proc_ovation",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_cacc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_fix_logic",
+      "evidence": null
+    }
+  ],
+  "chain": "flawed TCS trip logic design [cause TBD] -> Breaker Cycling Test mode active blocks load-control transition -> breaker status points taken off scan during troubleshooting -> spurious Remote IO Failure trip indication with concurrent OCB bad-quality logic -> unexpected turbine trip -> automatic reactor trip (RPS actuation)",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code left TBD/provisional per FORM-366 fields (category 'provisional'); narrative gives a detailed cause description but no official A-E code was assigned. No ECCS/AFW actuation and no inoperable SSCs contributed per narrative, so no BACKED_UP_BY edges are asserted. Block 13 was empty in FORM-366 fields, consistent with no coded component/system failure (this was a design/logic issue, not a hardware failure in the traditional cause-code table)."
+}

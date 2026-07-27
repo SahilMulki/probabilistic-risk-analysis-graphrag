@@ -1,0 +1,350 @@
+{
+  "ler_number": "445-2023-001-01",
+  "identity": {
+    "accession_number": "ML23285A094",
+    "docket": "05000445",
+    "plant_name": "Comanche Peak",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2023-06-16",
+    "report_date": "2023-10-12",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Comanche Peak Nuclear Power Plant (CPNPP) Docket Nos. 50-445 Automatic Reactor Trip Due to Lo-Lo Steam Generator Level Licensee Event Report 445 / 23-001-01"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "historical water intrusion events into the 1B lube oil system resulting in a loss of valve stroke due to rust/particulate blocking the servo valve oil passages. This condition limited the ability of the LP control Valves to regulate steam and control the Turbine speed",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "servo valve degradation from lube-oil water intrusion",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 445-2023-001-01",
+      "properties": {},
+      "type": "LER",
+      "key": "445-2023-001-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:445-2023-001-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Comanche Peak Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000445",
+      "match_key": "Unit:05000445"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "servo valve degradation from lube-oil water intrusion",
+      "proximate_text": "historical water intrusion events into the 1B lube oil system resulting in a loss of valve stroke due to rust/particulate blocking the servo valve oil passages. This condition limited the ability of the LP control Valves to regulate steam and control the Turbine speed",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_jk",
+      "display_name": "Main Feedwater Pump Turbine Speed Control",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JK",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected system",
+      "match_key": "System:JK"
+    },
+    {
+      "id": "sys_afw",
+      "display_name": "Auxiliary Feedwater System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; operable, started automatically",
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "sys_rps",
+      "display_name": "Reactor Protection System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "responded as designed",
+      "match_key": "System:reactor-protection-system"
+    },
+    {
+      "id": "c_servo",
+      "display_name": "1B MFP Servo",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "PSV",
+      "identifier": "1B",
+      "model": "134B433AB-1",
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:PSV|1B"
+    },
+    {
+      "id": "c_lpvalve",
+      "display_name": "1B MFPT LP Control Valves",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:1b-mfpt-lp-control-valves"
+    },
+    {
+      "id": "c_mfpt",
+      "display_name": "1B Main Feed Pump Turbine",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:1b-main-feed-pump-turbine"
+    },
+    {
+      "id": "fm_intrusion",
+      "display_name": "Historical water intrusion into 1B lube oil system",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Water intrusion events into the 1B lube oil system led to rust/particulate accumulation",
+      "match_key": "FailureMode:historical-water-intrusion-into-1b-lube-oil-system"
+    },
+    {
+      "id": "fm_blockage",
+      "display_name": "Servo valve oil passages blocked by rust/particulate",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Rust/particulate blocked the servo valve oil passages, causing loss of valve stroke",
+      "match_key": "FailureMode:servo-valve-oil-passages-blocked-by-rust-particulate"
+    },
+    {
+      "id": "fm_lpvalve",
+      "display_name": "LP control valves unable to regulate steam/turbine speed",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Limited ability of LP control valves to regulate steam and control turbine speed",
+      "match_key": "FailureMode:lp-control-valves-unable-to-regulate-steam-turbine-speed"
+    },
+    {
+      "id": "fm_oscillation",
+      "display_name": "1B MFP speed oscillations",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Speed oscillations on the 1B MFP identified by operations, could not be adequately controlled",
+      "match_key": "FailureMode:1b-mfp-speed-oscillations"
+    },
+    {
+      "id": "fm_manualtrip",
+      "display_name": "1B MFP manually tripped",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "MFP was manually tripped when oscillations could not be adequately controlled",
+      "match_key": "FailureMode:1b-mfp-manually-tripped"
+    },
+    {
+      "id": "fm_sglevel",
+      "display_name": "Decreasing steam generator level",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Due to the oscillations and manual MFP trip, steam generator level decreased",
+      "match_key": "FailureMode:decreasing-steam-generator-level"
+    },
+    {
+      "id": "cons_trip",
+      "display_name": "Automatic reactor trip on SG 1-04 low-low level (38%)",
+      "properties": {
+        "trip_sg": "1-04",
+        "level_percent": 38
+      },
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:automatic-reactor-trip-on-sg-1-04-low-low-level-38"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace 1B MFP servo",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-1b-mfp-servo"
+    },
+    {
+      "id": "ca_monitor",
+      "display_name": "Increased monitoring of speed oscillations",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:increased-monitoring-of-speed-oscillations"
+    },
+    {
+      "id": "mfr_ge",
+      "display_name": "General Electric",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": null,
+      "match_key": "Manufacturer:general-electric"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(v)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jk",
+      "evidence": null
+    },
+    {
+      "source": "c_servo",
+      "relation": "PART_OF",
+      "target": "sys_jk",
+      "evidence": null
+    },
+    {
+      "source": "c_lpvalve",
+      "relation": "PART_OF",
+      "target": "c_mfpt",
+      "evidence": null
+    },
+    {
+      "source": "c_servo",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_ge",
+      "evidence": null
+    },
+    {
+      "source": "fm_intrusion",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_intrusion",
+      "relation": "LEADS_TO",
+      "target": "fm_blockage",
+      "evidence": null
+    },
+    {
+      "source": "fm_blockage",
+      "relation": "LEADS_TO",
+      "target": "fm_lpvalve",
+      "evidence": null
+    },
+    {
+      "source": "fm_lpvalve",
+      "relation": "LEADS_TO",
+      "target": "fm_oscillation",
+      "evidence": null
+    },
+    {
+      "source": "fm_oscillation",
+      "relation": "LEADS_TO",
+      "target": "fm_manualtrip",
+      "evidence": null
+    },
+    {
+      "source": "fm_manualtrip",
+      "relation": "LEADS_TO",
+      "target": "fm_sglevel",
+      "evidence": null
+    },
+    {
+      "source": "fm_sglevel",
+      "relation": "LEADS_TO",
+      "target": "cons_trip",
+      "evidence": null
+    },
+    {
+      "source": "cons_trip",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_afw",
+      "evidence": null
+    },
+    {
+      "source": "cons_trip",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_rps",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_monitor",
+      "evidence": null
+    }
+  ],
+  "chain": "historical water intrusion into 1B lube oil system [cause TBD] -> rust/particulate blocks servo valve oil passages -> LP control valves lose ability to regulate steam/turbine speed -> 1B MFP speed oscillations -> MFP manually tripped -> decreasing SG level -> automatic reactor trip on SG 1-04 lo-lo level [backups AFW, RPS responded as designed]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause_code and category are TBD/provisional per FORM-366 fields, despite a detailed engineering root-cause narrative (water intrusion -> particulate blockage). No block_13 rows were provided in FORM-366 FIELDS. No previous similar events reported per Section VI. LP control valves and MFPT modeled as components; MFPT itself not elaborated beyond context. AFW and RPS are explicitly stated to have responded/started as designed during the trip, satisfying BACKED_UP_BY criteria as safety functions during the event."
+}

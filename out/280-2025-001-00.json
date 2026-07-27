@@ -1,0 +1,308 @@
+{
+  "ler_number": "280-2025-001-00",
+  "identity": {
+    "accession_number": "ML25275A606",
+    "docket": "05000280",
+    "plant_name": "Surry",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2025-08-06",
+    "report_date": "2025-10-02",
+    "operating_mode": null,
+    "power_level": 100,
+    "discovery_context": "inspection",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2025-001-00 for Surry Power Station, Failed Relay Caused Reactor Trip"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "B",
+      "system": "JE",
+      "component": "RLY",
+      "manufacturer": "W893",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The relay failed due to a defective cold soldered joint, which occurred during manufacturing and was inaccessible for visual inspection upon receipt without disassembly of the relay.",
+    "cause_code": "B",
+    "category": "Design/Manufacturing/Installation",
+    "theme": "Manufacturing defect - cold solder joint, single point vulnerability",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 280-2025-001-00",
+      "properties": {
+        "match_key": "LER:280-2025-001-00"
+      },
+      "type": "LER",
+      "key": "280-2025-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:280-2025-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Surry Unit 1",
+      "properties": {
+        "match_key": "Unit:05000280",
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000280",
+      "match_key": "Unit:05000280"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Manufacturing/Installation (B)",
+      "properties": {
+        "match_key": "Cause:Design/Manufacturing/Installation"
+      },
+      "type": "Cause",
+      "cause_code": "B",
+      "category": "Design/Manufacturing/Installation",
+      "theme": "Manufacturing defect - cold solder joint, single point vulnerability",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Design/Manufacturing/Installation"
+    },
+    {
+      "id": "sys_je",
+      "display_name": "High Consequence Limiting Safeguards (HI CLS)",
+      "properties": {
+        "note": "de-energize-to-function containment pressure protection/actuation logic",
+        "match_key": "System:JE"
+      },
+      "type": "System",
+      "eiis_code": "JE",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JE"
+    },
+    {
+      "id": "c_rly",
+      "display_name": "CLS Relay 1-CLS-RLY-3/4-18",
+      "properties": {
+        "match_key": "Component:RLY|1-CLS-RLY-3/4-18"
+      },
+      "type": "Component",
+      "eiis_code": "RLY",
+      "identifier": "1-CLS-RLY-3/4-18",
+      "model": "NBFD65NR",
+      "manufacturer_code": "W893",
+      "inferred_code": false,
+      "match_key": "Component:RLY|1-CLS-RLY-3/4-18"
+    },
+    {
+      "id": "fm_coldjoint",
+      "display_name": "Defective cold soldered joint in relay coil",
+      "properties": {
+        "match_key": "FailureMode:defective-cold-soldered-joint-in-relay-coil"
+      },
+      "type": "FailureMode",
+      "description": "Manufacturing defect in relay pick-up coil solder joint, inaccessible for inspection without disassembly.",
+      "match_key": "FailureMode:defective-cold-soldered-joint-in-relay-coil"
+    },
+    {
+      "id": "fm_coilfail",
+      "display_name": "Relay coil failure / relay de-energized despite power available",
+      "properties": {
+        "match_key": "FailureMode:relay-coil-failure"
+      },
+      "type": "FailureMode",
+      "description": "135 VDC supplied to coil, but coil failed and relay remained de-energized.",
+      "match_key": "FailureMode:relay-coil-failure-relay-de-energized-despite-power-available"
+    },
+    {
+      "id": "fm_spurioushi",
+      "display_name": "Spurious HI CLS actuation signal",
+      "properties": {
+        "match_key": "FailureMode:spurious-hi-cls-actuation"
+      },
+      "type": "FailureMode",
+      "description": "De-energization of relay generated spurious HI CLS signal despite normal (~10 psia) containment pressure.",
+      "match_key": "FailureMode:spurious-hi-cls-actuation-signal"
+    },
+    {
+      "id": "fm_siinit",
+      "display_name": "Safety Injection initiation on B Train",
+      "properties": {
+        "match_key": "FailureMode:si-initiation-b-train"
+      },
+      "type": "FailureMode",
+      "description": "Spurious HI CLS signal caused B Train SI initiation and containment isolation signal.",
+      "match_key": "FailureMode:safety-injection-initiation-on-b-train"
+    },
+    {
+      "id": "cons_trip",
+      "display_name": "Unit 1 automatic reactor trip from 100% power",
+      "properties": {
+        "match_key": "Consequence:unit-1-reactor-trip"
+      },
+      "type": "Consequence",
+      "start": "2025-08-06T18:47",
+      "end": "2025-08-10T00:00",
+      "duration": "4 days (restored to critical operations)",
+      "tz": null,
+      "match_key": "Consequence:unit-1-automatic-reactor-trip-from-100-power"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace and test failed relay",
+      "properties": {
+        "match_key": "CorrectiveAction:replace-and-test-failed-relay"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-and-test-failed-relay"
+    },
+    {
+      "id": "ca_purchasing",
+      "display_name": "Modify purchasing process to require manufacturer documentation of internal solder joint adequacy for single point vulnerability components",
+      "properties": {
+        "match_key": "CorrectiveAction:modify-purchasing-process-solder-joint-documentation"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:modify-purchasing-process-to-require-manufacturer-documentation-of-internal-solder-joint-adequacy-for-single-point-vulnerability-components"
+    },
+    {
+      "id": "mfr_westinghouse",
+      "display_name": "Westinghouse",
+      "properties": {
+        "match_key": "Manufacturer:W893"
+      },
+      "type": "Manufacturer",
+      "code": "W893",
+      "match_key": "Manufacturer:W893"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "ler_robinson",
+      "display_name": "Robinson Unit 2 NBFD65NR relay failure (IRIS 320473, 2015)",
+      "properties": {
+        "match_key": "LER:1-2015"
+      },
+      "type": "LER",
+      "key": "1-2015",
+      "stub": true,
+      "title": "NBFD65NR relay failure - random failure, not single point vulnerability configuration",
+      "plant": "Robinson Unit 2",
+      "match_key": "LER:1-2015"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_je",
+      "evidence": null
+    },
+    {
+      "source": "c_rly",
+      "relation": "PART_OF",
+      "target": "sys_je",
+      "evidence": null
+    },
+    {
+      "source": "c_rly",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_westinghouse",
+      "evidence": null
+    },
+    {
+      "source": "fm_coldjoint",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_coldjoint",
+      "relation": "LEADS_TO",
+      "target": "fm_coilfail",
+      "evidence": null
+    },
+    {
+      "source": "fm_coilfail",
+      "relation": "LEADS_TO",
+      "target": "fm_spurioushi",
+      "evidence": null
+    },
+    {
+      "source": "fm_spurioushi",
+      "relation": "LEADS_TO",
+      "target": "fm_siinit",
+      "evidence": null
+    },
+    {
+      "source": "fm_siinit",
+      "relation": "LEADS_TO",
+      "target": "cons_trip",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_purchasing",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_robinson",
+      "evidence": null
+    }
+  ],
+  "chain": "manufacturing defect: cold soldered joint in relay coil [cause B] -> relay coil failure (de-energized despite power available) -> spurious HI CLS actuation signal -> B Train Safety Injection initiation -> automatic reactor trip from 100% power (4-day outage)",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Relay 1-CLS-RLY-3/4-18 is 'de-energize to function' logic; failure of coil (still receiving 135 VDC) caused relay to de-energize as if a real HI CLS condition existed, despite actual containment pressure being normal (~10 psia). No SSCs were inoperable/contributed per licensee; ESF systems all functioned as designed. Similar-event relay (Robinson Unit 2, 2015, IRIS 320473) was a random failure not in single-point-vulnerability configuration, so did not cause a trip there; modeled as stub LER per instructions despite non-standard reference format (IRIS number used instead of LER number, so key set from available identifying info '1-2015' as best approximation of report year; true LER number not stated in narrative)."
+}

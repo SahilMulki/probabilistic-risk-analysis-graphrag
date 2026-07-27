@@ -1,0 +1,354 @@
+{
+  "ler_number": "391-2024-002-00",
+  "identity": {
+    "accession_number": "ML24127A139",
+    "docket": "05000391",
+    "plant_name": "Watts Bar",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2024-03-05",
+    "report_date": "2024-05-06",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "/2024-002-00, Automatic Reactor Trip Due to Steam Generator #3 Level LO-LO"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "A",
+      "system": "JB",
+      "component": "HS",
+      "manufacturer": null,
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "An auxiliary operator inadvertently manipulated 2-HS-3-945-A. This manipulation caused feedwater to be lost to all steam generators and 30 seconds after the switch manipulation, Unit 2 tripped on LO-LO steam generator water level. The Human performance error reduction tool \"2 minute rule\" was inappropriately reduced in scope to where ingress and egress paths were not checked for hazards.",
+    "cause_code": "A",
+    "category": "Personnel Error",
+    "theme": "inadvertent hand-switch manipulation / inadequate hazard-recognition tool application",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 391-2024-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "391-2024-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:391-2024-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Watts Bar Unit 2",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000391",
+      "match_key": "Unit:05000391"
+    },
+    {
+      "id": "cause",
+      "display_name": "Personnel Error (A)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "A",
+      "category": "Personnel Error",
+      "theme": "inadvertent hand-switch manipulation / inadequate hazard-recognition tool application",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Personnel Error"
+    },
+    {
+      "id": "sys_ba",
+      "display_name": "Auxiliary Feedwater",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "responded automatically; operable",
+      "match_key": "System:BA"
+    },
+    {
+      "id": "sys_jc",
+      "display_name": "Reactor Protection System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "actuated automatically",
+      "match_key": "System:JC"
+    },
+    {
+      "id": "sys_sg",
+      "display_name": "Steam Generator",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SG"
+    },
+    {
+      "id": "c_hs",
+      "display_name": "Hand Switch 2-HS-3-945-A",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "HS",
+      "identifier": "2-HS-3-945-A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:HS|2-HS-3-945-A"
+    },
+    {
+      "id": "fm_manip",
+      "display_name": "Inadvertent manipulation of hand-switch 2-HS-3-945-A",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Auxiliary operator inadvertently manipulated 2-HS-3-945-A while transiting the area, without ingress/egress hazard check under the '2 minute rule'.",
+      "match_key": "FailureMode:inadvertent-manipulation-of-hand-switch-2-hs-3-945-a"
+    },
+    {
+      "id": "fm_fwiso",
+      "display_name": "Feedwater isolated to all steam generators",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Manipulation of the hand switch caused a main feedwater isolation signal, isolating feedwater from all steam generators.",
+      "match_key": "FailureMode:feedwater-isolated-to-all-steam-generators"
+    },
+    {
+      "id": "fm_sglolo",
+      "display_name": "Steam generator level LO-LO",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Loss of feedwater flow caused rapid steam generator water level decrease to the LO-LO trip setpoint.",
+      "match_key": "FailureMode:steam-generator-level-lo-lo"
+    },
+    {
+      "id": "cons_trip",
+      "display_name": "Automatic reactor trip and turbine trip",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2024-03-05T01:32:00",
+      "end": "2024-03-05T01:44:00",
+      "duration": "00:12",
+      "tz": "EST",
+      "match_key": "Consequence:automatic-reactor-trip-and-turbine-trip"
+    },
+    {
+      "id": "ca_bumpguard",
+      "display_name": "Install bump guard over hand-switch",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:install-bump-guard-over-hand-switch"
+    },
+    {
+      "id": "ca_standdown",
+      "display_name": "Conduct Operations department standdown",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:conduct-operations-department-standdown"
+    },
+    {
+      "id": "ca_mel",
+      "display_name": "Update Master Equipment List nomenclature for 1/2-HS-3-945-A",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:update-master-equipment-list-nomenclature-for-1-2-hs-3-945-a"
+    },
+    {
+      "id": "ca_label",
+      "display_name": "Update plant label for 2-HS-3-945-A",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:update-plant-label-for-2-hs-3-945-a"
+    },
+    {
+      "id": "ca_hazard_id",
+      "display_name": "Identify 2-HS-3-945-A as reactor trip hazard in plant",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:identify-2-hs-3-945-a-as-reactor-trip-hazard-in-plant"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_ufsar",
+      "display_name": "UFSAR Section 15.2.8, Loss of Normal Feedwater",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:ufsar-section-15-2-8-loss-of-normal-feedwater"
+    },
+    {
+      "id": "ler_prev1",
+      "display_name": "LER 391-2017-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "391-2017-002-00",
+      "stub": true,
+      "title": "Plant trip due to a secondary plant transient which led to a loss of main feedwater",
+      "plant": "Watts Bar Nuclear Plant, Unit 2",
+      "match_key": "LER:391-2017-002-00"
+    },
+    {
+      "id": "ler_prev2",
+      "display_name": "LER 391-2018-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "391-2018-001-00",
+      "stub": true,
+      "title": "Plant trip due to a Reactor Coolant System loop low flow",
+      "plant": "Watts Bar Nuclear Plant, Unit 2",
+      "match_key": "LER:391-2018-001-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ba",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sg",
+      "evidence": null
+    },
+    {
+      "source": "fm_manip",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_manip",
+      "relation": "LEADS_TO",
+      "target": "fm_fwiso",
+      "evidence": null
+    },
+    {
+      "source": "fm_fwiso",
+      "relation": "LEADS_TO",
+      "target": "fm_sglolo",
+      "evidence": null
+    },
+    {
+      "source": "fm_sglolo",
+      "relation": "LEADS_TO",
+      "target": "cons_trip",
+      "evidence": null
+    },
+    {
+      "source": "cons_trip",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_ba",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_bumpguard",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_standdown",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_mel",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_label",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_hazard_id",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev1",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev2",
+      "evidence": null
+    }
+  ],
+  "chain": "inadvertent hand-switch manipulation (2-minute rule hazard-check scope reduced) [cause A] -> feedwater isolated to all steam generators -> steam generator level LO-LO -> automatic reactor/turbine trip [backup AFW restored SG level]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Block-13 system code JB in FORM-366 appears to be a transcription artifact for the SG/HS related coding; narrative EIIS tags used instead (SG, JC, BA) for System nodes, and HS retained as component per block_13. No component failure occurred (Section IV.D/G explicitly 'Not applicable'); the failure chain is purely procedural/human-performance. AFW functioned automatically and is modeled as an involved/backup system, not a failed one."
+}

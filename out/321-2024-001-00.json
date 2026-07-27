@@ -1,0 +1,336 @@
+{
+  "ler_number": "321-2024-001-00",
+  "identity": {
+    "accession_number": "ML24100A863",
+    "docket": "05000321",
+    "plant_name": "Hatch",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2024-02-11",
+    "report_date": "2024-04-09",
+    "operating_mode": "5",
+    "power_level": 0,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Primary Containment Penetration Exceeded Maximum Allowable Primary Containment Leakage Rate (La)"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)",
+      "10 CFR 50.73(a)(2)(ii)(A)",
+      "10 CFR 50.73(a)(2)(v)(C)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "X",
+      "system": "BO",
+      "component": "ISV",
+      "manufacturer": "E095",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "It was determined that the valve disc was mis-aligned to its in-body seats which resulted in leakage through the valves exceeding allowable limits.",
+    "cause_code": "X",
+    "category": "Other",
+    "theme": "Valve disc misalignment causing excessive seat leakage",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 321-2024-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "321-2024-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:321-2024-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Hatch Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000321",
+      "match_key": "Unit:05000321"
+    },
+    {
+      "id": "cause",
+      "display_name": "Other (X)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "X",
+      "category": "Other",
+      "theme": "Valve disc misalignment causing excessive seat leakage",
+      "proximate_text": "It was determined that the valve disc was mis-aligned to its in-body seats which resulted in leakage through the valves exceeding allowable limits.",
+      "provisional": false,
+      "match_key": "Cause:Other"
+    },
+    {
+      "id": "sys_containment",
+      "display_name": "Primary Containment",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BO",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected barrier",
+      "match_key": "System:BO"
+    },
+    {
+      "id": "sys_feedwater",
+      "display_name": "Feedwater",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "penetration piping",
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "c_isv1",
+      "display_name": "Feedwater Isolation Check Valve 1B21F001A",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": "1 B21 F01 0A",
+      "model": "Vendor P/N 415595",
+      "manufacturer_code": "E095",
+      "inferred_code": false,
+      "match_key": "Component:ISV|1 B21 F01 0A"
+    },
+    {
+      "id": "c_isv2",
+      "display_name": "Feedwater Isolation Check Valve 1B21F032A",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": "1 B21 F032A",
+      "model": "Vendor P/N 415595",
+      "manufacturer_code": "E095",
+      "inferred_code": false,
+      "match_key": "Component:ISV|1 B21 F032A"
+    },
+    {
+      "id": "fm_misalign",
+      "display_name": "Valve disc misaligned to in-body seats",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Valve disc mis-aligned to its in-body seats, resulting in excessive leakage through the valves.",
+      "match_key": "FailureMode:valve-disc-misaligned-to-in-body-seats"
+    },
+    {
+      "id": "fm_leak",
+      "display_name": "Excessive check valve leakage exceeding La",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Leakage through the two feedwater isolation check valves in a single penetration exceeded the allowable primary containment leakage rate La.",
+      "match_key": "FailureMode:excessive-check-valve-leakage-exceeding-la"
+    },
+    {
+      "id": "cons_containment",
+      "display_name": "Primary containment inoperable / LLRT failure exceeding La",
+      "properties": {
+        "note": "Primary containment integrity failure via feedwater penetration; potential pathway for release post-LOCA, though of low safety significance (below CDF/LERF impact threshold)."
+      },
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:primary-containment-inoperable-llrt-failure-exceeding-la"
+    },
+    {
+      "id": "ca_machine",
+      "display_name": "Machine in-body seats and disc; adjust/replace hinge pins",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:machine-in-body-seats-and-disc-adjust-replace-hinge-pins"
+    },
+    {
+      "id": "ca_retest",
+      "display_name": "Perform successful as-left LLRT and restore containment to operable",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:perform-successful-as-left-llrt-and-restore-containment-to-operable"
+    },
+    {
+      "id": "mfr_edward",
+      "display_name": "Edward Valves",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "E095",
+      "match_key": "Manufacturer:E095"
+    },
+    {
+      "id": "rr_5073i",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_5073ii",
+      "display_name": "10 CFR 50.73(a)(2)(ii)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-ii-a"
+    },
+    {
+      "id": "rr_5073v",
+      "display_name": "10 CFR 50.73(a)(2)(v)(C)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-c"
+    },
+    {
+      "id": "rr_appj",
+      "display_name": "10 CFR 50 Appendix J",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:10-cfr-50-appendix-j"
+    },
+    {
+      "id": "rr_ts",
+      "display_name": "Technical Specifications 5.5.12",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specifications-5-5-12"
+    },
+    {
+      "id": "rr_ufsar",
+      "display_name": "UFSAR Chapter 15",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:ufsar-chapter-15"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073i",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073ii",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073v",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_containment",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_feedwater",
+      "evidence": null
+    },
+    {
+      "source": "c_isv1",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_edward",
+      "evidence": null
+    },
+    {
+      "source": "c_isv2",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_edward",
+      "evidence": null
+    },
+    {
+      "source": "fm_misalign",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_misalign",
+      "relation": "LEADS_TO",
+      "target": "fm_leak",
+      "evidence": null
+    },
+    {
+      "source": "fm_leak",
+      "relation": "LEADS_TO",
+      "target": "cons_containment",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_machine",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_retest",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_appj",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ufsar",
+      "evidence": null
+    }
+  ],
+  "chain": "valve disc misaligned to in-body seats [cause X] -> excessive leakage through both feedwater isolation check valves in penetration -> primary containment LLRT exceeds La / containment inoperable beyond LCO -> corrective machining and re-test restores containment",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4"
+  ],
+  "notes": "Two check valves (1B21F01 0A and 1B21F032A) in a single penetration both failed LLRT; modeled as two Component nodes sharing the same failure chain since both stem from the same disc-misalignment cause and lead to the same containment leakage consequence. Feedwater (SJ) system modeled as design-context system involved due to explicit penetration/piping role, not a backup. No PART_OF edges asserted since narrative does not explicitly state containment relationship as subcomponent. Previous Similar Events section states 'None' -> no SIMILAR_TO edge or stub LER emitted."
+}

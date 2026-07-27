@@ -1,0 +1,469 @@
+{
+  "ler_number": "269-2026-001-00",
+  "identity": {
+    "accession_number": "ML26085A023",
+    "docket": "05000269",
+    "plant_name": "Oconee",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2026-01-27",
+    "report_date": "2026-03-26",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Revision 00 – Switchyard Vital Battery Specific Gravity Surveillance Error Results in Operation or Condition Prohibited by Technical Specifications"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "Personnel did not adhere to human performance standards and error prevention techniques required by the administrative procedure. Additionally, supervision failed to ensure technicians understood human performance tools. This resulted in the failure to enter TS LCO 3.8.5 to perform required actions and an inadvertent concurrent inoperability of two 230 kV switchyard 125 VDC power sources.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "surveillance calculation error / procedure adherence and human performance failure",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 269-2026-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "269-2026-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:269-2026-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Oconee Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000269",
+      "match_key": "Unit:05000269"
+    },
+    {
+      "id": "cause",
+      "display_name": "Personnel Error (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "surveillance calculation error / procedure adherence and human performance failure",
+      "proximate_text": "Personnel did not adhere to human performance standards and error prevention techniques required by the administrative procedure. Additionally, supervision failed to ensure technicians understood human performance tools. This resulted in the failure to enter TS LCO 3.8.5 to perform required actions and an inadvertent concurrent inoperability of two 230 kV switchyard 125 VDC power sources.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_ei",
+      "display_name": "230 kV Switchyard 125 VDC Power System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "EI",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected system",
+      "match_key": "System:EI"
+    },
+    {
+      "id": "sys_ek",
+      "display_name": "Keowee Hydroelectric Station",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "EK",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; operable (underground path)",
+      "match_key": "System:EK"
+    },
+    {
+      "id": "sys_eb",
+      "display_name": "Main Feeder Buses",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "EB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:EB"
+    },
+    {
+      "id": "sys_dgvp",
+      "display_name": "Degraded Grid Protection Voltage Protection system",
+      "properties": {
+        "note": "part of EPSL; no EIIS code found in text"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "affected",
+      "match_key": "System:degraded-grid-protection-voltage-protection-system"
+    },
+    {
+      "id": "sys_ba",
+      "display_name": "Turbine-Driven Emergency Feedwater system",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; operable (mitigation)",
+      "match_key": "System:BA"
+    },
+    {
+      "id": "c_btry_sy1",
+      "display_name": "230 kV Switchyard Battery SY-1",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "BTRY",
+      "identifier": "SY-1",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:BTRY|SY-1"
+    },
+    {
+      "id": "c_btry_sy2",
+      "display_name": "230 kV Switchyard Battery SY-2",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "BTRY",
+      "identifier": "SY-2",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:BTRY|SY-2"
+    },
+    {
+      "id": "fm_calc_error",
+      "display_name": "Calculation error in minimum acceptable battery cell specific gravity",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Quarterly Battery Surveillance Test for SY-1 used an incorrect calculation for minimum acceptable cell specific gravity, causing an undetected out-of-limits condition to go unrecognized.",
+      "match_key": "FailureMode:calculation-error-in-minimum-acceptable-battery-cell-specific-gravity"
+    },
+    {
+      "id": "fm_lco_not_entered",
+      "display_name": "TS LCO 3.8.5 not entered for SY-1 inoperability",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Because the surveillance calculation error masked the true condition, TS 3.8.5 was not entered when SY-1 first became inoperable (April 08, 2025 and again January 06, 2026).",
+      "match_key": "FailureMode:ts-lco-3-8-5-not-entered-for-sy-1-inoperability"
+    },
+    {
+      "id": "fm_concurrent_inop",
+      "display_name": "Concurrent inoperability of SY-1 and SY-2 batteries (Aug 19-21, 2025)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "SY-2 was removed from service for TS-required service test/recharge while SY-1 was unknowingly inoperable, resulting in both 230 kV switchyard 125VDC sources being simultaneously inoperable.",
+      "match_key": "FailureMode:concurrent-inoperability-of-sy-1-and-sy-2-batteries-aug-19-21-2025"
+    },
+    {
+      "id": "fm_dgvp_inop",
+      "display_name": "DGVP system rendered inoperable",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "With both switchyard batteries inoperable, the DGVP system would have been inoperable, rendering the overhead emergency power path inoperable.",
+      "match_key": "FailureMode:dgvp-system-rendered-inoperable"
+    },
+    {
+      "id": "cons_ts_prohibited",
+      "display_name": "Operation/condition prohibited by Technical Specifications (TS 3.8.5, 3.8.3, 3.0.3, 3.3.19, 3.8.1 exceedances)",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2025-04-08",
+      "end": "2026-01-27",
+      "duration": "multiple periods; SY-1 inoperable Apr 08-Oct 16, 2025 and Jan 06-Jan 27, 2026; both batteries inoperable Aug 19-21, 2025 (49.52 hr)",
+      "tz": "EST",
+      "match_key": "Consequence:operation-condition-prohibited-by-technical-specifications-ts-3-8-5-3-8-3-3-0-3-3-3-19-3-8-1-exceedances"
+    },
+    {
+      "id": "ca_ts_entry",
+      "display_name": "TS 3.8.5 entered immediately upon discovery",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:ts-3-8-5-entered-immediately-upon-discovery"
+    },
+    {
+      "id": "ca_service_test",
+      "display_name": "Service test completed to confirm SY-1 design-basis function",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:service-test-completed-to-confirm-sy-1-design-basis-function"
+    },
+    {
+      "id": "ca_restore_sg",
+      "display_name": "Restored SY-1 specific gravity to within TS limits",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:restored-sy-1-specific-gravity-to-within-ts-limits"
+    },
+    {
+      "id": "ca_extent",
+      "display_name": "Extent of condition review of 3 years of SY-1/SY-2 surveillances",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:extent-of-condition-review-of-3-years-of-sy-1-sy-2-surveillances"
+    },
+    {
+      "id": "ca_training",
+      "display_name": "Conduct training on procedure use and adherence",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:conduct-training-on-procedure-use-and-adherence"
+    },
+    {
+      "id": "ca_checklist",
+      "display_name": "Update procedure completion checklist with human performance attributes",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:update-procedure-completion-checklist-with-human-performance-attributes"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts_3_8_5",
+      "display_name": "TS 3.8.5",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ts-3-8-5"
+    },
+    {
+      "id": "rr_ts_3_8_3",
+      "display_name": "TS 3.8.3",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ts-3-8-3"
+    },
+    {
+      "id": "rr_ts_3_3_19",
+      "display_name": "TS 3.3.19",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ts-3-3-19"
+    },
+    {
+      "id": "rr_ts_3_8_1",
+      "display_name": "TS 3.8.1",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ts-3-8-1"
+    },
+    {
+      "id": "rr_lco_3_0_3",
+      "display_name": "LCO 3.0.3",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:lco-3-0-3"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts_3_8_5",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts_3_8_3",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts_3_3_19",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts_3_8_1",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_lco_3_0_3",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ei",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_dgvp",
+      "evidence": null
+    },
+    {
+      "source": "c_btry_sy1",
+      "relation": "PART_OF",
+      "target": "sys_ei",
+      "evidence": null
+    },
+    {
+      "source": "c_btry_sy2",
+      "relation": "PART_OF",
+      "target": "sys_ei",
+      "evidence": null
+    },
+    {
+      "source": "fm_calc_error",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_calc_error",
+      "relation": "LEADS_TO",
+      "target": "fm_lco_not_entered",
+      "evidence": null
+    },
+    {
+      "source": "fm_lco_not_entered",
+      "relation": "LEADS_TO",
+      "target": "fm_concurrent_inop",
+      "evidence": null
+    },
+    {
+      "source": "fm_concurrent_inop",
+      "relation": "LEADS_TO",
+      "target": "fm_dgvp_inop",
+      "evidence": null
+    },
+    {
+      "source": "fm_dgvp_inop",
+      "relation": "LEADS_TO",
+      "target": "cons_ts_prohibited",
+      "evidence": null
+    },
+    {
+      "source": "fm_lco_not_entered",
+      "relation": "LEADS_TO",
+      "target": "cons_ts_prohibited",
+      "evidence": null
+    },
+    {
+      "source": "cons_ts_prohibited",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_ek",
+      "evidence": null
+    },
+    {
+      "source": "cons_ts_prohibited",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_ba",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_ts_entry",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_service_test",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_restore_sg",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_extent",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_training",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_checklist",
+      "evidence": null
+    }
+  ],
+  "chain": "surveillance calculation error (specific gravity limit) [cause TBD] -> TS LCO 3.8.5 not entered for SY-1 -> SY-1 & SY-2 concurrently inoperable (Aug 19-21, 2025) -> DGVP/overhead emergency power path rendered inoperable -> operation/condition prohibited by TS [backups: Keowee underground path, Turbine-Driven EFW, SSF/PSW/FLEX]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause_code/category are TBD in FORM-366 FIELDS; narrative describes personnel/procedure-adherence and supervisory failure but no official cause code is assigned, so cause node is marked provisional per rule 4. No block_13 rows provided. DGVP has no EIIS bracket code stated in text, modeled with eiis_code null and non_eiis not set (leaving default false) since it's an internal EPSL subsystem, not clearly non-EIIS by design like ADS; treated conservatively as System with null code. LCO 3.0.3, various TS sections modeled as RegulatoryReference nodes (license-basis) since they are TS citations governing reportability determination, not systems or components. SY-2 removal for service test is described as a required/planned activity, not a failure mode, so no separate FailureMode node created for it; it's referenced within fm_concurrent_inop description."
+}

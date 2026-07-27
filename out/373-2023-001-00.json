@@ -1,0 +1,388 @@
+{
+  "ler_number": "373-2023-001-00",
+  "identity": {
+    "accession_number": "ML23167A071",
+    "docket": "05000373",
+    "plant_name": "La Salle",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2017-05-17",
+    "report_date": "2023-06-16",
+    "operating_mode": null,
+    "power_level": 100,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Low Pressure Core Spray Inoperable due to Minimum Flow Valve Flow Pressure Switch Failure"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)(D)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "B",
+      "system": "BM",
+      "component": "PDS",
+      "manufacturer": "S382",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The cause of the switch failure is process water intrusion into the switch electrical housing. The water intrusion was caused by a failure of the low pressure side u-cup seal around the shaft from the sensing element.",
+    "cause_code": "B",
+    "category": "Design/Manufacturing/Installation",
+    "theme": "Seal design susceptibility to water intrusion in differential pressure switch",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 373-2023-001-00",
+      "properties": {
+        "match_key": "LER:373-2023-001-00"
+      },
+      "type": "LER",
+      "key": "373-2023-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:373-2023-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "La Salle Unit 1",
+      "properties": {
+        "match_key": "Unit:05000373",
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000373",
+      "match_key": "Unit:05000373"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Manufacturing/Installation (B)",
+      "properties": {
+        "match_key": "Cause:Design/Manufacturing/Installation"
+      },
+      "type": "Cause",
+      "cause_code": "B",
+      "category": "Design/Manufacturing/Installation",
+      "theme": "Seal design susceptibility to water intrusion in differential pressure switch",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Design/Manufacturing/Installation"
+    },
+    {
+      "id": "sys_bm",
+      "display_name": "Low Pressure Core Spray",
+      "properties": {
+        "note": "Division 1 ECCS, single train",
+        "match_key": "System:BM"
+      },
+      "type": "System",
+      "eiis_code": "BM",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BM"
+    },
+    {
+      "id": "c_pds",
+      "display_name": "LPCS Pump Discharge Flow Differential Pressure Switch (1E21-N004)",
+      "properties": {
+        "match_key": "Component:PDS|1E21-N004"
+      },
+      "type": "Component",
+      "eiis_code": "PDS",
+      "identifier": "1E21-N004",
+      "model": "141N6-WX7-M9-C1A-JJTTNQ",
+      "manufacturer_code": "S382",
+      "inferred_code": false,
+      "match_key": "Component:PDS|1E21-N004"
+    },
+    {
+      "id": "c_ucup",
+      "display_name": "Low pressure side u-cup seal (sensing element shaft)",
+      "properties": {
+        "match_key": "Component:u-cup-seal-sensing-element-shaft"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:low-pressure-side-u-cup-seal-sensing-element-shaft"
+    },
+    {
+      "id": "c_fov",
+      "display_name": "LPCS Minimum Flow Valve (1E21-F011)",
+      "properties": {
+        "match_key": "Component:FOV|1E21-F011"
+      },
+      "type": "Component",
+      "eiis_code": "FOV",
+      "identifier": "1E21-F011",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:FOV|1E21-F011"
+    },
+    {
+      "id": "c_pump",
+      "display_name": "LPCS Pump",
+      "properties": {
+        "match_key": "Component:P|LPCS-pump"
+      },
+      "type": "Component",
+      "eiis_code": "P",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:P"
+    },
+    {
+      "id": "fm_seal",
+      "display_name": "U-cup seal failure allows process water intrusion",
+      "properties": {
+        "match_key": "FailureMode:u-cup-seal-failure-water-intrusion"
+      },
+      "type": "FailureMode",
+      "description": "Failure of the low pressure side u-cup seal around the sensing element shaft allowed process water into the switch electrical housing.",
+      "match_key": "FailureMode:u-cup-seal-failure-allows-process-water-intrusion"
+    },
+    {
+      "id": "fm_switch",
+      "display_name": "Differential pressure switch failed",
+      "properties": {
+        "match_key": "FailureMode:differential-pressure-switch-failed"
+      },
+      "type": "FailureMode",
+      "description": "Water intrusion into the electrical housing caused the pump discharge flow differential pressure switch to fail.",
+      "match_key": "FailureMode:differential-pressure-switch-failed"
+    },
+    {
+      "id": "fm_valve",
+      "display_name": "Minimum flow valve did not open on low flow",
+      "properties": {
+        "match_key": "FailureMode:min-flow-valve-did-not-open"
+      },
+      "type": "FailureMode",
+      "description": "The switch failure caused the LPCS minimum flow valve to not perform its design function of opening on low flow when the pump was being secured.",
+      "match_key": "FailureMode:minimum-flow-valve-did-not-open-on-low-flow"
+    },
+    {
+      "id": "cons_lpcs",
+      "display_name": "LPCS pump/system declared inoperable",
+      "properties": {
+        "match_key": "Consequence:lpcs-inoperable"
+      },
+      "type": "Consequence",
+      "start": "2023-04-17T02:46",
+      "end": null,
+      "duration": null,
+      "tz": "CDT",
+      "match_key": "Consequence:lpcs-pump-system-declared-inoperable"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace failed differential pressure switch",
+      "properties": {
+        "match_key": "CorrectiveAction:replace-differential-pressure-switch"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-failed-differential-pressure-switch"
+    },
+    {
+      "id": "ca_extent",
+      "display_name": "Evaluate extent of condition, parts reliability, and design changes",
+      "properties": {
+        "match_key": "CorrectiveAction:evaluate-extent-of-condition-design-changes"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:evaluate-extent-of-condition-parts-reliability-and-design-changes"
+    },
+    {
+      "id": "mfr_sor",
+      "display_name": "Static O-Ring SOR Inc.",
+      "properties": {
+        "match_key": "Manufacturer:S382"
+      },
+      "type": "Manufacturer",
+      "code": "S382",
+      "match_key": "Manufacturer:S382"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {
+        "type": "reporting-criterion",
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "rr_ts351",
+      "display_name": "TS 3.5.1, ECCS - Operating",
+      "properties": {
+        "type": "license-basis",
+        "match_key": "RegulatoryReference:ts-3-5-1-eccs-operating"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ts-3-5-1-eccs-operating"
+    },
+    {
+      "id": "rr_ts3351",
+      "display_name": "TS 3.3.5.1, ECCS Instrumentation",
+      "properties": {
+        "type": "license-basis",
+        "match_key": "RegulatoryReference:ts-3-3-5-1-eccs-instrumentation"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ts-3-3-5-1-eccs-instrumentation"
+    },
+    {
+      "id": "rr_nei9902",
+      "display_name": "NEI 99-02, Regulatory Assessment Performance Indicator Guidance",
+      "properties": {
+        "type": "standard/guidance",
+        "match_key": "RegulatoryReference:nei-99-02"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:nei-99-02-regulatory-assessment-performance-indicator-guidance"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "LER 373-2017-006-00",
+      "properties": {
+        "unit": 1,
+        "match_key": "LER:1-2017-006"
+      },
+      "type": "LER",
+      "key": "373-2017-006-00",
+      "stub": true,
+      "title": "Low Pressure Core Spray Inoperable due to Minimum Flow Valve Failure in Closed Position",
+      "plant": "LaSalle County Station",
+      "match_key": "LER:373-2017-006-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts351",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts3351",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_nei9902",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bm",
+      "evidence": null
+    },
+    {
+      "source": "c_pds",
+      "relation": "PART_OF",
+      "target": "sys_bm",
+      "evidence": "LPCS Pump Discharge Flow Bypass Interlock is part of the LPCS system per component ID"
+    },
+    {
+      "source": "fm_seal",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_seal",
+      "relation": "LEADS_TO",
+      "target": "fm_switch",
+      "evidence": null
+    },
+    {
+      "source": "fm_switch",
+      "relation": "LEADS_TO",
+      "target": "fm_valve",
+      "evidence": null
+    },
+    {
+      "source": "fm_valve",
+      "relation": "LEADS_TO",
+      "target": "cons_lpcs",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_extent",
+      "evidence": null
+    },
+    {
+      "source": "c_pds",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_sor",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    }
+  ],
+  "chain": "u-cup seal failure [cause B] -> process water intrusion into switch housing -> differential pressure switch fails -> minimum flow valve fails to open on low flow -> LPCS pump/system declared inoperable [other ECCS trains remained operable]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q9"
+  ],
+  "notes": "System code BM taken from Block 13 (form-authoritative) for LPCS; component code PDS assigned similarly. Component identifiers 1E21-N004 (switch) and 1E21-F011 (valve) and manufacturer model number are from the narrative. Previous occurrence LER 373-2017-006-00 modeled as stub with key '1-2017-006' per rule 9 (unit digit + report number, leading zeros on sequence dropped as report text does not include them verbatim beyond '006'); note the report literally cites 'LER 373-2017-006-00' — docket 373 is embedded in that string, but rule 9 instructs recording the LER number as stated while resolver derives canonical key from plant/unit, so key set to '1-2017-006' representing unit-year-sequence). RCIC and Reactor Mode surveillance testing context noted but RCIC not modeled as a backup system since narrative states 'other emergency safety systems remained operable' generically without naming specific systems as operable backups during this event window, hence no BACKED_UP_BY edge created to avoid over-inferring which specific ECCS trains were operable."
+}

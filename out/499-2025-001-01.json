@@ -1,0 +1,466 @@
+{
+  "ler_number": "499-2025-001-01",
+  "identity": {
+    "accession_number": "ML26029A457",
+    "docket": "05000499",
+    "plant_name": "South Texas",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2025-05-22",
+    "report_date": "2026-01-29",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "inspection",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Inoperable Essential Cooling Water Strainer could have prevented Fulfillment of a Safety Function and Resulted in Condition Prohibited by Technical Specifications"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)",
+      "10 CFR 50.73(a)(2)(v)(B)",
+      "10 CFR 50.73(a)(2)(v)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "repair work performed in 2012 on the strainer was performed using work instructions which lacked the level of detail required for successful implementation of repairs, resulting in introduction of the gap",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "inadequate repair work instructions / design change package",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 499-2025-001-01",
+      "properties": {
+        "match_key": "LER:499-2025-001-01"
+      },
+      "type": "LER",
+      "key": "499-2025-001-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:499-2025-001-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "South Texas Unit 2",
+      "properties": {
+        "match_key": "Unit:05000499",
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000499",
+      "match_key": "Unit:05000499"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {
+        "match_key": "Cause:provisional"
+      },
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "inadequate repair work instructions / design change package",
+      "proximate_text": "repair work performed in 2012 on the strainer was performed using work instructions which lacked the level of detail required for successful implementation of repairs, resulting in introduction of the gap",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_ecw",
+      "display_name": "Essential Cooling Water",
+      "properties": {
+        "match_key": "System:BI"
+      },
+      "type": "System",
+      "eiis_code": "BI",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected system",
+      "match_key": "System:BI"
+    },
+    {
+      "id": "sys_sbdg",
+      "display_name": "Standby Diesel Generator",
+      "properties": {
+        "match_key": "System:standby-diesel-generator"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "potentially affected by debris via ECW cooling",
+      "match_key": "System:standby-diesel-generator"
+    },
+    {
+      "id": "c_strainer",
+      "display_name": "ECW Self-Cleaning Strainer 2B",
+      "properties": {
+        "match_key": "Component:STR|2B"
+      },
+      "type": "Component",
+      "eiis_code": "STR",
+      "identifier": "2B",
+      "model": "593-30IN",
+      "manufacturer_code": "Z010",
+      "inferred_code": false,
+      "match_key": "Component:STR|2B"
+    },
+    {
+      "id": "c_drum",
+      "display_name": "Strainer drum/cover assembly",
+      "properties": {
+        "match_key": "Component:strainer-drum-cover-assembly"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:strainer-drum-cover-assembly"
+    },
+    {
+      "id": "c_intercooler",
+      "display_name": "SBDG intercooler",
+      "properties": {
+        "tube_diameter_in": "0.319",
+        "match_key": "Component:sbdg-intercooler"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:sbdg-intercooler"
+    },
+    {
+      "id": "fm_workinstr",
+      "display_name": "2012 repair work instructions lacked axial-position/post-work-verification detail",
+      "properties": {
+        "match_key": "FailureMode:2012-repair-work-instructions-lacked-detail"
+      },
+      "type": "FailureMode",
+      "description": "Design change package and work instructions lacked instructions or post-work verifications for the axial position of the holes in the drum and cover inner ring",
+      "match_key": "FailureMode:2012-repair-work-instructions-lacked-axial-position-post-work-verification-detail"
+    },
+    {
+      "id": "fm_gap",
+      "display_name": "Gap formed between strainer drum and body during 2012 repair",
+      "properties": {
+        "match_key": "FailureMode:gap-formed-drum-body"
+      },
+      "type": "FailureMode",
+      "description": "New holes drilled in drum and cover inner ring at mismatched axial elevation created a ~0.5 in gap",
+      "match_key": "FailureMode:gap-formed-between-strainer-drum-and-body-during-2012-repair"
+    },
+    {
+      "id": "fm_norabbet",
+      "display_name": "Strainer drum lacks rabbet fit called for in vendor drawing",
+      "properties": {
+        "match_key": "FailureMode:no-rabbet-fit"
+      },
+      "type": "FailureMode",
+      "description": "Absence of rabbet fit that would have prevented gap from forming when drum was drilled",
+      "match_key": "FailureMode:strainer-drum-lacks-rabbet-fit-called-for-in-vendor-drawing"
+    },
+    {
+      "id": "fm_notdetected",
+      "display_name": "Gap not identified during subsequent inspections/overhauls (2012-2025)",
+      "properties": {
+        "match_key": "FailureMode:gap-not-detected"
+      },
+      "type": "FailureMode",
+      "description": "Strainer work/inspections performed with cover/drum assembly removed from body left in intake structure, so gap in fully assembled configuration was not readily identifiable; gap persisted through 2022 overhaul and periodic inspections",
+      "match_key": "FailureMode:gap-not-identified-during-subsequent-inspections-overhauls-2012-2025"
+    },
+    {
+      "id": "fm_bypass",
+      "display_name": "ECW flow bypassing strainer elements through gap",
+      "properties": {
+        "match_key": "FailureMode:ecw-flow-bypass"
+      },
+      "type": "FailureMode",
+      "description": "~0.5 in (up to 0.6875 in as-found max) gap allowed 88 sq in of bypass area for unstrained ECW flow into heat exchangers",
+      "match_key": "FailureMode:ecw-flow-bypassing-strainer-elements-through-gap"
+    },
+    {
+      "id": "cons_inop",
+      "display_name": "ECW Train B self-cleaning strainer / train inoperable beyond allowed outage time, condition prohibited by Tech Specs",
+      "properties": {
+        "match_key": "Consequence:ecw-train-b-inoperable"
+      },
+      "type": "Consequence",
+      "start": "2012-05-18",
+      "end": "2025-05-11",
+      "duration": "approximately 13 years",
+      "tz": null,
+      "match_key": "Consequence:ecw-train-b-self-cleaning-strainer-train-inoperable-beyond-allowed-outage-time-condition-prohibited-by-tech-specs"
+    },
+    {
+      "id": "ca_repair",
+      "display_name": "Repair ECW 2B self-cleaning strainer and return ECW Train B to service",
+      "properties": {
+        "match_key": "CorrectiveAction:repair-ecw-2b-strainer"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:repair-ecw-2b-self-cleaning-strainer-and-return-ecw-train-b-to-service"
+    },
+    {
+      "id": "ca_ec_vtd",
+      "display_name": "Develop Engineering Change to revise VTD/work instructions for measuring exact vertical hole location and maintaining drum elevation",
+      "properties": {
+        "match_key": "CorrectiveAction:ec-revise-vtd-hole-location"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:develop-engineering-change-to-revise-vtd-work-instructions-for-measuring-exact-vertical-hole-location-and-maintaining-drum-elevation"
+    },
+    {
+      "id": "ca_visual",
+      "display_name": "Include visual confirmation of acceptable strainer body-to-drum gap in EC 25-4216-21",
+      "properties": {
+        "match_key": "CorrectiveAction:ec-visual-confirmation-gap"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:include-visual-confirmation-of-acceptable-strainer-body-to-drum-gap-in-ec-25-4216-21"
+    },
+    {
+      "id": "ca_rabbet",
+      "display_name": "Include rabbet fit absence in EC 25-4216-21 VTD/work instruction revision",
+      "properties": {
+        "match_key": "CorrectiveAction:ec-rabbet-fit"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:include-rabbet-fit-absence-in-ec-25-4216-21-vtd-work-instruction-revision"
+    },
+    {
+      "id": "mfr_zurn",
+      "display_name": "Zurn Industries, Inc.",
+      "properties": {
+        "match_key": "Manufacturer:Z010"
+      },
+      "type": "Manufacturer",
+      "code": "Z010",
+      "match_key": "Manufacturer:Z010"
+    },
+    {
+      "id": "rr_5073v",
+      "display_name": "10 CFR 50.73(a)(2)(v)",
+      "properties": {
+        "type": "reporting-criterion",
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v"
+    },
+    {
+      "id": "rr_5073vB",
+      "display_name": "10 CFR 50.73(a)(2)(v)(B)",
+      "properties": {
+        "type": "reporting-criterion",
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-b"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-b"
+    },
+    {
+      "id": "rr_5073iB",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion",
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ufsar",
+      "display_name": "UFSAR Section 9.2.1.2",
+      "properties": {
+        "type": "analysis-basis",
+        "match_key": "RegulatoryReference:ufsar-9-2-1-2"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ufsar-section-9-2-1-2"
+    },
+    {
+      "id": "rr_tsbases",
+      "display_name": "Technical Specification 3.7.4.a / Bases",
+      "properties": {
+        "type": "license-basis",
+        "match_key": "RegulatoryReference:ts-3-7-4-a"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:technical-specification-3-7-4-a-bases"
+    },
+    {
+      "id": "rr_rg1174",
+      "display_name": "Regulatory Guide 1.174",
+      "properties": {
+        "type": "standard/guidance",
+        "match_key": "RegulatoryReference:rg-1-174"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:regulatory-guide-1-174"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073v",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073vB",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073iB",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ecw",
+      "evidence": null
+    },
+    {
+      "source": "c_strainer",
+      "relation": "PART_OF",
+      "target": "sys_ecw",
+      "evidence": null
+    },
+    {
+      "source": "c_drum",
+      "relation": "PART_OF",
+      "target": "c_strainer",
+      "evidence": null
+    },
+    {
+      "source": "c_strainer",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_zurn",
+      "evidence": null
+    },
+    {
+      "source": "fm_workinstr",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_workinstr",
+      "relation": "LEADS_TO",
+      "target": "fm_gap",
+      "evidence": null
+    },
+    {
+      "source": "fm_norabbet",
+      "relation": "LEADS_TO",
+      "target": "fm_gap",
+      "evidence": null
+    },
+    {
+      "source": "fm_gap",
+      "relation": "LEADS_TO",
+      "target": "fm_notdetected",
+      "evidence": null
+    },
+    {
+      "source": "fm_gap",
+      "relation": "LEADS_TO",
+      "target": "fm_bypass",
+      "evidence": null
+    },
+    {
+      "source": "fm_notdetected",
+      "relation": "LEADS_TO",
+      "target": "fm_bypass",
+      "evidence": null
+    },
+    {
+      "source": "fm_bypass",
+      "relation": "LEADS_TO",
+      "target": "cons_inop",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_repair",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_ec_vtd",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_visual",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_rabbet",
+      "evidence": null
+    },
+    {
+      "source": "cons_inop",
+      "relation": "INVOLVES",
+      "target": "sys_sbdg",
+      "evidence": null
+    },
+    {
+      "source": "c_intercooler",
+      "relation": "PART_OF",
+      "target": "sys_sbdg",
+      "evidence": null
+    }
+  ],
+  "chain": "inadequate 2012 repair work instructions [cause TBD] -> gap forms between strainer drum and body (rabbet fit absent) -> gap not detected during subsequent inspections/overhauls -> ECW flow bypasses strainer elements -> ECW Train B inoperable ~13 years, condition prohibited by Tech Specs",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code left TBD/provisional per FORM-366 fields (no official code provided, block_13 empty). No component failures section listed manufacturer/system table entries in block_13 despite Section II.D data being present in narrative; captured those fields on the Component node instead. No BACKED_UP_BY edges emitted: narrative does not state any system was operable/available as a stated backup during the ~13-year inoperability window; SBDG and heat exchangers are modeled as systems potentially affected by the bypass, not backups. Previous Similar Events section states no similar events were identified, so no stub LER/SIMILAR_TO edge is emitted per instructions (rule 9 applies only when a previous event IS referenced)."
+}

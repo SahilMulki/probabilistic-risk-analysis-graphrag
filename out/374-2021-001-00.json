@@ -1,0 +1,465 @@
+{
+  "ler_number": "374-2021-001-00",
+  "identity": {
+    "accession_number": "ML21049A048",
+    "docket": "05000374",
+    "plant_name": "La Salle",
+    "unit": 2,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2020-12-23",
+    "report_date": "2021-02-18",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": "55046",
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LaSalle County Station, Unit 2 Renewed Facility Operating License No. NPF-18 NRC Docket No. 50-374"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)(D)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "x",
+      "system": "BG",
+      "component": "CNTR",
+      "manufacturer": "G080",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "age-related failure of the contactor; failure analysis found the motor starter damage had resulted from a heating event that began inside the contactor coil which eventually led to an open circuit in the coil",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "age-related contactor coil failure",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 374-2021-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "374-2021-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:374-2021-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "La Salle Unit 2",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000374",
+      "match_key": "Unit:05000374"
+    },
+    {
+      "id": "cause",
+      "display_name": "Age-Related Failure (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "age-related contactor coil failure",
+      "proximate_text": "age-related failure of the contactor; failure analysis found the motor starter damage had resulted from a heating event that began inside the contactor coil which eventually led to an open circuit in the coil",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_bg",
+      "display_name": "High Pressure Core Spray",
+      "properties": {
+        "note": "Division 3 ECCS, single train safety system"
+      },
+      "type": "System",
+      "eiis_code": "BG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BG"
+    },
+    {
+      "id": "sys_bn",
+      "display_name": "Reactor Core Isolation Cooling",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BN",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "verified operable during event",
+      "match_key": "System:BN"
+    },
+    {
+      "id": "sys_wlp",
+      "display_name": "HPCS Water Leg Pump support system",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "support system for HPCS",
+      "match_key": "System:hpcs-water-leg-pump-support-system"
+    },
+    {
+      "id": "c_starter",
+      "display_name": "HPCS WLP Motor Starter 2AP79E-2C",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "2AP79E-2C",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:hpcs-wlp-motor-starter-2ap79e-2c"
+    },
+    {
+      "id": "c_contactor",
+      "display_name": "Contactor",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "CNTR",
+      "identifier": null,
+      "model": "CR206CO",
+      "manufacturer_code": "G080",
+      "inferred_code": false,
+      "match_key": "Component:CNTR"
+    },
+    {
+      "id": "c_cpt",
+      "display_name": "Control power transformer",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:control-power-transformer"
+    },
+    {
+      "id": "c_breaker",
+      "display_name": "HPCS WLP breaker",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:hpcs-wlp-breaker"
+    },
+    {
+      "id": "fm_heat",
+      "display_name": "Heating event inside contactor coil",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Age-related contactor failure caused a heating event that began inside the contactor coil",
+      "match_key": "FailureMode:heating-event-inside-contactor-coil"
+    },
+    {
+      "id": "fm_opencircuit",
+      "display_name": "Contactor coil open circuit",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Heating event eventually led to an open circuit in the coil",
+      "match_key": "FailureMode:contactor-coil-open-circuit"
+    },
+    {
+      "id": "fm_cptfail",
+      "display_name": "Control power transformer overheated and failed",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Increased current flow from the coil fault impacted the control power transformer, which overheated and failed",
+      "match_key": "FailureMode:control-power-transformer-overheated-and-failed"
+    },
+    {
+      "id": "fm_wlptrip",
+      "display_name": "HPCS water leg pump tripped off",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "WLP tripped off with a subsequent ground alarm for the associated electrical circuitry",
+      "match_key": "FailureMode:hpcs-water-leg-pump-tripped-off"
+    },
+    {
+      "id": "cons_hpci",
+      "display_name": "HPCS system inoperable",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2020-12-23T06:53",
+      "end": "2020-12-23T20:18",
+      "duration": "13:25",
+      "tz": "CST",
+      "match_key": "Consequence:hpcs-system-inoperable"
+    },
+    {
+      "id": "ca_barriers",
+      "display_name": "Established administrative barriers to protect RCIC operability",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:established-administrative-barriers-to-protect-rcic-operability"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace WLP breaker cubicle control power transformer and motor contactor",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-wlp-breaker-cubicle-control-power-transformer-and-motor-contactor"
+    },
+    {
+      "id": "ca_pmt",
+      "display_name": "Complete post-maintenance testing",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:complete-post-maintenance-testing"
+    },
+    {
+      "id": "ca_failure_analysis",
+      "display_name": "Perform failure analysis of failed components",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:perform-failure-analysis-of-failed-components"
+    },
+    {
+      "id": "ca_extent",
+      "display_name": "Evaluate extent of condition among 14 continuously energized MCC contactors for replacement",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:evaluate-extent-of-condition-among-14-continuously-energized-mcc-contactors-for-replacement"
+    },
+    {
+      "id": "mfr_ge",
+      "display_name": "General Electric",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "G080",
+      "match_key": "Manufacturer:G080"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "rr_5072",
+      "display_name": "10 CFR 50.72(b)(3)(v)(D)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-3-v-d"
+    },
+    {
+      "id": "rr_nei",
+      "display_name": "NEI 99-02, Regulatory Assessment Performance Indicator Guideline",
+      "properties": {
+        "type": "standard/guidance"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:nei-99-02-regulatory-assessment-performance-indicator-guideline"
+    },
+    {
+      "id": "ler_373_2018_002",
+      "display_name": "LER 373-2018-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "373-2018-002-00",
+      "stub": true,
+      "title": "Damaged Bus Bar Identified Potentially Affecting High Pressure Core Spray System",
+      "plant": "LaSalle County Station, Unit 1",
+      "match_key": "LER:373-2018-002-00"
+    },
+    {
+      "id": "ler_374_2019_001",
+      "display_name": "LER 374-2019-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "374-2019-001-00",
+      "stub": true,
+      "title": "Safety Related Electrical Bus Undervoltage Results in Valid Actuation of the Common Emergency Diesel Generator",
+      "plant": "LaSalle County Station, Unit 2",
+      "match_key": "LER:374-2019-001-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_nei",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bg",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_wlp",
+      "evidence": null
+    },
+    {
+      "source": "c_starter",
+      "relation": "PART_OF",
+      "target": "sys_wlp",
+      "evidence": null
+    },
+    {
+      "source": "c_contactor",
+      "relation": "PART_OF",
+      "target": "c_starter",
+      "evidence": null
+    },
+    {
+      "source": "c_cpt",
+      "relation": "PART_OF",
+      "target": "sys_wlp",
+      "evidence": null
+    },
+    {
+      "source": "c_contactor",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_ge",
+      "evidence": null
+    },
+    {
+      "source": "fm_heat",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_heat",
+      "relation": "LEADS_TO",
+      "target": "fm_opencircuit",
+      "evidence": null
+    },
+    {
+      "source": "fm_opencircuit",
+      "relation": "LEADS_TO",
+      "target": "fm_cptfail",
+      "evidence": null
+    },
+    {
+      "source": "fm_opencircuit",
+      "relation": "LEADS_TO",
+      "target": "fm_wlptrip",
+      "evidence": null
+    },
+    {
+      "source": "fm_cptfail",
+      "relation": "LEADS_TO",
+      "target": "fm_wlptrip",
+      "evidence": null
+    },
+    {
+      "source": "fm_wlptrip",
+      "relation": "LEADS_TO",
+      "target": "cons_hpci",
+      "evidence": null
+    },
+    {
+      "source": "cons_hpci",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_bn",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_barriers",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_pmt",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_failure_analysis",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_extent",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_373_2018_002",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_374_2019_001",
+      "evidence": null
+    }
+  ],
+  "chain": "age-related contactor failure [cause TBD] -> heating event inside contactor coil -> coil open circuit -> control power transformer overheats/fails -> HPCS WLP trips -> HPCS system inoperable (~13h25m) [backup RCIC verified operable]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Block-13 cause code is 'x' (unclear/provisional in source form) and no official cause code/category was supplied in FORM-366 FIELDS, so cause_code stays TBD/provisional per rule 4. Block-13 system code 'BG' used for HPCS despite EIIS 'BG' typically mapping loosely; copied verbatim from form. WLP is modeled as a non-EIIS support System node since narrative frames it as a distinct support system whose failure caused HPCS inoperability, not merely design context. Two prior similar-event stubs captured with keys exactly as stated in narrative (373-2018-002-00 and 374-2019-001-00), despite the narrative text preceding them being somewhat garbled/OCR-damaged."
+}

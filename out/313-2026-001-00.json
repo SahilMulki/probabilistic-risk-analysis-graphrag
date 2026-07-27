@@ -1,0 +1,477 @@
+{
+  "ler_number": "313-2026-001-00",
+  "identity": {
+    "accession_number": "ML26110A379",
+    "docket": "05000313",
+    "plant_name": "Arkansas Nuclear",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2026-02-19",
+    "report_date": "2026-04-20",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "operability test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Emergency Diesel Generator lnoperability due to Open Circuit in Engineered Safeguards Starting Circuit"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)",
+      "10 CFR 50.73(a)(2)(v)",
+      "10 CFR 50.73(a)(2)(v)(A)",
+      "10 CFR 50.73(a)(2)(v)(B)",
+      "10 CFR 50.73(a)(2)(v)(C)",
+      "10 CFR 50.73(a)(2)(v)(D)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "X",
+      "system": "EK",
+      "component": "DG",
+      "manufacturer": "E147",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The open circuit condition of the wire in the automatic start circuitry was inadvertently introduced during the diesel fuel governor modification... Due to the nature of the event, no single cause could be identified. A contributing cause was a failure to engage all available resources to resolve the condition when data obtained during troubleshooting was inconclusive and/or contradictory, resulting in delays to discovery and correction of the open circuit condition.",
+    "cause_code": "X",
+    "category": "Other",
+    "theme": "inadvertent wiring damage during unrelated modification, compounded by incomplete troubleshooting",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 313-2026-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "313-2026-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:313-2026-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Arkansas Nuclear Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000313",
+      "match_key": "Unit:05000313"
+    },
+    {
+      "id": "cause",
+      "display_name": "Other (X)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "X",
+      "category": "Other",
+      "theme": "inadvertent wiring damage during unrelated modification, compounded by incomplete troubleshooting",
+      "proximate_text": "The open circuit condition of the wire in the automatic start circuitry was inadvertently introduced during the diesel fuel governor modification... Due to the nature of the event, no single cause could be identified. A contributing cause was a failure to engage all available resources to resolve the condition when data obtained during troubleshooting was inconclusive and/or contradictory, resulting in delays to discovery and correction of the open circuit condition.",
+      "provisional": false,
+      "match_key": "Cause:Other"
+    },
+    {
+      "id": "sys_ek",
+      "display_name": "Emergency Diesel Generator System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "EK",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "onsite emergency AC power",
+      "match_key": "System:EK"
+    },
+    {
+      "id": "sys_aacdg",
+      "display_name": "Alternate AC Diesel Generator (AACDG)",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "DG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; functional and available for manual start",
+      "match_key": "System:DG"
+    },
+    {
+      "id": "c_dga",
+      "display_name": "'A' Emergency Diesel Generator",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "DG",
+      "identifier": "A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:DG|A"
+    },
+    {
+      "id": "c_dgb",
+      "display_name": "'B' Emergency Diesel Generator",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "DG",
+      "identifier": "B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:DG|B"
+    },
+    {
+      "id": "c_pilot_relay",
+      "display_name": "Start pilot relay",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:start-pilot-relay"
+    },
+    {
+      "id": "c_fuel_gov",
+      "display_name": "Fuel governor",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:fuel-governor"
+    },
+    {
+      "id": "c_auto_start_wire",
+      "display_name": "Wire in 'A' EDG automatic start (ES) circuit",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:wire-in-a-edg-automatic-start-es-circuit"
+    },
+    {
+      "id": "fm_wire_damage",
+      "display_name": "Open circuit inadvertently introduced in ES automatic start wiring during fuel governor modification",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Believed introduced in 'A' EDG electrical cabinet during December 9, 2025 fuel governor modification",
+      "match_key": "FailureMode:open-circuit-inadvertently-introduced-in-es-automatic-start-wiring-during-fuel-governor-modification"
+    },
+    {
+      "id": "fm_pilot_relay_defect",
+      "display_name": "Defective start pilot relay causing manual remote start failure",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Separate failure discovered January 18, 2026 causing 'A' EDG remote manual start failure; unrelated to the automatic start open circuit",
+      "match_key": "FailureMode:defective-start-pilot-relay-causing-manual-remote-start-failure"
+    },
+    {
+      "id": "fm_troubleshoot_delay",
+      "display_name": "Failure to engage all available resources during troubleshooting",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Inconclusive/contradictory troubleshooting data not fully resolved, delaying discovery of the open circuit condition",
+      "match_key": "FailureMode:failure-to-engage-all-available-resources-during-troubleshooting"
+    },
+    {
+      "id": "fm_auto_start_fail",
+      "display_name": "'A' EDG failed to automatically start on simulated ES actuation signal",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "February 2, 2026 test confirmed 'A' EDG did not automatically start as required by TS 3.8.1",
+      "match_key": "FailureMode:a-edg-failed-to-automatically-start-on-simulated-es-actuation-signal"
+    },
+    {
+      "id": "cons_edg_inop",
+      "display_name": "'A' EDG past inoperable exceeding TS allowable outage time",
+      "properties": {
+        "note": "exceeds 7-day TS 3.8.1.B allowable out of service time; condition prohibited by TS"
+      },
+      "type": "Consequence",
+      "start": "2025-12-09",
+      "end": "2026-02-02",
+      "duration": "approximately 56 days",
+      "tz": null,
+      "match_key": "Consequence:a-edg-past-inoperable-exceeding-ts-allowable-outage-time"
+    },
+    {
+      "id": "cons_dual_edg_inop",
+      "display_name": "Concurrent 'A' and 'B' EDG inoperability windows (loss of safety function potential)",
+      "properties": {
+        "note": "Three separate time frames where both EDGs inoperable simultaneously; event/condition that could have prevented fulfillment of a safety function"
+      },
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:concurrent-a-and-b-edg-inoperability-windows-loss-of-safety-function-potential"
+    },
+    {
+      "id": "ca_correct_circuit",
+      "display_name": "Correct open circuit condition in 'A' EDG automatic start circuitry and verify continuity",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:correct-open-circuit-condition-in-a-edg-automatic-start-circuitry-and-verify-continuity"
+    },
+    {
+      "id": "ca_extent_of_condition",
+      "display_name": "Extent of condition review on 'B' EDG",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:extent-of-condition-review-on-b-edg"
+    },
+    {
+      "id": "ca_causal_eval",
+      "display_name": "Causal evaluation review of event circumstances",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:causal-evaluation-review-of-event-circumstances"
+    },
+    {
+      "id": "mfr_e147",
+      "display_name": "Manufacturer E147",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "E147",
+      "match_key": "Manufacturer:E147"
+    },
+    {
+      "id": "rr_5073_i_b",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_5073_v",
+      "display_name": "10 CFR 50.73(a)(2)(v)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v"
+    },
+    {
+      "id": "rr_5073_v_a",
+      "display_name": "10 CFR 50.73(a)(2)(v)(A)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-a"
+    },
+    {
+      "id": "rr_5073_v_b",
+      "display_name": "10 CFR 50.73(a)(2)(v)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-b"
+    },
+    {
+      "id": "rr_5073_v_c",
+      "display_name": "10 CFR 50.73(a)(2)(v)(C)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-c"
+    },
+    {
+      "id": "rr_5073_v_d",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "rr_ts381",
+      "display_name": "Technical Specification 3.8.1.B",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:technical-specification-3-8-1-b"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_i_b",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_v",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_v_a",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_v_b",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_v_c",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_v_d",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ek",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_dga",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_dgb",
+      "evidence": null
+    },
+    {
+      "source": "fm_wire_damage",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_wire_damage",
+      "relation": "LEADS_TO",
+      "target": "fm_troubleshoot_delay",
+      "evidence": null
+    },
+    {
+      "source": "fm_troubleshoot_delay",
+      "relation": "LEADS_TO",
+      "target": "fm_auto_start_fail",
+      "evidence": null
+    },
+    {
+      "source": "fm_auto_start_fail",
+      "relation": "LEADS_TO",
+      "target": "cons_edg_inop",
+      "evidence": null
+    },
+    {
+      "source": "cons_edg_inop",
+      "relation": "LEADS_TO",
+      "target": "cons_dual_edg_inop",
+      "evidence": null
+    },
+    {
+      "source": "fm_pilot_relay_defect",
+      "relation": "LEADS_TO",
+      "target": "cons_edg_inop",
+      "evidence": null
+    },
+    {
+      "source": "cons_dual_edg_inop",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_aacdg",
+      "evidence": null
+    },
+    {
+      "source": "c_auto_start_wire",
+      "relation": "PART_OF",
+      "target": "sys_ek",
+      "evidence": null
+    },
+    {
+      "source": "c_pilot_relay",
+      "relation": "PART_OF",
+      "target": "c_dga",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_correct_circuit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_extent_of_condition",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_causal_eval",
+      "evidence": null
+    },
+    {
+      "source": "c_dga",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_e147",
+      "evidence": null
+    }
+  ],
+  "chain": "fuel governor modification (Dec 9, 2025) inadvertently damages ES automatic-start wire [cause X] -> troubleshooting resources not fully engaged, delaying discovery -> 'A' EDG fails simulated ES automatic start test (Feb 2, 2026) -> 'A' EDG past inoperable ~56 days (exceeds 7-day TS AOT) -> concurrent 'A'/'B' EDG inoperability windows (loss-of-safety-function potential) [backup AACDG functional and available for manual start; FLEX equipment also available]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Two distinct failure modes on 'A' EDG were conflated in early troubleshooting: (1) a defective start pilot relay causing remote MANUAL start failure (discovered Jan 18, resolved by relay replacement), and (2) an unrelated open-circuit wire in the AUTOMATIC (ES) start circuitry, introduced during the Dec 9 fuel governor modification, which was the actual TS-reportable past-inoperability condition. Modeled as separate FailureMode nodes per rule 5, both leading to the same past-inoperability Consequence. Cause code is 'X' (Other) per FORM-366 despite narrative discussing a contributing troubleshooting-resource-engagement cause; category kept as officially coded. AACDG explicitly stated functional/available during the event window, so modeled as BACKED_UP_BY; FLEX equipment mentioned only generically as an additional option and not given a dedicated System node. B EDG's own three short inoperability windows are described as contributing to the dual-inoperability consequence rather than separate failure chains, since no failure mode/cause was attributed to them beyond routine maintenance/testing."
+}

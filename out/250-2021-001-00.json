@@ -1,0 +1,499 @@
+{
+  "ler_number": "250-2021-001-00",
+  "identity": {
+    "accession_number": "ML21119A005",
+    "docket": "05000250",
+    "plant_name": "Turkey Point",
+    "unit": 3,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2021-03-01",
+    "report_date": "2021-04-29",
+    "operating_mode": null,
+    "power_level": 100,
+    "discovery_context": "inspection",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Automatic Reactor Trip due to Reactor Trip Breaker Cell Switch Malfunction"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)",
+      "10 CFR 50.73(a)(2)(iv)(B)(1)",
+      "10 CFR 50.73(a)(2)(iv)(B)(6)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "Failure analysis performed jointly between FPL Engineering and Westinghouse revealed that the most likely cause of the incorrect RTB position logic was failure of the cell switch contact. Graphite grease used for lubrication was found accumulated and hardened, creating an electrical tracking path for the incorrect logic signal. A review of the FPL preventive maintenance procedure showed that steps to clean and reapply grease on the switch contacts is condition-based rather than prescriptive.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "hardened lubricant causing electrical tracking on breaker cell switch; condition-based (not prescriptive) PM procedure",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 250-2021-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "250-2021-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:250-2021-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Turkey Point Unit 3",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000250",
+      "match_key": "Unit:05000250"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "hardened lubricant causing electrical tracking on breaker cell switch; condition-based (not prescriptive) PM procedure",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_rps",
+      "display_name": "Reactor Protection System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "AA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:AA"
+    },
+    {
+      "id": "sys_ba",
+      "display_name": "Auxiliary Feedwater",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "responded automatically to reactor trip",
+      "match_key": "System:BA"
+    },
+    {
+      "id": "sys_sb",
+      "display_name": "Steam Dump/Bypass System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SB"
+    },
+    {
+      "id": "c_rtb",
+      "display_name": "Reactor Trip Breaker (RTB)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "BKR",
+      "identifier": "RTB",
+      "model": "Westinghouse DB-50",
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:BKR|RTB"
+    },
+    {
+      "id": "c_byb",
+      "display_name": "Reactor Trip Bypass Breaker (BYB)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "BKR",
+      "identifier": "BYB",
+      "model": "Westinghouse DB-50",
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:BKR|BYB"
+    },
+    {
+      "id": "c_cellswitch",
+      "display_name": "RTB cell switch (cubicle cell switch contact)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "cell switch contact",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:rtb-cell-switch-cubicle-cell-switch-contact"
+    },
+    {
+      "id": "c_sdtc",
+      "display_name": "CV-3-2830, 3D Steam Dump to Condenser Valve",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "V",
+      "identifier": "CV-3-2830",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:V|CV-3-2830"
+    },
+    {
+      "id": "c_sv1440",
+      "display_name": "SV-3-1440, Modulating Solenoid Valve for CV-3-2830",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "SSV",
+      "identifier": "SV-3-1440",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:SSV|SV-3-1440"
+    },
+    {
+      "id": "fm_grease",
+      "display_name": "Graphite grease accumulated and hardened on cell switch contact",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Lubricant hardening created an electrical tracking path",
+      "match_key": "FailureMode:graphite-grease-accumulated-and-hardened-on-cell-switch-contact"
+    },
+    {
+      "id": "fm_cellswitch_fail",
+      "display_name": "RTB cell switch incorrectly provided racked-out position logic",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "With RTB racked in, cell switch fed erroneous racked-out signal to backup turbine trip relay logic",
+      "match_key": "FailureMode:rtb-cell-switch-incorrectly-provided-racked-out-position-logic"
+    },
+    {
+      "id": "fm_turbinetrip",
+      "display_name": "Spurious backup turbine trip relay actuation",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "When BYB was tripped open during restoration, backup turbine trip relay logic completed, tripping the turbine",
+      "match_key": "FailureMode:spurious-backup-turbine-trip-relay-actuation"
+    },
+    {
+      "id": "fm_sv_leak",
+      "display_name": "Instrument air leak from SV-3-1440 modulating solenoid",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Air leak caused CV-3-2830 to respond sluggishly when demanded closed",
+      "match_key": "FailureMode:instrument-air-leak-from-sv-3-1440-modulating-solenoid"
+    },
+    {
+      "id": "cons_trip",
+      "display_name": "Automatic reactor trip from 100% power",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2021-03-01T11:08",
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:automatic-reactor-trip-from-100-power"
+    },
+    {
+      "id": "cons_cooldown",
+      "display_name": "Increased RCS cooldown rate, pressurizer level lowered, letdown auto-isolated",
+      "properties": {},
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:increased-rcs-cooldown-rate-pressurizer-level-lowered-letdown-auto-isolated"
+    },
+    {
+      "id": "ca_replace_rtb",
+      "display_name": "Replace Unit 3 RTB",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-unit-3-rtb"
+    },
+    {
+      "id": "ca_replace_cellswitch",
+      "display_name": "Replace Unit 3 RTB cell switches",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-unit-3-rtb-cell-switches"
+    },
+    {
+      "id": "ca_inspect_breakers",
+      "display_name": "Inspect, clean, and test Unit 3 RTA, BYA, and BYB breaker cubicles and cell switches",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:inspect-clean-and-test-unit-3-rta-bya-and-byb-breaker-cubicles-and-cell-switches"
+    },
+    {
+      "id": "ca_mod_u3",
+      "display_name": "Install modification to detect standing trip signal from cell switch contacts on Unit 3 RTA/RTB/BYA/BYB",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:install-modification-to-detect-standing-trip-signal-from-cell-switch-contacts-on-unit-3-rta-rtb-bya-byb"
+    },
+    {
+      "id": "ca_wo_u4",
+      "display_name": "Originate/schedule work orders for Unit 4 RTA/RTB/BYA/BYB cell switch inspection",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:originate-schedule-work-orders-for-unit-4-rta-rtb-bya-byb-cell-switch-inspection"
+    },
+    {
+      "id": "ca_mod_u4",
+      "display_name": "Develop and schedule modification to detect standing trip signal for Unit 4 RTA/RTB/BYA/BYB",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:develop-and-schedule-modification-to-detect-standing-trip-signal-for-unit-4-rta-rtb-bya-byb"
+    },
+    {
+      "id": "ca_revise_proc",
+      "display_name": "Revise procedure 0-PME-049.01 to require cleaning and lubrication of cell switch contacts",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-procedure-0-pme-049-01-to-require-cleaning-and-lubrication-of-cell-switch-contacts"
+    },
+    {
+      "id": "ca_replace_sv",
+      "display_name": "Replace SV-3-1440 modulating solenoid",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-sv-3-1440-modulating-solenoid"
+    },
+    {
+      "id": "ca_ar",
+      "display_name": "AR 2385529 to prescribe additional actions for contributing causes and extent of condition",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:ar-2385529-to-prescribe-additional-actions-for-contributing-causes-and-extent-of-condition"
+    },
+    {
+      "id": "rr_5073iv_a",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5073iv_b1",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(B)(1)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-b-1"
+    },
+    {
+      "id": "rr_5073iv_b6",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(B)(6)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-b-6"
+    },
+    {
+      "id": "rr_ts431",
+      "display_name": "TS 4.3.1, Table 4.3-1, Functional Unit 20",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-4-3-1-table-4-3-1-functional-unit-20"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073iv_a",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073iv_b1",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073iv_b6",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts431",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rps",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ba",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "c_cellswitch",
+      "relation": "PART_OF",
+      "target": "c_rtb",
+      "evidence": null
+    },
+    {
+      "source": "fm_grease",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_grease",
+      "relation": "LEADS_TO",
+      "target": "fm_cellswitch_fail",
+      "evidence": null
+    },
+    {
+      "source": "fm_cellswitch_fail",
+      "relation": "LEADS_TO",
+      "target": "fm_turbinetrip",
+      "evidence": null
+    },
+    {
+      "source": "fm_turbinetrip",
+      "relation": "LEADS_TO",
+      "target": "cons_trip",
+      "evidence": null
+    },
+    {
+      "source": "fm_sv_leak",
+      "relation": "LEADS_TO",
+      "target": "cons_cooldown",
+      "evidence": null
+    },
+    {
+      "source": "cons_trip",
+      "relation": "LEADS_TO",
+      "target": "cons_cooldown",
+      "evidence": null
+    },
+    {
+      "source": "sys_ba",
+      "relation": "MITIGATED_BY",
+      "target": "cons_trip",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_rtb",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_cellswitch",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_inspect_breakers",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_mod_u3",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_wo_u4",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_mod_u4",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_revise_proc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_sv",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_ar",
+      "evidence": null
+    },
+    {
+      "source": "c_sv1440",
+      "relation": "PART_OF",
+      "target": "c_sdtc",
+      "evidence": null
+    }
+  ],
+  "chain": "hardened graphite grease [cause TBD] -> RTB cell switch incorrectly signals racked-out position -> spurious backup turbine trip relay actuation -> automatic reactor trip [AFW auto-initiated] -> (parallel) SV-3-1440 air leak -> CV-3-2830 slow to close -> RCS cooldown/pressurizer level drop/letdown auto-isolation",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code left TBD/provisional per FORM-366 fields, despite narrative identifying a fairly specific proximate mechanism (hardened lubricant/electrical tracking) and a PM-program weakness (condition-based rather than prescriptive procedure). Two independent failure chains occurred concurrently: (1) RTB cell switch malfunction causing the trip itself, and (2) an unrelated SDTC valve solenoid air leak causing sluggish valve closure after the trip; both are modeled as parallel/sequential FailureModes feeding into related but distinct Consequences. No explicit backup system is stated as compensating for the RTB/cell-switch failure itself (the trip breakers are protective devices, not backed up); AFW is noted only as the expected/automatic post-trip response, not a backup to a failure, so no BACKED_UP_BY edge was asserted for it. SIMILAR EVENTS section states no similar prior events were found -- no stub LER created."
+}

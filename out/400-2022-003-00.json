@@ -1,0 +1,497 @@
+{
+  "ler_number": "400-2022-003-00",
+  "identity": {
+    "accession_number": "ML22179A261",
+    "docket": "05000400",
+    "plant_name": "Shearon Harris",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2022-04-29",
+    "report_date": "2022-06-28",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Manual Reactor Trip due to Degrading Condenser Vacuum"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The root cause of this event is the combination of two simultaneous equipment failures, resulting in a large volume of main condenser air-in-leakage. When the 'B' CVP was secured, the suction isolation valve, 1AE-16, and the 'B' CVP discharge check valve, 1AE-19, failed to close, resulting in a rapid decrease in condenser vacuum and a manual reactor trip. The 1AE-16 failure cause is indeterminate; however, the likely cause is an intermittent malfunction of the control relay associated with the SOV. The 1AE-19 failure cause is attributed to poor valve construction with the disk arm not being centered, resulting in contact between the disc and valve body; corrosion product buildup along this contact surface caused valve binding.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "dual valve-closure failures causing condenser air in-leakage",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 400-2022-003-00",
+      "properties": {},
+      "type": "LER",
+      "key": "400-2022-003-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:400-2022-003-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Shearon Harris Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000400",
+      "match_key": "Unit:05000400"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "dual valve-closure failures causing condenser air in-leakage",
+      "proximate_text": "The root cause of this event is the combination of two simultaneous equipment failures, resulting in a large volume of main condenser air-in-leakage. When the 'B' CVP was secured, the suction isolation valve, 1AE-16, and the 'B' CVP discharge check valve, 1AE-19, failed to close, resulting in a rapid decrease in condenser vacuum and a manual reactor trip.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_jc",
+      "display_name": "Reactor Protection System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JC"
+    },
+    {
+      "id": "sys_ba",
+      "display_name": "Auxiliary Feedwater System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "actuated as designed",
+      "match_key": "System:BA"
+    },
+    {
+      "id": "sys_sh",
+      "display_name": "Main Condenser Air Removal System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SH",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SH"
+    },
+    {
+      "id": "c_cvp_a",
+      "display_name": "'A' Condenser Vacuum Pump",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "P",
+      "identifier": "A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:P|A"
+    },
+    {
+      "id": "c_cvp_b",
+      "display_name": "'B' Condenser Vacuum Pump",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "P",
+      "identifier": "B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:P|B"
+    },
+    {
+      "id": "c_sep_b",
+      "display_name": "'B' CVP moisture separator tank",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "SEP",
+      "identifier": "B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:SEP|B"
+    },
+    {
+      "id": "c_isv_16",
+      "display_name": "'B' CVP suction isolation valve 1AE-16",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": "1AE-16",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:ISV|1AE-16"
+    },
+    {
+      "id": "c_sol_16",
+      "display_name": "Solenoid-operated valve for 1AE-16 actuator",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "SOL",
+      "identifier": "1AE-16 SOV",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:SOL|1AE-16 SOV"
+    },
+    {
+      "id": "c_rly_16",
+      "display_name": "Control relay for 1AE-16 SOV",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "RLY",
+      "identifier": "1AE-16 control relay",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:RLY|1AE-16 control relay"
+    },
+    {
+      "id": "c_bkr_16",
+      "display_name": "Circuit breaker mechanism operated cell assembly for 1AE-16",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "72",
+      "identifier": "1AE-16",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:72|1AE-16"
+    },
+    {
+      "id": "c_cv_19",
+      "display_name": "'B' CVP discharge check valve 1AE-19",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "V",
+      "identifier": "1AE-19",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:V|1AE-19"
+    },
+    {
+      "id": "c_isv_53",
+      "display_name": "'B' CVP discharge isolation valve 1AE-53",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": "1AE-53",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:ISV|1AE-53"
+    },
+    {
+      "id": "fm_rly_malfunction",
+      "display_name": "Intermittent malfunction of control relay for 1AE-16 SOV",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Likely intermittent malfunction of the control relay associated with the SOV that controls 1AE-16 actuator operation; cause indeterminate.",
+      "match_key": "FailureMode:intermittent-malfunction-of-control-relay-for-1ae-16-sov"
+    },
+    {
+      "id": "fm_16_fail_close",
+      "display_name": "1AE-16 suction isolation valve failed to close",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "'B' CVP suction isolation valve 1AE-16 did not close as expected when 'B' CVP was secured.",
+      "match_key": "FailureMode:1ae-16-suction-isolation-valve-failed-to-close"
+    },
+    {
+      "id": "fm_19_defect",
+      "display_name": "1AE-19 disk arm not centered / corrosion buildup causing binding",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Poor valve construction with the disk arm not centered, resulting in disc-to-body contact; corrosion product buildup along the contact surface caused valve binding.",
+      "match_key": "FailureMode:1ae-19-disk-arm-not-centered-corrosion-buildup-causing-binding"
+    },
+    {
+      "id": "fm_19_fail_close",
+      "display_name": "1AE-19 discharge check valve failed to close",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "'B' CVP discharge check valve 1AE-19 failed to close, allowing reverse flow/air-in-leakage through the 'B' CVP separator tank.",
+      "match_key": "FailureMode:1ae-19-discharge-check-valve-failed-to-close"
+    },
+    {
+      "id": "fm_airleak",
+      "display_name": "Large main condenser air in-leakage via 'B' CVP train",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "'A' CVP pulled water out of 'B' CVP separator tank along with air through the 'B' CVP due to both failed valves, causing rapid loss of condenser vacuum.",
+      "match_key": "FailureMode:large-main-condenser-air-in-leakage-via-b-cvp-train"
+    },
+    {
+      "id": "cons_trip",
+      "display_name": "Manual reactor trip due to degrading condenser vacuum",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2022-04-29T04:01",
+      "end": "2022-04-29T04:04",
+      "duration": "~3 minutes",
+      "tz": "EDT",
+      "match_key": "Consequence:manual-reactor-trip-due-to-degrading-condenser-vacuum"
+    },
+    {
+      "id": "ca_procedure",
+      "display_name": "Revise CVP operating procedure to close manual suction isolation valve before securing CVP",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-cvp-operating-procedure-to-close-manual-suction-isolation-valve-before-securing-cvp"
+    },
+    {
+      "id": "ca_replace_rly_bkr",
+      "display_name": "Replace control relays and circuit breaker mechanism operated cell assembly for 1AE-16",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-control-relays-and-circuit-breaker-mechanism-operated-cell-assembly-for-1ae-16"
+    },
+    {
+      "id": "ca_forensic_16",
+      "display_name": "Forensic analysis of removed 1AE-16 relay/breaker components",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:forensic-analysis-of-removed-1ae-16-relay-breaker-components"
+    },
+    {
+      "id": "ca_replace_19",
+      "display_name": "Replace 1AE-19 discharge check valve",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-1ae-19-discharge-check-valve"
+    },
+    {
+      "id": "ca_replace_sol_16",
+      "display_name": "Replace 1AE-16 solenoid-operated valve",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-1ae-16-solenoid-operated-valve"
+    },
+    {
+      "id": "ca_forensic_sol_16",
+      "display_name": "Forensic analysis of removed 1AE-16 SOV",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:forensic-analysis-of-removed-1ae-16-sov"
+    },
+    {
+      "id": "ca_replace_a_check",
+      "display_name": "Replace 'A' CVP discharge check valve",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-a-cvp-discharge-check-valve"
+    },
+    {
+      "id": "ca_review_immediate_steps",
+      "display_name": "Review and revise procedures containing 'immediately'/'immediate' steps to add acceptable completion times",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:review-and-revise-procedures-containing-immediately-immediate-steps-to-add-acceptable-completion-times"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sh",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ba",
+      "evidence": null
+    },
+    {
+      "source": "c_isv_16",
+      "relation": "PART_OF",
+      "target": "sys_sh",
+      "evidence": null
+    },
+    {
+      "source": "c_cv_19",
+      "relation": "PART_OF",
+      "target": "sys_sh",
+      "evidence": null
+    },
+    {
+      "source": "c_sol_16",
+      "relation": "PART_OF",
+      "target": "c_isv_16",
+      "evidence": null
+    },
+    {
+      "source": "c_rly_16",
+      "relation": "PART_OF",
+      "target": "c_sol_16",
+      "evidence": null
+    },
+    {
+      "source": "fm_rly_malfunction",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_rly_malfunction",
+      "relation": "LEADS_TO",
+      "target": "fm_16_fail_close",
+      "evidence": null
+    },
+    {
+      "source": "fm_19_defect",
+      "relation": "LEADS_TO",
+      "target": "fm_19_fail_close",
+      "evidence": null
+    },
+    {
+      "source": "fm_19_defect",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_16_fail_close",
+      "relation": "LEADS_TO",
+      "target": "fm_airleak",
+      "evidence": null
+    },
+    {
+      "source": "fm_19_fail_close",
+      "relation": "LEADS_TO",
+      "target": "fm_airleak",
+      "evidence": null
+    },
+    {
+      "source": "fm_airleak",
+      "relation": "LEADS_TO",
+      "target": "cons_trip",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procedure",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_rly_bkr",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_forensic_16",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_19",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_sol_16",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_forensic_sol_16",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_a_check",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_review_immediate_steps",
+      "evidence": null
+    }
+  ],
+  "chain": "intermittent control relay malfunction [cause TBD] -> 1AE-16 suction valve fails to close; (in parallel) 1AE-19 disk-arm miscentered + corrosion binding -> 1AE-19 check valve fails to close -> combined valve failures allow large condenser air in-leakage -> rapid condenser vacuum loss -> manual reactor trip",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause_code is TBD/provisional per FORM-366 fields despite narrative giving substantial root-cause detail (relay malfunction, valve construction defect, and an over-reliance-on-risk-mitigation human factor); category left as 'provisional' per rule 4. Modeled two independent failure origins (relay malfunction and valve construction defect) each CAUSED_BY the same provisional cause node, converging on the air in-leakage failure mode. No stated operable backup system prevented the trip (AFWS/RPS actuated as a result of the trip, not as backups preventing it), so no BACKED_UP_BY edges emitted. 'No similar events in past three years' explicitly stated, so no SIMILAR_TO stub LER created."
+}

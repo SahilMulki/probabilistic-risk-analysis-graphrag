@@ -1,0 +1,363 @@
+{
+  "ler_number": "395-2024-001-00",
+  "identity": {
+    "accession_number": "ML24108A143",
+    "docket": "05000395",
+    "plant_name": "Summer",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2024-02-19",
+    "report_date": "2024-04-17",
+    "operating_mode": null,
+    "power_level": 100,
+    "discovery_context": "inspection",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Automatic Actuation of 'B' Emergency Diesel Generator"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "X",
+      "system": "EB",
+      "component": "FUB",
+      "manufacturer": "G533",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The troubleshooting inspection identified poor contact between the contact clips on the fuse cover and base of the fuse holder. A Level of Effort Evaluation (LEE) determined the likely cause of the poor contact between the contact clips is age related degradation.",
+    "cause_code": "X",
+    "category": "Other",
+    "theme": "age-related fuse holder contact degradation",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 395-2024-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "395-2024-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:395-2024-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Summer Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000395",
+      "match_key": "Unit:05000395"
+    },
+    {
+      "id": "cause",
+      "display_name": "Other (X)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "X",
+      "category": "Other",
+      "theme": "age-related fuse holder contact degradation",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Other"
+    },
+    {
+      "id": "sys_eb",
+      "display_name": "Emergency Diesel Generator - Train B",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "EB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "actuated system",
+      "match_key": "System:EB"
+    },
+    {
+      "id": "sys_ea",
+      "display_name": "Emergency Diesel Generator - Train A",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "out of service prior to event, restored during event",
+      "match_key": "System:emergency-diesel-generator-train-a"
+    },
+    {
+      "id": "sys_efw",
+      "display_name": "Emergency Feedwater System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "actuated as part of ESF loading sequence",
+      "match_key": "System:BA"
+    },
+    {
+      "id": "c_fuse_holder",
+      "display_name": "Control power fuse holder (XSW1DB)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "FUB",
+      "identifier": "XSW1DB",
+      "model": "0673D0515-421-04",
+      "manufacturer_code": "G533",
+      "inferred_code": false,
+      "match_key": "Component:FUB|XSW1DB"
+    },
+    {
+      "id": "c_uv_relay",
+      "display_name": "Undervoltage relays",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:undervoltage-relays"
+    },
+    {
+      "id": "c_bkr_1db",
+      "display_name": "1DB Normal incoming breaker",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "1DB",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:1db-normal-incoming-breaker"
+    },
+    {
+      "id": "fm_contact_degrade",
+      "display_name": "Age-related degradation of fuse holder contact clips",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Poor contact between the contact clips on the fuse cover and base of the fuse holder due to age related degradation",
+      "match_key": "FailureMode:age-related-degradation-of-fuse-holder-contact-clips"
+    },
+    {
+      "id": "fm_loss_control_power",
+      "display_name": "Loss of control power to undervoltage relays",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Poor fuse holder contact caused loss of control power to the undervoltage relays",
+      "match_key": "FailureMode:loss-of-control-power-to-undervoltage-relays"
+    },
+    {
+      "id": "fm_uv_signal",
+      "display_name": "Spurious undervoltage signal generated",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Loss of control power caused an undervoltage signal to be received",
+      "match_key": "FailureMode:spurious-undervoltage-signal-generated"
+    },
+    {
+      "id": "fm_breaker_open",
+      "display_name": "1DB Normal incoming breaker opened",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Undervoltage signal opened the normal incoming breaker to 1DB bus",
+      "match_key": "FailureMode:1db-normal-incoming-breaker-opened"
+    },
+    {
+      "id": "cons_edg_start",
+      "display_name": "Automatic start of 'B' EDG and EFW pump; 1DB bus powered by EDG",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2024-02-19T02:36",
+      "end": "2024-02-19T17:00",
+      "duration": "~14:24",
+      "tz": "EST",
+      "match_key": "Consequence:automatic-start-of-b-edg-and-efw-pump-1db-bus-powered-by-edg"
+    },
+    {
+      "id": "ca_repair_fuse",
+      "display_name": "Repair faulty fuse holder and transfer B Train loads to normal offsite power",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:repair-faulty-fuse-holder-and-transfer-b-train-loads-to-normal-offsite-power"
+    },
+    {
+      "id": "ca_replace_xsw1da10",
+      "display_name": "Extent-of-condition replacement of control power fuse holder in XSW1DA10",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:extent-of-condition-replacement-of-control-power-fuse-holder-in-xsw1da10"
+    },
+    {
+      "id": "ca_review_maint",
+      "display_name": "Review maintenance strategies for control power fuse holders in multiple switchgear cabinets",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:review-maintenance-strategies-for-control-power-fuse-holders-in-multiple-switchgear-cabinets"
+    },
+    {
+      "id": "ca_revise_procedures",
+      "display_name": "Revise EMP-405.018 and STP-506.004 to incorporate GE SAL 322.1 fuse holder inspection/grease instructions",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-emp-405-018-and-stp-506-004-to-incorporate-ge-sal-322-1-fuse-holder-inspection-grease-instructions"
+    },
+    {
+      "id": "mfr_ge",
+      "display_name": "General Electric",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "G533",
+      "match_key": "Manufacturer:G533"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_ts3811",
+      "display_name": "Technical Specification 3.8.1.1",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-3-8-1-1"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_eb",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_efw",
+      "evidence": null
+    },
+    {
+      "source": "c_fuse_holder",
+      "relation": "PART_OF",
+      "target": "sys_eb",
+      "evidence": null
+    },
+    {
+      "source": "fm_contact_degrade",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_contact_degrade",
+      "relation": "LEADS_TO",
+      "target": "fm_loss_control_power",
+      "evidence": null
+    },
+    {
+      "source": "fm_loss_control_power",
+      "relation": "LEADS_TO",
+      "target": "fm_uv_signal",
+      "evidence": null
+    },
+    {
+      "source": "fm_uv_signal",
+      "relation": "LEADS_TO",
+      "target": "fm_breaker_open",
+      "evidence": null
+    },
+    {
+      "source": "fm_breaker_open",
+      "relation": "LEADS_TO",
+      "target": "cons_edg_start",
+      "evidence": null
+    },
+    {
+      "source": "cons_edg_start",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_ea",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_repair_fuse",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_xsw1da10",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_review_maint",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_revise_procedures",
+      "evidence": null
+    },
+    {
+      "source": "c_fuse_holder",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_ge",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts3811",
+      "evidence": null
+    }
+  ],
+  "chain": "age-related fuse holder contact degradation [cause X] -> loss of control power to UV relays -> spurious undervoltage signal -> 1DB normal incoming breaker opens -> 'B' EDG auto-starts and powers 1DB bus / EFW pump auto-starts [backup: 'A' EDG restored and aligned for autostart during event]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code X (Other) governs category despite narrative pointing to age-related component degradation; theme captures this. 'A' EDG was tagged out for scheduled work prior to the event and restored/declared operable at 1344 EST during the event window, so modeled as a backup that became available during the event per narrative. EFW system and pump are actuated consequences of the ESF loading sequence, not backups. No PART_OF for breaker (functional/power relationship only). Manufacturer code G533 mapped to General Electric per block 13 and GE SAL 322.1 reference in narrative."
+}

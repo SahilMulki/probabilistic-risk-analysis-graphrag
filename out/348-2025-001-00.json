@@ -1,0 +1,338 @@
+{
+  "ler_number": "348-2025-001-00",
+  "identity": {
+    "accession_number": "ML25287A034",
+    "docket": "05000348",
+    "plant_name": "Farley",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2025-08-13",
+    "report_date": "2025-10-14",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2025-001-00 for Joseph M. Farley Nuclear Plant, Unit 1 and 2, Emergency Diesel 1C Unable to Achieve 110% of Maximum Load"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "D",
+      "system": "DC",
+      "component": "DG",
+      "manufacturer": "F010",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "FNP PMT guidance did not require a PMT of 110% (3100 kW) capacity upon the replacement of the fuel injector pump. Additionally, maintenance procedures did not require a 110% loaded run upon the adjustment or replacement of equipment that could adversely impact EDG performance criteria.",
+    "cause_code": "D",
+    "category": "Defective Procedure",
+    "theme": "PMT/maintenance procedure did not require 110% load verification test",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 348-2025-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "348-2025-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:348-2025-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Farley Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000348",
+      "match_key": "Unit:05000348"
+    },
+    {
+      "id": "cause",
+      "display_name": "Defective Procedure (D)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "D",
+      "category": "Defective Procedure",
+      "theme": "PMT/maintenance procedure did not require 110% load verification test",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Defective Procedure"
+    },
+    {
+      "id": "sys_dc",
+      "display_name": "Emergency Diesel Generator System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "DC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:DC"
+    },
+    {
+      "id": "c_1cedg",
+      "display_name": "1C Emergency Diesel Generator",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "DG",
+      "identifier": "1C",
+      "model": null,
+      "manufacturer_code": "F010",
+      "inferred_code": false,
+      "match_key": "Component:DG|1C"
+    },
+    {
+      "id": "c_govlink",
+      "display_name": "Governor linkage",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:governor-linkage"
+    },
+    {
+      "id": "c_fuelrack",
+      "display_name": "Fuel rack",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:fuel-rack"
+    },
+    {
+      "id": "c_fuelinjpump",
+      "display_name": "Fuel injector pump",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:fuel-injector-pump"
+    },
+    {
+      "id": "fm_pmtgap",
+      "display_name": "PMT guidance did not require 110% load test after fuel injector pump replacement",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "During the October 2024 1C EDG outage, the governor linkage was removed and re-installed to the fuel rack, but PMT guidance did not require a 110% capacity (3100 kW) test upon replacement of the fuel injector pump.",
+      "match_key": "FailureMode:pmt-guidance-did-not-require-110-load-test-after-fuel-injector-pump-replacement"
+    },
+    {
+      "id": "fm_linkage",
+      "display_name": "Governor linkage restricts fuel rack movement",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Governor linkage, reinstalled without proper adjustment/verification, limited movement of the fuel rack, preventing further loading of the EDG.",
+      "match_key": "FailureMode:governor-linkage-restricts-fuel-rack-movement"
+    },
+    {
+      "id": "fm_edgload",
+      "display_name": "1C EDG unable to reach 110% load (3100 kW)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "During the SR 3.8.1.12 24-hour run, the 1C EDG was only capable of reaching 2950 kW, failing to meet the required 3100 kW load for greater than two hours.",
+      "match_key": "FailureMode:1c-edg-unable-to-reach-110-load-3100-kw"
+    },
+    {
+      "id": "cons_inop",
+      "display_name": "1C EDG declared inoperable / TS 3.8.1 LCO not met since October 25, 2024",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2024-10-25",
+      "end": "2025-08-14",
+      "duration": "approximately 10 months",
+      "tz": null,
+      "match_key": "Consequence:1c-edg-declared-inoperable-ts-3-8-1-lco-not-met-since-october-25-2024"
+    },
+    {
+      "id": "ca_correct_linkage",
+      "display_name": "Correct 1C EDG governor linkage and successfully complete PMT",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:correct-1c-edg-governor-linkage-and-successfully-complete-pmt"
+    },
+    {
+      "id": "ca_revise_proc",
+      "display_name": "Revise fleet and site procedures to require 110% load PMT after work affecting combustion engine performance",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-fleet-and-site-procedures-to-require-110-load-pmt-after-work-affecting-combustion-engine-performance"
+    },
+    {
+      "id": "ca_extent",
+      "display_name": "Perform extent of condition review on remaining four diesel generators",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:perform-extent-of-condition-review-on-remaining-four-diesel-generators"
+    },
+    {
+      "id": "mfr_fm",
+      "display_name": "Fairbanks Morse",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "F010",
+      "match_key": "Manufacturer:F010"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ufsar",
+      "display_name": "UFSAR Chapter 15",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:ufsar-chapter-15"
+    },
+    {
+      "id": "rr_ts381",
+      "display_name": "Technical Specification 3.8.1 / SR 3.8.1.12",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-3-8-1-sr-3-8-1-12"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_dc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_1cedg",
+      "evidence": null
+    },
+    {
+      "source": "c_1cedg",
+      "relation": "PART_OF",
+      "target": "sys_dc",
+      "evidence": null
+    },
+    {
+      "source": "c_govlink",
+      "relation": "PART_OF",
+      "target": "c_fuelrack",
+      "evidence": null
+    },
+    {
+      "source": "fm_pmtgap",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_pmtgap",
+      "relation": "LEADS_TO",
+      "target": "fm_linkage",
+      "evidence": null
+    },
+    {
+      "source": "fm_linkage",
+      "relation": "LEADS_TO",
+      "target": "fm_edgload",
+      "evidence": null
+    },
+    {
+      "source": "fm_edgload",
+      "relation": "LEADS_TO",
+      "target": "cons_inop",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_correct_linkage",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_revise_proc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_extent",
+      "evidence": null
+    },
+    {
+      "source": "c_1cedg",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_fm",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ufsar",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts381",
+      "evidence": null
+    }
+  ],
+  "chain": "inadequate PMT/maintenance procedures (no 110% load test requirement after fuel injector pump replacement) [cause D] -> governor linkage reinstalled without verification restricts fuel rack -> 1C EDG unable to reach 3100 kW (110% load) -> EDG declared inoperable / TS 3.8.1 LCO not met since Oct 2024 -> corrected linkage, successful PMT",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "No previous similar events section content provided (narrative header present but blank) — no stub LER/SIMILAR_TO edge emitted. Plant/unit/reactor_type filled from title/docket (Farley is a Westinghouse PWR) since FORM-366 FIELDS left these null. Governor linkage PART_OF fuel rack per narrative's explicit statement that linkage is 're-installed to the fuel rack'. TS 3.8.1/SR 3.8.1.12 modeled as license-basis regulatory reference given its central role in reportability determination."
+}

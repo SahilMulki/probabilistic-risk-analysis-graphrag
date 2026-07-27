@@ -1,0 +1,397 @@
+{
+  "ler_number": "400-2022-005-01",
+  "identity": {
+    "accession_number": "ML22332A494",
+    "docket": "05000400",
+    "plant_name": "Shearon Harris",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2022-08-28",
+    "report_date": "2022-11-28",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Manual Reactor Trip due to B Condensate Pump Motor Failure"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The \"B\" CP motor electrical failure was caused by a lightning strike. The design of CP motors and associated surge protection did not prevent motor damage and failure from a lightning strike.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "lightning-induced motor failure; surge protection design inadequacy",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 400-2022-005-01",
+      "properties": {},
+      "type": "LER",
+      "key": "400-2022-005-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:400-2022-005-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Shearon Harris Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000400",
+      "match_key": "Unit:05000400"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "lightning-induced motor failure; surge protection design inadequacy",
+      "proximate_text": "The \"B\" CP motor electrical failure was caused by a lightning strike. The design of CP motors and associated surge protection did not prevent motor damage and failure from a lightning strike.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_sd",
+      "display_name": "Condensate System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SD",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SD"
+    },
+    {
+      "id": "sys_sj",
+      "display_name": "Feedwater System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "sys_jc",
+      "display_name": "Reactor Protection System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "actuated safety system",
+      "match_key": "System:JC"
+    },
+    {
+      "id": "sys_ba",
+      "display_name": "Auxiliary Feedwater System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "auto-started; backup for feedwater loss",
+      "match_key": "System:BA"
+    },
+    {
+      "id": "c_cpb",
+      "display_name": "\"B\" Condensate Pump",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "SD P",
+      "identifier": "B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:SD P|B"
+    },
+    {
+      "id": "c_cpb_motor",
+      "display_name": "\"B\" Condensate Pump Motor",
+      "properties": {
+        "voltage": "6.6 kV"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "1-5017-10368-1-1",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:b-condensate-pump-motor"
+    },
+    {
+      "id": "c_cbpb",
+      "display_name": "\"B\" Condensate Booster Pump",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "CBP",
+      "identifier": "B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:CBP|B"
+    },
+    {
+      "id": "c_mfpb",
+      "display_name": "\"B\" Main Feedwater Pump",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "SJ P",
+      "identifier": "B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:SJ P|B"
+    },
+    {
+      "id": "c_mfpa",
+      "display_name": "\"A\" Main Feedwater Pump",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "SJ P",
+      "identifier": "A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:SJ P|A"
+    },
+    {
+      "id": "fm_lightning",
+      "display_name": "Lightning strike damages \"B\" CP motor",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Lightning strike caused electrical failure of the B condensate pump motor; surge protection did not prevent damage.",
+      "match_key": "FailureMode:lightning-strike-damages-b-cp-motor"
+    },
+    {
+      "id": "fm_cptrip",
+      "display_name": "\"B\" Condensate Pump trips",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "B CP tripped following electrical failure of its motor.",
+      "match_key": "FailureMode:b-condensate-pump-trips"
+    },
+    {
+      "id": "fm_cbptrip",
+      "display_name": "\"B\" Condensate Booster Pump trips",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "B CBP tripped as designed following B CP trip.",
+      "match_key": "FailureMode:b-condensate-booster-pump-trips"
+    },
+    {
+      "id": "fm_mfpbtrip",
+      "display_name": "\"B\" Main Feedwater Pump trips",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "B MFP automatically tripped as designed following B CP/CBP trip.",
+      "match_key": "FailureMode:b-main-feedwater-pump-trips"
+    },
+    {
+      "id": "fm_mfpatrip",
+      "display_name": "\"A\" Main Feedwater Pump trips (low suction pressure)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "A MFP tripped shortly after the manual reactor trip due to low suction pressure created by the condensate/feedwater transient.",
+      "match_key": "FailureMode:a-main-feedwater-pump-trips-low-suction-pressure"
+    },
+    {
+      "id": "cons_trip",
+      "display_name": "Manual reactor trip",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2022-08-28T03:29",
+      "end": null,
+      "duration": null,
+      "tz": "EDT",
+      "match_key": "Consequence:manual-reactor-trip"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace \"B\" CP motor",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-b-cp-motor"
+    },
+    {
+      "id": "ca_inspect",
+      "display_name": "Inspect and test \"A\" and \"B\" CP motor surge protectors",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:inspect-and-test-a-and-b-cp-motor-surge-protectors"
+    },
+    {
+      "id": "ca_study",
+      "display_name": "Study to determine changes to prevent future lightning-induced CP motor failures",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:study-to-determine-changes-to-prevent-future-lightning-induced-cp-motor-failures"
+    },
+    {
+      "id": "mfr_siemens",
+      "display_name": "Siemens-Allis",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": null,
+      "match_key": "Manufacturer:siemens-allis"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sd",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sj",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ba",
+      "evidence": null
+    },
+    {
+      "source": "c_cpb_motor",
+      "relation": "PART_OF",
+      "target": "c_cpb",
+      "evidence": null
+    },
+    {
+      "source": "c_cpb_motor",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_siemens",
+      "evidence": null
+    },
+    {
+      "source": "fm_lightning",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_lightning",
+      "relation": "LEADS_TO",
+      "target": "fm_cptrip",
+      "evidence": null
+    },
+    {
+      "source": "fm_cptrip",
+      "relation": "LEADS_TO",
+      "target": "fm_cbptrip",
+      "evidence": null
+    },
+    {
+      "source": "fm_cptrip",
+      "relation": "LEADS_TO",
+      "target": "fm_mfpbtrip",
+      "evidence": null
+    },
+    {
+      "source": "fm_mfpbtrip",
+      "relation": "LEADS_TO",
+      "target": "cons_trip",
+      "evidence": null
+    },
+    {
+      "source": "fm_mfpbtrip",
+      "relation": "LEADS_TO",
+      "target": "fm_mfpatrip",
+      "evidence": null
+    },
+    {
+      "source": "fm_mfpatrip",
+      "relation": "LEADS_TO",
+      "target": "cons_trip",
+      "evidence": null
+    },
+    {
+      "source": "cons_trip",
+      "relation": "MITIGATED_BY",
+      "target": "sys_ba",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_inspect",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_study",
+      "evidence": null
+    }
+  ],
+  "chain": "lightning strike [cause TBD] -> B CP motor electrical failure -> B CP trips -> B CBP and B MFP trip -> manual reactor trip; A MFP also trips on low suction pressure -> reactor trip [backup AFWS auto-started]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code is TBD/provisional per FORM-366 fields; proximate cause text describes lightning strike and inadequate surge protection design, but no formal cause code/category was assigned by the licensee. AFWS modeled as BACKED_UP_BY since narrative states AFWS pumps auto-started as designed and safety systems functioned as required during the feedwater loss. CP/CBP/MFP train relationships described functionally (trip cascades), not as PART_OF containment, per rule 7. No block-13 rows provided in FORM-366 fields."
+}

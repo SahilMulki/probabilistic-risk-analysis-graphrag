@@ -1,0 +1,252 @@
+{
+  "ler_number": "335-2024-02-00",
+  "identity": {
+    "accession_number": "ML25013A038",
+    "docket": "05000335",
+    "plant_name": "Saint Lucie",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2024-11-15",
+    "report_date": "2025-01-10",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Manual Reactor Trip Due To 3 CEA's Dropping Into Reactor Bottom"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "D",
+      "system": "AA",
+      "component": "ROD",
+      "manufacturer": null,
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The unexpected control rod drop was caused by an inadequate procedure guidance for restoring from a double hold maintenance mode.",
+    "cause_code": "D",
+    "category": "Defective Procedure",
+    "theme": "Inadequate procedure for restoring from double-hold maintenance mode",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 335-2024-002-00",
+      "properties": {
+        "match_key": "LER:335-2024-002-00"
+      },
+      "type": "LER",
+      "key": "335-2024-02-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:335-2024-02-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Saint Lucie Unit 1",
+      "properties": {
+        "match_key": "Unit:05000335",
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000335",
+      "match_key": "Unit:05000335"
+    },
+    {
+      "id": "cause",
+      "display_name": "Defective Procedure (D)",
+      "properties": {
+        "match_key": "Cause:Defective Procedure"
+      },
+      "type": "Cause",
+      "cause_code": "D",
+      "category": "Defective Procedure",
+      "theme": "Inadequate procedure for restoring from double-hold maintenance mode",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Defective Procedure"
+    },
+    {
+      "id": "sys_aa",
+      "display_name": "Control Element Drive (Rod Control) System",
+      "properties": {
+        "match_key": "System:AA"
+      },
+      "type": "System",
+      "eiis_code": "AA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:AA"
+    },
+    {
+      "id": "c_cpmd",
+      "display_name": "UG Control Power Management Drawer (CPMD), Subgroup 4",
+      "properties": {
+        "match_key": "Component:ug-control-power-management-drawer-cpmd-subgroup-4"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:ug-control-power-management-drawer-cpmd-subgroup-4"
+    },
+    {
+      "id": "c_ceas",
+      "display_name": "CEAs 43, 45, and 49",
+      "properties": {
+        "match_key": "Component:ROD|43-45-49"
+      },
+      "type": "Component",
+      "eiis_code": "ROD",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:ROD"
+    },
+    {
+      "id": "fm_doublehold",
+      "display_name": "Double hold placed on Subgroup 4, engaging lower grippers before removing upper gripper drawer",
+      "properties": {
+        "match_key": "FailureMode:double-hold-placed-lower-grippers-engaged-prematurely"
+      },
+      "type": "FailureMode",
+      "description": "Per 2-NOP-99.07 Operations Hard Cards, a double hold was placed on Subgroup 4 resulting in the associated control rod lower grippers being engaged prior to removing the upper gripper drawer.",
+      "match_key": "FailureMode:double-hold-placed-on-subgroup-4-engaging-lower-grippers-before-removing-upper-gripper-drawer"
+    },
+    {
+      "id": "fm_restore",
+      "display_name": "Improper restoration from double hold after CPMD replacement",
+      "properties": {
+        "match_key": "FailureMode:improper-restoration-from-double-hold"
+      },
+      "type": "FailureMode",
+      "description": "After successful replacement of the UG coil CPMD the double hold was removed, per 2-NOP-99.07, without the correct alternate restoration method, leading to CEA drop.",
+      "match_key": "FailureMode:improper-restoration-from-double-hold-after-cpmd-replacement"
+    },
+    {
+      "id": "fm_ceadrop",
+      "display_name": "CEAs 43, 45, and 49 fell and fully inserted into the core",
+      "properties": {
+        "match_key": "FailureMode:ceas-fell-fully-inserted"
+      },
+      "type": "FailureMode",
+      "description": "CEAs 43, 45, and 49 fell and fully inserted into the core following removal of the double hold.",
+      "match_key": "FailureMode:ceas-43-45-and-49-fell-and-fully-inserted-into-the-core"
+    },
+    {
+      "id": "cons_trip",
+      "display_name": "Manual reactor trip / unit shutdown",
+      "properties": {
+        "match_key": "Consequence:manual-reactor-trip-unit-shutdown"
+      },
+      "type": "Consequence",
+      "start": "2024-11-15T10:01",
+      "end": null,
+      "duration": null,
+      "tz": "EST",
+      "match_key": "Consequence:manual-reactor-trip-unit-shutdown"
+    },
+    {
+      "id": "ca_procrevise",
+      "display_name": "Revise 1/2-NOP-99.07 Operations Hard Cards to direct use of LG/UG load transfer feature (VTM alternate method) when restoring from double hold",
+      "properties": {
+        "match_key": "CorrectiveAction:revise-nop-99-07-lg-ug-load-transfer"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-1-2-nop-99-07-operations-hard-cards-to-direct-use-of-lg-ug-load-transfer-feature-vtm-alternate-method-when-restoring-from-double-hold"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_aa",
+      "evidence": null
+    },
+    {
+      "source": "c_ceas",
+      "relation": "PART_OF",
+      "target": "sys_aa",
+      "evidence": null
+    },
+    {
+      "source": "fm_doublehold",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_doublehold",
+      "relation": "LEADS_TO",
+      "target": "fm_restore",
+      "evidence": null
+    },
+    {
+      "source": "fm_restore",
+      "relation": "LEADS_TO",
+      "target": "fm_ceadrop",
+      "evidence": null
+    },
+    {
+      "source": "fm_ceadrop",
+      "relation": "LEADS_TO",
+      "target": "cons_trip",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procrevise",
+      "evidence": null
+    }
+  ],
+  "chain": "inadequate procedure guidance for restoring from double hold [cause D] -> double hold placed, lower grippers engaged prematurely -> improper restoration from double hold after CPMD replacement -> CEAs 43, 45, 49 fell and fully inserted -> manual reactor trip / unit shutdown",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4"
+  ],
+  "notes": "No previous similar occurrence emitted per narrative statement that a 5-year review found no similar events with the same cause -> no stub LER/SIMILAR_TO edge created. No backups modeled since event is a reactor trip (not a system inoperability window with stated-operable backups). Manufacturer of CPMD not identified, so no Manufacturer node created."
+}

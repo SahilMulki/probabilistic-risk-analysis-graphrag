@@ -1,0 +1,375 @@
+{
+  "ler_number": "336-2024-001-00",
+  "identity": {
+    "accession_number": "ML24162A088",
+    "docket": "05000336",
+    "plant_name": "Millstone",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2024-04-14",
+    "report_date": "2024-06-10",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Control Room Air Conditioning Unit Inoperable Due To Refrigerant Overcharge Resulting In a Condition Prohibited by Technical Specifications"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "D",
+      "system": "VI",
+      "component": "CMP",
+      "manufacturer": "T265",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The overcharge condition in the 'A' CRAC compressor assembly following the replacement of the leaking pressure switch caused the compressor to run inconsistently. The use of an uncontrolled job aid indicated that the compressor should be charged to 200 lbs., which led to the overcharged condition.",
+    "cause_code": "D",
+    "category": "Defective Procedure",
+    "theme": "uncontrolled job aid specified incorrect refrigerant charge",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 336-2024-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "336-2024-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:336-2024-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Millstone Unit 2",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000336",
+      "match_key": "Unit:05000336"
+    },
+    {
+      "id": "cause",
+      "display_name": "Defective Procedure (D)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "D",
+      "category": "Defective Procedure",
+      "theme": "uncontrolled job aid specified incorrect refrigerant charge",
+      "proximate_text": "The overcharge condition in the 'A' CRAC compressor assembly following the replacement of the leaking pressure switch caused the compressor to run inconsistently. The use of an uncontrolled job aid indicated that the compressor should be charged to 200 lbs., which led to the overcharged condition.",
+      "provisional": false,
+      "match_key": "Cause:Defective Procedure"
+    },
+    {
+      "id": "sys_vi",
+      "display_name": "Control Building/Control Complex Environmental Control System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "VI",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:VI"
+    },
+    {
+      "id": "sys_crev_a",
+      "display_name": "'A' Control Room Emergency Ventilation Train",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "inoperable train",
+      "match_key": "System:a-control-room-emergency-ventilation-train"
+    },
+    {
+      "id": "sys_crev_b",
+      "display_name": "'B' Control Room Emergency Ventilation Train",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "backup; operable",
+      "match_key": "System:b-control-room-emergency-ventilation-train"
+    },
+    {
+      "id": "c_crac_a",
+      "display_name": "'A' CRAC Compressor Assembly (M2F22A, Trane 2F5C88)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "CMP",
+      "identifier": "M2F22A",
+      "model": "2F5C88",
+      "manufacturer_code": "T265",
+      "inferred_code": false,
+      "match_key": "Component:CMP|M2F22A"
+    },
+    {
+      "id": "c_pressure_switch",
+      "display_name": "'A' CRAC compressor pressure switch",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:a-crac-compressor-pressure-switch"
+    },
+    {
+      "id": "fm_leak",
+      "display_name": "Pressure switch leaking, refrigerant lost",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "On April 7, 2024, the pressure switch on the 'A' CRAC compressor was found leaking, resulting in no refrigerant in the compressor assembly.",
+      "match_key": "FailureMode:pressure-switch-leaking-refrigerant-lost"
+    },
+    {
+      "id": "fm_uncontrolled_aid",
+      "display_name": "Uncontrolled job aid specified 200 lbs. charge",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "An uncontrolled job aid indicated the compressor should be charged to 200 lbs. of refrigerant, which was incorrect.",
+      "match_key": "FailureMode:uncontrolled-job-aid-specified-200-lbs-charge"
+    },
+    {
+      "id": "fm_overcharge",
+      "display_name": "'A' CRAC compressor overcharged with refrigerant",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The compressor was recharged to 200 lbs. of R-22 on April 10, 2024, resulting in an overcharged condition.",
+      "match_key": "FailureMode:a-crac-compressor-overcharged-with-refrigerant"
+    },
+    {
+      "id": "fm_inconsistent_run",
+      "display_name": "Compressor ran inconsistently / not running",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The overcharge condition caused the compressor to run inconsistently, and it was later found not running during a walkdown on April 14, 2024.",
+      "match_key": "FailureMode:compressor-ran-inconsistently-not-running"
+    },
+    {
+      "id": "cons_crev_inop",
+      "display_name": "'A' CREV train inoperable beyond TS allowed outage time",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2024-04-10T17:20",
+      "end": "2024-04-20T20:07",
+      "duration": ">7 days (TSAS 3.7.6.1.a exceeded)",
+      "tz": null,
+      "match_key": "Consequence:a-crev-train-inoperable-beyond-ts-allowed-outage-time"
+    },
+    {
+      "id": "ca_trim",
+      "display_name": "Trim refrigerant charge from 'A' CRAC compressor",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:trim-refrigerant-charge-from-a-crac-compressor"
+    },
+    {
+      "id": "ca_procedure",
+      "display_name": "Capture refrigerant charge values for CREV system in station procedures",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:capture-refrigerant-charge-values-for-crev-system-in-station-procedures"
+    },
+    {
+      "id": "ca_cap",
+      "display_name": "Additional corrective actions per station corrective action program",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:additional-corrective-actions-per-station-corrective-action-program"
+    },
+    {
+      "id": "mfr_trane",
+      "display_name": "Trane",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "T265",
+      "match_key": "Manufacturer:T265"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts_3761",
+      "display_name": "Technical Specification 3.7.6.1 Control Room Emergency Ventilation System",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-3-7-6-1-control-room-emergency-ventilation-system"
+    },
+    {
+      "id": "rr_5067",
+      "display_name": "10 CFR 50.67 (control room dose limit, 5 rem TEDE)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:10-cfr-50-67-control-room-dose-limit-5-rem-tede"
+    },
+    {
+      "id": "rr_fsar",
+      "display_name": "MPS2 FSAR Section 9.9.11.2.1 / Chapter 14",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:mps2-fsar-section-9-9-11-2-1-chapter-14"
+    },
+    {
+      "id": "ler_prev_2012",
+      "display_name": "2012 Millstone Unit 2 maintenance event - refrigerant charge questioned (no LER number reported)",
+      "properties": {},
+      "type": "LER",
+      "key": "336-2012-stub",
+      "stub": true,
+      "title": "Maintenance questioned use of 200 lbs. refrigerant on 'A' CRAC; engineering evaluation not incorporated into maintenance procedure",
+      "plant": "Millstone Power Station Unit 2",
+      "match_key": "LER:336-2012-stub"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts_3761",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_vi",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_crev_a",
+      "evidence": null
+    },
+    {
+      "source": "c_crac_a",
+      "relation": "PART_OF",
+      "target": "sys_crev_a",
+      "evidence": null
+    },
+    {
+      "source": "c_pressure_switch",
+      "relation": "PART_OF",
+      "target": "c_crac_a",
+      "evidence": null
+    },
+    {
+      "source": "fm_leak",
+      "relation": "LEADS_TO",
+      "target": "fm_uncontrolled_aid",
+      "evidence": null
+    },
+    {
+      "source": "fm_uncontrolled_aid",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_uncontrolled_aid",
+      "relation": "LEADS_TO",
+      "target": "fm_overcharge",
+      "evidence": null
+    },
+    {
+      "source": "fm_overcharge",
+      "relation": "LEADS_TO",
+      "target": "fm_inconsistent_run",
+      "evidence": null
+    },
+    {
+      "source": "fm_inconsistent_run",
+      "relation": "LEADS_TO",
+      "target": "cons_crev_inop",
+      "evidence": null
+    },
+    {
+      "source": "cons_crev_inop",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_crev_b",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_trim",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procedure",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_cap",
+      "evidence": null
+    },
+    {
+      "source": "c_crac_a",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_trane",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev_2012",
+      "evidence": null
+    }
+  ],
+  "chain": "pressure switch leak (Apr 7) -> uncontrolled job aid specifies 200 lbs charge [cause D] -> compressor recharged to 200 lbs, becomes overcharged -> compressor runs inconsistently / stops -> 'A' CREV train inoperable >7 days, TS prohibited condition [backup 'B' CREV operable throughout]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "The referenced 2012 event is not an issued LER (no LER number given in narrative) but is modeled as a stub LER per rule 9, with key set to a placeholder since no LER number was stated; plant/unit/title captured from narrative text. Historical review determined the overcharge existed from April 10 17:20 to April 20 20:07 (>7 days), which is the reportable TS-prohibited condition, distinct from the initial April 7 pressure-switch leak event (which itself did not exceed the 7-day AOT). CRFS subsystem not modeled separately as it was not implicated in the failure chain."
+}

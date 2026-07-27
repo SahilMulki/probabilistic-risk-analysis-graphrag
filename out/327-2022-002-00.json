@@ -1,0 +1,372 @@
+{
+  "ler_number": "327-2022-002-00",
+  "identity": {
+    "accession_number": "ML22349A023",
+    "docket": "05000327",
+    "plant_name": "Sequoyah",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2022-10-22",
+    "report_date": "2022-12-15",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Turbine Trip Function Inoperable Due to Slow to Close Turbine Throttle Valve"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)",
+      "10 CFR 50.73(a)(2)(v)(D)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "X",
+      "system": "SB",
+      "component": "FCV",
+      "manufacturer": "W120",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "Pending completion of requested failure analysis, the most likely cause of valve failure is mechanical binding of one or more valve components; the most likely failure mode was mechanical binding caused by thermal expansion.",
+    "cause_code": "X",
+    "category": "Other",
+    "theme": "mechanical binding, cause under investigation",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 327-2022-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "327-2022-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:327-2022-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Sequoyah Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000327",
+      "match_key": "Unit:05000327"
+    },
+    {
+      "id": "cause",
+      "display_name": "Other (X)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "X",
+      "category": "Other",
+      "theme": "mechanical binding, cause under investigation",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Other"
+    },
+    {
+      "id": "sys_sb",
+      "display_name": "Main Steam",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SB"
+    },
+    {
+      "id": "sys_trb",
+      "display_name": "Turbine",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "TRB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:TRB"
+    },
+    {
+      "id": "sys_jj",
+      "display_name": "Turbine Trip",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JJ"
+    },
+    {
+      "id": "sys_msiv",
+      "display_name": "Main Steam Isolation Valves",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "backup; operable during event",
+      "match_key": "System:main-steam-isolation-valves"
+    },
+    {
+      "id": "sys_governor",
+      "display_name": "Main Turbine Governor Valves",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "TA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; operable during event",
+      "match_key": "System:TA"
+    },
+    {
+      "id": "c_tv2",
+      "display_name": "Turbine Throttle Valve-2 (TV-2)",
+      "properties": {
+        "serial_number": "TD 75588-19",
+        "valve_type": "flow control valve, double plug"
+      },
+      "type": "Component",
+      "eiis_code": "FCV",
+      "identifier": "TV-2",
+      "model": "725J732",
+      "manufacturer_code": "W120",
+      "inferred_code": false,
+      "match_key": "Component:FCV|TV-2"
+    },
+    {
+      "id": "c_actuator",
+      "display_name": "TV-2 Actuator",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:tv-2-actuator"
+    },
+    {
+      "id": "fm_binding",
+      "display_name": "Mechanical binding of valve components (likely thermal expansion)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The most likely failure mode was mechanical binding caused by thermal expansion; visual inspections during disassembly showed no indications as to why the valve failed to close.",
+      "match_key": "FailureMode:mechanical-binding-of-valve-components-likely-thermal-expansion"
+    },
+    {
+      "id": "fm_tv2fail",
+      "display_name": "TV-2 failed to close on turbine trip signal",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "TV-2 remained full open after manual turbine trip was initiated, closing on its own after ~2 hr 47 min with no operator/maintenance action.",
+      "match_key": "FailureMode:tv-2-failed-to-close-on-turbine-trip-signal"
+    },
+    {
+      "id": "cons_tt",
+      "display_name": "Turbine Trip function inoperable (response time not met)",
+      "properties": {
+        "note": "TV-2 inoperable from 0003 until 0013 when unit exited Mode of Applicability; turbine trip function would not have closed 4-of-4 throttle valves within required 2.5 sec response time per FSAR; SR 3.3.2.9 would not have been met."
+      },
+      "type": "Consequence",
+      "start": "2022-10-22T00:03:00",
+      "end": "2022-10-22T00:13:00",
+      "duration": "0:10",
+      "tz": "EDT",
+      "match_key": "Consequence:turbine-trip-function-inoperable-response-time-not-met"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace TV-2 and associated actuator",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-tv-2-and-associated-actuator"
+    },
+    {
+      "id": "ca_failure_analysis",
+      "display_name": "Complete failure analysis and initiate further CAP actions if required",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:complete-failure-analysis-and-initiate-further-cap-actions-if-required"
+    },
+    {
+      "id": "mfr_westinghouse",
+      "display_name": "Westinghouse Electric Corporation",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "W120",
+      "match_key": "Manufacturer:W120"
+    },
+    {
+      "id": "rr_5073av",
+      "display_name": "10 CFR 50.73(a)(2)(v)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v"
+    },
+    {
+      "id": "rr_5073avd",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "rr_fsar",
+      "display_name": "FSAR response time requirement (2.5 seconds)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:fsar-response-time-requirement-2-5-seconds"
+    },
+    {
+      "id": "rr_ts3329",
+      "display_name": "TS 3.3.2 / SR 3.3.2.9",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-3-3-2-sr-3-3-2-9"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "LER 328-2021-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "328-2021-002-00",
+      "stub": true,
+      "title": "Turbine throttle valve failed to close within response time limits during testing",
+      "plant": "Sequoyah Nuclear Plant Unit 2",
+      "match_key": "LER:328-2021-002-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073av",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073avd",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_trb",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jj",
+      "evidence": null
+    },
+    {
+      "source": "c_tv2",
+      "relation": "PART_OF",
+      "target": "sys_trb",
+      "evidence": null
+    },
+    {
+      "source": "fm_binding",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_binding",
+      "relation": "LEADS_TO",
+      "target": "fm_tv2fail",
+      "evidence": null
+    },
+    {
+      "source": "fm_tv2fail",
+      "relation": "LEADS_TO",
+      "target": "cons_tt",
+      "evidence": null
+    },
+    {
+      "source": "cons_tt",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_governor",
+      "evidence": null
+    },
+    {
+      "source": "cons_tt",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_msiv",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_failure_analysis",
+      "evidence": null
+    },
+    {
+      "source": "c_tv2",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_westinghouse",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    },
+    {
+      "source": "cons_tt",
+      "relation": "MITIGATED_BY",
+      "target": "rr_fsar",
+      "evidence": null
+    }
+  ],
+  "chain": "mechanical binding of valve components (likely thermal expansion) [cause X, provisional] -> TV-2 fails to close on turbine trip signal -> turbine trip function inoperable / SR 3.3.2.9 response time not met (10 min) [backups: main turbine governor valves, MSIVs available]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code is X/Other per Block 13 despite narrative attributing the failure to mechanical binding/thermal expansion; failure analysis was pending at time of report so cause node marked provisional. Governor valves and MSIVs are modeled as backups because the narrative explicitly states they functioned correctly and remained available/unchallenged during the inoperability window (not merely design-basis mentions). Previous similar event LER 2-2021-002 is a stub per rule 9, keyed exactly as stated in narrative Section VII."
+}

@@ -1,0 +1,352 @@
+{
+  "ler_number": "499-2024-003-00",
+  "identity": {
+    "accession_number": "ML24296B226",
+    "docket": "05000499",
+    "plant_name": "South Texas",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2024-08-24",
+    "report_date": "2024-10-22",
+    "operating_mode": null,
+    "power_level": 100,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Containment Isolation Valve Inoperable Resulting in Condition Prohibited by Technical Specification and Prevention of Fulfillment of Safety Function"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)",
+      "10 CFR 50.73(a)(2)(v)(B)",
+      "10 CFR 50.73(a)(2)(v)(D)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "no indications that the tapered pins, that are used to secure the valve stem to the disk, were ever secured through staking or tack welding...the tapered pins would have worked loose overtime, and then on July 24, 2024, when the hydraulic transient occurred, the pin(s) ejected, allowing stem-to-disk separation",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "unsecured valve stem-to-disc retaining pins (manufacturing/installation defect)",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 499-2024-003-00",
+      "properties": {},
+      "type": "LER",
+      "key": "499-2024-003-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:499-2024-003-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "South Texas Unit 2",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000499",
+      "match_key": "Unit:05000499"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "unsecured valve stem-to-disc retaining pins (manufacturing/installation defect)",
+      "proximate_text": "no indications that the tapered pins, that are used to secure the valve stem to the disk, were ever secured through staking or tack welding...the tapered pins would have worked loose overtime, and then on July 24, 2024, when the hydraulic transient occurred, the pin(s) ejected, allowing stem-to-disk separation",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_cc",
+      "display_name": "Component Cooling Water",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "CC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "Train C inoperable",
+      "match_key": "System:CC"
+    },
+    {
+      "id": "sys_rhr",
+      "display_name": "Residual Heat Removal",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BO",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "Train C rendered inoperable due to CCW valve failure",
+      "match_key": "System:BO"
+    },
+    {
+      "id": "sys_lhsi",
+      "display_name": "Low Head Safety Injection",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "Train C rendered inoperable due to CCW valve failure",
+      "match_key": "System:low-head-safety-injection"
+    },
+    {
+      "id": "sys_rcfc",
+      "display_name": "Reactor Containment Fan Coolers",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "Train C rendered inoperable due to CCW valve failure",
+      "match_key": "System:reactor-containment-fan-coolers"
+    },
+    {
+      "id": "c_isv",
+      "display_name": "Containment Isolation Valve 2R202T-CC-0199",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": "2R202T-CC-0199",
+      "model": "8-L151C1-Z-S6",
+      "manufacturer_code": "R344",
+      "inferred_code": false,
+      "match_key": "Component:ISV|2R202T-CC-0199"
+    },
+    {
+      "id": "c_pins",
+      "display_name": "Tapered retaining pins (stem-to-disc)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:tapered-retaining-pins-stem-to-disc"
+    },
+    {
+      "id": "mfr_rockwell",
+      "display_name": "Rockwell International",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "R344",
+      "match_key": "Manufacturer:R344"
+    },
+    {
+      "id": "fm_pins_unsecured",
+      "display_name": "Tapered pins never staked/tack-welded during installation",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "No indications that the tapered pins securing the valve stem to the disc were ever secured through staking or tack welding since installation at construction.",
+      "match_key": "FailureMode:tapered-pins-never-staked-tack-welded-during-installation"
+    },
+    {
+      "id": "fm_pins_backed_out",
+      "display_name": "Pins worked loose over time",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Unsecured pins gradually worked loose over the years of service.",
+      "match_key": "FailureMode:pins-worked-loose-over-time"
+    },
+    {
+      "id": "fm_hydraulic_transient",
+      "display_name": "Hydraulic transient in RCB Chill Water common header",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Closure of Train B RCB Chill Water isolation valves caused a hydraulic transient in the common header, ejecting the loosened pin(s).",
+      "match_key": "FailureMode:hydraulic-transient-in-rcb-chill-water-common-header"
+    },
+    {
+      "id": "fm_stem_disc_sep",
+      "display_name": "Stem-to-disc separation",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Ejection of tapered pin(s) allowed the valve stem to separate from the disc, rendering the valve unable to reliably seat/isolate.",
+      "match_key": "FailureMode:stem-to-disc-separation"
+    },
+    {
+      "id": "cons_valve_inop",
+      "display_name": "Containment isolation valve 2R202T-CC-0199 / CCW Train C inoperable",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2024-07-24T09:59",
+      "end": "2024-09-01T09:22",
+      "duration": "38 days 23 hours 23 minutes",
+      "tz": "CDT",
+      "match_key": "Consequence:containment-isolation-valve-2r202t-cc-0199-ccw-train-c-inoperable"
+    },
+    {
+      "id": "ca_repair",
+      "display_name": "Repair and restore containment isolation valve 2R202T-CC-0199",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:repair-and-restore-containment-isolation-valve-2r202t-cc-0199"
+    },
+    {
+      "id": "ca_extent",
+      "display_name": "Extent-of-condition inspection of tapered pins in similar valves 1-MOV-0199 and 2-MOV-0137",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:extent-of-condition-inspection-of-tapered-pins-in-similar-valves-1-mov-0199-and-2-mov-0137"
+    },
+    {
+      "id": "rr_5073i",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_5073vB",
+      "display_name": "10 CFR 50.73(a)(2)(v)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-b"
+    },
+    {
+      "id": "rr_5073vD",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073i",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073vB",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073vD",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_cc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rhr",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_lhsi",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rcfc",
+      "evidence": null
+    },
+    {
+      "source": "c_pins",
+      "relation": "PART_OF",
+      "target": "c_isv",
+      "evidence": null
+    },
+    {
+      "source": "c_isv",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_rockwell",
+      "evidence": null
+    },
+    {
+      "source": "fm_pins_unsecured",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_pins_unsecured",
+      "relation": "LEADS_TO",
+      "target": "fm_pins_backed_out",
+      "evidence": null
+    },
+    {
+      "source": "fm_pins_backed_out",
+      "relation": "LEADS_TO",
+      "target": "fm_hydraulic_transient",
+      "evidence": null
+    },
+    {
+      "source": "fm_hydraulic_transient",
+      "relation": "LEADS_TO",
+      "target": "fm_stem_disc_sep",
+      "evidence": null
+    },
+    {
+      "source": "fm_stem_disc_sep",
+      "relation": "LEADS_TO",
+      "target": "cons_valve_inop",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_repair",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_extent",
+      "evidence": null
+    }
+  ],
+  "chain": "unsecured tapered pins (never staked/tack-welded) [cause TBD] -> pins work loose over time -> hydraulic transient in RCB Chill Water header ejects pin(s) -> stem-to-disc separation -> containment isolation valve 2R202T-CC-0199 / Train C CCW inoperable (38d23h23m) -> Train C RHR, LHSI, RCFCs rendered inoperable",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause_code is TBD in FORM-366 FIELDS; category set to 'provisional' per rule 4, with provisional=true. Train C RHR, LHSI, and RCFC systems modeled as directly involved (rendered inoperable by the failed valve) per narrative statement, but no BACKED_UP_BY edges asserted since no explicit statement of an operable backup system being available throughout this specific valve-failure window (other trains cycled in/out of service at various times for unrelated maintenance/venting, not concurrently as a stated continuous backup). No previous similar events were identified per Section VI, so no SIMILAR_TO edge/stub LER created. Extensive TS entry/exit timeline for other trains (ECCS, ECW, Sequencer) reflects separate, largely unrelated maintenance/venting activities and is not modeled as part of this failure's causal chain, consistent with rule 1 (avoid spurious node creation) and rule 5 (only physically distinct failures in the actual causal chain)."
+}

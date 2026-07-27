@@ -1,0 +1,415 @@
+{
+  "ler_number": "458-2025-002-01",
+  "identity": {
+    "accession_number": "ML25293A384",
+    "docket": "05000458",
+    "plant_name": "River Bend",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2025-05-21",
+    "report_date": "2025-10-20",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "inspection",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "/ 2025-002-01, Unidentified Drywell Leakage Increase Results in Shutdown"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(A)",
+      "10 CFR 50.73(a)(2)(ii)(A)",
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "E",
+      "system": "BO",
+      "component": "V",
+      "manufacturer": "A585",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The direct cause of this event was improper gasket seating, resulting from erosion of the gasket seating surface. The erosion was caused by steam cutting to the base metal of the gasket seat surface. In this degraded state, the base metal did not provide the required support as designed. Two causal factors were identified; (1) The organization did not fully understand the degraded condition of E12-AOVF041A valve body due to steam cutting; therefore, an adequate repair strategy was not formulated or executed and (2) Required VT-3 inspections were not added to the Job Plan as the plan was in Approved status and therefore not routed for additional reviews.",
+    "cause_code": "E",
+    "category": "Management/QA Deficiency",
+    "theme": "Inadequate repair strategy and inspection-planning oversight following steam-cutting damage",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 458-2025-002-01",
+      "properties": {},
+      "type": "LER",
+      "key": "458-2025-002-01",
+      "stub": false,
+      "title": "Unidentified Drywell Leakage Increase Results in Shutdown",
+      "plant": null,
+      "match_key": "LER:458-2025-002-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "River Bend Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000458",
+      "match_key": "Unit:05000458"
+    },
+    {
+      "id": "cause",
+      "display_name": "Management/QA Deficiency (E)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "E",
+      "category": "Management/QA Deficiency",
+      "theme": "Inadequate repair strategy and inspection-planning oversight following steam-cutting damage",
+      "proximate_text": "The direct cause of this event was improper gasket seating, resulting from erosion of the gasket seating surface. The erosion was caused by steam cutting to the base metal of the gasket seat surface.",
+      "provisional": false,
+      "match_key": "Cause:Management/QA Deficiency"
+    },
+    {
+      "id": "sys_bo",
+      "display_name": "Residual Heat Removal",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BO",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "system containing affected injection line check valve",
+      "match_key": "System:BO"
+    },
+    {
+      "id": "sys_ab",
+      "display_name": "Reactor Coolant System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "AB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "pressure boundary; site of unidentified leakage",
+      "match_key": "System:AB"
+    },
+    {
+      "id": "sys_tf",
+      "display_name": "Turbine Steam Drains",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "TF",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; used to maintain reactor pressure after shutdown",
+      "match_key": "System:TF"
+    },
+    {
+      "id": "sys_sj",
+      "display_name": "Feedwater",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; used to maintain reactor water level after shutdown",
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "c_valve",
+      "display_name": "Residual Heat Removal 'A' Injection Line Testable Check Valve (E12-AOVF041A)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "V",
+      "identifier": "E12-AOVF041A",
+      "model": null,
+      "manufacturer_code": "A585",
+      "inferred_code": false,
+      "match_key": "Component:V|E12-AOVF041A"
+    },
+    {
+      "id": "fm_steamcut",
+      "display_name": "Steam cutting eroded gasket seating surface base metal",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Steam cutting damaged the base metal of the valve gasket seat surface, degrading its condition.",
+      "match_key": "FailureMode:steam-cutting-eroded-gasket-seating-surface-base-metal"
+    },
+    {
+      "id": "fm_gasket",
+      "display_name": "Improper gasket seating",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Degraded base metal no longer provided required support for proper gasket seating, resulting in improper seating.",
+      "match_key": "FailureMode:improper-gasket-seating"
+    },
+    {
+      "id": "fm_leak",
+      "display_name": "Reactor Coolant System pressure boundary leakage",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Improper gasket seating led to unidentified drywell leakage exceeding the 2 gpm/24-hr change limit.",
+      "match_key": "FailureMode:reactor-coolant-system-pressure-boundary-leakage"
+    },
+    {
+      "id": "fm_notcomplete",
+      "display_name": "Required TS action not completed within allowable time",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Verification that leakage source was not susceptible material could not be completed within 4 hours because the drywell was inaccessible during plant operation.",
+      "match_key": "FailureMode:required-ts-action-not-completed-within-allowable-time"
+    },
+    {
+      "id": "cons_shutdown",
+      "display_name": "Controlled manual plant shutdown / reactor scram",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2025-05-21T06:56",
+      "end": "2025-05-21T14:05",
+      "duration": null,
+      "tz": "CDT",
+      "match_key": "Consequence:controlled-manual-plant-shutdown-reactor-scram"
+    },
+    {
+      "id": "ca_repair",
+      "display_name": "Repair and restore E12-AOVF041A to pre-steam-cut conditions",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:repair-and-restore-e12-aovf041a-to-pre-steam-cut-conditions"
+    },
+    {
+      "id": "ca_jobplan",
+      "display_name": "Revise job plans to include Operational Experience from this event",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-job-plans-to-include-operational-experience-from-this-event"
+    },
+    {
+      "id": "ca_asme",
+      "display_name": "Reinforce ASME Section XI inspection requirements for Class 1 pumps and valves with engineering",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:reinforce-asme-section-xi-inspection-requirements-for-class-1-pumps-and-valves-with-engineering"
+    },
+    {
+      "id": "ca_tracking",
+      "display_name": "Resolve discrepancies identified within the action tracking program",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:resolve-discrepancies-identified-within-the-action-tracking-program"
+    },
+    {
+      "id": "mfr_a585",
+      "display_name": "Manufacturer A585",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "A585",
+      "match_key": "Manufacturer:A585"
+    },
+    {
+      "id": "rr_5073i_a",
+      "display_name": "10 CFR 50.73(a)(2)(i)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-a"
+    },
+    {
+      "id": "rr_5073ii_a",
+      "display_name": "10 CFR 50.73(a)(2)(ii)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-ii-a"
+    },
+    {
+      "id": "rr_5073i_b",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_5072b2i",
+      "display_name": "10 CFR 50.72(b)(2)(i)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-2-i"
+    },
+    {
+      "id": "rr_5072a2ii_a",
+      "display_name": "10 CFR 50.72(a)(2)(ii)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-a-2-ii-a"
+    },
+    {
+      "id": "rr_lco345",
+      "display_name": "Technical Specifications LCO 3.4.5",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specifications-lco-3-4-5"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073i_a",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073ii_a",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073i_b",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072b2i",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072a2ii_a",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_lco345",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bo",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ab",
+      "evidence": null
+    },
+    {
+      "source": "c_valve",
+      "relation": "PART_OF",
+      "target": "sys_bo",
+      "evidence": null
+    },
+    {
+      "source": "c_valve",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_a585",
+      "evidence": null
+    },
+    {
+      "source": "fm_steamcut",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_steamcut",
+      "relation": "LEADS_TO",
+      "target": "fm_gasket",
+      "evidence": null
+    },
+    {
+      "source": "fm_gasket",
+      "relation": "LEADS_TO",
+      "target": "fm_leak",
+      "evidence": null
+    },
+    {
+      "source": "fm_leak",
+      "relation": "LEADS_TO",
+      "target": "fm_notcomplete",
+      "evidence": null
+    },
+    {
+      "source": "fm_notcomplete",
+      "relation": "LEADS_TO",
+      "target": "cons_shutdown",
+      "evidence": null
+    },
+    {
+      "source": "cons_shutdown",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_tf",
+      "evidence": null
+    },
+    {
+      "source": "cons_shutdown",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_sj",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_repair",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_jobplan",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_asme",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_tracking",
+      "evidence": null
+    }
+  ],
+  "chain": "steam cutting erodes gasket seat base metal [cause E: inadequate repair strategy/inspection planning] -> improper gasket seating -> RCS pressure boundary leakage (unidentified drywell leakage >2 gpm/24hr) -> TS LCO 3.4.5 required action not completed in time -> controlled manual shutdown/reactor scram [backups: Turbine Steam Drains for pressure, Feedwater for level]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "No previous similar occurrences reported (narrative states 'Previous Occurrences: None'), so no SIMILAR_TO/stub LER node was created. RCS [AB] modeled as System node since it is the site of the pressure-boundary leakage and explicitly named as such, not merely design context. Turbine Steam Drains and Feedwater are explicitly stated as maintaining pressure/level after shutdown, satisfying the BACKED_UP_BY operability requirement. Block-13 manufacturer code A585 attached to the check valve per form data."
+}

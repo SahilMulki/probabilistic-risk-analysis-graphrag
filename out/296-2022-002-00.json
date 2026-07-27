@@ -1,0 +1,275 @@
+{
+  "ler_number": "296-2022-002-00",
+  "identity": {
+    "accession_number": "ML22353A631",
+    "docket": "05000296",
+    "plant_name": "Browns Ferry",
+    "unit": 3,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2022-10-18",
+    "report_date": "2022-12-19",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "– Both Standby Liquid Control"
+  },
+  "reporting_basis": {
+    "reported_under": [],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "E",
+      "system": "BR",
+      "component": null,
+      "manufacturer": null,
+      "reportable": "N"
+    }
+  ],
+  "cause": {
+    "proximate_text": "this event resulted from an ineffective corrective action for the issue identified in Condition Report (CR) 1439832, where all of the parameters used in the ATWS equivalency equation could individually meet TS requirements, yet still fail the acceptance criteria. Procedures ... were only revised to add calculating the ATWS equivalency equation for both SLC pumps without considering how the methodology used to calculate flow rate variations could impact the ATWS calculation.",
+    "cause_code": "E",
+    "category": "Management/QA Deficiency",
+    "theme": "ineffective corrective action / inadequate procedure revision",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 296-2022-002-00",
+      "properties": {
+        "match_key": "LER:296-2022-002-00"
+      },
+      "type": "LER",
+      "key": "296-2022-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:296-2022-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Browns Ferry Unit 3",
+      "properties": {
+        "match_key": "Unit:05000296",
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000296",
+      "match_key": "Unit:05000296"
+    },
+    {
+      "id": "cause",
+      "display_name": "Management/QA Deficiency (E)",
+      "properties": {
+        "match_key": "Cause:Management/QA Deficiency"
+      },
+      "type": "Cause",
+      "cause_code": "E",
+      "category": "Management/QA Deficiency",
+      "theme": "ineffective corrective action / inadequate procedure revision",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Management/QA Deficiency"
+    },
+    {
+      "id": "sys_br",
+      "display_name": "Standby Liquid Control",
+      "properties": {
+        "match_key": "System:BR",
+        "note": "both trains declared inoperable"
+      },
+      "type": "System",
+      "eiis_code": "BR",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BR"
+    },
+    {
+      "id": "sys_jd",
+      "display_name": "Reactor Protection System",
+      "properties": {
+        "match_key": "System:JD"
+      },
+      "type": "System",
+      "eiis_code": "JD",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; operable throughout event",
+      "match_key": "System:JD"
+    },
+    {
+      "id": "c_tk",
+      "display_name": "SLC Storage Tank",
+      "properties": {
+        "match_key": "Component:TK"
+      },
+      "type": "Component",
+      "eiis_code": "TK",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:TK"
+    },
+    {
+      "id": "fm_ca_ineffective",
+      "display_name": "Ineffective corrective action from prior CR (parameters individually meet TS but combined fail acceptance criteria)",
+      "properties": {
+        "match_key": "FailureMode:ineffective-corrective-action-prior-cr"
+      },
+      "type": "FailureMode",
+      "description": "Procedures 1/2/3-SR-3.1.7.3 and 1/2/3-SI-3.1.7.6 revised to calculate ATWS equivalency for both pumps, but did not account for how flow-rate measurement methodology variation could impact the calculation.",
+      "match_key": "FailureMode:ineffective-corrective-action-from-prior-cr-parameters-individually-meet-ts-but-combined-fail-acceptance-criteria"
+    },
+    {
+      "id": "fm_flowrate_measurement",
+      "display_name": "Imprecise ruler-and-stopwatch pump flow rate measurement methodology",
+      "properties": {
+        "match_key": "FailureMode:imprecise-flow-rate-measurement"
+      },
+      "type": "FailureMode",
+      "description": "Lack of precision in the ruler-and-stopwatch method used to measure SLC pump flow rates can result in fluctuating surveillance results without an actual change in pump performance.",
+      "match_key": "FailureMode:imprecise-ruler-and-stopwatch-pump-flow-rate-measurement-methodology"
+    },
+    {
+      "id": "fm_ATWS_calc_fail",
+      "display_name": "New pump flow rates entered into ATWS equivalency calculation yielded result less than 1",
+      "properties": {
+        "match_key": "FailureMode:atws-equivalency-calc-fail"
+      },
+      "type": "FailureMode",
+      "description": "Following performance of pump functional test, new flow rates entered into ATWS equivalency calculation of 3-SI-3.1.7.6 produced a result less than 1, failing TS SR acceptance criteria for both trains.",
+      "match_key": "FailureMode:new-pump-flow-rates-entered-into-atws-equivalency-calculation-yielded-result-less-than-1"
+    },
+    {
+      "id": "cons_slc_inop",
+      "display_name": "Both SLC trains declared inoperable",
+      "properties": {
+        "match_key": "Consequence:both-slc-trains-inoperable"
+      },
+      "type": "Consequence",
+      "start": "2022-10-18T14:40",
+      "end": "2022-10-18T20:53",
+      "duration": "6:13",
+      "tz": "CDT",
+      "match_key": "Consequence:both-slc-trains-declared-inoperable"
+    },
+    {
+      "id": "ca_spb_add",
+      "display_name": "Add 80 kg sodium pentaborate to SLC tank and re-verify ATWS equivalency calculation",
+      "properties": {
+        "match_key": "CorrectiveAction:add-spb-restore-boron-injection-rate"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:add-80-kg-sodium-pentaborate-to-slc-tank-and-re-verify-atws-equivalency-calculation"
+    },
+    {
+      "id": "ca_improve_method",
+      "display_name": "Develop and implement improved method for determining SLC pump flow rates (including benchmarking other plants)",
+      "properties": {
+        "match_key": "CorrectiveAction:improve-flow-rate-measurement-method"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:develop-and-implement-improved-method-for-determining-slc-pump-flow-rates-including-benchmarking-other-plants"
+    },
+    {
+      "id": "rr_5073vii",
+      "display_name": "10 CFR 50.73(a)(2)(vii)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-vii"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-vii"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073vii",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_br",
+      "evidence": null
+    },
+    {
+      "source": "c_tk",
+      "relation": "PART_OF",
+      "target": "sys_br",
+      "evidence": null
+    },
+    {
+      "source": "fm_ca_ineffective",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_ca_ineffective",
+      "relation": "LEADS_TO",
+      "target": "fm_flowrate_measurement",
+      "evidence": null
+    },
+    {
+      "source": "fm_flowrate_measurement",
+      "relation": "LEADS_TO",
+      "target": "fm_ATWS_calc_fail",
+      "evidence": null
+    },
+    {
+      "source": "fm_ATWS_calc_fail",
+      "relation": "LEADS_TO",
+      "target": "cons_slc_inop",
+      "evidence": null
+    },
+    {
+      "source": "cons_slc_inop",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_jd",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_spb_add",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_improve_method",
+      "evidence": null
+    }
+  ],
+  "chain": "ineffective corrective action for prior CR (parameters individually pass TS but combined fail) [cause E] -> imprecise ruler-and-stopwatch flow rate measurement methodology -> new pump flow rates yield ATWS equivalency calc result < 1 -> both SLC trains declared inoperable (~6h13m) [backup RPS operable; SLC found to have remained functionally capable per later engineering evaluation]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "No manufacturer/component failure data (Section D/G blank) since this was a calculation/procedure deficiency, not a hardware failure. No previous similar events were identified in a 5-year LER search at BFN Units 1, 2, and 3 (search found none), so no SIMILAR_TO stub LER is emitted per instructions (nothing to reference). Engineering evaluation later determined SLC remained capable of its safety function throughout the event despite being administratively declared inoperable; this nuance is captured in the chain and consequence description rather than negating the reported inoperability."
+}

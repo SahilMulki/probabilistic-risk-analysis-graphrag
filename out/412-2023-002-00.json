@@ -1,0 +1,427 @@
+{
+  "ler_number": "412-2023-002-00",
+  "identity": {
+    "accession_number": "ML23193A364",
+    "docket": "05000412",
+    "plant_name": "Beaver Valley",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2023-05-19",
+    "report_date": "2023-07-12",
+    "operating_mode": "3",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Beaver Valley Power Station, Unit No. 2 Docket No. 50-412, License No. NPF-73 LER 2023-002-00"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)",
+      "10 CFR 50.73(a)(2)(iv)(A)",
+      "10 CFR 50.73(a)(2)(iv)(8)(6)",
+      "10 CFR 50.73(a)(2)(iv)(B)(6)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The direct cause for 2FWS-P21B failing to start was that the LO pressure start permissive was not met. This was because the LO system relief valve, 2FWS-RV205B, setpoint was set too low during 2R23.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "relief valve setpoint set incorrectly during maintenance replacement",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 412-2023-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "412-2023-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:412-2023-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Beaver Valley Unit 2",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000412",
+      "match_key": "Unit:05000412"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "relief valve setpoint set incorrectly during maintenance replacement",
+      "proximate_text": "The direct cause for 2FWS-P21B failing to start was that the LO pressure start permissive was not met. This was because the LO system relief valve, 2FWS-RV205B, setpoint was set too low during 2R23.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_fws",
+      "display_name": "Steam Generator Feedwater System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "sys_afw",
+      "display_name": "Motor Driven Auxiliary Feedwater",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BA"
+    },
+    {
+      "id": "sys_rcs",
+      "display_name": "Reactor Coolant System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "AB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:AB"
+    },
+    {
+      "id": "c_mfp_b",
+      "display_name": "Main Feedwater Pump B, 2FWS-P21B",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "SJ-P",
+      "identifier": "2FWS-P21B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:SJ-P|2FWS-P21B"
+    },
+    {
+      "id": "c_mfp_a",
+      "display_name": "Main Feedwater Pump A, 2FWS-P21A",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "SJ-P",
+      "identifier": "2FWS-P21A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:SJ-P|2FWS-P21A"
+    },
+    {
+      "id": "c_rv",
+      "display_name": "LO System Relief Valve, 2FWS-RV205B",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "SJ-RV",
+      "identifier": "2FWS-RV205B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:SJ-RV|2FWS-RV205B"
+    },
+    {
+      "id": "fm_setpoint_low",
+      "display_name": "Relief valve setpoint set too low (10.83 psig)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "New relief valve 2FWS-RV205B set to 10.83 psig, at the low end of 10-14 psig setpoint range, but LO system pressure needs to be at least 12 psig to meet MFP start permissive.",
+      "match_key": "FailureMode:relief-valve-setpoint-set-too-low-10-83-psig"
+    },
+    {
+      "id": "fm_doc_error",
+      "display_name": "Setpoint documentation error",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Setpoint document and PM replacement order incorrectly documented the relief valve setpoint as 12 psig rather than specifying the LO system operating pressure must be at least 12 psig.",
+      "match_key": "FailureMode:setpoint-documentation-error"
+    },
+    {
+      "id": "fm_lo_pressure_low",
+      "display_name": "LO system pressure below start permissive",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "LO system pressure did not reach the required 12 psig, so the start permissive for the MFP was not met.",
+      "match_key": "FailureMode:lo-system-pressure-below-start-permissive"
+    },
+    {
+      "id": "fm_mfp_fail_start",
+      "display_name": "MFP 2FWS-P21B failed to start",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "2FWS-P21B failed to start when attempted with 'A' MFP secured, resulting in a 'Loss of Both Main Feedwater Pump(s)' signal.",
+      "match_key": "FailureMode:mfp-2fws-p21b-failed-to-start"
+    },
+    {
+      "id": "fm_autostart_unnecessary",
+      "display_name": "MDAFW auto-start signal generable when not needed",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "A contributing cause to the consequence of the event was that the MDAFW pump auto-start signal was able to be generated during a plant condition where it was not necessary (single MFP startup evolution).",
+      "match_key": "FailureMode:mdafw-auto-start-signal-generable-when-not-needed"
+    },
+    {
+      "id": "cons_afw_actuation",
+      "display_name": "Automatic actuation of Motor-Driven AFW Pumps",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2023-05-19T08:52",
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:automatic-actuation-of-motor-driven-afw-pumps"
+    },
+    {
+      "id": "ca_setpoint_reset",
+      "display_name": "Reset MFP LO system relief valve to meet start permissive",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:reset-mfp-lo-system-relief-valve-to-meet-start-permissive"
+    },
+    {
+      "id": "ca_increase_margin",
+      "display_name": "Increase 2FWS-RV205B setpoint next refueling outage for margin",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:increase-2fws-rv205b-setpoint-next-refueling-outage-for-margin"
+    },
+    {
+      "id": "ca_revise_startup_proc",
+      "display_name": "Revise start-up procedures to disable MDAFW auto-start during single MFP start when not required",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-start-up-procedures-to-disable-mdafw-auto-start-during-single-mfp-start-when-not-required"
+    },
+    {
+      "id": "ca_revise_setpoint_docs",
+      "display_name": "Revise setpoint documents for MFP LO relief valves",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-setpoint-documents-for-mfp-lo-relief-valves"
+    },
+    {
+      "id": "ca_revise_maint_plan",
+      "display_name": "Revise maintenance plans to verify relief valve set to maintain 12-15 psig",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-maintenance-plans-to-verify-relief-valve-set-to-maintain-12-15-psig"
+    },
+    {
+      "id": "rr_5073_iv",
+      "display_name": "10 CFR 50.73(a)(2)(iv)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv"
+    },
+    {
+      "id": "rr_5073_iv_a",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5073_iv_b6_typo",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(8)(6)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-8-6"
+    },
+    {
+      "id": "rr_5073_iv_b6",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(B)(6)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-b-6"
+    },
+    {
+      "id": "rr_5072",
+      "display_name": "10 CFR 50.72(b)(3)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-3-iv-a"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_iv",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_iv_a",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_iv_b6_typo",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_iv_b6",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_fws",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_afw",
+      "evidence": null
+    },
+    {
+      "source": "c_mfp_b",
+      "relation": "PART_OF",
+      "target": "sys_fws",
+      "evidence": null
+    },
+    {
+      "source": "c_mfp_a",
+      "relation": "PART_OF",
+      "target": "sys_fws",
+      "evidence": null
+    },
+    {
+      "source": "c_rv",
+      "relation": "PART_OF",
+      "target": "sys_fws",
+      "evidence": null
+    },
+    {
+      "source": "fm_setpoint_low",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_doc_error",
+      "relation": "LEADS_TO",
+      "target": "fm_setpoint_low",
+      "evidence": null
+    },
+    {
+      "source": "fm_setpoint_low",
+      "relation": "LEADS_TO",
+      "target": "fm_lo_pressure_low",
+      "evidence": null
+    },
+    {
+      "source": "fm_lo_pressure_low",
+      "relation": "LEADS_TO",
+      "target": "fm_mfp_fail_start",
+      "evidence": null
+    },
+    {
+      "source": "fm_mfp_fail_start",
+      "relation": "LEADS_TO",
+      "target": "cons_afw_actuation",
+      "evidence": null
+    },
+    {
+      "source": "fm_autostart_unnecessary",
+      "relation": "LEADS_TO",
+      "target": "cons_afw_actuation",
+      "evidence": null
+    },
+    {
+      "source": "cons_afw_actuation",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_afw",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_setpoint_reset",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_increase_margin",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_revise_startup_proc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_revise_setpoint_docs",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_revise_maint_plan",
+      "evidence": null
+    }
+  ],
+  "chain": "setpoint documentation error [cause TBD] -> relief valve setpoint set too low -> LO system pressure below start permissive -> MFP 2FWS-P21B failed to start -> (parallel: MDAFW auto-start signal generable unnecessarily) -> automatic actuation of MDAFW pumps [backup AFW performed as designed]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code was not provided in FORM-366 FIELDS (TBD/provisional), so cause node marked provisional per rule 4 despite a clear narrative root cause (relief valve setpoint error during PM replacement, with contributing documentation error). Block 13 was empty in the source fields; no manufacturer/component reportability rows were provided. Reporting basis contains an apparent OCR artifact '10 CFR 50.73(a)(2)(iv)(8)(6)' alongside the correct '...(B)(6)' - both copied verbatim as separate RegulatoryReference nodes since they are listed as distinct strings in FORM-366 FIELDS. MDAFW is the stated backup/design response (auto-started as designed) rather than a separate failed system. No EIIS code given for MDAFW auto-start logic itself, modeled as contributing FailureMode only, not a System node, since it describes a design characteristic of the actuation logic, not a distinct system entity."
+}

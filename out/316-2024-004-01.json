@@ -1,0 +1,398 @@
+{
+  "ler_number": "316-2024-004-01",
+  "identity": {
+    "accession_number": "ML25086A101",
+    "docket": "05000316",
+    "plant_name": "D.C. Cook",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2024-05-21",
+    "report_date": "2025-03-27",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "inspection",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "2AB Emergency Diesel Generator Inoperable for Longer Than Allowed by Technical Specifications"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)",
+      "10 CFR 50.73(a)(2)(v)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "X",
+      "system": "DG",
+      "component": "DRU",
+      "manufacturer": "WW",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "Engineers and Technical Staff did not ensure assumptions and judgement were fully documented and conservative, clearly communicated to decision makers, or validated when investigating and evaluating irreproducible failure modes on the EDG Digital Reference Units (DRUs); the May 2024 Failure Investigation Process lacked proper oversight to ensure appropriate and proper use of knowledge worker human performance tools",
+    "cause_code": "X",
+    "category": "Other",
+    "theme": "inadequate failure-investigation process / misdiagnosed intermittent DRU failure",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 316-2024-004-01",
+      "properties": {
+        "match_key": "LER:316-2024-004-01"
+      },
+      "type": "LER",
+      "key": "316-2024-004-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:316-2024-004-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "D.C. Cook Unit 2",
+      "properties": {
+        "match_key": "Unit:05000316",
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000316",
+      "match_key": "Unit:05000316"
+    },
+    {
+      "id": "cause",
+      "display_name": "Other (X)",
+      "properties": {
+        "match_key": "Cause:Other"
+      },
+      "type": "Cause",
+      "cause_code": "X",
+      "category": "Other",
+      "theme": "inadequate failure-investigation process / misdiagnosed intermittent DRU failure",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Other"
+    },
+    {
+      "id": "sys_dg_2ab",
+      "display_name": "2AB Emergency Diesel Generator",
+      "properties": {
+        "match_key": "System:DG"
+      },
+      "type": "System",
+      "eiis_code": "DG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "primary failed EDG",
+      "match_key": "System:DG"
+    },
+    {
+      "id": "sys_dg_2cd",
+      "display_name": "2CD Emergency Diesel Generator",
+      "properties": {
+        "match_key": "System:DG-2CD"
+      },
+      "type": "System",
+      "eiis_code": "DG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "redundant EDG; inoperable during overlapping windows",
+      "match_key": "System:DG"
+    },
+    {
+      "id": "sys_esw",
+      "display_name": "Essential Service Water System",
+      "properties": {
+        "match_key": "System:BI"
+      },
+      "type": "System",
+      "eiis_code": "BI",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BI"
+    },
+    {
+      "id": "c_dru",
+      "display_name": "2AB EDG Digital Reference Unit (DRU)",
+      "properties": {
+        "match_key": "Component:DRU|2-DGAB-DRU"
+      },
+      "type": "Component",
+      "eiis_code": "DRU",
+      "identifier": "2-DGAB-DRU",
+      "model": null,
+      "manufacturer_code": "WW",
+      "inferred_code": false,
+      "match_key": "Component:DRU|2-DGAB-DRU"
+    },
+    {
+      "id": "c_relays",
+      "display_name": "Minimum Speed Threshold and Slow Start control relays",
+      "properties": {
+        "match_key": "Component:min-speed-threshold-slow-start-relays"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:minimum-speed-threshold-and-slow-start-control-relays"
+    },
+    {
+      "id": "fm_corrosion",
+      "display_name": "Corroded connections on Minimum Speed Threshold and Slow Start control relays (initial misattribution)",
+      "properties": {
+        "match_key": "FailureMode:corroded-relay-connections"
+      },
+      "type": "FailureMode",
+      "description": "Initially believed cause of 5/21/2024 failure to reach required frequency; later determined to be a misdiagnosis.",
+      "match_key": "FailureMode:corroded-connections-on-minimum-speed-threshold-and-slow-start-control-relays-initial-misattribution"
+    },
+    {
+      "id": "fm_dru_intermittent",
+      "display_name": "Intermittent failure of the Digital Reference Unit (DRU)",
+      "properties": {
+        "match_key": "FailureMode:dru-intermittent-failure"
+      },
+      "type": "FailureMode",
+      "description": "Determined on 7/23/2024 to be the actual cause of both the 5/21/2024 and 7/23/2024 failures to reach required frequency.",
+      "match_key": "FailureMode:intermittent-failure-of-the-digital-reference-unit-dru"
+    },
+    {
+      "id": "fm_freq_fail",
+      "display_name": "2AB EDG failed to reach required frequency during slow speed start surveillance",
+      "properties": {
+        "match_key": "FailureMode:edg-failed-to-reach-frequency"
+      },
+      "type": "FailureMode",
+      "description": null,
+      "match_key": "FailureMode:2ab-edg-failed-to-reach-required-frequency-during-slow-speed-start-surveillance"
+    },
+    {
+      "id": "cons_edg_inop",
+      "display_name": "2AB EDG determined inoperable, exceeding LCO 3.8.1 Completion Time",
+      "properties": {
+        "match_key": "Consequence:2ab-edg-inoperable-exceeds-lco"
+      },
+      "type": "Consequence",
+      "start": "2024-05-21T21:15",
+      "end": "2024-07-24T23:00",
+      "duration": "64 days 1 hour 45 minutes",
+      "tz": null,
+      "match_key": "Consequence:2ab-edg-determined-inoperable-exceeding-lco-3-8-1-completion-time"
+    },
+    {
+      "id": "cons_safety_function",
+      "display_name": "Condition/instances that could have prevented fulfillment of a safety function (concurrent redundant EDG inoperability / supported systems not declared inoperable)",
+      "properties": {
+        "match_key": "Consequence:safety-function-prevention"
+      },
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:condition-instances-that-could-have-prevented-fulfillment-of-a-safety-function-concurrent-redundant-edg-inoperability-supported-systems-not-declared-inoperable"
+    },
+    {
+      "id": "ca_qual",
+      "display_name": "Develop qualifications for Duty Station Managers to serve as FIP Management Sponsors/Designated Challengers and for FIP Team Leaders",
+      "properties": {
+        "match_key": "CorrectiveAction:fip-qualifications"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:develop-qualifications-for-duty-station-managers-to-serve-as-fip-management-sponsors-designated-challengers-and-for-fip-team-leaders"
+    },
+    {
+      "id": "ca_procref",
+      "display_name": "Add reference in FIP Procedures to use PMP-4010-HUT-002 Human Performance Tools for Knowledge Workers to validate assumptions",
+      "properties": {
+        "match_key": "CorrectiveAction:fip-procedure-reference"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:add-reference-in-fip-procedures-to-use-pmp-4010-hut-002-human-performance-tools-for-knowledge-workers-to-validate-assumptions"
+    },
+    {
+      "id": "mfr_ww",
+      "display_name": "Woodward (WW)",
+      "properties": {
+        "match_key": "Manufacturer:WW"
+      },
+      "type": "Manufacturer",
+      "code": "WW",
+      "match_key": "Manufacturer:WW"
+    },
+    {
+      "id": "rr_5073i",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_5073v",
+      "display_name": "10 CFR 50.73(a)(2)(v)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v"
+    },
+    {
+      "id": "rr_lco381",
+      "display_name": "Technical Specification LCO 3.8.1",
+      "properties": {
+        "match_key": "RegulatoryReference:tech-spec-lco-3-8-1"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-lco-3-8-1"
+    },
+    {
+      "id": "rr_lco378",
+      "display_name": "Technical Specification LCO 3.7.8",
+      "properties": {
+        "match_key": "RegulatoryReference:tech-spec-lco-3-7-8"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-lco-3-7-8"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073i",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073v",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_lco381",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_lco378",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_dg_2ab",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_dg_2cd",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_esw",
+      "evidence": null
+    },
+    {
+      "source": "c_dru",
+      "relation": "PART_OF",
+      "target": "sys_dg_2ab",
+      "evidence": null
+    },
+    {
+      "source": "c_relays",
+      "relation": "PART_OF",
+      "target": "sys_dg_2ab",
+      "evidence": null
+    },
+    {
+      "source": "c_dru",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_ww",
+      "evidence": null
+    },
+    {
+      "source": "fm_corrosion",
+      "relation": "LEADS_TO",
+      "target": "fm_freq_fail",
+      "evidence": null
+    },
+    {
+      "source": "fm_dru_intermittent",
+      "relation": "LEADS_TO",
+      "target": "fm_freq_fail",
+      "evidence": null
+    },
+    {
+      "source": "fm_freq_fail",
+      "relation": "LEADS_TO",
+      "target": "cons_edg_inop",
+      "evidence": null
+    },
+    {
+      "source": "cons_edg_inop",
+      "relation": "LEADS_TO",
+      "target": "cons_safety_function",
+      "evidence": null
+    },
+    {
+      "source": "fm_dru_intermittent",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_qual",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procref",
+      "evidence": null
+    }
+  ],
+  "chain": "inadequate FIP oversight / unvalidated engineering judgement [cause X] -> DRU intermittent failure (initially misdiagnosed as corroded relay connections) -> 2AB EDG fails to reach required frequency -> 2AB EDG inoperable 64+ days, exceeding LCO 3.8.1 completion time -> concurrent redundant 2CD EDG inoperability windows -> potential prevention of safety function fulfillment",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Initial root-cause investigation misattributed the 5/21/2024 failure to corroded relay connections; re-evaluation after the 7/23/2024 recurrence identified an intermittent DRU failure as the true cause of both events, retroactively extending the inoperability window back to 5/21/2024 21:15. Cause code X (Other) governs category per form data, reflecting the human-performance/process root cause (failure investigation process lacked oversight) rather than a hardware cause code. Five 2CD EDG inoperability windows and associated supported-system declaration lapses are captured in the safety-function consequence node per 50.73(a)(2)(v); PRA assessment found risk within 'Very Low Safety Significance' per NRC IMC 0609. No previous similar events found in 5-year LER review, so no SIMILAR_TO edge/stub LER emitted."
+}

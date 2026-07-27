@@ -1,0 +1,382 @@
+{
+  "ler_number": "333-2020-002-00",
+  "identity": {
+    "accession_number": "ML20105B225",
+    "docket": "05000333",
+    "plant_name": "FitzPatrick",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2020-02-20",
+    "report_date": "2020-04-14",
+    "operating_mode": null,
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": "54130",
+    "ens_date": "2019-06-24",
+    "ens_time": null,
+    "title": "Dear Sir or Madam:"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(ii)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "overcurrent protection was not installed in all applicable control circuits which can impact the 10 CFR 50 Appendix R Safe Shutdown Analysis. This condition has existed since original plant design.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "design deficiency - missing overcurrent protection predating Appendix R",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 333-2020-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "333-2020-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:333-2020-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "FitzPatrick Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000333",
+      "match_key": "Unit:05000333"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "design deficiency - missing overcurrent protection predating Appendix R",
+      "proximate_text": "overcurrent protection was not installed in all applicable control circuits which can impact the 10 CFR 50 Appendix R Safe Shutdown Analysis. This condition has existed since original plant design.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_sb",
+      "display_name": "Automatic Depressurization System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "impacted equipment; Fire Area 03",
+      "match_key": "System:SB"
+    },
+    {
+      "id": "sys_vi",
+      "display_name": "Control Room Ventilation",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "VI",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "impacted equipment; Fire Area 03",
+      "match_key": "System:VI"
+    },
+    {
+      "id": "sys_bj",
+      "display_name": "High-Pressure Coolant Injection System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "impacted equipment; Fire Area 03",
+      "match_key": "System:BJ"
+    },
+    {
+      "id": "c_ebop",
+      "display_name": "Turbine Generator Emergency Bearing Lube Oil Pump control circuit (94P-2)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "94P-2",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:turbine-generator-emergency-bearing-lube-oil-pump-control-circuit-94p-2"
+    },
+    {
+      "id": "c_esop",
+      "display_name": "Emergency Seal Oil Pump control circuit (94P-13)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "94P-13",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:emergency-seal-oil-pump-control-circuit-94p-13"
+    },
+    {
+      "id": "c_rfpt_a",
+      "display_name": "Reactor Feed Pump Turbine DC Emergency Oil Pump control circuit (31P-7A)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "31P-7A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:reactor-feed-pump-turbine-dc-emergency-oil-pump-control-circuit-31p-7a"
+    },
+    {
+      "id": "c_rfpt_b",
+      "display_name": "Reactor Feed Pump Turbine DC Emergency Oil Pump control circuit (31P-7B)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "31P-7B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:reactor-feed-pump-turbine-dc-emergency-oil-pump-control-circuit-31p-7b"
+    },
+    {
+      "id": "fm_missing_ocp",
+      "display_name": "Non-safety DC control circuits lack overcurrent protection (unfused)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Control circuits for 94P-2, 94P-13, 31P-7A, and 31P-7B are unfused; existing circuit breakers protect pump power supply, not the control circuit.",
+      "match_key": "FailureMode:non-safety-dc-control-circuits-lack-overcurrent-protection-unfused"
+    },
+    {
+      "id": "fm_common_routing",
+      "display_name": "Unprotected control cables co-routed with safety-related cables across fire zones",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Non-safety control cables routed in safety-related trays through Battery Charger Rooms, Battery Room Corridor, Cable Spreading Room, Relay Room, and Control Room.",
+      "match_key": "FailureMode:unprotected-control-cables-co-routed-with-safety-related-cables-across-fire-zones"
+    },
+    {
+      "id": "fm_reanalysis",
+      "display_name": "Revised short-circuit current analysis exceeds cable insulation rating",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "In February 2020, site determined short circuit current would exceed values assumed in the initial evaluation, resulting in temperatures exceeding the 250C cable insulation rating.",
+      "match_key": "FailureMode:revised-short-circuit-current-analysis-exceeds-cable-insulation-rating"
+    },
+    {
+      "id": "cons_unanalyzed",
+      "display_name": "Unanalyzed condition for Appendix R Safe Shutdown Analysis; ADS, Control Room Ventilation, and HPCI potentially impacted by secondary fire/cable failure propagation",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2020-02-20",
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:unanalyzed-condition-for-appendix-r-safe-shutdown-analysis-ads-control-room-ventilation-and-hpci-potentially-impacted-by-secondary-fire-cable-failure-propagation"
+    },
+    {
+      "id": "ca_standing_order",
+      "display_name": "Operations department standing order establishing compensatory actions per TRM 3.7.M",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:operations-department-standing-order-establishing-compensatory-actions-per-trm-3-7-m"
+    },
+    {
+      "id": "ca_fuses",
+      "display_name": "Modify affected control circuits to add fuses",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:modify-affected-control-circuits-to-add-fuses"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(ii)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-ii-b"
+    },
+    {
+      "id": "rr_appendix_r",
+      "display_name": "10 CFR 50 Appendix R Safe Shutdown Analysis",
+      "properties": {
+        "type": "analysis-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-appendix-r-safe-shutdown-analysis"
+    },
+    {
+      "id": "rr_trm",
+      "display_name": "Technical Requirement Manual (TRM) 3.7.M Fire Barrier Penetrations",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:technical-requirement-manual-trm-3-7-m-fire-barrier-penetrations"
+    },
+    {
+      "id": "ler_2019_002",
+      "display_name": "LER 2019-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "2019-002-00",
+      "stub": true,
+      "title": "Unanalyzed Condition due to Unprotected Control Circuits Running through Multiple Fire Areas",
+      "plant": "James A. FitzPatrick Nuclear Power Plant",
+      "match_key": "LER:2019-002-00"
+    },
+    {
+      "id": "ler_2013_003",
+      "display_name": "LER 2013-003-00",
+      "properties": {},
+      "type": "LER",
+      "key": "2013-003-00",
+      "stub": true,
+      "title": "Unfused DC Ammeter Circuits Result in Unanalyzed Condition",
+      "plant": "James A. FitzPatrick Nuclear Power Plant",
+      "match_key": "LER:2013-003-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_appendix_r",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_trm",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_vi",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bj",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_ebop",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_esop",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_rfpt_a",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_rfpt_b",
+      "evidence": null
+    },
+    {
+      "source": "fm_missing_ocp",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_missing_ocp",
+      "relation": "LEADS_TO",
+      "target": "fm_common_routing",
+      "evidence": null
+    },
+    {
+      "source": "fm_common_routing",
+      "relation": "LEADS_TO",
+      "target": "fm_reanalysis",
+      "evidence": null
+    },
+    {
+      "source": "fm_reanalysis",
+      "relation": "LEADS_TO",
+      "target": "cons_unanalyzed",
+      "evidence": null
+    },
+    {
+      "source": "cons_unanalyzed",
+      "relation": "MITIGATED_BY",
+      "target": "ca_standing_order",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_fuses",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_2019_002",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_2013_003",
+      "evidence": null
+    }
+  ],
+  "chain": "missing overcurrent protection since original design [cause TBD] -> unfused control circuits for oil pumps -> unprotected cables co-routed with safety-related cables across fire zones -> revised analysis shows fault current exceeds cable insulation rating -> unanalyzed condition impacting ADS, Control Room Ventilation, HPCI [compensated by TRM 3.7.M actions pending fuse installation]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "This LER (2020-002-00) supersedes/re-reports the condition originally reported and then withdrawn as LER 2019-002-00; both prior LERs are modeled as stub SIMILAR_TO nodes per instructions, using the keys exactly as stated in the narrative (no unit-digit prefix given for either, so keys are taken verbatim as '2019-002-00' and '2013-003-00'). Cause code is TBD/provisional per form fields, though narrative describes a design-origin deficiency. ADS, Control Room Ventilation, and HPCI are modeled as directly INVOLVED/impacted systems (not backups), since they are named as equipment affected by the common-enclosure cable concern in Fire Area 03, not as backups to a failed system. No actual consequences occurred; consequence node reflects the unanalyzed-condition/potential-impact nature of the event, with SSFF not stated in form fields."
+}

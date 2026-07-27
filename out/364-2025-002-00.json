@@ -1,0 +1,342 @@
+{
+  "ler_number": "364-2025-002-00",
+  "identity": {
+    "accession_number": "ML25143A135",
+    "docket": "05000364",
+    "plant_name": "Farley",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2025-03-24",
+    "report_date": "2025-05-23",
+    "operating_mode": "5",
+    "power_level": 0,
+    "discovery_context": "inspection",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Two Pressurizer Safety Valves' Lift Pressure Outside of Technical Specifications Limits due to Setpoint Drift"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "X",
+      "system": "AB",
+      "component": "RV",
+      "manufacturer": "C710",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "Setpoint drift of the PSVs (Manufacturer: Crosby, Model Number: HP-BP-86, Serial Numbers: N56963-01-0002 and N56963-01-0005) was determined to be the cause of the failures.",
+    "cause_code": "X",
+    "category": "Other",
+    "theme": "PSV setpoint drift",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 364-2025-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "364-2025-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:364-2025-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Farley Unit 2",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000364",
+      "match_key": "Unit:05000364"
+    },
+    {
+      "id": "cause",
+      "display_name": "Other (X)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "X",
+      "category": "Other",
+      "theme": "PSV setpoint drift",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Other"
+    },
+    {
+      "id": "sys_ab",
+      "display_name": "Reactor Coolant System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "AB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:AB"
+    },
+    {
+      "id": "c_psv2a",
+      "display_name": "2A Pressurizer Safety Valve",
+      "properties": {
+        "serial_number": "N56963-01-0002"
+      },
+      "type": "Component",
+      "eiis_code": "RV",
+      "identifier": "2A PSV",
+      "model": "HP-BP-86",
+      "manufacturer_code": "C710",
+      "inferred_code": false,
+      "match_key": "Component:RV|2A PSV"
+    },
+    {
+      "id": "c_psv2b",
+      "display_name": "2B Pressurizer Safety Valve",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "RV",
+      "identifier": "2B PSV",
+      "model": "HP-BP-86",
+      "manufacturer_code": "C710",
+      "inferred_code": false,
+      "match_key": "Component:RV|2B PSV"
+    },
+    {
+      "id": "c_psv2c",
+      "display_name": "2C Pressurizer Safety Valve",
+      "properties": {
+        "serial_number": "N56963-01-0005"
+      },
+      "type": "Component",
+      "eiis_code": "RV",
+      "identifier": "2C PSV",
+      "model": "HP-BP-86",
+      "manufacturer_code": "C710",
+      "inferred_code": false,
+      "match_key": "Component:RV|2C PSV"
+    },
+    {
+      "id": "fm_drift_2a",
+      "display_name": "2A PSV lift setpoint drifted low (2387.8 psig)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "As-found lift pressure below TS allowable limit and outside ASME +/-3% code band",
+      "match_key": "FailureMode:2a-psv-lift-setpoint-drifted-low-2387-8-psig"
+    },
+    {
+      "id": "fm_drift_2b",
+      "display_name": "2B PSV lift setpoint drifted low (2418.8 psig)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "As-found lift pressure outside TS allowable band but within ASME code allowances",
+      "match_key": "FailureMode:2b-psv-lift-setpoint-drifted-low-2418-8-psig"
+    },
+    {
+      "id": "cons_ts",
+      "display_name": "Two PSVs' lift pressure outside Technical Specification limits",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2025-03-24",
+      "end": "2025-03-24",
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:two-psvs-lift-pressure-outside-technical-specification-limits"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace all three PSVs during refueling outage",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-all-three-psvs-during-refueling-outage"
+    },
+    {
+      "id": "ca_forensic",
+      "display_name": "Forensic analysis to determine additional corrective actions",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:forensic-analysis-to-determine-additional-corrective-actions"
+    },
+    {
+      "id": "mfr_crosby",
+      "display_name": "Crosby",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "C710",
+      "match_key": "Manufacturer:C710"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts3410",
+      "display_name": "Technical Specification 3.4.10",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:technical-specification-3-4-10"
+    },
+    {
+      "id": "ler_prev1",
+      "display_name": "LER 348-2024-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "348-2024-001-00",
+      "stub": true,
+      "title": null,
+      "plant": "Joseph M. Farley Nuclear Plant",
+      "match_key": "LER:348-2024-001-00"
+    },
+    {
+      "id": "ler_prev2",
+      "display_name": "LER 364-2023-003-00",
+      "properties": {},
+      "type": "LER",
+      "key": "364-2023-003-00",
+      "stub": true,
+      "title": null,
+      "plant": "Joseph M. Farley Nuclear Plant",
+      "match_key": "LER:364-2023-003-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts3410",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ab",
+      "evidence": null
+    },
+    {
+      "source": "c_psv2a",
+      "relation": "PART_OF",
+      "target": "sys_ab",
+      "evidence": null
+    },
+    {
+      "source": "c_psv2b",
+      "relation": "PART_OF",
+      "target": "sys_ab",
+      "evidence": null
+    },
+    {
+      "source": "c_psv2c",
+      "relation": "PART_OF",
+      "target": "sys_ab",
+      "evidence": null
+    },
+    {
+      "source": "fm_drift_2a",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_drift_2b",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_drift_2a",
+      "relation": "LEADS_TO",
+      "target": "cons_ts",
+      "evidence": null
+    },
+    {
+      "source": "fm_drift_2b",
+      "relation": "LEADS_TO",
+      "target": "cons_ts",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_forensic",
+      "evidence": null
+    },
+    {
+      "source": "c_psv2a",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_crosby",
+      "evidence": null
+    },
+    {
+      "source": "c_psv2b",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_crosby",
+      "evidence": null
+    },
+    {
+      "source": "c_psv2c",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_crosby",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev1",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev2",
+      "evidence": null
+    }
+  ],
+  "chain": "setpoint drift [cause X] -> 2A PSV lift pressure low (2387.8 psig) & 2B PSV lift pressure low (2418.8 psig) -> two PSVs outside TS lift pressure limits -> reportable TS condition; corrected by replacing all three PSVs",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4"
+  ],
+  "notes": "2C PSV tested within both TS and ASME limits, so it is not modeled as a failed component/failure mode, only as context; not emitted as a node since it did not fail. Cause code X (Other) governs category per official code, despite narrative attributing setpoint drift as the mechanism. PORVs discussed are design-context / accident-analysis backups for a hypothetical ECCS-overfill scenario, not stated-operable backups during this specific TS-exceedance event, so no BACKED_UP_BY edge asserted. Previous LER unit numbers preserved exactly as stated in narrative (Unit 1 LER 2024-001-00, Unit 2 LER 2023-003-00)."
+}

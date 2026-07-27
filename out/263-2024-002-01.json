@@ -1,0 +1,406 @@
+{
+  "ler_number": "263-2024-002-01",
+  "identity": {
+    "accession_number": "ML25150A333",
+    "docket": "05000263",
+    "plant_name": "Monticello",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2024-06-28",
+    "report_date": "2025-05-30",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "inspection",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2024-002-01 for Monticello Nuclear Generating Plant, Low Pressure Coolant Injection Inoperable Due To Motor Valve Failure"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)",
+      "10 CFR 50.73(a)(2)(v)(B)",
+      "10 CFR 50.73(a)(2)(v)(D)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The Outboard Motor Valve failed to operate because the motor pinion was not secured to the motor shaft because an incorrect-sized set screw was installed. The shorter motor pinion set screw relaxed, allowing the motor pinion to move axially along the motor shaft until it no longer engaged the worm shaft clutch gear.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "incorrect replacement part / component defect (motor pinion set screw)",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 263-2024-002-01",
+      "properties": {},
+      "type": "LER",
+      "key": "263-2024-002-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:263-2024-002-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Monticello Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000263",
+      "match_key": "Unit:05000263"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "incorrect replacement part / component defect (motor pinion set screw)",
+      "proximate_text": "The Outboard Motor Valve failed to operate because the motor pinion was not secured to the motor shaft because an incorrect-sized set screw was installed. The shorter motor pinion set screw relaxed, allowing the motor pinion to move axially along the motor shaft until it no longer engaged the worm shaft clutch gear.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_bo",
+      "display_name": "Low Pressure Coolant Injection (RHR)",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BO",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected ECCS subsystem",
+      "match_key": "System:BO"
+    },
+    {
+      "id": "sys_core_spray",
+      "display_name": "Core Spray",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BM",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; unaffected/available",
+      "match_key": "System:BM"
+    },
+    {
+      "id": "sys_hpci",
+      "display_name": "High Pressure Emergency Core Cooling System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "backup; unaffected/available",
+      "match_key": "System:high-pressure-emergency-core-cooling-system"
+    },
+    {
+      "id": "c_mo2012",
+      "display_name": "MO-2012 RHR Division 1 LPCI Injection Outboard Valve",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "MOV",
+      "identifier": "MO-2012",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:MOV|MO-2012"
+    },
+    {
+      "id": "c_mo2014",
+      "display_name": "MO-2014 RHR Division 1 LPCI Injection Inboard Valve",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "MOV",
+      "identifier": "MO-2014",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:MOV|MO-2014"
+    },
+    {
+      "id": "c_setscrew",
+      "display_name": "Motor pinion set screw",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:motor-pinion-set-screw"
+    },
+    {
+      "id": "c_pinion",
+      "display_name": "Motor pinion",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:motor-pinion"
+    },
+    {
+      "id": "c_clutch",
+      "display_name": "Worm shaft clutch gear",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:worm-shaft-clutch-gear"
+    },
+    {
+      "id": "fm_setscrew",
+      "display_name": "Incorrect motor pinion set screw installed",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "An incorrectly-sized (shorter) set screw was installed on the Outboard Motor Valve's motor pinion instead of the vendor-specified set screw and lock wire arrangement.",
+      "match_key": "FailureMode:incorrect-motor-pinion-set-screw-installed"
+    },
+    {
+      "id": "fm_relax",
+      "display_name": "Set screw relaxed, motor pinion migrated axially",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The incorrect set screw relaxed over time, allowing the motor pinion to travel axially along the motor shaft.",
+      "match_key": "FailureMode:set-screw-relaxed-motor-pinion-migrated-axially"
+    },
+    {
+      "id": "fm_disengage",
+      "display_name": "Motor pinion disengaged from worm shaft clutch gear",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Axial travel of the motor pinion caused it to disengage from the worm shaft clutch gear, preventing motor actuator operation via the control room hand switch.",
+      "match_key": "FailureMode:motor-pinion-disengaged-from-worm-shaft-clutch-gear"
+    },
+    {
+      "id": "fm_mov_fail",
+      "display_name": "Outboard Motor Valve MO-2012 failed to fully open",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "MO-2012 opened approximately one inch then stopped when attempted to be opened via the control room hand switch.",
+      "match_key": "FailureMode:outboard-motor-valve-mo-2012-failed-to-fully-open"
+    },
+    {
+      "id": "fm_inboard_leak",
+      "display_name": "Leakage past Inboard Motor Valve MO-2014",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Leakage past the associated Inboard Motor Valve created potential for reactor pressure on the inboard side of the Outboard Motor Valve, rendering it inoperable when configured closed.",
+      "match_key": "FailureMode:leakage-past-inboard-motor-valve-mo-2014"
+    },
+    {
+      "id": "cons_lpci",
+      "display_name": "Both LPCI subsystems inoperable / condition prohibited by Technical Specifications",
+      "properties": {
+        "note": "Due to LPCI Loop Select Logic design, failure of the A LPCI injection path rendered both LPCI subsystems inoperable.",
+        "prohibited_period_1": "2023-10-22T02:07 through 2023-11-15T16:11",
+        "prohibited_period_2": "2024-04-18T02:55 through 2024-06-29T15:33",
+        "safety_function_period_1": "2023-10-18T14:07 through 2023-11-15T16:11",
+        "safety_function_period_2": "2024-04-14T14:55 through 2024-06-29T15:33"
+      },
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:both-lpci-subsystems-inoperable-condition-prohibited-by-technical-specifications"
+    },
+    {
+      "id": "ca_reposition",
+      "display_name": "Adjust motor pinion back into position on motor shaft",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:adjust-motor-pinion-back-into-position-on-motor-shaft"
+    },
+    {
+      "id": "ca_replace_screw",
+      "display_name": "Replace incorrect motor pinion set screw with correct set screw",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-incorrect-motor-pinion-set-screw-with-correct-set-screw"
+    },
+    {
+      "id": "rr_50731",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_50732",
+      "display_name": "10 CFR 50.73(a)(2)(v)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-b"
+    },
+    {
+      "id": "rr_50733",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "rr_nei",
+      "display_name": "NEI 99-02",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "standard/guidance",
+      "match_key": "RegulatoryReference:nei-99-02"
+    },
+    {
+      "id": "rr_ts351",
+      "display_name": "Technical Specification 3.5.1 ECCS - Operation",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-3-5-1-eccs-operation"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_50731",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_50732",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_50733",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_nei",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts351",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bo",
+      "evidence": null
+    },
+    {
+      "source": "c_mo2012",
+      "relation": "PART_OF",
+      "target": "sys_bo",
+      "evidence": null
+    },
+    {
+      "source": "c_mo2014",
+      "relation": "PART_OF",
+      "target": "sys_bo",
+      "evidence": null
+    },
+    {
+      "source": "fm_setscrew",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_setscrew",
+      "relation": "LEADS_TO",
+      "target": "fm_relax",
+      "evidence": null
+    },
+    {
+      "source": "fm_relax",
+      "relation": "LEADS_TO",
+      "target": "fm_disengage",
+      "evidence": null
+    },
+    {
+      "source": "fm_disengage",
+      "relation": "LEADS_TO",
+      "target": "fm_mov_fail",
+      "evidence": null
+    },
+    {
+      "source": "fm_mov_fail",
+      "relation": "LEADS_TO",
+      "target": "cons_lpci",
+      "evidence": null
+    },
+    {
+      "source": "fm_inboard_leak",
+      "relation": "LEADS_TO",
+      "target": "cons_lpci",
+      "evidence": null
+    },
+    {
+      "source": "cons_lpci",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_core_spray",
+      "evidence": null
+    },
+    {
+      "source": "cons_lpci",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_hpci",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_reposition",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_screw",
+      "evidence": null
+    }
+  ],
+  "chain": "incorrect motor pinion set screw installed [cause TBD] -> set screw relaxed, pinion migrated axially -> pinion disengaged from worm shaft clutch gear -> MO-2012 (Outboard Motor Valve) failed to fully open -> (combined with inboard valve MO-2014 leakage) -> both LPCI subsystems inoperable [backups Core Spray, HPCI unaffected]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code was TBD/provisional per FORM-366 fields; narrative describes a component-defect/incorrect-part cause but per rule 4 the official code governs category, so cause node kept provisional. Discovery was retrospective (root cause interviews and later physical investigation on Aug 7, 2024 and analysis on Apr 3, 2025) rather than a single discrete inspection event, but discovery_context field from form is 'inspection' and copied verbatim. No previous similar events per narrative, so no SIMILAR_TO/stub LER emitted. LPCI Loop Select Logic design is described as the mechanism connecting single valve failure to both-subsystem inoperability; not modeled as a separate System node since it's a design/logic characteristic, not an equipment system participating independently."
+}

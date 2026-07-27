@@ -1,0 +1,357 @@
+{
+  "ler_number": "265-022-003-00",
+  "identity": {
+    "accession_number": "ML22364A273",
+    "docket": "05000265",
+    "plant_name": "Quad Cities",
+    "unit": 2,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2022-11-04",
+    "report_date": "2022-12-30",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": "56210",
+    "ens_date": "2022-11-04",
+    "ens_time": "1710 EDT",
+    "title": "Manual Scram Due to Feedwater Regulator Valve Failure IQcreasing Reactor Water Level"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "B",
+      "system": "JB",
+      "component": "FSV",
+      "manufacturer": "P070",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The cause of the FRV failure was foreign material partially or completely blocking the movement of a spool internal to the servo valve [FSV] associated with the 2B FRV assembly. Foreign material either blocked a hydraulic control channel in the servo or impeded the free movement of the spool which ports hydraulic fluid to the 2B FRV actuator... The foreign material introduction occurred during servo valve manufacture and/or assembly.",
+    "cause_code": "B",
+    "category": "Design/Manufacturing/Installation",
+    "theme": "foreign material introduced during servo valve manufacture/assembly",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 265-2022-006-00",
+      "properties": {},
+      "type": "LER",
+      "key": "265-022-003-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:265-022-003-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Quad Cities Unit 2",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000265",
+      "match_key": "Unit:05000265"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Manufacturing/Installation (B)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "B",
+      "category": "Design/Manufacturing/Installation",
+      "theme": "foreign material introduced during servo valve manufacture/assembly",
+      "proximate_text": "The cause of the FRV failure was foreign material partially or completely blocking the movement of a spool internal to the servo valve [FSV] associated with the 2B FRV assembly. Foreign material either blocked a hydraulic control channel in the servo or impeded the free movement of the spool which ports hydraulic fluid to the 2B FRV actuator... The foreign material introduction occurred during servo valve manufacture and/or assembly.",
+      "provisional": false,
+      "match_key": "Cause:Design/Manufacturing/Installation"
+    },
+    {
+      "id": "sys_jb",
+      "display_name": "Feedwater System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JB"
+    },
+    {
+      "id": "c_frv2b",
+      "display_name": "2B Feedwater Regulating Valve",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "FCV",
+      "identifier": "2B FRV",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:FCV|2B FRV"
+    },
+    {
+      "id": "c_servo2b",
+      "display_name": "2B FRV Servo Valve",
+      "properties": {
+        "supplier": "Black Limited Advanced Controls/Blac"
+      },
+      "type": "Component",
+      "eiis_code": "FSV",
+      "identifier": null,
+      "model": "DES 1071, 10-S-80/50/7.2",
+      "manufacturer_code": "P070",
+      "inferred_code": false,
+      "match_key": "Component:FSV"
+    },
+    {
+      "id": "c_frv2a",
+      "display_name": "2A Feedwater Regulating Valve",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "FCV",
+      "identifier": "2A FRV",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:FCV|2A FRV"
+    },
+    {
+      "id": "fm_foreign",
+      "display_name": "Foreign material blocking servo valve spool movement",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Foreign material introduced during manufacture/assembly blocked a hydraulic control channel or impeded free spool movement in the 2B FRV servo valve.",
+      "match_key": "FailureMode:foreign-material-blocking-servo-valve-spool-movement"
+    },
+    {
+      "id": "fm_frvopen",
+      "display_name": "2B FRV fails open and locks up",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Malfunction of the spool caused the 2B FRV to move rapidly from half open to fully open position and lock up, driving reactor water level up.",
+      "match_key": "FailureMode:2b-frv-fails-open-and-locks-up"
+    },
+    {
+      "id": "fm_single_point",
+      "display_name": "Unrecognized single-point vulnerability in 2B FRV design",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The 2B FRV is unique in construction (larger, longer stroke) than other FRVs; the station failed to recognize or mitigate the inherent risk that the 2A FRV alone could not mitigate the water level transient caused by 2B FRV failing open.",
+      "match_key": "FailureMode:unrecognized-single-point-vulnerability-in-2b-frv-design"
+    },
+    {
+      "id": "fm_2a_insufficient",
+      "display_name": "2A FRV unable to mitigate rising water level transient",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The 2A FRV automatically closed fully in response to rising level but was unable to successfully mitigate the transient caused by the 2B FRV failure.",
+      "match_key": "FailureMode:2a-frv-unable-to-mitigate-rising-water-level-transient"
+    },
+    {
+      "id": "cons_scram",
+      "display_name": "Manual reactor scram due to high reactor water level",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2022-11-04T13:59",
+      "end": "2022-11-04T14:00",
+      "duration": null,
+      "tz": "CDT",
+      "match_key": "Consequence:manual-reactor-scram-due-to-high-reactor-water-level"
+    },
+    {
+      "id": "ca_replace_servo",
+      "display_name": "Replace the 2B FRV servo valve",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-the-2b-frv-servo-valve"
+    },
+    {
+      "id": "ca_oil_sample",
+      "display_name": "Perform hydraulic oil sample analysis",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:perform-hydraulic-oil-sample-analysis"
+    },
+    {
+      "id": "ca_evaluate_mfr",
+      "display_name": "Evaluate and implement solenoid manufacturer corrective actions, install new components if appropriate",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:evaluate-and-implement-solenoid-manufacturer-corrective-actions-install-new-components-if-appropriate"
+    },
+    {
+      "id": "ca_extent",
+      "display_name": "Evaluate extent of condition for all servo valves obtained from this manufacturer",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:evaluate-extent-of-condition-for-all-servo-valves-obtained-from-this-manufacturer"
+    },
+    {
+      "id": "mfr_parker",
+      "display_name": "Parker",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "P070",
+      "match_key": "Manufacturer:P070"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_ufsar",
+      "display_name": "UFSAR Chapter 15",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:ufsar-chapter-15"
+    },
+    {
+      "id": "rr_nei",
+      "display_name": "NEI 99-02, Revision 7",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "standard/guidance",
+      "match_key": "RegulatoryReference:nei-99-02-revision-7"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "LER 265/2022-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "265/2022-002-00",
+      "stub": true,
+      "title": "Manual Scram Due to Feedwater Regulator Valve Failure Decreasing Reactor Water Level",
+      "plant": "Quad Cities Nuclear Power Station Unit 2",
+      "match_key": "LER:265/2022-002-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jb",
+      "evidence": null
+    },
+    {
+      "source": "c_frv2b",
+      "relation": "PART_OF",
+      "target": "sys_jb",
+      "evidence": null
+    },
+    {
+      "source": "c_frv2a",
+      "relation": "PART_OF",
+      "target": "sys_jb",
+      "evidence": null
+    },
+    {
+      "source": "c_servo2b",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_parker",
+      "evidence": null
+    },
+    {
+      "source": "fm_foreign",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_foreign",
+      "relation": "LEADS_TO",
+      "target": "fm_frvopen",
+      "evidence": null
+    },
+    {
+      "source": "fm_frvopen",
+      "relation": "LEADS_TO",
+      "target": "fm_2a_insufficient",
+      "evidence": null
+    },
+    {
+      "source": "fm_single_point",
+      "relation": "LEADS_TO",
+      "target": "fm_2a_insufficient",
+      "evidence": null
+    },
+    {
+      "source": "fm_2a_insufficient",
+      "relation": "LEADS_TO",
+      "target": "cons_scram",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_servo",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_oil_sample",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_evaluate_mfr",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_extent",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    }
+  ],
+  "chain": "foreign material introduced during servo manufacture [cause B] -> spool blockage in 2B FRV servo valve -> 2B FRV rapidly moves fully open and locks up -> (single-point vulnerability in 2B FRV design) -> 2A FRV unable to mitigate rising level transient -> manual reactor scram at +44 inches",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Event time discrepancy: FORM-366 identity block gives ENS event time 1710 EDT (notification time) while narrative gives event time 1400 CDT for scram insertion and alarm at 1359 hours; used narrative timestamps for consequence timing. Single-point vulnerability (fm_single_point) modeled as a distinct contributing failure mode per narrative's explicit discussion of unrecognized design risk, feeding into the 2A FRV's inability to mitigate the transient, per rule 5's parallel-trigger guidance. No BACKED_UP_BY edges emitted for feedwater/ECCS make-up sources mentioned only in Safety Impact section as available makeup, not as backups during an inoperability window of a specific system in the causal chain of the scram itself. Previous LER (265/2022-002-00) modeled as stub with SIMILAR_TO edge; key preserved exactly as stated in narrative ('265/2022-002-00')."
+}

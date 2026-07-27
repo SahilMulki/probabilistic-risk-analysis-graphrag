@@ -1,0 +1,379 @@
+{
+  "ler_number": "269-22-002-00",
+  "identity": {
+    "accession_number": "ML23012A325",
+    "docket": "05000269",
+    "plant_name": "Oconee",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2022-11-14",
+    "report_date": "2023-01-12",
+    "operating_mode": "6",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Revision 00 – Unit 1 Reactor Coolant System"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)",
+      "10 CFR 50.73(a)(2)(ii)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "based on the results of the temperature instrument disassembly and the information in the Westinghouse Product Update and Technical Bulletin, the leak observed on the 1B2 RCP was most likely due to the same condition described in the Product Update/Technical Bulletin [thermowell fabrication defect: two center bores not meeting exactly, leaving a thin spot]",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "known vintage thermowell manufacturing defect not mitigated before reuse",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 269-2022-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "269-22-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:269-22-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Oconee Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000269",
+      "match_key": "Unit:05000269"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Manufacturing Issue (B)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "known vintage thermowell manufacturing defect not mitigated before reuse",
+      "proximate_text": "based on the results of the temperature instrument disassembly and the information in the Westinghouse Product Update and Technical Bulletin, the leak observed on the 1B2 RCP was most likely due to the same condition described in the Product Update/Technical Bulletin",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_ab",
+      "display_name": "Reactor Coolant System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "AB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:AB"
+    },
+    {
+      "id": "sys_sg",
+      "display_name": "Steam Generator",
+      "properties": {
+        "note": "secondary heat transfer, part of RCS loop description"
+      },
+      "type": "System",
+      "eiis_code": "SG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SG"
+    },
+    {
+      "id": "c_rcp",
+      "display_name": "Reactor Coolant Pump 1B2",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "P",
+      "identifier": "1B2",
+      "model": "Westinghouse 93A",
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:P|1B2"
+    },
+    {
+      "id": "c_tw",
+      "display_name": "Lower Bearing Temperature Instrument Thermowell",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "TW",
+      "identifier": "1B2 RCP lower bearing thermowell",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:TW|1B2 RCP lower bearing thermowell"
+    },
+    {
+      "id": "c_thermocouple",
+      "display_name": "Thermocouple assembly",
+      "properties": {
+        "role": "installed in thermowell, provides bearing temperature indication"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:thermocouple-assembly"
+    },
+    {
+      "id": "fm_thinspot",
+      "display_name": "Thermowell fabrication defect (thin spot from misaligned center bores)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Thermowell fabricated by machining a long rod and center boring from both ends to meet in the middle; bores did not meet exactly, leaving a thin spot.",
+      "match_key": "FailureMode:thermowell-fabrication-defect-thin-spot-from-misaligned-center-bores"
+    },
+    {
+      "id": "fm_unmitigated",
+      "display_name": "Vulnerable thermowell not identified/mitigated during spare RCP refurbishment",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Spare RCP assembly refurbished in 2005/2006 and again before 2018 install; thermowell exhibited no visual issues and passed pressure test, so known vulnerability was not detected/mitigated before reuse as 1B2 RCP.",
+      "match_key": "FailureMode:vulnerable-thermowell-not-identified-mitigated-during-spare-rcp-refurbishment"
+    },
+    {
+      "id": "fm_leak",
+      "display_name": "Thermowell pressure boundary leak",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Leak in the instrument thermowell producing boron deposit on the 1B2 RCP lower bearing temperature instrument; leak appeared inactive/self-arrested at discovery.",
+      "match_key": "FailureMode:thermowell-pressure-boundary-leak"
+    },
+    {
+      "id": "cons_leak",
+      "display_name": "RCS pressure boundary leakage / TS 3.4.13 condition prohibited",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2022-11-14T07:30",
+      "end": null,
+      "duration": null,
+      "tz": "EST",
+      "match_key": "Consequence:rcs-pressure-boundary-leakage-ts-3-4-13-condition-prohibited"
+    },
+    {
+      "id": "ca_replace_thermocouple",
+      "display_name": "Replace existing thermocouple assembly with upgraded high-pressure assembly, moving pressure boundary to pump main flange fittings",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-existing-thermocouple-assembly-with-upgraded-high-pressure-assembly-moving-pressure-boundary-to-pump-main-flange-fittings"
+    },
+    {
+      "id": "ca_extent",
+      "display_name": "Extent-of-condition review to identify other affected RCPs (spare RCP identified)",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:extent-of-condition-review-to-identify-other-affected-rcps-spare-rcp-identified"
+    },
+    {
+      "id": "ca_spare_upgrade",
+      "display_name": "Replace/upgrade thermocouple assembly on spare RCP",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-upgrade-thermocouple-assembly-on-spare-rcp"
+    },
+    {
+      "id": "mfr_westinghouse",
+      "display_name": "Westinghouse",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "W120",
+      "match_key": "Manufacturer:W120"
+    },
+    {
+      "id": "rr_5073i",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_5073ii",
+      "display_name": "10 CFR 50.73(a)(2)(ii)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-ii-a"
+    },
+    {
+      "id": "rr_5072",
+      "display_name": "10 CFR 50.72(b)(3)(ii)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-3-ii-a"
+    },
+    {
+      "id": "rr_ts",
+      "display_name": "TS 3.4.13 RCS Operational Leakage",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-3-4-13-rcs-operational-leakage"
+    },
+    {
+      "id": "rr_ufsar",
+      "display_name": "ONS UFSAR small-break LOCA mitigation analysis",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:ons-ufsar-small-break-loca-mitigation-analysis"
+    },
+    {
+      "id": "ler_2001_stub",
+      "display_name": "Oconee Unit 1 - 1B1 RCP thermowell boron accumulation (September 2001, no LER number given)",
+      "properties": {},
+      "type": "LER",
+      "key": "1-2001-thermowell-1B1",
+      "stub": true,
+      "title": "1B1 RCP lower bearing temperature instrument boron accumulation",
+      "plant": "Oconee Nuclear Station",
+      "match_key": "LER:1-2001-thermowell-1B1"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073i",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073ii",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ab",
+      "evidence": null
+    },
+    {
+      "source": "c_rcp",
+      "relation": "PART_OF",
+      "target": "sys_ab",
+      "evidence": null
+    },
+    {
+      "source": "c_tw",
+      "relation": "PART_OF",
+      "target": "c_rcp",
+      "evidence": null
+    },
+    {
+      "source": "c_thermocouple",
+      "relation": "PART_OF",
+      "target": "c_tw",
+      "evidence": null
+    },
+    {
+      "source": "c_tw",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_westinghouse",
+      "evidence": null
+    },
+    {
+      "source": "fm_thinspot",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_thinspot",
+      "relation": "LEADS_TO",
+      "target": "fm_unmitigated",
+      "evidence": null
+    },
+    {
+      "source": "fm_unmitigated",
+      "relation": "LEADS_TO",
+      "target": "fm_leak",
+      "evidence": null
+    },
+    {
+      "source": "fm_leak",
+      "relation": "LEADS_TO",
+      "target": "cons_leak",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_thermocouple",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_extent",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_spare_upgrade",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_2001_stub",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ufsar",
+      "evidence": null
+    }
+  ],
+  "chain": "vintage thermowell fabrication defect (thin spot) [cause B] -> vulnerability not detected/mitigated during spare RCP refurbishment -> thermowell pressure boundary leak -> boron deposit found on 1B2 RCP instrument, TS 3.4.13 condition prohibited [no backups applicable - RCS pressure boundary component]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Block 13 manufacturer code 'W120' copied verbatim from form; mapped to Westinghouse based on narrative context. Steam Generator (SG) mentioned only in RCS loop background description, included as context System node since it is part of the RCS loop configuration described, though it does not participate in the failure chain. Previous 2001 occurrence at Oconee Unit 1 (1B1 RCP) referenced in narrative has no LER number stated in the text; stub LER key synthesized as best available identifier since no formal LER number was given for that historical event - flagged for reviewer attention as it may not conform to the exact LER-number convention requested by rule 9."
+}

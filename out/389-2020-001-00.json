@@ -1,0 +1,225 @@
+{
+  "ler_number": "389-2020-001-00",
+  "identity": {
+    "accession_number": "ML20113E977",
+    "docket": "05000389",
+    "plant_name": "Saint Lucie",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2020-02-22",
+    "report_date": "2020-04-22",
+    "operating_mode": "6",
+    "power_level": 15,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Turbine Loss of Load Trip Found Outside Technical Specification Allowable Range Due to  Unspecified Legacy M&TE or Calibration Deficiencies"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The cause of this event was indeterminate...The best match for the observed condition was either legacy M&TE or calibration deficiencies.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "indeterminate cause; legacy M&TE or calibration deficiencies suspected",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 389-2020-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "389-2020-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:389-2020-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Saint Lucie Unit 2",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000389",
+      "match_key": "Unit:05000389"
+    },
+    {
+      "id": "cause",
+      "display_name": "Indeterminate (X)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "indeterminate cause; legacy M&TE or calibration deficiencies suspected",
+      "proximate_text": "The cause of this event was indeterminate...The best match for the observed condition was either legacy M&TE or calibration deficiencies.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_jc",
+      "display_name": "Reactor Protection System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JC"
+    },
+    {
+      "id": "c_pressswitch",
+      "display_name": "Turbine Loss of Load Pressure Switches",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "63",
+      "identifier": "PS-22-95A, -95B, -95C, -95D",
+      "model": "J302-612",
+      "manufacturer_code": "U075",
+      "inferred_code": false,
+      "match_key": "Component:63|PS-22-95A, -95B, -95C, -95D"
+    },
+    {
+      "id": "fm_calib",
+      "display_name": "Pressure switch trip setpoints drift out of TS allowable band",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "As-found trip setpoint values for all four channels were below the TS allowable value of >= 800 psig during periodic outage calibration.",
+      "match_key": "FailureMode:pressure-switch-trip-setpoints-drift-out-of-ts-allowable-band"
+    },
+    {
+      "id": "cons_ts",
+      "display_name": "Turbine loss of load trip setpoint outside TS allowable range",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2020-02-22",
+      "end": "2020-02-22",
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:turbine-loss-of-load-trip-setpoint-outside-ts-allowable-range"
+    },
+    {
+      "id": "ca_recal",
+      "display_name": "Recalibrate pressure switches and return to service",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:recalibrate-pressure-switches-and-return-to-service"
+    },
+    {
+      "id": "ca_procedure",
+      "display_name": "Revise calibration procedures to require pressure switch replacement following adjustments greater than 200 psi",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-calibration-procedures-to-require-pressure-switch-replacement-following-adjustments-greater-than-200-psi"
+    },
+    {
+      "id": "mfr_uec",
+      "display_name": "United Electric Controls",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "U075",
+      "match_key": "Manufacturer:U075"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_nureg",
+      "display_name": "NUREG-1432 Rev 4 Vol 2 TS Bases",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "standard/guidance",
+      "match_key": "RegulatoryReference:nureg-1432-rev-4-vol-2-ts-bases"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jc",
+      "evidence": null
+    },
+    {
+      "source": "c_pressswitch",
+      "relation": "PART_OF",
+      "target": "sys_jc",
+      "evidence": null
+    },
+    {
+      "source": "c_pressswitch",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_uec",
+      "evidence": null
+    },
+    {
+      "source": "fm_calib",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_calib",
+      "relation": "LEADS_TO",
+      "target": "cons_ts",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_recal",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procedure",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_nureg",
+      "evidence": null
+    }
+  ],
+  "chain": "indeterminate cause (legacy M&TE or calibration deficiencies suspected) [cause X] -> pressure switch trip setpoints drift out of TS allowable band -> turbine loss of load trip found outside TS allowable range [equipment-protection trip, no RPS safety impact]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "No FailureMode chain beyond the single calibration-drift finding; cause is officially indeterminate (X), provisional=true per rule 4. No backups modeled since this trip function is equipment protection, not credited for reactor safety, and no operable backup system is discussed. Similar Events section states 'None', so no SIMILAR_TO stub LER emitted per rule 9 (nothing to reference)."
+}

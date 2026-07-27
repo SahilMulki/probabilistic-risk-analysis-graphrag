@@ -1,0 +1,308 @@
+{
+  "ler_number": "298-2024-001-00",
+  "identity": {
+    "accession_number": "ML24064A252",
+    "docket": "05000298",
+    "plant_name": "Cooper",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2024-01-03",
+    "report_date": "2024-03-04",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Licensee Event Report No. 2024-001-00 Cooper Nuclear Station, Docket No. 50-298, DPR-46"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The mechanistic cause for the failure of the limit switch to actuate during testing was due to the assembly and alignment of the linkage mechanism not having full engagement on the splined cam. A contributing cause was that the installation guidance did not contain the necessary vendor manual information to ensure consistency for tightening linkage to the cam shaft.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "linkage assembly/alignment and inadequate installation guidance",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 298-2024-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "298-2024-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:298-2024-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Cooper Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000298",
+      "match_key": "Unit:05000298"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "linkage assembly/alignment and inadequate installation guidance",
+      "proximate_text": "The mechanistic cause for the failure of the limit switch to actuate during testing was due to the assembly and alignment of the linkage mechanism not having full engagement on the splined cam. A contributing cause was that the installation guidance did not contain the necessary vendor manual information to ensure consistency for tightening linkage to the cam shaft.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_jc",
+      "display_name": "Reactor Protection System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected safety system",
+      "match_key": "System:JC"
+    },
+    {
+      "id": "c_tsv1",
+      "display_name": "Turbine Stop Valve 1 (TSV-1)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "TSV-1",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:turbine-stop-valve-1-tsv-1"
+    },
+    {
+      "id": "c_ls1",
+      "display_name": "TSV-1 Limit Switch MS-LMS-SVOS1(1)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "33",
+      "identifier": "MS-LMS-SVOS1(1)",
+      "model": "Namco EA740",
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:33|MS-LMS-SVOS1(1)"
+    },
+    {
+      "id": "c_ls2",
+      "display_name": "TSV-1 Limit Switch MS-LMS-SVOS1(2)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "33",
+      "identifier": "MS-LMS-SVOS1(2)",
+      "model": "Namco EA740",
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:33|MS-LMS-SVOS1(2)"
+    },
+    {
+      "id": "c_relay",
+      "display_name": "RPS logic relay",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "RLY",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:RLY"
+    },
+    {
+      "id": "fm_linkage",
+      "display_name": "Linkage arm partially disengaged from splined cam (loose)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Linkage arm found partially disengaged from the splined cam of the limit switch, allowing the arm to move without engaging the switch.",
+      "match_key": "FailureMode:linkage-arm-partially-disengaged-from-splined-cam-loose"
+    },
+    {
+      "id": "fm_lsfail",
+      "display_name": "TSV-1 limit switch MS-LMS-SVOS1(1) failed to actuate",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Failure of limit switch MS-LMS-SVOS1(1) to actuate prevented making up the RPS scram logic for channel A1.",
+      "match_key": "FailureMode:tsv-1-limit-switch-ms-lms-svos1-1-failed-to-actuate"
+    },
+    {
+      "id": "fm_channel",
+      "display_name": "RPS Channel A1 TSV Closure Function inoperable",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Loss of Turbine Stop Valve-Closure Function input for RPS trip system A channel A1.",
+      "match_key": "FailureMode:rps-channel-a1-tsv-closure-function-inoperable"
+    },
+    {
+      "id": "cons_tsdeg",
+      "display_name": "TSV-1 Closure Function inoperable / TS LCO 3.3.1.1 Condition A entered",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2023-08-19",
+      "end": "2024-01-04T02:49",
+      "duration": "approx. 4.5 months (retroactive inoperability); LCO exited Jan 4 2024 0249",
+      "tz": null,
+      "match_key": "Consequence:tsv-1-closure-function-inoperable-ts-lco-3-3-1-1-condition-a-entered"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace MS-LMS-SVOS1(1) using additional vendor guidance/detail for shimming/alignment",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-ms-lms-svos1-1-using-additional-vendor-guidance-detail-for-shimming-alignment"
+    },
+    {
+      "id": "ca_maintplan",
+      "display_name": "Update maintenance plans with instructions on tightening, shimming, and manually stroking linkage",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:update-maintenance-plans-with-instructions-on-tightening-shimming-and-manually-stroking-linkage"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts3311",
+      "display_name": "Technical Specifications 3.3.1.1, RPS Instrumentation, Table 3.3.1.1-1, Function 8 (TSV Closure)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specifications-3-3-1-1-rps-instrumentation-table-3-3-1-1-1-function-8-tsv-closure"
+    },
+    {
+      "id": "mfr_namco",
+      "display_name": "Namco",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": null,
+      "match_key": "Manufacturer:namco"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts3311",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jc",
+      "evidence": null
+    },
+    {
+      "source": "c_ls1",
+      "relation": "PART_OF",
+      "target": "c_tsv1",
+      "evidence": null
+    },
+    {
+      "source": "c_ls2",
+      "relation": "PART_OF",
+      "target": "c_tsv1",
+      "evidence": null
+    },
+    {
+      "source": "c_ls1",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_namco",
+      "evidence": null
+    },
+    {
+      "source": "c_ls2",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_namco",
+      "evidence": null
+    },
+    {
+      "source": "fm_linkage",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_linkage",
+      "relation": "LEADS_TO",
+      "target": "fm_lsfail",
+      "evidence": null
+    },
+    {
+      "source": "fm_lsfail",
+      "relation": "LEADS_TO",
+      "target": "fm_channel",
+      "evidence": null
+    },
+    {
+      "source": "fm_channel",
+      "relation": "LEADS_TO",
+      "target": "cons_tsdeg",
+      "evidence": null
+    },
+    {
+      "source": "cons_tsdeg",
+      "relation": "BACKED_UP_BY",
+      "target": "c_ls2",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_maintplan",
+      "evidence": null
+    }
+  ],
+  "chain": "inadequate installation guidance for linkage tightening/alignment [cause TBD] -> linkage arm partially disengaged from splined cam -> TSV-1 limit switch MS-LMS-SVOS1(1) fails to actuate -> RPS trip system A channel A1 TSV-Closure function inoperable -> TSV-1 Closure Function inoperable / TS LCO 3.3.1.1 Condition A entered (retroactive to Aug 19, 2023) [backup: redundant TSV-1 limit switch MS-LMS-SVOS1(2) and TSV-2 channels remained functional]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code is TBD/provisional per FORM-366 fields; narrative describes a mechanistic cause (linkage/cam engagement) and a contributing cause (inadequate vendor guidance in installation procedures), captured in the theme. Retroactive inoperability determination extends back to the August 19, 2023 test per the Basis for Report section, driving the 10 CFR 50.73(a)(2)(i)(B) reportability. Two prior functional test anomalies (Aug 19, 2023 and Nov 18, 2023) are part of the same failed-component's performance history, not separate LER events, so not modeled as SIMILAR_TO stubs; no distinct previous LER was cited (Previous Events section states none in the last three years)."
+}

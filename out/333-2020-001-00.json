@@ -1,0 +1,419 @@
+{
+  "ler_number": "333-2020-001-00",
+  "identity": {
+    "accession_number": "ML20091L895",
+    "docket": "05000333",
+    "plant_name": "FitzPatrick",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2020-01-31",
+    "report_date": "2020-03-31",
+    "operating_mode": "1",
+    "power_level": 38,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": "54503",
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Licensee Event Report (LEA) 2020-001"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)",
+      "10 CFR 50.73(a)(2)(v)(C)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "the failure of 'A' Feed Pump discharge check valve, 34FWS-4A, resulting in reactor water level perturbation, Main Turbine trip, and automatic reactor scram; inspection found several sub-components degraded or broken, a deficiency determined to have originated prior to this event during normal operation",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "check valve internal degradation from insufficient flow during startup",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 333-2020-001-00",
+      "properties": {
+        "match_key": "LER:333-2020-001-00"
+      },
+      "type": "LER",
+      "key": "333-2020-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:333-2020-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "FitzPatrick Unit 1",
+      "properties": {
+        "match_key": "Unit:05000333",
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000333",
+      "match_key": "Unit:05000333"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Manufacture/Installation/Construction/Fabrication Deficiency (B)",
+      "properties": {
+        "match_key": "Cause:Design/Manufacture/Installation/Construction/Fabrication Deficiency"
+      },
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "check valve internal degradation from insufficient flow during startup",
+      "proximate_text": "the failure of 'A' Feed Pump discharge check valve, 34FWS-4A, resulting in reactor water level perturbation, Main Turbine trip, and automatic reactor scram; inspection found several sub-components degraded or broken, a deficiency determined to have originated prior to this event during normal operation",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_sj",
+      "display_name": "Reactor Feedwater System",
+      "properties": {
+        "match_key": "System:SJ"
+      },
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "sys_jc",
+      "display_name": "Reactor Protection System",
+      "properties": {
+        "match_key": "System:JC"
+      },
+      "type": "System",
+      "eiis_code": "JC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "actuated",
+      "match_key": "System:JC"
+    },
+    {
+      "id": "c_ckv",
+      "display_name": "'A' RFP Discharge Check Valve 34FWS-4A",
+      "properties": {
+        "match_key": "Component:CKV|34FWS-4A"
+      },
+      "type": "Component",
+      "eiis_code": "CKV",
+      "identifier": "34FWS-4A",
+      "model": "DRV-B",
+      "manufacturer_code": "E334JA",
+      "inferred_code": false,
+      "match_key": "Component:CKV|34FWS-4A"
+    },
+    {
+      "id": "c_rfp_a",
+      "display_name": "'A' Reactor Feed Pump",
+      "properties": {
+        "match_key": "Component:a-reactor-feed-pump"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:a-reactor-feed-pump"
+    },
+    {
+      "id": "c_rfp_b",
+      "display_name": "'B' Reactor Feed Pump",
+      "properties": {
+        "match_key": "Component:b-reactor-feed-pump"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:b-reactor-feed-pump"
+    },
+    {
+      "id": "fm_subcomp",
+      "display_name": "Check valve internal sub-components degraded/broken",
+      "properties": {
+        "match_key": "FailureMode:check-valve-subcomponents-degraded-broken"
+      },
+      "type": "FailureMode",
+      "description": "Several sub-components of 34FWS-4A found degraded or broken, originating prior to the event during normal operation, due to insufficient flow through low-flow line during startup causing valve flutter instead of full opening",
+      "match_key": "FailureMode:check-valve-internal-sub-components-degraded-broken"
+    },
+    {
+      "id": "fm_ckv_fail",
+      "display_name": "'A' RFP discharge check valve failed to immediately close",
+      "properties": {
+        "match_key": "FailureMode:ckv-failed-to-close"
+      },
+      "type": "FailureMode",
+      "description": "34FWS-4A failed to close when 'A' RFP was removed from service, allowing 'B' RFP flow to short-cycle back through 'A' RFP",
+      "match_key": "FailureMode:a-rfp-discharge-check-valve-failed-to-immediately-close"
+    },
+    {
+      "id": "fm_level_excursion",
+      "display_name": "Rapid RPV water level increase to Level 8",
+      "properties": {
+        "match_key": "FailureMode:rapid-rpv-level-increase"
+      },
+      "type": "FailureMode",
+      "description": "When 34FWS-4A rapidly closed, elevated 'B' RFP flow redirected to RPV causing rapid level rise to High (Level 8) trip setpoint",
+      "match_key": "FailureMode:rapid-rpv-water-level-increase-to-level-8"
+    },
+    {
+      "id": "fm_turb_trip",
+      "display_name": "'B' RFP trip and Main Turbine trip",
+      "properties": {
+        "match_key": "FailureMode:b-rfp-main-turbine-trip"
+      },
+      "type": "FailureMode",
+      "description": "RPV Water Level - High (Level 8) trip signal caused 'B' RFP trip and Main Turbine trip",
+      "match_key": "FailureMode:b-rfp-trip-and-main-turbine-trip"
+    },
+    {
+      "id": "cons_scram",
+      "display_name": "Automatic reactor scram and RPS/containment isolation actuation",
+      "properties": {
+        "match_key": "Consequence:automatic-scram-rps-containment-isolation"
+      },
+      "type": "Consequence",
+      "start": "2020-01-31T05:55",
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:automatic-reactor-scram-and-rps-containment-isolation-actuation"
+    },
+    {
+      "id": "cons_dp",
+      "display_name": "Secondary Containment differential pressure excursion exceeding TS limit",
+      "properties": {
+        "detail": "DP momentarily exceeded 0.25 in. vacuum w.g. limit (reached 0.09 in vacuum w.g.) for ~4 seconds due to difference in closure time between RBV supply and exhaust isolation valves",
+        "match_key": "Consequence:secondary-containment-dp-excursion"
+      },
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": "approximately 4 seconds",
+      "tz": null,
+      "match_key": "Consequence:secondary-containment-differential-pressure-excursion-exceeding-ts-limit"
+    },
+    {
+      "id": "ca_repair",
+      "display_name": "Repair 'A' RFP discharge check valve 34FWS-4A",
+      "properties": {
+        "match_key": "CorrectiveAction:repair-ckv-34fws-4a"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:repair-a-rfp-discharge-check-valve-34fws-4a"
+    },
+    {
+      "id": "ca_cap",
+      "display_name": "Additional corrective actions documented in Corrective Action Program",
+      "properties": {
+        "match_key": "CorrectiveAction:cap-additional-actions"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:additional-corrective-actions-documented-in-corrective-action-program"
+    },
+    {
+      "id": "mfr_enertech",
+      "display_name": "Enertech",
+      "properties": {
+        "match_key": "Manufacturer:E334JA"
+      },
+      "type": "Manufacturer",
+      "code": "E334JA",
+      "match_key": "Manufacturer:E334JA"
+    },
+    {
+      "id": "rr_5073_iv_a",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5073_v_c",
+      "display_name": "10 CFR 50.73(a)(2)(v)(C)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-c"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-c"
+    },
+    {
+      "id": "rr_ts_sr",
+      "display_name": "TS SR 3.6.4.1.1",
+      "properties": {
+        "match_key": "RegulatoryReference:ts-sr-3-6-4-1-1"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-sr-3-6-4-1-1"
+    },
+    {
+      "id": "ler_prev1",
+      "display_name": "LER 333-1993-009-03",
+      "properties": {
+        "match_key": "LER:1-1993-009-03"
+      },
+      "type": "LER",
+      "key": "333-1993-009-03",
+      "stub": true,
+      "title": "Low Reactor Water Level Scram Due to Feedwater Transient",
+      "plant": "James A. FitzPatrick Nuclear Power Plant",
+      "match_key": "LER:333-1993-009-03"
+    },
+    {
+      "id": "ler_prev2",
+      "display_name": "LER 333-2015-006-01",
+      "properties": {
+        "match_key": "LER:1-2015-006-01"
+      },
+      "type": "LER",
+      "key": "333-2015-006-01",
+      "stub": true,
+      "title": "Transitory Secondary Containment Differential Pressure Excursions",
+      "plant": "James A. FitzPatrick Nuclear Power Plant",
+      "match_key": "LER:333-2015-006-01"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_iv_a",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_v_c",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts_sr",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sj",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jc",
+      "evidence": null
+    },
+    {
+      "source": "c_ckv",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_enertech",
+      "evidence": null
+    },
+    {
+      "source": "fm_subcomp",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_subcomp",
+      "relation": "LEADS_TO",
+      "target": "fm_ckv_fail",
+      "evidence": null
+    },
+    {
+      "source": "fm_ckv_fail",
+      "relation": "LEADS_TO",
+      "target": "fm_level_excursion",
+      "evidence": null
+    },
+    {
+      "source": "fm_level_excursion",
+      "relation": "LEADS_TO",
+      "target": "fm_turb_trip",
+      "evidence": null
+    },
+    {
+      "source": "fm_turb_trip",
+      "relation": "LEADS_TO",
+      "target": "cons_scram",
+      "evidence": null
+    },
+    {
+      "source": "cons_scram",
+      "relation": "LEADS_TO",
+      "target": "cons_dp",
+      "evidence": null
+    },
+    {
+      "source": "cons_scram",
+      "relation": "BACKED_UP_BY",
+      "target": "c_rfp_b",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_repair",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_cap",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev1",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev2",
+      "evidence": null
+    }
+  ],
+  "chain": "check valve internal sub-components degraded/broken [cause B] -> 34FWS-4A fails to immediately close -> rapid RPV level increase to Level 8 -> 'B' RFP and Main Turbine trip -> RPS actuation / automatic reactor scram -> Secondary Containment Group 2 isolation -> transitory DP excursion exceeding TS limit [B RFP and condensate/feedwater systems remained available for post-scram recovery]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Block 13 cause code 'B' governs category per rule 4, despite narrative emphasizing an aging/degradation mechanism rather than a classic design deficiency; category mapped to standard NRC cause code B (Design/Manufacture/Installation/Construction/Fabrication Deficiency). 'B' RFP is modeled as a Component (not a System) since narrative treats it as the redundant pump that remained available for post-scram recovery, consistent with rule 6's operability requirement. Condensate/feedwater systems mentioned as available for post-scram recovery are design-context-adjacent but not modeled as distinct System nodes beyond sys_sj since narrative does not name a distinct condensate System involved in the failure chain. Plant name/unit/reactor type filled from narrative header (docket 05000333 = JAF, BWR) since FORM-366 FIELDS left them null."
+}

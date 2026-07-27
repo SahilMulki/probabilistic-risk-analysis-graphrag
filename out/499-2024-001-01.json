@@ -1,0 +1,858 @@
+{
+  "ler_number": "499-2024-001-01",
+  "identity": {
+    "accession_number": "ML24242A163",
+    "docket": "05000499",
+    "plant_name": "South Texas",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2024-05-12",
+    "report_date": "2024-08-29",
+    "operating_mode": "1",
+    "power_level": 90,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Supplement to Automatic Reactor Trip and Actuation of Two of Three Emergency Diesel Generators"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)",
+      "10 CFR 50.73(a)(2)(iv)(B)(1)",
+      "10 CFR 50.73(a)(2)(iv)(B)(8)",
+      "10 CFR 50.73(a)(2)(v)(D)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "Root Cause 1: STP's calibration procedure 0PMP05ZE0045 did not include instructions for adjusting the 21/G1 relay contacts per vendor technical document VTD-B455-0076; Root Cause 2: the Main Generator protection scheme was not fully updated to prevent the trip function of the 21/G1 relay when the Main Generator is offline and the MGCB is open; Contributing Cause: closing the door to Unit 2 CP010 caused a second vibration of relay 21/G1 and its actuation. Separately, PORV 2C was inoperable due to rough spots in the push button sleeve causing sticking, plus a known potentiometer defect; Load Center E2A1 breaker failed to close most likely due to dirty, high-resistance Control Room handswitch contacts.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Design/procedure deficiency in relay protection scheme plus independent component degradation (PORV sleeve/potentiometer, breaker handswitch contacts)",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 499-2024-001-01",
+      "properties": {},
+      "type": "LER",
+      "key": "499-2024-001-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:499-2024-001-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "South Texas Unit 2",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000499",
+      "match_key": "Unit:05000499"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Design/procedure deficiency in relay protection scheme plus independent component degradation (PORV sleeve/potentiometer, breaker handswitch contacts)",
+      "proximate_text": "Root Cause 1: STP's calibration procedure 0PMP05ZE0045 did not include instructions for adjusting the 21/G1 relay contacts per vendor technical document VTD-B455-0076; Root Cause 2: the Main Generator protection scheme was not fully updated to prevent the trip function of the 21/G1 relay when the Main Generator is offline and the MGCB is open; Contributing Cause: closing the door to Unit 2 CP010 caused a second vibration of relay 21/G1 and its actuation. Separately, PORV 2C was inoperable due to rough spots in the push button sleeve causing sticking, plus a known potentiometer defect; Load Center E2A1 breaker failed to close most likely due to dirty, high-resistance Control Room handswitch contacts.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_el",
+      "display_name": "Main Generator Output Power System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "EL",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:EL"
+    },
+    {
+      "id": "sys_sb",
+      "display_name": "Main Steam System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SB"
+    },
+    {
+      "id": "sys_ed",
+      "display_name": "Low-Voltage Power System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "ED",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:ED"
+    },
+    {
+      "id": "sys_rps",
+      "display_name": "Reactor Protection System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:reactor-protection-system"
+    },
+    {
+      "id": "c_relay",
+      "display_name": "Main Generator Backup Distance Relay 21/G1",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "RLY-21",
+      "identifier": null,
+      "model": "719B196A11",
+      "manufacturer_code": "W120",
+      "inferred_code": false,
+      "match_key": "Component:RLY-21"
+    },
+    {
+      "id": "c_sleeve",
+      "display_name": "S/G PORV 2C Operator Interface Module push button sleeve",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "SLV",
+      "identifier": null,
+      "model": "4259A98H01",
+      "manufacturer_code": "W120",
+      "inferred_code": false,
+      "match_key": "Component:SLV"
+    },
+    {
+      "id": "c_zic",
+      "display_name": "S/G PORV 2C position indication/control potentiometer",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "ZIC",
+      "identifier": null,
+      "model": "PA89292-1",
+      "manufacturer_code": "P095",
+      "inferred_code": false,
+      "match_key": "Component:ZIC"
+    },
+    {
+      "id": "c_hs",
+      "display_name": "Load Center E2A1 supply breaker Control Room handswitch",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "HS",
+      "identifier": null,
+      "model": "KA-2176-SD30",
+      "manufacturer_code": "G080",
+      "inferred_code": false,
+      "match_key": "Component:HS"
+    },
+    {
+      "id": "c_breaker",
+      "display_name": "Load Center E2A1 supply breaker",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "E2A1",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:load-center-e2a1-supply-breaker"
+    },
+    {
+      "id": "c_porv2c",
+      "display_name": "S/G PORV 2C",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "2C",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:s-g-porv-2c"
+    },
+    {
+      "id": "c_supplyfan21a",
+      "display_name": "Diesel Generator Emergency Supply Fan 21A",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "21A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:diesel-generator-emergency-supply-fan-21a"
+    },
+    {
+      "id": "c_porv2d",
+      "display_name": "S/G PORV 2D",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "2D",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:s-g-porv-2d"
+    },
+    {
+      "id": "sys_sbdg21",
+      "display_name": "Standby Diesel Generator 21",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:standby-diesel-generator-21"
+    },
+    {
+      "id": "fm_relayvibration",
+      "display_name": "Relay 21/G1 contacts inadequately adjusted / relay susceptible to vibration",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Calibration procedure lacked instructions for adjusting relay contacts per vendor guidance, and protection scheme was not updated to block trip when generator offline/MGCB open.",
+      "match_key": "FailureMode:relay-21-g1-contacts-inadequately-adjusted-relay-susceptible-to-vibration"
+    },
+    {
+      "id": "fm_doorvibration",
+      "display_name": "Door closure induced relay vibration/actuation",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Closing the door to Unit 2 CP010 caused a second vibration of relay 21/G1 leading to its actuation.",
+      "match_key": "FailureMode:door-closure-induced-relay-vibration-actuation"
+    },
+    {
+      "id": "fm_relaytrip",
+      "display_name": "Inadvertent actuation of relay 21/G1",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Relay actuation triggered generator lockout / transfer trip signals.",
+      "match_key": "FailureMode:inadvertent-actuation-of-relay-21-g1"
+    },
+    {
+      "id": "fm_reactortrip",
+      "display_name": "Unit auxiliary transformer lockout / automatic reactor trip and LOOP",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Switchyard breakers Y590/Y600 tripped, causing reactor trip and loss of offsite power with SBDG 21/23 actuation.",
+      "match_key": "FailureMode:unit-auxiliary-transformer-lockout-automatic-reactor-trip-and-loop"
+    },
+    {
+      "id": "fm_breakerfail",
+      "display_name": "Load Center E2A1 supply breaker failed to close automatically",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Most likely due to dirty, high-resistance Control Room handswitch contacts in breaker closing circuit.",
+      "match_key": "FailureMode:load-center-e2a1-supply-breaker-failed-to-close-automatically"
+    },
+    {
+      "id": "fm_porv2c",
+      "display_name": "S/G PORV 2C erratic/unreliable control (independent failure)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Rough spots in push button sleeve caused sticking; known potentiometer defect caused inaccurate position indication; PORV acted like on/off valve rather than modulating.",
+      "match_key": "FailureMode:s-g-porv-2c-erratic-unreliable-control-independent-failure"
+    },
+    {
+      "id": "cons_e2a1",
+      "display_name": "Load Center E2A1 de-energized; loss of AFW to S/G 2A, PORV 2A closed, Supply Fan 21A lost",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2024-05-12T16:41",
+      "end": "2024-05-12T17:07",
+      "duration": "26 minutes",
+      "tz": "CDT",
+      "match_key": "Consequence:load-center-e2a1-de-energized-loss-of-afw-to-s-g-2a-porv-2a-closed-supply-fan-21a-lost"
+    },
+    {
+      "id": "cons_sbdg21_reliability",
+      "display_name": "SBDG 21 reliability to meet mission time not ensured / PORV 2D reliability not ensured",
+      "properties": {
+        "note": "Loss of forced ventilation from Supply Fan 21A affected SBDG 21 mission capability, which affected S/G PORV 2D powered by SBDG 21"
+      },
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:sbdg-21-reliability-to-meet-mission-time-not-ensured-porv-2d-reliability-not-ensured"
+    },
+    {
+      "id": "cons_porv2c",
+      "display_name": "S/G PORV 2C inoperable",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2024-05-12T17:05",
+      "end": "2024-05-16T10:31",
+      "duration": "3 days, 17 hours, 26 minutes",
+      "tz": "CDT",
+      "match_key": "Consequence:s-g-porv-2c-inoperable"
+    },
+    {
+      "id": "cons_onlyoneSG",
+      "display_name": "Only S/G 2B fully capable of heat removal during LONF/LOAC, SGTR+LOOP, or SBLOCA+LOOP analyzed accidents",
+      "properties": {
+        "note": "Concurrent inoperability window of 66 minutes yielded ICDP 2.28E-07 and ILERP 1.19E-09, below thresholds of 1E-06/1E-07"
+      },
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:only-s-g-2b-fully-capable-of-heat-removal-during-lonf-loac-sgtr-loop-or-sbloca-loop-analyzed-accidents"
+    },
+    {
+      "id": "ca_replace_relay",
+      "display_name": "Replaced relay 21/G1 with a spare",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replaced-relay-21-g1-with-a-spare"
+    },
+    {
+      "id": "ca_replace_pushbutton",
+      "display_name": "Replaced PORV 2C control push button and push button sleeve",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replaced-porv-2c-control-push-button-and-push-button-sleeve"
+    },
+    {
+      "id": "ca_replace_potentiometer",
+      "display_name": "Replaced PORV 2C potentiometer",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replaced-porv-2c-potentiometer"
+    },
+    {
+      "id": "ca_clean_handswitch",
+      "display_name": "Cleaned E2A1 output breaker Control Room handswitch contacts and replaced handswitch",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:cleaned-e2a1-output-breaker-control-room-handswitch-contacts-and-replaced-handswitch"
+    },
+    {
+      "id": "ca_door_repair",
+      "display_name": "Perform required repairs to Unit 2 CP010 door due to excessive force needed to close",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:perform-required-repairs-to-unit-2-cp010-door-due-to-excessive-force-needed-to-close"
+    },
+    {
+      "id": "ca_calib_procedure",
+      "display_name": "Add instructions to calibration procedure 0PMP05ZE0045 to verify relay contact adjustment per VTD-B455-0076",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:add-instructions-to-calibration-procedure-0pmp05ze0045-to-verify-relay-contact-adjustment-per-vtd-b455-0076"
+    },
+    {
+      "id": "ca_perf_analysis",
+      "display_name": "Perform Performance Analysis for process/training needs related to KD-10/KD-11 relay adjustments",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:perform-performance-analysis-for-process-training-needs-related-to-kd-10-kd-11-relay-adjustments"
+    },
+    {
+      "id": "ca_cert_training",
+      "display_name": "Include KD-10/KD-11 relay contact adjustment in Electrical Maintenance Advance Protective Relay certification",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:include-kd-10-kd-11-relay-contact-adjustment-in-electrical-maintenance-advance-protective-relay-certification"
+    },
+    {
+      "id": "ca_permanent_solution_design",
+      "display_name": "Determine permanent solution to block 21/G1 relay trip signal when Main Generator offline, via Engineering Change",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:determine-permanent-solution-to-block-21-g1-relay-trip-signal-when-main-generator-offline-via-engineering-change"
+    },
+    {
+      "id": "ca_permanent_solution_implement",
+      "display_name": "Implement permanent solution to block 21/G1 relay trip signal when Main Generator offline",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:implement-permanent-solution-to-block-21-g1-relay-trip-signal-when-main-generator-offline"
+    },
+    {
+      "id": "ca_potentiometer_plan",
+      "display_name": "Implement PORV potentiometer replacement plan once vendor stock replenished",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:implement-porv-potentiometer-replacement-plan-once-vendor-stock-replenished"
+    },
+    {
+      "id": "mfr_westinghouse",
+      "display_name": "Westinghouse",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "W120",
+      "match_key": "Manufacturer:W120"
+    },
+    {
+      "id": "mfr_paulmunroe",
+      "display_name": "Paul Munroe Hydraulics",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "P095",
+      "match_key": "Manufacturer:P095"
+    },
+    {
+      "id": "mfr_ge",
+      "display_name": "General Electric",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "G080",
+      "match_key": "Manufacturer:G080"
+    },
+    {
+      "id": "rr_5073ivA",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5073ivB1",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(B)(1)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-b-1"
+    },
+    {
+      "id": "rr_5073ivB8",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(B)(8)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-b-8"
+    },
+    {
+      "id": "rr_5073vD",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "ler_cr24_4183",
+      "display_name": "CR 24-4183: S/G 2C PORV did not respond to Close pushbutton",
+      "properties": {},
+      "type": "LER",
+      "key": "CR-24-4183",
+      "stub": true,
+      "title": "S/G 2C PORV did not respond to the Close (down) pushbutton being depressed for approximately 11 seconds during 0PSP05-MS-7411L",
+      "plant": "South Texas Project Unit 2",
+      "match_key": "LER:CR-24-4183"
+    },
+    {
+      "id": "ler_cr23_10139",
+      "display_name": "CR 23-10139/23-10508: Part 21 notification for PORV potentiometer part D2060S",
+      "properties": {},
+      "type": "LER",
+      "key": "CR-23-10139",
+      "stub": true,
+      "title": "10 CFR Part 21 notification (Certrec Event # 56821) from Enertech regarding potential defect for Steam Generator PORV potentiometer part number D2060S",
+      "plant": "South Texas Project",
+      "match_key": "LER:CR-23-10139"
+    },
+    {
+      "id": "ler_cr22_12288",
+      "display_name": "CR 22-12288: Silent plant computer alarms for S/G 2B PORV position",
+      "properties": {},
+      "type": "LER",
+      "key": "CR-22-12288",
+      "stub": true,
+      "title": "Silent Plant Computer alarms: MSZE7421 S/G 2B PORV POSIT at 2.1% and slowly increasing, MSZC7421 S/G 2B PORV OPEN",
+      "plant": "South Texas Project Unit 2",
+      "match_key": "LER:CR-22-12288"
+    },
+    {
+      "id": "ler_cr21_10382",
+      "display_name": "CR 21-10382: S/G 1D PORV VPI erratic during venting",
+      "properties": {},
+      "type": "LER",
+      "key": "CR-21-10382",
+      "stub": true,
+      "title": "While venting S/G 1D during 0POP03-ZG-0007, Plant Cooldown, VPI pegged low to 0% and returned to 90% two times",
+      "plant": "South Texas Project Unit 1",
+      "match_key": "LER:CR-21-10382"
+    },
+    {
+      "id": "ler_cr21_8976",
+      "display_name": "CR 21-8976: PORV 2C never moved despite OIM pushbutton actuation",
+      "properties": {},
+      "type": "LER",
+      "key": "CR-21-8976",
+      "stub": true,
+      "title": "During WAN# 605160, Operations used the OIM up pushbutton to open 2C PORV; after holding for adequate time for full open stroke, the valve never moved",
+      "plant": "South Texas Project Unit 2",
+      "match_key": "LER:CR-21-8976"
+    },
+    {
+      "id": "ler_cr18_5534",
+      "display_name": "CR 18-5534: S/G C PORV indication oscillating",
+      "properties": {},
+      "type": "LER",
+      "key": "CR-18-5534",
+      "stub": true,
+      "title": "S/G 'C' PORV indication on CP-006, plant computer point MSZE7431 showing valve position oscillating from as high as 99% to as low as 9% open",
+      "plant": "South Texas Project",
+      "match_key": "LER:CR-18-5534"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073ivA",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073ivB1",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073ivB8",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073vD",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_el",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ed",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rps",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sbdg21",
+      "evidence": null
+    },
+    {
+      "source": "c_relay",
+      "relation": "PART_OF",
+      "target": "sys_el",
+      "evidence": null
+    },
+    {
+      "source": "c_sleeve",
+      "relation": "PART_OF",
+      "target": "c_porv2c",
+      "evidence": null
+    },
+    {
+      "source": "c_zic",
+      "relation": "PART_OF",
+      "target": "c_porv2c",
+      "evidence": null
+    },
+    {
+      "source": "c_hs",
+      "relation": "PART_OF",
+      "target": "c_breaker",
+      "evidence": null
+    },
+    {
+      "source": "c_relay",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_westinghouse",
+      "evidence": null
+    },
+    {
+      "source": "c_sleeve",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_westinghouse",
+      "evidence": null
+    },
+    {
+      "source": "c_zic",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_paulmunroe",
+      "evidence": null
+    },
+    {
+      "source": "c_hs",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_ge",
+      "evidence": null
+    },
+    {
+      "source": "fm_relayvibration",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_relayvibration",
+      "relation": "LEADS_TO",
+      "target": "fm_doorvibration",
+      "evidence": null
+    },
+    {
+      "source": "fm_doorvibration",
+      "relation": "LEADS_TO",
+      "target": "fm_relaytrip",
+      "evidence": null
+    },
+    {
+      "source": "fm_relaytrip",
+      "relation": "LEADS_TO",
+      "target": "fm_reactortrip",
+      "evidence": null
+    },
+    {
+      "source": "fm_reactortrip",
+      "relation": "LEADS_TO",
+      "target": "fm_breakerfail",
+      "evidence": null
+    },
+    {
+      "source": "fm_breakerfail",
+      "relation": "LEADS_TO",
+      "target": "cons_e2a1",
+      "evidence": null
+    },
+    {
+      "source": "cons_e2a1",
+      "relation": "LEADS_TO",
+      "target": "cons_sbdg21_reliability",
+      "evidence": null
+    },
+    {
+      "source": "fm_porv2c",
+      "relation": "LEADS_TO",
+      "target": "cons_porv2c",
+      "evidence": null
+    },
+    {
+      "source": "cons_e2a1",
+      "relation": "LEADS_TO",
+      "target": "cons_onlyoneSG",
+      "evidence": null
+    },
+    {
+      "source": "cons_sbdg21_reliability",
+      "relation": "LEADS_TO",
+      "target": "cons_onlyoneSG",
+      "evidence": null
+    },
+    {
+      "source": "cons_porv2c",
+      "relation": "LEADS_TO",
+      "target": "cons_onlyoneSG",
+      "evidence": null
+    },
+    {
+      "source": "c_breaker",
+      "relation": "INVOLVES",
+      "target": "sys_ed",
+      "evidence": null
+    },
+    {
+      "source": "c_porv2c",
+      "relation": "INVOLVES",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "c_porv2d",
+      "relation": "INVOLVES",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "cons_sbdg21_reliability",
+      "relation": "INVOLVES",
+      "target": "c_porv2d",
+      "evidence": null
+    },
+    {
+      "source": "cons_sbdg21_reliability",
+      "relation": "INVOLVES",
+      "target": "c_supplyfan21a",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_relay",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_pushbutton",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_potentiometer",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_clean_handswitch",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_door_repair",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_calib_procedure",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_perf_analysis",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_cert_training",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_permanent_solution_design",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_permanent_solution_implement",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_potentiometer_plan",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_cr24_4183",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_cr23_10139",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_cr22_12288",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_cr21_10382",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_cr21_8976",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_cr18_5534",
+      "evidence": null
+    }
+  ],
+  "chain": "relay 21/G1 contact adjustment/protection scheme deficiency [cause TBD] -> door closure vibration -> inadvertent relay 21/G1 actuation -> reactor trip / LOOP with SBDG 21/23 actuation -> Load Center E2A1 breaker fails to close (dirty handswitch contacts, independent failure) -> loss of AFW to S/G 2A, PORV 2A closed, SBDG 21 ventilation lost -> SBDG 21/PORV 2D reliability not ensured; separately, PORV 2C sleeve/potentiometer defects -> PORV 2C inoperable -> only S/G 2B fully capable of heat removal for analyzed accidents (66-min window, ICDP/ILERP below thresholds)",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code TBD/provisional per FORM-366 despite detailed root/contributing causes in narrative — three largely independent failure origins (relay 21/G1 design+vibration, breaker handswitch contacts, PORV 2C sleeve/potentiometer) converge on the consequence of only one fully capable S/G PORV/train. Modeled each as separate FailureMode chains merging at consequence nodes per rule 5. No BACKED_UP_BY edges asserted since narrative frames S/G 2B as merely 'fully capable' rather than an explicit backup system that remained operable to compensate — it is itself a train, not a distinct backup system nodeworthy of BACKED_UP_BY; also RCP/TS entries and bus restoration timeline omitted as non-causal administrative detail. Plant/unit inferred from narrative footer 'South Texas Project Unit 2' since FORM-366 fields left null."
+}

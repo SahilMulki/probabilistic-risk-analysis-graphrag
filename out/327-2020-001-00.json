@@ -1,0 +1,302 @@
+{
+  "ler_number": "327-2020-001-00",
+  "identity": {
+    "accession_number": "ML20083F591",
+    "docket": "05000327",
+    "plant_name": "Sequoyah",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2020-01-21",
+    "report_date": "2020-03-20",
+    "operating_mode": "4",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": "158058",
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Containment Vacuum Relief Lines Found Isolated"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)",
+      "10 CFR 50.73(a)(2)(ii)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The Licensed Operator who closed each of the vacuum relief isolation valves understood the procedure requirement specified in the containment isolation surveillance instruction was verification only. The Operator did not follow the procedure, believing the intent of the procedure step was to isolate the valves to closed position instead of to verify the status of the valves. The Operator further assumed that a process was in place to restore the valves to open position.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Failure to follow procedure during surveillance; inadequate outage oversight",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 327-2020-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "327-2020-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:327-2020-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Sequoyah Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000327",
+      "match_key": "Unit:05000327"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Failure to follow procedure during surveillance; inadequate outage oversight",
+      "proximate_text": "The Licensed Operator who closed each of the vacuum relief isolation valves understood the procedure requirement specified in the containment isolation surveillance instruction was verification only. The Operator did not follow the procedure, believing the intent of the procedure step was to isolate the valves to closed position instead of to verify the status of the valves. The Operator further assumed that a process was in place to restore the valves to open position.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_bf",
+      "display_name": "Vacuum Relief System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BF",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "primary containment external-pressure protection",
+      "match_key": "System:BF"
+    },
+    {
+      "id": "c_isv",
+      "display_name": "Vacuum Relief Isolation Valves (3 of 3)",
+      "properties": {
+        "count": 3,
+        "type": "normally open, fail open, pneumatically operated containment isolation valve"
+      },
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:ISV"
+    },
+    {
+      "id": "c_vrv",
+      "display_name": "Vacuum Relief Valves (self-actuated)",
+      "properties": {
+        "note": "normally closed, self-actuated; in series with isolation valve"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:vacuum-relief-valves-self-actuated"
+    },
+    {
+      "id": "fm_misclosed",
+      "display_name": "Licensed Operator incorrectly closed all 3 vacuum relief isolation valves",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "During performance of surveillance instruction 1-SI-OPS-Q88-006.0, operator closed valves instead of only verifying their status.",
+      "match_key": "FailureMode:licensed-operator-incorrectly-closed-all-3-vacuum-relief-isolation-valves"
+    },
+    {
+      "id": "fm_notrestored",
+      "display_name": "Valves not restored to open position after surveillance",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Operator assumed a process was in place to restore valves to open, but no such restoration occurred, and no rigorous outage oversight caught the error.",
+      "match_key": "FailureMode:valves-not-restored-to-open-position-after-surveillance"
+    },
+    {
+      "id": "fm_undetected",
+      "display_name": "Isolated condition undetected through Mode 4 entry and 58+ days of operation",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Lack of rigorous outage oversight plan precluded identification of degraded/declining operator fundamental behavior; condition persisted from Nov 24, 2019 Mode 4 entry until Jan 21, 2020 discovery.",
+      "match_key": "FailureMode:isolated-condition-undetected-through-mode-4-entry-and-58-days-of-operation"
+    },
+    {
+      "id": "cons_inop",
+      "display_name": "All 3 containment vacuum relief lines inoperable; TS prohibited condition / unanalyzed condition significantly degrading plant safety",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2019-11-24T14:27",
+      "end": "2020-01-21T22:23",
+      "duration": "58 days, 7 hours, 56 minutes",
+      "tz": "EST",
+      "match_key": "Consequence:all-3-containment-vacuum-relief-lines-inoperable-ts-prohibited-condition-unanalyzed-condition-significantly-degrading-plant-safety"
+    },
+    {
+      "id": "ca_immediate",
+      "display_name": "Entered TS LCO actions and un-isolated (opened) vacuum relief isolation valves",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:entered-ts-lco-actions-and-un-isolated-opened-vacuum-relief-isolation-valves"
+    },
+    {
+      "id": "ca_hp_plan",
+      "display_name": "Develop Unit 2 Cycle 23 Refueling Outage Safety-Human Performance Plan to reinforce Operator Fundamentals",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:develop-unit-2-cycle-23-refueling-outage-safety-human-performance-plan-to-reinforce-operator-fundamentals"
+    },
+    {
+      "id": "ca_proc_revision",
+      "display_name": "Revise common operating procedure for unit startup to ensure vacuum relief system aligned for Mode 4 entry",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-common-operating-procedure-for-unit-startup-to-ensure-vacuum-relief-system-aligned-for-mode-4-entry"
+    },
+    {
+      "id": "rr_5073_i_B",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_5073_ii_B",
+      "display_name": "10 CFR 50.73(a)(2)(ii)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-ii-b"
+    },
+    {
+      "id": "rr_ufsar",
+      "display_name": "UFSAR Section 6.2.6, Vacuum Relief System",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:ufsar-section-6-2-6-vacuum-relief-system"
+    },
+    {
+      "id": "rr_ts_369",
+      "display_name": "TS LCO 3.6.9, Vacuum Relief Valves",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-lco-3-6-9-vacuum-relief-valves"
+    },
+    {
+      "id": "rr_ts_303",
+      "display_name": "TS LCO 3.0.3",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-lco-3-0-3"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_i_B",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_ii_B",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bf",
+      "evidence": null
+    },
+    {
+      "source": "c_isv",
+      "relation": "PART_OF",
+      "target": "sys_bf",
+      "evidence": null
+    },
+    {
+      "source": "c_vrv",
+      "relation": "PART_OF",
+      "target": "sys_bf",
+      "evidence": null
+    },
+    {
+      "source": "fm_misclosed",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_misclosed",
+      "relation": "LEADS_TO",
+      "target": "fm_notrestored",
+      "evidence": null
+    },
+    {
+      "source": "fm_notrestored",
+      "relation": "LEADS_TO",
+      "target": "fm_undetected",
+      "evidence": null
+    },
+    {
+      "source": "fm_undetected",
+      "relation": "LEADS_TO",
+      "target": "cons_inop",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_immediate",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_hp_plan",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_proc_revision",
+      "evidence": null
+    }
+  ],
+  "chain": "operator failure to follow surveillance instruction [cause TBD] -> all 3 vacuum relief isolation valves incorrectly closed -> valves not restored, no rigorous outage oversight -> isolated condition undetected 58+ days through Mode 4 entry -> vacuum relief lines inoperable, unanalyzed condition significantly degrading plant safety [no backup - single-failure capability defeated]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code TBD/provisional per FORM-366 fields (no official cause code assigned in this LER). Block 13 empty - no failed component; event is procedural/human-performance in nature, not equipment failure ('There was no component that failed during the event'). No BACKED_UP_BY edges emitted because narrative states no mitigation would have been available during the inoperability window (all 3 lines isolated, defeating single-failure capability). Section VII states no previous similar events at SQN within last three years, so no SIMILAR_TO stub LER emitted. EIIS codes BF (vacuum relief system), BE (containment spray) and BK (containment air return system) appear in Analysis of the Event only as design-basis-transient context (not part of the failure chain) -- BE and BK therefore omitted per design-context rule."
+}

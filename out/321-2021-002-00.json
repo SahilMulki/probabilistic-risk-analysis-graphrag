@@ -1,0 +1,367 @@
+{
+  "ler_number": "321-2021-002-00",
+  "identity": {
+    "accession_number": "ML21274A738",
+    "docket": "05000321",
+    "plant_name": "Hatch",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2021-08-03",
+    "report_date": "2021-10-01",
+    "operating_mode": null,
+    "power_level": 0,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Low Pressure Coolant Injection Inoperable Longer Than The Allowed Technical Specification Completion Time"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "-",
+      "system": "X",
+      "component": "AD",
+      "manufacturer": "ISV",
+      "reportable": null
+    }
+  ],
+  "cause": {
+    "proximate_text": "the continuity issues were the result of a loose bayonet connector in the fuse holder for fuse 1B31-F239. The loose bayonet connector was most likely caused by the maintenance troubleshooting activities performed on 07/05/2021 for a failed MOV motor. The prior troubleshooting activities included the removal and re-installation of both control fuses for the 1B31-F031B valve, which likely loosened the bayonet connectors.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "maintenance-induced loose connection degrading control circuit continuity",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 321-2021-002-00",
+      "properties": {
+        "match_key": "LER:321-2021-002-00"
+      },
+      "type": "LER",
+      "key": "321-2021-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:321-2021-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Hatch Unit 1",
+      "properties": {
+        "match_key": "Unit:05000321",
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000321",
+      "match_key": "Unit:05000321"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {
+        "match_key": "Cause:provisional"
+      },
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "maintenance-induced loose connection degrading control circuit continuity",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_lpci",
+      "display_name": "Low Pressure Coolant Injection",
+      "properties": {
+        "match_key": "System:BO"
+      },
+      "type": "System",
+      "eiis_code": "BO",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected system",
+      "match_key": "System:BO"
+    },
+    {
+      "id": "sys_cs",
+      "display_name": "Core Spray",
+      "properties": {
+        "match_key": "System:BM"
+      },
+      "type": "System",
+      "eiis_code": "BM",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; operable",
+      "match_key": "System:BM"
+    },
+    {
+      "id": "sys_lpci_a",
+      "display_name": "LPCI 'A' Loop",
+      "properties": {
+        "non_eiis": true,
+        "match_key": "System:lpci-a-loop"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": true,
+      "role": "backup; operable",
+      "match_key": "System:lpci-a-loop"
+    },
+    {
+      "id": "c_valve",
+      "display_name": "Reactor Recirculation Pump Discharge Valve 1B31-F031B",
+      "properties": {
+        "match_key": "Component:AD|1B31-F031B"
+      },
+      "type": "Component",
+      "eiis_code": "AD",
+      "identifier": "1B31-F031B",
+      "model": null,
+      "manufacturer_code": "ISV",
+      "inferred_code": false,
+      "match_key": "Component:AD|1B31-F031B"
+    },
+    {
+      "id": "c_fuseholder",
+      "display_name": "Fuse holder for fuse 1B31-F239",
+      "properties": {
+        "match_key": "Component:fuse-holder-1b31-f239"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "1B31-F239",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:fuse-holder-for-fuse-1b31-f239"
+    },
+    {
+      "id": "c_fuseholder2",
+      "display_name": "Fuse holder for fuse 1B31-F240",
+      "properties": {
+        "match_key": "Component:fuse-holder-1b31-f240"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "1B31-F240",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:fuse-holder-for-fuse-1b31-f240"
+    },
+    {
+      "id": "fm_troubleshoot",
+      "display_name": "Maintenance troubleshooting on 07/05/2021 loosened control fuse bayonet connectors",
+      "properties": {
+        "match_key": "FailureMode:troubleshooting-loosened-bayonet-connectors"
+      },
+      "type": "FailureMode",
+      "description": "Removal and re-installation of both control fuses for 1B31-F031B during MOV motor troubleshooting likely loosened the bayonet connectors.",
+      "match_key": "FailureMode:maintenance-troubleshooting-on-07-05-2021-loosened-control-fuse-bayonet-connectors"
+    },
+    {
+      "id": "fm_loose_connector",
+      "display_name": "Loose bayonet connector in fuse holder 1B31-F239",
+      "properties": {
+        "match_key": "FailureMode:loose-bayonet-connector-f239"
+      },
+      "type": "FailureMode",
+      "description": "Loose bayonet connector caused intermittent power supply to the control circuit of valve 1B31-F031B.",
+      "match_key": "FailureMode:loose-bayonet-connector-in-fuse-holder-1b31-f239"
+    },
+    {
+      "id": "fm_intermittent_power",
+      "display_name": "Intermittent control circuit power to valve 1B31-F031B",
+      "properties": {
+        "match_key": "FailureMode:intermittent-control-circuit-power"
+      },
+      "type": "FailureMode",
+      "description": "Unreliable power supply to the control circuit prevented reliable stroking of the valve.",
+      "match_key": "FailureMode:intermittent-control-circuit-power-to-valve-1b31-f031b"
+    },
+    {
+      "id": "fm_indication_loss",
+      "display_name": "Brief loss of valve position light indication",
+      "properties": {
+        "match_key": "FailureMode:brief-loss-of-indication"
+      },
+      "type": "FailureMode",
+      "description": "Light indication immediately extinguished when switch was taken to closed position, then returned a few seconds later.",
+      "match_key": "FailureMode:brief-loss-of-valve-position-light-indication"
+    },
+    {
+      "id": "cons_lpci_inop",
+      "display_name": "'B' LPCI loop inoperable beyond TS completion time",
+      "properties": {
+        "match_key": "Consequence:b-lpci-inoperable-beyond-ts-time"
+      },
+      "type": "Consequence",
+      "start": "2021-07-05",
+      "end": "2021-08-05",
+      "duration": "approximately 31 days",
+      "tz": null,
+      "match_key": "Consequence:b-lpci-loop-inoperable-beyond-ts-completion-time"
+    },
+    {
+      "id": "ca_replace_connectors",
+      "display_name": "Replace loose bayonet connectors for fuse holders 1B31-F239 and 1B31-F240",
+      "properties": {
+        "match_key": "CorrectiveAction:replace-bayonet-connectors"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-loose-bayonet-connectors-for-fuse-holders-1b31-f239-and-1b31-f240"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts",
+      "display_name": "TS LCO 3.5.1 Condition B",
+      "properties": {
+        "match_key": "RegulatoryReference:ts-lco-3-5-1-condition-b"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-lco-3-5-1-condition-b"
+    },
+    {
+      "id": "rr_tsbases",
+      "display_name": "TS Bases 3.3.5.1",
+      "properties": {
+        "match_key": "RegulatoryReference:ts-bases-3-3-5-1"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-bases-3-3-5-1"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_lpci",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_valve",
+      "evidence": null
+    },
+    {
+      "source": "c_fuseholder",
+      "relation": "PART_OF",
+      "target": "c_valve",
+      "evidence": null
+    },
+    {
+      "source": "c_fuseholder2",
+      "relation": "PART_OF",
+      "target": "c_valve",
+      "evidence": null
+    },
+    {
+      "source": "fm_troubleshoot",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_troubleshoot",
+      "relation": "LEADS_TO",
+      "target": "fm_loose_connector",
+      "evidence": null
+    },
+    {
+      "source": "fm_loose_connector",
+      "relation": "LEADS_TO",
+      "target": "fm_intermittent_power",
+      "evidence": null
+    },
+    {
+      "source": "fm_loose_connector",
+      "relation": "LEADS_TO",
+      "target": "fm_indication_loss",
+      "evidence": null
+    },
+    {
+      "source": "fm_intermittent_power",
+      "relation": "LEADS_TO",
+      "target": "cons_lpci_inop",
+      "evidence": null
+    },
+    {
+      "source": "cons_lpci_inop",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_cs",
+      "evidence": null
+    },
+    {
+      "source": "cons_lpci_inop",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_lpci_a",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_connectors",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_tsbases",
+      "evidence": null
+    }
+  ],
+  "chain": "07/05/2021 MOV motor troubleshooting removes/reinstalls control fuses [provisional cause TBD] -> bayonet connector in fuse holder 1B31-F239 loosened -> intermittent control circuit power to valve 1B31-F031B -> valve closure/operability could not be guaranteed -> 'B' LPCI loop inoperable beyond TS completion time [backups: 'A' LPCI loop, Core Spray operable]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code is TBD/provisional per FORM-366 fields; narrative does not attribute an official personnel/procedure category, so cause node marked provisional. Block 13 lists component AD (valve) with manufacturer ISV; fuse holders and connectors are narrative-only components without EIIS codes. 'A' LPCI loop referenced only as remaining operable (backup), not otherwise detailed -> modeled as non-EIIS provisional System per rule 3/6 analog. No previous similar events reported (narrative states 'None')."
+}

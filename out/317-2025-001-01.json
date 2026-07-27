@@ -1,0 +1,362 @@
+{
+  "ler_number": "317-2025-001-01",
+  "identity": {
+    "accession_number": "ML25323A433",
+    "docket": "05000317",
+    "plant_name": "Calvert Cliffs",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2025-07-31",
+    "report_date": "2025-11-19",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Control Room Loss of Ventilation due to Smoke Detector Failure Causing Common Supply Damper to Shut"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)(D)",
+      "10 CFR 50.73(a)(2)(vii)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "X",
+      "system": "VI",
+      "component": "DET",
+      "manufacturer": "P435",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The direct cause of the smoke detector failure was an electrical short, due to condensation, on the control board of the Control Room Air Conditioning (A/C) return duct smoke detector (0AE5347) that sends an automatic closure signal to the Control Room A/C dampers.",
+    "cause_code": "X",
+    "category": "Other",
+    "theme": "Smoke detector electrical short from condensation causing spurious damper closure",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 317-2025-005-01",
+      "properties": {},
+      "type": "LER",
+      "key": "317-2025-001-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:317-2025-001-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Calvert Cliffs Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000317",
+      "match_key": "Unit:05000317"
+    },
+    {
+      "id": "cause",
+      "display_name": "Other (X)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "X",
+      "category": "Other",
+      "theme": "Smoke detector electrical short from condensation causing spurious damper closure",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Other"
+    },
+    {
+      "id": "sys_vi",
+      "display_name": "Control Room Air Conditioning / Ventilation",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "VI",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:VI"
+    },
+    {
+      "id": "sys_crevs",
+      "display_name": "Control Room Emergency Ventilation System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:control-room-emergency-ventilation-system"
+    },
+    {
+      "id": "sys_crets",
+      "display_name": "Control Room Emergency Temperature System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:control-room-emergency-temperature-system"
+    },
+    {
+      "id": "c_det",
+      "display_name": "Control Room A/C Return Duct Smoke Detector (0AE5347)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "DET",
+      "identifier": "0AE5347",
+      "model": null,
+      "manufacturer_code": "P435",
+      "inferred_code": false,
+      "match_key": "Component:DET|0AE5347"
+    },
+    {
+      "id": "c_damper",
+      "display_name": "Control Room HVAC Supply Damper (0-CV-5342)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "0-CV-5342",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:control-room-hvac-supply-damper-0-cv-5342"
+    },
+    {
+      "id": "fm_short",
+      "display_name": "Electrical short on smoke detector control board due to condensation",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Condensation caused an electrical short on the control board of smoke detector 0AE5347.",
+      "match_key": "FailureMode:electrical-short-on-smoke-detector-control-board-due-to-condensation"
+    },
+    {
+      "id": "fm_signal",
+      "display_name": "Spurious automatic closure signal generated",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The shorted smoke detector sent an automatic closure signal to the Control Room A/C damper despite no fire condition.",
+      "match_key": "FailureMode:spurious-automatic-closure-signal-generated"
+    },
+    {
+      "id": "fm_damper_close",
+      "display_name": "MCR HVAC supply damper 0-CV-5342 fully closed",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Damper closed in response to the spurious signal, isolating ventilation flow to the MCR.",
+      "match_key": "FailureMode:mcr-hvac-supply-damper-0-cv-5342-fully-closed"
+    },
+    {
+      "id": "fm_proc",
+      "display_name": "Inadequate procedure adherence / Life Cycle Management process completion",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Engineering personnel did not adhere to site procedures, resulting in untimely component Life Cycle Management process completion and inadequate closure of risk elimination actions following the 2018 event; key information not entered into Risk Management and System Health software.",
+      "match_key": "FailureMode:inadequate-procedure-adherence-life-cycle-management-process-completion"
+    },
+    {
+      "id": "cons_vent",
+      "display_name": "Loss of MCR ventilation / both trains CREVS and CRETS inoperable",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2025-07-31T17:44:00",
+      "end": "2025-07-31T17:45:00",
+      "duration": "00:01:00",
+      "tz": null,
+      "match_key": "Consequence:loss-of-mcr-ventilation-both-trains-crevs-and-crets-inoperable"
+    },
+    {
+      "id": "ca_perm_remove",
+      "display_name": "Permanent Engineering Change to remove automatic smoke-detector damper closure function, crediting manual operator action",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:permanent-engineering-change-to-remove-automatic-smoke-detector-damper-closure-function-crediting-manual-operator-action"
+    },
+    {
+      "id": "ca_config",
+      "display_name": "Complete configuration change to permanently remove automatic function",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:complete-configuration-change-to-permanently-remove-automatic-function"
+    },
+    {
+      "id": "ca_procs",
+      "display_name": "Update procedures and alarm manual response for manual damper operation",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:update-procedures-and-alarm-manual-response-for-manual-damper-operation"
+    },
+    {
+      "id": "mfr_pyro",
+      "display_name": "Pyrotronics",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "P435",
+      "match_key": "Manufacturer:P435"
+    },
+    {
+      "id": "rr_5073v",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "rr_5073vii",
+      "display_name": "10 CFR 50.73(a)(2)(vii)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-vii"
+    },
+    {
+      "id": "rr_nureg",
+      "display_name": "NUREG-1022, Revision 3",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "standard/guidance",
+      "match_key": "RegulatoryReference:nureg-1022-revision-3"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "LER 317-2018-003-01",
+      "properties": {},
+      "type": "LER",
+      "key": "317-2018-003-01",
+      "stub": true,
+      "title": "Similar occurrence - automatic damper closure function issue",
+      "plant": "Calvert Cliffs Nuclear Power Plant, Unit 1",
+      "match_key": "LER:317-2018-003-01"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073v",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073vii",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_nureg",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_vi",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_crevs",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_crets",
+      "evidence": null
+    },
+    {
+      "source": "c_det",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_pyro",
+      "evidence": null
+    },
+    {
+      "source": "fm_short",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_short",
+      "relation": "LEADS_TO",
+      "target": "fm_signal",
+      "evidence": null
+    },
+    {
+      "source": "fm_signal",
+      "relation": "LEADS_TO",
+      "target": "fm_damper_close",
+      "evidence": null
+    },
+    {
+      "source": "fm_damper_close",
+      "relation": "LEADS_TO",
+      "target": "cons_vent",
+      "evidence": null
+    },
+    {
+      "source": "fm_proc",
+      "relation": "LEADS_TO",
+      "target": "cons_vent",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_perm_remove",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_config",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procs",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    }
+  ],
+  "chain": "condensation causes electrical short on smoke detector 0AE5347 control board [cause X] -> spurious automatic closure signal generated -> MCR HVAC supply damper 0-CV-5342 fully closes -> loss of MCR ventilation / both trains CREVS and CRETS inoperable (~1 min); contributing: inadequate procedure adherence / unresolved Life Cycle Management actions from 2018 occurrence also feeds into inoperability event",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Two parallel contributing factors modeled: the direct electrical/condensation failure chain and the separate procedural/Life-Cycle-Management failure mode (fm_proc), both feeding the same consequence, per the narrative's explicit distinction between direct cause (D) and a cause that led to the event. Only one CAUSED_BY edge emitted from the origin failure mode (fm_short) per rule 5; fm_proc is modeled as a parallel contributing FailureMode leading to the same consequence but not tagged CAUSED_BY since the official cause code/category (X, Other) governs and is tied to the detector failure. CREVS/CRETS modeled as System nodes (non-EIIS) since they are directly involved/inoperable, not backups. No BACKED_UP_BY edges asserted since no backup system was stated operable during the brief outage. Previous occurrence stub LER key preserved exactly as stated: 317-2018-003-01."
+}

@@ -1,0 +1,434 @@
+{
+  "ler_number": "237-2022-001-01",
+  "identity": {
+    "accession_number": "ML22304A228",
+    "docket": "05000237",
+    "plant_name": "Dresden",
+    "unit": 2,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2022-07-12",
+    "report_date": "2022-10-28",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "01",
+    "ens_number": "55988",
+    "ens_date": null,
+    "ens_time": "1147 EDT",
+    "title": "Reactor Scram due to Turbine Trip on High Reactor Water Level caused by Feedwater Regulating Valve Failure"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)",
+      "10 CFR 50.73(a)(2)(iv)(B)",
+      "10 CFR 50.73(a)(2)(iv)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "X",
+      "system": "SJ",
+      "component": "SOL",
+      "manufacturer": "A499",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "Failure analysis and root cause of the air solenoid valve failure was due to a manufacturing byproduct on the pilot valve plunger, which prevented the pilot valve from seating. A small piece of plastic was found on the internal seat surface... Evidence supports the conclusion that the material was present when the valve was assembled at the factory.",
+    "cause_code": "X",
+    "category": "Other",
+    "theme": "manufacturing defect / foreign material in solenoid valve",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 237-2022-006-01",
+      "properties": {},
+      "type": "LER",
+      "key": "237-2022-001-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:237-2022-001-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Dresden Unit 2",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric",
+        "thermal_power_mwt": "2957"
+      },
+      "type": "Unit",
+      "key": "05000237",
+      "match_key": "Unit:05000237"
+    },
+    {
+      "id": "cause",
+      "display_name": "Other (X)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "X",
+      "category": "Other",
+      "theme": "manufacturing defect / foreign material in solenoid valve",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Other"
+    },
+    {
+      "id": "sys_jb",
+      "display_name": "Feedwater",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JB"
+    },
+    {
+      "id": "sys_sk",
+      "display_name": "Reactor Feedwater",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SK",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SK"
+    },
+    {
+      "id": "sys_ad",
+      "display_name": "Reactor Recirculation",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "AD",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:AD"
+    },
+    {
+      "id": "sys_jc",
+      "display_name": "Reactor Protection System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JC"
+    },
+    {
+      "id": "sys_ta",
+      "display_name": "Main Turbine",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "TA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:TA"
+    },
+    {
+      "id": "c_fwrv",
+      "display_name": "Feedwater Regulating Valve",
+      "properties": {
+        "note": "initial position 42% open, failed full open"
+      },
+      "type": "Component",
+      "eiis_code": "FCV",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:FCV"
+    },
+    {
+      "id": "c_pump",
+      "display_name": "Reactor Feedwater Pump",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "P",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:P"
+    },
+    {
+      "id": "c_sol",
+      "display_name": "Air Solenoid Valve",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "SOL",
+      "identifier": null,
+      "model": "542 02 020",
+      "manufacturer_code": "A499",
+      "inferred_code": false,
+      "match_key": "Component:SOL"
+    },
+    {
+      "id": "c_rods",
+      "display_name": "Control Rods",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "AA",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:AA"
+    },
+    {
+      "id": "fm_plastic",
+      "display_name": "Manufacturing byproduct (plastic) on pilot valve plunger prevents seating",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "A small piece of plastic, matching the valve body construction material, was found on the internal seat surface, present since factory assembly, preventing the pilot valve from seating.",
+      "match_key": "FailureMode:manufacturing-byproduct-plastic-on-pilot-valve-plunger-prevents-seating"
+    },
+    {
+      "id": "fm_solfail",
+      "display_name": "Air solenoid valve fails to control FWRV position",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The solenoid valve failure prevented the FWRV from repositioning.",
+      "match_key": "FailureMode:air-solenoid-valve-fails-to-control-fwrv-position"
+    },
+    {
+      "id": "fm_fwrvopen",
+      "display_name": "Feedwater regulating valve unexpectedly fails full-open",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "FWRV failed to full-open position from initial 42% open position.",
+      "match_key": "FailureMode:feedwater-regulating-valve-unexpectedly-fails-full-open"
+    },
+    {
+      "id": "fm_pumptrip",
+      "display_name": "Reactor feedwater pump trip on low suction pressure",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Resulted in automatic reactor recirculation runback and rising reactor water level due to inability of feedwater system to regulate flow.",
+      "match_key": "FailureMode:reactor-feedwater-pump-trip-on-low-suction-pressure"
+    },
+    {
+      "id": "fm_turbinetrip",
+      "display_name": "Main turbine trip on high reactor water level",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "High reactor water level caused automatic main turbine trip.",
+      "match_key": "FailureMode:main-turbine-trip-on-high-reactor-water-level"
+    },
+    {
+      "id": "cons_scram",
+      "display_name": "Automatic reactor scram / RPS actuation",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2022-07-12T08:03:00",
+      "end": null,
+      "duration": null,
+      "tz": "CDT",
+      "match_key": "Consequence:automatic-reactor-scram-rps-actuation"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace failed air solenoid valve",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-failed-air-solenoid-valve"
+    },
+    {
+      "id": "ca_inspect",
+      "display_name": "Inspect similar incoming valves and certify freedom from foreign material via second/third party vendor",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:inspect-similar-incoming-valves-and-certify-freedom-from-foreign-material-via-second-third-party-vendor"
+    },
+    {
+      "id": "ca_spv",
+      "display_name": "Reclassify FWRV solenoid valves as single point vulnerabilities; develop mitigation/elimination strategies",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:reclassify-fwrv-solenoid-valves-as-single-point-vulnerabilities-develop-mitigation-elimination-strategies"
+    },
+    {
+      "id": "mfr_asco",
+      "display_name": "ASCO",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "A499",
+      "match_key": "Manufacturer:A499"
+    },
+    {
+      "id": "rr_5073iv_a",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5073iv_b",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-b"
+    },
+    {
+      "id": "rr_5073iv",
+      "display_name": "10 CFR 50.73(a)(2)(iv)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073iv_a",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073iv_b",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073iv",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jb",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sk",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ad",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ta",
+      "evidence": null
+    },
+    {
+      "source": "fm_plastic",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_plastic",
+      "relation": "LEADS_TO",
+      "target": "fm_solfail",
+      "evidence": null
+    },
+    {
+      "source": "fm_solfail",
+      "relation": "LEADS_TO",
+      "target": "fm_fwrvopen",
+      "evidence": null
+    },
+    {
+      "source": "fm_fwrvopen",
+      "relation": "LEADS_TO",
+      "target": "fm_pumptrip",
+      "evidence": null
+    },
+    {
+      "source": "fm_fwrvopen",
+      "relation": "LEADS_TO",
+      "target": "fm_turbinetrip",
+      "evidence": null
+    },
+    {
+      "source": "fm_pumptrip",
+      "relation": "LEADS_TO",
+      "target": "fm_turbinetrip",
+      "evidence": null
+    },
+    {
+      "source": "fm_turbinetrip",
+      "relation": "LEADS_TO",
+      "target": "cons_scram",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_inspect",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_spv",
+      "evidence": null
+    },
+    {
+      "source": "c_sol",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_asco",
+      "evidence": null
+    }
+  ],
+  "chain": "manufacturing byproduct (plastic) on pilot valve plunger [cause X] -> air solenoid valve fails to control FWRV -> FWRV unexpectedly fails full-open -> feedwater pump trip on low suction pressure & rising reactor water level -> main turbine trip on high reactor water level -> automatic reactor scram / RPS actuation",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Block-13 system field in FORM-366 shows 'SJ' but narrative identifies the affected system components using JB (Feedwater), SK (Reactor Feedwater), AD (Reactor Recirculation), JC (Reactor Protection System), TA (Main Turbine) EIIS codes explicitly bracketed in text; SJ retained verbatim in block_13 per authoritative copy rule but not modeled as a separate System node since no matching bracket code appears in narrative. No previous occurrences section content provided (blank in narrative) so no SIMILAR_TO edge or stub LER emitted. FWRV valve position control mechanism (solenoid valve controls FWRV) modeled as functional relationship via LEADS_TO chain, not PART_OF, per rule 7."
+}

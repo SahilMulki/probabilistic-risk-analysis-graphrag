@@ -1,0 +1,381 @@
+{
+  "ler_number": "251-2025-004-00",
+  "identity": {
+    "accession_number": "ML25226A035",
+    "docket": "05000251",
+    "plant_name": "Turkey Point",
+    "unit": 4,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2025-06-21",
+    "report_date": "2025-08-14",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Unplanned Reactor Scram"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "D",
+      "system": "NB",
+      "component": "RLY",
+      "manufacturer": "GE",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "the root cause of this event was attributed to a latent procedure trap in O-PME-005.22, Testing and Independent Verification of Operational Trip Test. Specifically, there was unclear procedural steps for placing and removing HOLDs on voltage balance relays",
+    "cause_code": "D",
+    "category": "Defective Procedure",
+    "theme": "latent procedure trap / unclear HOLD steps",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 251-2025-005-00",
+      "properties": {},
+      "type": "LER",
+      "key": "251-2025-004-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:251-2025-004-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Turkey Point Unit 4",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000251",
+      "match_key": "Unit:05000251"
+    },
+    {
+      "id": "cause",
+      "display_name": "Defective Procedure (D)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "D",
+      "category": "Defective Procedure",
+      "theme": "latent procedure trap / unclear HOLD steps",
+      "proximate_text": "the root cause of this event was attributed to a latent procedure trap in O-PME-005.22, Testing and Independent Verification of Operational Trip Test. Specifically, there was unclear procedural steps for placing and removing HOLDs on voltage balance relays",
+      "provisional": false,
+      "match_key": "Cause:Defective Procedure"
+    },
+    {
+      "id": "sys_ea",
+      "display_name": "4kV Electrical Distribution Bus",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "EA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:EA"
+    },
+    {
+      "id": "sys_nb",
+      "display_name": "Emergency Diesel Generator",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "NB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:NB"
+    },
+    {
+      "id": "sys_sa",
+      "display_name": "Auxiliary Feedwater",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "actuated during event",
+      "match_key": "System:SA"
+    },
+    {
+      "id": "c_bus4a",
+      "display_name": "4A 4kV Bus",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "4A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:4a-4kv-bus"
+    },
+    {
+      "id": "c_relay",
+      "display_name": "4A EDG Voltage Balance Relay",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "RLY",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": "GE",
+      "inferred_code": false,
+      "match_key": "Component:RLY"
+    },
+    {
+      "id": "c_fuse",
+      "display_name": "XRCG-C Phase Fuse (4A 4kV Bus voltage reference circuit)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "XRCG-C",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:xrcg-c-phase-fuse-4a-4kv-bus-voltage-reference-circuit"
+    },
+    {
+      "id": "c_protrelay",
+      "display_name": "4A 4kV Bus Protective Relay Scheme",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "RLY",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:RLY"
+    },
+    {
+      "id": "fm_procedure",
+      "display_name": "Unclear procedure steps for HOLDs on voltage balance relays",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Latent procedure trap in O-PME-005.22 for placing/removing HOLDs on voltage balance relays",
+      "match_key": "FailureMode:unclear-procedure-steps-for-holds-on-voltage-balance-relays"
+    },
+    {
+      "id": "fm_relayleft",
+      "display_name": "4A EDG voltage balance relay left actuated after testing",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Voltage balance relay was left in the actuated position following planned testing due to procedural ambiguity",
+      "match_key": "FailureMode:4a-edg-voltage-balance-relay-left-actuated-after-testing"
+    },
+    {
+      "id": "fm_blownfuse",
+      "display_name": "XRCG-C Phase fuse blown in 4kV bus voltage reference circuit",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Blown fuse in the 4A 4kV bus voltage reference circuit combined with relay left actuated",
+      "match_key": "FailureMode:xrcg-c-phase-fuse-blown-in-4kv-bus-voltage-reference-circuit"
+    },
+    {
+      "id": "fm_overcurrent",
+      "display_name": "Overcurrent sensed from 4A EDG upon synchronizing to bus",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "4A 4kV bus protective relay scheme sensed an overcurrent condition from the 4A EDG when it was synched to the 4A 4kV bus",
+      "match_key": "FailureMode:overcurrent-sensed-from-4a-edg-upon-synchronizing-to-bus"
+    },
+    {
+      "id": "fm_buslockout",
+      "display_name": "4A 4kV bus lockout",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "4A 4kV bus protective relay scheme responded to overcurrent condition, causing bus lockout",
+      "match_key": "FailureMode:4a-4kv-bus-lockout"
+    },
+    {
+      "id": "cons_scram",
+      "display_name": "Unplanned reactor trip with spurious SI signal and AFW actuation",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2025-06-21T14:38",
+      "end": null,
+      "duration": null,
+      "tz": "EDT",
+      "match_key": "Consequence:unplanned-reactor-trip-with-spurious-si-signal-and-afw-actuation"
+    },
+    {
+      "id": "ca_relay",
+      "display_name": "Place 4A EDG voltage balancing relay in unactuated position",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:place-4a-edg-voltage-balancing-relay-in-unactuated-position"
+    },
+    {
+      "id": "ca_fuse",
+      "display_name": "Replace XRCG-C Phase fuse",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-xrcg-c-phase-fuse"
+    },
+    {
+      "id": "ca_wedge",
+      "display_name": "Fabricate non-conductive, high-visibility wedge tool for EDG voltage balance relay testing",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:fabricate-non-conductive-high-visibility-wedge-tool-for-edg-voltage-balance-relay-testing"
+    },
+    {
+      "id": "ca_procedure",
+      "display_name": "Revise O-PME-005.22",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-o-pme-005-22"
+    },
+    {
+      "id": "mfr_ge",
+      "display_name": "General Electric",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "GE",
+      "match_key": "Manufacturer:GE"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ea",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_nb",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sa",
+      "evidence": null
+    },
+    {
+      "source": "c_relay",
+      "relation": "PART_OF",
+      "target": "sys_nb",
+      "evidence": null
+    },
+    {
+      "source": "c_protrelay",
+      "relation": "PART_OF",
+      "target": "sys_ea",
+      "evidence": null
+    },
+    {
+      "source": "fm_procedure",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_procedure",
+      "relation": "LEADS_TO",
+      "target": "fm_relayleft",
+      "evidence": null
+    },
+    {
+      "source": "fm_relayleft",
+      "relation": "LEADS_TO",
+      "target": "fm_overcurrent",
+      "evidence": null
+    },
+    {
+      "source": "fm_blownfuse",
+      "relation": "LEADS_TO",
+      "target": "fm_overcurrent",
+      "evidence": null
+    },
+    {
+      "source": "fm_overcurrent",
+      "relation": "LEADS_TO",
+      "target": "fm_buslockout",
+      "evidence": null
+    },
+    {
+      "source": "fm_buslockout",
+      "relation": "LEADS_TO",
+      "target": "cons_scram",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_relay",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_fuse",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_wedge",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procedure",
+      "evidence": null
+    },
+    {
+      "source": "c_relay",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_ge",
+      "evidence": null
+    }
+  ],
+  "chain": "latent procedure trap in O-PME-005.22 [cause D] -> 4A EDG voltage balance relay left actuated after testing -> (with blown XRCG-C Phase fuse) -> overcurrent sensed from 4A EDG on synch to bus -> 4A 4kV bus lockout -> reactor trip with spurious SI signal and AFW actuation",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Two parallel failure inputs (relay left actuated, blown XRCG-C fuse) both feed into the overcurrent condition sensed at synchronization, per rule 5 modeling of parallel contributing failures. No similar prior events identified in 5-year review, so no SIMILAR_TO/stub LER emitted. EA and NB are EIIS-coded per narrative brackets; SA (AFW) given only as bracket code with no further detail, modeled as involved system since it actuated during the event."
+}

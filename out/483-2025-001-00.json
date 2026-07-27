@@ -1,0 +1,407 @@
+{
+  "ler_number": "483-2025-001-00",
+  "identity": {
+    "accession_number": "ML25182A246",
+    "docket": "05000483",
+    "plant_name": "Callaway",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2025-05-04",
+    "report_date": "2025-07-01",
+    "operating_mode": "3",
+    "power_level": 95,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Refueling Water Storage Tank Lowered Below TS 3.5.4 Limit"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)(D)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "the CRS and RO did not establish a level band for the RWST when it was selected as a source of water for ongoing evolutions",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Inadequate operational control / lack of level monitoring band during tank makeup evolution",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 483-2025-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "483-2025-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:483-2025-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Callaway Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000483",
+      "match_key": "Unit:05000483"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Inadequate operational control / lack of level monitoring band during tank makeup evolution",
+      "proximate_text": "the CRS and RO did not establish a level band for the RWST when it was selected as a source of water for ongoing evolutions",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_rwst",
+      "display_name": "Refueling Water Storage Tank",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "TS 3.5.4 required tank; involved in event",
+      "match_key": "System:refueling-water-storage-tank"
+    },
+    {
+      "id": "sys_cvcs",
+      "display_name": "Chemical and Volume Control System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "CB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "system being flushed; involved in event",
+      "match_key": "System:CB"
+    },
+    {
+      "id": "c_demin",
+      "display_name": "\"B\" CVCS Mixed Bed Demineralizer (FBGO3B)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "FBGO3B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:b-cvcs-mixed-bed-demineralizer-fbgo3b"
+    },
+    {
+      "id": "c_vct",
+      "display_name": "Volume Control Tank (VCT)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:volume-control-tank-vct"
+    },
+    {
+      "id": "c_rhut",
+      "display_name": "Recycle Holdup Tank (RHUT)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:recycle-holdup-tank-rhut"
+    },
+    {
+      "id": "fm_noband",
+      "display_name": "No RWST level band established for makeup evolution",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "CRS and RO selected RWST as makeup source without establishing a level band to prevent excessive drawdown",
+      "match_key": "FailureMode:no-rwst-level-band-established-for-makeup-evolution"
+    },
+    {
+      "id": "fm_complacency",
+      "display_name": "Operational complacency during low-Mode operation",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Complacency developed due to less strict TS requirements on RWST during low Mode operation, contributing to inattentiveness",
+      "match_key": "FailureMode:operational-complacency-during-low-mode-operation"
+    },
+    {
+      "id": "fm_oversight",
+      "display_name": "Inadequate SM/CRS oversight of flush evolution",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Shift Manager and CRS did not provide adequate oversight of the FBGO3B flush evolution",
+      "match_key": "FailureMode:inadequate-sm-crs-oversight-of-flush-evolution"
+    },
+    {
+      "id": "fm_drawdown",
+      "display_name": "RWST level inadvertently lowered below TS limit",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Large volume of RWST water used to flush FBGO3B lowered RWST level below the TS 3.5.4 minimum of 394,000 gallons at approximately 1230",
+      "match_key": "FailureMode:rwst-level-inadvertently-lowered-below-ts-limit"
+    },
+    {
+      "id": "fm_latedetect",
+      "display_name": "Delayed recognition of low RWST level / missed Required Action",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Condition not recognized until 1340, causing the 1-hour TS 3.5.4 Condition B Required Action (restore within 1 hour of 1230) to be missed, escalating to Condition C",
+      "match_key": "FailureMode:delayed-recognition-of-low-rwst-level-missed-required-action"
+    },
+    {
+      "id": "cons_rwst_inop",
+      "display_name": "RWST inoperable / below TS 3.5.4 minimum volume, TS Required Actions C.1/C.2 entered",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2025-05-04T12:30",
+      "end": "2025-05-04T14:27",
+      "duration": "1:57",
+      "tz": null,
+      "match_key": "Consequence:rwst-inoperable-below-ts-3-5-4-minimum-volume-ts-required-actions-c-1-c-2-entered"
+    },
+    {
+      "id": "ca_disqualify",
+      "display_name": "Disqualify and remediate responsible RO and CRS",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:disqualify-and-remediate-responsible-ro-and-crs"
+    },
+    {
+      "id": "ca_sm_oversight",
+      "display_name": "Communicate expectation for increased SM oversight",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:communicate-expectation-for-increased-sm-oversight"
+    },
+    {
+      "id": "ca_crs_brief",
+      "display_name": "Communicate expectation for CRS-led beginning-of-shift discussion",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:communicate-expectation-for-crs-led-beginning-of-shift-discussion"
+    },
+    {
+      "id": "ca_ssa_turnover",
+      "display_name": "Include Shutdown Safety Assessments in SOM turnover",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:include-shutdown-safety-assessments-in-som-turnover"
+    },
+    {
+      "id": "ca_om_observations",
+      "display_name": "Operations Managers perform two observations of Refuel Control Room Alignment Brief",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:operations-managers-perform-two-observations-of-refuel-control-room-alignment-brief"
+    },
+    {
+      "id": "ca_operator_aids",
+      "display_name": "Create Operator Aids with alarm setpoints for TS-required tanks in Modes 3-6",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:create-operator-aids-with-alarm-setpoints-for-ts-required-tanks-in-modes-3-6"
+    },
+    {
+      "id": "ca_procedure_revision",
+      "display_name": "Revise ODP-ZZ-00001 Addendum 2 to require beginning-of-shift refuel brief",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-odp-zz-00001-addendum-2-to-require-beginning-of-shift-refuel-brief"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "rr_5072",
+      "display_name": "10 CFR 50.72(b)(3)(v)(D)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-3-v-d"
+    },
+    {
+      "id": "rr_nureg1022",
+      "display_name": "NUREG-1022, Rev. 3, Event Report Guidelines",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "standard/guidance",
+      "match_key": "RegulatoryReference:nureg-1022-rev-3-event-report-guidelines"
+    },
+    {
+      "id": "rr_nei9902",
+      "display_name": "NEI 99-02, Revision 8",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "standard/guidance",
+      "match_key": "RegulatoryReference:nei-99-02-revision-8"
+    },
+    {
+      "id": "rr_ts354",
+      "display_name": "Callaway TS 3.5.4, Refueling Water Storage Tank (RWST)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:callaway-ts-3-5-4-refueling-water-storage-tank-rwst"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rwst",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_cvcs",
+      "evidence": null
+    },
+    {
+      "source": "c_demin",
+      "relation": "PART_OF",
+      "target": "sys_cvcs",
+      "evidence": null
+    },
+    {
+      "source": "fm_complacency",
+      "relation": "LEADS_TO",
+      "target": "fm_noband",
+      "evidence": null
+    },
+    {
+      "source": "fm_oversight",
+      "relation": "LEADS_TO",
+      "target": "fm_noband",
+      "evidence": null
+    },
+    {
+      "source": "fm_noband",
+      "relation": "LEADS_TO",
+      "target": "fm_drawdown",
+      "evidence": null
+    },
+    {
+      "source": "fm_drawdown",
+      "relation": "LEADS_TO",
+      "target": "fm_latedetect",
+      "evidence": null
+    },
+    {
+      "source": "fm_latedetect",
+      "relation": "LEADS_TO",
+      "target": "cons_rwst_inop",
+      "evidence": null
+    },
+    {
+      "source": "fm_noband",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_disqualify",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_sm_oversight",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_crs_brief",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_ssa_turnover",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_om_observations",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_operator_aids",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procedure_revision",
+      "evidence": null
+    }
+  ],
+  "chain": "operational complacency + inadequate SM/CRS oversight -> no RWST level band established for makeup evolution [cause TBD] -> RWST level inadvertently lowered below TS 3.5.4 limit during FBGO3B flush -> delayed recognition, missed 1-hour Required Action -> RWST inoperable, TS Condition C entered (1h57m)",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code officially TBD/provisional in FORM-366 fields despite narrative describing personnel-error-like direct and contributing causes; category left as 'provisional' per authoritative field. No block_13 row was provided in FORM-366 fields (empty array), so no manufacturer/component reportable coding emitted. No previous similar occurrences were identified per licensee's LER search since 1988, so no SIMILAR_TO edge or stub LER node was created. RMWST/BAST/blended-flow makeup alternative was mentioned only as an option not used (design/procedural context), so not modeled as an involved System. CVCS modeled as involved since the flush evolution (its demineralizer) was the direct cause of RWST drawdown."
+}

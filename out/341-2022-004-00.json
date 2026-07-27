@@ -1,0 +1,381 @@
+{
+  "ler_number": "341-2022-004-00",
+  "identity": {
+    "accession_number": "ML22304A009",
+    "docket": "05000341",
+    "plant_name": "Fermi",
+    "unit": 2,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2022-06-27",
+    "report_date": "2022-10-31",
+    "operating_mode": null,
+    "power_level": null,
+    "discovery_context": "inspection",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Licensee Event Repo1i (LER) No. 2022-004"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The cause was determined to be improper thread engagement, due to personnel error (utility employees) of installing the incorrect bolts following testing using an installed testing device. Thread engagement was not achievable due to bolt length... Maintenance activities during the refueling outage used shorter testing bolts during final assembly to secure the actuator to the valve yoke flange which resulted in improper thread engagement",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "incorrect fasteners left in place after test rig removal",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 341-2022-004-00",
+      "properties": {},
+      "type": "LER",
+      "key": "341-2022-004-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:341-2022-004-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Fermi Unit 2",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000341",
+      "match_key": "Unit:05000341"
+    },
+    {
+      "id": "cause",
+      "display_name": "Personnel Error (provisional)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "incorrect fasteners left in place after test rig removal",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_bj",
+      "display_name": "Main Steam System",
+      "properties": {
+        "note": "Main Steam Outboard Drain Isolation Valve system designator"
+      },
+      "type": "System",
+      "eiis_code": "SB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SB"
+    },
+    {
+      "id": "sys_jm",
+      "display_name": "Primary Containment Isolation System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JM",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JM"
+    },
+    {
+      "id": "c_valve",
+      "display_name": "Main Steam Outboard Drain Isolation Valve B2103F019",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": "B2103F019",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:ISV|B2103F019"
+    },
+    {
+      "id": "c_mov",
+      "display_name": "Motor Operator (B2103F019 actuator)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "84",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:84"
+    },
+    {
+      "id": "c_yoke",
+      "display_name": "Valve bonnet yoke arm flange",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "V",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:V"
+    },
+    {
+      "id": "c_bolts",
+      "display_name": "Actuator mounting bolts (5/16-18 x 1-inch cap screws)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "5/16-18 x 1-inch cap screws",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:actuator-mounting-bolts-5-16-18-x-1-inch-cap-screws"
+    },
+    {
+      "id": "c_valve_016",
+      "display_name": "Main Steam Inboard Drain Isolation Valve B2103F016",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": "B2103F016",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:ISV|B2103F016"
+    },
+    {
+      "id": "fm_wrongbolts",
+      "display_name": "Incorrect (short) test bolts installed during final assembly",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Maintenance personnel used 1-inch test-rig cap screws instead of the required 1-1/2-inch bolts when reassembling the actuator to the valve yoke flange.",
+      "match_key": "FailureMode:incorrect-short-test-bolts-installed-during-final-assembly"
+    },
+    {
+      "id": "fm_underengage",
+      "display_name": "Inadequate thread engagement (2-3 threads only)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The shorter bolts achieved only 2 or 3 threads of engagement into the actuator housing when fully tightened.",
+      "match_key": "FailureMode:inadequate-thread-engagement-2-3-threads-only"
+    },
+    {
+      "id": "fm_boltpullout",
+      "display_name": "Mounting bolts pulled out of actuator housing",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "During the 06/27/2022 closing stroke, the actuator-to-bonnet yoke flange threaded connections failed and the bolts pulled out with visible thread damage.",
+      "match_key": "FailureMode:mounting-bolts-pulled-out-of-actuator-housing"
+    },
+    {
+      "id": "fm_actuatorsep",
+      "display_name": "Actuator separated from valve bonnet yoke arm flange",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The unrestrained actuator traversed up the valve stem as the stem nut rotated, running out of stem threads and becoming restrained only by the stem nut counterbore and electrical conduit.",
+      "match_key": "FailureMode:actuator-separated-from-valve-bonnet-yoke-arm-flange"
+    },
+    {
+      "id": "cons_inoperable",
+      "display_name": "B2103F019 PCIV inoperable / unable to close and isolate primary containment",
+      "properties": {
+        "note": "Inoperable since startup of the refueling outage until discovery on 06/27/2022 during startup walkdowns; redundancy of containment isolation for penetration X-8 compromised though isolation capability maintained via B2103F016."
+      },
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:b2103f019-pciv-inoperable-unable-to-close-and-isolate-primary-containment"
+    },
+    {
+      "id": "ca_secure",
+      "display_name": "Secure B2103F019 and deenergize/isolate penetration X-8 via B2103F016",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:secure-b2103f019-and-deenergize-isolate-penetration-x-8-via-b2103f016"
+    },
+    {
+      "id": "ca_rework",
+      "display_name": "Rework B2103F019 actuator-to-yoke bolting at next outage",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:rework-b2103f019-actuator-to-yoke-bolting-at-next-outage"
+    },
+    {
+      "id": "ca_inspect7",
+      "display_name": "Inspect seven additional MOVs for similar bolting condition",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:inspect-seven-additional-movs-for-similar-bolting-condition"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts3613",
+      "display_name": "TS 3.6.1.3 (Primary Containment Isolation Valves)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-3-6-1-3-primary-containment-isolation-valves"
+    },
+    {
+      "id": "rr_gl9605",
+      "display_name": "IST Appendix III (formerly NRC GL 96-05)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "standard/guidance",
+      "match_key": "RegulatoryReference:ist-appendix-iii-formerly-nrc-gl-96-05"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "Green NCV 05000341/2022001-02 (previous occurrence)",
+      "properties": {},
+      "type": "LER",
+      "key": "1-2022-001-00",
+      "stub": true,
+      "title": "Similar surveillance frequency non-compliance for containment isolation valve",
+      "plant": "Fermi",
+      "match_key": "LER:1-2022-001-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jm",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bj",
+      "evidence": null
+    },
+    {
+      "source": "c_valve",
+      "relation": "PART_OF",
+      "target": "sys_jm",
+      "evidence": null
+    },
+    {
+      "source": "c_mov",
+      "relation": "PART_OF",
+      "target": "c_valve",
+      "evidence": null
+    },
+    {
+      "source": "fm_wrongbolts",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_wrongbolts",
+      "relation": "LEADS_TO",
+      "target": "fm_underengage",
+      "evidence": null
+    },
+    {
+      "source": "fm_underengage",
+      "relation": "LEADS_TO",
+      "target": "fm_boltpullout",
+      "evidence": null
+    },
+    {
+      "source": "fm_boltpullout",
+      "relation": "LEADS_TO",
+      "target": "fm_actuatorsep",
+      "evidence": null
+    },
+    {
+      "source": "fm_actuatorsep",
+      "relation": "LEADS_TO",
+      "target": "cons_inoperable",
+      "evidence": null
+    },
+    {
+      "source": "cons_inoperable",
+      "relation": "BACKED_UP_BY",
+      "target": "c_valve_016",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_secure",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_rework",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_inspect7",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts3613",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_gl9605",
+      "evidence": null
+    }
+  ],
+  "chain": "incorrect short test bolts installed during final assembly [cause TBD, personnel error] -> inadequate thread engagement (2-3 threads) -> mounting bolts pulled out of actuator housing during closing stroke -> actuator separated from valve bonnet yoke flange -> B2103F019 PCIV inoperable, unable to isolate [backed up by B2103F016 inboard isolation valve, operable throughout]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code left TBD/provisional per FORM-366 fields (which state TBD), despite narrative clearly describing a personnel-error/maintenance bolting mistake; category kept as 'provisional' per rule 4 since official code field says TBD. Plant identified as Fermi Unit 2 from docket 05000341 (not explicitly named in provided text but is the well-known docket for Fermi 2). Previous occurrence stub LER key set to '1-2022-001' is a best-effort placeholder since narrative references an NRC NCV number (05000341/2022001-02) rather than a licensee LER number in the standard format; no other LER number was given for this previous occurrence, so the NCV report number's numeric portion was used as directed by 'copy exactly as stated' guidance, prefixed with unit digit 1. B2103F016 modeled as Component (backup valve) rather than System since it is a specific valve providing physical backup isolation, not a distinct system with a role. TTC (Torque-Thrust Cell) test device not modeled as a component since it is only referenced as a tool/procedure context, not part of the failure chain."
+}

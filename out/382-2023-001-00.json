@@ -1,0 +1,325 @@
+{
+  "ler_number": "382-2023-001-00",
+  "identity": {
+    "accession_number": "ML23121A120",
+    "docket": "05000382",
+    "plant_name": "Waterford",
+    "unit": 3,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2023-03-02",
+    "report_date": "2023-05-01",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Non-Compliance with Technical Specifications Due to pico-ammeter circuit board fluctuations in Containment High Range Radiation Monitor B Waterford Steam Electric Station, Unit 3 NRC Docket No. 50-382 Renewed Facility Operating License No. NPF-38"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "B",
+      "system": "IL",
+      "component": "RI",
+      "manufacturer": "G063",
+      "reportable": "Y"
+    },
+    {
+      "cause": "NIA",
+      "system": "NIA",
+      "component": "NIA",
+      "manufacturer": "NIA",
+      "reportable": null
+    }
+  ],
+  "cause": {
+    "proximate_text": "The ARMIRE5400B log pico-ammeter circuit board fluctuations occurred due to a deficiency in the temperature compensating circuit. The temperature compensating circuit maintains constant current by compensating for internal circuit board temperature.",
+    "cause_code": "B",
+    "category": "Design/Manufacturing/Installation",
+    "theme": "Temperature compensation circuit design deficiency",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 382-2023-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "382-2023-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:382-2023-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Waterford Unit 3",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000382",
+      "match_key": "Unit:05000382"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Manufacturing/Installation (B)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "B",
+      "category": "Design/Manufacturing/Installation",
+      "theme": "Temperature compensation circuit design deficiency",
+      "proximate_text": "The ARMIRE5400B log pico-ammeter circuit board fluctuations occurred due to a deficiency in the temperature compensating circuit. The temperature compensating circuit maintains constant current by compensating for internal circuit board temperature.",
+      "provisional": false,
+      "match_key": "Cause:Design/Manufacturing/Installation"
+    },
+    {
+      "id": "sys_il",
+      "display_name": "Radiation Monitoring System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "IL",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "involved; area radiation monitoring",
+      "match_key": "System:IL"
+    },
+    {
+      "id": "c_ri",
+      "display_name": "Containment High Range Radiation Monitor B (ARMIRE5400B)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "RI",
+      "identifier": "ARMIRE5400B",
+      "model": null,
+      "manufacturer_code": "G063",
+      "inferred_code": false,
+      "match_key": "Component:RI|ARMIRE5400B"
+    },
+    {
+      "id": "c_cbd",
+      "display_name": "Log pico-ammeter circuit board",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "CBD",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:CBD"
+    },
+    {
+      "id": "c_tm",
+      "display_name": "Temperature compensation circuit",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "TM",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:TM"
+    },
+    {
+      "id": "fm_tm_deficient",
+      "display_name": "Temperature compensation circuit deficient",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The circuit failed to properly compensate for internal circuit board temperature, causing output current drift.",
+      "match_key": "FailureMode:temperature-compensation-circuit-deficient"
+    },
+    {
+      "id": "fm_cbd_fluctuation",
+      "display_name": "Log pico-ammeter circuit board output fluctuations outside acceptance criteria",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "As-found data showed digital outputs for nearly all decades outside calibration tolerance by 10% to 43%, as temperature increased output voltage/output slowly decreased.",
+      "match_key": "FailureMode:log-pico-ammeter-circuit-board-output-fluctuations-outside-acceptance-criteria"
+    },
+    {
+      "id": "fm_monitor_inop",
+      "display_name": "ARMIRE5400B unable to perform specified safety function",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Testing revealed the compromised temperature compensation circuit would have previously prevented ARMIRE5400B from performing its specified safety function, inoperable from May 14, 2022 to March 9, 2023.",
+      "match_key": "FailureMode:armire5400b-unable-to-perform-specified-safety-function"
+    },
+    {
+      "id": "cons_tsviol",
+      "display_name": "Non-compliance with Technical Specification 3.3.3.1 / monitor inoperable, unable to enter EALs",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2022-05-14",
+      "end": "2023-03-09T11:41",
+      "duration": "approximately 9.5 months (unrecognized); declared inoperable 2023-03-02T16:24 to 2023-03-09T11:41",
+      "tz": "CST",
+      "match_key": "Consequence:non-compliance-with-technical-specification-3-3-3-1-monitor-inoperable-unable-to-enter-eals"
+    },
+    {
+      "id": "ca_replace_board",
+      "display_name": "Replace log pico-ammeter circuit board",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-log-pico-ammeter-circuit-board"
+    },
+    {
+      "id": "mfr_g063",
+      "display_name": "Manufacturer G063",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "G063",
+      "match_key": "Manufacturer:G063"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts_3331",
+      "display_name": "Technical Specification 3.3.3.1 / Table 3.3-6, Action 27",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:technical-specification-3-3-3-1-table-3-3-6-action-27"
+    },
+    {
+      "id": "rr_nureg0737",
+      "display_name": "NUREG-0737",
+      "properties": {
+        "type": "standard/guidance"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:nureg-0737"
+    },
+    {
+      "id": "rr_rg197",
+      "display_name": "Regulatory Guide 1.97, Revision 3",
+      "properties": {
+        "type": "standard/guidance"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:regulatory-guide-1-97-revision-3"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts_3331",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_il",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_ri",
+      "evidence": null
+    },
+    {
+      "source": "c_cbd",
+      "relation": "PART_OF",
+      "target": "c_ri",
+      "evidence": null
+    },
+    {
+      "source": "c_tm",
+      "relation": "PART_OF",
+      "target": "c_cbd",
+      "evidence": null
+    },
+    {
+      "source": "fm_tm_deficient",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_tm_deficient",
+      "relation": "LEADS_TO",
+      "target": "fm_cbd_fluctuation",
+      "evidence": null
+    },
+    {
+      "source": "fm_cbd_fluctuation",
+      "relation": "LEADS_TO",
+      "target": "fm_monitor_inop",
+      "evidence": null
+    },
+    {
+      "source": "fm_monitor_inop",
+      "relation": "LEADS_TO",
+      "target": "cons_tsviol",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_board",
+      "evidence": null
+    },
+    {
+      "source": "c_ri",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_g063",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_nureg0737",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_rg197",
+      "evidence": null
+    }
+  ],
+  "chain": "temperature compensation circuit design deficiency [cause B] -> pico-ammeter circuit board output fluctuates outside tolerance -> ARMIRE5400B unable to perform specified safety function -> TS 3.3.3.1 non-compliance / unable to enter EALs (inoperable 2022-05-14 to 2023-03-09) [no backups stated]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "No backup system is described as operable during the inoperability window; ARMIRE5400A was reviewed but found not to exhibit the same trends, so it is not a stated operable backup for this specific failure and is not modeled as BACKED_UP_BY. Cause code B (Design/Manufacturing/Installation) governs despite narrative reading like a hardware defect discovered during performance review. No previous similar events per narrative, so no SIMILAR_TO edge or stub LER emitted."
+}

@@ -1,0 +1,278 @@
+{
+  "ler_number": "389-2021-002-00",
+  "identity": {
+    "accession_number": "ML21314A023",
+    "docket": "05000389",
+    "plant_name": "Saint Lucie",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2021-09-16",
+    "report_date": "2021-11-10",
+    "operating_mode": "6",
+    "power_level": null,
+    "discovery_context": "inspection",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Foreign Material Exclusion Device Found in Containment Spray System"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)",
+      "10 CFR 50.73(a)(2)(v)(D)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "A",
+      "system": "BE",
+      "component": "ISV",
+      "manufacturer": "P032",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "inadequate instructions for the control of internal foreign material exclusion devices within the valve maintenance procedure; the valve repair team failed to use the internal closure device log during V07162 valve repairs, and a subsequent scope change to perform valve lapping did not prompt review of the FME risk determination and checklist",
+    "cause_code": "A",
+    "category": "Personnel Error",
+    "theme": "inadequate FME procedure guidance / missed scope-change review",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 389-2021-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "389-2021-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:389-2021-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Saint Lucie Unit 2",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000389",
+      "match_key": "Unit:05000389"
+    },
+    {
+      "id": "cause",
+      "display_name": "Personnel Error (A)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "A",
+      "category": "Personnel Error",
+      "theme": "inadequate FME procedure guidance / missed scope-change review",
+      "proximate_text": "inadequate instructions for the control of internal foreign material exclusion devices within the valve maintenance procedure; the valve repair team failed to use the internal closure device log during V07162 valve repairs, and a subsequent scope change to perform valve lapping did not prompt review of the FME risk determination and checklist",
+      "provisional": false,
+      "match_key": "Cause:Personnel Error"
+    },
+    {
+      "id": "sys_be",
+      "display_name": "Containment Spray",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BE",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BE"
+    },
+    {
+      "id": "c_v07162",
+      "display_name": "Isolation Valve V07162 (Penetration P-35B, Outside Containment Feed from Shutdown Cooling HX 2A)",
+      "properties": {
+        "description": "12-in manually operated Pacific Gate Valve, horizontal stem, stainless steel body, ANSI class 300, normally locked open during power operations"
+      },
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": "V07162",
+      "model": null,
+      "manufacturer_code": "P032",
+      "inferred_code": false,
+      "match_key": "Component:ISV|V07162"
+    },
+    {
+      "id": "fm_noLog",
+      "display_name": "Internal closure device log not used during valve repairs",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Valve repair team concluded the internal closure device log was not required based on the original inspection scope, which did not require FME devices.",
+      "match_key": "FailureMode:internal-closure-device-log-not-used-during-valve-repairs"
+    },
+    {
+      "id": "fm_noReview",
+      "display_name": "Scope change to valve lapping not reviewed against FME risk determination",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "A subsequent scope change to perform valve lapping did not prompt the valve repair team to review the FME risk determination and checklist; the crew failed to recognize the need for the internal closure device log.",
+      "match_key": "FailureMode:scope-change-to-valve-lapping-not-reviewed-against-fme-risk-determination"
+    },
+    {
+      "id": "fm_fmeLeftIn",
+      "display_name": "FME device left inside valve body",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "A 12-inch diameter foam circle with a 6-ft rope lanyard was left inside the valve body of V07162 following maintenance in the previous refueling outage.",
+      "match_key": "FailureMode:fme-device-left-inside-valve-body"
+    },
+    {
+      "id": "cons_csTrain",
+      "display_name": "2A containment spray train inoperable / flow blockage",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2020-03-17",
+      "end": "2021-08-28",
+      "duration": "~17.5 months",
+      "tz": null,
+      "match_key": "Consequence:2a-containment-spray-train-inoperable-flow-blockage"
+    },
+    {
+      "id": "ca_removed",
+      "display_name": "Remove foreign material from V07162",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:remove-foreign-material-from-v07162"
+    },
+    {
+      "id": "ca_procRevise",
+      "display_name": "Revise valve lapping procedure to have separate sign-off steps for each FME device installation and removal",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-valve-lapping-procedure-to-have-separate-sign-off-steps-for-each-fme-device-installation-and-removal"
+    },
+    {
+      "id": "mfr_pacific",
+      "display_name": "Pacific Valves",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "P032",
+      "match_key": "Manufacturer:P032"
+    },
+    {
+      "id": "rr_5073i",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_5073v",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "rr_ufsar",
+      "display_name": "UFSAR Table 6.2-41",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:ufsar-table-6-2-41"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073i",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073v",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_be",
+      "evidence": null
+    },
+    {
+      "source": "c_v07162",
+      "relation": "PART_OF",
+      "target": "sys_be",
+      "evidence": null
+    },
+    {
+      "source": "fm_noLog",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_noLog",
+      "relation": "LEADS_TO",
+      "target": "fm_noReview",
+      "evidence": null
+    },
+    {
+      "source": "fm_noReview",
+      "relation": "LEADS_TO",
+      "target": "fm_fmeLeftIn",
+      "evidence": null
+    },
+    {
+      "source": "fm_fmeLeftIn",
+      "relation": "LEADS_TO",
+      "target": "cons_csTrain",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_removed",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procRevise",
+      "evidence": null
+    },
+    {
+      "source": "c_v07162",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_pacific",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ufsar",
+      "evidence": null
+    }
+  ],
+  "chain": "inadequate FME procedure guidance [cause A] -> internal closure device log not used during valve repairs -> scope change to lapping not reviewed -> FME device (foam circle w/ lanyard) left inside valve body -> 2A containment spray train flow blockage / inoperable (~17.5 months) [no impact on health/safety per UFSAR analysis; fan coolers provide diverse depressurization]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "No 'Similar Events' referenced (narrative states 'None'), so no stub LER/SIMILAR_TO edge emitted. UFSAR Table 6.2-41 and fan cooler discussion is design/safety-analysis context supporting the no-impact conclusion; fan coolers are not modeled as an operable backup system per rule 6 since they are cited in a Safety Significance/UFSAR passage, not as a stated-operable backup during the inoperability window. The 2B train surveillance-induced brief inoperabilities are noted in the narrative but the system remained available and promptly returnable to service, so no separate FailureMode/Consequence was created for 2B; only the 2A blockage-driven inoperability period is modeled per the reported condition prohibited by Tech Specs."
+}

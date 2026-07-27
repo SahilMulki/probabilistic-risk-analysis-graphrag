@@ -1,0 +1,149 @@
+{
+  "ler_number": "414-2021-001-00",
+  "identity": {
+    "accession_number": "ML21172A302",
+    "docket": "05000414",
+    "plant_name": "Catawba",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2021-04-20",
+    "report_date": "2021-06-21",
+    "operating_mode": null,
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Indication Identified During Reactor Pressure Vessel Head Nozzle Penetration Inspection"
+  },
+  "reporting_basis": {
+    "reported_under": [],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": null,
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Indication found during RPV head nozzle penetration inspection; no narrative text provided to determine root cause",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 414-2021-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "414-2021-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:414-2021-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Catawba Unit 2",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000414",
+      "match_key": "Unit:05000414"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Indication found during RPV head nozzle penetration inspection; no narrative text provided to determine root cause",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_rpv",
+      "display_name": "Reactor Pressure Vessel",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:reactor-pressure-vessel"
+    },
+    {
+      "id": "c_nozzle",
+      "display_name": "RPV Head Nozzle Penetration",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:rpv-head-nozzle-penetration"
+    },
+    {
+      "id": "fm_indication",
+      "display_name": "Indication identified in nozzle penetration",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "An indication was identified during inspection of the reactor pressure vessel head nozzle penetration. No further narrative detail was provided.",
+      "match_key": "FailureMode:indication-identified-in-nozzle-penetration"
+    },
+    {
+      "id": "cons_indication",
+      "display_name": "Indication requiring evaluation identified in RPV head nozzle penetration",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2021-04-20",
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:indication-requiring-evaluation-identified-in-rpv-head-nozzle-penetration"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rpv",
+      "evidence": null
+    },
+    {
+      "source": "c_nozzle",
+      "relation": "PART_OF",
+      "target": "sys_rpv",
+      "evidence": null
+    },
+    {
+      "source": "fm_indication",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_indication",
+      "relation": "LEADS_TO",
+      "target": "cons_indication",
+      "evidence": null
+    }
+  ],
+  "chain": "unspecified degradation mechanism [cause TBD] -> indication identified during RPV head nozzle penetration inspection -> reportable indication requiring evaluation",
+  "golden_questions": [
+    "Q1",
+    "Q3"
+  ],
+  "notes": "No narrative (366A) text was provided in the input; only the FORM-366 header fields and title were available. The cause code is TBD/provisional per the form data, and no component identifiers, EIIS codes, timing details, corrective actions, or backup systems could be extracted since the narrative was absent. The graph reflects only what can be inferred from the title: an indication was found during a reactor pressure vessel head nozzle penetration inspection. LER number assumed as 414-2021-001-00 based on typical numbering (unit digit not stated in identity); docket 05000414 corresponds to Waterford Steam Electric Station Unit 3, but plant/unit fields were null in the FORM-366 data and left as such, with unit id representing the docket only."
+}

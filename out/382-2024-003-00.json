@@ -1,0 +1,334 @@
+{
+  "ler_number": "382-2024-003-00",
+  "identity": {
+    "accession_number": "ML24192A173",
+    "docket": "05000382",
+    "plant_name": "Waterford",
+    "unit": 3,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2024-05-11",
+    "report_date": "2024-07-10",
+    "operating_mode": "3",
+    "power_level": 3,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Automatic EFAS Actuation During Surveillance Test Waterford Steam Electric Station, Unit 3 NRC Docket No. 50-382 Renewed Facility Operating License No. NPF-38"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)",
+      "10 CFR 50.73(a)(2)(iv)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The procedural guidance to ensure the Emergency Feedwater Flow Verification surveillance test would be started with enough margin between the minimum, procedurally driven level of 30% NR and the actuation setpoint for both EFAS and the RPS at 27.4% NR was insufficient... The second cause was the operators did not anticipate the amount of SG level reduction that would occur after feedwater flow was initiated.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Inadequate procedural margin and operator anticipation during EFW surveillance",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 382-2024-003-00",
+      "properties": {},
+      "type": "LER",
+      "key": "382-2024-003-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:382-2024-003-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Waterford Unit 3",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000382",
+      "match_key": "Unit:05000382"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Inadequate procedural margin and operator anticipation during EFW surveillance",
+      "proximate_text": "The procedural guidance to ensure the Emergency Feedwater Flow Verification surveillance test would be started with enough margin between the minimum, procedurally driven level of 30% NR and the actuation setpoint for both EFAS and the RPS at 27.4% NR was insufficient... the operators did not anticipate the amount of SG level reduction that would occur after feedwater flow was initiated.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_je",
+      "display_name": "Emergency Feedwater Actuation Signal",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JE",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JE"
+    },
+    {
+      "id": "sys_jc",
+      "display_name": "Reactor Protection System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JC"
+    },
+    {
+      "id": "c_sg1",
+      "display_name": "Steam Generator #1",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "SB",
+      "identifier": "SG #1",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:SB|SG #1"
+    },
+    {
+      "id": "c_efwab",
+      "display_name": "Emergency Feedwater Pump AB",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "BA",
+      "identifier": "EFW AB",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:BA|EFW AB"
+    },
+    {
+      "id": "c_rtcb",
+      "display_name": "Reactor Trip Circuit Breakers",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "BKR",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:BKR"
+    },
+    {
+      "id": "fm_procmargin",
+      "display_name": "Insufficient procedural margin between test level band and actuation setpoint",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The procedural SG level band of 30% to 70% NR did not adequately maintain margin to the actuation setpoint of 27.4% NR.",
+      "match_key": "FailureMode:insufficient-procedural-margin-between-test-level-band-and-actuation-setpoint"
+    },
+    {
+      "id": "fm_opsanticipate",
+      "display_name": "Operators did not anticipate SG level reduction during feed initiation",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The test procedure and briefing database did not address SG level shrink/cooldown effects when feedwater flow was initiated; operators focused only on the 70% NR upper limit.",
+      "match_key": "FailureMode:operators-did-not-anticipate-sg-level-reduction-during-feed-initiation"
+    },
+    {
+      "id": "fm_leveldrop",
+      "display_name": "SG #1 level dropped below EFAS/RPS setpoint",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "SG #1 narrow range level dropped below 27.4% NR when feedwater flow was initiated from EFW AB to SG #1.",
+      "match_key": "FailureMode:sg-1-level-dropped-below-efas-rps-setpoint"
+    },
+    {
+      "id": "cons_actuation",
+      "display_name": "Automatic EFAS Trains A and B and RPS reactor trip actuation",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2024-05-11T16:55",
+      "end": null,
+      "duration": null,
+      "tz": "CDT",
+      "match_key": "Consequence:automatic-efas-trains-a-and-b-and-rps-reactor-trip-actuation"
+    },
+    {
+      "id": "ca_revise",
+      "display_name": "Revise OP-903-014 to raise level band to 40%-70% NR",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-op-903-014-to-raise-level-band-to-40-70-nr"
+    },
+    {
+      "id": "ca_review_evolutions",
+      "display_name": "Review Operations evolutions/surveillance tests for inventory-change actuation risk",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:review-operations-evolutions-surveillance-tests-for-inventory-change-actuation-risk"
+    },
+    {
+      "id": "ca_review_event",
+      "display_name": "Review event with responsible individuals",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:review-event-with-responsible-individuals"
+    },
+    {
+      "id": "ca_standing_order",
+      "display_name": "Create standing order for Post-Job Brief and procedural margin review",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:create-standing-order-for-post-job-brief-and-procedural-margin-review"
+    },
+    {
+      "id": "ca_training",
+      "display_name": "Perform training needs analysis",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:perform-training-needs-analysis"
+    },
+    {
+      "id": "rr_50731",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_50732",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-b"
+    },
+    {
+      "id": "rr_5072",
+      "display_name": "10 CFR 50.72(b)(3)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-3-iv-a"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_50731",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_50732",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_je",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jc",
+      "evidence": null
+    },
+    {
+      "source": "fm_procmargin",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_procmargin",
+      "relation": "LEADS_TO",
+      "target": "fm_leveldrop",
+      "evidence": null
+    },
+    {
+      "source": "fm_opsanticipate",
+      "relation": "LEADS_TO",
+      "target": "fm_leveldrop",
+      "evidence": null
+    },
+    {
+      "source": "fm_leveldrop",
+      "relation": "LEADS_TO",
+      "target": "cons_actuation",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_revise",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_review_evolutions",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_review_event",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_standing_order",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_training",
+      "evidence": null
+    }
+  ],
+  "chain": "insufficient procedural margin & operator unanticipated SG level shrink [cause TBD] -> SG #1 level drops below 27.4% NR actuation setpoint -> automatic EFAS Trains A/B and RPS reactor trip actuation -> EFW restores SG level, EFAS reset manually",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code not provided in FORM-366 FIELDS (TBD/provisional per schema rule 4). Two parallel root failure modes (procedural margin inadequacy and operator anticipation gap) both feed the SG level drop that triggered the actuation. No previous similar occurrences reported ('None'), so no stub LER/SIMILAR_TO edge created. No distinct backup system identified as operable during the event beyond the EFW system itself performing as designed; no BACKED_UP_BY edge asserted since no separate backup system was described as available. Block 13 not populated in source fields (empty array)."
+}

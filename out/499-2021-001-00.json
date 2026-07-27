@@ -1,0 +1,353 @@
+{
+  "ler_number": "499-2021-001-00",
+  "identity": {
+    "accession_number": "ML21252A756",
+    "docket": "05000499",
+    "plant_name": "South Texas",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2021-07-02",
+    "report_date": "2021-09-09",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "operability test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Condition Prohibited by Technical Specifications Due to Inoperable Containment Isolation Valve"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "D",
+      "system": "Wl",
+      "component": "ISV",
+      "manufacturer": "Valtek",
+      "reportable": null
+    }
+  ],
+  "cause": {
+    "proximate_text": "the valve stem was seated in the marriage block short, shortening the valve stroke and not allowing the plug to contact the valve seat",
+    "cause_code": "D",
+    "category": "Defective Procedure",
+    "theme": "Vendor/maintenance procedure inadequacy for actuator stroke adjustment and post-maintenance testing",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 499-2021-006-00",
+      "properties": {
+        "match_key": "LER:499-2021-006-00"
+      },
+      "type": "LER",
+      "key": "499-2021-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:499-2021-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "South Texas Unit 2",
+      "properties": {
+        "match_key": "Unit:05000499",
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000499",
+      "match_key": "Unit:05000499"
+    },
+    {
+      "id": "cause",
+      "display_name": "Defective Procedure (D)",
+      "properties": {
+        "match_key": "Cause:Defective Procedure"
+      },
+      "type": "Cause",
+      "cause_code": "D",
+      "category": "Defective Procedure",
+      "theme": "Vendor/maintenance procedure inadequacy for actuator stroke adjustment and post-maintenance testing",
+      "proximate_text": "the valve stem was seated in the marriage block short, shortening the valve stroke and not allowing the plug to contact the valve seat",
+      "provisional": false,
+      "match_key": "Cause:Defective Procedure"
+    },
+    {
+      "id": "sys_wl",
+      "display_name": "Steam Generator Blowdown System",
+      "properties": {
+        "match_key": "System:WL"
+      },
+      "type": "System",
+      "eiis_code": "WL",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "closed system; outside containment isolation",
+      "match_key": "System:WL"
+    },
+    {
+      "id": "c_isv",
+      "display_name": "Steam Generator 2D Blowdown Outside Containment Isolation Valve FV-4150",
+      "properties": {
+        "match_key": "Component:ISV|FV-4150"
+      },
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": "FV-4150",
+      "model": null,
+      "manufacturer_code": "Valtek",
+      "inferred_code": false,
+      "match_key": "Component:ISV|FV-4150"
+    },
+    {
+      "id": "c_actuator",
+      "display_name": "Valve actuator",
+      "properties": {
+        "match_key": "Component:valve-actuator"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:valve-actuator"
+    },
+    {
+      "id": "fm_vendor_doc",
+      "display_name": "Vendor technical document instructions inadequate with actuator installed on valve",
+      "properties": {
+        "match_key": "FailureMode:vendor-doc-inadequate"
+      },
+      "type": "FailureMode",
+      "description": "Vendor Technical Document work instructions do not work as written when leaving the actuator installed during actuator disassembly.",
+      "match_key": "FailureMode:vendor-technical-document-instructions-inadequate-with-actuator-installed-on-valve"
+    },
+    {
+      "id": "fm_stroke_short",
+      "display_name": "Valve stem seated short in marriage block, shortening actuator stroke",
+      "properties": {
+        "match_key": "FailureMode:stroke-short"
+      },
+      "type": "FailureMode",
+      "description": "The valve stem was screwed out three turns from the marriage block during actuator overhaul, adjusting stroke such that the valve plug did not contact the seat.",
+      "match_key": "FailureMode:valve-stem-seated-short-in-marriage-block-shortening-actuator-stroke"
+    },
+    {
+      "id": "fm_pmt_gap",
+      "display_name": "Post-maintenance testing lacked guidance to verify plug fully seated",
+      "properties": {
+        "match_key": "FailureMode:pmt-gap"
+      },
+      "type": "FailureMode",
+      "description": "Post-Maintenance Testing did not include guidance to ensure valve plug was fully seated.",
+      "match_key": "FailureMode:post-maintenance-testing-lacked-guidance-to-verify-plug-fully-seated"
+    },
+    {
+      "id": "fm_indicator_assumption",
+      "display_name": "Position indicator verification test assumes local indication reflects internal valve position",
+      "properties": {
+        "match_key": "FailureMode:indicator-assumption"
+      },
+      "type": "FailureMode",
+      "description": "The valve remote position indicator verification test procedure assumes the local valve position indication reflects the actual (internal) valve position.",
+      "match_key": "FailureMode:position-indicator-verification-test-assumes-local-indication-reflects-internal-valve-position"
+    },
+    {
+      "id": "fm_plug_not_seated",
+      "display_name": "Valve plug not contacting seat / inadequate isolation",
+      "properties": {
+        "match_key": "FailureMode:plug-not-seated"
+      },
+      "type": "FailureMode",
+      "description": "Local valve indication showed closed but flow across the valve only reduced from about 36 klb/hr to about 33 klb/hr; craft identified valve was not making contact with the valve seat.",
+      "match_key": "FailureMode:valve-plug-not-contacting-seat-inadequate-isolation"
+    },
+    {
+      "id": "cons_inop",
+      "display_name": "Containment isolation valve FV-4150 inoperable / TS 3.6.3 required action not met",
+      "properties": {
+        "match_key": "Consequence:fv-4150-inoperable"
+      },
+      "type": "Consequence",
+      "start": "2021-03-29",
+      "end": "2021-07-03T05:01",
+      "duration": "96 days",
+      "tz": null,
+      "match_key": "Consequence:containment-isolation-valve-fv-4150-inoperable-ts-3-6-3-required-action-not-met"
+    },
+    {
+      "id": "ca_revise_vtd",
+      "display_name": "Revise Vendor Technical Document reassembly instructions for FV-4150 actuator",
+      "properties": {
+        "match_key": "CorrectiveAction:revise-vendor-technical-document"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-vendor-technical-document-reassembly-instructions-for-fv-4150-actuator"
+    },
+    {
+      "id": "ca_revise_mwi",
+      "display_name": "Revise Maintenance Work Instructions to add post-maintenance valve diagnostic testing and seating/indication verification",
+      "properties": {
+        "match_key": "CorrectiveAction:revise-maintenance-work-instructions"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-maintenance-work-instructions-to-add-post-maintenance-valve-diagnostic-testing-and-seating-indication-verification"
+    },
+    {
+      "id": "mfr_valtek",
+      "display_name": "Valtek",
+      "properties": {
+        "match_key": "Manufacturer:Valtek"
+      },
+      "type": "Manufacturer",
+      "code": "Valtek",
+      "match_key": "Manufacturer:Valtek"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion",
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_gdc57",
+      "display_name": "General Design Criteria 57 - Closed Systems Isolation Valves",
+      "properties": {
+        "type": "analysis-basis",
+        "match_key": "RegulatoryReference:gdc-57"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:general-design-criteria-57-closed-systems-isolation-valves"
+    },
+    {
+      "id": "rr_ts363",
+      "display_name": "Technical Specification 3.6.3",
+      "properties": {
+        "type": "license-basis",
+        "match_key": "RegulatoryReference:ts-3-6-3"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:technical-specification-3-6-3"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts363",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_wl",
+      "evidence": null
+    },
+    {
+      "source": "c_isv",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_valtek",
+      "evidence": null
+    },
+    {
+      "source": "c_actuator",
+      "relation": "PART_OF",
+      "target": "c_isv",
+      "evidence": null
+    },
+    {
+      "source": "fm_vendor_doc",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_vendor_doc",
+      "relation": "LEADS_TO",
+      "target": "fm_stroke_short",
+      "evidence": null
+    },
+    {
+      "source": "fm_stroke_short",
+      "relation": "LEADS_TO",
+      "target": "fm_pmt_gap",
+      "evidence": null
+    },
+    {
+      "source": "fm_stroke_short",
+      "relation": "LEADS_TO",
+      "target": "fm_indicator_assumption",
+      "evidence": null
+    },
+    {
+      "source": "fm_pmt_gap",
+      "relation": "LEADS_TO",
+      "target": "fm_plug_not_seated",
+      "evidence": null
+    },
+    {
+      "source": "fm_indicator_assumption",
+      "relation": "LEADS_TO",
+      "target": "fm_plug_not_seated",
+      "evidence": null
+    },
+    {
+      "source": "fm_plug_not_seated",
+      "relation": "LEADS_TO",
+      "target": "cons_inop",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_revise_vtd",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_revise_mwi",
+      "evidence": null
+    }
+  ],
+  "chain": "vendor technical document instructions inadequate with actuator installed [cause D] -> valve stem seated short in marriage block, shortening stroke -> (PMT lacked seating verification guidance / position-indicator test assumed local indication reflected internal position) -> valve plug not contacting seat / inadequate isolation -> containment isolation valve FV-4150 inoperable for 96 days [no backups modeled; closed system, no open pathway to containment]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "No BACKED_UP_BY edges: the valve is a closed-system outside containment isolation valve with no alternate isolation path stated as operable during the event; the narrative emphasizes that no open pathway existed rather than naming a backup system. Three parallel procedural/cause factors (vendor doc, PMT gap, indicator assumption) are modeled as distinct FailureMode nodes per rule 5; only the originating vendor-document failure is linked CAUSED_BY to the Cause node since it is the root trigger during the March 2021 actuator overhaul. Event discovered 96 days after the undetected maintenance error, during a subsequent quarterly surveillance test."
+}

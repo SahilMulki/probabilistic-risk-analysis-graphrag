@@ -1,0 +1,377 @@
+{
+  "ler_number": "336-2021-002-00",
+  "identity": {
+    "accession_number": "ML22011A160",
+    "docket": "05000336",
+    "plant_name": "Millstone",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2021-11-06",
+    "report_date": "2022-01-05",
+    "operating_mode": "1",
+    "power_level": 0,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Failed Check Valve Resulting in Unnalyzed and Operation Prohibited by Technical Specifications"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(ii)(B)",
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "B",
+      "system": "SB",
+      "component": "V",
+      "manufacturer": "A585",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The check valve disc was chattering which caused mechanical damage.",
+    "cause_code": "B",
+    "category": "Design/Manufacturing/Installation",
+    "theme": "check valve disc chatter leading to disc separation from arm",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 336-2021-021-00",
+      "properties": {},
+      "type": "LER",
+      "key": "336-2021-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:336-2021-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Millstone Unit 2",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000336",
+      "match_key": "Unit:05000336"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Manufacturing/Installation (B)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "B",
+      "category": "Design/Manufacturing/Installation",
+      "theme": "check valve disc chatter leading to disc separation from arm",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Design/Manufacturing/Installation"
+    },
+    {
+      "id": "sys_sb",
+      "display_name": "Main Steam",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SB"
+    },
+    {
+      "id": "c_ms48",
+      "display_name": "Main steam check valve 2-MS-48",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "V",
+      "identifier": "2-MS-48",
+      "model": null,
+      "manufacturer_code": "A585",
+      "inferred_code": false,
+      "match_key": "Component:V|2-MS-48"
+    },
+    {
+      "id": "c_ms4a",
+      "display_name": "Main steam check valve 2-MS-4A",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "V",
+      "identifier": "2-MS-4A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:V|2-MS-4A"
+    },
+    {
+      "id": "c_tdafw",
+      "display_name": "Turbine-Driven Auxiliary Feedwater Pump",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "TDAFW pump",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:turbine-driven-auxiliary-feedwater-pump"
+    },
+    {
+      "id": "fm_chatter",
+      "display_name": "2-MS-48 disc chattering",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Check valve disc chattered against seat causing mechanical damage over time.",
+      "match_key": "FailureMode:2-ms-48-disc-chattering"
+    },
+    {
+      "id": "fm_disc_separation",
+      "display_name": "Check valve disc separated from disc arm",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Mechanical damage from chattering resulted in the valve disc separating from the disc arm.",
+      "match_key": "FailureMode:check-valve-disc-separated-from-disc-arm"
+    },
+    {
+      "id": "fm_no_reverse_prevention",
+      "display_name": "Check valve unable to prevent reverse steam flow",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "With the disc separated, 2-MS-48 could not reliably prevent reverse flow from the Steam Generator #1 main steam line during a postulated MSLB in the SG #2 line upstream of the MSIVs.",
+      "match_key": "FailureMode:check-valve-unable-to-prevent-reverse-steam-flow"
+    },
+    {
+      "id": "fm_blockage_potential",
+      "display_name": "Potential for separated disc to block steam flow to TDAFW pump",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The separated disc could not be conclusively ruled out as capable of blocking steam flow from SG #2 main steam line through 2-MS-48 to the TDAFW pump.",
+      "match_key": "FailureMode:potential-for-separated-disc-to-block-steam-flow-to-tdafw-pump"
+    },
+    {
+      "id": "cons_unanalyzed",
+      "display_name": "Plant in unanalyzed condition that significantly degrades plant safety",
+      "properties": {
+        "note": "MSLB containment analysis no longer bounding; predicted peak containment pressure would exceed 54 psig design pressure but remain below 102 psig lower bound failure pressure"
+      },
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:plant-in-unanalyzed-condition-that-significantly-degrades-plant-safety"
+    },
+    {
+      "id": "cons_ts_prohibited",
+      "display_name": "Operation/condition prohibited by Technical Specifications",
+      "properties": {
+        "note": "Potential inability to deliver steam to TDAFW pump via 2-MS-48 path could not be conclusively ruled out"
+      },
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:operation-condition-prohibited-by-technical-specifications"
+    },
+    {
+      "id": "ca_repair",
+      "display_name": "Repair valve 2-MS-48 during refueling outage",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:repair-valve-2-ms-48-during-refueling-outage"
+    },
+    {
+      "id": "ca_alt_alignment",
+      "display_name": "Establish alternate system alignment to reduce valve chatter (isolate steam traps, close bypass line)",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:establish-alternate-system-alignment-to-reduce-valve-chatter-isolate-steam-traps-close-bypass-line"
+    },
+    {
+      "id": "ca_ec_redesign",
+      "display_name": "Implement Engineering Change MP2-21-01174 to redesign 2-MS-48 disc retention mechanism",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:implement-engineering-change-mp2-21-01174-to-redesign-2-ms-48-disc-retention-mechanism"
+    },
+    {
+      "id": "ca_cap",
+      "display_name": "Additional corrective action per Corrective Action Program",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:additional-corrective-action-per-corrective-action-program"
+    },
+    {
+      "id": "mfr_a585",
+      "display_name": "Manufacturer A585",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "A585",
+      "match_key": "Manufacturer:A585"
+    },
+    {
+      "id": "rr_5073ii",
+      "display_name": "10 CFR 50.73(a)(2)(ii)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-ii-b"
+    },
+    {
+      "id": "rr_5073i",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_fsar",
+      "display_name": "FSAR Section 14.8.2 MSLB Analyses",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:fsar-section-14-8-2-mslb-analyses"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073ii",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073i",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "c_ms48",
+      "relation": "PART_OF",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "c_ms4a",
+      "relation": "PART_OF",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "fm_chatter",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_chatter",
+      "relation": "LEADS_TO",
+      "target": "fm_disc_separation",
+      "evidence": null
+    },
+    {
+      "source": "fm_disc_separation",
+      "relation": "LEADS_TO",
+      "target": "fm_no_reverse_prevention",
+      "evidence": null
+    },
+    {
+      "source": "fm_disc_separation",
+      "relation": "LEADS_TO",
+      "target": "fm_blockage_potential",
+      "evidence": null
+    },
+    {
+      "source": "fm_no_reverse_prevention",
+      "relation": "LEADS_TO",
+      "target": "cons_unanalyzed",
+      "evidence": null
+    },
+    {
+      "source": "fm_blockage_potential",
+      "relation": "LEADS_TO",
+      "target": "cons_ts_prohibited",
+      "evidence": null
+    },
+    {
+      "source": "cons_ts_prohibited",
+      "relation": "BACKED_UP_BY",
+      "target": "c_ms4a",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_repair",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_alt_alignment",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_ec_redesign",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_cap",
+      "evidence": null
+    },
+    {
+      "source": "c_ms48",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_a585",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_fsar",
+      "evidence": null
+    }
+  ],
+  "chain": "check valve disc chatter [cause B, design/manufacturing/installation] -> mechanical damage -> disc separated from disc arm -> unable to prevent reverse steam flow / potential to block TDAFW steam path -> unanalyzed condition significantly degrading plant safety & TS-prohibited operation [backup: 2-MS-4A steam path to TDAFW pump]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Two consequences modeled separately because they stem from two distinct downstream failure modes (loss of reverse-flow prevention vs. potential blockage of TDAFW steam path) both traced to the same disc-separation failure. 2-MS-4A path is explicitly stated as available/adequate during the event, justifying BACKED_UP_BY; the Appendix R fire scenario discussion involving 2-MS-4B, disconnect switches, and Unit 3 cross-tie power is design-basis/safety-analysis context describing an unlikely compound scenario, not a stated operable backup during this actual event, so it was not modeled as a System/Component node or edge. EIIS section only lists SB and V; TDAFW pump has no EIIS code given so left null."
+}

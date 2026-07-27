@@ -1,0 +1,402 @@
+{
+  "ler_number": "445-2022-001-00",
+  "identity": {
+    "accession_number": "ML22307A292",
+    "docket": "05000445",
+    "plant_name": "Comanche Peak",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2022-09-05",
+    "report_date": "2022-11-03",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Comanche Peak Nuclear Power Plant (CPNPP) Docket No. 50-445 Reactor Trip Due To Turbine Trip Greater Than 50% Power Licensee Event Report 445/22-001-00"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)",
+      "10 CFR 50.73(a)(2)(v)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "B",
+      "system": "TA",
+      "component": "CBL",
+      "manufacturer": "CTC",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The cause of this failure was unwanted chafing of the shaft displacement probe cabling against the turbine pedestal, which led to the failure of the shaft displacement probe... The cause of this failure was inadequate protection of the shaft displacement probe cabling.",
+    "cause_code": "B",
+    "category": "Design/Manufacturing/Installation",
+    "theme": "Inadequate cable routing/protection allowing chafing against pedestal",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 445-2022-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "445-2022-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:445-2022-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Comanche Peak Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000445",
+      "match_key": "Unit:05000445"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Manufacturing/Installation (B)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "B",
+      "category": "Design/Manufacturing/Installation",
+      "theme": "Inadequate cable routing/protection allowing chafing against pedestal",
+      "proximate_text": "The cause of this failure was unwanted chafing of the shaft displacement probe cabling against the turbine pedestal, which led to the failure of the shaft displacement probe... The cause of this failure was inadequate protection of the shaft displacement probe cabling.",
+      "provisional": false,
+      "match_key": "Cause:Design/Manufacturing/Installation"
+    },
+    {
+      "id": "sys_ta",
+      "display_name": "Main Turbine (Turbine-Generator System)",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "TA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "primary failed system",
+      "match_key": "System:TA"
+    },
+    {
+      "id": "sys_rps",
+      "display_name": "Reactor Protection System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "actuated automatically as designed",
+      "match_key": "System:reactor-protection-system"
+    },
+    {
+      "id": "sys_afw",
+      "display_name": "Auxiliary Feedwater System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "actuated automatically as designed",
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "c_probe1",
+      "display_name": "Main Turbine shaft displacement probe, channel 1",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "DET",
+      "identifier": "channel 1",
+      "model": "PRO, part number DP100103-00-06-10-01",
+      "manufacturer_code": "CTC",
+      "inferred_code": false,
+      "match_key": "Component:DET|channel 1"
+    },
+    {
+      "id": "c_cable1",
+      "display_name": "Shaft displacement probe cabling, channel 1",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "CBL",
+      "identifier": "channel 1",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:CBL|channel 1"
+    },
+    {
+      "id": "c_probe2",
+      "display_name": "Main Turbine shaft displacement probe, channel 2",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "DET",
+      "identifier": "channel 2",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:DET|channel 2"
+    },
+    {
+      "id": "fm_chafe",
+      "display_name": "Shaft displacement probe cable chafing against turbine pedestal",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Unwanted chafing of the shaft displacement probe cabling against the turbine pedestal",
+      "match_key": "FailureMode:shaft-displacement-probe-cable-chafing-against-turbine-pedestal"
+    },
+    {
+      "id": "fm_ch2fail",
+      "display_name": "Channel 2 shaft displacement probe previous failure",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Previous failure of the channel 2 shaft displacement probe",
+      "match_key": "FailureMode:channel-2-shaft-displacement-probe-previous-failure"
+    },
+    {
+      "id": "fm_ch1fail",
+      "display_name": "Channel 1 shaft displacement probe failure",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Failure of the channel 1 Main Turbine shaft displacement probe due to cable chafing",
+      "match_key": "FailureMode:channel-1-shaft-displacement-probe-failure"
+    },
+    {
+      "id": "fm_triplogic",
+      "display_name": "Shaft displacement trip logic satisfied",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Combination of channel 1 and channel 2 probe failures satisfied the excessive shaft displacement automatic trip logic",
+      "match_key": "FailureMode:shaft-displacement-trip-logic-satisfied"
+    },
+    {
+      "id": "cons_turbtrip",
+      "display_name": "Automatic Main Turbine trip",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2022-09-05T23:45",
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:automatic-main-turbine-trip"
+    },
+    {
+      "id": "cons_rxtrip",
+      "display_name": "Automatic Reactor trip (>50% power, P-9 unblocked)",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2022-09-05T23:45",
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:automatic-reactor-trip-50-power-p-9-unblocked"
+    },
+    {
+      "id": "cons_afwstart",
+      "display_name": "AFW automatic start on low-low SG level",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2022-09-05T23:45",
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:afw-automatic-start-on-low-low-sg-level"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Troubleshoot and replace all three Unit 1 Main Turbine shaft displacement probes",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:troubleshoot-and-replace-all-three-unit-1-main-turbine-shaft-displacement-probes"
+    },
+    {
+      "id": "ca_defeat",
+      "display_name": "Defeat shaft displacement automatic trip until next refueling outage; establish alternative monitoring",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:defeat-shaft-displacement-automatic-trip-until-next-refueling-outage-establish-alternative-monitoring"
+    },
+    {
+      "id": "ca_mod",
+      "display_name": "Develop and schedule modification to routing/installation of shaft displacement probe cabling to preclude chafing",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:develop-and-schedule-modification-to-routing-installation-of-shaft-displacement-probe-cabling-to-preclude-chafing"
+    },
+    {
+      "id": "ca_procedure",
+      "display_name": "Revise operations procedure with added instructions for resolving Main Turbine digital alarms",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-operations-procedure-with-added-instructions-for-resolving-main-turbine-digital-alarms"
+    },
+    {
+      "id": "mfr_ctc",
+      "display_name": "Connection Technology Center",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "CTC",
+      "match_key": "Manufacturer:CTC"
+    },
+    {
+      "id": "rr_5073_iv_a",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5073_v",
+      "display_name": "10 CFR 50.73(a)(2)(v)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_iv_a",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_v",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ta",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rps",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_afw",
+      "evidence": null
+    },
+    {
+      "source": "c_cable1",
+      "relation": "PART_OF",
+      "target": "c_probe1",
+      "evidence": null
+    },
+    {
+      "source": "fm_chafe",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_chafe",
+      "relation": "LEADS_TO",
+      "target": "fm_ch1fail",
+      "evidence": null
+    },
+    {
+      "source": "fm_ch1fail",
+      "relation": "LEADS_TO",
+      "target": "fm_triplogic",
+      "evidence": null
+    },
+    {
+      "source": "fm_ch2fail",
+      "relation": "LEADS_TO",
+      "target": "fm_triplogic",
+      "evidence": null
+    },
+    {
+      "source": "fm_triplogic",
+      "relation": "LEADS_TO",
+      "target": "cons_turbtrip",
+      "evidence": null
+    },
+    {
+      "source": "cons_turbtrip",
+      "relation": "LEADS_TO",
+      "target": "cons_rxtrip",
+      "evidence": null
+    },
+    {
+      "source": "cons_rxtrip",
+      "relation": "LEADS_TO",
+      "target": "cons_afwstart",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_defeat",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_mod",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procedure",
+      "evidence": null
+    },
+    {
+      "source": "c_probe1",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_ctc",
+      "evidence": null
+    }
+  ],
+  "chain": "inadequate cable protection/routing [cause B] -> cable chafing against turbine pedestal -> channel 1 probe fails (combined with prior channel 2 probe failure) -> shaft displacement trip logic satisfied -> automatic Main Turbine trip -> automatic Reactor trip (P-9 unblocked >50% power) -> AFW automatic start on low-low SG level",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Two probe failures (channel 1 caused by cable chafing; channel 2 previously failed, cause unspecified) jointly satisfied the trip logic - modeled as parallel FailureMode nodes both feeding fm_triplogic. RPS and AFW are consequences of automatic design response, not backups to a failed system (no ECCS/backup relationship applies here - this is a turbine/reactor trip event, not an ECCS inoperability event), so no BACKED_UP_BY edges emitted. No previous similar events per Section VI, so no SIMILAR_TO/stub LER node created."
+}

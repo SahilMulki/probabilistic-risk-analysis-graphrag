@@ -1,0 +1,328 @@
+{
+  "ler_number": "483-2022-002-00",
+  "identity": {
+    "accession_number": "ML22230C934",
+    "docket": "05000483",
+    "plant_name": "Callaway",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2022-06-21",
+    "report_date": "2022-08-18",
+    "operating_mode": null,
+    "power_level": 100,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Containment Spray and Cooling Systems, and a condition which could have prevented fulfillment of the safety function of the Containment Spray System"
+  },
+  "reporting_basis": {
+    "reported_under": [],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The cause of the event was the failure of Operations Technicians to appropriately use human performance event prevention tools prior to operating equipment. Specifically, in restoring the B CS Train from the fill-and-vent operation on May 11, 2022, ENV0127 was left in a locked-open position instead of the appropriate locked-closed position.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "valve mispositioning / human performance error during restoration",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 483-2022-003-00",
+      "properties": {},
+      "type": "LER",
+      "key": "483-2022-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:483-2022-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Callaway Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000483",
+      "match_key": "Unit:05000483"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "valve mispositioning / human performance error during restoration",
+      "proximate_text": "The cause of the event was the failure of Operations Technicians to appropriately use human performance event prevention tools prior to operating equipment. Specifically, in restoring the B CS Train from the fill-and-vent operation on May 11, 2022, ENV0127 was left in a locked-open position instead of the appropriate locked-closed position.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_be_b",
+      "display_name": "Containment Spray System - Train B",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BE",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected train",
+      "match_key": "System:BE"
+    },
+    {
+      "id": "sys_be_a",
+      "display_name": "Containment Spray System - Train A",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BE",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "redundant train; operable except June 1 0346-0601",
+      "match_key": "System:BE"
+    },
+    {
+      "id": "c_env0127",
+      "display_name": "ENV0127, Containment Spray Pump B Recirculation Throttle Valve",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "ENV0127",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:env0127-containment-spray-pump-b-recirculation-throttle-valve"
+    },
+    {
+      "id": "c_pumpb",
+      "display_name": "B Containment Spray Pump",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:b-containment-spray-pump"
+    },
+    {
+      "id": "fm_mispositioned",
+      "display_name": "ENV0127 left locked-open instead of locked-closed during restoration",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "During fill-and-vent restoration on May 11, 2022, restoration steps directed ENV0127 be locked-closed; technicians mistakenly left it locked-open.",
+      "match_key": "FailureMode:env0127-left-locked-open-instead-of-locked-closed-during-restoration"
+    },
+    {
+      "id": "fm_recirc",
+      "display_name": "Continuous recirculation path through open throttle valve degrades pump discharge pressure",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "With ENV0127 locked open, recirculation flow reduced B CS Pump discharge pressure below TS minimum of 250 psig, measured at 225 psig during surveillance test.",
+      "match_key": "FailureMode:continuous-recirculation-path-through-open-throttle-valve-degrades-pump-discharge-pressure"
+    },
+    {
+      "id": "cons_inop_b",
+      "display_name": "B Train Containment Spray System inoperable / TS LCO 3.6.6 not met",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2022-05-23T06:01",
+      "end": "2022-06-21T10:00",
+      "duration": "~29 days",
+      "tz": null,
+      "match_key": "Consequence:b-train-containment-spray-system-inoperable-ts-lco-3-6-6-not-met"
+    },
+    {
+      "id": "cons_concurrent",
+      "display_name": "Both CS trains concurrently inoperable; condition could have prevented safety function fulfillment",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2022-06-01T03:46",
+      "end": "2022-06-01T06:01",
+      "duration": "2:15",
+      "tz": null,
+      "match_key": "Consequence:both-cs-trains-concurrently-inoperable-condition-could-have-prevented-safety-function-fulfillment"
+    },
+    {
+      "id": "ca_reposition",
+      "display_name": "Reposition ENV0127 to locked-closed configuration",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:reposition-env0127-to-locked-closed-configuration"
+    },
+    {
+      "id": "ca_training",
+      "display_name": "Provide training to Operations on SSC positioning requirements, expectations, and tools",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:provide-training-to-operations-on-ssc-positioning-requirements-expectations-and-tools"
+    },
+    {
+      "id": "rr_5073i",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_5073vc",
+      "display_name": "10 CFR 50.73(a)(2)(v)(C)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-c"
+    },
+    {
+      "id": "rr_5073vd",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "rr_tslco366",
+      "display_name": "TS LCO 3.6.6, Containment Spray and Cooling Systems",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-lco-3-6-6-containment-spray-and-cooling-systems"
+    },
+    {
+      "id": "rr_nei9902",
+      "display_name": "NEI 99-02, Revision 7, Regulatory Assessment Performance Indicator Guideline",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "standard/guidance",
+      "match_key": "RegulatoryReference:nei-99-02-revision-7-regulatory-assessment-performance-indicator-guideline"
+    },
+    {
+      "id": "ler_stub_2018001",
+      "display_name": "LER 483-2018-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "483-2018-001-00",
+      "stub": true,
+      "title": "Mispositioning of manual containment isolation valve KAV0118, Service Air Containment Supply Outer Isolation Valve, due to inadequate procedural control",
+      "plant": "Callaway Plant",
+      "match_key": "LER:483-2018-001-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073i",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073vc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073vd",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_be_b",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_be_a",
+      "evidence": null
+    },
+    {
+      "source": "fm_mispositioned",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_mispositioned",
+      "relation": "LEADS_TO",
+      "target": "fm_recirc",
+      "evidence": null
+    },
+    {
+      "source": "fm_recirc",
+      "relation": "LEADS_TO",
+      "target": "cons_inop_b",
+      "evidence": null
+    },
+    {
+      "source": "cons_inop_b",
+      "relation": "LEADS_TO",
+      "target": "cons_concurrent",
+      "evidence": null
+    },
+    {
+      "source": "cons_concurrent",
+      "relation": "MITIGATED_BY",
+      "target": "ca_reposition",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_reposition",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_training",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_tslco366",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_nei9902",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_stub_2018001",
+      "evidence": null
+    }
+  ],
+  "chain": "human performance error (failure to use event-prevention tools) [cause TBD] -> ENV0127 left locked-open during May 11 fill-and-vent restoration -> continuous recirculation degrades B CS Pump discharge pressure below TS minimum -> B Train CS inoperable (TS LCO 3.6.6 not met, ~29 days) -> both A and B trains concurrently inoperable June 1 0346-0601 (could have prevented safety function fulfillment) [A Train otherwise operable throughout]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Plant name, unit, reactor type, and NSS vendor were not populated in FORM-366 FIELDS identity but are unambiguously determinable from the narrative header (Callaway Plant Unit 1, docket 05000483, Westinghouse PWR) and are included for completeness. Cause code and category remain TBD/provisional per FORM-366 FIELDS even though the narrative clearly attributes cause to personnel/human-performance error - per rule 4 the official code governs and is copied verbatim. CR 199900079/EGV0004 event was explicitly determined to have dissimilar causal factors and is not modeled as a SIMILAR_TO stub; CR 201802129/KAV0600 is a Condition Report (not an LER) so also not modeled as an LER stub, only the actual LER 2018-001-00 (KAV0118) qualifies for the stub per rule 9. LER key recorded exactly as stated in narrative: '2018-001-00', with unit digit prefixed as '1-2018-001' per rule 9 convention shown in schema guidance."
+}

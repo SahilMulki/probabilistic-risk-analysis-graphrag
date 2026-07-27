@@ -1,0 +1,220 @@
+{
+  "ler_number": "368--2021-001-00",
+  "identity": {
+    "accession_number": "ML21323A180",
+    "docket": "05000368",
+    "plant_name": "Arkansas Nuclear",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2021-10-01",
+    "report_date": "2021-11-19",
+    "operating_mode": "6",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Non-Compliance with Technical"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "D",
+      "system": "IG",
+      "component": "SPK",
+      "manufacturer": "G077",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The ANO-2 Operations Shutdown Cooling (SDC) Log/Task Checklist however, incorrectly specified a mode of applicability for the audible indication as during fuel movement vice Mode 6. This conflicted with the ANO-2 Technical Specifications. The event cause was determined to be inadequate procedural guidance.",
+    "cause_code": "D",
+    "category": "Defective Procedure",
+    "theme": "procedure mode-applicability mismatch with Tech Spec",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 368-2021-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "368--2021-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:368--2021-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Arkansas Nuclear Unit 2",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000368",
+      "match_key": "Unit:05000368"
+    },
+    {
+      "id": "cause",
+      "display_name": "Defective Procedure (D)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "D",
+      "category": "Defective Procedure",
+      "theme": "procedure mode-applicability mismatch with Tech Spec",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Defective Procedure"
+    },
+    {
+      "id": "sys_ig",
+      "display_name": "Source Range Nuclear Instrumentation",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "IG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:IG"
+    },
+    {
+      "id": "c_spk",
+      "display_name": "Audible Count Speaker/Annunciator (Control Room)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "SPK",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": "G077",
+      "inferred_code": false,
+      "match_key": "Component:SPK"
+    },
+    {
+      "id": "fm_procdefect",
+      "display_name": "SDC Log/Task Checklist specified wrong mode of applicability for audible indication",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Checklist required audible indication check only during fuel movement, rather than throughout Mode 6 as Tech Spec 3.9.2 requires",
+      "match_key": "FailureMode:sdc-log-task-checklist-specified-wrong-mode-of-applicability-for-audible-indication"
+    },
+    {
+      "id": "fm_volume",
+      "display_name": "Control room audible count volume turned down inaudible",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Volume for the audible indication in the control room was turned down to a setting that could not be heard",
+      "match_key": "FailureMode:control-room-audible-count-volume-turned-down-inaudible"
+    },
+    {
+      "id": "cons_noncompliance",
+      "display_name": "Non-compliance with Tech Spec 3.9.2 (audible source range count inaudible in control room)",
+      "properties": {
+        "discovered": "2021-10-01"
+      },
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:non-compliance-with-tech-spec-3-9-2-audible-source-range-count-inaudible-in-control-room"
+    },
+    {
+      "id": "ca_revise",
+      "display_name": "Revise ANO-2 SDC Log/Task Checklist to require audible indication check each shift while in Mode 6",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-ano-2-sdc-log-task-checklist-to-require-audible-indication-check-each-shift-while-in-mode-6"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts392",
+      "display_name": "ANO-2 Technical Specification 3.9.2",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ano-2-technical-specification-3-9-2"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts392",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ig",
+      "evidence": null
+    },
+    {
+      "source": "c_spk",
+      "relation": "PART_OF",
+      "target": "sys_ig",
+      "evidence": null
+    },
+    {
+      "source": "fm_procdefect",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_procdefect",
+      "relation": "LEADS_TO",
+      "target": "fm_volume",
+      "evidence": null
+    },
+    {
+      "source": "fm_volume",
+      "relation": "LEADS_TO",
+      "target": "cons_noncompliance",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_revise",
+      "evidence": null
+    }
+  ],
+  "chain": "inadequate procedural guidance [cause D] -> SDC checklist specified wrong mode of applicability for audible indication check -> control room audible count volume left inaudible -> non-compliance with Tech Spec 3.9.2 discovered",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "No previous similar events reported (narrative states 'None'), so no stub LER/SIMILAR_TO edge emitted. IG (source range nuclear instrumentation) and SPK (speaker/annunciator component) taken from Block 13 coded fields; narrative does not use bracket codes explicitly for SPK but names 'audible counts' hardware consistent with block 13 SPK component code. ADS/ECCS not applicable to this Mode 6 refueling-outage administrative/procedural event."
+}

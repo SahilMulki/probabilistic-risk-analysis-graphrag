@@ -1,0 +1,434 @@
+{
+  "ler_number": "423-2023-006-02",
+  "identity": {
+    "accession_number": "ML24270A029",
+    "docket": "05000423",
+    "plant_name": "Millstone",
+    "unit": 3,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2023-10-20",
+    "report_date": "2024-09-26",
+    "operating_mode": "4",
+    "power_level": null,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "02",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Pressurizer Power Operated Relief Valve Failed to Open During Surveillance Testing Resulting In a Condition Prohibited by Technical Specifications"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The direct cause of the 'B' PORV failure to stroke was determined to be a failed Stellite pilot solenoid operated valve. The steam leakage past the 'B' PORV block valve damaged the Stellite pilot SOV top stem and valve ball assembly. Additionally, Solenoid operated valves containing Stellite or Inconel were not differentiated in the material control system, leading to a Stellite SOV being released to the field for installation.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "material control / configuration management failure allowing non-conforming Stellite SOV to be installed",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 423-2023-006-02",
+      "properties": {},
+      "type": "LER",
+      "key": "423-2023-006-02",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:423-2023-006-02"
+    },
+    {
+      "id": "unit",
+      "display_name": "Millstone Unit 3",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000423",
+      "match_key": "Unit:05000423"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "material control / configuration management failure allowing non-conforming Stellite SOV to be installed",
+      "proximate_text": "The direct cause of the 'B' PORV failure to stroke was determined to be a failed Stellite pilot solenoid operated valve. The steam leakage past the 'B' PORV block valve damaged the Stellite pilot SOV top stem and valve ball assembly. Additionally, Solenoid operated valves containing Stellite or Inconel were not differentiated in the material control system, leading to a Stellite SOV being released to the field for installation.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_ab",
+      "display_name": "Reactor Coolant System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "AB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:AB"
+    },
+    {
+      "id": "sys_rhr",
+      "display_name": "Residual Heat Removal",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BO",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; operable",
+      "match_key": "System:BO"
+    },
+    {
+      "id": "c_porv_b",
+      "display_name": "'B' Pressurizer PORV",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "3RCS*PCV456",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:b-pressurizer-porv"
+    },
+    {
+      "id": "c_porv_a",
+      "display_name": "'A' Pressurizer PORV",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "3RCS*PCV455A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:a-pressurizer-porv"
+    },
+    {
+      "id": "c_sov",
+      "display_name": "Pilot Solenoid Operated Valve",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "PSV",
+      "identifier": "S/N K72047-00-0006",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:PSV|S/N K72047-00-0006"
+    },
+    {
+      "id": "c_block_b",
+      "display_name": "'B' PORV Block Valve",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "3RCS*MV8000B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:b-porv-block-valve"
+    },
+    {
+      "id": "c_rhr_relief",
+      "display_name": "RHR Suction Relief Valves",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:rhr-suction-relief-valves"
+    },
+    {
+      "id": "fm_matctrl",
+      "display_name": "Material control processes failed to differentiate Stellite vs. Inconel SOVs",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "New material number not assigned to modified SOVs; drawings/BOM not updated, preventing distinction between preferred (Inconel) and non-preferred (Stellite) parts.",
+      "match_key": "FailureMode:material-control-processes-failed-to-differentiate-stellite-vs-inconel-sovs"
+    },
+    {
+      "id": "fm_stellite_installed",
+      "display_name": "Original Stellite SOV inadvertently returned to service",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Blocked-stock Stellite SOV (S/N K72047-00-0006), never refurbished with Inconel parts, was pulled and installed in the 'B' PORV during the 3R21 outage instead of being scrapped/replaced.",
+      "match_key": "FailureMode:original-stellite-sov-inadvertently-returned-to-service"
+    },
+    {
+      "id": "fm_leak",
+      "display_name": "'B' PORV leakage past block valve",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "PORV began leaking August 17, 2022; isolated by closing block valve MV8000B on August 19, 2022, but leakage continued past the isolation valve throughout the cycle.",
+      "match_key": "FailureMode:b-porv-leakage-past-block-valve"
+    },
+    {
+      "id": "fm_erosion",
+      "display_name": "Steam erosion of SOV top stem assembly and valve ball",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Gross leakage caused steam erosion of the override top stem assembly and valve ball, degrading the Stellite pilot SOV.",
+      "match_key": "FailureMode:steam-erosion-of-sov-top-stem-assembly-and-valve-ball"
+    },
+    {
+      "id": "fm_sov_fail",
+      "display_name": "Pilot SOV unable to lift",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Erosion damage prevented the Stellite pilot solenoid operated valve from lifting to provide the main body PORV the required pressure differential to stroke.",
+      "match_key": "FailureMode:pilot-sov-unable-to-lift"
+    },
+    {
+      "id": "cons_porv",
+      "display_name": "'B' PORV failed to stroke open / declared inoperable beyond TS allowed outage time",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2022-08-17",
+      "end": "2023-10-20",
+      "duration": "greater than 72-hour TS allowed outage time",
+      "tz": null,
+      "match_key": "Consequence:b-porv-failed-to-stroke-open-declared-inoperable-beyond-ts-allowed-outage-time"
+    },
+    {
+      "id": "ca_replace_b",
+      "display_name": "Replace 'B' PORV with rebuilt main valve and new Inconel SOV",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-b-porv-with-rebuilt-main-valve-and-new-inconel-sov"
+    },
+    {
+      "id": "ca_replace_a",
+      "display_name": "Replace 'A' PORV with rebuilt main valve and new Inconel SOV",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-a-porv-with-rebuilt-main-valve-and-new-inconel-sov"
+    },
+    {
+      "id": "ca_replace_spare",
+      "display_name": "Replace spare PORV SOV with new Inconel SOV",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-spare-porv-sov-with-new-inconel-sov"
+    },
+    {
+      "id": "ca_material_number",
+      "display_name": "Assign unique material number to Inconel SOVs",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:assign-unique-material-number-to-inconel-sovs"
+    },
+    {
+      "id": "ca_supply_chain",
+      "display_name": "Update supply chain procedures to require unique material numbers for material changes",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:update-supply-chain-procedures-to-require-unique-material-numbers-for-material-changes"
+    },
+    {
+      "id": "ca_block_stellite",
+      "display_name": "Place all Stellite SOVs into blocked stock",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:place-all-stellite-sovs-into-blocked-stock"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts_3_4_4",
+      "display_name": "TS 3.4.4 (PORVs and Block Valves)",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ts-3-4-4-porvs-and-block-valves"
+    },
+    {
+      "id": "rr_ts_3_4_9_3",
+      "display_name": "TS 3.4.9.3 (Cold Overpressure Protection)",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ts-3-4-9-3-cold-overpressure-protection"
+    },
+    {
+      "id": "rr_fsar15",
+      "display_name": "FSAR Chapter 15",
+      "properties": {
+        "type": "analysis-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:fsar-chapter-15"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts_3_4_4",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts_3_4_9_3",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ab",
+      "evidence": null
+    },
+    {
+      "source": "c_porv_b",
+      "relation": "PART_OF",
+      "target": "sys_ab",
+      "evidence": null
+    },
+    {
+      "source": "c_sov",
+      "relation": "PART_OF",
+      "target": "c_porv_b",
+      "evidence": null
+    },
+    {
+      "source": "fm_matctrl",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_matctrl",
+      "relation": "LEADS_TO",
+      "target": "fm_stellite_installed",
+      "evidence": null
+    },
+    {
+      "source": "fm_stellite_installed",
+      "relation": "LEADS_TO",
+      "target": "fm_leak",
+      "evidence": null
+    },
+    {
+      "source": "fm_leak",
+      "relation": "LEADS_TO",
+      "target": "fm_erosion",
+      "evidence": null
+    },
+    {
+      "source": "fm_erosion",
+      "relation": "LEADS_TO",
+      "target": "fm_sov_fail",
+      "evidence": null
+    },
+    {
+      "source": "fm_sov_fail",
+      "relation": "LEADS_TO",
+      "target": "cons_porv",
+      "evidence": null
+    },
+    {
+      "source": "cons_porv",
+      "relation": "BACKED_UP_BY",
+      "target": "c_porv_a",
+      "evidence": null
+    },
+    {
+      "source": "cons_porv",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_rhr",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_b",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_a",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_spare",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_material_number",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_supply_chain",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_block_stellite",
+      "evidence": null
+    }
+  ],
+  "chain": "material control process failed to differentiate Stellite vs. Inconel SOVs [cause TBD] -> non-conforming Stellite SOV installed in 'B' PORV -> PORV leakage past block valve -> steam erosion of SOV stem/ball -> pilot SOV unable to lift -> 'B' PORV fails to stroke, inoperable beyond TS AOT [backups: 'A' PORV, RHR suction relief valves]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code is TBD/provisional per FORM-366 fields; category left as 'provisional' though narrative points to a material-control/configuration-management root cause spanning back to 2002. LER number constructed from docket-year-sequence-revision fields (423-2023-006-02) since 'ler_number' field not separately provided. RHR suction relief valves referenced as component under RHR system per TS 3.4.9.3 discussion; RHR itself modeled as backup system since it was in operation and credited for decay heat removal/overpressure protection during the event. FSAR Chapter 15 discussion is design/safety-analysis context (PORVs not credited for peak pressure mitigation) -- captured only as a RegulatoryReference, not as System nodes, per rule 6. No PART_OF edge from block valve or RHR relief valves to systems since no explicit containment language for those specific edges was quoted for use here beyond the ones asserted. Previous-occurrence section explicitly states no similar events in the last 3 years, so no stub LER/SIMILAR_TO edge is created."
+}

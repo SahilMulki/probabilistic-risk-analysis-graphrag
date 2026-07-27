@@ -1,0 +1,465 @@
+{
+  "ler_number": "321-2025-002-00",
+  "identity": {
+    "accession_number": "ML25353A533",
+    "docket": "05000321",
+    "plant_name": "Hatch",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2025-10-22",
+    "report_date": "2025-12-19",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Reactor Protection System Instrumentation for Turbine Control Valve Fast Closure Inoperable"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)",
+      "10 CFR 50.73(a)(2)(v)(A)",
+      "10 CFR 50.73(a)(2)(vii)",
+      "10 CFR 50.73(a)(2)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "E",
+      "system": "TG",
+      "component": "PS",
+      "manufacturer": "S079",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The failures of the TCV RPS pressure switches are attributed to elevated ambient temperatures which degraded EHC oil locally at the pressure switches. The degraded EHC oil prevented the TCV Fast Acting Solenoid (FAS) from fully shuttling which inhibited depressurization of the RPS pressure switch sensing line when the TCVs actuated.",
+    "cause_code": "E",
+    "category": "Management/QA Deficiency",
+    "theme": "Elevated ambient temperature degraded EHC oil causing solenoid sticking",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 321-2025-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "321-2025-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:321-2025-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Hatch Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000321",
+      "match_key": "Unit:05000321"
+    },
+    {
+      "id": "cause",
+      "display_name": "Management/QA Deficiency (E)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "E",
+      "category": "Management/QA Deficiency",
+      "theme": "Elevated ambient temperature degraded EHC oil causing solenoid sticking",
+      "proximate_text": "The failures of the TCV RPS pressure switches are attributed to elevated ambient temperatures which degraded EHC oil locally at the pressure switches. The degraded EHC oil prevented the TCV Fast Acting Solenoid (FAS) from fully shuttling which inhibited depressurization of the RPS pressure switch sensing line when the TCVs actuated.",
+      "provisional": false,
+      "match_key": "Cause:Management/QA Deficiency"
+    },
+    {
+      "id": "sys_jc",
+      "display_name": "Reactor Protection System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JC"
+    },
+    {
+      "id": "sys_tg",
+      "display_name": "Electrohydraulic Control",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "TG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:TG"
+    },
+    {
+      "id": "c_ps",
+      "display_name": "TCV Fast Closure RPS Pressure Switches",
+      "properties": {
+        "count": 3
+      },
+      "type": "Component",
+      "eiis_code": "PS",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": "S079",
+      "inferred_code": false,
+      "match_key": "Component:PS"
+    },
+    {
+      "id": "c_fcv",
+      "display_name": "Turbine Control Valve",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "FCV",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:FCV"
+    },
+    {
+      "id": "c_sol",
+      "display_name": "TCV Fast Acting Solenoid",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "SOL",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:SOL"
+    },
+    {
+      "id": "c_isv",
+      "display_name": "Turbine Stop Valve RPS instrumentation",
+      "properties": {
+        "role": "backup; operable"
+      },
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:ISV"
+    },
+    {
+      "id": "fm_temp",
+      "display_name": "Elevated ambient temperature degraded EHC oil",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Elevated ambient temperatures locally degraded EHC oil at the pressure switches.",
+      "match_key": "FailureMode:elevated-ambient-temperature-degraded-ehc-oil"
+    },
+    {
+      "id": "fm_solenoid",
+      "display_name": "TCV Fast Acting Solenoid failed to fully shuttle",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Degraded EHC oil prevented the TCV Fast Acting Solenoid from fully shuttling.",
+      "match_key": "FailureMode:tcv-fast-acting-solenoid-failed-to-fully-shuttle"
+    },
+    {
+      "id": "fm_sensingline",
+      "display_name": "RPS pressure switch sensing line failed to depressurize",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Sensing line did not depressurize when TCVs actuated because the solenoid did not fully shuttle.",
+      "match_key": "FailureMode:rps-pressure-switch-sensing-line-failed-to-depressurize"
+    },
+    {
+      "id": "fm_pswitch",
+      "display_name": "TCV RPS pressure switches unable to generate reactor trip signal",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Pressure switches were unable to generate the RPS reactor trip signal on low EHC oil pressure as required.",
+      "match_key": "FailureMode:tcv-rps-pressure-switches-unable-to-generate-reactor-trip-signal"
+    },
+    {
+      "id": "cons_inop",
+      "display_name": "TCV RPS pressure switches inoperable longer than allowed by TS",
+      "properties": {
+        "note": "Three pressure switches failed TS SRs on 4/5/2025 and 4/6/2025; one failed SR again on 12/17/2025; discovered via past operability evaluation on 10/22/2025"
+      },
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:tcv-rps-pressure-switches-inoperable-longer-than-allowed-by-ts"
+    },
+    {
+      "id": "ca_purge",
+      "display_name": "Purge EHC sensing lines",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:purge-ehc-sensing-lines"
+    },
+    {
+      "id": "ca_replace_sol",
+      "display_name": "Replace fast acting solenoid for one TCV",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-fast-acting-solenoid-for-one-tcv"
+    },
+    {
+      "id": "ca_temp_units",
+      "display_name": "Install temporary fluid conditioning units",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:install-temporary-fluid-conditioning-units"
+    },
+    {
+      "id": "ca_sr_freq",
+      "display_name": "Increase TCV surveillance requirement frequency",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:increase-tcv-surveillance-requirement-frequency"
+    },
+    {
+      "id": "ca_insulation",
+      "display_name": "Replace TCV insulation",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-tcv-insulation"
+    },
+    {
+      "id": "ca_replace_all_sol",
+      "display_name": "Replace remaining fast acting and test solenoids",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-remaining-fast-acting-and-test-solenoids"
+    },
+    {
+      "id": "ca_filtration",
+      "display_name": "Implement permanent EHC filtration upgrade",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:implement-permanent-ehc-filtration-upgrade"
+    },
+    {
+      "id": "mfr_s079",
+      "display_name": "Manufacturer S079",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "S079",
+      "match_key": "Manufacturer:S079"
+    },
+    {
+      "id": "rr_5073i",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_5073v",
+      "display_name": "10 CFR 50.73(a)(2)(v)(A)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-a"
+    },
+    {
+      "id": "rr_5073vii",
+      "display_name": "10 CFR 50.73(a)(2)(vii)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-vii"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2"
+    },
+    {
+      "id": "rr_ufsar",
+      "display_name": "UFSAR Chapter 15",
+      "properties": {
+        "type": "analysis-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ufsar-chapter-15"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073i",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073v",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073vii",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_tg",
+      "evidence": null
+    },
+    {
+      "source": "c_ps",
+      "relation": "PART_OF",
+      "target": "sys_jc",
+      "evidence": null
+    },
+    {
+      "source": "fm_temp",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_temp",
+      "relation": "LEADS_TO",
+      "target": "fm_solenoid",
+      "evidence": null
+    },
+    {
+      "source": "fm_solenoid",
+      "relation": "LEADS_TO",
+      "target": "fm_sensingline",
+      "evidence": null
+    },
+    {
+      "source": "fm_sensingline",
+      "relation": "LEADS_TO",
+      "target": "fm_pswitch",
+      "evidence": null
+    },
+    {
+      "source": "fm_pswitch",
+      "relation": "LEADS_TO",
+      "target": "cons_inop",
+      "evidence": null
+    },
+    {
+      "source": "cons_inop",
+      "relation": "BACKED_UP_BY",
+      "target": "c_isv",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_purge",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_sol",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_temp_units",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_sr_freq",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_insulation",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_all_sol",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_filtration",
+      "evidence": null
+    },
+    {
+      "source": "c_ps",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_s079",
+      "evidence": null
+    }
+  ],
+  "chain": "elevated ambient temperature degrades EHC oil [cause E] -> TCV Fast Acting Solenoid fails to fully shuttle -> RPS pressure switch sensing line fails to depressurize -> TCV RPS pressure switches unable to generate reactor trip signal -> TCV RPS pressure switches inoperable beyond TS allowed time [backup: TSV RPS instrumentation operable for Turbine Trip event]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "No previous similar events were identified in the narrative (stated 'None'), so no stub LER/SIMILAR_TO edge was created. Turbine Stop Valve (TSV) RPS instrumentation is modeled as an operable backup because the narrative explicitly states it 'remained operable' during the period the TCV RPS pressure switches were inoperable, and only for the Turbine Trip event scenario (not Generator Load Reject, where no backup existed). Cause code E (Management/QA Deficiency) is copied verbatim per rule 4, despite narrative emphasis on a physical/environmental degradation mechanism."
+}

@@ -1,0 +1,318 @@
+{
+  "ler_number": "461-2021-002-02",
+  "identity": {
+    "accession_number": "ML22308A068",
+    "docket": "05000461",
+    "plant_name": "Clinton",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2021-10-03",
+    "report_date": "2022-11-01",
+    "operating_mode": "5",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "02",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Core Alterations With Source Range Monitor Inoperable Results in Condition Prohibited by Technical Specifications"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)",
+      "10 CFR 50.73(a)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The root cause of this event was the Refuel Senior Reactor Operator (SRO) did not recognize the plant condition change of SRM A being inoperable because the shift turnover and relief procedure did not include a step for the oncoming Refuel SRO to contact the control room for SRM status prior to commencing fuel movement for the shift.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Shift turnover procedure gap - inadequate SRM status verification",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 461-2021-002-02",
+      "properties": {},
+      "type": "LER",
+      "key": "461-2021-002-02",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:461-2021-002-02"
+    },
+    {
+      "id": "unit",
+      "display_name": "Clinton Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000461",
+      "match_key": "Unit:05000461"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Shift turnover procedure gap - inadequate SRM status verification",
+      "proximate_text": "The root cause of this event was the Refuel Senior Reactor Operator (SRO) did not recognize the plant condition change of SRM A being inoperable because the shift turnover and relief procedure did not include a step for the oncoming Refuel SRO to contact the control room for SRM status prior to commencing fuel movement for the shift.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_srm",
+      "display_name": "Source Range Monitor",
+      "properties": {
+        "note": "SRM 'A' monitors North-West core quadrant; instrument type [RIT] per TS 3.3.1.2"
+      },
+      "type": "System",
+      "eiis_code": "IT",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:IT"
+    },
+    {
+      "id": "c_srm_a",
+      "display_name": "Source Range Monitor 'A'",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "RIT",
+      "identifier": "SRM A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:RIT|SRM A"
+    },
+    {
+      "id": "c_fhm",
+      "display_name": "Fuel Handling Machine",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "CF",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:CF"
+    },
+    {
+      "id": "sys_rod",
+      "display_name": "Control Rod",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JD",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JD"
+    },
+    {
+      "id": "fm_no_recognize",
+      "display_name": "Refuel SRO did not recognize SRM A inoperable status",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Shift turnover and relief procedure lacked a step requiring the oncoming Refuel SRO to contact the control room for SRM status prior to commencing fuel movement.",
+      "match_key": "FailureMode:refuel-sro-did-not-recognize-srm-a-inoperable-status"
+    },
+    {
+      "id": "fm_bundle_moved",
+      "display_name": "Fuel bundle placed in monitored quadrant with SRM inoperable",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Fuel bundle placed at position 07-44 in the North-West quadrant while SRM 'A' was inoperable, contrary to TS 3.3.1.2; a second bundle move at 21-36 was also in progress at time of discovery.",
+      "match_key": "FailureMode:fuel-bundle-placed-in-monitored-quadrant-with-srm-inoperable"
+    },
+    {
+      "id": "cons_ts_violation",
+      "display_name": "Core alterations performed in condition prohibited by Technical Specifications",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2021-10-03T09:50",
+      "end": null,
+      "duration": null,
+      "tz": "CDT",
+      "match_key": "Consequence:core-alterations-performed-in-condition-prohibited-by-technical-specifications"
+    },
+    {
+      "id": "ca_procedure",
+      "display_name": "Revise shift turnover and relief procedure to require SRM status check with MCR before fuel movement",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-shift-turnover-and-relief-procedure-to-require-srm-status-check-with-mcr-before-fuel-movement"
+    },
+    {
+      "id": "ca_case_study",
+      "display_name": "Present case study on outage decision making to outage personnel and Reactor Engineers",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:present-case-study-on-outage-decision-making-to-outage-personnel-and-reactor-engineers"
+    },
+    {
+      "id": "ca_training",
+      "display_name": "Train Reactor Engineers on development of fuel move sheets, including examples from this event",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:train-reactor-engineers-on-development-of-fuel-move-sheets-including-examples-from-this-event"
+    },
+    {
+      "id": "ca_review",
+      "display_name": "Review best methods to align with fleet and industry standards for Core Alterations",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:review-best-methods-to-align-with-fleet-and-industry-standards-for-core-alterations"
+    },
+    {
+      "id": "rr_5073ai",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_5073a",
+      "display_name": "10 CFR 50.73(a)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a"
+    },
+    {
+      "id": "rr_ts_3312",
+      "display_name": "TS 3.3.1.2 Instrumentation - Source Range Monitor Instrumentation",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ts-3-3-1-2-instrumentation-source-range-monitor-instrumentation"
+    },
+    {
+      "id": "rr_proc_981101",
+      "display_name": "CPS Procedure 9811.01, Shutdown Margin Determination",
+      "properties": {
+        "type": "standard/guidance"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:cps-procedure-9811-01-shutdown-margin-determination"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073ai",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073a",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_srm",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_fhm",
+      "evidence": null
+    },
+    {
+      "source": "c_srm_a",
+      "relation": "PART_OF",
+      "target": "sys_srm",
+      "evidence": null
+    },
+    {
+      "source": "fm_no_recognize",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_no_recognize",
+      "relation": "LEADS_TO",
+      "target": "fm_bundle_moved",
+      "evidence": null
+    },
+    {
+      "source": "fm_bundle_moved",
+      "relation": "LEADS_TO",
+      "target": "cons_ts_violation",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procedure",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_case_study",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_training",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_review",
+      "evidence": null
+    },
+    {
+      "source": "cons_ts_violation",
+      "relation": "MITIGATED_BY",
+      "target": "rr_proc_981101",
+      "evidence": null
+    }
+  ],
+  "chain": "Shift turnover procedure lacked SRM-status-check step [cause TBD] -> Refuel SRO did not recognize SRM A inoperable -> fuel bundle moved in North-West quadrant with SRM A inoperable -> core alterations performed in condition prohibited by TS 3.3.1.2 (no safety consequence per Shutdown Margin evaluation)",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code and category left TBD/provisional per official form fields (block_13 empty, cause_code TBD). Narrative provides a clear root-cause statement (procedural gap in shift turnover) which is captured in proximate_text/theme but not used to override the official TBD code. TS Action E.1/E.2 were verified met (control rods inserted / core alterations suspended), and Shutdown Margin analysis showed no safety impact -- modeled as mitigating regulatory reference on the consequence rather than a backup system, since no ECCS/mitigating system is described. No component failure per Section G ('Not applicable'); FHM and control rod system included only as involved equipment context per narrative, not as failure sources. No previous similar occurrence found (Section F), so no stub LER/SIMILAR_TO edge created."
+}

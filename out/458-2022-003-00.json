@@ -1,0 +1,426 @@
+{
+  "ler_number": "458-2022-003-00",
+  "identity": {
+    "accession_number": "ML22244A098",
+    "docket": "05000458",
+    "plant_name": "River Bend",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2022-07-04",
+    "report_date": "2022-09-01",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "operability test",
+    "status": "supplement-expected",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "/ 2022-03-00, Division 1 Standby Diesel Generator Speed Sensor Power Supply Failure"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)(A)",
+      "10 CFR 50.73(a)(2)(v)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The direct cause of this event is currently unknown. The RBS troubleshooting plan identified blown fuses internally to both power supplies. The team understood that a blown fuse is not a cause but a symptom and continued to perform preliminary testing on the removed power supplies which produced inconclusive results.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "unresolved dual power-supply fuse failure pending vendor failure analysis",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 458-2022-003-00",
+      "properties": {},
+      "type": "LER",
+      "key": "458-2022-003-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:458-2022-003-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "River Bend Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000458",
+      "match_key": "Unit:05000458"
+    },
+    {
+      "id": "cause",
+      "display_name": "Unknown (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "unresolved dual power-supply fuse failure pending vendor failure analysis",
+      "proximate_text": "The direct cause of this event is currently unknown. The RBS troubleshooting plan identified blown fuses internally to both power supplies. The team understood that a blown fuse is not a cause but a symptom and continued to perform preliminary testing on the removed power supplies which produced inconclusive results.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_ek",
+      "display_name": "Standby Diesel Generator system",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "EK",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "primary; involved (Division 1)",
+      "match_key": "System:EK"
+    },
+    {
+      "id": "sys_id",
+      "display_name": "Emergency Response Information System (ERIS)",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "ID",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:ID"
+    },
+    {
+      "id": "c_dg1a",
+      "display_name": "Division 1 Standby Diesel Generator (EGS-EG1A)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "DG",
+      "identifier": "EGS-EG1A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:DG|EGS-EG1A"
+    },
+    {
+      "id": "c_dg1b",
+      "display_name": "Division 2 Standby Diesel Generator (EGS-EG1B)",
+      "properties": {
+        "role": "backup; operable during event"
+      },
+      "type": "Component",
+      "eiis_code": "DG",
+      "identifier": "EGS-EG1B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:DG|EGS-EG1B"
+    },
+    {
+      "id": "c_ex43a",
+      "display_name": "Speed control power supply EGS-E/EX43A (Dynalco SDC-2000, 125VDC to 24VDC)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "CNV",
+      "identifier": "EGS-E/EX43A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:CNV|EGS-E/EX43A"
+    },
+    {
+      "id": "c_ey43a",
+      "display_name": "Speed control power supply EGS-E/EY43A (Dynalco SDC-2000, 125VDC to 24VDC)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "CNV",
+      "identifier": "EGS-E/EY43A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:CNV|EGS-E/EY43A"
+    },
+    {
+      "id": "c_egsey009",
+      "display_name": "ERIS computer point EGSEY009",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "SI",
+      "identifier": "EGSEY009",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:SI|EGSEY009"
+    },
+    {
+      "id": "fm_fuse_ex43a",
+      "display_name": "Blown fuse in EGS-E/EX43A power supply",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Internal fuse blown in power supply EGS-E/EX43A; timing of failure unknown.",
+      "match_key": "FailureMode:blown-fuse-in-egs-e-ex43a-power-supply"
+    },
+    {
+      "id": "fm_fuse_ey43a",
+      "display_name": "Blown fuse in EGS-E/EY43A power supply",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Internal fuse blown in power supply EGS-E/EY43A; likely occurred 06/08/22 based on ERIS point flatlining.",
+      "match_key": "FailureMode:blown-fuse-in-egs-e-ey43a-power-supply"
+    },
+    {
+      "id": "fm_speedcircuit",
+      "display_name": "Speed control circuitry failure of EGS-EG1A",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Loss of both redundant power supplies rendered the speed control circuit unable to allow field flash and loading of the diesel generator.",
+      "match_key": "FailureMode:speed-control-circuitry-failure-of-egs-eg1a"
+    },
+    {
+      "id": "cons_dg1a_inop",
+      "display_name": "Division 1 Standby Diesel Generator (EGS-EG1A) unavailable/inoperable",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2022-06-08",
+      "end": "2022-07-07",
+      "duration": "approximately 29 days (assessed); declared inoperable 2022-07-04, restored 2022-07-07",
+      "tz": null,
+      "match_key": "Consequence:division-1-standby-diesel-generator-egs-eg1a-unavailable-inoperable"
+    },
+    {
+      "id": "ca_replace_a",
+      "display_name": "Replaced EGS-EG1A power supplies (EGS-E/EX43A and EGS-E/EY43A) with new Phoenix design with external power status indication",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replaced-egs-eg1a-power-supplies-egs-e-ex43a-and-egs-e-ey43a-with-new-phoenix-design-with-external-power-status-indication"
+    },
+    {
+      "id": "ca_replace_b",
+      "display_name": "Replaced EGS-EG1B power supplies (EGS-E/EX43B and EGS-E/EY43B) with new Phoenix design with external power status indication",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replaced-egs-eg1b-power-supplies-egs-e-ex43b-and-egs-e-ey43b-with-new-phoenix-design-with-external-power-status-indication"
+    },
+    {
+      "id": "ca_revise_osp0028",
+      "display_name": "Revised OSP-0028 to include local monitoring of power supply lights once per shift",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revised-osp-0028-to-include-local-monitoring-of-power-supply-lights-once-per-shift"
+    },
+    {
+      "id": "ca_revise_osp0027",
+      "display_name": "Revised OSP-0027 to include monitoring ERIS computer points for DG tachometers once per shift",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revised-osp-0027-to-include-monitoring-eris-computer-points-for-dg-tachometers-once-per-shift"
+    },
+    {
+      "id": "ca_revise_aca",
+      "display_name": "Revise Adverse Condition Analysis to incorporate vendor failure analysis findings",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-adverse-condition-analysis-to-incorporate-vendor-failure-analysis-findings"
+    },
+    {
+      "id": "ca_supplement",
+      "display_name": "Submit supplemental LER with vendor failure analysis findings",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:submit-supplemental-ler-with-vendor-failure-analysis-findings"
+    },
+    {
+      "id": "mfr_dynalco",
+      "display_name": "Dynalco",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": null,
+      "match_key": "Manufacturer:dynalco"
+    },
+    {
+      "id": "mfr_paragon",
+      "display_name": "Paragon (refurbisher)",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": null,
+      "match_key": "Manufacturer:paragon-refurbisher"
+    },
+    {
+      "id": "mfr_phoenix",
+      "display_name": "Phoenix",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": null,
+      "match_key": "Manufacturer:phoenix"
+    },
+    {
+      "id": "rr_5073av",
+      "display_name": "10 CFR 50.73(a)(2)(v)(A)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-a"
+    },
+    {
+      "id": "rr_5073v",
+      "display_name": "10 CFR 50.73(a)(2)(v)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073av",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073v",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ek",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_id",
+      "evidence": null
+    },
+    {
+      "source": "c_dg1a",
+      "relation": "PART_OF",
+      "target": "sys_ek",
+      "evidence": null
+    },
+    {
+      "source": "c_dg1b",
+      "relation": "PART_OF",
+      "target": "sys_ek",
+      "evidence": null
+    },
+    {
+      "source": "c_egsey009",
+      "relation": "PART_OF",
+      "target": "sys_id",
+      "evidence": null
+    },
+    {
+      "source": "c_ex43a",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_dynalco",
+      "evidence": null
+    },
+    {
+      "source": "c_ey43a",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_dynalco",
+      "evidence": null
+    },
+    {
+      "source": "fm_fuse_ex43a",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_fuse_ex43a",
+      "relation": "LEADS_TO",
+      "target": "fm_speedcircuit",
+      "evidence": null
+    },
+    {
+      "source": "fm_fuse_ey43a",
+      "relation": "LEADS_TO",
+      "target": "fm_speedcircuit",
+      "evidence": null
+    },
+    {
+      "source": "fm_speedcircuit",
+      "relation": "LEADS_TO",
+      "target": "cons_dg1a_inop",
+      "evidence": null
+    },
+    {
+      "source": "cons_dg1a_inop",
+      "relation": "BACKED_UP_BY",
+      "target": "c_dg1b",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_a",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_b",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_revise_osp0028",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_revise_osp0027",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_revise_aca",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_supplement",
+      "evidence": null
+    }
+  ],
+  "chain": "unknown root cause [TBD] -> blown fuse in EGS-E/EX43A -> (in parallel) blown fuse in EGS-E/EY43A -> speed control circuitry failure -> EGS-EG1A (Division 1 SDG) declared inoperable [backup: EGS-EG1B available/operable]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code officially TBD/provisional pending vendor (Engine Systems Inc.) failure analysis of both failed Dynalco SDC-2000 power supplies; a supplemental LER is expected. Modeled EGS-E/EX43A and EGS-E/EY43A fuse blowing as two separate parallel FailureMode nodes per rule 5, since narrative explicitly treats them as distinct failures with differing/uncertain timing. No previous similar events cited (narrative states 'None'), so no SIMILAR_TO edge or stub LER created. Division 3 HPCS diesel generator excluded by common-mode evaluation due to differing design — not modeled since it was not involved/backup. Manufacturer nodes for Paragon (refurbisher) and Phoenix (replacement supply vendor) included for context but not linked via MANUFACTURED_BY since narrative doesn't state they manufactured the failed components (Paragon refurbished, Phoenix is the new/replacement component's manufacturer, tied via corrective action text only)."
+}

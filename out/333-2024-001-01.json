@@ -1,0 +1,364 @@
+{
+  "ler_number": "333-2024-001-01",
+  "identity": {
+    "accession_number": "ML24234A140",
+    "docket": "05000333",
+    "plant_name": "FitzPatrick",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2024-04-24",
+    "report_date": "2024-08-21",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Dear Sir or Madam:"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)",
+      "10 CFR 50.73(a)(2)(v)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "Over tightening of the bonnet cap with the gasket installed yielded the thread root and caused uneven compression of the gasket which led to the failed gasket. First contributing cause was work instructions to install a gasket leak repair did not provide adequate detail regarding how to tighten the bonnet cap... Second contributing cause was insufficient technical rigor for installation of the gasket for use in this temporary corrective maintenance.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "inadequate work instructions / technical rigor for temporary gasket repair",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 333-2024-001-01",
+      "properties": {},
+      "type": "LER",
+      "key": "333-2024-001-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:333-2024-001-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "FitzPatrick Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000333",
+      "match_key": "Unit:05000333"
+    },
+    {
+      "id": "cause",
+      "display_name": "Component/Personnel Cause (A)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "inadequate work instructions / technical rigor for temporary gasket repair",
+      "proximate_text": "Over tightening of the bonnet cap with the gasket installed yielded the thread root and caused uneven compression of the gasket which led to the failed gasket.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_ek",
+      "display_name": "Emergency Onsite Power Supply System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "EK",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:EK"
+    },
+    {
+      "id": "sys_la",
+      "display_name": "EDG Lubrication System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "LA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:LA"
+    },
+    {
+      "id": "c_valve",
+      "display_name": "Check valve 93EDG-57B",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "V",
+      "identifier": "93EDG-57B",
+      "model": "92-A",
+      "manufacturer_code": "J036",
+      "inferred_code": false,
+      "match_key": "Component:V|93EDG-57B"
+    },
+    {
+      "id": "c_bonnet",
+      "display_name": "Bonnet cap",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:bonnet-cap"
+    },
+    {
+      "id": "c_gasket",
+      "display_name": "Body-to-bonnet gasket",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:body-to-bonnet-gasket"
+    },
+    {
+      "id": "fm_instructions",
+      "display_name": "Work instructions lacked torque guidance for gasketed joint",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Work planning instruction and technical evaluation did not identify a change to the metal-to-metal tightening standard when installing a gasket as a corrective action on October 11, 2023.",
+      "match_key": "FailureMode:work-instructions-lacked-torque-guidance-for-gasketed-joint"
+    },
+    {
+      "id": "fm_overtighten",
+      "display_name": "Bonnet cap over-tightened during gasket installation",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Bonnet cap was tightened until the leak stopped, using no specific torque guidance for the gasketed joint, yielding the thread root.",
+      "match_key": "FailureMode:bonnet-cap-over-tightened-during-gasket-installation"
+    },
+    {
+      "id": "fm_thread_yield",
+      "display_name": "Bonnet cap thread root yielded",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Continued tightening yielded the bonnet thread root, leading to uneven compression on the gasket.",
+      "match_key": "FailureMode:bonnet-cap-thread-root-yielded"
+    },
+    {
+      "id": "fm_gasket_fail",
+      "display_name": "Gasket failed (cracked/delaminated)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Uneven compression led to eventual gasket failure with cracking of the thread root and gasket damage/delamination.",
+      "match_key": "FailureMode:gasket-failed-cracked-delaminated"
+    },
+    {
+      "id": "fm_oil_leak",
+      "display_name": "Lube oil leak from bonnet cap",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Lube oil sprayed from the top of check valve 93EDG-57B at approximately 60 dpm in standby, estimated 2.3 gpm (138 gph) while running.",
+      "match_key": "FailureMode:lube-oil-leak-from-bonnet-cap"
+    },
+    {
+      "id": "cons_edg_inop",
+      "display_name": "\"B\" EDG subsystem inoperable / TS prohibited condition, both subsystems inoperable concurrently",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2024-04-24T19:48",
+      "end": "2024-04-25T13:00",
+      "duration": "~17:12",
+      "tz": null,
+      "match_key": "Consequence:b-edg-subsystem-inoperable-ts-prohibited-condition-both-subsystems-inoperable-concurrently"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace check valve 93EDG-57B",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-check-valve-93edg-57b"
+    },
+    {
+      "id": "ca_case_study",
+      "display_name": "Create and present teaching/learning case study to Engineering, Maintenance, and Supervisors",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:create-and-present-teaching-learning-case-study-to-engineering-maintenance-and-supervisors"
+    },
+    {
+      "id": "mfr_jenkins",
+      "display_name": "Jenkins Brothers",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "J036",
+      "match_key": "Manufacturer:J036"
+    },
+    {
+      "id": "rr_5073i",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_5073v",
+      "display_name": "10 CFR 50.73(a)(2)(v)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-a"
+    },
+    {
+      "id": "rr_ts383",
+      "display_name": "TS SR 3.8.3.2 (lube oil inventory)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-sr-3-8-3-2-lube-oil-inventory"
+    },
+    {
+      "id": "rr_ts381",
+      "display_name": "TS 3.8.1 (EDG subsystem restoration time)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-3-8-1-edg-subsystem-restoration-time"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073i",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073v",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ek",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_la",
+      "evidence": null
+    },
+    {
+      "source": "c_valve",
+      "relation": "PART_OF",
+      "target": "sys_la",
+      "evidence": null
+    },
+    {
+      "source": "c_bonnet",
+      "relation": "PART_OF",
+      "target": "c_valve",
+      "evidence": null
+    },
+    {
+      "source": "c_gasket",
+      "relation": "PART_OF",
+      "target": "c_bonnet",
+      "evidence": null
+    },
+    {
+      "source": "fm_instructions",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_instructions",
+      "relation": "LEADS_TO",
+      "target": "fm_overtighten",
+      "evidence": null
+    },
+    {
+      "source": "fm_overtighten",
+      "relation": "LEADS_TO",
+      "target": "fm_thread_yield",
+      "evidence": null
+    },
+    {
+      "source": "fm_thread_yield",
+      "relation": "LEADS_TO",
+      "target": "fm_gasket_fail",
+      "evidence": null
+    },
+    {
+      "source": "fm_gasket_fail",
+      "relation": "LEADS_TO",
+      "target": "fm_oil_leak",
+      "evidence": null
+    },
+    {
+      "source": "fm_oil_leak",
+      "relation": "LEADS_TO",
+      "target": "cons_edg_inop",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_case_study",
+      "evidence": null
+    },
+    {
+      "source": "c_valve",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_jenkins",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts383",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts381",
+      "evidence": null
+    }
+  ],
+  "chain": "inadequate work instructions for gasketed joint tightening [cause A] -> bonnet cap over-tightened -> thread root yielded -> gasket compressed unevenly and failed -> lube oil leak from check valve 93EDG-57B -> \"B\" EDG subsystem inoperable / TS-prohibited condition concurrent with \"A\" EDG subsystem outage [backups: \"D\" EDG unit available]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Header title field literally read 'Dear Sir or Madam:' (cover-letter artifact); replaced with a descriptive title synthesized from abstract/narrative per instructions. Cause code/category on FORM-366 were TBD/provisional; block 13 explicitly lists cause code 'A' for the LA/V/J036 row, so cause_code was set to 'A' per block_13 while category retained as 'provisional' since no official category text was given (category field is a copy of the FORM-366 authoritative field, which stated 'provisional'). 'A' EDG subsystem inoperability during testing is mentioned as concurrent context creating the second reportability criterion, not modeled as a separate failure chain since narrative treats it as a planned/known maintenance condition rather than a modeled failure mode. 'D' EDG unit remaining available is stated as available during the event window, modeled as backup only via note in consequence chain; no System/BACKED_UP_BY edge created for it since it's described as a component/unit-level state, not a distinct EIIS system, and 'A' EDG subsystem's operability was NOT stated to remain operable throughout (it was itself inoperable for testing), so no BACKED_UP_BY edge was created for either A subsystem or D unit to avoid violating rule 6's strict operability requirement for the whole window; only textual note captures this nuance."
+}

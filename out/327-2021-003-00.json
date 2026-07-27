@@ -1,0 +1,406 @@
+{
+  "ler_number": "327-2021-003-00",
+  "identity": {
+    "accession_number": "ML21292A181",
+    "docket": "05000327",
+    "plant_name": "Sequoyah",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2021-08-20",
+    "report_date": "2021-10-19",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "and 50-328/2021-003-00, Exceeded Breach Margin Renders Both Trains of the Auxiliary Building Gas Treatment System Inoperable"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)",
+      "10 CFR 50.73(a)(2)(v)",
+      "10 CFR 50.73(a)(2)(v)(C)",
+      "10 CFR 50.73(a)(2)(v)(D)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The cause of the event was miscommunication between the WCC SRO and Maintenance Services personnel on the requirements of the ABSCE breaching procedure, related to the work being performed, resulting in a breach permit not being issued when required.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Miscommunication of breach-permit procedure requirements",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 327-2021-003-00",
+      "properties": {
+        "match_key": "LER:327-2021-003-00"
+      },
+      "type": "LER",
+      "key": "327-2021-003-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:327-2021-003-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Sequoyah Unit 1",
+      "properties": {
+        "match_key": "Unit:05000327",
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000327",
+      "match_key": "Unit:05000327"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {
+        "match_key": "Cause:provisional"
+      },
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Miscommunication of breach-permit procedure requirements",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_nf",
+      "display_name": "Auxiliary Building",
+      "properties": {
+        "match_key": "System:NF"
+      },
+      "type": "System",
+      "eiis_code": "NF",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:NF"
+    },
+    {
+      "id": "sys_vf",
+      "display_name": "Auxiliary Building Gas Treatment System",
+      "properties": {
+        "match_key": "System:VF"
+      },
+      "type": "System",
+      "eiis_code": "VF",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "rendered inoperable (both trains)",
+      "match_key": "System:VF"
+    },
+    {
+      "id": "c_door",
+      "display_name": "ABSCE Boundary Door A118",
+      "properties": {
+        "match_key": "Component:DR|A118"
+      },
+      "type": "Component",
+      "eiis_code": "DR",
+      "identifier": "A118",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:DR|A118"
+    },
+    {
+      "id": "fm_miscomm",
+      "display_name": "WCC SRO incorrectly determined breach permit not required",
+      "properties": {
+        "match_key": "FailureMode:wcc-sro-incorrect-breach-permit-determination"
+      },
+      "type": "FailureMode",
+      "description": "Miscommunication between WCC SRO and Maintenance Services personnel concerning ABSCE breach permit requirements for the work being performed.",
+      "match_key": "FailureMode:wcc-sro-incorrectly-determined-breach-permit-not-required"
+    },
+    {
+      "id": "fm_dooropen",
+      "display_name": "Door A118 left open without breach permit or compensatory measures",
+      "properties": {
+        "match_key": "FailureMode:door-a118-left-open-without-compensatory-measures"
+      },
+      "type": "FailureMode",
+      "description": "ABSCE Door A118 was left open on four occasions between August 18 and 20, 2021, without a breach permit or required compensatory measures.",
+      "match_key": "FailureMode:door-a118-left-open-without-breach-permit-or-compensatory-measures"
+    },
+    {
+      "id": "fm_breachmargin",
+      "display_name": "ABSCE breach margin exceeded",
+      "properties": {
+        "match_key": "FailureMode:absce-breach-margin-exceeded"
+      },
+      "type": "FailureMode",
+      "description": "The open door created a breach of the ABSCE boundary that exceeded the allowed breach margin, rendering the ABSCE boundary inoperable.",
+      "match_key": "FailureMode:absce-breach-margin-exceeded"
+    },
+    {
+      "id": "fm_crane",
+      "display_name": "Crane operations over spent fuel pool not suspended",
+      "properties": {
+        "match_key": "FailureMode:crane-operations-not-suspended"
+      },
+      "type": "FailureMode",
+      "description": "Due to the unknown inoperability of the ABGTS under LCO 3.7.12 Condition E, crane operations with loads over the spent fuel pool were not immediately suspended; loads were taken over the pool on three occasions during new fuel receipt.",
+      "match_key": "FailureMode:crane-operations-over-spent-fuel-pool-not-suspended"
+    },
+    {
+      "id": "cons_abgts",
+      "display_name": "Both trains of ABGTS rendered inoperable",
+      "properties": {
+        "match_key": "Consequence:abgts-both-trains-inoperable"
+      },
+      "type": "Consequence",
+      "start": "2021-08-18T08:10",
+      "end": "2021-08-20T09:05",
+      "duration": "intermittent, longest single breach ~21 minutes",
+      "tz": "EDT",
+      "match_key": "Consequence:both-trains-of-abgts-rendered-inoperable"
+    },
+    {
+      "id": "cons_tsviol",
+      "display_name": "Prohibited crane operation over spent fuel pool (TS violation)",
+      "properties": {
+        "match_key": "Consequence:prohibited-crane-operation-tsviolation"
+      },
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:prohibited-crane-operation-over-spent-fuel-pool-ts-violation"
+    },
+    {
+      "id": "ca_close",
+      "display_name": "Close Door A118",
+      "properties": {
+        "match_key": "CorrectiveAction:close-door-a118"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:close-door-a118"
+    },
+    {
+      "id": "ca_investigate",
+      "display_name": "Prompt human performance investigation",
+      "properties": {
+        "match_key": "CorrectiveAction:prompt-hu-investigation"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:prompt-human-performance-investigation"
+    },
+    {
+      "id": "ca_procedure",
+      "display_name": "Revise ABSCE breaching procedure to clarify exception requirements and breach permit thresholds",
+      "properties": {
+        "match_key": "CorrectiveAction:revise-absce-breaching-procedure"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-absce-breaching-procedure-to-clarify-exception-requirements-and-breach-permit-thresholds"
+    },
+    {
+      "id": "ca_briefing",
+      "display_name": "Brief Operations personnel on ABSCE breaching procedure requirements",
+      "properties": {
+        "match_key": "CorrectiveAction:brief-operations-personnel"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:brief-operations-personnel-on-absce-breaching-procedure-requirements"
+    },
+    {
+      "id": "rr_5073ib",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_5073v",
+      "display_name": "10 CFR 50.73(a)(2)(v)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v"
+    },
+    {
+      "id": "rr_5073vc",
+      "display_name": "10 CFR 50.73(a)(2)(v)(C)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-c"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-c"
+    },
+    {
+      "id": "rr_5073vd",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "LER 327-2018-002-00",
+      "properties": {
+        "match_key": "LER:327-2018-002"
+      },
+      "type": "LER",
+      "key": "327-2018-002-00",
+      "stub": true,
+      "title": "Exceeded breach margin renders both trains of ABGTS inoperable",
+      "plant": "Sequoyah Nuclear Plant Units 1 and 2",
+      "match_key": "LER:327-2018-002-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073ib",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073v",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073vc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073vd",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_nf",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_vf",
+      "evidence": null
+    },
+    {
+      "source": "c_door",
+      "relation": "PART_OF",
+      "target": "sys_nf",
+      "evidence": null
+    },
+    {
+      "source": "fm_miscomm",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_miscomm",
+      "relation": "LEADS_TO",
+      "target": "fm_dooropen",
+      "evidence": null
+    },
+    {
+      "source": "fm_dooropen",
+      "relation": "LEADS_TO",
+      "target": "fm_breachmargin",
+      "evidence": null
+    },
+    {
+      "source": "fm_breachmargin",
+      "relation": "LEADS_TO",
+      "target": "cons_abgts",
+      "evidence": null
+    },
+    {
+      "source": "fm_breachmargin",
+      "relation": "LEADS_TO",
+      "target": "fm_crane",
+      "evidence": null
+    },
+    {
+      "source": "fm_crane",
+      "relation": "LEADS_TO",
+      "target": "cons_tsviol",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_close",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_investigate",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procedure",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_briefing",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    }
+  ],
+  "chain": "miscommunication on ABSCE breach permit requirements [cause TBD] -> Door A118 left open without permit/compensatory measures -> ABSCE breach margin exceeded -> both ABGTS trains inoperable; also -> crane operations over spent fuel pool not suspended -> TS-prohibited condition",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code is TBD/provisional per FORM-366 fields; category left as 'provisional' though narrative clearly attributes cause to human performance/miscommunication (captured in theme and proximate_text). No component failed during the event per Section D/G, so no failed-component nodes were created; Door A118 is modeled as the involved component consistent with the failure chain. Both Unit 1 and Unit 2 (docket 328) are covered by this dual-unit LER per the title, but per FORM-366 identity fields only unit 1/docket 05000327 is specified, so only that unit is modeled. Previous similar LER 327/328-2018-002 modeled as a stub with key exactly as stated in narrative ('327 and 328/2018-002' normalized to '327-2018-002' per the leading-unit-digit convention)."
+}

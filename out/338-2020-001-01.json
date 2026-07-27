@@ -1,0 +1,383 @@
+{
+  "ler_number": "338-2020-001-01",
+  "identity": {
+    "accession_number": "ML20122A056",
+    "docket": "05000338",
+    "plant_name": "North Anna",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2020-02-18",
+    "report_date": "2020-04-21",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Degraded Upper Cylinder Piston Pin Bushing Discovered during Maintenance Activities on Emergency Diesel Generator."
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)(D)",
+      "10 CFR 50.73(a)(2)(i)(B)",
+      "10 CFR 50.73(a)(2)",
+      "10 CFR 50.73(a)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "An inadequate lubrication between the piston pin and piston pin bushing resulted from increased oil flow due to degradation of a connecting rod cooling oil spherical retainer ring.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "isolated mechanical component degradation (spherical retainer ring wear)",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 338-2020-002-01",
+      "properties": {},
+      "type": "LER",
+      "key": "338-2020-001-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:338-2020-001-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "North Anna Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000338",
+      "match_key": "Unit:05000338"
+    },
+    {
+      "id": "cause",
+      "display_name": "Component Failure (X)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "isolated mechanical component degradation (spherical retainer ring wear)",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_ek",
+      "display_name": "Emergency Diesel Generator System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "EK",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "Class 1E onsite power",
+      "match_key": "System:EK"
+    },
+    {
+      "id": "sys_1h_edg",
+      "display_name": "1H Emergency Diesel Generator",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "redundant train, concurrently affected",
+      "match_key": "System:1h-emergency-diesel-generator"
+    },
+    {
+      "id": "c_1j_edg",
+      "display_name": "1J Emergency Diesel Generator",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "DG",
+      "identifier": "01-EE-EG-1J",
+      "model": "38TD8-1/8",
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:DG|01-EE-EG-1J"
+    },
+    {
+      "id": "c_retainer_ring",
+      "display_name": "Connecting rod (small end) aluminum cooling oil spherical retainer ring",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:connecting-rod-small-end-aluminum-cooling-oil-spherical-retainer-ring"
+    },
+    {
+      "id": "c_piston_pin_bushing",
+      "display_name": "Number one upper cylinder piston pin bushing",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:number-one-upper-cylinder-piston-pin-bushing"
+    },
+    {
+      "id": "fm_retainer_degrade",
+      "display_name": "Spherical retainer ring degradation",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Degradation of the connecting rod cooling oil spherical retainer ring resulted in increased oil flow",
+      "match_key": "FailureMode:spherical-retainer-ring-degradation"
+    },
+    {
+      "id": "fm_lube_inadequate",
+      "display_name": "Inadequate lubrication between piston pin and bushing",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Increased oil flow caused inadequate lubrication between the piston pin and piston pin bushing",
+      "match_key": "FailureMode:inadequate-lubrication-between-piston-pin-and-bushing"
+    },
+    {
+      "id": "fm_bushing_degraded",
+      "display_name": "Piston pin bushing degraded / brass shavings generated",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Degradation of the number one upper piston pin bushing, discovered as brass shavings on the upper crankcase",
+      "match_key": "FailureMode:piston-pin-bushing-degraded-brass-shavings-generated"
+    },
+    {
+      "id": "cons_1j_inop",
+      "display_name": "1J EDG inoperable / TS Condition B and concurrent TS Condition I with 1H EDG",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2019-12-16T00:00",
+      "end": "2020-02-26T19:25",
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:1j-edg-inoperable-ts-condition-b-and-concurrent-ts-condition-i-with-1h-edg"
+    },
+    {
+      "id": "ca_replace_bushing",
+      "display_name": "Replace piston pin bushing and associated components",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-piston-pin-bushing-and-associated-components"
+    },
+    {
+      "id": "ca_inspect_others",
+      "display_name": "Inspect 1J EDG lower piston and other upper piston pin bushings (No. 2, 3, 8)",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:inspect-1j-edg-lower-piston-and-other-upper-piston-pin-bushings-no-2-3-8"
+    },
+    {
+      "id": "ca_revise_criteria",
+      "display_name": "Revise elemental analysis wear metal criteria for EDG lubricating oil",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-elemental-analysis-wear-metal-criteria-for-edg-lubricating-oil"
+    },
+    {
+      "id": "ca_owners_group",
+      "display_name": "Present findings to Fairbanks Morse Diesel Owners Group",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:present-findings-to-fairbanks-morse-diesel-owners-group"
+    },
+    {
+      "id": "ca_org_review",
+      "display_name": "Organizational/programmatic review of over-reliance on vendor monitoring criteria",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:organizational-programmatic-review-of-over-reliance-on-vendor-monitoring-criteria"
+    },
+    {
+      "id": "ca_leadership_training",
+      "display_name": "Include over-reliance on vendor monitoring criteria in leadership training",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:include-over-reliance-on-vendor-monitoring-criteria-in-leadership-training"
+    },
+    {
+      "id": "mfr_fbm",
+      "display_name": "Fairbanks Morse",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "F010",
+      "match_key": "Manufacturer:F010"
+    },
+    {
+      "id": "rr_5073a2v_d",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "rr_5073a2i_b",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts381",
+      "display_name": "T.S. 3.8.1 Conditions B and I",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:t-s-3-8-1-conditions-b-and-i"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073a2v_d",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073a2i_b",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts381",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ek",
+      "evidence": null
+    },
+    {
+      "source": "c_1j_edg",
+      "relation": "PART_OF",
+      "target": "sys_ek",
+      "evidence": null
+    },
+    {
+      "source": "c_piston_pin_bushing",
+      "relation": "PART_OF",
+      "target": "c_1j_edg",
+      "evidence": null
+    },
+    {
+      "source": "c_retainer_ring",
+      "relation": "PART_OF",
+      "target": "c_1j_edg",
+      "evidence": null
+    },
+    {
+      "source": "c_1j_edg",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_fbm",
+      "evidence": null
+    },
+    {
+      "source": "fm_retainer_degrade",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_retainer_degrade",
+      "relation": "LEADS_TO",
+      "target": "fm_lube_inadequate",
+      "evidence": null
+    },
+    {
+      "source": "fm_lube_inadequate",
+      "relation": "LEADS_TO",
+      "target": "fm_bushing_degraded",
+      "evidence": null
+    },
+    {
+      "source": "fm_bushing_degraded",
+      "relation": "LEADS_TO",
+      "target": "cons_1j_inop",
+      "evidence": null
+    },
+    {
+      "source": "cons_1j_inop",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_1h_edg",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_bushing",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_inspect_others",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_revise_criteria",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_owners_group",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_org_review",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_leadership_training",
+      "evidence": null
+    }
+  ],
+  "chain": "spherical retainer ring degradation [cause X] -> increased oil flow / inadequate lubrication -> piston pin bushing degraded (brass shavings) -> 1J EDG inoperable, concurrent with 1H EDG outage, TS Condition B/I [backup 1H EDG operable during maintenance]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Block 13 cause column shows 'X' (component failure) per form OCR; official cause_code/category retained as TBD-equivalent 'X'/'provisional' per FORM-366 FIELDS input which stated cause_code TBD/category provisional — used 'X' from block_13 row as best available coded value while keeping category as provisional per authoritative header field. 1H EDG modeled as System (redundant train) since narrative states it was operable during 1J maintenance and its own prior 39.5-hour outage created the concurrent-inoperability condition; no PART_OF asserted between 1H EDG and EK system since not explicitly stated in narrative for that specific unit, though implied by system membership (only explicit containment relationships modeled per PART_OF rule -- 1J EDG and its subcomponents shown explicitly stated as contained)."
+}

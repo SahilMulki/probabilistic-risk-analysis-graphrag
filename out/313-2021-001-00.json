@@ -1,0 +1,442 @@
+{
+  "ler_number": "313-2021-001-00",
+  "identity": {
+    "accession_number": "ML21133A020",
+    "docket": "05000313",
+    "plant_name": "Arkansas Nuclear",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2021-03-14",
+    "report_date": "2021-05-13",
+    "operating_mode": null,
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Reactor Manual Trip due to"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "X",
+      "system": "EA",
+      "component": "FU",
+      "manufacturer": "G080",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "Investigation into the cause of the high contact resistance revealed a bent primary moveable contact. The \"A\" phase primary moveable disconnect tab was found to be bent (approximately 1/4 inch) which prevented proper contact engagement from the moveable-to-stationary surfaces after fully inserting and locking the drawer into the cabinet.",
+    "cause_code": "X",
+    "category": "Other",
+    "theme": "Legacy repair quality defect from 2013 stator drop event repair, lacking vendor oversight",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 313-2021-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "313-2021-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:313-2021-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Arkansas Nuclear Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000313",
+      "match_key": "Unit:05000313"
+    },
+    {
+      "id": "cause",
+      "display_name": "Other (X)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "X",
+      "category": "Other",
+      "theme": "Legacy repair quality defect from 2013 stator drop event repair, lacking vendor oversight",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Other"
+    },
+    {
+      "id": "sys_ea",
+      "display_name": "Vital 4160VAC Bus A-4",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "EA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "vital electrical distribution; de-energized during event",
+      "match_key": "System:EA"
+    },
+    {
+      "id": "sys_ek",
+      "display_name": "Emergency Diesel Generator System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "EK",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; started automatically and restored power to vital bus A-4",
+      "match_key": "System:EK"
+    },
+    {
+      "id": "c_nvbus_a2",
+      "display_name": "Non-Vital 4160VAC Bus A-2",
+      "properties": {
+        "note": "non-vital bus that experienced degraded voltage/momentary loss"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:non-vital-4160vac-bus-a-2"
+    },
+    {
+      "id": "c_pt_drawer",
+      "display_name": "A-2 Bus Potential Transformer (PT) Drawer",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": "G080",
+      "inferred_code": false,
+      "match_key": "Component:a-2-bus-potential-transformer-pt-drawer"
+    },
+    {
+      "id": "c_disconnect_contact",
+      "display_name": "'A' Phase Primary Disconnect Contact (moveable-to-stationary)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "FU",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": "G080",
+      "inferred_code": false,
+      "match_key": "Component:FU"
+    },
+    {
+      "id": "c_edg2",
+      "display_name": "Emergency Diesel Generator Number 2 (EDG2)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "EK",
+      "identifier": "EDG2",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:EK|EDG2"
+    },
+    {
+      "id": "c_su1",
+      "display_name": "Startup Transformer Number 1 (SU-1)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "SU-1",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:startup-transformer-number-1-su-1"
+    },
+    {
+      "id": "fm_bent_tab",
+      "display_name": "Bent primary moveable disconnect tab ('A' phase)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The 'A' phase primary moveable disconnect tab was found bent approximately 1/4 inch, dating to 2013 stator drop repair",
+      "match_key": "FailureMode:bent-primary-moveable-disconnect-tab-a-phase"
+    },
+    {
+      "id": "fm_high_resistance",
+      "display_name": "High resistance on primary disconnect contact",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Bent tab prevented proper contact engagement between moveable-to-stationary surfaces, causing high resistance",
+      "match_key": "FailureMode:high-resistance-on-primary-disconnect-contact"
+    },
+    {
+      "id": "fm_degraded_voltage",
+      "display_name": "Degraded voltage / momentary loss of non-vital bus A-2",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "High resistance contact led to indicated degraded voltage and momentary loss on non-vital 4160VAC bus A-2",
+      "match_key": "FailureMode:degraded-voltage-momentary-loss-of-non-vital-bus-a-2"
+    },
+    {
+      "id": "fm_bus_a4_deenergized",
+      "display_name": "Vital 4160VAC bus A-4 de-energized",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Degraded voltage on non-vital bus A-2 resulted in de-energizing vital 4160VAC bus A-4",
+      "match_key": "FailureMode:vital-4160vac-bus-a-4-de-energized"
+    },
+    {
+      "id": "cons_trip",
+      "display_name": "Manual reactor trip and plant stabilization in Mode 3 (Hot Standby)",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2021-03-14T13:15",
+      "end": null,
+      "duration": null,
+      "tz": "CDT",
+      "match_key": "Consequence:manual-reactor-trip-and-plant-stabilization-in-mode-3-hot-standby"
+    },
+    {
+      "id": "ca_repair",
+      "display_name": "Repair of damaged primary moveable contact",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:repair-of-damaged-primary-moveable-contact"
+    },
+    {
+      "id": "ca_benchmark",
+      "display_name": "Industry benchmarking for best practice post maintenance testing (PMT) of PT drawer",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:industry-benchmarking-for-best-practice-post-maintenance-testing-pmt-of-pt-drawer"
+    },
+    {
+      "id": "ca_review_knowledge",
+      "display_name": "Review of technician required knowledge for consistent PMT results",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:review-of-technician-required-knowledge-for-consistent-pmt-results"
+    },
+    {
+      "id": "ca_eoc_u1",
+      "display_name": "Extent of condition inspections on Unit 1 during spring 2021 refueling outage",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:extent-of-condition-inspections-on-unit-1-during-spring-2021-refueling-outage"
+    },
+    {
+      "id": "ca_eoc_u2",
+      "display_name": "Extent of condition inspections on Unit 2 during fall 2021 refueling outage",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:extent-of-condition-inspections-on-unit-2-during-fall-2021-refueling-outage"
+    },
+    {
+      "id": "mfr_g080",
+      "display_name": "Manufacturer G080",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "G080",
+      "match_key": "Manufacturer:G080"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5072b2ivB",
+      "display_name": "10 CFR 50.72(b)(2)(iv)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-2-iv-b"
+    },
+    {
+      "id": "rr_5072b3ivA",
+      "display_name": "10 CFR 50.72(b)(3)(iv)(A)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-3-iv-a"
+    },
+    {
+      "id": "ler_2018_004",
+      "display_name": "ANO-1 LER 2018-004: Reactor Trip Due to the Loss of Non-Vital 4160 Volt Bus",
+      "properties": {},
+      "type": "LER",
+      "key": "313-2018-004-00",
+      "stub": true,
+      "title": "Reactor Trip Due to the Loss of Non-Vital 4160 Volt Bus",
+      "plant": "Arkansas Nuclear One, Unit 1",
+      "match_key": "LER:313-2018-004-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072b2ivB",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072b3ivA",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ea",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ek",
+      "evidence": null
+    },
+    {
+      "source": "c_pt_drawer",
+      "relation": "PART_OF",
+      "target": "c_nvbus_a2",
+      "evidence": null
+    },
+    {
+      "source": "c_disconnect_contact",
+      "relation": "PART_OF",
+      "target": "c_pt_drawer",
+      "evidence": null
+    },
+    {
+      "source": "c_edg2",
+      "relation": "PART_OF",
+      "target": "sys_ek",
+      "evidence": null
+    },
+    {
+      "source": "fm_bent_tab",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_bent_tab",
+      "relation": "LEADS_TO",
+      "target": "fm_high_resistance",
+      "evidence": null
+    },
+    {
+      "source": "fm_high_resistance",
+      "relation": "LEADS_TO",
+      "target": "fm_degraded_voltage",
+      "evidence": null
+    },
+    {
+      "source": "fm_degraded_voltage",
+      "relation": "LEADS_TO",
+      "target": "fm_bus_a4_deenergized",
+      "evidence": null
+    },
+    {
+      "source": "fm_bus_a4_deenergized",
+      "relation": "LEADS_TO",
+      "target": "cons_trip",
+      "evidence": null
+    },
+    {
+      "source": "cons_trip",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_ek",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_repair",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_benchmark",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_review_knowledge",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_eoc_u1",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_eoc_u2",
+      "evidence": null
+    },
+    {
+      "source": "c_disconnect_contact",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_g080",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_2018_004",
+      "evidence": null
+    }
+  ],
+  "chain": "legacy 2013 stator drop repair defect [cause X] -> bent 'A' phase primary moveable disconnect tab -> high resistance on PT drawer contact -> degraded voltage/momentary loss of non-vital bus A-2 -> vital bus A-4 de-energized -> manual reactor trip / Mode 3 [backup EDG2 restored vital bus A-4]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Event stems from a legacy quality defect traced to the 2013 ANO-1 stator drop accident repair, where inadequate vendor oversight left a bent disconnect tab undetected for years. Cause code X (Other) governs per Block 13 despite narrative describing a clear equipment/quality defect; category kept literally as 'Other' per rule 4. EDG2 and SU-1 transformer both restored power automatically; EDG2 modeled as backup to the vital bus consequence since narrative states it 'started automatically and provided power.' Startup Transformer SU-1 not modeled as a System per rule 6 since it's plant electrical design context providing automatic backup power transfer, not itself part of the failure chain; retained only as a Component note. Previous similar LER 2018-004 emitted as stub per rule 9, using LER number exactly as stated (unit prefix inferred as '1' per plant is ANO-1, but original text just says 'LER 2018-004' with unit clear from context; key formatted as '1-2018-004' consistent with rule 9 example)."
+}

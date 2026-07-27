@@ -1,0 +1,366 @@
+{
+  "ler_number": "265-2024-002-01",
+  "identity": {
+    "accession_number": "ML24304A856",
+    "docket": "05000265",
+    "plant_name": "Quad Cities",
+    "unit": 2,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2024-05-23",
+    "report_date": "2024-10-30",
+    "operating_mode": "1",
+    "power_level": 38,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Turbine Trip and Automatic Scram due to Digital EHC Power Supply Intermittent Failure\" Supplement"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "B",
+      "system": "TG",
+      "component": "RJX",
+      "manufacturer": "G080",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The cause of the event is an intermittent power supply failure that was not recognized as a single point vulnerability due to the diversity of the system... An intermittent failure of the channel <R1> core power supply [RJX] resulted in an erroneous speed demand value being generated.",
+    "cause_code": "B",
+    "category": "Design/Manufacturing/Installation",
+    "theme": "Undetected single-point vulnerability in redundant digital control power supply",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 265-2024-002-01",
+      "properties": {},
+      "type": "LER",
+      "key": "265-2024-002-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:265-2024-002-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Quad Cities Unit 2",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000265",
+      "match_key": "Unit:05000265"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Manufacturing/Installation (B)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "B",
+      "category": "Design/Manufacturing/Installation",
+      "theme": "Undetected single-point vulnerability in redundant digital control power supply",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Design/Manufacturing/Installation"
+    },
+    {
+      "id": "sys_tg",
+      "display_name": "Digital Electro-Hydraulic Control (DEHC / Turbine-Generator Control)",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "TG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:TG"
+    },
+    {
+      "id": "sys_rps",
+      "display_name": "Reactor Protection System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "responded as designed",
+      "match_key": "System:reactor-protection-system"
+    },
+    {
+      "id": "c_trb",
+      "display_name": "Turbine",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "TRB",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:TRB"
+    },
+    {
+      "id": "c_rjx",
+      "display_name": "Channel <R1> Core Power Supply (GE Mark VI Rack Power Supply)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "RJX",
+      "identifier": "R1",
+      "model": "IS2020RKPSG3A",
+      "manufacturer_code": "G080",
+      "inferred_code": false,
+      "match_key": "Component:RJX|R1"
+    },
+    {
+      "id": "fm_pwrfail",
+      "display_name": "Channel R1 core power supply intermittent failure",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Intermittent failure of the channel <R1> core power supply generated an erroneous speed demand value",
+      "match_key": "FailureMode:channel-r1-core-power-supply-intermittent-failure"
+    },
+    {
+      "id": "fm_speedmismatch",
+      "display_name": "Turbine speed vs speed demand mismatch (Speed Difference Trip)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "DEHC logic compared 100% actual speed to 0% erroneous speed demand, exceeding 10% setpoint, generating a Speed Difference Trip and turbine trip signal",
+      "match_key": "FailureMode:turbine-speed-vs-speed-demand-mismatch-speed-difference-trip"
+    },
+    {
+      "id": "fm_turbtrip",
+      "display_name": "Turbine trip signal / stop valve closure",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Turbine trip signal caused turbine stop valve closure, creating a valid reactor protection system signal",
+      "match_key": "FailureMode:turbine-trip-signal-stop-valve-closure"
+    },
+    {
+      "id": "cons_scram",
+      "display_name": "Automatic reactor scram with Group II/III containment isolation actuation",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2024-05-23T22:23",
+      "end": null,
+      "duration": null,
+      "tz": "CST",
+      "match_key": "Consequence:automatic-reactor-scram-with-group-ii-iii-containment-isolation-actuation"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace DEHC power supply and I/O modules for channel <R1>",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-dehc-power-supply-and-i-o-modules-for-channel-r1"
+    },
+    {
+      "id": "ca_setpoint_u2",
+      "display_name": "Change Speed Difference Trip setpoint from 10% to 110% (Unit 2)",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:change-speed-difference-trip-setpoint-from-10-to-110-unit-2"
+    },
+    {
+      "id": "ca_setpoint_u1",
+      "display_name": "Change Speed Difference Trip setpoint for Unit 1 DEHC equivalent",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:change-speed-difference-trip-setpoint-for-unit-1-dehc-equivalent"
+    },
+    {
+      "id": "ca_pm_freq",
+      "display_name": "Increase preventive maintenance frequency for periodic replacement of <R1> power supplies",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:increase-preventive-maintenance-frequency-for-periodic-replacement-of-r1-power-supplies"
+    },
+    {
+      "id": "mfr_ge",
+      "display_name": "General Electric",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "G080",
+      "match_key": "Manufacturer:G080"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_ufsar15",
+      "display_name": "UFSAR Chapter 15",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:ufsar-chapter-15"
+    },
+    {
+      "id": "rr_ufsar6",
+      "display_name": "UFSAR Chapter 6",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:ufsar-chapter-6"
+    },
+    {
+      "id": "rr_nei",
+      "display_name": "NEI 99-02, Revision 7",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "standard/guidance",
+      "match_key": "RegulatoryReference:nei-99-02-revision-7"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "Quad Cities Nuclear Power Station Unit 2 - Turbine trip and automatic reactor scram due to Essential Service System fault causing feedwater heater transient",
+      "properties": {},
+      "type": "LER",
+      "key": "2023-XXX",
+      "stub": true,
+      "title": "Turbine trip and automatic reactor scram due to Essential Service System (ESS) fault causing feedwater heater (FWH) system transient",
+      "plant": "Quad Cities Nuclear Power Station",
+      "match_key": "LER:2023-XXX"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_tg",
+      "evidence": null
+    },
+    {
+      "source": "c_rjx",
+      "relation": "PART_OF",
+      "target": "sys_tg",
+      "evidence": null
+    },
+    {
+      "source": "c_rjx",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_ge",
+      "evidence": null
+    },
+    {
+      "source": "fm_pwrfail",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_pwrfail",
+      "relation": "LEADS_TO",
+      "target": "fm_speedmismatch",
+      "evidence": null
+    },
+    {
+      "source": "fm_speedmismatch",
+      "relation": "LEADS_TO",
+      "target": "fm_turbtrip",
+      "evidence": null
+    },
+    {
+      "source": "fm_turbtrip",
+      "relation": "LEADS_TO",
+      "target": "cons_scram",
+      "evidence": null
+    },
+    {
+      "source": "cons_scram",
+      "relation": "MITIGATED_BY",
+      "target": "sys_rps",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_setpoint_u2",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_setpoint_u1",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_pm_freq",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ufsar15",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ufsar6",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_nei",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    }
+  ],
+  "chain": "undetected single-point vulnerability in DEHC power supply [cause B] -> channel R1 core power supply intermittent failure -> erroneous speed demand causes speed mismatch (Speed Difference Trip) -> turbine trip signal / stop valve closure -> automatic reactor scram with Group II/III containment isolation [mitigated by RPS response as designed]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Supplement (rev 01) to original LER; narrative reflects final root-cause understanding. Component <R1> power supply modeled as RJX per block 13; EHC system design passage (UFSAR 7.2/10.4 mismatch logic) treated as design context, not a separate operative system. Previous occurrence LER number not given in narrative beyond date; stub key approximated as '2023-XXX' since no explicit LER number was stated for the referenced Aug 11, 2023 event."
+}

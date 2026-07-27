@@ -1,0 +1,397 @@
+{
+  "ler_number": "249-2021-001-01",
+  "identity": {
+    "accession_number": "ML22165A204",
+    "docket": "05000249",
+    "plant_name": "Dresden",
+    "unit": 3,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2021-10-16",
+    "report_date": "2022-06-14",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Reactor Scram due to Main Power Transformer Failure"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)",
+      "10 CFR 50.73(a)(2)(iv)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "X",
+      "system": "EL",
+      "component": "XFMR",
+      "manufacturer": "S125",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "sudden, unanticipated, catastrophic failure of the MPT high voltage oil impregnated paper bushing... based on the failure history associated with Trench Condenser Oil Transformer ANSI High Voltage Oil-Impregnated Paper (COTA HV OIP) bushings, the physical characteristics of the catastrophic failure, and the various analyses performed",
+    "cause_code": "X",
+    "category": "Other",
+    "theme": "catastrophic bushing failure of known-defective design",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 249-2021-005-01",
+      "properties": {},
+      "type": "LER",
+      "key": "249-2021-001-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:249-2021-001-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Dresden Unit 3",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000249",
+      "match_key": "Unit:05000249"
+    },
+    {
+      "id": "cause",
+      "display_name": "Other (X)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "X",
+      "category": "Other",
+      "theme": "catastrophic bushing failure of known-defective design",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Other"
+    },
+    {
+      "id": "sys_el",
+      "display_name": "Electrical Distribution / Main Power Transformer",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "EL",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:EL"
+    },
+    {
+      "id": "sys_jc",
+      "display_name": "Reactor Protection System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JC"
+    },
+    {
+      "id": "c_mpt",
+      "display_name": "Main Power Transformer",
+      "properties": {
+        "serial_number": "1731659"
+      },
+      "type": "Component",
+      "eiis_code": "XFMR",
+      "identifier": null,
+      "model": "ELIN / TDQ-A27D9K-99",
+      "manufacturer_code": "S125",
+      "inferred_code": false,
+      "match_key": "Component:XFMR"
+    },
+    {
+      "id": "c_bushing",
+      "display_name": "MPT 'A' phase high voltage bushing (Trench COTA HV OIP)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:mpt-a-phase-high-voltage-bushing-trench-cota-hv-oip"
+    },
+    {
+      "id": "c_arrester",
+      "display_name": "Lightning arrester",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:lightning-arrester"
+    },
+    {
+      "id": "c_cabinet",
+      "display_name": "Control cabinet",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:control-cabinet"
+    },
+    {
+      "id": "c_rods",
+      "display_name": "Control rods",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "AA",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:AA"
+    },
+    {
+      "id": "fm_bushing_fail",
+      "display_name": "MPT high voltage bushing catastrophic failure",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Sudden, unanticipated failure of oil-impregnated paper bushing",
+      "match_key": "FailureMode:mpt-high-voltage-bushing-catastrophic-failure"
+    },
+    {
+      "id": "fm_ground_fault",
+      "display_name": "MPT phase-to-ground fault",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "MPT experienced a phase-to-ground fault",
+      "match_key": "FailureMode:mpt-phase-to-ground-fault"
+    },
+    {
+      "id": "fm_fire",
+      "display_name": "Fire in protected area associated with MPT failure",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Fire not extinguished in less than 60 minutes, leading to Unusual Event declaration",
+      "match_key": "FailureMode:fire-in-protected-area-associated-with-mpt-failure"
+    },
+    {
+      "id": "cons_scram",
+      "display_name": "Automatic reactor protection system actuation / reactor scram",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2021-10-16T04:28",
+      "end": null,
+      "duration": null,
+      "tz": "CDT",
+      "match_key": "Consequence:automatic-reactor-protection-system-actuation-reactor-scram"
+    },
+    {
+      "id": "cons_ue",
+      "display_name": "Unusual Event declared due to fire not extinguished in less than 60 minutes",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2021-10-16T04:28",
+      "end": "2021-10-16T07:09",
+      "duration": null,
+      "tz": "CDT",
+      "match_key": "Consequence:unusual-event-declared-due-to-fire-not-extinguished-in-less-than-60-minutes"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace failed MPT with different design/manufacturer transformer",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-failed-mpt-with-different-design-manufacturer-transformer"
+    },
+    {
+      "id": "ca_donotuse",
+      "display_name": "Designate Trench COTA HV OIP bushings as do-not-use/do-not-procure",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:designate-trench-cota-hv-oip-bushings-as-do-not-use-do-not-procure"
+    },
+    {
+      "id": "ca_cutout",
+      "display_name": "Develop rapid cut-out method for control cabinet power supplies on MPTs, UATs, and RATs",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:develop-rapid-cut-out-method-for-control-cabinet-power-supplies-on-mpts-uats-and-rats"
+    },
+    {
+      "id": "mfr_siemens",
+      "display_name": "Siemens",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "S125",
+      "match_key": "Manufacturer:S125"
+    },
+    {
+      "id": "rr_5073_iva",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5073_ivb",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-b"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "LER 237-2014-002-02",
+      "properties": {},
+      "type": "LER",
+      "key": "237-2014-002-02",
+      "stub": true,
+      "title": "Unit 2 MPT internal fault due to combination of insulation issues, resulting in main turbine trip and reactor scram",
+      "plant": "Dresden Nuclear Power Station",
+      "match_key": "LER:237-2014-002-02"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_iva",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_ivb",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_el",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jc",
+      "evidence": null
+    },
+    {
+      "source": "c_bushing",
+      "relation": "PART_OF",
+      "target": "c_mpt",
+      "evidence": null
+    },
+    {
+      "source": "c_arrester",
+      "relation": "PART_OF",
+      "target": "c_mpt",
+      "evidence": null
+    },
+    {
+      "source": "c_cabinet",
+      "relation": "PART_OF",
+      "target": "c_mpt",
+      "evidence": null
+    },
+    {
+      "source": "fm_bushing_fail",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_bushing_fail",
+      "relation": "LEADS_TO",
+      "target": "fm_ground_fault",
+      "evidence": null
+    },
+    {
+      "source": "fm_ground_fault",
+      "relation": "LEADS_TO",
+      "target": "cons_scram",
+      "evidence": null
+    },
+    {
+      "source": "fm_ground_fault",
+      "relation": "LEADS_TO",
+      "target": "fm_fire",
+      "evidence": null
+    },
+    {
+      "source": "fm_fire",
+      "relation": "LEADS_TO",
+      "target": "cons_ue",
+      "evidence": null
+    },
+    {
+      "source": "c_rods",
+      "relation": "MITIGATED_BY",
+      "target": "cons_scram",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_donotuse",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_cutout",
+      "evidence": null
+    },
+    {
+      "source": "c_mpt",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_siemens",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    }
+  ],
+  "chain": "catastrophic MPT high-voltage bushing failure [cause X] -> phase-to-ground fault -> reactor protection system actuation/reactor scram; fault also -> fire in protected area -> Unusual Event declared (terminated 0709 CDT)",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Control rods (AA) modeled as mitigating the scram consequence (successful insertion), not as part of the failure chain. Previous occurrence LER 05000237/2014-002-02 concerns Dresden Unit 2, a different unit at the same station; stub captures plant/unit/title per instructions. Corrective action re: cut-out method addresses fire re-flash risk, applies broadly to MPT/UAT/RAT cabinets, kept as planned per narrative wording ('developed to provide a method')."
+}

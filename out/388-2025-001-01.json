@@ -1,0 +1,392 @@
+{
+  "ler_number": "388-2025-001-01",
+  "identity": {
+    "accession_number": "ML26055A051",
+    "docket": "05000388",
+    "plant_name": "Susquehanna",
+    "unit": 2,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2025-10-28",
+    "report_date": "2026-02-24",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "inspection",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Arc Flash on 500 kilovolt Transmission Lines Resulted in Main Generator Trip and Automatic Reactor Scram"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "This cause was attributed to the modifications to install the 500 kV transmission lines to the 500 kV substation not adequately accounting for clearance limits between the transmission lines and the hydrogen exhaust stack in the Hydrogen Tank Farm.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "inadequate design clearance between hydrogen vent stack and overhead transmission lines",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 388-2025-001-01",
+      "properties": {},
+      "type": "LER",
+      "key": "388-2025-001-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:388-2025-001-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Susquehanna Unit 2",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000388",
+      "match_key": "Unit:05000388"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Modification Clearance Deficiency (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "inadequate design clearance between hydrogen vent stack and overhead transmission lines",
+      "proximate_text": "This cause was attributed to the modifications to install the 500 kV transmission lines to the 500 kV substation not adequately accounting for clearance limits between the transmission lines and the hydrogen exhaust stack in the Hydrogen Tank Farm.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_tb",
+      "display_name": "Main Generator",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "TB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:TB"
+    },
+    {
+      "id": "sys_it",
+      "display_name": "Main Turbine",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "IT",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "tripped, initiating scram",
+      "match_key": "System:IT"
+    },
+    {
+      "id": "sys_ji",
+      "display_name": "Main Turbine Bypass Valves",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JI",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "operable; opened automatically to maintain reactor pressure",
+      "match_key": "System:JI"
+    },
+    {
+      "id": "sys_sj",
+      "display_name": "Reactor Feedwater",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "operable; stabilized and maintained reactor water level",
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "sys_je",
+      "display_name": "Engineered Safeguard Function",
+      "properties": {
+        "note": "no ECCS/ESF initiations occurred nor required"
+      },
+      "type": "System",
+      "eiis_code": "JE",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JE"
+    },
+    {
+      "id": "c_rv",
+      "display_name": "Safety Relief Valves",
+      "properties": {
+        "role": "operable; opened automatically to maintain reactor vessel pressure"
+      },
+      "type": "Component",
+      "eiis_code": "RV",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:RV"
+    },
+    {
+      "id": "c_500kv",
+      "display_name": "500 kV Transmission Lines",
+      "properties": {
+        "note": "placed in service August 2023"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:500-kv-transmission-lines"
+    },
+    {
+      "id": "c_h2stack",
+      "display_name": "Hydrogen Tank Farm exhaust stack (vendor-owned)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:hydrogen-tank-farm-exhaust-stack-vendor-owned"
+    },
+    {
+      "id": "fm_clearance",
+      "display_name": "Inadequate clearance between 500 kV lines and hydrogen exhaust stack",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Modifications installing the 500 kV transmission lines did not adequately account for clearance limits relative to the hydrogen exhaust stack in the Hydrogen Tank Farm.",
+      "match_key": "FailureMode:inadequate-clearance-between-500-kv-lines-and-hydrogen-exhaust-stack"
+    },
+    {
+      "id": "fm_venting",
+      "display_name": "Hydrogen plume contacts overhead 500 kV conductors",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "During routine vendor manual venting/depressurization of the hydrogen tanker truck, the resultant hydrogen plume reached the overhead 500 kV conductors.",
+      "match_key": "FailureMode:hydrogen-plume-contacts-overhead-500-kv-conductors"
+    },
+    {
+      "id": "fm_arcflash",
+      "display_name": "Arc flash on 500 kV lines",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "An arc formed on the 500 kV conductors in the area of the hydrogen plume.",
+      "match_key": "FailureMode:arc-flash-on-500-kv-lines"
+    },
+    {
+      "id": "fm_genfault",
+      "display_name": "Main Generator differential line current / load reject",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The arc flash caused a Main Generator differential line current condition leading to generator load reject and main turbine trip.",
+      "match_key": "FailureMode:main-generator-differential-line-current-load-reject"
+    },
+    {
+      "id": "cons_scram",
+      "display_name": "Automatic reactor scram / Unit 2 trip to Mode 3",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2025-10-28T19:04",
+      "end": "2025-10-31",
+      "duration": "~3 days to Mode 1 restoration",
+      "tz": null,
+      "match_key": "Consequence:automatic-reactor-scram-unit-2-trip-to-mode-3"
+    },
+    {
+      "id": "ca_altlocation",
+      "display_name": "Specify alternative venting location and update vendor delivery instructions prohibiting manual venting at Hydrogen Tank Farm",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:specify-alternative-venting-location-and-update-vendor-delivery-instructions-prohibiting-manual-venting-at-hydrogen-tank-farm"
+    },
+    {
+      "id": "ca_clearance",
+      "display_name": "Identify and implement solution ensuring adequate clearances between hydrogen exhaust stack and overhead transmission lines",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:identify-and-implement-solution-ensuring-adequate-clearances-between-hydrogen-exhaust-stack-and-overhead-transmission-lines"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5072b2iv",
+      "display_name": "10 CFR 50.72(b)(2)(iv)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-2-iv-b"
+    },
+    {
+      "id": "rr_5072b2xi",
+      "display_name": "10 CFR 50.72(b)(2)(xi)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-2-xi"
+    },
+    {
+      "id": "rr_fsar15",
+      "display_name": "FSAR Chapter 15.2.2 (Generator Load Rejection with Steam Bypass System Operable)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:fsar-chapter-15-2-2-generator-load-rejection-with-steam-bypass-system-operable"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072b2iv",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072b2xi",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_tb",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_it",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_500kv",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_h2stack",
+      "evidence": null
+    },
+    {
+      "source": "fm_clearance",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_clearance",
+      "relation": "LEADS_TO",
+      "target": "fm_venting",
+      "evidence": null
+    },
+    {
+      "source": "fm_venting",
+      "relation": "LEADS_TO",
+      "target": "fm_arcflash",
+      "evidence": null
+    },
+    {
+      "source": "fm_arcflash",
+      "relation": "LEADS_TO",
+      "target": "fm_genfault",
+      "evidence": null
+    },
+    {
+      "source": "fm_genfault",
+      "relation": "LEADS_TO",
+      "target": "cons_scram",
+      "evidence": null
+    },
+    {
+      "source": "cons_scram",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_ji",
+      "evidence": null
+    },
+    {
+      "source": "cons_scram",
+      "relation": "BACKED_UP_BY",
+      "target": "c_rv",
+      "evidence": null
+    },
+    {
+      "source": "cons_scram",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_sj",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_altlocation",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_clearance",
+      "evidence": null
+    },
+    {
+      "source": "cons_scram",
+      "relation": "MITIGATED_BY",
+      "target": "sys_je",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_fsar15",
+      "evidence": null
+    }
+  ],
+  "chain": "inadequate clearance in 500 kV line installation design [cause TBD] -> hydrogen plume from routine vendor venting contacts overhead 500 kV conductors -> arc flash on 500 kV lines -> Main Generator differential line current / load reject -> Main Turbine trip -> automatic reactor scram, Unit 2 to Mode 3 [backups: turbine bypass valves, SRVs, feedwater; Unit 1 unaffected]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code is TBD/provisional per FORM-366 fields despite a clearly stated proximate cause narrative (design clearance inadequacy during 500 kV line installation modification). ESF/ECCS system (JE) mentioned only to state no initiation occurred/was required -- modeled as involved System with MITIGATED_BY-style note but not as a backup that engaged; Main Turbine Bypass, SRVs, and Feedwater are stated-operable systems that actively mitigated the transient, so BACKED_UP_BY is used. Hydrogen Tank Farm and its exhaust stack are vendor-owned, non-EIIS components modeled without eiis_code. No PART_OF edges asserted since narrative gives no explicit containment statement. Previous occurrences: None stated, so no stub LER/SIMILAR_TO edge emitted."
+}

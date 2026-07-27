@@ -1,0 +1,85 @@
+{
+  "ler_number": "530-2025-001-00",
+  "identity": {
+    "accession_number": "ML26044A254",
+    "docket": "05000530",
+    "plant_name": "Palo Verde",
+    "unit": 3,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2025-12-21",
+    "report_date": "2026-02-13",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Unintentional Uncontrolled Vital Area Keys"
+  },
+  "reporting_basis": {
+    "reported_under": [],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": null,
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "loss of control of vital area keys",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 530-2025-001-00",
+      "properties": {
+        "match_key": "LER:530-2025-001-00"
+      },
+      "type": "LER",
+      "key": "530-2025-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:530-2025-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Palo Verde Unit 3",
+      "properties": {
+        "match_key": "Unit:05000530",
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000530",
+      "match_key": "Unit:05000530"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional (TBD)",
+      "properties": {
+        "match_key": "Cause:provisional"
+      },
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "loss of control of vital area keys",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    }
+  ],
+  "chain": "unintentional uncontrolled vital area keys [cause TBD] -> (narrative text not provided) -> consequence not stated",
+  "golden_questions": [],
+  "notes": "The provided narrative (366A) text contains only header/boilerplate fragments repeated from the form (plant name, docket, LER number, OMB approval block) with no substantive account of the event, cause, timeline, components, systems, or corrective actions. No FailureMode, System, Component, Consequence, or CorrectiveAction nodes could be extracted because the narrative content describing the actual event was not present in the input. Cause code and category remain TBD/provisional per FORM-366 FIELDS. LER number constructed as docket-derived key '530-2025-001-00' from title context ('00530 25 001 00'); event year taken from event_date (2025) though report_date is 2026."
+}

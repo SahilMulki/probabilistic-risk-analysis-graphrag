@@ -1,0 +1,435 @@
+{
+  "ler_number": "260-2023-001-01",
+  "identity": {
+    "accession_number": "ML23261C399",
+    "docket": "05000260",
+    "plant_name": "Browns Ferry",
+    "unit": 2,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2023-02-17",
+    "report_date": "2023-09-18",
+    "operating_mode": "4",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Pressure Boundary Leak on Recirculation Pump Discharge Isolation Valve Drain Line Due to Fatigue Failure"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(ii)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "small bore piping was not specifically analyzed for vulnerability of fatigue failure due to operational or resonance vibration...this branch line was erroneously excluded from further evaluation. Additionally, during EPU evaluations the small bore piping was considered rigid in the seismic calculation and was not evaluated independently from the large bore piping...the design calculation failed to identify that the stress caused by flow induced resonance vibration at Recirculation System Pump speeds between 1500 and 1600 rpm was sufficient to exceed the endurance limit for the failed pipe assembly.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "small-bore piping vibration fatigue analysis gap",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 260-2023-002-01",
+      "properties": {
+        "match_key": "LER:260-2023-002-01"
+      },
+      "type": "LER",
+      "key": "260-2023-001-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:260-2023-001-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Browns Ferry Unit 2",
+      "properties": {
+        "match_key": "Unit:05000260",
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000260",
+      "match_key": "Unit:05000260"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {
+        "match_key": "Cause:provisional"
+      },
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "small-bore piping vibration fatigue analysis gap",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_ad",
+      "display_name": "Recirculation System",
+      "properties": {
+        "match_key": "System:AD"
+      },
+      "type": "System",
+      "eiis_code": "AD",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:AD"
+    },
+    {
+      "id": "sys_bj",
+      "display_name": "High Pressure Coolant Injection",
+      "properties": {
+        "match_key": "System:BJ"
+      },
+      "type": "System",
+      "eiis_code": "BJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; operable",
+      "match_key": "System:BJ"
+    },
+    {
+      "id": "sys_bg",
+      "display_name": "Core Spray",
+      "properties": {
+        "match_key": "System:BG"
+      },
+      "type": "System",
+      "eiis_code": "BG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; operable (both loops)",
+      "match_key": "System:BG"
+    },
+    {
+      "id": "sys_ads",
+      "display_name": "Automatic Depressurization System",
+      "properties": {
+        "match_key": "System:automatic-depressurization-system"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "backup; operable",
+      "match_key": "System:automatic-depressurization-system"
+    },
+    {
+      "id": "c_isv",
+      "display_name": "2A Recirculation Pump Discharge Isolation Valve",
+      "properties": {
+        "match_key": "Component:ISV|2A-recirc-discharge-isolation-valve"
+      },
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:ISV"
+    },
+    {
+      "id": "c_drainline",
+      "display_name": "Isolation Valve Drain Line (ASME Class I piping)",
+      "properties": {
+        "match_key": "Component:PSF|drain-line"
+      },
+      "type": "Component",
+      "eiis_code": "PSF",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:PSF"
+    },
+    {
+      "id": "fm_notanalyzed",
+      "display_name": "Small bore branch line excluded from fatigue vibration analysis",
+      "properties": {
+        "match_key": "FailureMode:small-bore-excluded-from-fatigue-analysis"
+      },
+      "type": "FailureMode",
+      "description": "Small bore piping was not specifically analyzed for vulnerability to fatigue failure due to operational or resonance vibration; branch line erroneously excluded from further evaluation.",
+      "match_key": "FailureMode:small-bore-branch-line-excluded-from-fatigue-vibration-analysis"
+    },
+    {
+      "id": "fm_epu_rigid",
+      "display_name": "Small bore piping treated as rigid, not independently evaluated during EPU",
+      "properties": {
+        "match_key": "FailureMode:epu-rigid-assumption-not-independently-evaluated"
+      },
+      "type": "FailureMode",
+      "description": "During EPU evaluations, small bore piping was considered rigid in the seismic calculation and carried into the vibration acceptance calculation, so it was not evaluated independently from large bore piping.",
+      "match_key": "FailureMode:small-bore-piping-treated-as-rigid-not-independently-evaluated-during-epu"
+    },
+    {
+      "id": "fm_resonance",
+      "display_name": "Flow-induced resonance vibration exceeded endurance limit",
+      "properties": {
+        "match_key": "FailureMode:resonance-vibration-exceeded-endurance-limit"
+      },
+      "type": "FailureMode",
+      "description": "Design calculation failed to identify that stress caused by flow-induced resonance vibration at Recirculation Pump speeds between 1500-1600 rpm was sufficient to exceed the endurance limit for the pipe assembly.",
+      "match_key": "FailureMode:flow-induced-resonance-vibration-exceeded-endurance-limit"
+    },
+    {
+      "id": "fm_fatigue_crack",
+      "display_name": "High-cycle fatigue crack at valve/socket weld overlap",
+      "properties": {
+        "match_key": "FailureMode:high-cycle-fatigue-crack-weld-overlap"
+      },
+      "type": "FailureMode",
+      "description": "Vibration induced high cycle fatigue originating at the outside diameter of the pipe where the valve and socket welds overlap, resulting in a cracked weld.",
+      "match_key": "FailureMode:high-cycle-fatigue-crack-at-valve-socket-weld-overlap"
+    },
+    {
+      "id": "cons_leak",
+      "display_name": "Pressure boundary leak / RCS seriously degraded",
+      "properties": {
+        "match_key": "Consequence:pressure-boundary-leak-rcs-degraded"
+      },
+      "type": "Consequence",
+      "start": "2022-11-13",
+      "end": "2023-03-19T23:42",
+      "duration": "~4 months (leakage) / repair completed 2023-03-14",
+      "tz": "CST",
+      "match_key": "Consequence:pressure-boundary-leak-rcs-seriously-degraded"
+    },
+    {
+      "id": "ca_repair",
+      "display_name": "Repair/replace drain line under WO 123487635",
+      "properties": {
+        "match_key": "CorrectiveAction:repair-drain-line-wo"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:repair-replace-drain-line-under-wo-123487635"
+    },
+    {
+      "id": "ca_ecp_testline",
+      "display_name": "Implement ECP for test line to bound life cycles for all stress levels",
+      "properties": {
+        "match_key": "CorrectiveAction:ecp-test-line-bounded-life-cycles"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:implement-ecp-for-test-line-to-bound-life-cycles-for-all-stress-levels"
+    },
+    {
+      "id": "ca_ecp_smallbore",
+      "display_name": "Implement additional actions for Unit 2 small bore branch piping (modify operating range or piping)",
+      "properties": {
+        "match_key": "CorrectiveAction:ecp-small-bore-branch-piping-unit2"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:implement-additional-actions-for-unit-2-small-bore-branch-piping-modify-operating-range-or-piping"
+    },
+    {
+      "id": "rr_5073ii",
+      "display_name": "10 CFR 50.73(a)(2)(ii)(A)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-ii-a"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-ii-a"
+    },
+    {
+      "id": "rr_5073ib",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts344",
+      "display_name": "TS LCO 3.4.4 RCS Operational Leakage",
+      "properties": {
+        "match_key": "RegulatoryReference:ts-lco-3-4-4"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-lco-3-4-4-rcs-operational-leakage"
+    },
+    {
+      "id": "ler_1_2022_001",
+      "display_name": "LER 259-2022-001-00",
+      "properties": {
+        "match_key": "LER:1-2022-001"
+      },
+      "type": "LER",
+      "key": "259-2022-001-00",
+      "stub": true,
+      "title": "Pressure Boundary Leak on Residual Heat Removal System Low Pressure Coolant Injection Test Line",
+      "plant": "Browns Ferry Nuclear Plant, Unit 1",
+      "match_key": "LER:259-2022-001-00"
+    },
+    {
+      "id": "ler_3_2022_003",
+      "display_name": "LER 296-2022-003-00",
+      "properties": {
+        "match_key": "LER:3-2022-003"
+      },
+      "type": "LER",
+      "key": "296-2022-003-00",
+      "stub": true,
+      "title": "Pressure Boundary Leak on Residual Heat Removal System Low Pressure Coolant Injection Test Line",
+      "plant": "Browns Ferry Nuclear Plant, Unit 3",
+      "match_key": "LER:296-2022-003-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073ii",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073ib",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ad",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_isv",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_drainline",
+      "evidence": null
+    },
+    {
+      "source": "c_drainline",
+      "relation": "PART_OF",
+      "target": "c_isv",
+      "evidence": null
+    },
+    {
+      "source": "fm_notanalyzed",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_notanalyzed",
+      "relation": "LEADS_TO",
+      "target": "fm_epu_rigid",
+      "evidence": null
+    },
+    {
+      "source": "fm_epu_rigid",
+      "relation": "LEADS_TO",
+      "target": "fm_resonance",
+      "evidence": null
+    },
+    {
+      "source": "fm_resonance",
+      "relation": "LEADS_TO",
+      "target": "fm_fatigue_crack",
+      "evidence": null
+    },
+    {
+      "source": "fm_fatigue_crack",
+      "relation": "LEADS_TO",
+      "target": "cons_leak",
+      "evidence": null
+    },
+    {
+      "source": "cons_leak",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_bj",
+      "evidence": null
+    },
+    {
+      "source": "cons_leak",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_bg",
+      "evidence": null
+    },
+    {
+      "source": "cons_leak",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_ads",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_repair",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_ecp_testline",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_ecp_smallbore",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts344",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_1_2022_001",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_3_2022_003",
+      "evidence": null
+    }
+  ],
+  "chain": "small bore piping excluded from fatigue vibration analysis [cause TBD] -> EPU seismic calc treated small bore as rigid, not independently evaluated -> flow-induced resonance vibration at recirc pump speeds exceeded endurance limit -> high-cycle fatigue crack at valve/socket weld overlap -> RCS pressure boundary leak / seriously degraded barrier [backups HPCI, Core Spray, ADS available]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code is TBD/provisional per FORM-366 fields despite a detailed narrative root-cause discussion; cause category left as 'provisional' verbatim. No component or system failures were identified per Section III.A (piping design/analysis gap, not a component failure), so no Component-level failure/CAUSED_BY chain beyond the piping itself. Two previous similar LERs referenced with stub nodes and SIMILAR_TO edges, keys copied exactly as stated in narrative (unit-prefixed LER numbers, not docket numbers)."
+}

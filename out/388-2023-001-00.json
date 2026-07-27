@@ -1,0 +1,315 @@
+{
+  "ler_number": "388-2023-001-00",
+  "identity": {
+    "accession_number": "ML23145A178",
+    "docket": "05000388",
+    "plant_name": "Susquehanna",
+    "unit": 2,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2023-03-26",
+    "report_date": "2023-05-25",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "inspection",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2023-001-00 for Susquehanna Steam Electric Station, Unit 2 - Secondary Containment Bypass Leakage Limit Exceeded Due Inadequate Procedure Guidance Resulting in Failure of the Inboard Containment Isolation Valve to Close and Pressurize"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)",
+      "10 CFR 50.73(a)(2)(ii)(A)",
+      "10 CFR 50.73(a)(2)(v)(C)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "X",
+      "system": "SJ",
+      "component": "ISV",
+      "manufacturer": "A391",
+      "reportable": "Y"
+    },
+    {
+      "cause": "D",
+      "system": "SJ",
+      "component": "ISV",
+      "manufacturer": "A391",
+      "reportable": "Y"
+    },
+    {
+      "cause": "X",
+      "system": "SJ",
+      "component": "ISV",
+      "manufacturer": "A585",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "Secondary containment bypass leakage limit exceeded due to inadequate procedure guidance, resulting in failure of the inboard containment isolation valve to close and pressurize.",
+    "cause_code": "X",
+    "category": "Other",
+    "theme": "Inadequate procedure guidance for containment isolation valve testing/closure",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 388-2023-001-00",
+      "properties": {
+        "match_key": "LER:388-2023-001-00"
+      },
+      "type": "LER",
+      "key": "388-2023-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:388-2023-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Susquehanna Unit 2",
+      "properties": {
+        "match_key": "Unit:05000388",
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000388",
+      "match_key": "Unit:05000388"
+    },
+    {
+      "id": "cause",
+      "display_name": "Other (X)",
+      "properties": {
+        "match_key": "Cause:Other"
+      },
+      "type": "Cause",
+      "cause_code": "X",
+      "category": "Other",
+      "theme": "Inadequate procedure guidance for containment isolation valve testing/closure",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Other"
+    },
+    {
+      "id": "sys_sj",
+      "display_name": "Containment Isolation System",
+      "properties": {
+        "match_key": "System:SJ"
+      },
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "c_isv_inboard",
+      "display_name": "Inboard Containment Isolation Valve",
+      "properties": {
+        "match_key": "Component:ISV|inboard"
+      },
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": "A391",
+      "inferred_code": false,
+      "match_key": "Component:ISV"
+    },
+    {
+      "id": "c_isv_secondary",
+      "display_name": "Secondary Containment Isolation Valve",
+      "properties": {
+        "match_key": "Component:ISV|secondary"
+      },
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": "A585",
+      "inferred_code": false,
+      "match_key": "Component:ISV"
+    },
+    {
+      "id": "fm_procedure",
+      "display_name": "Inadequate procedure guidance for isolation valve closure/testing",
+      "properties": {
+        "match_key": "FailureMode:inadequate-procedure-guidance"
+      },
+      "type": "FailureMode",
+      "description": "Procedures did not provide adequate guidance to ensure the inboard containment isolation valve would close and pressurize as required.",
+      "match_key": "FailureMode:inadequate-procedure-guidance-for-isolation-valve-closure-testing"
+    },
+    {
+      "id": "fm_valve_fail",
+      "display_name": "Inboard containment isolation valve failed to close and pressurize",
+      "properties": {
+        "match_key": "FailureMode:isv-failed-to-close-pressurize"
+      },
+      "type": "FailureMode",
+      "description": "The inboard containment isolation valve failed to close and pressurize as required by the procedure deficiency.",
+      "match_key": "FailureMode:inboard-containment-isolation-valve-failed-to-close-and-pressurize"
+    },
+    {
+      "id": "cons_bypass",
+      "display_name": "Secondary containment bypass leakage limit exceeded",
+      "properties": {
+        "match_key": "Consequence:secondary-containment-bypass-leakage-limit-exceeded"
+      },
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:secondary-containment-bypass-leakage-limit-exceeded"
+    },
+    {
+      "id": "ca_procedure_revision",
+      "display_name": "Revise procedure guidance for containment isolation valve closure/testing",
+      "properties": {
+        "match_key": "CorrectiveAction:revise-procedure-guidance"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-procedure-guidance-for-containment-isolation-valve-closure-testing"
+    },
+    {
+      "id": "mfr_a391",
+      "display_name": "Manufacturer A391",
+      "properties": {
+        "match_key": "Manufacturer:A391"
+      },
+      "type": "Manufacturer",
+      "code": "A391",
+      "match_key": "Manufacturer:A391"
+    },
+    {
+      "id": "mfr_a585",
+      "display_name": "Manufacturer A585",
+      "properties": {
+        "match_key": "Manufacturer:A585"
+      },
+      "type": "Manufacturer",
+      "code": "A585",
+      "match_key": "Manufacturer:A585"
+    },
+    {
+      "id": "rr_5073i",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion",
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_5073ii",
+      "display_name": "10 CFR 50.73(a)(2)(ii)(A)",
+      "properties": {
+        "type": "reporting-criterion",
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-ii-a"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-ii-a"
+    },
+    {
+      "id": "rr_5073v",
+      "display_name": "10 CFR 50.73(a)(2)(v)(C)",
+      "properties": {
+        "type": "reporting-criterion",
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-c"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-c"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073i",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073ii",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073v",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sj",
+      "evidence": null
+    },
+    {
+      "source": "fm_procedure",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_procedure",
+      "relation": "LEADS_TO",
+      "target": "fm_valve_fail",
+      "evidence": null
+    },
+    {
+      "source": "fm_valve_fail",
+      "relation": "LEADS_TO",
+      "target": "cons_bypass",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procedure_revision",
+      "evidence": null
+    },
+    {
+      "source": "c_isv_inboard",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_a391",
+      "evidence": null
+    },
+    {
+      "source": "c_isv_secondary",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_a585",
+      "evidence": null
+    }
+  ],
+  "chain": "inadequate procedure guidance [cause X] -> inboard containment isolation valve fails to close and pressurize -> secondary containment bypass leakage limit exceeded",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Narrative (366A) text was not provided in the input; extraction relies solely on FORM-366 FIELDS (identity, block-13, cause code/category) and the abstract-equivalent title. Two block-13 rows share cause X (Other) referencing two different manufacturer codes (A391, A585) for ISV components; the third row cites cause D (Personnel Error) for the same inboard ISV/A391 combination, but per official-cause-code rule the top-level cause_code/category (X/Other) governs the Cause node. Without narrative detail, only a single generic failure chain (procedure deficiency -> valve failure -> bypass leakage exceedance) could be modeled; distinct failure modes for the second (A585) valve could not be substantiated without narrative text, so only the inboard/A391 valve is tied into the failure chain, while the secondary/A585 valve component is retained as a Component node per block-13 but not linked into the causal chain absent narrative support. No corrective-action detail, timing, or previous-occurrence data available from provided inputs; a single generic planned CorrectiveAction node captures the implied remedy (procedure revision) consistent with the stated cause theme."
+}

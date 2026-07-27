@@ -1,0 +1,371 @@
+{
+  "ler_number": "498--2024-001-00",
+  "identity": {
+    "accession_number": "ML24092A190",
+    "docket": "05000498",
+    "plant_name": "South Texas",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2024-01-23",
+    "report_date": "2024-04-01",
+    "operating_mode": "3",
+    "power_level": 0,
+    "discovery_context": "operability test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2024-001-00 for South Texas Project Unit 1 re Two Steam Generator Power Operated Relief Valves (PORVs) Inoperable Resulting in a Condition That Could Have Prevented Fulfillment of a Safety Function"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)(D)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "a blown fuse in Circuit 17 for panel DP1201 for S/G 1A PORV (undetermined cause) and an intermittent condition with S/G 1C PORV servo amplifier board that caused the fuse on the board to blow under normal electrical load",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "undetermined component failure - two independent PORV control circuit faults",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 498-2024-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "498--2024-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:498--2024-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "South Texas Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000498",
+      "match_key": "Unit:05000498"
+    },
+    {
+      "id": "cause",
+      "display_name": "Undetermined / Component Failure (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "undetermined component failure - two independent PORV control circuit faults",
+      "proximate_text": "a blown fuse in Circuit 17 for panel DP1201 for S/G 1A PORV (undetermined cause) and an intermittent condition with S/G 1C PORV servo amplifier board that caused the fuse on the board to blow under normal electrical load",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_sb",
+      "display_name": "Main Steam System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SB"
+    },
+    {
+      "id": "c_porv_1a",
+      "display_name": "Steam Generator 1A PORV",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "1A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:steam-generator-1a-porv"
+    },
+    {
+      "id": "c_porv_1c",
+      "display_name": "Steam Generator 1C PORV",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "1C",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:steam-generator-1c-porv"
+    },
+    {
+      "id": "c_fuse_1a",
+      "display_name": "Fuse, Circuit 17, panel 3E241EDP1201",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "FU",
+      "identifier": "Circuit 17 / DP1201",
+      "model": "A60X10-1",
+      "manufacturer_code": "Gould Shawmut",
+      "inferred_code": false,
+      "match_key": "Component:FU|Circuit 17 / DP1201"
+    },
+    {
+      "id": "c_amp_1c",
+      "display_name": "Servo Amplifier board, S/G 1C PORV",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "AMP",
+      "identifier": null,
+      "model": "PD88085-202",
+      "manufacturer_code": "P095",
+      "inferred_code": false,
+      "match_key": "Component:AMP"
+    },
+    {
+      "id": "fm_fuse_blown",
+      "display_name": "Fuse in Circuit 17 blown (cause undetermined)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Fuse in Circuit 17 in distribution panel 3E241EDP1201 blew, causing servo amplifier circuit voltage to drop to 59V instead of 120V",
+      "match_key": "FailureMode:fuse-in-circuit-17-blown-cause-undetermined"
+    },
+    {
+      "id": "fm_porv1a_fail",
+      "display_name": "S/G 1A PORV unable to operate in AUTO or MANUAL",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Loss of proper servo amplifier voltage resulted in inability to operate S/G 1A PORV",
+      "match_key": "FailureMode:s-g-1a-porv-unable-to-operate-in-auto-or-manual"
+    },
+    {
+      "id": "fm_servoamp_intermittent",
+      "display_name": "Intermittent fault in S/G 1C servo amplifier board",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Intermittent condition within the servo amplifier board caused its fuse to inconsistently blow under normal electrical load",
+      "match_key": "FailureMode:intermittent-fault-in-s-g-1c-servo-amplifier-board"
+    },
+    {
+      "id": "fm_porv1c_fail",
+      "display_name": "S/G 1C PORV unable to operate in MANUAL",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Servo amplifier board intermittent fault caused S/G 1C PORV to fail to operate in MANUAL",
+      "match_key": "FailureMode:s-g-1c-porv-unable-to-operate-in-manual"
+    },
+    {
+      "id": "cons_porv_inop",
+      "display_name": "Two of four S/G PORVs inoperable; potential inability to fulfill SGTR mitigation safety function",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2024-01-23T19:02",
+      "end": "2024-01-23T22:34",
+      "duration": "3:32",
+      "tz": "CST",
+      "match_key": "Consequence:two-of-four-s-g-porvs-inoperable-potential-inability-to-fulfill-sgtr-mitigation-safety-function"
+    },
+    {
+      "id": "ca_fuse_1a",
+      "display_name": "Replace blown fuse in Circuit 17 for panel DP1201 (S/G 1A PORV)",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-blown-fuse-in-circuit-17-for-panel-dp1201-s-g-1a-porv"
+    },
+    {
+      "id": "ca_fuse_amp_1c",
+      "display_name": "Replace blown fuse and servo amplifier board for S/G 1C PORV",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-blown-fuse-and-servo-amplifier-board-for-s-g-1c-porv"
+    },
+    {
+      "id": "mfr_gould",
+      "display_name": "Gould Shawmut",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": null,
+      "match_key": "Manufacturer:gould-shawmut"
+    },
+    {
+      "id": "mfr_pmh",
+      "display_name": "Paul-Munroe Hydraulics/Enertech",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "P095",
+      "match_key": "Manufacturer:P095"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "rr_5067",
+      "display_name": "10 CFR 50.67",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:10-cfr-50-67"
+    },
+    {
+      "id": "rr_regguide",
+      "display_name": "Regulatory Guide 1.183",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "standard/guidance",
+      "match_key": "RegulatoryReference:regulatory-guide-1-183"
+    },
+    {
+      "id": "rr_ts37",
+      "display_name": "Technical Specification 3.7.1.6",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-3-7-1-6"
+    },
+    {
+      "id": "rr_ts361",
+      "display_name": "Technical Specification 3.6.1.1",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-3-6-1-1"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "c_porv_1a",
+      "relation": "PART_OF",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "c_porv_1c",
+      "relation": "PART_OF",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "fm_fuse_blown",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_servoamp_intermittent",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_fuse_blown",
+      "relation": "LEADS_TO",
+      "target": "fm_porv1a_fail",
+      "evidence": null
+    },
+    {
+      "source": "fm_porv1a_fail",
+      "relation": "LEADS_TO",
+      "target": "cons_porv_inop",
+      "evidence": null
+    },
+    {
+      "source": "fm_servoamp_intermittent",
+      "relation": "LEADS_TO",
+      "target": "fm_porv1c_fail",
+      "evidence": null
+    },
+    {
+      "source": "fm_porv1c_fail",
+      "relation": "LEADS_TO",
+      "target": "cons_porv_inop",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_fuse_1a",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_fuse_amp_1c",
+      "evidence": null
+    },
+    {
+      "source": "c_fuse_1a",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_gould",
+      "evidence": null
+    },
+    {
+      "source": "c_amp_1c",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_pmh",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5067",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_regguide",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts37",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts361",
+      "evidence": null
+    }
+  ],
+  "chain": "undetermined fuse failure [cause TBD] -> S/G 1A PORV fuse blows -> S/G 1A PORV fails AUTO/MANUAL -> two-of-four PORVs inoperable; separately: intermittent servo amp board fault -> S/G 1C PORV fuse blows -> S/G 1C PORV fails MANUAL -> two-of-four PORVs inoperable (3h32m)",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Two parallel, independent component failures (S/G 1A fuse, S/G 1C servo amplifier board) both contributed to the reportable condition; each modeled as its own failure chain per rule 5, sharing the same terminal Consequence node. Cause code left TBD/provisional since form fields state TBD and narrative could not determine a root cause for either failure. No PART_OF edges asserted for fuse/amp to system since narrative does not state literal containment beyond system identification via Block 13; PORV to Main Steam System PART_OF retained as explicit narrative language identifies PORVs as part of Main Steam System valves. No previous similar occurrence LER identified/cited with a report number in Section VI, so no stub LER/SIMILAR_TO edge created per rule 9 (a 2017 servo amp failure is mentioned but with no LER number)."
+}

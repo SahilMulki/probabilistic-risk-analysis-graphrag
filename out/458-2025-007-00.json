@@ -1,0 +1,422 @@
+{
+  "ler_number": "458-2025-007-00",
+  "identity": {
+    "accession_number": "ML25342A438",
+    "docket": "05000458",
+    "plant_name": "River Bend",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2025-10-09",
+    "report_date": "2025-12-08",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "/ 2025-007-00, Division 1 Balance of Plant Isolation Results in Manual Reactor Trip"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "a technician lifted a lead and did not appropriately account for the length of wire allowing the wire to retract and contact the metal enclosure. This caused the Division 1 Isolation Logic Supply Fuse (B21 H-F28A) [JM] to fail.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "personnel error during surveillance testing - unsecured lifted lead contacted grounded enclosure",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 458-2025-007-00",
+      "properties": {},
+      "type": "LER",
+      "key": "458-2025-007-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:458-2025-007-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "River Bend Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000458",
+      "match_key": "Unit:05000458"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "personnel error during surveillance testing - unsecured lifted lead contacted grounded enclosure",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_ias",
+      "display_name": "Instrument Air System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "LO",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "isolated to containment",
+      "match_key": "System:LO"
+    },
+    {
+      "id": "sys_ccp",
+      "display_name": "Component Cooling Primary System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "CC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "isolated to containment",
+      "match_key": "System:CC"
+    },
+    {
+      "id": "sys_turbine",
+      "display_name": "Main Turbine",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "TA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "tripped, caused water level swell",
+      "match_key": "System:TA"
+    },
+    {
+      "id": "sys_fws",
+      "display_name": "Reactor Feedwater System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "tripped on high reactor water level",
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "sys_jm",
+      "display_name": "Isolation Logic System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JM",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JM"
+    },
+    {
+      "id": "sys_ji",
+      "display_name": "Turbine Bypass Valve System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JI",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "maintained reactor pressure",
+      "match_key": "System:JI"
+    },
+    {
+      "id": "c_fuse",
+      "display_name": "Division 1 Isolation Logic Supply Fuse B21 H-F28A",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "JM",
+      "identifier": "B21 H-F28A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:JM|B21 H-F28A"
+    },
+    {
+      "id": "c_fwp_c",
+      "display_name": "Reactor Feedwater Pump C (FWS-P1C)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "SJ",
+      "identifier": "FWS-P1C",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:SJ|FWS-P1C"
+    },
+    {
+      "id": "fm_wireretract",
+      "display_name": "Lifted lead wire retracted and contacted metal enclosure",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Technician lifted a lead without accounting for wire length; wire retracted and contacted the metal enclosure.",
+      "match_key": "FailureMode:lifted-lead-wire-retracted-and-contacted-metal-enclosure"
+    },
+    {
+      "id": "fm_fusefail",
+      "display_name": "Division 1 Isolation Logic Supply Fuse failed",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Fuse B21 H-F28A failed due to the wire contacting the metal enclosure.",
+      "match_key": "FailureMode:division-1-isolation-logic-supply-fuse-failed"
+    },
+    {
+      "id": "fm_bopisolation",
+      "display_name": "Division 1 BOP isolation actuation",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Fuse failure caused a Division 1 Balance of Plant isolation actuation, isolating IAS and CCP to containment.",
+      "match_key": "FailureMode:division-1-bop-isolation-actuation"
+    },
+    {
+      "id": "fm_unabletoreset",
+      "display_name": "Unable to reset Division 1 BOP isolation signal",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Control Room operators were unable to reset the Division 1 BOP isolation signal.",
+      "match_key": "FailureMode:unable-to-reset-division-1-bop-isolation-signal"
+    },
+    {
+      "id": "cons_trip",
+      "display_name": "Manual reactor trip inserted",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2025-10-09T12:07",
+      "end": null,
+      "duration": null,
+      "tz": "CDT",
+      "match_key": "Consequence:manual-reactor-trip-inserted"
+    },
+    {
+      "id": "cons_containment",
+      "display_name": "High containment pressure requiring EOP entry",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2025-10-09T12:37",
+      "end": "2025-10-09T13:05",
+      "duration": null,
+      "tz": "CDT",
+      "match_key": "Consequence:high-containment-pressure-requiring-eop-entry"
+    },
+    {
+      "id": "ca_performance",
+      "display_name": "Complete performance management with personnel involved to address personal accountability",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:complete-performance-management-with-personnel-involved-to-address-personal-accountability"
+    },
+    {
+      "id": "ca_nontraining",
+      "display_name": "Develop and implement a non-training intervention plan to reinforce standards and expectations",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:develop-and-implement-a-non-training-intervention-plan-to-reinforce-standards-and-expectations"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5072b2iv",
+      "display_name": "10 CFR 50.72(b)(2)(iv)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-2-iv-b"
+    },
+    {
+      "id": "rr_5072b3iv",
+      "display_name": "10 CFR 50.72(b)(3)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-3-iv-a"
+    },
+    {
+      "id": "ler_prev1",
+      "display_name": "LER 458-2025-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "458-2025-001-00",
+      "stub": true,
+      "title": "Human Performance Error Results in Manual Reactor Trip",
+      "plant": "River Bend Station",
+      "match_key": "LER:458-2025-001-00"
+    },
+    {
+      "id": "ler_prev2",
+      "display_name": "LER 458-2023-006-00",
+      "properties": {},
+      "type": "LER",
+      "key": "458-2023-006-00",
+      "stub": true,
+      "title": "Automatic Reactor Scram Due to a Turbine Trip Following a Disconnect Failure at Switchyard",
+      "plant": "River Bend Station",
+      "match_key": "LER:458-2023-006-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072b2iv",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072b3iv",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ias",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ccp",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jm",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_fws",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_turbine",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ji",
+      "evidence": null
+    },
+    {
+      "source": "c_fuse",
+      "relation": "PART_OF",
+      "target": "sys_jm",
+      "evidence": null
+    },
+    {
+      "source": "c_fwp_c",
+      "relation": "PART_OF",
+      "target": "sys_fws",
+      "evidence": null
+    },
+    {
+      "source": "fm_wireretract",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_wireretract",
+      "relation": "LEADS_TO",
+      "target": "fm_fusefail",
+      "evidence": null
+    },
+    {
+      "source": "fm_fusefail",
+      "relation": "LEADS_TO",
+      "target": "fm_bopisolation",
+      "evidence": null
+    },
+    {
+      "source": "fm_bopisolation",
+      "relation": "LEADS_TO",
+      "target": "fm_unabletoreset",
+      "evidence": null
+    },
+    {
+      "source": "fm_unabletoreset",
+      "relation": "LEADS_TO",
+      "target": "cons_trip",
+      "evidence": null
+    },
+    {
+      "source": "cons_trip",
+      "relation": "LEADS_TO",
+      "target": "cons_containment",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_performance",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_nontraining",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev1",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev2",
+      "evidence": null
+    }
+  ],
+  "chain": "technician lifted lead without securing wire length [cause TBD] -> wire retracted and contacted metal enclosure -> Division 1 Isolation Logic Supply Fuse B21 H-F28A fails -> Division 1 BOP isolation actuation (loss of IAS and CCP to containment) -> operators unable to reset isolation -> manual reactor trip inserted -> high containment pressure requiring EOP entry",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code remains TBD/provisional per FORM-366 fields; narrative strongly suggests personnel error (unsecured lifted lead) but per rule 4 the official code/category is copied verbatim rather than re-derived. Feedwater trip/restart and turbine bypass valve response are downstream plant responses to the trip rather than part of the causal fuse-failure chain, so modeled as INVOLVES systems but not chained as FailureModes. Two previous occurrence LERs cited with stub nodes using exact LER numbers as stated in text."
+}

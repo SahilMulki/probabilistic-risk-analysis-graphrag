@@ -1,0 +1,321 @@
+{
+  "ler_number": "440-2024-005-00",
+  "identity": {
+    "accession_number": "ML25023A193",
+    "docket": "05000440",
+    "plant_name": "Perry",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2024-11-26",
+    "report_date": "2025-01-23",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Perry Nuclear Power Plant Docket No. 50-440, License No. NPF-58 Licensee Event Report Submittal"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)",
+      "10 CFR 50.73(a)(2)(v)(D)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "Insufficient use of verification practices and/or use of vendor drawings to allow for correct re-assembly of the air start motor air hoses.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Inadequate maintenance verification / configuration control",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 440-2024-004-00",
+      "properties": {},
+      "type": "LER",
+      "key": "440-2024-005-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:440-2024-005-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Perry Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000440",
+      "match_key": "Unit:05000440"
+    },
+    {
+      "id": "cause",
+      "display_name": "Personnel Error (A)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Inadequate maintenance verification / configuration control",
+      "proximate_text": "Insufficient use of verification practices and/or use of vendor drawings to allow for correct re-assembly of the air start motor air hoses.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_bg",
+      "display_name": "High Pressure Core Spray",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "system powered by Division 3 DG",
+      "match_key": "System:BG"
+    },
+    {
+      "id": "sys_dg",
+      "display_name": "Division 3 Diesel Generator",
+      "properties": {
+        "note": "self-contained power source for HPCS"
+      },
+      "type": "System",
+      "eiis_code": "DG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:DG"
+    },
+    {
+      "id": "sys_bn",
+      "display_name": "Reactor Core Isolation Cooling",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BN",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; operable",
+      "match_key": "System:BN"
+    },
+    {
+      "id": "c_asm",
+      "display_name": "Right bank air start motor",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "LC",
+      "identifier": "MSTR",
+      "model": null,
+      "manufacturer_code": "1075",
+      "inferred_code": false,
+      "match_key": "Component:LC|MSTR"
+    },
+    {
+      "id": "c_hoses",
+      "display_name": "Air start motor air hoses (right bank)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:air-start-motor-air-hoses-right-bank"
+    },
+    {
+      "id": "fm_verify",
+      "display_name": "Improper air hose reconnection during June 2024 maintenance",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Air hoses to right bank air start motor were configured incorrectly during maintenance due to insufficient use of verification practices and/or vendor drawings.",
+      "match_key": "FailureMode:improper-air-hose-reconnection-during-june-2024-maintenance"
+    },
+    {
+      "id": "fm_asmfail",
+      "display_name": "Right bank air start motor improper operation",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Misconfigured air hoses caused insufficient pressure drop / improper operation of the right bank air start motor, discovered during monthly surveillance test.",
+      "match_key": "FailureMode:right-bank-air-start-motor-improper-operation"
+    },
+    {
+      "id": "cons_dg",
+      "display_name": "Division 3 DG declared inoperable (loss of safety function)",
+      "properties": {
+        "note": "Retroactively inoperable since June 2024 maintenance per 50.73(a)(2)(i)(B); DG remained available due to left bank air start motor capability"
+      },
+      "type": "Consequence",
+      "start": "2024-11-26T11:58",
+      "end": "2024-11-27T17:31",
+      "duration": "29:33",
+      "tz": null,
+      "match_key": "Consequence:division-3-dg-declared-inoperable-loss-of-safety-function"
+    },
+    {
+      "id": "ca_reconnect",
+      "display_name": "Reconnect air hoses to correct configuration",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:reconnect-air-hoses-to-correct-configuration"
+    },
+    {
+      "id": "ca_verify",
+      "display_name": "Revise maintenance procedure to require independent verification",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-maintenance-procedure-to-require-independent-verification"
+    },
+    {
+      "id": "ca_pressure",
+      "display_name": "Revise surveillance procedure to record pre-start air bank pressures",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-surveillance-procedure-to-record-pre-start-air-bank-pressures"
+    },
+    {
+      "id": "ca_airflow",
+      "display_name": "Revise surveillance procedure to verify air start motor airflow via exhaust check",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-surveillance-procedure-to-verify-air-start-motor-airflow-via-exhaust-check"
+    },
+    {
+      "id": "rr_5073v",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "rr_5073i",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_nei",
+      "display_name": "NEI 99-02, Section 2.2, Mitigating Systems Cornerstone",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "standard/guidance",
+      "match_key": "RegulatoryReference:nei-99-02-section-2-2-mitigating-systems-cornerstone"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073v",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073i",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_dg",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bg",
+      "evidence": null
+    },
+    {
+      "source": "c_asm",
+      "relation": "PART_OF",
+      "target": "sys_dg",
+      "evidence": null
+    },
+    {
+      "source": "fm_verify",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_verify",
+      "relation": "LEADS_TO",
+      "target": "fm_asmfail",
+      "evidence": null
+    },
+    {
+      "source": "fm_asmfail",
+      "relation": "LEADS_TO",
+      "target": "cons_dg",
+      "evidence": null
+    },
+    {
+      "source": "cons_dg",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_bn",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_reconnect",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_verify",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_pressure",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_airflow",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_nei",
+      "evidence": null
+    }
+  ],
+  "chain": "insufficient verification/vendor drawing use during June 2024 maintenance [cause A] -> air hoses misconfigured on right bank air start motor -> right bank air start motor operates improperly -> Division 3 DG declared inoperable/loss of safety function (retroactive to June 2024) [backup: RCIC operable, left bank air start motor demonstrated reliable start capability, offsite/auxiliary power available]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "No previous similar event was identified within the three-year timeframe per the narrative ('three-year timeframe' with no LER cited) — no stub LER node created. Component row lists System=LC, Component=MSTR, Manufacturer=1075; mapped MSTR to the right bank air start motor. DG remained 'available' throughout via left bank air start motor per PRA/engineering evaluation, though formally inoperable per TS Bases — consequence node captures both the declared-inoperable window and retroactive inoperability since June 2024."
+}

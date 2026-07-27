@@ -1,0 +1,352 @@
+{
+  "ler_number": "259-2024-001-01",
+  "identity": {
+    "accession_number": "ML24185A151",
+    "docket": "05000259",
+    "plant_name": "Browns Ferry",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2022-12-14",
+    "report_date": "2024-07-03",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "operability test",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2024-001-01 for Browns Ferry Nuclear Plant, Units 1, 2 and 3, Inoperability of Unit 3 Diesel Generator due to Relay Failure"
+  },
+  "reporting_basis": {
+    "reported_under": [],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The apparent cause of the misalignment of the SUDR relay contacts was the lack of effective Preventative Maintenance (PM). The PM did not have periodic “calibration” activities (e.g., contact burnishing, finger binding checks, contact wipe and gap inspections, pickup voltage tests, contact resistance checks, and checks for no visual bends in contact arms) as recommended by EPRI and TVA Fleet guidance.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "PM-program weakness (relay calibration/inspection tasks omitted)",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 259-2024-001-01",
+      "properties": {},
+      "type": "LER",
+      "key": "259-2024-001-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:259-2024-001-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Browns Ferry Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000259",
+      "match_key": "Unit:05000259"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "PM-program weakness (relay calibration/inspection tasks omitted)",
+      "proximate_text": "The apparent cause of the misalignment of the SUDR relay contacts was the lack of effective Preventative Maintenance (PM). The PM did not have periodic “calibration” activities (e.g., contact burnishing, finger binding checks, contact wipe and gap inspections, pickup voltage tests, contact resistance checks, and checks for no visual bends in contact arms) as recommended by EPRI and TVA Fleet guidance.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_ek",
+      "display_name": "Emergency Diesel Generator (3D)",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "EK",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected system",
+      "match_key": "System:EK"
+    },
+    {
+      "id": "sys_eb",
+      "display_name": "Safety Bus (Unit 3 4-kV Shutdown Board)",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "EB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "associated bus",
+      "match_key": "System:EB"
+    },
+    {
+      "id": "c_sudr",
+      "display_name": "Single Unit Defeat Relay (SUDR) BFN-3-RLY-082-D",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "RLY",
+      "identifier": "BFN-3-RLY-082-D",
+      "model": "12HFA151A2H",
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:RLY|BFN-3-RLY-082-D"
+    },
+    {
+      "id": "c_asrd1",
+      "display_name": "Fast Start Relay No. 1 (ASRD-1)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "RLY",
+      "identifier": "ASRD-1",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:RLY|ASRD-1"
+    },
+    {
+      "id": "fm_pm",
+      "display_name": "Lack of periodic calibration/inspection PM tasks for SUDR relay",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "PM program did not include contact burnishing, finger binding checks, contact wipe/gap inspections, pickup voltage tests, contact resistance checks, or visual bend checks.",
+      "match_key": "FailureMode:lack-of-periodic-calibration-inspection-pm-tasks-for-sudr-relay"
+    },
+    {
+      "id": "fm_contacts",
+      "display_name": "SUDR normally-closed contacts (3-4) found electrically open",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Contacts 3 and 4 designed normally closed but found open, preventing diesel fast start seal-in circuit from being made up.",
+      "match_key": "FailureMode:sudr-normally-closed-contacts-3-4-found-electrically-open"
+    },
+    {
+      "id": "fm_slowstart",
+      "display_name": "3D DG slower-than-expected start not recognized as operability indicator",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "On Dec 14, 2022 the 3D EDG started slower than expected during monthly surveillance; assessment at the time did not identify operability concern.",
+      "match_key": "FailureMode:3d-dg-slower-than-expected-start-not-recognized-as-operability-indicator"
+    },
+    {
+      "id": "fm_nostart_uv",
+      "display_name": "3D DG failed to start on bus undervoltage condition",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "During Feb 14, 2024 load acceptance test, 3D DG did not start on an undervoltage condition on its associated safety bus as expected.",
+      "match_key": "FailureMode:3d-dg-failed-to-start-on-bus-undervoltage-condition"
+    },
+    {
+      "id": "fm_untimely",
+      "display_name": "Untimely rework/replacement of relay due to incorrect mental model of seal-in circuit importance",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Engineers, not adequately prepared for the complex DG start logic, incorrectly concluded the seal-in failure did not affect operability, extending the duration of relay non-functionality.",
+      "match_key": "FailureMode:untimely-rework-replacement-of-relay-due-to-incorrect-mental-model-of-seal-in-circuit-importance"
+    },
+    {
+      "id": "cons_inop",
+      "display_name": "3D DG (SUDR relay) inoperable; TS Actions/3.0.4 mode-change violations",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2022-12-14T09:30",
+      "end": "2024-02-15T07:00",
+      "duration": "approximately 14 months",
+      "tz": "Central Time",
+      "match_key": "Consequence:3d-dg-sudr-relay-inoperable-ts-actions-3-0-4-mode-change-violations"
+    },
+    {
+      "id": "ca_repair",
+      "display_name": "Repair failed SUDR relay and return 3D DG to Operable status",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:repair-failed-sudr-relay-and-return-3d-dg-to-operable-status"
+    },
+    {
+      "id": "ca_pmstrategy",
+      "display_name": "Implement improved PM strategy with detailed relay inspection/testing requirements for DG start logic relays",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:implement-improved-pm-strategy-with-detailed-relay-inspection-testing-requirements-for-dg-start-logic-relays"
+    },
+    {
+      "id": "ca_training",
+      "display_name": "Provide EDG start logic training to system engineers",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:provide-edg-start-logic-training-to-system-engineers"
+    },
+    {
+      "id": "mfr_ge",
+      "display_name": "General Electric",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": null,
+      "match_key": "Manufacturer:general-electric"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts381",
+      "display_name": "Technical Specification 3.8.1, AC Sources - Operating",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-3-8-1-ac-sources-operating"
+    },
+    {
+      "id": "rr_ts382",
+      "display_name": "Technical Specification 3.8.2, AC Sources - Shutdown",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-3-8-2-ac-sources-shutdown"
+    },
+    {
+      "id": "rr_ts304",
+      "display_name": "Technical Specification 3.0.4",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-3-0-4"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts381",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts382",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts304",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ek",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_eb",
+      "evidence": null
+    },
+    {
+      "source": "c_sudr",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_ge",
+      "evidence": null
+    },
+    {
+      "source": "fm_pm",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_pm",
+      "relation": "LEADS_TO",
+      "target": "fm_contacts",
+      "evidence": null
+    },
+    {
+      "source": "fm_contacts",
+      "relation": "LEADS_TO",
+      "target": "fm_slowstart",
+      "evidence": null
+    },
+    {
+      "source": "fm_contacts",
+      "relation": "LEADS_TO",
+      "target": "fm_nostart_uv",
+      "evidence": null
+    },
+    {
+      "source": "fm_slowstart",
+      "relation": "LEADS_TO",
+      "target": "cons_inop",
+      "evidence": null
+    },
+    {
+      "source": "fm_nostart_uv",
+      "relation": "LEADS_TO",
+      "target": "cons_inop",
+      "evidence": null
+    },
+    {
+      "source": "fm_untimely",
+      "relation": "LEADS_TO",
+      "target": "cons_inop",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_repair",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_pmstrategy",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_training",
+      "evidence": null
+    }
+  ],
+  "chain": "lack of effective PM (calibration tasks omitted) [cause TBD] -> SUDR relay normally-closed contacts found open -> fast start seal-in circuit not made up -> slow DG start not recognized as operability issue (Dec 2022) / DG fails to start on bus undervoltage (Feb 2024) -> untimely relay rework extends inoperable duration -> 3D DG (SUDR relay) inoperable ~14 months, TS 3.0.4 violations [DG remained capable of manual start and accident-signal auto-start]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause_code/category are TBD/provisional per FORM-366 fields (no code assigned in source header); proximate_text and theme derived from narrative's PM-inadequacy discussion. No structures/systems were stated as inoperable contributing causes per Section II.B. No previous similar events were identified at BFN in the last five years (Section VII), so no SIMILAR_TO stub LER is emitted. DG retained ability to start on accident signal and via manual operator action throughout the inoperability window, but this is described as retained design capability rather than an explicit 'operable, available backup system' in the BACKED_UP_BY sense, so no BACKED_UP_BY edge was asserted; this nuance is captured in the chain summary instead. EIIS codes EK (DG) and EB (safety bus) are per narrative bracket codes; RLY has no more specific sub-code given for SUDR/ASRD-1 beyond the generic relay designator."
+}

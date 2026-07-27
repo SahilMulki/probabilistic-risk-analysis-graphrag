@@ -1,0 +1,347 @@
+{
+  "ler_number": "400-2025-001-00",
+  "identity": {
+    "accession_number": "ML25336A056",
+    "docket": "05000400",
+    "plant_name": "Shearon Harris",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2025-10-10",
+    "report_date": "2025-12-02",
+    "operating_mode": "6",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Fuel Assembly Incorrectly Placed in Spent Fuel Pool 'B'"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "improper self-checking and verification practices by reactor maintenance personnel that resulted in positioning the bridge over the incorrect location of the SFP 'B'; reactor maintenance leadership failed to identify and correct behavioral short falls through intrusive observation and coaching prior to the event",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "human performance / self-checking and verification failure",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 400-2025-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "400-2025-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:400-2025-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Shearon Harris Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000400",
+      "match_key": "Unit:05000400"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "human performance / self-checking and verification failure",
+      "proximate_text": "improper self-checking and verification practices by reactor maintenance personnel that resulted in positioning the bridge over the incorrect location of the SFP 'B'; reactor maintenance leadership failed to identify and correct behavioral short falls through intrusive observation and coaching prior to the event",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_db",
+      "display_name": "Spent Fuel Pool",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "DB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:DB"
+    },
+    {
+      "id": "c_racks",
+      "display_name": "PWR storage racks",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "RK",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:RK"
+    },
+    {
+      "id": "c_bridge",
+      "display_name": "Fuel handling bridge",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "FMB",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:FMB"
+    },
+    {
+      "id": "c_fuel_zf15",
+      "display_name": "Fuel Assembly ZF15",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "ZF15",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:fuel-assembly-zf15"
+    },
+    {
+      "id": "fm_selfcheck",
+      "display_name": "Improper self-checking and verification by reactor maintenance personnel",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Bridge positioned over incorrect SFP 'B' location due to inadequate self-checking/verification during fuel movement",
+      "match_key": "FailureMode:improper-self-checking-and-verification-by-reactor-maintenance-personnel"
+    },
+    {
+      "id": "fm_leadership",
+      "display_name": "Leadership failure to correct behavioral shortfalls",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Reactor maintenance leadership failed to identify and correct behavioral short falls through intrusive observation and coaching prior to the event",
+      "match_key": "FailureMode:leadership-failure-to-correct-behavioral-shortfalls"
+    },
+    {
+      "id": "fm_misplace",
+      "display_name": "Fuel assembly ZF15 placed in incorrect SFP 'B' location",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Fuel assembly ZF15 placed in location B-C4C3 instead of expected location B-C4B3 during core offload",
+      "match_key": "FailureMode:fuel-assembly-zf15-placed-in-incorrect-sfp-b-location"
+    },
+    {
+      "id": "cons_ts_violation",
+      "display_name": "TS 5.6.1.1.d and 5.6.1.1.e checkerboard/burnup storage requirements violated in SFP 'B'",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2025-10-10T23:54",
+      "end": "2025-10-13T04:45",
+      "duration": "~52:51",
+      "tz": null,
+      "match_key": "Consequence:ts-5-6-1-1-d-and-5-6-1-1-e-checkerboard-burnup-storage-requirements-violated-in-sfp-b"
+    },
+    {
+      "id": "ca_transfer",
+      "display_name": "Transfer fuel assembly ZF15 to correct location",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:transfer-fuel-assembly-zf15-to-correct-location"
+    },
+    {
+      "id": "ca_training",
+      "display_name": "Retrain reactor maintenance personnel on proper verification practices",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:retrain-reactor-maintenance-personnel-on-proper-verification-practices"
+    },
+    {
+      "id": "ca_standing_order",
+      "display_name": "Implement maintenance standing order requiring independent verification and SRO/supervisor oversight for fuel/component movements",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:implement-maintenance-standing-order-requiring-independent-verification-and-sro-supervisor-oversight-for-fuel-component-movements"
+    },
+    {
+      "id": "ca_observation",
+      "display_name": "Increase leadership observations of reactor maintenance activities",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:increase-leadership-observations-of-reactor-maintenance-activities"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts_5611d",
+      "display_name": "TS 5.6.1.1.d Fuel Storage Criticality burnup acceptable range",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-5-6-1-1-d-fuel-storage-criticality-burnup-acceptable-range"
+    },
+    {
+      "id": "rr_ts_5611e",
+      "display_name": "TS 5.6.1.1.e checkerboard storage pattern requirement",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-5-6-1-1-e-checkerboard-storage-pattern-requirement"
+    },
+    {
+      "id": "rr_ts_3714",
+      "display_name": "TS 3.7.14 SFP boron concentration requirement",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-3-7-14-sfp-boron-concentration-requirement"
+    },
+    {
+      "id": "rr_ufsar_912",
+      "display_name": "UFSAR Section 9.1.2.1.2 SFP criticality analysis",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:ufsar-section-9-1-2-1-2-sfp-criticality-analysis"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_db",
+      "evidence": null
+    },
+    {
+      "source": "c_racks",
+      "relation": "PART_OF",
+      "target": "sys_db",
+      "evidence": null
+    },
+    {
+      "source": "fm_selfcheck",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_leadership",
+      "relation": "LEADS_TO",
+      "target": "fm_selfcheck",
+      "evidence": null
+    },
+    {
+      "source": "fm_selfcheck",
+      "relation": "LEADS_TO",
+      "target": "fm_misplace",
+      "evidence": null
+    },
+    {
+      "source": "fm_misplace",
+      "relation": "LEADS_TO",
+      "target": "cons_ts_violation",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_transfer",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_training",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_standing_order",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_observation",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts_5611d",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts_5611e",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts_3714",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ufsar_912",
+      "evidence": null
+    },
+    {
+      "source": "c_bridge",
+      "relation": "INVOLVES",
+      "target": "sys_db",
+      "evidence": null
+    },
+    {
+      "source": "c_fuel_zf15",
+      "relation": "INVOLVES",
+      "target": "sys_db",
+      "evidence": null
+    }
+  ],
+  "chain": "leadership failed to correct behavioral shortfalls -> improper self-checking/verification during fuel movement -> fuel assembly ZF15 placed in incorrect SFP 'B' location -> TS 5.6.1.1.d/e checkerboard and burnup storage requirements violated [restored via transfer to correct location; boron concentration remained above TS 3.7.14 limit, no unanalyzed condition]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code is officially TBD/provisional per FORM-366 fields; narrative describes a human-performance (self-checking/verification) causal theme but the official code was not assigned, so cause node marked provisional per rule 4. No previous similar occurrence at HNP in past three years, so no SIMILAR_TO/stub LER emitted per rule 9 (nothing to reference). RCT (reactor) and FMB (bridge) EIIS codes present in brackets in text; RK (racks) also bracketed. Boron concentration and UFSAR criticality analysis context included as regulatory/analysis references rather than System nodes since they are design-basis/safety-analysis context, not systems involved in the failure chain."
+}

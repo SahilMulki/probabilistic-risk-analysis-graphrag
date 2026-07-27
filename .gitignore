@@ -13,20 +13,23 @@ venv/
 .vscode/
 .idea/
 
-# generated / fetched corpus data — regenerable, kept out of git to stay code-focused.
+# generated / fetched corpus data — mostly regenerable, kept out of git to stay code-focused.
 #   re-fetch source docs with fetch_ler.py; re-extract records with pipeline_batch.py.
 # tracked on purpose: data/raw/manifest.csv, data/raw/fetch_list.csv (the parser reads it
 #   for the event-date fallback), data/raw/ground_truth/ (frozen oracle), data/raw/reference/,
-#   and out/risk/outcome_classes.json (the PAID Phase-7 classification result — kept so a fresh
-#   clone can restamp outcome_class onto the graph via classify_outcomes.py --restamp without
-#   re-running the ~$2 batch).
+#   out/risk/outcome_classes.json (the PAID Phase-7 classification result — kept so a fresh
+#   clone can restamp outcome_class via classify_outcomes.py --restamp without re-running the
+#   ~$2 batch), and out/*.json — the 833 resolved LER records (~12 MB), the PAID extraction
+#   artifact, so `docker compose up -d` + load_graph rebuilds the whole graph for $0. The big
+#   out/vector/ embedding cache (~170 MB) stays ignored.
 # NOTE: .gitignore has no inline comments — a pattern and a trailing '# ...' would be
 # read as one literal pattern, so keep each pattern on its own bare line.
 # NOTE: to un-ignore a file under an ignored dir you must ignore with `out/*` (not `out/`) so
-# git still descends, then re-include each level — hence the four out/ lines below.
+# git still descends, then re-include each level — hence the out/ lines below.
 data/raw/*.json
 data/raw/*.txt
 out/*
+!out/*.json
 !out/risk/
 out/risk/*
 !out/risk/outcome_classes.json

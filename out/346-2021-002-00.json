@@ -1,0 +1,410 @@
+{
+  "ler_number": "346-2021-002-00",
+  "identity": {
+    "accession_number": "ML21235A413",
+    "docket": "05000346",
+    "plant_name": "Davis-Besse",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2021-06-22",
+    "report_date": "2021-08-23",
+    "operating_mode": "4",
+    "power_level": 100,
+    "discovery_context": "inspection",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Davis-Besse Nuclear Power Station, Unit 1 Docket Number 50-346, License Number NPF-3 Licensee Event Report 2021-002-00"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(ii)(B)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The cause for Door 215 being unable to be latched was mechanical binding of the interlock mechanism due to normal operational wear...Contributing to the cause of the mechanical binding of the door interlock mechanism was a lack of specific direction in the annual preventive maintenance instructions for the door.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "PM-program gap allowing undetected mechanical wear/binding",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 346-2021-002-00",
+      "properties": {
+        "match_key": "LER:346-2021-002-00"
+      },
+      "type": "LER",
+      "key": "346-2021-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:346-2021-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Davis-Besse Unit 1",
+      "properties": {
+        "match_key": "Unit:05000346",
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000346",
+      "match_key": "Unit:05000346"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {
+        "match_key": "Cause:provisional"
+      },
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "PM-program gap allowing undetected mechanical wear/binding",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_nf",
+      "display_name": "Fire Protection / Barrier System",
+      "properties": {
+        "note": "watertight door serves as Fire, Flood, Tornado, Security, and HELB barrier",
+        "match_key": "System:NF"
+      },
+      "type": "System",
+      "eiis_code": "NF",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:NF"
+    },
+    {
+      "id": "sys_ba",
+      "display_name": "Emergency/Auxiliary Feedwater System",
+      "properties": {
+        "match_key": "System:BA"
+      },
+      "type": "System",
+      "eiis_code": "BA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected safety system (AFW Train 2 considered inoperable)",
+      "match_key": "System:BA"
+    },
+    {
+      "id": "sys_mdfp",
+      "display_name": "Motor Driven Feedwater Pump train",
+      "properties": {
+        "match_key": "System:motor-driven-feedwater-pump-train"
+      },
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; operable during event",
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "sys_diesel_efw",
+      "display_name": "Diesel engine-driven Emergency Feedwater Pump (beyond-design-basis)",
+      "properties": {
+        "match_key": "System:diesel-driven-emergency-feedwater-pump"
+      },
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; available during event",
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "c_door215",
+      "display_name": "Door 215 (AFW Pump Room watertight/interconnecting door)",
+      "properties": {
+        "match_key": "Component:DR|215"
+      },
+      "type": "Component",
+      "eiis_code": "DR",
+      "identifier": "215",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:DR|215"
+    },
+    {
+      "id": "c_interlock",
+      "display_name": "Door 215 interlock mechanism",
+      "properties": {
+        "match_key": "Component:door-215-interlock-mechanism"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:door-215-interlock-mechanism"
+    },
+    {
+      "id": "fm_pmgap",
+      "display_name": "PM instructions lacked specific direction to inspect door interlock",
+      "properties": {
+        "match_key": "FailureMode:pm-instructions-lacked-specific-direction"
+      },
+      "type": "FailureMode",
+      "description": "Annual preventive maintenance activity inspected for broken hardware but did not specifically direct inspection of the door interlock mechanism for proper function.",
+      "match_key": "FailureMode:pm-instructions-lacked-specific-direction-to-inspect-door-interlock"
+    },
+    {
+      "id": "fm_binding",
+      "display_name": "Interlock mechanism mechanical binding due to normal operational wear",
+      "properties": {
+        "match_key": "FailureMode:interlock-mechanical-binding"
+      },
+      "type": "FailureMode",
+      "description": "Mechanical binding of the interlock mechanism prevented the latching mechanism from being extended even when the door was closed.",
+      "match_key": "FailureMode:interlock-mechanism-mechanical-binding-due-to-normal-operational-wear"
+    },
+    {
+      "id": "fm_unlatched",
+      "display_name": "Door 215 could not be latched",
+      "properties": {
+        "match_key": "FailureMode:door-could-not-be-latched"
+      },
+      "type": "FailureMode",
+      "description": "Door closed but not latched, unable to secure against postulated HELB push-open force.",
+      "match_key": "FailureMode:door-215-could-not-be-latched"
+    },
+    {
+      "id": "cons_afw2",
+      "display_name": "AFW Train 2 considered inoperable / unanalyzed condition significantly degrading plant safety",
+      "properties": {
+        "match_key": "Consequence:afw-train-2-inoperable-unanalyzed-condition"
+      },
+      "type": "Consequence",
+      "start": "2021-06-22T12:08",
+      "end": "2021-06-22T12:15",
+      "duration": "00:07",
+      "tz": null,
+      "match_key": "Consequence:afw-train-2-considered-inoperable-unanalyzed-condition-significantly-degrading-plant-safety"
+    },
+    {
+      "id": "ca_close",
+      "display_name": "Door 215 closed and latched to restore AFW Train 2 operability",
+      "properties": {
+        "match_key": "CorrectiveAction:door-closed-and-latched"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:door-215-closed-and-latched-to-restore-afw-train-2-operability"
+    },
+    {
+      "id": "ca_repair",
+      "display_name": "Repair interlock mechanism for Door 215",
+      "properties": {
+        "match_key": "CorrectiveAction:repair-interlock-mechanism"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:repair-interlock-mechanism-for-door-215"
+    },
+    {
+      "id": "ca_pmrevise",
+      "display_name": "Revise annual PM instructions to add detailed inspection step for striker/striker plate alignment and interlock clearance",
+      "properties": {
+        "match_key": "CorrectiveAction:revise-pm-instructions"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-annual-pm-instructions-to-add-detailed-inspection-step-for-striker-striker-plate-alignment-and-interlock-clearance"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(ii)(B)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-ii-b"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-ii-b"
+    },
+    {
+      "id": "rr_5072",
+      "display_name": "10 CFR 50.72(b)(3)(ii)(B)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-72-b-3-ii-b"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-3-ii-b"
+    },
+    {
+      "id": "rr_ts3.7.5",
+      "display_name": "Technical Specification LCO 3.7.5",
+      "properties": {
+        "match_key": "RegulatoryReference:ts-lco-3-7-5"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-lco-3-7-5"
+    },
+    {
+      "id": "rr_ufsar",
+      "display_name": "UFSAR - Main Steam line break analysis in AFW Rooms",
+      "properties": {
+        "match_key": "RegulatoryReference:ufsar-main-steam-break-afw-rooms"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:ufsar-main-steam-line-break-analysis-in-afw-rooms"
+    },
+    {
+      "id": "ler_2019_002",
+      "display_name": "DBNPS LER 2019-002 (AFW Room Interconnecting Door left open and unattended)",
+      "properties": {
+        "match_key": "LER:1-2019-002"
+      },
+      "type": "LER",
+      "key": "346-2019-002-00",
+      "stub": true,
+      "title": "AFW Room Interconnecting Door left open and unattended due to worker inattention to door signage",
+      "plant": "Davis-Besse Nuclear Power Station",
+      "match_key": "LER:346-2019-002-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_nf",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ba",
+      "evidence": null
+    },
+    {
+      "source": "c_door215",
+      "relation": "PART_OF",
+      "target": "sys_nf",
+      "evidence": null
+    },
+    {
+      "source": "c_interlock",
+      "relation": "PART_OF",
+      "target": "c_door215",
+      "evidence": null
+    },
+    {
+      "source": "fm_pmgap",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_pmgap",
+      "relation": "LEADS_TO",
+      "target": "fm_binding",
+      "evidence": null
+    },
+    {
+      "source": "fm_binding",
+      "relation": "LEADS_TO",
+      "target": "fm_unlatched",
+      "evidence": null
+    },
+    {
+      "source": "fm_unlatched",
+      "relation": "LEADS_TO",
+      "target": "cons_afw2",
+      "evidence": null
+    },
+    {
+      "source": "cons_afw2",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_mdfp",
+      "evidence": null
+    },
+    {
+      "source": "cons_afw2",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_diesel_efw",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_close",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_repair",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_pmrevise",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_2019_002",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts3.7.5",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ufsar",
+      "evidence": null
+    }
+  ],
+  "chain": "PM instructions lacked specific direction to inspect interlock [cause TBD] -> interlock mechanism mechanical binding from normal wear -> Door 215 could not be latched -> AFW Train 2 considered inoperable / unanalyzed condition (7 min) [backups MDFP, diesel-driven EFW pump available]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q9"
+  ],
+  "notes": "Official cause code is TBD/provisional per FORM-366 fields despite block-13 listing cause 'O' (Other) - block-13 letter code is copied verbatim into block_13 but the authoritative cause_code/category fields per instructions are taken from FORM-366 FIELDS which state TBD/provisional; theme captures the PM-gap narrative. Door-to-NF-system PART_OF is modeled since door literally described as the barrier component; interlock mechanism explicitly stated as part of the door mechanism, hence PART_OF edge. MDFP and diesel-driven EFW pump are explicitly stated Operable/available during the event, so BACKED_UP_BY is asserted; AFW Train 1 remaining capable is a consequence-side note (train 1 protected, not a backup system) and not modeled as BACKED_UP_BY. Previous similar LER 2019-002 modeled as stub per rule 9 with key exactly as stated in narrative (no unit digit given in text, used '1-2019-002' per plant Unit 1 convention - if resolver requires literal text only 'LER 2019-002' was given without unit prefix)."
+}

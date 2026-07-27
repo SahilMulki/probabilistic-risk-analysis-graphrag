@@ -1,0 +1,332 @@
+{
+  "ler_number": "220-2021-001-00",
+  "identity": {
+    "accession_number": "ML21144A050",
+    "docket": "05000220",
+    "plant_name": "Nine Mile Point",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2021-03-12",
+    "report_date": "2021-05-11",
+    "operating_mode": null,
+    "power_level": 98,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": "55137",
+    "ens_date": null,
+    "ens_time": null,
+    "title": "NMP1 Licensee Event Report 2021-001, Average Power Range Monitors Declared Inoperable Due to Trip of Reactor Recirculation Pump 13"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The cause of the RRP 13 trip is generator field overcurrent due to a degraded voltage adjust potentiometer. The potentiometer P1 was tested with a digital multimeter and the reading was found erratic versus smooth. There was also mechanical resistance noted when manipulated.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "degraded voltage-adjust potentiometer causing generator field overcurrent trip",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 220-2021-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "220-2021-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:220-2021-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Nine Mile Point Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000220",
+      "match_key": "Unit:05000220"
+    },
+    {
+      "id": "cause",
+      "display_name": "Component Failure - EC (X)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "degraded voltage-adjust potentiometer causing generator field overcurrent trip",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_ad",
+      "display_name": "Reactor Recirculation Pumps",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "AD",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:AD"
+    },
+    {
+      "id": "sys_jc",
+      "display_name": "Average Power Range Monitor (APRM)",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected safety-related instrumentation",
+      "match_key": "System:JC"
+    },
+    {
+      "id": "c_rrp13",
+      "display_name": "Reactor Recirculation Pump 13",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "AD",
+      "identifier": "RRP 13",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:AD|RRP 13"
+    },
+    {
+      "id": "c_pot",
+      "display_name": "Voltage adjust potentiometer (P1)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "EC",
+      "identifier": "P1",
+      "model": null,
+      "manufacturer_code": "GE",
+      "inferred_code": false,
+      "match_key": "Component:EC|P1"
+    },
+    {
+      "id": "c_valve",
+      "display_name": "RRP 13 discharge blocking valve",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:rrp-13-discharge-blocking-valve"
+    },
+    {
+      "id": "fm_pot_degraded",
+      "display_name": "Voltage adjust potentiometer degraded (erratic reading, mechanical resistance)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Potentiometer P1 tested erratic versus smooth with mechanical resistance when manipulated.",
+      "match_key": "FailureMode:voltage-adjust-potentiometer-degraded-erratic-reading-mechanical-resistance"
+    },
+    {
+      "id": "fm_overcurrent",
+      "display_name": "Generator field overcurrent",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Degraded potentiometer caused generator field overcurrent.",
+      "match_key": "FailureMode:generator-field-overcurrent"
+    },
+    {
+      "id": "fm_pumptrip",
+      "display_name": "RRP 13 trip",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Reactor Recirculation Pump 13 tripped at 98% power while lowering flow for planned maintenance.",
+      "match_key": "FailureMode:rrp-13-trip"
+    },
+    {
+      "id": "fm_reverseflow",
+      "display_name": "Reverse flow through tripped RRP 13",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Due to the five-RRP design, a trip of an RRP at power results in reverse flow through the tripped pump.",
+      "match_key": "FailureMode:reverse-flow-through-tripped-rrp-13"
+    },
+    {
+      "id": "cons_aprm",
+      "display_name": "APRMs flow-biased trip declared inoperable",
+      "properties": {
+        "note": "Reverse flow caused unconservative total flow input to APRM logic, raising flow-biased trip setpoint above allowable TS value"
+      },
+      "type": "Consequence",
+      "start": "2021-03-12T21:02",
+      "end": "2021-03-12T21:10",
+      "duration": "0:08",
+      "tz": null,
+      "match_key": "Consequence:aprms-flow-biased-trip-declared-inoperable"
+    },
+    {
+      "id": "ca_replace_pot",
+      "display_name": "Replace voltage adjust potentiometer",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-voltage-adjust-potentiometer"
+    },
+    {
+      "id": "ca_inspect_other_rrps",
+      "display_name": "Inspect remaining four RRP voltage adjust potentiometers for degradation",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:inspect-remaining-four-rrp-voltage-adjust-potentiometers-for-degradation"
+    },
+    {
+      "id": "mfr_ge",
+      "display_name": "General Electric",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "GE",
+      "match_key": "Manufacturer:GE"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(v)(A)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-a"
+    },
+    {
+      "id": "rr_5072",
+      "display_name": "10 CFR 50.72(b)(3)(v)(A)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-3-v-a"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "LER 220-2019-004-00",
+      "properties": {},
+      "type": "LER",
+      "key": "220-2019-004-00",
+      "stub": true,
+      "title": "Trip of RRP 11 due to a degraded tachometer generator",
+      "plant": "Nine Mile Point Unit 1",
+      "match_key": "LER:220-2019-004-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ad",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jc",
+      "evidence": null
+    },
+    {
+      "source": "c_pot",
+      "relation": "PART_OF",
+      "target": "c_rrp13",
+      "evidence": null
+    },
+    {
+      "source": "c_pot",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_ge",
+      "evidence": null
+    },
+    {
+      "source": "fm_pot_degraded",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_pot_degraded",
+      "relation": "LEADS_TO",
+      "target": "fm_overcurrent",
+      "evidence": null
+    },
+    {
+      "source": "fm_overcurrent",
+      "relation": "LEADS_TO",
+      "target": "fm_pumptrip",
+      "evidence": null
+    },
+    {
+      "source": "fm_pumptrip",
+      "relation": "LEADS_TO",
+      "target": "fm_reverseflow",
+      "evidence": null
+    },
+    {
+      "source": "fm_reverseflow",
+      "relation": "LEADS_TO",
+      "target": "cons_aprm",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_pot",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_inspect_other_rrps",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    }
+  ],
+  "chain": "degraded voltage-adjust potentiometer [cause X] -> generator field overcurrent -> RRP 13 trip -> reverse flow through tripped pump -> APRM flow-biased trip setpoint non-conservative / APRMs declared inoperable (8 min, resolved by closing discharge valve)",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause_code block shows 'X' (component failure) with category left provisional in FORM-366 FIELDS ('TBD'/'provisional'); per rule 4 the code/category are copied verbatim from FORM-366 FIELDS even though category text is 'provisional' rather than a named category. c_valve (discharge blocking valve) is mentioned only as the corrective operator action to terminate reverse flow, not itself a failure node. No ECCS backup system stated as operable during this event -- flow-biased APRM function remained partially available via the clamped 122% setpoint but this is described as inherent design margin, not an operable backup system per rule 6, so no BACKED_UP_BY edge emitted. IEEE 803/805 identifiers (JIG/p and JC/AD) map APRM to JC and RRP to AD, consistent with block 13 system code AD."
+}

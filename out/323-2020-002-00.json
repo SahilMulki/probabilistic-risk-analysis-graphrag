@@ -1,0 +1,288 @@
+{
+  "ler_number": "323-2020-002-00",
+  "identity": {
+    "accession_number": "ML20259A183",
+    "docket": "05000323",
+    "plant_name": "Diablo Canyon",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2020-07-17",
+    "report_date": "2020-09-15",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Manual Reactor Trip Due to Increased Main Generator Hydrogen Usage"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The cause of the increased hydrogen usage was due to a leak in a weld segment located on the Unit 2 Main Generator Exciter End stator coil cooling water manifold.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "weld leak in stator coil cooling water manifold",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 323-2020-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "323-2020-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:323-2020-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Diablo Canyon Unit 2",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000323",
+      "match_key": "Unit:05000323"
+    },
+    {
+      "id": "cause",
+      "display_name": "Weld leak (provisional)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "weld leak in stator coil cooling water manifold",
+      "proximate_text": "The cause of the increased hydrogen usage was due to a leak in a weld segment located on the Unit 2 Main Generator Exciter End stator coil cooling water manifold.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_turbgen",
+      "display_name": "Turbine Generator System",
+      "properties": {
+        "note": "hydrogen gas system is part of this system"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:turbine-generator-system"
+    },
+    {
+      "id": "sys_afw",
+      "display_name": "Auxiliary Feedwater System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "engineered safety feature, actuated automatically as expected",
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "c_manifold",
+      "display_name": "Main Generator Exciter End stator coil cooling water manifold",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "Unit 2 Main Generator Exciter End manifold",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:main-generator-exciter-end-stator-coil-cooling-water-manifold"
+    },
+    {
+      "id": "c_weld",
+      "display_name": "Weld segment on stator coil cooling water manifold",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:weld-segment-on-stator-coil-cooling-water-manifold"
+    },
+    {
+      "id": "fm_weldleak",
+      "display_name": "Weld segment leak on stator coil cooling water manifold",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "A leak developed in a weld segment on the Exciter End stator coil cooling water manifold of the Unit 2 Main Generator.",
+      "match_key": "FailureMode:weld-segment-leak-on-stator-coil-cooling-water-manifold"
+    },
+    {
+      "id": "fm_h2usage",
+      "display_name": "Increased main generator hydrogen usage / low hydrogen pressure",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Leak caused increased hydrogen usage in the generator, resulting in low hydrogen pressure annunciator in the control room.",
+      "match_key": "FailureMode:increased-main-generator-hydrogen-usage-low-hydrogen-pressure"
+    },
+    {
+      "id": "cons_trip",
+      "display_name": "Manual reactor trip and automatic AFW actuation",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2020-07-17T13:46",
+      "end": null,
+      "duration": null,
+      "tz": "PDT",
+      "match_key": "Consequence:manual-reactor-trip-and-automatic-afw-actuation"
+    },
+    {
+      "id": "ca_repair",
+      "display_name": "Repair Unit 2 Main Generator Exciter End manifold",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:repair-unit-2-main-generator-exciter-end-manifold"
+    },
+    {
+      "id": "ca_followup",
+      "display_name": "Follow-up corrective actions managed via DCPP Corrective Action Program",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:follow-up-corrective-actions-managed-via-dcpp-corrective-action-program"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5072b2iv",
+      "display_name": "10 CFR 50.72(b)(2)(iv)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-2-iv-b"
+    },
+    {
+      "id": "rr_5072b3iv",
+      "display_name": "10 CFR 50.72(b)(3)(iv)(A)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-3-iv-a"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072b2iv",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072b3iv",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_turbgen",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_afw",
+      "evidence": null
+    },
+    {
+      "source": "c_manifold",
+      "relation": "PART_OF",
+      "target": "sys_turbgen",
+      "evidence": null
+    },
+    {
+      "source": "c_weld",
+      "relation": "PART_OF",
+      "target": "c_manifold",
+      "evidence": null
+    },
+    {
+      "source": "fm_weldleak",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_weldleak",
+      "relation": "LEADS_TO",
+      "target": "fm_h2usage",
+      "evidence": null
+    },
+    {
+      "source": "fm_h2usage",
+      "relation": "LEADS_TO",
+      "target": "cons_trip",
+      "evidence": null
+    },
+    {
+      "source": "cons_trip",
+      "relation": "MITIGATED_BY",
+      "target": "sys_afw",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_repair",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_followup",
+      "evidence": null
+    }
+  ],
+  "chain": "weld leak in stator coil cooling water manifold [cause TBD] -> increased hydrogen usage / low hydrogen pressure -> manual reactor trip + automatic AFW actuation [mitigated by AFW]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code is TBD/provisional on FORM-366; narrative attributes the event to a weld leak in the Exciter End stator coil cooling water manifold of the Unit 2 Main Generator, causing increased hydrogen usage and a low hydrogen pressure annunciator, prompting a manual reactor trip per procedure. AFW actuated automatically as expected and is modeled as a mitigating/backup system since it responded during the event, not merely design context. No inoperable SSCs contributed to the event. No similar events in the prior three years, so no SIMILAR_TO stub LER emitted. Hydrogen gas system described as part of turbine generator system per narrative background; no EIIS code given for either system, so eiis_code left null per rule 2."
+}

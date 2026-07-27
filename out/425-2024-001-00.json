@@ -1,0 +1,309 @@
+{
+  "ler_number": "425-2024-001-00",
+  "identity": {
+    "accession_number": "ML24222A467",
+    "docket": "05000425",
+    "plant_name": "Vogtle",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2024-06-22",
+    "report_date": "2024-08-09",
+    "operating_mode": "3",
+    "power_level": 0,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Manual Actuation of the Reactor Protection System due to a Rod Control fuse opening causing a misaligned Shutdown Rod"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)",
+      "10 CFR 50.73(a)(2)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "X",
+      "system": "AA",
+      "component": "FU",
+      "manufacturer": "W120",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The cause of the event was due to the Rod Control Lift Coil fuse for Shutdown Rod J13 opening.",
+    "cause_code": "X",
+    "category": "Other",
+    "theme": "Fuse failure causing rod misalignment",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 425-2024-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "425-2024-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:425-2024-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Vogtle Unit 2",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000425",
+      "match_key": "Unit:05000425"
+    },
+    {
+      "id": "cause",
+      "display_name": "Other (X)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "X",
+      "category": "Other",
+      "theme": "Fuse failure causing rod misalignment",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Other"
+    },
+    {
+      "id": "sys_aa",
+      "display_name": "Rod Control System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "AA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:AA"
+    },
+    {
+      "id": "sys_jc",
+      "display_name": "Reactor Protection System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JC"
+    },
+    {
+      "id": "sys_ab",
+      "display_name": "Pressurizer",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "AB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "context; plant conditions at time of event",
+      "match_key": "System:AB"
+    },
+    {
+      "id": "sys_ac",
+      "display_name": "Reactor",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "AC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "context; subcritical state referenced in safety assessment",
+      "match_key": "System:AC"
+    },
+    {
+      "id": "c_bkr",
+      "display_name": "Reactor Trip Breakers",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "BKR",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:BKR"
+    },
+    {
+      "id": "c_rod",
+      "display_name": "Shutdown Rod J13",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "ROD",
+      "identifier": "J13",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:ROD|J13"
+    },
+    {
+      "id": "c_fuse",
+      "display_name": "Rod Control Lift Coil fuse",
+      "properties": {
+        "rating": "50A"
+      },
+      "type": "Component",
+      "eiis_code": "FU",
+      "identifier": "A25X50",
+      "model": "A25X50",
+      "manufacturer_code": "W120",
+      "inferred_code": false,
+      "match_key": "Component:FU|A25X50"
+    },
+    {
+      "id": "fm_fuse_open",
+      "display_name": "Rod Control Lift Coil fuse opened",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The Rod Control Lift Coil fuse for Shutdown Rod J13 opened, interrupting power to the lift coil.",
+      "match_key": "FailureMode:rod-control-lift-coil-fuse-opened"
+    },
+    {
+      "id": "fm_rod_stop",
+      "display_name": "Shutdown Rod J13 stopped moving / misaligned",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Shutdown Rod J13 stopped moving at 132 steps, becoming misaligned from the rest of the 'B' Shutdown Bank by greater than 12 steps.",
+      "match_key": "FailureMode:shutdown-rod-j13-stopped-moving-misaligned"
+    },
+    {
+      "id": "cons_manual_trip",
+      "display_name": "Manual actuation of Reactor Protection System",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2024-06-22T07:28:00",
+      "end": null,
+      "duration": null,
+      "tz": "EDT",
+      "match_key": "Consequence:manual-actuation-of-reactor-protection-system"
+    },
+    {
+      "id": "ca_replace_fuse",
+      "display_name": "Replace Rod Control Lift Coil fuse",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-rod-control-lift-coil-fuse"
+    },
+    {
+      "id": "mfr_westinghouse",
+      "display_name": "Westinghouse",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "W120",
+      "match_key": "Manufacturer:W120"
+    },
+    {
+      "id": "rr_5073_iv_a",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_ufsar",
+      "display_name": "UFSAR Chapter 15, Accident Analysis",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:ufsar-chapter-15-accident-analysis"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_iv_a",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_aa",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jc",
+      "evidence": null
+    },
+    {
+      "source": "c_fuse",
+      "relation": "PART_OF",
+      "target": "sys_aa",
+      "evidence": null
+    },
+    {
+      "source": "c_rod",
+      "relation": "PART_OF",
+      "target": "sys_aa",
+      "evidence": null
+    },
+    {
+      "source": "c_bkr",
+      "relation": "PART_OF",
+      "target": "sys_jc",
+      "evidence": null
+    },
+    {
+      "source": "c_fuse",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_westinghouse",
+      "evidence": null
+    },
+    {
+      "source": "fm_fuse_open",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_fuse_open",
+      "relation": "LEADS_TO",
+      "target": "fm_rod_stop",
+      "evidence": null
+    },
+    {
+      "source": "fm_rod_stop",
+      "relation": "LEADS_TO",
+      "target": "cons_manual_trip",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_fuse",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ufsar",
+      "evidence": null
+    }
+  ],
+  "chain": "Rod Control Lift Coil fuse opens [cause X] -> Shutdown Rod J13 stops moving / misaligns >12 steps -> Rod Deviation Alarm alerts operators -> manual actuation of RPS per Abnormal Operating Procedure",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4"
+  ],
+  "notes": "Cause code X (Other) governs category per official coding despite the narrative pointing to a specific component (fuse) failure; no further root-cause elaboration was given for why the fuse opened. No previous similar events were reported (narrative states 'None'), so no SIMILAR_TO edge or stub LER node was created. Pressurizer (AB) and Reactor (AC) systems are mentioned only as plant-condition context at time of event, not as participants in the failure chain, but are included as System nodes with role annotations since they were explicitly named with EIIS codes in the narrative; no edges beyond INVOLVES from ler were added for AA and JC, which are the systems directly involved in the failure chain."
+}

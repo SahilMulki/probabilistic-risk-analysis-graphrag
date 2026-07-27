@@ -1,0 +1,326 @@
+{
+  "ler_number": "461-2020-003-00",
+  "identity": {
+    "accession_number": "ML21159A106",
+    "docket": "05000461",
+    "plant_name": "Clinton",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2020-12-26",
+    "report_date": "2021-02-22",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Reactor Core Isolation Cooling System Card Fuse Failure Results in a Condition Prohibited by Technical Specifications and That Could Have Prevented Fulfillment of a Safetv Function Needed to Control....."
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)",
+      "10 CFR 50.73(a)(2)(v)(C)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "xx",
+      "system": "BN",
+      "component": "FU",
+      "manufacturer": "GE",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The cause of the failure to identify the failed card on December 21, 2020, was Operations did not recognize the risk associated with the condition and did not initiate actions to evaluate the operability.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Missed opportunity to identify degraded condition / operability evaluation not initiated",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 461-2020-XXX-00",
+      "properties": {
+        "match_key": "LER:461-2020-XXX-00"
+      },
+      "type": "LER",
+      "key": "461-2020-003-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:461-2020-003-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Clinton Unit 1",
+      "properties": {
+        "match_key": "Unit:05000461",
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000461",
+      "match_key": "Unit:05000461"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {
+        "match_key": "Cause:provisional"
+      },
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Missed opportunity to identify degraded condition / operability evaluation not initiated",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_bn",
+      "display_name": "Reactor Core Isolation Cooling",
+      "properties": {
+        "match_key": "System:BN"
+      },
+      "type": "System",
+      "eiis_code": "BN",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BN"
+    },
+    {
+      "id": "c_card",
+      "display_name": "Division 2 RCIC-5 card (NSPS Essential Logic)",
+      "properties": {
+        "match_key": "Component:division-2-rcic-5-card"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "D-A14-A112",
+      "model": null,
+      "manufacturer_code": "GE",
+      "inferred_code": false,
+      "match_key": "Component:division-2-rcic-5-card-nsps-essential-logic"
+    },
+    {
+      "id": "c_fuse",
+      "display_name": "Internal card fuse",
+      "properties": {
+        "match_key": "Component:FU"
+      },
+      "type": "Component",
+      "eiis_code": "FU",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:FU"
+    },
+    {
+      "id": "fm_fuseblown",
+      "display_name": "Fuse internal to RCIC-5 card blown",
+      "properties": {
+        "match_key": "FailureMode:fuse-internal-to-rcic-5-card-blown"
+      },
+      "type": "FailureMode",
+      "description": "An analysis of the failed Division 2 RCIC-5 card identified a blown fuse internal to the card.",
+      "match_key": "FailureMode:fuse-internal-to-rcic-5-card-blown"
+    },
+    {
+      "id": "fm_cardfail",
+      "display_name": "Division 2 RCIC-5 card fails to send isolation signal",
+      "properties": {
+        "match_key": "FailureMode:division-2-rcic-5-card-fails-to-send-isolation-signal"
+      },
+      "type": "FailureMode",
+      "description": "The failed Division 2 RCIC-5 card was not sending an isolation signal during the surveillance.",
+      "match_key": "FailureMode:division-2-rcic-5-card-fails-to-send-isolation-signal"
+    },
+    {
+      "id": "fm_missed",
+      "display_name": "Operations did not evaluate operability after missed alarm on Dec 21",
+      "properties": {
+        "match_key": "FailureMode:operations-did-not-evaluate-operability-after-missed-alarm"
+      },
+      "type": "FailureMode",
+      "description": "Alarm did not occur as expected during procedure 9030.01C041 on December 21, 2020; Operations did not recognize the risk and did not initiate actions to evaluate operability.",
+      "match_key": "FailureMode:operations-did-not-evaluate-operability-after-missed-alarm-on-dec-21"
+    },
+    {
+      "id": "cons_ts",
+      "display_name": "TS 3.3.6.1 prohibited condition / loss of redundant automatic containment isolation capability",
+      "properties": {
+        "match_key": "Consequence:ts-3-3-6-1-prohibited-condition-loss-of-redundant-isolation"
+      },
+      "type": "Consequence",
+      "start": "2020-12-21T15:15",
+      "end": "2020-12-26T15:06",
+      "duration": "approximately 118 hours (exceeded 24-hour TS action time)",
+      "tz": "CST",
+      "match_key": "Consequence:ts-3-3-6-1-prohibited-condition-loss-of-redundant-automatic-containment-isolation-capability"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace and test failed Division 2 RCIC-5 card",
+      "properties": {
+        "match_key": "CorrectiveAction:replace-and-test-failed-division-2-rcic-5-card"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-and-test-failed-division-2-rcic-5-card"
+    },
+    {
+      "id": "ca_training",
+      "display_name": "Refresher training on NSPS self-test system and operability verification",
+      "properties": {
+        "match_key": "CorrectiveAction:refresher-training-nsps-self-test-operability"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:refresher-training-on-nsps-self-test-system-and-operability-verification"
+    },
+    {
+      "id": "mfr_ge",
+      "display_name": "General Electric",
+      "properties": {
+        "match_key": "Manufacturer:GE"
+      },
+      "type": "Manufacturer",
+      "code": "GE",
+      "match_key": "Manufacturer:GE"
+    },
+    {
+      "id": "rr_5073ib",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_5073vc",
+      "display_name": "10 CFR 50.73(a)(2)(v)(C)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-c"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-c"
+    },
+    {
+      "id": "rr_ts3361",
+      "display_name": "TS 3.3.6.1 Primary Containment and Drywell Isolation Instrumentation",
+      "properties": {
+        "match_key": "RegulatoryReference:ts-3-3-6-1"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-3-3-6-1-primary-containment-and-drywell-isolation-instrumentation"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073ib",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073vc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bn",
+      "evidence": null
+    },
+    {
+      "source": "c_card",
+      "relation": "PART_OF",
+      "target": "sys_bn",
+      "evidence": null
+    },
+    {
+      "source": "c_fuse",
+      "relation": "PART_OF",
+      "target": "c_card",
+      "evidence": null
+    },
+    {
+      "source": "c_card",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_ge",
+      "evidence": null
+    },
+    {
+      "source": "fm_missed",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_missed",
+      "relation": "LEADS_TO",
+      "target": "fm_fuseblown",
+      "evidence": null
+    },
+    {
+      "source": "fm_fuseblown",
+      "relation": "LEADS_TO",
+      "target": "fm_cardfail",
+      "evidence": null
+    },
+    {
+      "source": "fm_cardfail",
+      "relation": "LEADS_TO",
+      "target": "cons_ts",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_training",
+      "evidence": null
+    },
+    {
+      "source": "cons_ts",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    }
+  ],
+  "chain": "Operations did not evaluate operability after missed alarm on Dec 21 [cause TBD] -> internal fuse on Division 2 RCIC-5 card blown -> card fails to send isolation signal -> TS 3.3.6.1 prohibited condition / loss of redundant automatic containment isolation capability (~Dec 21 15:15 to Dec 26 15:06)",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code is TBD/provisional per FORM-366 block despite the narrative attributing the delayed identification to an Operations personnel-error-like root cause; per rule 4, the official code/category governs and provisional=true is set. RCIC-5 card's fuse is explicitly 'internal to the card', supporting an explicit PART_OF edge (fuse PART_OF card). No backup systems are explicitly stated as operable during this window (the redundant Division 1 channel was NOT compromised, but the narrative frames the event around the temporary loss of the redundant capability itself, so no BACKED_UP_BY edge is asserted). No previous similar occurrence identified per Section F, so no stub LER/SIMILAR_TO edge emitted."
+}

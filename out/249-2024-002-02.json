@@ -1,0 +1,330 @@
+{
+  "ler_number": "249-2024-002-02",
+  "identity": {
+    "accession_number": "ML25296A468",
+    "docket": "05000249",
+    "plant_name": "Dresden",
+    "unit": 3,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2024-11-20",
+    "report_date": "2025-10-23",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "02",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Low Pressure Coolant Injection Pump Suction Relief Valve Inoperable as a Primary Containment Isolation Valve Resulted in a Condition Prohibited by Technical Specifications"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "D",
+      "system": "NH",
+      "component": "RV",
+      "manufacturer": "C568",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "the relief valve process does not provide instruction to verify relief valves are in the closed position prior to return to service",
+    "cause_code": "D",
+    "category": "Defective Procedure",
+    "theme": "missing post-installation verification step in relief valve return-to-service process",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 249-2024-002-02",
+      "properties": {},
+      "type": "LER",
+      "key": "249-2024-002-02",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:249-2024-002-02"
+    },
+    {
+      "id": "unit",
+      "display_name": "Dresden Unit 3",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000249",
+      "match_key": "Unit:05000249"
+    },
+    {
+      "id": "cause",
+      "display_name": "Defective Procedure (D)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "D",
+      "category": "Defective Procedure",
+      "theme": "missing post-installation verification step in relief valve return-to-service process",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Defective Procedure"
+    },
+    {
+      "id": "sys_bo",
+      "display_name": "Low Pressure Coolant Injection",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BO",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "system with inoperable PCIV",
+      "match_key": "System:BO"
+    },
+    {
+      "id": "sys_nh",
+      "display_name": "Suppression Pool",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "NH",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:NH"
+    },
+    {
+      "id": "sys_isv",
+      "display_name": "Primary Containment Isolation Valve function",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "ISV",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:ISV"
+    },
+    {
+      "id": "c_rv",
+      "display_name": "3A LPCI Suction Relief Valve",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "RV",
+      "identifier": "3A",
+      "model": null,
+      "manufacturer_code": "C568",
+      "inferred_code": false,
+      "match_key": "Component:RV|3A"
+    },
+    {
+      "id": "c_pump",
+      "display_name": "3A LPCI Pump",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "P",
+      "identifier": "3A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:P|3A"
+    },
+    {
+      "id": "fm_procedure",
+      "display_name": "Relief valve return-to-service process lacked closed-position verification step",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The relief valve replacement/return-to-service process did not include instruction to verify the relief valve was in the closed position prior to being placed back in service.",
+      "match_key": "FailureMode:relief-valve-return-to-service-process-lacked-closed-position-verification-step"
+    },
+    {
+      "id": "fm_mispositioned",
+      "display_name": "Relief valve operating handle left in raised (open) position after replacement",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The operating handle for the 3A LPCI Suction Relief Valve was found positioned higher than the handles of the other relief valves in the system, indicating the valve was not fully seated closed.",
+      "match_key": "FailureMode:relief-valve-operating-handle-left-in-raised-open-position-after-replacement"
+    },
+    {
+      "id": "fm_pciv_inop",
+      "display_name": "Sole PCIV for LPCI suction line inoperable / unisolated",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "As the only PCIV for the LPCI suction penetration, the open relief valve rendered the containment isolation function inoperable, and the flow path was not isolated within the required 4-hour action time.",
+      "match_key": "FailureMode:sole-pciv-for-lpci-suction-line-inoperable-unisolated"
+    },
+    {
+      "id": "cons_ts",
+      "display_name": "Condition prohibited by Technical Specifications (failure to shut down per LCO 3.6.1.3 Required Actions E.1/E.2)",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2024-11-15T02:02",
+      "end": "2024-11-20T16:50",
+      "duration": null,
+      "tz": "CST",
+      "match_key": "Consequence:condition-prohibited-by-technical-specifications-failure-to-shut-down-per-lco-3-6-1-3-required-actions-e-1-e-2"
+    },
+    {
+      "id": "ca_reposition",
+      "display_name": "Move 3A LPCI Suction Relief Valve operating handle to correct (down) closed position",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:move-3a-lpci-suction-relief-valve-operating-handle-to-correct-down-closed-position"
+    },
+    {
+      "id": "ca_update_planner",
+      "display_name": "Update relief valve planner guides and model work orders to add sign-off step verifying closed position after installation",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:update-relief-valve-planner-guides-and-model-work-orders-to-add-sign-off-step-verifying-closed-position-after-installation"
+    },
+    {
+      "id": "mfr_c568",
+      "display_name": "Manufacturer C568",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "C568",
+      "match_key": "Manufacturer:C568"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts36",
+      "display_name": "TS 3.6.1.3",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ts-3-6-1-3"
+    },
+    {
+      "id": "rr_ufsar",
+      "display_name": "Dresden UFSAR",
+      "properties": {
+        "type": "analysis-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:dresden-ufsar"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "Dresden Nuclear Power Station Unit 3, 2019 relief valve operating handle found in lifted position",
+      "properties": {
+        "unit": 3,
+        "note": "Different system and different type of relief valve; corrective actions closed without sufficient rigor to prevent recurrence"
+      },
+      "type": "LER",
+      "key": "3-2019",
+      "stub": true,
+      "title": null,
+      "plant": "Dresden Nuclear Power Station",
+      "match_key": "LER:3-2019"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bo",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_isv",
+      "evidence": null
+    },
+    {
+      "source": "c_rv",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_c568",
+      "evidence": null
+    },
+    {
+      "source": "fm_procedure",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_procedure",
+      "relation": "LEADS_TO",
+      "target": "fm_mispositioned",
+      "evidence": null
+    },
+    {
+      "source": "fm_mispositioned",
+      "relation": "LEADS_TO",
+      "target": "fm_pciv_inop",
+      "evidence": null
+    },
+    {
+      "source": "fm_pciv_inop",
+      "relation": "LEADS_TO",
+      "target": "cons_ts",
+      "evidence": null
+    },
+    {
+      "source": "cons_ts",
+      "relation": "MITIGATED_BY",
+      "target": "ca_reposition",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_update_planner",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts36",
+      "evidence": null
+    }
+  ],
+  "chain": "defective relief-valve return-to-service procedure [cause D] -> valve operating handle left raised/open after replacement -> sole PCIV on LPCI suction line inoperable/unisolated beyond 4-hour action time -> condition prohibited by TS (failure to shut down per LCO 3.6.1.3) [water seal credited as isolation barrier; very low safety significance]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Event involves a Tech Spec prohibited condition (50.73(a)(2)(i)(B)) rather than equipment functional failure per se; the relief valve itself functioned as designed once repositioned. UFSAR water-seal isolation barrier and LPCI/suppression pool design context are discussed only in the Safety Analysis section as mitigating factors for safety significance, not as an operable backup system during the event window, so no BACKED_UP_BY edge was created. Previous occurrence (2019) involved a different system/type of relief valve; captured as SIMILAR_TO stub per instructions despite the narrative noting the difference, since it is explicitly referenced as a previous occurrence with a corrective-action-effectiveness link to this event."
+}

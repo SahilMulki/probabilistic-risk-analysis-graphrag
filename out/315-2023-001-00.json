@@ -1,0 +1,384 @@
+{
+  "ler_number": "315-2023-001-00",
+  "identity": {
+    "accession_number": "ML23271A098",
+    "docket": "05000315",
+    "plant_name": "D.C. Cook",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2023-07-25",
+    "report_date": "2023-09-28",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2023-001-00 for Donald C. Cook Nuclear Plant Unit 1, Two Trains of Fuel Handling Area Exhaust Ventilation Inoperable"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)",
+      "10 CFR 50.73(a)(2)(v)(D)",
+      "10 CFR 50.73(a)(2)(vii)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "X",
+      "system": "VL",
+      "component": "UDMP",
+      "manufacturer": "Ruskin",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The direct cause of the event was degradation and failure of each train FHAEV backdraft damper that lowered air flow rates below system operability limits due to recirculation air flow through the opposite train.",
+    "cause_code": "X",
+    "category": "Other",
+    "theme": "backdraft damper degradation causing cross-train recirculation",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 315-2023-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "315-2023-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:315-2023-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "D.C. Cook Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000315",
+      "match_key": "Unit:05000315"
+    },
+    {
+      "id": "cause",
+      "display_name": "Other (X) - provisional",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "X",
+      "category": "Other",
+      "theme": "backdraft damper degradation causing cross-train recirculation",
+      "proximate_text": "The direct cause of the event was degradation and failure of each train FHAEV backdraft damper that lowered air flow rates below system operability limits due to recirculation air flow through the opposite train.",
+      "provisional": false,
+      "match_key": "Cause:Other"
+    },
+    {
+      "id": "sys_vl",
+      "display_name": "Fuel Handling Area Exhaust Ventilation System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "VL",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:VL"
+    },
+    {
+      "id": "c_fan1",
+      "display_name": "Auxiliary Building Ventilation Fuel Handling Area Exhaust Fan #1 (12-HV-AFX-1)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "FAN",
+      "identifier": "12-HV-AFX-1",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:FAN|12-HV-AFX-1"
+    },
+    {
+      "id": "c_fan2",
+      "display_name": "Auxiliary Building Ventilation Fuel Handling Area Exhaust Fan #2 (12-HV-AFX-2)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "FAN",
+      "identifier": "12-HV-AFX-2",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:FAN|12-HV-AFX-2"
+    },
+    {
+      "id": "c_damper1",
+      "display_name": "Fuel Handling Exhaust Fan HV-AFX-1 Discharge Backdraft Damper (12-HV-BD-AFX-1)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "UDMP",
+      "identifier": "12-HV-BD-AFX-1",
+      "model": "Ruskin Type CBS4",
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:UDMP|12-HV-BD-AFX-1"
+    },
+    {
+      "id": "c_damper2",
+      "display_name": "Fuel Handling Exhaust Fan HV-AFX-2 Discharge Backdraft Damper (12-HV-BD-AFX-2)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "UDMP",
+      "identifier": "12-HV-BD-AFX-2",
+      "model": "Ruskin Type CBS4",
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:UDMP|12-HV-BD-AFX-2"
+    },
+    {
+      "id": "c_ft",
+      "display_name": "Unit Vent Stack Flow Recorder Transmitter (1-VFR-315)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "FT",
+      "identifier": "1-VFR-315",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:FT|1-VFR-315"
+    },
+    {
+      "id": "fm_damper1",
+      "display_name": "Train 1 backdraft damper partially stuck open and degraded",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "12-HV-BD-AFX-1 mechanism partially stuck open and degraded, causing reduced system airflow",
+      "match_key": "FailureMode:train-1-backdraft-damper-partially-stuck-open-and-degraded"
+    },
+    {
+      "id": "fm_damper2",
+      "display_name": "Train 2 backdraft damper partially stuck open and degraded",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "12-HV-BD-AFX-2 mechanism partially stuck open and degraded, causing reduced system airflow",
+      "match_key": "FailureMode:train-2-backdraft-damper-partially-stuck-open-and-degraded"
+    },
+    {
+      "id": "fm_recirc",
+      "display_name": "Reverse flow / windmilling of standby fan through failed dampers",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "With one fan operating, reverse flow through the degraded opposite-train damper caused windmilling of the standby fan, reducing effective system airflow",
+      "match_key": "FailureMode:reverse-flow-windmilling-of-standby-fan-through-failed-dampers"
+    },
+    {
+      "id": "fm_lowflow",
+      "display_name": "System airflow below operability range",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Engineering review of 1-VFR-315 flow data indicated system air flow was less than the operability range following fan swap on July 23, 2023",
+      "match_key": "FailureMode:system-airflow-below-operability-range"
+    },
+    {
+      "id": "cons_inop",
+      "display_name": "Both FHAEV trains inoperable during irradiated fuel movement",
+      "properties": {
+        "note": "Irradiated fuel moved in auxiliary building on July 31 and August 1, 2023 while both trains inoperable"
+      },
+      "type": "Consequence",
+      "start": "2023-07-23",
+      "end": "2023-08-05",
+      "duration": "approximately 13 days",
+      "tz": null,
+      "match_key": "Consequence:both-fhaev-trains-inoperable-during-irradiated-fuel-movement"
+    },
+    {
+      "id": "ca_repair",
+      "display_name": "Repair backdraft dampers and complete surveillance testing to restore operability",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:repair-backdraft-dampers-and-complete-surveillance-testing-to-restore-operability"
+    },
+    {
+      "id": "ca_pm",
+      "display_name": "Evaluate and revise preventive maintenance strategy for backdraft dampers",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:evaluate-and-revise-preventive-maintenance-strategy-for-backdraft-dampers"
+    },
+    {
+      "id": "ca_proc",
+      "display_name": "Revise procedures to add FHAEV functional checks verifying backdraft damper positioning prior to fuel movement",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-procedures-to-add-fhaev-functional-checks-verifying-backdraft-damper-positioning-prior-to-fuel-movement"
+    },
+    {
+      "id": "mfr_ruskin",
+      "display_name": "Ruskin",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": null,
+      "match_key": "Manufacturer:ruskin"
+    },
+    {
+      "id": "rr_5073i",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_5073v",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "rr_5073vii",
+      "display_name": "10 CFR 50.73(a)(2)(vii)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-vii"
+    },
+    {
+      "id": "rr_ts313",
+      "display_name": "Technical Specification LCO 3.7.13 Fuel Handling Area Exhaust Ventilation System",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-lco-3-7-13-fuel-handling-area-exhaust-ventilation-system"
+    },
+    {
+      "id": "rr_ufsar",
+      "display_name": "UFSAR Fuel Handling Accident Radiological Dose Consequences Analysis",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:ufsar-fuel-handling-accident-radiological-dose-consequences-analysis"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073i",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073v",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073vii",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_vl",
+      "evidence": null
+    },
+    {
+      "source": "c_damper1",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_ruskin",
+      "evidence": null
+    },
+    {
+      "source": "c_damper2",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_ruskin",
+      "evidence": null
+    },
+    {
+      "source": "fm_damper1",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_damper2",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_damper1",
+      "relation": "LEADS_TO",
+      "target": "fm_recirc",
+      "evidence": null
+    },
+    {
+      "source": "fm_damper2",
+      "relation": "LEADS_TO",
+      "target": "fm_recirc",
+      "evidence": null
+    },
+    {
+      "source": "fm_recirc",
+      "relation": "LEADS_TO",
+      "target": "fm_lowflow",
+      "evidence": null
+    },
+    {
+      "source": "fm_lowflow",
+      "relation": "LEADS_TO",
+      "target": "cons_inop",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_repair",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_pm",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_proc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts313",
+      "evidence": null
+    }
+  ],
+  "chain": "backdraft damper degradation [cause X, provisional] -> both trains' dampers partially stuck open -> reverse flow/windmilling between trains -> system airflow below operability range -> both FHAEV trains inoperable during irradiated fuel movement [no backup train available, common-cause failure]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code X/Other reflects that a formal causal evaluation was still in progress at time of report (provisional=true). Both trains failed from the same/similar backdraft damper degradation mechanism, making this a common-cause inoperability event per 10 CFR 50.73(a)(2)(vii). No BACKED_UP_BY edge modeled since both trains were simultaneously inoperable and no operable backup train existed during the event window. Previous Similar Events section states no similar-cause events found in past five years, so no stub LER/SIMILAR_TO edge emitted."
+}

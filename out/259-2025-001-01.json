@@ -1,0 +1,356 @@
+{
+  "ler_number": "259-2025-001-01",
+  "identity": {
+    "accession_number": "ML26029A088",
+    "docket": "05000259",
+    "plant_name": "Browns Ferry",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2025-08-01",
+    "report_date": "2026-01-29",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Reactor SCRAM Due to Low Reactor Water Level"
+  },
+  "reporting_basis": {
+    "reported_under": [],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "the installed FWLCS design and subsequent reviews failed to identify the single point vulnerability and inherent potential failure modes for the Foxboro system",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "single-point-vulnerability in feedwater level control design",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 259-2025-001-01",
+      "properties": {},
+      "type": "LER",
+      "key": "259-2025-001-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:259-2025-001-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Browns Ferry Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000259",
+      "match_key": "Unit:05000259"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design Vulnerability (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "single-point-vulnerability in feedwater level control design",
+      "proximate_text": "the installed FWLCS design and subsequent reviews failed to identify the single point vulnerability and inherent potential failure modes for the Foxboro system",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_jc",
+      "display_name": "Reactor Protection System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JC"
+    },
+    {
+      "id": "sys_jm",
+      "display_name": "Primary Containment Isolation System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JM",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JM"
+    },
+    {
+      "id": "sys_bj",
+      "display_name": "High Pressure Coolant Injection",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "automatic actuation on low level, functioned as designed",
+      "match_key": "System:BJ"
+    },
+    {
+      "id": "sys_bn",
+      "display_name": "Reactor Core Isolation Coolant",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BN",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "automatic actuation on low level, functioned as designed",
+      "match_key": "System:BN"
+    },
+    {
+      "id": "sys_rfwlcs",
+      "display_name": "Reactor Feedwater Level Control System",
+      "properties": {
+        "acronym": "RFWLCS"
+      },
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "c_fbm",
+      "display_name": "Foxboro Field Bus Module BFN-1-XM-046-0097/52",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "BFN-1-XM-046-0097/52",
+      "model": "FBM204, Part number P0914SY 0H",
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:foxboro-field-bus-module-bfn-1-xm-046-0097-52"
+    },
+    {
+      "id": "c_rfp",
+      "display_name": "Reactor Feed Pump speed demand control",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:reactor-feed-pump-speed-demand-control"
+    },
+    {
+      "id": "fm_fbm_fail",
+      "display_name": "FBM analog output module failed and re-initialized",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The FBM launched a re-initialization process during normal operation, lowering RFP speed demand output momentarily.",
+      "match_key": "FailureMode:fbm-analog-output-module-failed-and-re-initialized"
+    },
+    {
+      "id": "fm_speed_drop",
+      "display_name": "Reactor Feed Pump speed demand dropped to 600 RPM",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "In accordance with system programming, RFWLCS speed demand for all three Reactor Feed Pumps momentarily lowered to 600 RPM upon FBM re-initialization.",
+      "match_key": "FailureMode:reactor-feed-pump-speed-demand-dropped-to-600-rpm"
+    },
+    {
+      "id": "fm_level_low",
+      "display_name": "Reactor water level dropped to +2 inches",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Reduced feed pump speed reduced feedwater flow, causing reactor water level to fall to +2 inches.",
+      "match_key": "FailureMode:reactor-water-level-dropped-to-2-inches"
+    },
+    {
+      "id": "cons_scram",
+      "display_name": "Automatic reactor SCRAM with RPS and PCIS actuation",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2025-08-01T23:50:24",
+      "end": null,
+      "duration": null,
+      "tz": "CDT",
+      "match_key": "Consequence:automatic-reactor-scram-with-rps-and-pcis-actuation"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace failed FBM component",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-failed-fbm-component"
+    },
+    {
+      "id": "ca_eliminate_spv",
+      "display_name": "Eliminate single point vulnerability in Unit 1 Foxboro FWLCS (CA 2029788-002)",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:eliminate-single-point-vulnerability-in-unit-1-foxboro-fwlcs-ca-2029788-002"
+    },
+    {
+      "id": "ca_reliability_class",
+      "display_name": "Update Equipment Reliability classification for BFN-1-XM-046-0097/52 (CA 2029788-003)",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:update-equipment-reliability-classification-for-bfn-1-xm-046-0097-52-ca-2029788-003"
+    },
+    {
+      "id": "ca_hazard_review",
+      "display_name": "Verify Foxboro system vulnerabilities included in DCS hazard review (CA 2029788-004)",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:verify-foxboro-system-vulnerabilities-included-in-dcs-hazard-review-ca-2029788-004"
+    },
+    {
+      "id": "mfr_foxboro",
+      "display_name": "Foxboro",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": null,
+      "match_key": "Manufacturer:foxboro"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rfwlcs",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jm",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bj",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bn",
+      "evidence": null
+    },
+    {
+      "source": "c_fbm",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_foxboro",
+      "evidence": null
+    },
+    {
+      "source": "fm_fbm_fail",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_fbm_fail",
+      "relation": "LEADS_TO",
+      "target": "fm_speed_drop",
+      "evidence": null
+    },
+    {
+      "source": "fm_speed_drop",
+      "relation": "LEADS_TO",
+      "target": "fm_level_low",
+      "evidence": null
+    },
+    {
+      "source": "fm_level_low",
+      "relation": "LEADS_TO",
+      "target": "cons_scram",
+      "evidence": null
+    },
+    {
+      "source": "cons_scram",
+      "relation": "MITIGATED_BY",
+      "target": "sys_bj",
+      "evidence": null
+    },
+    {
+      "source": "cons_scram",
+      "relation": "MITIGATED_BY",
+      "target": "sys_bn",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_eliminate_spv",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_reliability_class",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_hazard_review",
+      "evidence": null
+    }
+  ],
+  "chain": "FWLCS design single-point vulnerability [cause TBD] -> Foxboro FBM module failed/re-initialized -> RFP speed demand dropped to 600 RPM -> reactor water level fell to +2 in -> automatic RPS/PCIS actuation & reactor SCRAM [HPCI/RCIC auto-initiated at -45 in as designed]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code and category are TBD/provisional per FORM-366 fields; narrative identifies root cause as a design single-point vulnerability (SPV) in the Foxboro FWLCS, not a coded personnel/component cause. HPCI and RCIC actuated automatically as designed post-scram and are modeled as MITIGATED_BY the consequence (design-basis automatic response, not a pre-existing operable backup asserted during an inoperability window) rather than BACKED_UP_BY, since no system was inoperable in this event. No block_13 data provided by FORM-366 fields (empty array), consistent with 'no SSCs inoperable' statement in narrative. No previous similar events reported (last 5 years) so no SIMILAR_TO stub LER created."
+}

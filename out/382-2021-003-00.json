@@ -1,0 +1,372 @@
+{
+  "ler_number": "382-2021-003-00",
+  "identity": {
+    "accession_number": "ML21350A256",
+    "docket": "05000382",
+    "plant_name": "Waterford",
+    "unit": 3,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2021-10-18",
+    "report_date": "2021-12-16",
+    "operating_mode": "3",
+    "power_level": 0,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Non-Compliance with Technical"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The ambient sensing line has a vertical drop and rise of approximately one foot (creating a \"P-Trap\"). This tubing arrangement is located within five feet of the end of the sensing line, where the rain/wind cap is located. Any rainwater that may enter through the rain/wind cap would drain to and be captured by this P-trap, resulting in an incorrect ambient pressure in the ambient sensing line and erratic transmitter indication.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "historical design deficiency in sensing line routing allowing water intrusion",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 382-2021-003-00",
+      "properties": {},
+      "type": "LER",
+      "key": "382-2021-003-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:382-2021-003-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Waterford Unit 3",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000382",
+      "match_key": "Unit:05000382"
+    },
+    {
+      "id": "cause",
+      "display_name": "Historical Design Issue (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "historical design deficiency in sensing line routing allowing water intrusion",
+      "proximate_text": "The ambient sensing line has a vertical drop and rise of approximately one foot (creating a \"P-Trap\"). This tubing arrangement is located within five feet of the end of the sensing line, where the rain/wind cap is located. Any rainwater that may enter through the rain/wind cap would drain to and be captured by this P-trap, resulting in an incorrect ambient pressure in the ambient sensing line and erratic transmitter indication.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_vc",
+      "display_name": "Shield Building Ventilation",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "VC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:VC"
+    },
+    {
+      "id": "sys_vf",
+      "display_name": "Controlled Ventilation Areas",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "VF",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:VF"
+    },
+    {
+      "id": "c_dpt_sbv",
+      "display_name": "Differential Pressure Transmitter SBV1DPT5054B",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "DPT",
+      "identifier": "SBV1DPT5054B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:DPT|SBV1DPT5054B"
+    },
+    {
+      "id": "c_dpt_hvr",
+      "display_name": "Differential Pressure Transmitter HVR1DPT5272B",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "DPT",
+      "identifier": "HVR1DPT5272B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:DPT|HVR1DPT5272B"
+    },
+    {
+      "id": "c_sensing_line",
+      "display_name": "Ambient pressure sensing line",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:ambient-pressure-sensing-line"
+    },
+    {
+      "id": "c_rainwind_cap",
+      "display_name": "Rain/wind cap",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:rain-wind-cap"
+    },
+    {
+      "id": "fm_water_intrusion",
+      "display_name": "Rainwater intrusion into sensing line during Hurricane Ida",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Driving rain and >100 mph winds during Hurricane Ida allowed water to enter the sensing line through the rain/wind cap.",
+      "match_key": "FailureMode:rainwater-intrusion-into-sensing-line-during-hurricane-ida"
+    },
+    {
+      "id": "fm_ptrap",
+      "display_name": "Water captured in P-trap of sensing line",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The vertical drop/rise (P-trap) geometry of the sensing line captured intruded rainwater, producing incorrect ambient pressure reference.",
+      "match_key": "FailureMode:water-captured-in-p-trap-of-sensing-line"
+    },
+    {
+      "id": "fm_erratic_indication",
+      "display_name": "Erratic/unstable differential pressure transmitter indication",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "PMC historical data for SBV Annulus to Ambient and RAB Pipe Penetration to Ambient differential pressure began exhibiting unstable indication starting August 29, 2021.",
+      "match_key": "FailureMode:erratic-unstable-differential-pressure-transmitter-indication"
+    },
+    {
+      "id": "cons_inop",
+      "display_name": "SBV Train B and CVAS Train B inoperable beyond TS allowed outage time",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2021-08-29T12:00",
+      "end": "2021-10-21T00:00",
+      "duration": "approximately 53 days",
+      "tz": "CT",
+      "match_key": "Consequence:sbv-train-b-and-cvas-train-b-inoperable-beyond-ts-allowed-outage-time"
+    },
+    {
+      "id": "ca_water_removed",
+      "display_name": "Remove water from sensing line and restore transmitters",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:remove-water-from-sensing-line-and-restore-transmitters"
+    },
+    {
+      "id": "ca_mod_line",
+      "display_name": "Modify sensing line to eliminate potential for water intrusion",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:modify-sensing-line-to-eliminate-potential-for-water-intrusion"
+    },
+    {
+      "id": "ca_new_alarm_point",
+      "display_name": "Generate new computer point comparing SBV1DPT5054A and SBV1DPT5054B to alarm on excessive divergence",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:generate-new-computer-point-comparing-sbv1dpt5054a-and-sbv1dpt5054b-to-alarm-on-excessive-divergence"
+    },
+    {
+      "id": "ca_revise_pm",
+      "display_name": "Revise preventative maintenance work orders to drain wet leg for HVR1DPT5272B",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-preventative-maintenance-work-orders-to-drain-wet-leg-for-hvr1dpt5272b"
+    },
+    {
+      "id": "ca_replace_cap",
+      "display_name": "Replace rain/wind cap associated with SBV1DPT5054B",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-rain-wind-cap-associated-with-sbv1dpt5054b"
+    },
+    {
+      "id": "ca_review_drawings",
+      "display_name": "Review configuration drawings for SBV1DPT5054A sensing line for low points",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:review-configuration-drawings-for-sbv1dpt5054a-sensing-line-for-low-points"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts_3661",
+      "display_name": "Waterford Technical Specification 3.6.6.1",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:waterford-technical-specification-3-6-6-1"
+    },
+    {
+      "id": "rr_ts_377",
+      "display_name": "Waterford Technical Specification 3.7.7",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:waterford-technical-specification-3-7-7"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts_3661",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts_377",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_vc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_vf",
+      "evidence": null
+    },
+    {
+      "source": "c_dpt_sbv",
+      "relation": "PART_OF",
+      "target": "sys_vc",
+      "evidence": null
+    },
+    {
+      "source": "c_rainwind_cap",
+      "relation": "PART_OF",
+      "target": "c_sensing_line",
+      "evidence": null
+    },
+    {
+      "source": "fm_ptrap",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_water_intrusion",
+      "relation": "LEADS_TO",
+      "target": "fm_ptrap",
+      "evidence": null
+    },
+    {
+      "source": "fm_ptrap",
+      "relation": "LEADS_TO",
+      "target": "fm_erratic_indication",
+      "evidence": null
+    },
+    {
+      "source": "fm_erratic_indication",
+      "relation": "LEADS_TO",
+      "target": "cons_inop",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_water_removed",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_mod_line",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_new_alarm_point",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_revise_pm",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_cap",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_review_drawings",
+      "evidence": null
+    }
+  ],
+  "chain": "historical design deficiency (P-trap geometry) [cause TBD] -> Hurricane Ida wind-driven rainwater intrusion through rain/wind cap -> water captured in sensing line P-trap -> erratic ambient pressure input causing unstable DPT indication -> SBV Train B and CVAS Train B inoperable beyond 7-day TS AOT [redundant SBV/CVAS trains remained operable]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "No official cause code was provided in FORM-366 fields (TBD/provisional); narrative attributes the event to a historical design issue in the sensing line routing, but this is not a coded personnel/design/component category. No previous similar events reported (narrative states 'None'), so no SIMILAR_TO edge or stub LER emitted. Redundant SBV and CVAS trains (the plant's other train) remained operable throughout, but narrative does not name them as a distinct System node with EIIS code beyond 'redundant train' -- no separate System node created since it is the same system's other train, not a different backup system; therefore no BACKED_UP_BY edge emitted per instructions requiring explicit distinct backup system identification of operable status during the event window, but note is included for context. Block 13 rows were empty in FORM-366 fields, so left empty per authoritative source."
+}

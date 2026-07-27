@@ -1,0 +1,342 @@
+{
+  "ler_number": "259-2021-001-01",
+  "identity": {
+    "accession_number": "ML22188A133",
+    "docket": "05000259",
+    "plant_name": "Browns Ferry",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2021-03-03",
+    "report_date": "2022-07-06",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2021-001-01 for Browns Ferry Nuclear Plant, Units 1 and 2, 480 Volt Load Shed Logic Inoperable Longer than Allowed by Technical Specifications due to Failed Relay"
+  },
+  "reporting_basis": {
+    "reported_under": [],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "X",
+      "system": "EK",
+      "component": "RLY",
+      "manufacturer": "G080",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "Relay 0-RLY-231-00A7 failed due to an internal failure of the coil with no external damage seen; the relay coil had an open circuit internal to the coil, most credibly occurring while the relay was carrying current",
+    "cause_code": "X",
+    "category": "Other",
+    "theme": "undetermined internal relay coil failure",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 259-2021-001-01",
+      "properties": {
+        "match_key": "LER:259-2021-001-01"
+      },
+      "type": "LER",
+      "key": "259-2021-001-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:259-2021-001-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Browns Ferry Unit 1",
+      "properties": {
+        "match_key": "Unit:05000259",
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000259",
+      "match_key": "Unit:05000259"
+    },
+    {
+      "id": "cause",
+      "display_name": "Other (X)",
+      "properties": {
+        "match_key": "Cause:Other"
+      },
+      "type": "Cause",
+      "cause_code": "X",
+      "category": "Other",
+      "theme": "undetermined internal relay coil failure",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Other"
+    },
+    {
+      "id": "sys_ek",
+      "display_name": "480 Volt Load Shed Logic, Division I",
+      "properties": {
+        "match_key": "System:EK"
+      },
+      "type": "System",
+      "eiis_code": "EK",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "failed division",
+      "match_key": "System:EK"
+    },
+    {
+      "id": "sys_ek_div2",
+      "display_name": "480 Volt Load Shed Logic, Division II",
+      "properties": {
+        "match_key": "System:EK-div2"
+      },
+      "type": "System",
+      "eiis_code": "EK",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup division; operable except during testing outages",
+      "match_key": "System:EK"
+    },
+    {
+      "id": "c_rly",
+      "display_name": "Relay 0-RLY-231-00A7",
+      "properties": {
+        "match_key": "Component:RLY|0-RLY-231-00A7"
+      },
+      "type": "Component",
+      "eiis_code": "RLY",
+      "identifier": "0-RLY-231-00A7",
+      "model": "12HFA51A41H",
+      "manufacturer_code": "G080",
+      "inferred_code": false,
+      "match_key": "Component:RLY|0-RLY-231-00A7"
+    },
+    {
+      "id": "fm_coil_open",
+      "display_name": "Relay coil open circuit (internal failure)",
+      "properties": {
+        "match_key": "FailureMode:relay-coil-open-circuit"
+      },
+      "type": "FailureMode",
+      "description": "Internal open circuit in the relay coil with no external damage seen, most credibly occurring while the relay was carrying current",
+      "match_key": "FailureMode:relay-coil-open-circuit-internal-failure"
+    },
+    {
+      "id": "fm_rly_fail",
+      "display_name": "Relay fails to energize on demand",
+      "properties": {
+        "match_key": "FailureMode:relay-fails-to-energize"
+      },
+      "type": "FailureMode",
+      "description": "0-RLY-231-00A7 would not have energized when required during Division I load shed logic function test",
+      "match_key": "FailureMode:relay-fails-to-energize-on-demand"
+    },
+    {
+      "id": "cons_lsl",
+      "display_name": "480V Load Shed Logic, Division I inoperable longer than TS allowed (undetected)",
+      "properties": {
+        "match_key": "Consequence:load-shed-logic-inoperable-longer-than-ts-allowed"
+      },
+      "type": "Consequence",
+      "start": "2021-03-03",
+      "end": "2021-09-25T22:30",
+      "duration": "approximately 206 days",
+      "tz": "CDT",
+      "match_key": "Consequence:480v-load-shed-logic-division-i-inoperable-longer-than-ts-allowed-undetected"
+    },
+    {
+      "id": "cons_ts_violation",
+      "display_name": "Technical Specification violations (LCO 3.8.1 Conditions C, I, J; LCO 3.0.3; LCO 3.0.4)",
+      "properties": {
+        "match_key": "Consequence:ts-violations"
+      },
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:technical-specification-violations-lco-3-8-1-conditions-c-i-j-lco-3-0-3-lco-3-0-4"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace failed relay and test satisfactorily",
+      "properties": {
+        "match_key": "CorrectiveAction:replace-failed-relay"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-failed-relay-and-test-satisfactorily"
+    },
+    {
+      "id": "ca_review",
+      "display_name": "Additional engineering review of failure cause",
+      "properties": {
+        "note": "Could not determine a root cause of the failure; no damage visible, no failure trends identified",
+        "match_key": "CorrectiveAction:additional-engineering-review"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:additional-engineering-review-of-failure-cause"
+    },
+    {
+      "id": "mfr_ge",
+      "display_name": "General Electric",
+      "properties": {
+        "match_key": "Manufacturer:G080"
+      },
+      "type": "Manufacturer",
+      "code": "G080",
+      "match_key": "Manufacturer:G080"
+    },
+    {
+      "id": "rr_5073a2i_b",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_5073a2v",
+      "display_name": "10 CFR 50.73(a)(2)(v)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v"
+    },
+    {
+      "id": "rr_ts_3811",
+      "display_name": "TS 3.8.1 AC Sources - Operating",
+      "properties": {
+        "match_key": "RegulatoryReference:ts-3-8-1"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-3-8-1-ac-sources-operating"
+    },
+    {
+      "id": "rr_ts_304",
+      "display_name": "TS LCO 3.0.4",
+      "properties": {
+        "match_key": "RegulatoryReference:ts-lco-3-0-4"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-lco-3-0-4"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073a2i_b",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073a2v",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ek",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ek_div2",
+      "evidence": null
+    },
+    {
+      "source": "c_rly",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_ge",
+      "evidence": null
+    },
+    {
+      "source": "fm_coil_open",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_coil_open",
+      "relation": "LEADS_TO",
+      "target": "fm_rly_fail",
+      "evidence": null
+    },
+    {
+      "source": "fm_rly_fail",
+      "relation": "LEADS_TO",
+      "target": "cons_lsl",
+      "evidence": null
+    },
+    {
+      "source": "cons_lsl",
+      "relation": "LEADS_TO",
+      "target": "cons_ts_violation",
+      "evidence": null
+    },
+    {
+      "source": "cons_lsl",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_ek_div2",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_review",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts_3811",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts_304",
+      "evidence": null
+    }
+  ],
+  "chain": "undetermined internal relay coil failure [cause X] -> relay coil open circuit -> relay fails to energize on demand -> 480V Load Shed Logic Division I inoperable ~206 days (undetected) -> TS 3.8.1/3.0.3/3.0.4 violations [backup Division II available except ~78h during testing outages]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code X (Other) reflects that no root cause for the relay coil failure could be determined despite engineering evaluation; theme captures the undetermined-mechanism nature. No previous similar events were identified at BFN within three years, so no stub LER/SIMILAR_TO edge was created. Division II outages for testing (~78 hours total) are the basis for the PRA exposure period; Division II is modeled as a backup system since it was explicitly stated to be available except during those testing periods. Unit 2's improper Mode 2/1 entry on 2021-04-21 in violation of LCO 3.0.4 is captured within the TS-violation consequence node rather than as a separate consequence, since it stems from the same underlying inoperability."
+}

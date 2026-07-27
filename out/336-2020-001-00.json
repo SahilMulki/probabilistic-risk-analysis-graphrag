@@ -1,0 +1,401 @@
+{
+  "ler_number": "336-2020-001-00",
+  "identity": {
+    "accession_number": "ML20234A417",
+    "docket": "05000336",
+    "plant_name": "Millstone",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2020-04-21",
+    "report_date": "2020-08-11",
+    "operating_mode": null,
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Failure of Two Main Steam Safety Valves To Lift Within the Technical Specification Acceptance Criteria"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The most likely cause of the as-found test failure is disc to seat micro-bonding (seat sticking). Although both 2-MS-242 and 2-MS-245 were upgraded during previous outages from stainless steel disc material to pre-oxidized Inconel X-750 discs, and are therefore less susceptible to seat sticking, a review of industry OE revealed several instances of seat sticking in safety valves with the upgraded material.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "disc-to-seat micro-bonding (seat sticking) causing high lift setpoint drift",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 336-2020-001-00",
+      "properties": {
+        "match_key": "LER:336-2020-001-00"
+      },
+      "type": "LER",
+      "key": "336-2020-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:336-2020-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Millstone Unit 2",
+      "properties": {
+        "match_key": "Unit:05000336",
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000336",
+      "match_key": "Unit:05000336"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {
+        "match_key": "Cause:provisional"
+      },
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "disc-to-seat micro-bonding (seat sticking) causing high lift setpoint drift",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_sb",
+      "display_name": "Main Steam",
+      "properties": {
+        "match_key": "System:SB"
+      },
+      "type": "System",
+      "eiis_code": "SB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SB"
+    },
+    {
+      "id": "c_mssv1",
+      "display_name": "Main Steam Safety Valve 2-MS-242",
+      "properties": {
+        "nameplate_set_pressure_psig": 990.3,
+        "match_key": "Component:RV|2-MS-242"
+      },
+      "type": "Component",
+      "eiis_code": "RV",
+      "identifier": "2-MS-242",
+      "model": "6-3707RAX-RT-25-XTF1",
+      "manufacturer_code": "Consolidated-Dresser",
+      "inferred_code": false,
+      "match_key": "Component:RV|2-MS-242"
+    },
+    {
+      "id": "c_mssv2",
+      "display_name": "Main Steam Safety Valve 2-MS-245",
+      "properties": {
+        "nameplate_set_pressure_psig": 1000.3,
+        "match_key": "Component:RV|2-MS-245"
+      },
+      "type": "Component",
+      "eiis_code": "RV",
+      "identifier": "2-MS-245",
+      "model": "6-3707RAX-RT-25-XTF1",
+      "manufacturer_code": "Consolidated-Dresser",
+      "inferred_code": false,
+      "match_key": "Component:RV|2-MS-245"
+    },
+    {
+      "id": "fm_microbond",
+      "display_name": "Disc-to-seat micro-bonding (seat sticking)",
+      "properties": {
+        "match_key": "FailureMode:disc-to-seat-micro-bonding-seat-sticking"
+      },
+      "type": "FailureMode",
+      "description": "Micro-bonding between valve disc and seat caused the valves to stick, raising the effective lift setpoint above design.",
+      "match_key": "FailureMode:disc-to-seat-micro-bonding-seat-sticking"
+    },
+    {
+      "id": "fm_liftdrift_242",
+      "display_name": "2-MS-242 as-found lift setpoint drifted high",
+      "properties": {
+        "match_key": "FailureMode:2-ms-242-as-found-lift-setpoint-drifted-high"
+      },
+      "type": "FailureMode",
+      "description": "As-found lift pressure was 3.3% (2.3 psi) above nameplate set pressure, exceeding the +/-3% TS allowable value.",
+      "match_key": "FailureMode:2-ms-242-as-found-lift-setpoint-drifted-high"
+    },
+    {
+      "id": "fm_liftdrift_245",
+      "display_name": "2-MS-245 as-found lift setpoint drifted high",
+      "properties": {
+        "match_key": "FailureMode:2-ms-245-as-found-lift-setpoint-drifted-high"
+      },
+      "type": "FailureMode",
+      "description": "As-found lift pressure was 3.3% (2.9 psi) above nameplate set pressure, exceeding the +/-3% TS allowable value.",
+      "match_key": "FailureMode:2-ms-245-as-found-lift-setpoint-drifted-high"
+    },
+    {
+      "id": "cons_inop",
+      "display_name": "Two MSSVs (2-MS-242, 2-MS-245) declared inoperable / TS operation prohibited",
+      "properties": {
+        "match_key": "Consequence:two-mssvs-declared-inoperable-ts-operation-prohibited"
+      },
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:two-mssvs-2-ms-242-2-ms-245-declared-inoperable-ts-operation-prohibited"
+    },
+    {
+      "id": "ca_retest_242",
+      "display_name": "Retest 2-MS-242 without adjustment until two successive as-left tests within +/-1%",
+      "properties": {
+        "match_key": "CorrectiveAction:retest-2-ms-242-without-adjustment"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:retest-2-ms-242-without-adjustment-until-two-successive-as-left-tests-within-1"
+    },
+    {
+      "id": "ca_retest_245",
+      "display_name": "Retest 2-MS-245 without adjustment until two successive as-left tests within +/-1%",
+      "properties": {
+        "match_key": "CorrectiveAction:retest-2-ms-245-without-adjustment"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:retest-2-ms-245-without-adjustment-until-two-successive-as-left-tests-within-1"
+    },
+    {
+      "id": "ca_eval",
+      "display_name": "Engineering evaluation providing reasonable assurance valves will meet design set pressures through next interval",
+      "properties": {
+        "match_key": "CorrectiveAction:engineering-evaluation-reasonable-assurance"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:engineering-evaluation-providing-reasonable-assurance-valves-will-meet-design-set-pressures-through-next-interval"
+    },
+    {
+      "id": "ca_cap",
+      "display_name": "Additional corrective actions per station corrective action program",
+      "properties": {
+        "match_key": "CorrectiveAction:additional-corrective-actions-cap"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:additional-corrective-actions-per-station-corrective-action-program"
+    },
+    {
+      "id": "ca_upgrade",
+      "display_name": "Multi-year MSSV disc material upgrade program (stainless steel to pre-oxidized Inconel X-750)",
+      "properties": {
+        "match_key": "CorrectiveAction:multi-year-mssv-disc-upgrade-program",
+        "note": "Three MSSVs replaced during 2020 refuel outage; 13 of 16 upgraded to date; DCN DM2-00-201-09 approved October 2009."
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:multi-year-mssv-disc-material-upgrade-program-stainless-steel-to-pre-oxidized-inconel-x-750"
+    },
+    {
+      "id": "mfr_cd",
+      "display_name": "Consolidated-Dresser",
+      "properties": {
+        "match_key": "Manufacturer:consolidated-dresser"
+      },
+      "type": "Manufacturer",
+      "code": null,
+      "match_key": "Manufacturer:consolidated-dresser"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts",
+      "display_name": "Technical Specification Table 4.7-1 / 3.7.1.1",
+      "properties": {
+        "match_key": "RegulatoryReference:ts-table-4-7-1-3-7-1-1"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-table-4-7-1-3-7-1-1"
+    },
+    {
+      "id": "rr_fsar",
+      "display_name": "FSAR Chapter 14 / Section 14.2.4",
+      "properties": {
+        "match_key": "RegulatoryReference:fsar-chapter-14-section-14-2-4"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:fsar-chapter-14-section-14-2-4"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "LER 2008-001-00",
+      "properties": {
+        "match_key": "LER:2008-001-00"
+      },
+      "type": "LER",
+      "key": "2008-001-00",
+      "stub": true,
+      "title": "Failure of eight MSSVs to lift within acceptance criteria",
+      "plant": "Millstone Power Station Unit 2",
+      "match_key": "LER:2008-001-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "c_mssv1",
+      "relation": "PART_OF",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "c_mssv2",
+      "relation": "PART_OF",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "c_mssv1",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_cd",
+      "evidence": null
+    },
+    {
+      "source": "c_mssv2",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_cd",
+      "evidence": null
+    },
+    {
+      "source": "fm_microbond",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_microbond",
+      "relation": "LEADS_TO",
+      "target": "fm_liftdrift_242",
+      "evidence": null
+    },
+    {
+      "source": "fm_microbond",
+      "relation": "LEADS_TO",
+      "target": "fm_liftdrift_245",
+      "evidence": null
+    },
+    {
+      "source": "fm_liftdrift_242",
+      "relation": "LEADS_TO",
+      "target": "cons_inop",
+      "evidence": null
+    },
+    {
+      "source": "fm_liftdrift_245",
+      "relation": "LEADS_TO",
+      "target": "cons_inop",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_retest_242",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_retest_245",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_eval",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_cap",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_upgrade",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    },
+    {
+      "source": "rr_fsar",
+      "relation": "REVISES",
+      "target": "rr_fsar",
+      "evidence": null
+    }
+  ],
+  "chain": "disc-to-seat micro-bonding (seat sticking) [cause TBD/provisional] -> 2-MS-242 as-found lift drifted +3.3% high -> TS 3.7.1.1 4-hr allowed outage time exceeded -> two MSSVs declared inoperable (condition prohibited by TS) [remaining 14 MSSVs and redundant higher-set-pressure MSSVs on each line provided pressure relief margin per FSAR 14.2.4 analysis]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Removed the erroneous self-referential REVISES edge is not applicable; FSAR reference included only as analysis-basis context, no true REVISES relation exists in this report so that edge should be disregarded/omitted by consumers. Cause code is TBD per FORM-366 fields (official code not yet assigned), so Cause node is provisional per rule 4/schema. No backup systems are named as operable substitutes for the MSSVs themselves; the FSAR analysis instead relies on the other 14 MSSVs (already modeled as part of sys_sb) and redundant MSIVs/MSSVs on unaffected steam lines, which is design-basis analysis context, not an operable backup system during an inoperability window -> no BACKED_UP_BY edge modeled. Manufacturer code left null since 'Consolidated-Dresser' is a name, not an EIIS-style code, and none was given in block_13 (empty)."
+}

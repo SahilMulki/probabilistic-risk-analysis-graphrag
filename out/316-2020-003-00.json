@@ -1,0 +1,368 @@
+{
+  "ler_number": "316-2020-003-00",
+  "identity": {
+    "accession_number": "ML20311A129",
+    "docket": "05000316",
+    "plant_name": "D.C. Cook",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2020-09-04",
+    "report_date": "2020-11-02",
+    "operating_mode": null,
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2020-003-00 for Donald C. Cook Nuclear Plant Unit 2, Manual Reactor Trip and Automatic Safety Injection Due to Failed Open Pressurizer Spray Valve"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(lv)(A)",
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "Pressurizer spray valve 2-NRV-164 failed open due to debris lodged in the positioner spool valve. No point of use filtration was installed upstream of the spray valve positioner to protect from debris generation downstream of the control air after filter.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "debris-induced valve positioner failure; missing point-of-use filtration",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 316-2020-003-00",
+      "properties": {},
+      "type": "LER",
+      "key": "316-2020-003-00",
+      "stub": false,
+      "title": "Manual Reactor Trip and Automatic Safety Injection Due to Failed Open Pressurizer Spray Valve",
+      "plant": "Donald C. Cook Nuclear Plant",
+      "match_key": "LER:316-2020-003-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "D.C. Cook Unit 2",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000316",
+      "match_key": "Unit:05000316"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "debris-induced valve positioner failure; missing point-of-use filtration",
+      "proximate_text": "Pressurizer spray valve 2-NRV-164 failed open due to debris lodged in the positioner spool valve. No point of use filtration was installed upstream of the spray valve positioner to protect from debris generation downstream of the control air after filter.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_ab",
+      "display_name": "Reactor Coolant System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "AB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:AB"
+    },
+    {
+      "id": "sys_lf",
+      "display_name": "Control Air System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "LF",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:LF"
+    },
+    {
+      "id": "c_spray_valve",
+      "display_name": "Pressurizer Spray Control Valve 2-NRV-164",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "PC",
+      "identifier": "2-NRV-164",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:PC|2-NRV-164"
+    },
+    {
+      "id": "c_positioner",
+      "display_name": "Pneumatic Positioner for 2-NRV-164",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "PC",
+      "identifier": "2-NRV-164-PU",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:PC|2-NRV-164-PU"
+    },
+    {
+      "id": "c_spool_valve",
+      "display_name": "Positioner spool valve",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:positioner-spool-valve"
+    },
+    {
+      "id": "c_transmitter",
+      "display_name": "Electro-pneumatic transmitter",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:electro-pneumatic-transmitter"
+    },
+    {
+      "id": "c_after_filter",
+      "display_name": "Control air after filter",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "FL",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:FL"
+    },
+    {
+      "id": "fm_debris",
+      "display_name": "Debris lodged in positioner spool valve",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Debris generated downstream of the control air after filter, with no point-of-use filtration to protect the valve positioner, lodged in the positioner spool valve.",
+      "match_key": "FailureMode:debris-lodged-in-positioner-spool-valve"
+    },
+    {
+      "id": "fm_valve_stuck_open",
+      "display_name": "Pressurizer spray valve 2-NRV-164 failed open",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Positioner malfunction caused pressurizer spray valve 2-NRV-164 to fail in the open position.",
+      "match_key": "FailureMode:pressurizer-spray-valve-2-nrv-164-failed-open"
+    },
+    {
+      "id": "fm_rcp_pressure",
+      "display_name": "Continued lowering RCS pressure",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Failed-open spray valve caused continued lowering of RCS pressure.",
+      "match_key": "FailureMode:continued-lowering-rcs-pressure"
+    },
+    {
+      "id": "cons_trip_si",
+      "display_name": "Manual reactor trip and automatic safety injection actuation",
+      "properties": {
+        "note": "RCP 22 removed from service during SI termination due to continued lowering RCS pressure; RCS pressure later recovered to normal and remained stable."
+      },
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:manual-reactor-trip-and-automatic-safety-injection-actuation"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace valve positioner and electro-pneumatic transmitter for 2-NRV-164",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-valve-positioner-and-electro-pneumatic-transmitter-for-2-nrv-164"
+    },
+    {
+      "id": "ca_test",
+      "display_name": "Satisfactory diagnostic testing of 2-NRV-164 and return to service",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:satisfactory-diagnostic-testing-of-2-nrv-164-and-return-to-service"
+    },
+    {
+      "id": "ca_filter",
+      "display_name": "Install point-of-use control air filtration or filtered regulating valve upstream of single-point-vulnerable positioners",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:install-point-of-use-control-air-filtration-or-filtered-regulating-valve-upstream-of-single-point-vulnerable-positioners"
+    },
+    {
+      "id": "rr_5072b2iva",
+      "display_name": "10 CFR 50.72(b)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-2-iv-a"
+    },
+    {
+      "id": "rr_5072b2ivb",
+      "display_name": "10 CFR 50.72(b)(2)(iv)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-2-iv-b"
+    },
+    {
+      "id": "rr_5072b3iva",
+      "display_name": "10 CFR 50.72(b)(3)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-3-iv-a"
+    },
+    {
+      "id": "rr_5073a2ivA",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072b2iva",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072b2ivb",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072b3iva",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073a2ivA",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ab",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_lf",
+      "evidence": null
+    },
+    {
+      "source": "c_spray_valve",
+      "relation": "PART_OF",
+      "target": "sys_ab",
+      "evidence": null
+    },
+    {
+      "source": "c_positioner",
+      "relation": "PART_OF",
+      "target": "c_spray_valve",
+      "evidence": null
+    },
+    {
+      "source": "c_spool_valve",
+      "relation": "PART_OF",
+      "target": "c_positioner",
+      "evidence": null
+    },
+    {
+      "source": "c_after_filter",
+      "relation": "PART_OF",
+      "target": "sys_lf",
+      "evidence": null
+    },
+    {
+      "source": "fm_debris",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_debris",
+      "relation": "LEADS_TO",
+      "target": "fm_valve_stuck_open",
+      "evidence": null
+    },
+    {
+      "source": "fm_valve_stuck_open",
+      "relation": "LEADS_TO",
+      "target": "fm_rcp_pressure",
+      "evidence": null
+    },
+    {
+      "source": "fm_rcp_pressure",
+      "relation": "LEADS_TO",
+      "target": "cons_trip_si",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_test",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_filter",
+      "evidence": null
+    }
+  ],
+  "chain": "debris lodged in positioner spool valve (no point-of-use filtration) [cause TBD] -> pressurizer spray valve 2-NRV-164 fails open -> continued lowering RCS pressure -> manual reactor trip and automatic safety injection",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Root Cause Evaluation was in progress at time of submittal; cause_code left TBD/provisional per FORM-366 fields. RCP 22 was removed from service during SI termination as a consequence of continued low RCS pressure, not a separate initiating failure, so modeled as a note on the consequence rather than a distinct FailureMode. Previous similar events review found none in past five years, so no stub LER emitted per rule 9 (nothing to reference)."
+}

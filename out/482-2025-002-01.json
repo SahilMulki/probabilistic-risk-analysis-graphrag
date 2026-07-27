@@ -1,0 +1,418 @@
+{
+  "ler_number": "482-2025-002-01",
+  "identity": {
+    "accession_number": "ML26075C887",
+    "docket": "05000482",
+    "plant_name": "Wolf Creek",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2025-10-21",
+    "report_date": "2026-03-16",
+    "operating_mode": "6",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Docket No. 50-482: Licensee Event Report 2025-002-01, “Loss of Both"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)(D)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The root cause of the fuse failure was determined to be an ineffective maintenance strategy associated with fuses within the CRACS units. A contributing cause was determined to be a systemic weakness in the Equipment Performance Evaluation (EPE) process associated with low safety significant systems that can lead to a consequential event.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Ineffective preventive maintenance strategy for CRACS power fuses",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 482-2025-002-01",
+      "properties": {},
+      "type": "LER",
+      "key": "482-2025-002-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:482-2025-002-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Wolf Creek Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000482",
+      "match_key": "Unit:05000482"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Ineffective preventive maintenance strategy for CRACS power fuses",
+      "proximate_text": "The root cause of the fuse failure was determined to be an ineffective maintenance strategy associated with fuses within the CRACS units. A contributing cause was determined to be a systemic weakness in the Equipment Performance Evaluation (EPE) process associated with low safety significant systems that can lead to a consequential event.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_cracs",
+      "display_name": "Control Room Air Conditioning System",
+      "properties": {
+        "note": "provides temperature control for control room; governed by TS 3.7.11"
+      },
+      "type": "System",
+      "eiis_code": "VI",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:VI"
+    },
+    {
+      "id": "sys_crevs",
+      "display_name": "Control Room Emergency Ventilation System",
+      "properties": {
+        "note": "provides habitable control room environment following accident; governed by TS 3.7.10; CRACS is a subsystem of CREVS"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:control-room-emergency-ventilation-system"
+    },
+    {
+      "id": "c_acu_a",
+      "display_name": "'A' CRACS Refrigeration Unit (SGK04A)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "ACU",
+      "identifier": "SGK04A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:ACU|SGK04A"
+    },
+    {
+      "id": "c_acu_b",
+      "display_name": "'B' CRACS Refrigeration Unit (SGK04B)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "ACU",
+      "identifier": "SGK04B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:ACU|SGK04B"
+    },
+    {
+      "id": "c_fan_a",
+      "display_name": "'A' Train Circulation Fan",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "FAN",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:FAN"
+    },
+    {
+      "id": "c_fan_b",
+      "display_name": "'B' Train Circulation Fan",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "FAN",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:FAN"
+    },
+    {
+      "id": "c_fuse_a",
+      "display_name": "Fuse in 'A' train fan circuit",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:fuse-in-a-train-fan-circuit"
+    },
+    {
+      "id": "fm_fuse_blown",
+      "display_name": "Blown fuse in 'A' train fan circuit",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Fuse in the SGK04A fan circuit blew, preventing both compressor and circulation fan from starting.",
+      "match_key": "FailureMode:blown-fuse-in-a-train-fan-circuit"
+    },
+    {
+      "id": "fm_train_a_fail",
+      "display_name": "'A' train CRACS/CREVS fails to start on CRVIS",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Neither the 'A' train air conditioning compressor nor circulation fan started upon the CRVIS due to the blown fuse.",
+      "match_key": "FailureMode:a-train-cracs-crevs-fails-to-start-on-crvis"
+    },
+    {
+      "id": "fm_pulltolock",
+      "display_name": "'B' train fan control left in 'pull to lock'",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "During planned maintenance outage of the 'B' train refrigeration unit, the fan control switch was in 'pull to lock', preventing automatic fan start on CRVIS.",
+      "match_key": "FailureMode:b-train-fan-control-left-in-pull-to-lock"
+    },
+    {
+      "id": "fm_train_b_fail",
+      "display_name": "'B' train CRACS/CREVS fails to start on CRVIS",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "'B' train fan did not start automatically upon CRVIS due to the pull-to-lock control position, rendering 'B' train CRACS and CREVS inoperable.",
+      "match_key": "FailureMode:b-train-cracs-crevs-fails-to-start-on-crvis"
+    },
+    {
+      "id": "cons_both_inop",
+      "display_name": "Both trains of CRACS and CREVS inoperable",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2025-10-21T06:10",
+      "end": "2025-10-21T06:20",
+      "duration": "00:10",
+      "tz": "CDT",
+      "match_key": "Consequence:both-trains-of-cracs-and-crevs-inoperable"
+    },
+    {
+      "id": "cons_crevs_lost_safety_fn",
+      "display_name": "CREVS unable to perform safety function",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2025-10-21T06:10",
+      "end": "2025-10-21T06:20",
+      "duration": "00:10",
+      "tz": "CDT",
+      "match_key": "Consequence:crevs-unable-to-perform-safety-function"
+    },
+    {
+      "id": "cons_cracs_lost_safety_fn",
+      "display_name": "CRACS unable to perform safety function",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2025-10-21T06:10",
+      "end": "2025-10-21T10:10",
+      "duration": "approximately 4 hours",
+      "tz": "CDT",
+      "match_key": "Consequence:cracs-unable-to-perform-safety-function"
+    },
+    {
+      "id": "ca_replace_fuse",
+      "display_name": "Replace blown fuse on SGK04A fan motor circuit",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-blown-fuse-on-sgk04a-fan-motor-circuit"
+    },
+    {
+      "id": "ca_pm_fuse",
+      "display_name": "Establish time-based PM task and revise maintenance strategy to replace CRACS power fuses",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:establish-time-based-pm-task-and-revise-maintenance-strategy-to-replace-cracs-power-fuses"
+    },
+    {
+      "id": "ca_phc_review",
+      "display_name": "Plant Health Committee review of completed EPEs for Consequential Event/TS safety function equipment",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:plant-health-committee-review-of-completed-epes-for-consequential-event-ts-safety-function-equipment"
+    },
+    {
+      "id": "ca_epe_procedure",
+      "display_name": "Move EPE guidance from desktop instruction to controlled procedure",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:move-epe-guidance-from-desktop-instruction-to-controlled-procedure"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "rr_ts3710",
+      "display_name": "TS LCO 3.7.10 (CREVS)",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ts-lco-3-7-10-crevs"
+    },
+    {
+      "id": "rr_ts3711",
+      "display_name": "TS LCO 3.7.11 (CRACS)",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ts-lco-3-7-11-cracs"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_cracs",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_crevs",
+      "evidence": null
+    },
+    {
+      "source": "c_acu_a",
+      "relation": "PART_OF",
+      "target": "sys_cracs",
+      "evidence": null
+    },
+    {
+      "source": "c_acu_b",
+      "relation": "PART_OF",
+      "target": "sys_cracs",
+      "evidence": null
+    },
+    {
+      "source": "sys_cracs",
+      "relation": "PART_OF",
+      "target": "sys_crevs",
+      "evidence": null
+    },
+    {
+      "source": "fm_fuse_blown",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_fuse_blown",
+      "relation": "LEADS_TO",
+      "target": "fm_train_a_fail",
+      "evidence": null
+    },
+    {
+      "source": "fm_pulltolock",
+      "relation": "LEADS_TO",
+      "target": "fm_train_b_fail",
+      "evidence": null
+    },
+    {
+      "source": "fm_train_a_fail",
+      "relation": "LEADS_TO",
+      "target": "cons_both_inop",
+      "evidence": null
+    },
+    {
+      "source": "fm_train_b_fail",
+      "relation": "LEADS_TO",
+      "target": "cons_both_inop",
+      "evidence": null
+    },
+    {
+      "source": "cons_both_inop",
+      "relation": "LEADS_TO",
+      "target": "cons_crevs_lost_safety_fn",
+      "evidence": null
+    },
+    {
+      "source": "cons_both_inop",
+      "relation": "LEADS_TO",
+      "target": "cons_cracs_lost_safety_fn",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_fuse",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_pm_fuse",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_phc_review",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_epe_procedure",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts3710",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts3711",
+      "evidence": null
+    }
+  ],
+  "chain": "ineffective PM strategy for CRACS fuses [cause TBD] -> fuse blows in 'A' train fan circuit -> 'A' train CRACS/CREVS fails to start on CRVIS; (in parallel) 'B' train fan control left pull-to-lock during maintenance -> 'B' train CRACS/CREVS fails to start on CRVIS -> both trains of CRACS and CREVS inoperable (10 min) -> CREVS safety function lost 10 min, CRACS safety function lost ~4 hrs [no BACKED_UP_BY; fuel movement suspended]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code and category are TBD/provisional per FORM-366 fields despite the narrative attributing a root cause (ineffective maintenance strategy for fuses) and a contributing cause (EPE process weakness); per rule 4, official code governs and provisional=true is set. No previous similar LER referenced (explicitly stated none found), so no stub LER/SIMILAR_TO edge emitted. No backup system was stated to remain operable during the 10-minute dual-train outage window, so no BACKED_UP_BY edge is asserted; fuel movement was suspended as the compensatory action instead. Title in FORM-366 was truncated; completed using narrative context (\"Loss of Both Trains of Control Room Air Conditioning and Emergency Ventilation Systems\")."
+}

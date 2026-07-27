@@ -1,0 +1,296 @@
+{
+  "ler_number": "324-2020-005-00",
+  "identity": {
+    "accession_number": "ML21021A366",
+    "docket": "05000324",
+    "plant_name": "Brunswick",
+    "unit": 2,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2020-11-25",
+    "report_date": "2021-01-21",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "operability test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Brunswick Steam Electric Plant, Unit Nos. 1 and 2 Renewed Facility Operating License Nos. DPR-71 and DPR-62 Docket Nos. 50-325 and 50-324 Licensee Event Report 1-2020-005"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "B",
+      "system": "VI",
+      "component": null,
+      "manufacturer": null,
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The failure of the '2B' charcoal adsorber to meet acceptance criteria was most likely the result of variations in the charcoal manufacturing process which caused accelerated charcoal surface oxidation.",
+    "cause_code": "B",
+    "category": "Design/Manufacturing/Installation",
+    "theme": "charcoal manufacturing variation causing accelerated adsorber degradation",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 324-2020-005-00",
+      "properties": {
+        "match_key": "LER:324-2020-005-00"
+      },
+      "type": "LER",
+      "key": "324-2020-005-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:324-2020-005-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Brunswick Unit 2",
+      "properties": {
+        "match_key": "Unit:05000324",
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000324",
+      "match_key": "Unit:05000324"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Manufacturing/Installation (B)",
+      "properties": {
+        "match_key": "Cause:Design/Manufacturing/Installation"
+      },
+      "type": "Cause",
+      "cause_code": "B",
+      "category": "Design/Manufacturing/Installation",
+      "theme": "charcoal manufacturing variation causing accelerated adsorber degradation",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Design/Manufacturing/Installation"
+    },
+    {
+      "id": "sys_vi",
+      "display_name": "Control Room Emergency Ventilation System",
+      "properties": {
+        "note": "shared system between Unit 1 and Unit 2",
+        "match_key": "System:VI"
+      },
+      "type": "System",
+      "eiis_code": "VI",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:VI"
+    },
+    {
+      "id": "sys_vi_2a",
+      "display_name": "CREV '2A' Subsystem",
+      "properties": {
+        "match_key": "System:VI|2A-subsystem"
+      },
+      "type": "System",
+      "eiis_code": "VI",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; operable",
+      "match_key": "System:VI"
+    },
+    {
+      "id": "c_charcoal_2b",
+      "display_name": "'2B' CREV Charcoal Adsorber",
+      "properties": {
+        "installed": "2012",
+        "planned_replacement": "2022",
+        "match_key": "Component:2b-crev-charcoal-adsorber"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "2B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:2b-crev-charcoal-adsorber"
+    },
+    {
+      "id": "fm_manuf_variation",
+      "display_name": "Charcoal manufacturing variation causing accelerated surface oxidation",
+      "properties": {
+        "match_key": "FailureMode:charcoal-manufacturing-variation-accelerated-oxidation"
+      },
+      "type": "FailureMode",
+      "description": "Variations in the charcoal manufacturing process caused accelerated charcoal surface oxidation.",
+      "match_key": "FailureMode:charcoal-manufacturing-variation-causing-accelerated-surface-oxidation"
+    },
+    {
+      "id": "fm_efficiency_below",
+      "display_name": "'2B' charcoal adsorber organic iodine efficiency below acceptance criteria",
+      "properties": {
+        "match_key": "FailureMode:2b-adsorber-efficiency-below-criteria"
+      },
+      "type": "FailureMode",
+      "description": "Laboratory results showed organic iodine removal efficiency of 92.956%, below the 95.26% acceptance criterion.",
+      "match_key": "FailureMode:2b-charcoal-adsorber-organic-iodine-efficiency-below-acceptance-criteria"
+    },
+    {
+      "id": "fm_delayed_id",
+      "display_name": "Untimely identification of degraded condition due to 31-day lab turnaround procedural guidance",
+      "properties": {
+        "match_key": "FailureMode:untimely-identification-31-day-lab-guidance"
+      },
+      "type": "FailureMode",
+      "description": "Procedural guidance allowed 31 days from sample removal to receipt of laboratory results, delaying identification and correction within the 7-day allowed outage time.",
+      "match_key": "FailureMode:untimely-identification-of-degraded-condition-due-to-31-day-lab-turnaround-procedural-guidance"
+    },
+    {
+      "id": "cons_crev_inop",
+      "display_name": "'2B' CREV subsystem inoperable exceeding Technical Specification allowed outage time",
+      "properties": {
+        "match_key": "Consequence:2b-crev-inoperable-exceeding-tsat"
+      },
+      "type": "Consequence",
+      "start": "2020-11-11",
+      "end": "2020-11-28",
+      "duration": "17 days",
+      "tz": null,
+      "match_key": "Consequence:2b-crev-subsystem-inoperable-exceeding-technical-specification-allowed-outage-time"
+    },
+    {
+      "id": "ca_replace_filter",
+      "display_name": "Replace '2B' CREV subsystem charcoal filter trays",
+      "properties": {
+        "match_key": "CorrectiveAction:replace-2b-crev-charcoal-filter-trays"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-2b-crev-subsystem-charcoal-filter-trays"
+    },
+    {
+      "id": "ca_update_procedure",
+      "display_name": "Update procedure and work order guidance for accelerated sample removal and lab result receipt",
+      "properties": {
+        "due_date": "2021-06-30",
+        "match_key": "CorrectiveAction:update-procedure-accelerated-sampling"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:update-procedure-and-work-order-guidance-for-accelerated-sample-removal-and-lab-result-receipt"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts373",
+      "display_name": "Technical Specification 3.7.3, CREV System",
+      "properties": {
+        "match_key": "RegulatoryReference:ts-3-7-3-crev-system"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-3-7-3-crev-system"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts373",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_vi",
+      "evidence": null
+    },
+    {
+      "source": "c_charcoal_2b",
+      "relation": "PART_OF",
+      "target": "sys_vi",
+      "evidence": null
+    },
+    {
+      "source": "fm_manuf_variation",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_manuf_variation",
+      "relation": "LEADS_TO",
+      "target": "fm_efficiency_below",
+      "evidence": null
+    },
+    {
+      "source": "fm_efficiency_below",
+      "relation": "LEADS_TO",
+      "target": "fm_delayed_id",
+      "evidence": null
+    },
+    {
+      "source": "fm_delayed_id",
+      "relation": "LEADS_TO",
+      "target": "cons_crev_inop",
+      "evidence": null
+    },
+    {
+      "source": "cons_crev_inop",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_vi_2a",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_filter",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_update_procedure",
+      "evidence": null
+    }
+  ],
+  "chain": "charcoal manufacturing variation [cause B] -> accelerated surface oxidation -> '2B' adsorber organic iodine efficiency below acceptance criteria -> untimely identification (31-day lab turnaround) -> '2B' CREV subsystem inoperable beyond TS allowed outage time [backup '2A' CREV subsystem operable]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Docket 05000324 corresponds to Unit 1 per FORM-366 fields, though narrative header text labels this LER '2020-005' under 'Brunswick Steam Electric Plant (BSEP), Unit 1 05000-325' (Unit 2's docket) — likely a shared-system reporting artifact since CREV is shared between units and the event was declared on both units. FORM-366 identity fields (docket 05000324, unit not stated) are treated as authoritative per instructions. Previous Similar Events section in narrative is truncated/incomplete ('the acceptance criteria.') with no LER number, plant, or title given — insufficient information to create a stub LER node per Rule 9, so no SIMILAR_TO edge was emitted."
+}

@@ -1,0 +1,403 @@
+{
+  "ler_number": "416-2023-001-01",
+  "identity": {
+    "accession_number": "ML23334A051",
+    "docket": "05000416",
+    "plant_name": "Grand Gulf",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2023-06-06",
+    "report_date": "2023-11-30",
+    "operating_mode": "1",
+    "power_level": 98,
+    "discovery_context": "inspection",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Grand Gulf Nuclear Station, Unit 1 Licensee Event Report 2023-001-01, Valve Closure Test Failure Resulting in Condition Prohibited by Technical Specification"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "X",
+      "system": null,
+      "component": null,
+      "manufacturer": null,
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "1 E61 F003B valve disc traveling past the valve seat was caused by the splined adapter not being properly installed in the past per work order on October 27, 2017.",
+    "cause_code": "X",
+    "category": "Other",
+    "theme": "improper valve stem/spline reinstallation leading to mis-set travel stops",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 416-2023-001-01",
+      "properties": {},
+      "type": "LER",
+      "key": "416-2023-001-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:416-2023-001-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Grand Gulf Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000416",
+      "match_key": "Unit:05000416"
+    },
+    {
+      "id": "cause",
+      "display_name": "Other (X)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "X",
+      "category": "Other",
+      "theme": "improper valve stem/spline reinstallation leading to mis-set travel stops",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Other"
+    },
+    {
+      "id": "sys_purge",
+      "display_name": "Drywell Purge / Initial Vacuum Relief System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "E61",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "Division 2 subsystem; declared inoperable",
+      "match_key": "System:E61"
+    },
+    {
+      "id": "c_valve",
+      "display_name": "Drywell Purge Inlet Isolation Valve 1E61F003B",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": "1E61F003B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": true,
+      "match_key": "Component:ISV|1E61F003B"
+    },
+    {
+      "id": "c_spline",
+      "display_name": "Spline adapter",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:spline-adapter"
+    },
+    {
+      "id": "c_stem",
+      "display_name": "Valve stem",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:valve-stem"
+    },
+    {
+      "id": "c_drivesleeve",
+      "display_name": "Drive sleeve",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:drive-sleeve"
+    },
+    {
+      "id": "c_actuator",
+      "display_name": "MOV actuator/valve assembly",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:mov-actuator-valve-assembly"
+    },
+    {
+      "id": "c_checkvalve",
+      "display_name": "Check valve 1E61F002B",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "1E61F002B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:check-valve-1e61f002b"
+    },
+    {
+      "id": "fm_spline_slip",
+      "display_name": "Spline adapter slipped down valve stem",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Spline adapter improperly installed in 2017 work order, allowing it to slip down the stem over time.",
+      "match_key": "FailureMode:spline-adapter-slipped-down-valve-stem"
+    },
+    {
+      "id": "fm_disengage",
+      "display_name": "Disengagement between valve stem and drive sleeve",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Slipped spline adapter caused the stem to disengage from the drive sleeve, so actuator moved and indicated open/closed without moving the valve stem.",
+      "match_key": "FailureMode:disengagement-between-valve-stem-and-drive-sleeve"
+    },
+    {
+      "id": "fm_no_stem_movement",
+      "display_name": "Valve stem failed to move during 2017 surveillance",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Operator observed no stem movement during Division 2 post-LOCA drywell vacuum breaker operability surveillance on 2017-10-26.",
+      "match_key": "FailureMode:valve-stem-failed-to-move-during-2017-surveillance"
+    },
+    {
+      "id": "fm_disc_overtravel",
+      "display_name": "Valve disc traveling past the valve seat",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "2023 diagnostic testing (with strain gauge) revealed the butterfly valve disc contacts the seat at 40 sec of a 60 sec stroke and continues traveling 20 sec past the seat, with actuator open/closed positions mis-set relative to true disc travel (60 deg open / 30 deg closed vs. correct 90-degree full travel).",
+      "match_key": "FailureMode:valve-disc-traveling-past-the-valve-seat"
+    },
+    {
+      "id": "cons_2017",
+      "display_name": "1E61F003B / Division 2 Drywell Purge and Initial Vacuum Relief declared inoperable (2017 surveillance failure)",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2017-10-26",
+      "end": "2017-10-27",
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:1e61f003b-division-2-drywell-purge-and-initial-vacuum-relief-declared-inoperable-2017-surveillance-failure"
+    },
+    {
+      "id": "cons_prohibited",
+      "display_name": "Division 2 Drywell Purge/Vacuum Relief subsystem inoperable since 2017-10-26, a condition prohibited by Technical Specifications (discovered 2023-06-13)",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2017-10-26",
+      "end": "2023-06-16",
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:division-2-drywell-purge-vacuum-relief-subsystem-inoperable-since-2017-10-26-a-condition-prohibited-by-technical-specifications-discovered-2023-06-13"
+    },
+    {
+      "id": "ca_reinstall_2017",
+      "display_name": "Reinstall spline adapter and re-perform surveillance (2017)",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:reinstall-spline-adapter-and-re-perform-surveillance-2017"
+    },
+    {
+      "id": "ca_adjust_2023",
+      "display_name": "Adjust actuator/valve assembly to proper required position and verify with strain-gauge diagnostic test",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:adjust-actuator-valve-assembly-to-proper-required-position-and-verify-with-strain-gauge-diagnostic-test"
+    },
+    {
+      "id": "ca_pmrq_update",
+      "display_name": "Update PMRQs/MWOs for all applicable butterfly valves to require strain-gauge stem torque measurement per GL 96-05/JOG",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:update-pmrqs-mwos-for-all-applicable-butterfly-valves-to-require-strain-gauge-stem-torque-measurement-per-gl-96-05-jog"
+    },
+    {
+      "id": "ca_procedure_update",
+      "display_name": "Update procedure to include confirmation of valve stem orientation relative to disc orientation",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:update-procedure-to-include-confirmation-of-valve-stem-orientation-relative-to-disc-orientation"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts_3653",
+      "display_name": "Technical Specification 3.6.5.6 (Drywell post-LOCA and purge vacuum relief subsystems)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-3-6-5-6-drywell-post-loca-and-purge-vacuum-relief-subsystems"
+    },
+    {
+      "id": "rr_ts_3633",
+      "display_name": "Technical Specification 3.6.3.3 (Drywell Purge Systems)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-3-6-3-3-drywell-purge-systems"
+    },
+    {
+      "id": "rr_gl9605",
+      "display_name": "GL 96-05 / JOG Program (MOV diagnostic testing)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "standard/guidance",
+      "match_key": "RegulatoryReference:gl-96-05-jog-program-mov-diagnostic-testing"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_purge",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_valve",
+      "evidence": null
+    },
+    {
+      "source": "c_valve",
+      "relation": "PART_OF",
+      "target": "sys_purge",
+      "evidence": null
+    },
+    {
+      "source": "fm_spline_slip",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_spline_slip",
+      "relation": "LEADS_TO",
+      "target": "fm_disengage",
+      "evidence": null
+    },
+    {
+      "source": "fm_disengage",
+      "relation": "LEADS_TO",
+      "target": "fm_no_stem_movement",
+      "evidence": null
+    },
+    {
+      "source": "fm_no_stem_movement",
+      "relation": "LEADS_TO",
+      "target": "cons_2017",
+      "evidence": null
+    },
+    {
+      "source": "fm_disengage",
+      "relation": "LEADS_TO",
+      "target": "fm_disc_overtravel",
+      "evidence": null
+    },
+    {
+      "source": "fm_disc_overtravel",
+      "relation": "LEADS_TO",
+      "target": "cons_prohibited",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_reinstall_2017",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_adjust_2023",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_pmrq_update",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procedure_update",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts_3653",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts_3633",
+      "evidence": null
+    },
+    {
+      "source": "ca_pmrq_update",
+      "relation": "MITIGATED_BY",
+      "target": "rr_gl9605",
+      "evidence": null
+    }
+  ],
+  "chain": "improper spline adapter installation (2017 WO) [cause X] -> spline adapter slips down stem -> stem disengages from drive sleeve -> (2017) no stem movement observed -> Division 2 purge/vacuum relief declared inoperable; and separately -> (2023) valve disc travels past seat (mis-set limit switches) -> condition prohibited by Tech Specs discovered retroactive to 2017-10-26",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "This LER describes a long-latent condition: a 2017 spline-adapter installation defect caused an immediate surveillance failure (corrected at the time by reinstalling the adapter) but the underlying actuator/valve travel misalignment was not fully corrected until 2023, when strain-gauge diagnostic testing (implemented following a 2019 GL 96-05/JOG gap finding) revealed the disc traveling past the seat. The valve was retroactively declared to have been inoperable since 2017-10-26, making this a condition prohibited by Tech Specs. Cause code X ('Other') is used verbatim per form data despite the narrative describing what is essentially a maintenance/installation deficiency; category left as provided. No EIIS bracket codes given for valve/components in narrative; 'E61' system prefix taken from component IDs (1E61F003B) as the likely EIIS-style system designator for Drywell Purge, but since no explicit bracket or system name pairing was given, eiis_code is populated cautiously from the component ID prefix. Check valve 1E61F002B is mentioned only in a design/safety-significance context (backup flow prevention), not as an operable backup during the inoperability window, so no BACKED_UP_BY edge asserted for it -- included only as a Component for completeness per its explicit role description, though it could arguably be omitted as design context; retained since it has a specific identifier tied to the failure scenario mitigation path."
+}

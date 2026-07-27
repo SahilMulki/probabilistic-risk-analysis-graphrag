@@ -1,0 +1,292 @@
+{
+  "ler_number": "416-2025-004-00",
+  "identity": {
+    "accession_number": "ML25265A025",
+    "docket": "05000416",
+    "plant_name": "Grand Gulf",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2025-07-24",
+    "report_date": "2025-09-22",
+    "operating_mode": null,
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Grand Gulf Nuclear Station, Unit 1 Licensee Event Report 2025-004-00, Standby Gas Treatment System Train Inoperable Which Led to a Failure to Identify Condition Prohibited by Technical Specifications"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The failure to identify the prohibited condition was caused by operator rounds procedures not having a task to review the SGTS flow. The cause of the failure to properly detect the inaccurate data and failed flow switch was due to the lack of a task to review the SGTS flow in operator rounds.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "procedure gap in operator rounds",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 416-2025-004-00",
+      "properties": {
+        "match_key": "LER:416-2025-004-00"
+      },
+      "type": "LER",
+      "key": "416-2025-004-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:416-2025-004-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Grand Gulf Unit 1",
+      "properties": {
+        "match_key": "Unit:05000416",
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000416",
+      "match_key": "Unit:05000416"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {
+        "match_key": "Cause:provisional"
+      },
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "procedure gap in operator rounds",
+      "proximate_text": "The failure to identify the prohibited condition was caused by operator rounds procedures not having a task to review the SGTS flow. The cause of the failure to properly detect the inaccurate data and failed flow switch was due to the lack of a task to review the SGTS flow in operator rounds.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_sgts",
+      "display_name": "Standby Gas Treatment System",
+      "properties": {
+        "acronym": "SGTS",
+        "match_key": "System:standby-gas-treatment-system"
+      },
+      "type": "System",
+      "eiis_code": "BH",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected system",
+      "match_key": "System:BH"
+    },
+    {
+      "id": "c_fr",
+      "display_name": "Flow recorder (SGTS B train)",
+      "properties": {
+        "match_key": "Component:FR|sgts-b"
+      },
+      "type": "Component",
+      "eiis_code": "FR",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:FR"
+    },
+    {
+      "id": "c_fsw",
+      "display_name": "Flow switch (SGTS B train)",
+      "properties": {
+        "match_key": "Component:flow-switch-sgts-b"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:flow-switch-sgts-b-train"
+    },
+    {
+      "id": "fm_fswfail",
+      "display_name": "Flow switch failed, causing inaccurate flow recorder readings",
+      "properties": {
+        "match_key": "FailureMode:flow-switch-failed-inaccurate-readings"
+      },
+      "type": "FailureMode",
+      "description": "Flow switch failure caused the SGTS B train flow recorder to provide inaccurate information beginning June 21, 2025.",
+      "match_key": "FailureMode:flow-switch-failed-causing-inaccurate-flow-recorder-readings"
+    },
+    {
+      "id": "fm_norounds",
+      "display_name": "No procedural task to review SGTS flow in operator rounds",
+      "properties": {
+        "match_key": "FailureMode:no-rounds-task-review-sgts-flow"
+      },
+      "type": "FailureMode",
+      "description": "Operator rounds procedures lacked a task to review SGTS flow, preventing timely detection of the inaccurate flow indication and failed flow switch.",
+      "match_key": "FailureMode:no-procedural-task-to-review-sgts-flow-in-operator-rounds"
+    },
+    {
+      "id": "fm_undetected",
+      "display_name": "Inoperability of SGTS B train not detected for extended period",
+      "properties": {
+        "match_key": "FailureMode:sgts-b-inoperability-undetected"
+      },
+      "type": "FailureMode",
+      "description": "SGTS B train was inoperable due to inaccurate flow recorder data from June 21, 2025 until identified July 14, 2025, exceeding the 7-day allowed outage time under TS 3.6.4.3 Condition A.",
+      "match_key": "FailureMode:inoperability-of-sgts-b-train-not-detected-for-extended-period"
+    },
+    {
+      "id": "cons_tsviolation",
+      "display_name": "Condition prohibited by Technical Specifications (TS 3.6.4.3 Condition A exceeded)",
+      "properties": {
+        "match_key": "Consequence:ts-3-6-4-3-violation"
+      },
+      "type": "Consequence",
+      "start": "2025-06-21",
+      "end": "2025-07-14",
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:condition-prohibited-by-technical-specifications-ts-3-6-4-3-condition-a-exceeded"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace faulty SGTS B train flow switch",
+      "properties": {
+        "match_key": "CorrectiveAction:replace-flow-switch"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-faulty-sgts-b-train-flow-switch"
+    },
+    {
+      "id": "ca_procedure",
+      "display_name": "Update Control Room Rounds procedure 02-S-01-31 to include recording low flow switch values",
+      "properties": {
+        "match_key": "CorrectiveAction:update-rounds-procedure"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:update-control-room-rounds-procedure-02-s-01-31-to-include-recording-low-flow-switch-values"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts",
+      "display_name": "Technical Specification 3.6.4.3, Condition A",
+      "properties": {
+        "match_key": "RegulatoryReference:ts-3-6-4-3-condition-a"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-3-6-4-3-condition-a"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sgts",
+      "evidence": null
+    },
+    {
+      "source": "c_fr",
+      "relation": "PART_OF",
+      "target": "sys_sgts",
+      "evidence": null
+    },
+    {
+      "source": "c_fsw",
+      "relation": "PART_OF",
+      "target": "sys_sgts",
+      "evidence": null
+    },
+    {
+      "source": "fm_fswfail",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_fswfail",
+      "relation": "LEADS_TO",
+      "target": "fm_norounds",
+      "evidence": null
+    },
+    {
+      "source": "fm_norounds",
+      "relation": "LEADS_TO",
+      "target": "fm_undetected",
+      "evidence": null
+    },
+    {
+      "source": "fm_undetected",
+      "relation": "LEADS_TO",
+      "target": "cons_tsviolation",
+      "evidence": null
+    },
+    {
+      "source": "cons_tsviolation",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_sgts",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procedure",
+      "evidence": null
+    }
+  ],
+  "chain": "flow switch failed [cause TBD/provisional] -> inaccurate SGTS B flow recorder readings -> no operator-rounds task to review SGTS flow -> SGTS B inoperability undetected >7 days -> TS 3.6.4.3 Condition A prohibited condition [SGTS A operable throughout]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "SGTS A was stated as operable and capable of fulfilling the SGTS safety function during the event window, modeled as BACKED_UP_BY on the consequence via the SGTS system node (train-level distinction not separately modeled since no EIIS code or component-level detail given for train A). Cause code remains TBD/provisional per FORM-366 despite narrative providing a clear proximate cause statement, per rule 4. No previous similar events reported, so no SIMILAR_TO edge or stub LER emitted."
+}

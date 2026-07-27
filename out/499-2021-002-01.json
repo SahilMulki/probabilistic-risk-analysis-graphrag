@@ -1,0 +1,388 @@
+{
+  "ler_number": "499-2021-002-01",
+  "identity": {
+    "accession_number": "ML22186A228",
+    "docket": "05000499",
+    "plant_name": "South Texas",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2021-10-15",
+    "report_date": "2022-07-05",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "inspection",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Supplement to Condition Prohibited by Technical Specifications Due to Inoperable Train of Essential Core Cooling System and Containment Spray System"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "E",
+      "system": "VG",
+      "component": "HS",
+      "manufacturer": "GE",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The failure of the hand switch was due to a sticking hand switch or due to a high resistance contact in the switch...Engineering evaluation concluded that there is firm evidence that the B-Train hand switch failed when Operations used it to stop the VAH-005 fans...the component failure occurred when the spring returned to center when VAH-005 was stopped on October 5, 2021.",
+    "cause_code": "E",
+    "category": "Management/QA Deficiency",
+    "theme": "Aging/underexercised control switch developing high contact resistance/sticking",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 499-2021-002-01",
+      "properties": {},
+      "type": "LER",
+      "key": "499-2021-002-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:499-2021-002-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "South Texas Unit 2",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000499",
+      "match_key": "Unit:05000499"
+    },
+    {
+      "id": "cause",
+      "display_name": "Management/QA Deficiency (E)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "E",
+      "category": "Management/QA Deficiency",
+      "theme": "Aging/underexercised control switch developing high contact resistance/sticking",
+      "proximate_text": "The failure of the hand switch was due to a sticking hand switch or due to a high resistance contact in the switch...the component failure occurred when the spring returned to center when VAH-005 was stopped on October 5, 2021.",
+      "provisional": false,
+      "match_key": "Cause:Management/QA Deficiency"
+    },
+    {
+      "id": "sys_vg",
+      "display_name": "Fuel Handling Building HVAC (Supplemental Coolers)",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "VG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "support system for ECCS/Containment Spray",
+      "match_key": "System:VG"
+    },
+    {
+      "id": "sys_eccs_b",
+      "display_name": "B-Train Essential Core Cooling System",
+      "properties": {
+        "note": "declared inoperable due to loss of supplemental cooling"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:b-train-essential-core-cooling-system"
+    },
+    {
+      "id": "sys_cs_b",
+      "display_name": "B-Train Containment Spray System",
+      "properties": {
+        "note": "declared inoperable due to loss of supplemental cooling"
+      },
+      "type": "System",
+      "eiis_code": "BE",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BE"
+    },
+    {
+      "id": "c_hs",
+      "display_name": "B-Train Hand Switch (B2HFHS9527)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "HS",
+      "identifier": "B2HFHS9527",
+      "model": "Q16SBMC4A42S1F1P1",
+      "manufacturer_code": "GE",
+      "inferred_code": false,
+      "match_key": "Component:HS|B2HFHS9527"
+    },
+    {
+      "id": "c_vah005",
+      "display_name": "Air Handling Unit VAH-005 (Pump Room Cooler)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "VAH-005",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:air-handling-unit-vah-005-pump-room-cooler"
+    },
+    {
+      "id": "c_vah013",
+      "display_name": "Air Handling Unit VAH-013 (Valve Room Cooler)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "VAH-013",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:air-handling-unit-vah-013-valve-room-cooler"
+    },
+    {
+      "id": "fm_switch_stick",
+      "display_name": "Hand switch sticking / high contact resistance",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "B-Train hand switch B2HFHS9527 failed to spring-return properly to AUTO position, developing high contact resistance or sticking after being manipulated to STOP VAH-005 fans on Oct 5, 2021.",
+      "match_key": "FailureMode:hand-switch-sticking-high-contact-resistance"
+    },
+    {
+      "id": "fm_no_auto_start",
+      "display_name": "Cooling fans fail to auto-start on pump start",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "VAH-005 and VAH-013 cooling fans failed to start automatically when HHSI Pump 2B was started, due to the failed hand switch contact preventing the auto-start signal path.",
+      "match_key": "FailureMode:cooling-fans-fail-to-auto-start-on-pump-start"
+    },
+    {
+      "id": "cons_inop",
+      "display_name": "B-Train ECCS (HHSI/LHSI) and Containment Spray declared inoperable",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2021-10-05T03:48",
+      "end": "2021-10-15T23:18",
+      "duration": "10 days (exceeded 7-day AOT)",
+      "tz": "CDT",
+      "match_key": "Consequence:b-train-eccs-hhsi-lhsi-and-containment-spray-declared-inoperable"
+    },
+    {
+      "id": "ca_replace_switch",
+      "display_name": "Replace sticking B-Train hand switch and perform post-maintenance test",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-sticking-b-train-hand-switch-and-perform-post-maintenance-test"
+    },
+    {
+      "id": "ca_retention_process",
+      "display_name": "Improve process for retaining failed components for further analysis",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:improve-process-for-retaining-failed-components-for-further-analysis"
+    },
+    {
+      "id": "ca_inspect_switches",
+      "display_name": "Inspect other SBM hand switches for material condition/PM adequacy",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:inspect-other-sbm-hand-switches-for-material-condition-pm-adequacy"
+    },
+    {
+      "id": "ca_monitor_trend",
+      "display_name": "Continue engineering monitoring of hand switch condition for trends",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:continue-engineering-monitoring-of-hand-switch-condition-for-trends"
+    },
+    {
+      "id": "mfr_ge",
+      "display_name": "General Electric",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "GE",
+      "match_key": "Manufacturer:GE"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts352",
+      "display_name": "Technical Specification 3.5.2 (ECCS LCO)",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:technical-specification-3-5-2-eccs-lco"
+    },
+    {
+      "id": "rr_ts3621",
+      "display_name": "Technical Specification 3.6.2.1 (Containment Spray LCO)",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:technical-specification-3-6-2-1-containment-spray-lco"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "STPEGS Unit 1 2007 similar hand switch failure event (A-Train fans VAH-004/VAH-012)",
+      "properties": {},
+      "type": "LER",
+      "key": "1-2007-XXX",
+      "stub": true,
+      "title": "A-Train fans VAH-004 and VAH-012 failed to start following LHSI pump start due to high contact resistance of A-Train hand switch (A1HFHS9517)",
+      "plant": "South Texas Project",
+      "match_key": "LER:1-2007-XXX"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_vg",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_eccs_b",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_cs_b",
+      "evidence": null
+    },
+    {
+      "source": "c_hs",
+      "relation": "PART_OF",
+      "target": "sys_vg",
+      "evidence": null
+    },
+    {
+      "source": "c_vah005",
+      "relation": "PART_OF",
+      "target": "sys_vg",
+      "evidence": null
+    },
+    {
+      "source": "c_vah013",
+      "relation": "PART_OF",
+      "target": "sys_vg",
+      "evidence": null
+    },
+    {
+      "source": "fm_switch_stick",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_switch_stick",
+      "relation": "LEADS_TO",
+      "target": "fm_no_auto_start",
+      "evidence": null
+    },
+    {
+      "source": "fm_no_auto_start",
+      "relation": "LEADS_TO",
+      "target": "cons_inop",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_switch",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_retention_process",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_inspect_switches",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_monitor_trend",
+      "evidence": null
+    },
+    {
+      "source": "c_hs",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_ge",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts352",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts3621",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    }
+  ],
+  "chain": "hand switch sticking / high contact resistance [cause E] -> cooling fans (VAH-005/VAH-013) fail to auto-start on HHSI pump start -> B-Train ECCS and Containment Spray declared inoperable (10 days, exceeding 7-day AOT)",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Previous similar event LER key is uncertain; narrative only states '2007' at STPEGS Unit 1 without a formal LER number, so a placeholder stub key '1-2007-XXX' was used per instructions to capture plant/unit/title without inventing a docket-derived number. VAH-013 auto-start on high room temperature is independent of the failed hand switch control circuit and remained available, but is not modeled as a BACKED_UP_BY system per rule 6 since it is a redundant function of the same failed train's cooling path rather than a stated-operable backup system; FHB exhaust air subsystem providing 'some heat removal' is design-basis engineering judgment context, not an explicitly operable backup, so it was omitted from BACKED_UP_BY edges to avoid over-inference."
+}

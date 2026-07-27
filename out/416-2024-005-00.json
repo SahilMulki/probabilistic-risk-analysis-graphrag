@@ -1,0 +1,359 @@
+{
+  "ler_number": "416-2024-005-00",
+  "identity": {
+    "accession_number": "ML25009A011",
+    "docket": "05000416",
+    "plant_name": "Grand Gulf",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2024-11-10",
+    "report_date": "2025-01-09",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Grand Gulf Nuclear Station, Unit 1 Licensee Event Report 2024-005-00, Loss of Seal Steam Controller Power Resulted in Manual Reactor Shutdown"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The root cause of the event was the determination of the life expectancy of the power supplies with electrolytic capacitors was incorrectly designed using the in-service date as the starting criteria; however, electrolytic capacitors begin degrading upon manufactured date. Starting the life expectancy for this power supply from the in-service date as opposed to manufactured date resulted in the power supply being installed with a projected life expectancy of 10 years when the component already had 6 years of shelf life and only 4 years of remaining life expectancy.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Component life-expectancy determination error (electrolytic capacitor aging basis)",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 416-2024-005-00",
+      "properties": {},
+      "type": "LER",
+      "key": "416-2024-005-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:416-2024-005-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Grand Gulf Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000416",
+      "match_key": "Unit:05000416"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Component life-expectancy determination error (electrolytic capacitor aging basis)",
+      "proximate_text": "The root cause of the event was the determination of the life expectancy of the power supplies with electrolytic capacitors was incorrectly designed using the in-service date as the starting criteria; however, electrolytic capacitors begin degrading upon manufactured date.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_n21",
+      "display_name": "Reactor Building Closed Cooling Water / Seal Steam System",
+      "properties": {
+        "note": "N21 system designator per component identifier 1N21K602B; specific system function relates to main steam/seal steam control"
+      },
+      "type": "System",
+      "eiis_code": "NG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "seal steam supply system, involved in event",
+      "match_key": "System:NG"
+    },
+    {
+      "id": "sys_rcic",
+      "display_name": "Reactor Core Isolation Cooling",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BN",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; operable and used to maintain water level",
+      "match_key": "System:BN"
+    },
+    {
+      "id": "sys_rps",
+      "display_name": "Reactor Protection System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "actuated automatically",
+      "match_key": "System:JC"
+    },
+    {
+      "id": "sys_msiv",
+      "display_name": "Main Steam Isolation Valves / Containment Isolation",
+      "properties": {},
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": true,
+      "role": "actuated (Group 1 containment isolation signal closed MSIVs)",
+      "match_key": "System:main-steam-isolation-valves-containment-isolation"
+    },
+    {
+      "id": "c_powersupply",
+      "display_name": "Seal Steam Power Supply 1N21K602B",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "1N21K602B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:seal-steam-power-supply-1n21k602b"
+    },
+    {
+      "id": "c_capacitor",
+      "display_name": "Electrolytic capacitors (within power supply)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:electrolytic-capacitors-within-power-supply"
+    },
+    {
+      "id": "fm_lifecalc",
+      "display_name": "Incorrect life-expectancy calculation basis (in-service date vs. manufactured date)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Life expectancy of the power supply's electrolytic capacitors was calculated using in-service date instead of manufactured date, understating actual age at installation.",
+      "match_key": "FailureMode:incorrect-life-expectancy-calculation-basis-in-service-date-vs-manufactured-date"
+    },
+    {
+      "id": "fm_capaged",
+      "display_name": "Electrolytic capacitors exceeded expected life / aged components",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Aged components (electrolytic capacitors) exceeded their expected remaining life due to incorrect life expectancy starting point.",
+      "match_key": "FailureMode:electrolytic-capacitors-exceeded-expected-life-aged-components"
+    },
+    {
+      "id": "fm_psfail",
+      "display_name": "1N21K602B power supply failure",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The power supply providing seal steam controller power failed.",
+      "match_key": "FailureMode:1n21k602b-power-supply-failure"
+    },
+    {
+      "id": "fm_lossseal",
+      "display_name": "Loss of seal steam controller power",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Loss of power to the seal steam controller following power supply failure.",
+      "match_key": "FailureMode:loss-of-seal-steam-controller-power"
+    },
+    {
+      "id": "fm_condvacuum",
+      "display_name": "Degraded condenser vacuum",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Loss of seal steam control led to degraded condenser vacuum.",
+      "match_key": "FailureMode:degraded-condenser-vacuum"
+    },
+    {
+      "id": "cons_manualscram",
+      "display_name": "Manual reactor shutdown / scram",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2024-11-10T03:37",
+      "end": null,
+      "duration": null,
+      "tz": "CST",
+      "match_key": "Consequence:manual-reactor-shutdown-scram"
+    },
+    {
+      "id": "cons_isolation",
+      "display_name": "Group 1 containment isolation signal / MSIV closure",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2024-11-10T05:45",
+      "end": null,
+      "duration": null,
+      "tz": "CST",
+      "match_key": "Consequence:group-1-containment-isolation-signal-msiv-closure"
+    },
+    {
+      "id": "cons_rps2",
+      "display_name": "Automatic RPS actuation in Mode 3 with all rods inserted",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2024-11-10T06:20",
+      "end": null,
+      "duration": null,
+      "tz": "CST",
+      "match_key": "Consequence:automatic-rps-actuation-in-mode-3-with-all-rods-inserted"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace seal steam power supply 1N21K602B and restore seal steam control",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-seal-steam-power-supply-1n21k602b-and-restore-seal-steam-control"
+    },
+    {
+      "id": "ca_procrevise",
+      "display_name": "Revise maintenance procedure for power supply age determination and evaluation, including Supply Chain contact and Condition Report requirement",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-maintenance-procedure-for-power-supply-age-determination-and-evaluation-including-supply-chain-contact-and-condition-report-requirement"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_n21",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_rps",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_msiv",
+      "evidence": null
+    },
+    {
+      "source": "c_powersupply",
+      "relation": "PART_OF",
+      "target": "sys_n21",
+      "evidence": null
+    },
+    {
+      "source": "c_capacitor",
+      "relation": "PART_OF",
+      "target": "c_powersupply",
+      "evidence": null
+    },
+    {
+      "source": "fm_lifecalc",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_lifecalc",
+      "relation": "LEADS_TO",
+      "target": "fm_capaged",
+      "evidence": null
+    },
+    {
+      "source": "fm_capaged",
+      "relation": "LEADS_TO",
+      "target": "fm_psfail",
+      "evidence": null
+    },
+    {
+      "source": "fm_psfail",
+      "relation": "LEADS_TO",
+      "target": "fm_lossseal",
+      "evidence": null
+    },
+    {
+      "source": "fm_lossseal",
+      "relation": "LEADS_TO",
+      "target": "fm_condvacuum",
+      "evidence": null
+    },
+    {
+      "source": "fm_condvacuum",
+      "relation": "LEADS_TO",
+      "target": "cons_manualscram",
+      "evidence": null
+    },
+    {
+      "source": "cons_manualscram",
+      "relation": "LEADS_TO",
+      "target": "cons_isolation",
+      "evidence": null
+    },
+    {
+      "source": "cons_isolation",
+      "relation": "LEADS_TO",
+      "target": "cons_rps2",
+      "evidence": null
+    },
+    {
+      "source": "cons_rps2",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_rcic",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procrevise",
+      "evidence": null
+    }
+  ],
+  "chain": "incorrect life-expectancy basis (in-service date vs manufactured date) [cause TBD] -> electrolytic capacitors aged beyond expected life -> 1N21K602B power supply failure -> loss of seal steam controller power -> degraded condenser vacuum -> manual reactor shutdown -> Group 1 containment isolation (MSIV closure) -> automatic RPS actuation in Mode 3 [backup RCIC used for level control]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code and category are TBD/provisional per FORM-366 fields, despite a detailed root-cause narrative (component aging/design-basis error); category set to 'provisional' and provisional flag true per rule 4. Sequence includes two distinct RPS-related consequences (manual scram, then automatic RPS actuation while in Mode 3) both explicitly reported; modeled as chained Consequence nodes. RCIC explicitly stated as used to maintain water level post-trip -> modeled as BACKED_UP_BY. No previous similar events identified per narrative, so no SIMILAR_TO/stub LER emitted. System N21 is not a standard EIIS mnemonic in the text (only the component identifier 1N21K602B is given); eiis_code left null with descriptive display_name, marked provisional since the exact system boundary/name is inferred from context (seal steam control system)."
+}

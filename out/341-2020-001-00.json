@@ -1,0 +1,342 @@
+{
+  "ler_number": "341-2020-001-00",
+  "identity": {
+    "accession_number": "ML20114E190",
+    "docket": "05000341",
+    "plant_name": "Fermi",
+    "unit": 2,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2020-03-05",
+    "report_date": "2020-04-22",
+    "operating_mode": null,
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Licensee Event Report (LER) No. 2020-001"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)(C)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "the only cause was determined to be the brief, inadvertent, simultaneous opening of both inner and outer personnel access doors during normal entry and exit conditions",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "inadvertent simultaneous door opening during normal ingress/egress",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 341-2020-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "341-2020-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:341-2020-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Fermi Unit 2",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000341",
+      "match_key": "Unit:05000341"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "inadvertent simultaneous door opening during normal ingress/egress",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_nh",
+      "display_name": "Secondary Containment",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "NH",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "involved system",
+      "match_key": "System:NH"
+    },
+    {
+      "id": "sys_ng",
+      "display_name": "Reactor Building",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "NG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:NG"
+    },
+    {
+      "id": "sys_nf",
+      "display_name": "Auxiliary Building",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "NF",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:NF"
+    },
+    {
+      "id": "c_doors",
+      "display_name": "Secondary Containment Airlock Doors",
+      "properties": {
+        "location": "reactor building fifth floor"
+      },
+      "type": "Component",
+      "eiis_code": "DR",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:DR"
+    },
+    {
+      "id": "c_interlock",
+      "display_name": "Airlock Door Interlock",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "IEL",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:IEL"
+    },
+    {
+      "id": "fm_simopen",
+      "display_name": "Simultaneous opening of both airlock doors",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Brief, inadvertent, simultaneous opening of both inner and outer personnel access doors during normal entry and exit conditions, for approximately 3 seconds.",
+      "match_key": "FailureMode:simultaneous-opening-of-both-airlock-doors"
+    },
+    {
+      "id": "fm_srnotmet",
+      "display_name": "TS SR 3.6.4.1.3 not met",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Both doors open at the same time resulted in the surveillance requirement not being met.",
+      "match_key": "FailureMode:ts-sr-3-6-4-1-3-not-met"
+    },
+    {
+      "id": "cons_scinop",
+      "display_name": "Secondary containment declared inoperable",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2020-03-05T12:35:00",
+      "end": "2020-03-05T12:35:03",
+      "duration": "00:00:03",
+      "tz": "EST",
+      "match_key": "Consequence:secondary-containment-declared-inoperable"
+    },
+    {
+      "id": "ca_close",
+      "display_name": "Close at least one airlock door to restore SC operability",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:close-at-least-one-airlock-door-to-restore-sc-operability"
+    },
+    {
+      "id": "ca_restrict",
+      "display_name": "Temporarily restrict access to affected doors pending investigation",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:temporarily-restrict-access-to-affected-doors-pending-investigation"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(v)(C)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-c"
+    },
+    {
+      "id": "rr_5072",
+      "display_name": "10 CFR 50.72(b)(3)(v)(C)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-3-v-c"
+    },
+    {
+      "id": "rr_ts",
+      "display_name": "TS SR 3.6.4.1.3",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-sr-3-6-4-1-3"
+    },
+    {
+      "id": "rr_dte",
+      "display_name": "DTE letter NRC-19-0075 (ML19340A088)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:dte-letter-nrc-19-0075-ml19340a088"
+    },
+    {
+      "id": "ler_2019_002",
+      "display_name": "LER 3-2019-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "3-2019-002-00",
+      "stub": true,
+      "title": "Loss of Secondary Containment Function Due to Both Doors Open (Human Performance Error and Interlock Failure)",
+      "plant": "Fermi 2",
+      "match_key": "LER:3-2019-002-00"
+    },
+    {
+      "id": "ler_2019_003",
+      "display_name": "LER 3-2019-003-00",
+      "properties": {},
+      "type": "LER",
+      "key": "3-2019-003-00",
+      "stub": true,
+      "title": "Loss of Secondary Containment Function Due to Both Doors Open (Human Performance Error)",
+      "plant": "Fermi 2",
+      "match_key": "LER:3-2019-003-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_dte",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_nh",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ng",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_nf",
+      "evidence": null
+    },
+    {
+      "source": "c_doors",
+      "relation": "PART_OF",
+      "target": "sys_nh",
+      "evidence": null
+    },
+    {
+      "source": "c_interlock",
+      "relation": "PART_OF",
+      "target": "sys_nh",
+      "evidence": null
+    },
+    {
+      "source": "fm_simopen",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_simopen",
+      "relation": "LEADS_TO",
+      "target": "fm_srnotmet",
+      "evidence": null
+    },
+    {
+      "source": "fm_srnotmet",
+      "relation": "LEADS_TO",
+      "target": "cons_scinop",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_close",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_restrict",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_2019_002",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_2019_003",
+      "evidence": null
+    }
+  ],
+  "chain": "inadvertent simultaneous door opening during normal ingress/egress [cause TBD] -> both airlock doors open at once -> TS SR 3.6.4.1.3 not met -> secondary containment declared inoperable (3 seconds, restored)",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "No component/equipment failure occurred; interlock was tested and confirmed functioning as designed (not designed to prevent truly simultaneous opening). Cause code remains TBD/provisional per FORM-366 fields since no official cause code was assigned. Two previous similar LERs (2019-002, 2019-003) referenced as stubs with LER numbers exactly as stated in narrative (no docket substitution); licensee states no similar underlying root cause to this event's failure sequence, so causal link is stated as SIMILAR_TO per the narrative's 'Previous Occurrences' section despite differing root causes. UFSAR/dose-analysis bounding discussion (17-minute post-accident depressurization) is design/analysis context and modeled only via RegulatoryReference node, not as a System or FailureMode."
+}

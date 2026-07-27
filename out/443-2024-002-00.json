@@ -1,0 +1,252 @@
+{
+  "ler_number": "443-2024-002-00",
+  "identity": {
+    "accession_number": "ML25013A036",
+    "docket": "05000443",
+    "plant_name": "Seabrook",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2024-11-19",
+    "report_date": "2025-01-10",
+    "operating_mode": null,
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2024-002-00 for Seabrook Station, Manual Reactor Trip Due to 'B' MFP Trip"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "D",
+      "system": null,
+      "component": null,
+      "manufacturer": null,
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The cause of the event was a lack of adequate detail related to software download interface in the maintenance instructions.",
+    "cause_code": "D",
+    "category": "Defective Procedure",
+    "theme": "inadequate maintenance instruction detail",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 443-2024-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "443-2024-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:443-2024-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Seabrook Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000443",
+      "match_key": "Unit:05000443"
+    },
+    {
+      "id": "cause",
+      "display_name": "Defective Procedure (D)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "D",
+      "category": "Defective Procedure",
+      "theme": "inadequate maintenance instruction detail",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Defective Procedure"
+    },
+    {
+      "id": "sys_mfp",
+      "display_name": "Main Feedwater Pump System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected system; 'B' train",
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "c_ptur",
+      "display_name": "Turbine Specific Primary Trip Pack (PTUR)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "PTUR",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:turbine-specific-primary-trip-pack-ptur"
+    },
+    {
+      "id": "c_ppro",
+      "display_name": "Emergency Turbine Protection Pack (PPRO)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "PPRO",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:emergency-turbine-protection-pack-ppro"
+    },
+    {
+      "id": "fm_proc",
+      "display_name": "Maintenance instructions lacked adequate software download interface detail",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Work instructions did not adequately specify which packs should be selected for reboot after PTUR software download.",
+      "match_key": "FailureMode:maintenance-instructions-lacked-adequate-software-download-interface-detail"
+    },
+    {
+      "id": "fm_multireboot",
+      "display_name": "Multiple trip packs selected for reboot instead of only replaced pack",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Contrary to previous downloads where only the replaced pack was rebooted, more than one pack had been selected for rebooting.",
+      "match_key": "FailureMode:multiple-trip-packs-selected-for-reboot-instead-of-only-replaced-pack"
+    },
+    {
+      "id": "fm_mfptrip",
+      "display_name": "'B' MFP tripped during reboot",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Once rebooting was initiated, the 'B' MFP tripped.",
+      "match_key": "FailureMode:b-mfp-tripped-during-reboot"
+    },
+    {
+      "id": "fm_sglevel",
+      "display_name": "SG water levels lowered following MFP trip",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Lowering SG water levels resulted from the trip of the 'B' MFP.",
+      "match_key": "FailureMode:sg-water-levels-lowered-following-mfp-trip"
+    },
+    {
+      "id": "cons_trip",
+      "display_name": "Manual reactor trip / unit shutdown",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2024-11-19T13:50:00",
+      "end": null,
+      "duration": null,
+      "tz": "EST",
+      "match_key": "Consequence:manual-reactor-trip-unit-shutdown"
+    },
+    {
+      "id": "ca_revise",
+      "display_name": "Revise maintenance work instructions for PTUR pack replacement to include required software download detail",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-maintenance-work-instructions-for-ptur-pack-replacement-to-include-required-software-download-detail"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_mfp",
+      "evidence": null
+    },
+    {
+      "source": "c_ptur",
+      "relation": "PART_OF",
+      "target": "sys_mfp",
+      "evidence": null
+    },
+    {
+      "source": "c_ppro",
+      "relation": "PART_OF",
+      "target": "sys_mfp",
+      "evidence": null
+    },
+    {
+      "source": "fm_proc",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_proc",
+      "relation": "LEADS_TO",
+      "target": "fm_multireboot",
+      "evidence": null
+    },
+    {
+      "source": "fm_multireboot",
+      "relation": "LEADS_TO",
+      "target": "fm_mfptrip",
+      "evidence": null
+    },
+    {
+      "source": "fm_mfptrip",
+      "relation": "LEADS_TO",
+      "target": "fm_sglevel",
+      "evidence": null
+    },
+    {
+      "source": "fm_sglevel",
+      "relation": "LEADS_TO",
+      "target": "cons_trip",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_revise",
+      "evidence": null
+    }
+  ],
+  "chain": "inadequate detail in maintenance instructions on software download interface [cause D] -> more than one trip pack selected for reboot -> 'B' MFP trips during reboot -> SG water levels lower -> manual reactor trip / unit shutdown",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "No previous similar events identified per narrative ('A review of events over the past 5 years did not identify any similar events with the same cause as this event.') — no SIMILAR_TO edge or stub LER emitted. No specific EIIS codes were given in block 13 or narrative for the MFP system/components; left eiis_code null per rule 2. No backup systems explicitly stated operable during the event; narrative states 'all systems responded normally post trip' generically, not naming specific backups, so no BACKED_UP_BY edges emitted."
+}

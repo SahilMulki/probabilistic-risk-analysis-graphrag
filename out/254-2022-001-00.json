@@ -1,0 +1,467 @@
+{
+  "ler_number": "254-2022-001-00",
+  "identity": {
+    "accession_number": "ML22026A288",
+    "docket": "05000254",
+    "plant_name": "Quad Cities",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2021-12-01",
+    "report_date": "2022-01-26",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "operability test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": "55619",
+    "ens_date": null,
+    "ens_time": "2358",
+    "title": "High Pressure Coolant Injection System Inoperable due to Gland Seal System Malfunction"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)(D)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "11(",
+      "system": "X",
+      "component": "BJ",
+      "manufacturer": "LS",
+      "reportable": null
+    }
+  ],
+  "cause": {
+    "proximate_text": "The cause of the event was attributed to two equipment malfunctions: a failed level switch in the Unit 1 HPCI Gland Seal Condenser Hotwell, and a failed thermal overload for the Unit 1 HPCI Gland Exhauster motor. The high-level limit switch in the Gland Seal Condenser (GSC) Hotwell suffered age-related degradation which resulted in a failure of the Unit 1 HPCI GSC Condensate pump to actuate on high level.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Age-related instrument degradation leading to overheated exhauster motor",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 254-2021-006-00",
+      "properties": {
+        "match_key": "LER:254-2021-006-00"
+      },
+      "type": "LER",
+      "key": "254-2022-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:254-2022-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Quad Cities Unit 1",
+      "properties": {
+        "match_key": "Unit:05000254",
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric",
+        "thermal_power_mwt": "2957"
+      },
+      "type": "Unit",
+      "key": "05000254",
+      "match_key": "Unit:05000254"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {
+        "match_key": "Cause:provisional"
+      },
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Age-related instrument degradation leading to overheated exhauster motor",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_bj",
+      "display_name": "High Pressure Coolant Injection",
+      "properties": {
+        "match_key": "System:BJ"
+      },
+      "type": "System",
+      "eiis_code": "BJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "primary affected system",
+      "match_key": "System:BJ"
+    },
+    {
+      "id": "sys_ej",
+      "display_name": "250VDC Motor Control Center 1A",
+      "properties": {
+        "match_key": "System:EJ"
+      },
+      "type": "System",
+      "eiis_code": "EJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "power supply for HPCI Gland Exhauster",
+      "match_key": "System:EJ"
+    },
+    {
+      "id": "sys_rcic",
+      "display_name": "Reactor Core Isolation Cooling",
+      "properties": {
+        "match_key": "System:reactor-core-isolation-cooling"
+      },
+      "type": "System",
+      "eiis_code": "BN",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; operable",
+      "match_key": "System:BN"
+    },
+    {
+      "id": "sys_ads",
+      "display_name": "Automatic Depressurization System",
+      "properties": {
+        "match_key": "System:automatic-depressurization-system"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": "backup; operable",
+      "match_key": "System:automatic-depressurization-system"
+    },
+    {
+      "id": "c_lswitch",
+      "display_name": "High-level limit switch, Gland Seal Condenser Hotwell",
+      "properties": {
+        "nomenclature": "Tuffy Level Switch",
+        "match_key": "Component:high-level-limit-switch-gland-seal-condenser-hotwell"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": "039-5000-400",
+      "manufacturer_code": "LS",
+      "inferred_code": false,
+      "match_key": "Component:high-level-limit-switch-gland-seal-condenser-hotwell"
+    },
+    {
+      "id": "c_gscpump",
+      "display_name": "HPCI Gland Seal Condenser Condensate Pump",
+      "properties": {
+        "match_key": "Component:hpci-gland-seal-condenser-condensate-pump"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:hpci-gland-seal-condenser-condensate-pump"
+    },
+    {
+      "id": "c_exhauster",
+      "display_name": "HPCI Gland Exhauster Motor",
+      "properties": {
+        "match_key": "Component:hpci-gland-exhauster-motor"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:hpci-gland-exhauster-motor"
+    },
+    {
+      "id": "c_overload",
+      "display_name": "Thermal overload relay (Gland Exhauster motor)",
+      "properties": {
+        "nomenclature": "Coil, Overload",
+        "match_key": "Component:thermal-overload-relay-gland-exhauster-motor"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": "H1029",
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:thermal-overload-relay-gland-exhauster-motor"
+    },
+    {
+      "id": "fm_switchfail",
+      "display_name": "Level switch failed to actuate on high level (age-related degradation)",
+      "properties": {
+        "match_key": "FailureMode:level-switch-failed-to-actuate"
+      },
+      "type": "FailureMode",
+      "description": "High-level limit switch in GSC Hotwell suffered age-related degradation, failing to actuate the condensate pump.",
+      "match_key": "FailureMode:level-switch-failed-to-actuate-on-high-level-age-related-degradation"
+    },
+    {
+      "id": "fm_pumpfail",
+      "display_name": "GSC condensate pump failed to actuate on high level",
+      "properties": {
+        "match_key": "FailureMode:gsc-condensate-pump-failed-to-actuate"
+      },
+      "type": "FailureMode",
+      "description": "Condensate pump did not start, allowing water level in GSC to rise.",
+      "match_key": "FailureMode:gsc-condensate-pump-failed-to-actuate-on-high-level"
+    },
+    {
+      "id": "fm_waterimpinge",
+      "display_name": "Water impinged on Gland Exhauster / motor overload",
+      "properties": {
+        "match_key": "FailureMode:water-impinged-on-gland-exhauster"
+      },
+      "type": "FailureMode",
+      "description": "Rising GSC water level impinged on the Gland Exhauster and overloaded the associated motor.",
+      "match_key": "FailureMode:water-impinged-on-gland-exhauster-motor-overload"
+    },
+    {
+      "id": "fm_thermalevent",
+      "display_name": "Thermal event / smoke at exhauster motor and MCC 1A overloads",
+      "properties": {
+        "match_key": "FailureMode:thermal-event-smoke-exhauster-mcc"
+      },
+      "type": "FailureMode",
+      "description": "Under high current conditions, the exhauster motor and associated overloads (in MCC 1A cubicle) underwent thermal events generating smoke and acrid odor.",
+      "match_key": "FailureMode:thermal-event-smoke-at-exhauster-motor-and-mcc-1a-overloads"
+    },
+    {
+      "id": "cons_hpci",
+      "display_name": "HPCI inoperable / unavailable for automatic initiation",
+      "properties": {
+        "match_key": "Consequence:hpci-inoperable-unavailable-for-automatic-initiation"
+      },
+      "type": "Consequence",
+      "start": "2021-12-01T18:09:00-06:00",
+      "end": "2021-12-01T21:10:00-06:00",
+      "duration": "1:27",
+      "tz": "CST",
+      "match_key": "Consequence:hpci-inoperable-unavailable-for-automatic-initiation"
+    },
+    {
+      "id": "ca_isolate",
+      "display_name": "Electrically isolate faulted HPCI Gland Exhauster",
+      "properties": {
+        "match_key": "CorrectiveAction:electrically-isolate-faulted-hpci-gland-exhauster"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:electrically-isolate-faulted-hpci-gland-exhauster"
+    },
+    {
+      "id": "ca_restore",
+      "display_name": "Restore Unit 1 HPCI to OPERABLE in normal standby lineup",
+      "properties": {
+        "match_key": "CorrectiveAction:restore-unit-1-hpci-to-operable"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:restore-unit-1-hpci-to-operable-in-normal-standby-lineup"
+    },
+    {
+      "id": "ca_replaceswitch",
+      "display_name": "Replace faulted level switch for GSC Condensate Pump",
+      "properties": {
+        "match_key": "CorrectiveAction:replace-faulted-level-switch"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-faulted-level-switch-for-gsc-condensate-pump"
+    },
+    {
+      "id": "ca_replaceoverload",
+      "display_name": "Replace faulted motor overloads for Gland Exhauster",
+      "properties": {
+        "match_key": "CorrectiveAction:replace-faulted-motor-overloads"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-faulted-motor-overloads-for-gland-exhauster"
+    },
+    {
+      "id": "mfr_magnetrol",
+      "display_name": "Magnetrol",
+      "properties": {
+        "match_key": "Manufacturer:LS"
+      },
+      "type": "Manufacturer",
+      "code": "LS",
+      "match_key": "Manufacturer:LS"
+    },
+    {
+      "id": "mfr_eaton",
+      "display_name": "Eaton / QualTech NP",
+      "properties": {
+        "match_key": "Manufacturer:eaton-qualtech-np"
+      },
+      "type": "Manufacturer",
+      "code": null,
+      "match_key": "Manufacturer:eaton-qualtech-np"
+    },
+    {
+      "id": "rr_5072",
+      "display_name": "10 CFR 50.72(b)(3)(v)(D)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-72-b-3-v-d"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-3-v-d"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "rr_nei",
+      "display_name": "NEI 99-02, Revision 7",
+      "properties": {
+        "match_key": "RegulatoryReference:nei-99-02-rev-7"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "standard/guidance",
+      "match_key": "RegulatoryReference:nei-99-02-revision-7"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_nei",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bj",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ej",
+      "evidence": null
+    },
+    {
+      "source": "c_lswitch",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_magnetrol",
+      "evidence": null
+    },
+    {
+      "source": "c_overload",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_eaton",
+      "evidence": null
+    },
+    {
+      "source": "fm_switchfail",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_switchfail",
+      "relation": "LEADS_TO",
+      "target": "fm_pumpfail",
+      "evidence": null
+    },
+    {
+      "source": "fm_pumpfail",
+      "relation": "LEADS_TO",
+      "target": "fm_waterimpinge",
+      "evidence": null
+    },
+    {
+      "source": "fm_waterimpinge",
+      "relation": "LEADS_TO",
+      "target": "fm_thermalevent",
+      "evidence": null
+    },
+    {
+      "source": "fm_thermalevent",
+      "relation": "LEADS_TO",
+      "target": "cons_hpci",
+      "evidence": null
+    },
+    {
+      "source": "cons_hpci",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_rcic",
+      "evidence": null
+    },
+    {
+      "source": "cons_hpci",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_ads",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_isolate",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_restore",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replaceswitch",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replaceoverload",
+      "evidence": null
+    }
+  ],
+  "chain": "level switch age-related degradation [cause TBD] -> GSC condensate pump fails to actuate -> water impinges on Gland Exhauster -> thermal event/smoke at exhauster motor and MCC 1A overloads -> HPCI tripped/latched, inoperable 1h27m [backups RCIC, ADS available]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code is TBD/provisional per FORM-366 fields; block_13 cause field '11(' is copied verbatim though its meaning is unclear. Two distinct equipment failures (level switch, thermal overload) are modeled as separate FailureMode nodes in the causal chain per the narrative's description of cascading events; only the level switch failure is linked CAUSED_BY the (provisional) Cause node, consistent with rule 5 requiring exactly one CAUSED_BY from the chain's origin. HPCI system design/mission passages (LPCI/Core Spray comparisons, GSC design purpose) are design context and were not modeled as System/Component nodes or edges. RCIC and ADS explicitly stated as remaining operable throughout the event, so BACKED_UP_BY edges are asserted."
+}

@@ -1,0 +1,337 @@
+{
+  "ler_number": "528-2025-001-00",
+  "identity": {
+    "accession_number": "ML25142A400",
+    "docket": "05000528",
+    "plant_name": "Palo Verde",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2025-03-28",
+    "report_date": "2025-05-22",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": "57633",
+    "ens_date": "2025-03-28",
+    "ens_time": null,
+    "title": "Palo Verde Nuclear Generating Station (PVNGS) Unit 1"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)(D)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "control room staff did not recognize that there was an equipment issue that affected the operability of the Train A HPSI before declaring the Train B HPSI inoperable for planned outage activities. The apparent cause of this event is less than adequate communication.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Communication failure between operator and control room supervisor",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 528-2025-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "528-2025-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:528-2025-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Palo Verde Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000528",
+      "match_key": "Unit:05000528"
+    },
+    {
+      "id": "cause",
+      "display_name": "Personnel Error (A)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Communication failure between operator and control room supervisor",
+      "proximate_text": "control room staff did not recognize that there was an equipment issue that affected the operability of the Train A HPSI before declaring the Train B HPSI inoperable for planned outage activities. The apparent cause of this event is less than adequate communication.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_si",
+      "display_name": "Safety Injection System",
+      "properties": {
+        "note": "ECCS for PVNGS, comprised of HPSI, LPSI, and SITs"
+      },
+      "type": "System",
+      "eiis_code": "BQ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BQ"
+    },
+    {
+      "id": "sys_hpsi",
+      "display_name": "High Pressure Safety Injection",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BQ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected; Train A and B both inoperable concurrently",
+      "match_key": "System:BQ"
+    },
+    {
+      "id": "sys_ec",
+      "display_name": "Essential Chilled Water System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "KM",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "involved; Train A EC Chiller failure precipitated inoperability declaration",
+      "match_key": "System:KM"
+    },
+    {
+      "id": "c_traina_chiller",
+      "display_name": "Train A EC Chiller",
+      "properties": {
+        "note": "Essential Chilled Water Train A chiller compressor oil sump temperature low"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "Train A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:train-a-ec-chiller"
+    },
+    {
+      "id": "c_trainb_hpsi_pump",
+      "display_name": "Train B HPSI Pump",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "Train B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:train-b-hpsi-pump"
+    },
+    {
+      "id": "fm_misident",
+      "display_name": "AO/CRS miscommunication misidentified affected chiller train",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "AO reported low compressor oil sump temperature on Train A EC Chiller; CRS believed the report referred to the Train A Normal Chiller, not the Train A EC Chiller",
+      "match_key": "FailureMode:ao-crs-miscommunication-misidentified-affected-chiller-train"
+    },
+    {
+      "id": "fm_trainb_declared",
+      "display_name": "Train B HPSI declared inoperable for planned RWT recirculation",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Operations declared Train B HPSI inoperable at 2127 to support outage preparation activities without awareness of the Train A HPSI-affecting EC Chiller issue",
+      "match_key": "FailureMode:train-b-hpsi-declared-inoperable-for-planned-rwt-recirculation"
+    },
+    {
+      "id": "fm_traina_confirmed",
+      "display_name": "Train A EC Chiller confirmed inoperable, affecting Train A HPSI",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "At 0106 on March 28, 2025, Train A EC Chiller was declared inoperable when compressor oil temperature was confirmed below minimum, rendering Train A HPSI room cooling unavailable and Train A HPSI inoperable",
+      "match_key": "FailureMode:train-a-ec-chiller-confirmed-inoperable-affecting-train-a-hpsi"
+    },
+    {
+      "id": "cons_lco303",
+      "display_name": "Concurrent Train A and B HPSI inoperability; TS LCO 3.0.3 entered / SSFF",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2025-03-28T01:06",
+      "end": "2025-03-28T01:15",
+      "duration": "0:09",
+      "tz": "MST",
+      "match_key": "Consequence:concurrent-train-a-and-b-hpsi-inoperability-ts-lco-3-0-3-entered-ssff"
+    },
+    {
+      "id": "ca_returnlineup",
+      "display_name": "Return Train B HPSI to normal lineup",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:return-train-b-hpsi-to-normal-lineup"
+    },
+    {
+      "id": "ca_briefings",
+      "display_name": "Develop briefings on conduct of operations communication practices",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:develop-briefings-on-conduct-of-operations-communication-practices"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "rr_5072",
+      "display_name": "10 CFR 50.72(b)(3)(v)(D)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-3-v-d"
+    },
+    {
+      "id": "rr_ts3503",
+      "display_name": "TS LCO 3.5.3 Condition B",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-lco-3-5-3-condition-b"
+    },
+    {
+      "id": "rr_ts3710",
+      "display_name": "TS LCO 3.7.10 Condition A",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-lco-3-7-10-condition-a"
+    },
+    {
+      "id": "rr_ts303",
+      "display_name": "TS LCO 3.0.3",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ts-lco-3-0-3"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts3503",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts3710",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts303",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_si",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_hpsi",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ec",
+      "evidence": null
+    },
+    {
+      "source": "c_traina_chiller",
+      "relation": "PART_OF",
+      "target": "sys_ec",
+      "evidence": null
+    },
+    {
+      "source": "c_trainb_hpsi_pump",
+      "relation": "PART_OF",
+      "target": "sys_hpsi",
+      "evidence": null
+    },
+    {
+      "source": "fm_misident",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_misident",
+      "relation": "LEADS_TO",
+      "target": "fm_trainb_declared",
+      "evidence": null
+    },
+    {
+      "source": "fm_trainb_declared",
+      "relation": "LEADS_TO",
+      "target": "fm_traina_confirmed",
+      "evidence": null
+    },
+    {
+      "source": "fm_traina_confirmed",
+      "relation": "LEADS_TO",
+      "target": "cons_lco303",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_returnlineup",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_briefings",
+      "evidence": null
+    }
+  ],
+  "chain": "AO/CRS miscommunication about which chiller had low oil temperature [cause A] -> Train B HPSI declared inoperable for planned RWT recirculation (unaware Train A HPSI already affected) -> Train A EC Chiller confirmed inoperable, rendering Train A HPSI inoperable -> concurrent Train A & B HPSI inoperability, TS LCO 3.0.3 entered / SSFF -> Train B HPSI returned to normal lineup, LCO exited",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "No block_13 data provided in FORM-366 fields (empty array) and cause_code was TBD/provisional at header level, but narrative clearly attributes cause to inadequate communication (personnel error), so cause_code set to A per narrative content per instructions to use official code where stated; since header explicitly gave TBD, category is treated based on narrative apparent cause description ('less than adequate communication') which maps to Personnel Error category. No previous similar events were listed in Section 8 (narrative states section header only, no content) -> no stub LER/SIMILAR_TO edge emitted. No component manufacturer/model data given -> no Manufacturer node. EC system Train B and Normal Chillers mentioned only for context/clarification, not independently modeled as failure-chain components since they were not the ones confirmed inoperable."
+}

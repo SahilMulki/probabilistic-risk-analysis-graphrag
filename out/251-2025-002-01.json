@@ -1,0 +1,341 @@
+{
+  "ler_number": "251-2025-002-01",
+  "identity": {
+    "accession_number": "ML25174A283",
+    "docket": "05000251",
+    "plant_name": "Turkey Point",
+    "unit": 4,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2025-03-13",
+    "report_date": "2025-06-20",
+    "operating_mode": "6",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LER 2025-002-01 for Turkey Point Unit 4, Emergency Diesel Generator Actuation"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "X",
+      "system": "FA",
+      "component": "RLY",
+      "manufacturer": "GE",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The spurious actuation was caused by a cable short-circuit between switchyard lock-out relays and interposing relay 94/HFA53K91 H",
+    "cause_code": "X",
+    "category": "Other",
+    "theme": "cable short-circuit causing spurious protective relay actuation",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 251-2025-002-01",
+      "properties": {
+        "match_key": "LER:251-2025-002-01"
+      },
+      "type": "LER",
+      "key": "251-2025-002-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:251-2025-002-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Turkey Point Unit 4",
+      "properties": {
+        "match_key": "Unit:05000251",
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000251",
+      "match_key": "Unit:05000251"
+    },
+    {
+      "id": "cause",
+      "display_name": "Other (X)",
+      "properties": {
+        "match_key": "Cause:Other"
+      },
+      "type": "Cause",
+      "cause_code": "X",
+      "category": "Other",
+      "theme": "cable short-circuit causing spurious protective relay actuation",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Other"
+    },
+    {
+      "id": "sys_ea",
+      "display_name": "Startup Transformer",
+      "properties": {
+        "match_key": "System:EA"
+      },
+      "type": "System",
+      "eiis_code": "EA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:EA"
+    },
+    {
+      "id": "sys_fa",
+      "display_name": "Protective Relaying / Bus Differential Protection",
+      "properties": {
+        "match_key": "System:FA"
+      },
+      "type": "System",
+      "eiis_code": "FA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:FA"
+    },
+    {
+      "id": "sys_ek",
+      "display_name": "Emergency Diesel Generator",
+      "properties": {
+        "match_key": "System:EK"
+      },
+      "type": "System",
+      "eiis_code": "EK",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; operable",
+      "match_key": "System:EK"
+    },
+    {
+      "id": "c_bkr",
+      "display_name": "4kV Switchgear Feeder Breaker 4A805",
+      "properties": {
+        "match_key": "Component:EB|4A805"
+      },
+      "type": "Component",
+      "eiis_code": "EB",
+      "identifier": "4A805",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:EB|4A805"
+    },
+    {
+      "id": "c_rly",
+      "display_name": "Bus Differential Interposing Relay 94/HFA53K91 H",
+      "properties": {
+        "match_key": "Component:RLY|94-HFA53K91-H"
+      },
+      "type": "Component",
+      "eiis_code": "RLY",
+      "identifier": "94/HFA53K91 H",
+      "model": null,
+      "manufacturer_code": "GE",
+      "inferred_code": false,
+      "match_key": "Component:RLY|94/HFA53K91 H"
+    },
+    {
+      "id": "fm_short",
+      "display_name": "Cable short-circuit between switchyard lock-out relays and interposing relay",
+      "properties": {
+        "match_key": "FailureMode:cable-short-circuit-switchyard-interposing-relay"
+      },
+      "type": "FailureMode",
+      "description": "A cable short-circuit occurred between switchyard lock-out relays and interposing relay 94/HFA53K91 H",
+      "match_key": "FailureMode:cable-short-circuit-between-switchyard-lock-out-relays-and-interposing-relay"
+    },
+    {
+      "id": "fm_spurious",
+      "display_name": "Spurious trip signal from interposing relay",
+      "properties": {
+        "match_key": "FailureMode:spurious-trip-signal-interposing-relay"
+      },
+      "type": "FailureMode",
+      "description": "Interposing relay 94/HFA53K91 H spuriously actuated, sending a locked-in trip signal to breaker 4A805",
+      "match_key": "FailureMode:spurious-trip-signal-from-interposing-relay"
+    },
+    {
+      "id": "fm_bkrtrip",
+      "display_name": "Feeder breaker 4A805 tripped open",
+      "properties": {
+        "match_key": "FailureMode:feeder-breaker-4a805-tripped-open"
+      },
+      "type": "FailureMode",
+      "description": "SUT feeder breaker 4A805 tripped, opening while supplying power to 4B 4kV Switchgear",
+      "match_key": "FailureMode:feeder-breaker-4a805-tripped-open"
+    },
+    {
+      "id": "cons_deenerg",
+      "display_name": "Momentary de-energization of 4B 4kV Bus / EDG and sequencer actuation",
+      "properties": {
+        "match_key": "Consequence:momentary-de-energization-4b-bus-edg-actuation"
+      },
+      "type": "Consequence",
+      "start": "2025-03-13T18:47",
+      "end": null,
+      "duration": null,
+      "tz": "EDT",
+      "match_key": "Consequence:momentary-de-energization-of-4b-4kv-bus-edg-and-sequencer-actuation"
+    },
+    {
+      "id": "ca_isolate",
+      "display_name": "Lift leads and electrically isolate relay 94/HFA53K91 H from breaker 4A805 protection scheme",
+      "properties": {
+        "match_key": "CorrectiveAction:isolate-interposing-relay"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:lift-leads-and-electrically-isolate-relay-94-hfa53k91-h-from-breaker-4a805-protection-scheme"
+    },
+    {
+      "id": "ca_replace_cable",
+      "display_name": "Replace cable from switchyard to relay 94/HFA53K91 H",
+      "properties": {
+        "match_key": "CorrectiveAction:replace-cable-to-interposing-relay"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-cable-from-switchyard-to-relay-94-hfa53k91-h"
+    },
+    {
+      "id": "ca_extent",
+      "display_name": "Address potential extent-of-condition issues",
+      "properties": {
+        "match_key": "CorrectiveAction:address-extent-of-condition"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:address-potential-extent-of-condition-issues"
+    },
+    {
+      "id": "mfr_ge",
+      "display_name": "General Electric",
+      "properties": {
+        "match_key": "Manufacturer:GE"
+      },
+      "type": "Manufacturer",
+      "code": "GE",
+      "match_key": "Manufacturer:GE"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ea",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_fa",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ek",
+      "evidence": null
+    },
+    {
+      "source": "fm_short",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_short",
+      "relation": "LEADS_TO",
+      "target": "fm_spurious",
+      "evidence": null
+    },
+    {
+      "source": "fm_spurious",
+      "relation": "LEADS_TO",
+      "target": "fm_bkrtrip",
+      "evidence": null
+    },
+    {
+      "source": "fm_bkrtrip",
+      "relation": "LEADS_TO",
+      "target": "cons_deenerg",
+      "evidence": null
+    },
+    {
+      "source": "cons_deenerg",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_ek",
+      "evidence": null
+    },
+    {
+      "source": "c_rly",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_ge",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_isolate",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_cable",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_extent",
+      "evidence": null
+    }
+  ],
+  "chain": "cable short-circuit between switchyard lock-out relays and interposing relay [cause X] -> interposing relay 94/HFA53K91 H spuriously actuates -> feeder breaker 4A805 trips open -> momentary de-energization of 4B 4kV bus -> EDG/sequencer automatically actuate to restore power [backup 4B EDG operable]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code X (Other) reflects no single official personnel/design/equipment category assigned; theme captures the cable short-circuit root per narrative. Breaker 4A805 to switchgear and relay to breaker are functional relationships, not containment, so no PART_OF edges emitted. D bus station blackout tie mentioned only in Analysis-of-Event safety-significance discussion without stating it as an operable backup during the event window in the same explicit way as the 4B EDG; it is treated as design/analysis context and not modeled as a System node. No similar prior events identified per licensee review, so no SIMILAR_TO edge or stub LER created."
+}

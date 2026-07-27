@@ -1,0 +1,408 @@
+{
+  "ler_number": "313-2023-002-00",
+  "identity": {
+    "accession_number": "ML23160A212",
+    "docket": "05000313",
+    "plant_name": "Arkansas Nuclear",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2023-04-11",
+    "report_date": "2023-06-09",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Reactor Protection System Underpower Relay Test Failure Resulting in Condition Prohibited by Technical Specifications"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "X",
+      "system": "JC",
+      "component": "RLY",
+      "manufacturer": "G080",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The underpower relay test failure direct cause was a failure to disable the internal holding coil which resulted in the failure of the underpower relay to open when the relay coil was de-energized via the test push button. The holding coil being enabled allowed the circuitry for the RCP underpower indication lights to induce a current on the relay contact such that the relay would not trip open during the push button test.",
+    "cause_code": "X",
+    "category": "Other",
+    "theme": "Relay holding coil not disabled per design; latent maintenance/PMT deficiency",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 313-2023-002-00",
+      "properties": {
+        "match_key": "LER:313-2023-002-00"
+      },
+      "type": "LER",
+      "key": "313-2023-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:313-2023-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Arkansas Nuclear Unit 1",
+      "properties": {
+        "match_key": "Unit:05000313",
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000313",
+      "match_key": "Unit:05000313"
+    },
+    {
+      "id": "cause",
+      "display_name": "Other (X)",
+      "properties": {
+        "match_key": "Cause:Other"
+      },
+      "type": "Cause",
+      "cause_code": "X",
+      "category": "Other",
+      "theme": "Relay holding coil not disabled per design; latent maintenance/PMT deficiency",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Other"
+    },
+    {
+      "id": "sys_jc",
+      "display_name": "Reactor Protection System",
+      "properties": {
+        "match_key": "System:JC"
+      },
+      "type": "System",
+      "eiis_code": "JC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JC"
+    },
+    {
+      "id": "c_relay",
+      "display_name": "RCP 'D' Underpower Relay",
+      "properties": {
+        "match_key": "Component:RLY|RCP-D-underpower-relay"
+      },
+      "type": "Component",
+      "eiis_code": "RLY",
+      "identifier": "RCP D underpower relay",
+      "model": null,
+      "manufacturer_code": "G080",
+      "inferred_code": false,
+      "match_key": "Component:RLY|RCP D underpower relay"
+    },
+    {
+      "id": "c_holdingcoil",
+      "display_name": "Internal holding coil",
+      "properties": {
+        "match_key": "Component:internal-holding-coil"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:internal-holding-coil"
+    },
+    {
+      "id": "c_timedelay",
+      "display_name": "Time delay relays (RPS channels, RCP 'D')",
+      "properties": {
+        "match_key": "Component:time-delay-relays-rcp-d"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:time-delay-relays-rps-channels-rcp-d"
+    },
+    {
+      "id": "fm_designfail",
+      "display_name": "Failure to disable internal holding coil per original design",
+      "properties": {
+        "match_key": "FailureMode:failure-to-disable-holding-coil"
+      },
+      "type": "FailureMode",
+      "description": "The replacement RCP 'D' underpower relay was installed without disabling the internal holding coil as required by the original design for proper functionality.",
+      "match_key": "FailureMode:failure-to-disable-internal-holding-coil-per-original-design"
+    },
+    {
+      "id": "fm_indication_current",
+      "display_name": "Indication-light circuit induces current on relay contact",
+      "properties": {
+        "match_key": "FailureMode:indication-light-current-induced"
+      },
+      "type": "FailureMode",
+      "description": "With the holding coil enabled, the circuitry for the RCP underpower indication lights induced a current on the relay contact.",
+      "match_key": "FailureMode:indication-light-circuit-induces-current-on-relay-contact"
+    },
+    {
+      "id": "fm_relay_no_trip",
+      "display_name": "Underpower relay failed to open during push-button test",
+      "properties": {
+        "match_key": "FailureMode:relay-failed-to-open"
+      },
+      "type": "FailureMode",
+      "description": "The relay would not trip open during the push button test when the relay coil was de-energized, causing PM test failure.",
+      "match_key": "FailureMode:underpower-relay-failed-to-open-during-push-button-test"
+    },
+    {
+      "id": "fm_past_inop",
+      "display_name": "RCP 'D' underpower relay past inoperable (unable to perform safety function)",
+      "properties": {
+        "match_key": "FailureMode:rcp-d-relay-past-inoperable"
+      },
+      "type": "FailureMode",
+      "description": "The replacement relay was not capable of performing its safety function, rendering the RCP 'D' underpower relay Past Inoperable from October 11, 2022 until February 9, 2023.",
+      "match_key": "FailureMode:rcp-d-underpower-relay-past-inoperable-unable-to-perform-safety-function"
+    },
+    {
+      "id": "cons_ts_condition",
+      "display_name": "Condition Prohibited by Technical Specifications (TS 3.3.1 RPS Instrumentation)",
+      "properties": {
+        "match_key": "Consequence:condition-prohibited-by-ts"
+      },
+      "type": "Consequence",
+      "start": "2022-10-11",
+      "end": "2023-02-09",
+      "duration": "121 days",
+      "tz": null,
+      "match_key": "Consequence:condition-prohibited-by-technical-specifications-ts-3-3-1-rps-instrumentation"
+    },
+    {
+      "id": "ca_tempmod",
+      "display_name": "Install temporary modification to trip all four RPS channels for RCP 'D'",
+      "properties": {
+        "match_key": "CorrectiveAction:install-temporary-modification"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:install-temporary-modification-to-trip-all-four-rps-channels-for-rcp-d"
+    },
+    {
+      "id": "ca_replace_relay",
+      "display_name": "Replace 'D' RCP underpower relay with holding-coil-disabled relay and remove temporary modification",
+      "properties": {
+        "match_key": "CorrectiveAction:replace-relay-remove-tempmod"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-d-rcp-underpower-relay-with-holding-coil-disabled-relay-and-remove-temporary-modification"
+    },
+    {
+      "id": "ca_update_docs",
+      "display_name": "Update procedure, calculation, and vendor technical manual to require disabling underpower relay holding coils",
+      "properties": {
+        "match_key": "CorrectiveAction:update-documentation"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:update-procedure-calculation-and-vendor-technical-manual-to-require-disabling-underpower-relay-holding-coils"
+    },
+    {
+      "id": "ca_pmt",
+      "display_name": "Ensure future PMT includes push-button surveillance test to verify holding coil disabled",
+      "properties": {
+        "match_key": "CorrectiveAction:future-pmt-verification"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:ensure-future-pmt-includes-push-button-surveillance-test-to-verify-holding-coil-disabled"
+    },
+    {
+      "id": "ca_stock",
+      "display_name": "Disable holding coil on existing inventory of RCP underpower relays in stock",
+      "properties": {
+        "match_key": "CorrectiveAction:disable-holding-coil-stock-relays"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:disable-holding-coil-on-existing-inventory-of-rcp-underpower-relays-in-stock"
+    },
+    {
+      "id": "mfr_g080",
+      "display_name": "Manufacturer G080",
+      "properties": {
+        "match_key": "Manufacturer:G080"
+      },
+      "type": "Manufacturer",
+      "code": "G080",
+      "match_key": "Manufacturer:G080"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts331",
+      "display_name": "ANO-1 TS 3.3.1 RPS Instrumentation",
+      "properties": {
+        "match_key": "RegulatoryReference:ano-1-ts-3-3-1"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:ano-1-ts-3-3-1-rps-instrumentation"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "ANO-1 LER 2021-002-00: Automatic Reactor Trip Due to High Reactor Coolant System Pressure",
+      "properties": {
+        "match_key": "LER:1-2021-002"
+      },
+      "type": "LER",
+      "key": "313-2021-002-00",
+      "stub": true,
+      "title": "Automatic Reactor Trip Due to High Reactor Coolant System Pressure",
+      "plant": "Arkansas Nuclear One, Unit 1",
+      "match_key": "LER:313-2021-002-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts331",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jc",
+      "evidence": null
+    },
+    {
+      "source": "c_relay",
+      "relation": "PART_OF",
+      "target": "sys_jc",
+      "evidence": null
+    },
+    {
+      "source": "c_holdingcoil",
+      "relation": "PART_OF",
+      "target": "c_relay",
+      "evidence": null
+    },
+    {
+      "source": "fm_designfail",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_designfail",
+      "relation": "LEADS_TO",
+      "target": "fm_indication_current",
+      "evidence": null
+    },
+    {
+      "source": "fm_indication_current",
+      "relation": "LEADS_TO",
+      "target": "fm_relay_no_trip",
+      "evidence": null
+    },
+    {
+      "source": "fm_relay_no_trip",
+      "relation": "LEADS_TO",
+      "target": "fm_past_inop",
+      "evidence": null
+    },
+    {
+      "source": "fm_past_inop",
+      "relation": "LEADS_TO",
+      "target": "cons_ts_condition",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_tempmod",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_relay",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_update_docs",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_pmt",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_stock",
+      "evidence": null
+    },
+    {
+      "source": "c_relay",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_g080",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    }
+  ],
+  "chain": "failure to disable internal holding coil per original design [cause X] -> indication-light circuit induces current on relay contact -> underpower relay fails to open during push-button test -> RCP 'D' underpower relay past inoperable (121 days) -> Condition Prohibited by Technical Specifications [RPS remained Past Operable via other 3 RCP channels]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Discovery via PM test failure on Feb 8, 2023; Past Operability evaluation completed April 11, 2023 (used as event_date per FORM-366). RPS itself remained Past Operable because the 3-of-4 RCP trip coastdown logic still functioned; no BACKED_UP_BY edge asserted for RPS channels since they are redundant channels of the same system, not a distinct backup system per rule 6. Previous similar event LER key recorded exactly as stated in narrative ('2021-002-00') with unit digit prefix per rule 9."
+}

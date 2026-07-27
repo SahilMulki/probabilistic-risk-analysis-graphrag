@@ -1,0 +1,417 @@
+{
+  "ler_number": "364-2024-001-00",
+  "identity": {
+    "accession_number": "ML24011A217",
+    "docket": "05000364",
+    "plant_name": "Farley",
+    "unit": 2,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2023-11-14",
+    "report_date": "2024-01-11",
+    "operating_mode": "1",
+    "power_level": 3,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": "56852",
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Manual Reactor Trip due to Rising Steam Generator Levels"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)",
+      "10 CFR 50.73(a)(2)(iv)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "B",
+      "system": "JB",
+      "component": "FCO",
+      "manufacturer": "E232",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "Ovation steam and feedwater flow signal errors resulted in automatic feedwater controls to transfer to 'high power mode' at low reactor power...during the design change, process errors were introduced which were not identified during testing...It was identified that there was a flow correction duplication in Ovation. This flow correction was already present in the Control System.",
+    "cause_code": "B",
+    "category": "Design/Manufacturing/Installation",
+    "theme": "Duplicate flow-correction logic in digital feedwater control upgrade",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 364-2023-006-00",
+      "properties": {
+        "match_key": "LER:364-2023-006-00"
+      },
+      "type": "LER",
+      "key": "364-2024-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:364-2024-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Farley Unit 2",
+      "properties": {
+        "match_key": "Unit:05000364",
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000364",
+      "match_key": "Unit:05000364"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Manufacturing/Installation (B)",
+      "properties": {
+        "match_key": "Cause:Design/Manufacturing/Installation"
+      },
+      "type": "Cause",
+      "cause_code": "B",
+      "category": "Design/Manufacturing/Installation",
+      "theme": "Duplicate flow-correction logic in digital feedwater control upgrade",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Design/Manufacturing/Installation"
+    },
+    {
+      "id": "sys_jb",
+      "display_name": "Feedwater Control System",
+      "properties": {
+        "note": "upgraded to digital-based Emerson Ovation System during 2R29",
+        "match_key": "System:JB"
+      },
+      "type": "System",
+      "eiis_code": "JB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JB"
+    },
+    {
+      "id": "sys_sb",
+      "display_name": "Steam Generator",
+      "properties": {
+        "match_key": "System:SB"
+      },
+      "type": "System",
+      "eiis_code": "SB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SB"
+    },
+    {
+      "id": "sys_afw",
+      "display_name": "Auxiliary Feedwater System",
+      "properties": {
+        "match_key": "System:BA"
+      },
+      "type": "System",
+      "eiis_code": "BA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "manually initiated to restore feedwater capability after trip",
+      "match_key": "System:BA"
+    },
+    {
+      "id": "c_ovation",
+      "display_name": "Ovation digital feedwater/steam flow control logic",
+      "properties": {
+        "match_key": "Component:FCO"
+      },
+      "type": "Component",
+      "eiis_code": "FCO",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": "E232",
+      "inferred_code": false,
+      "match_key": "Component:FCO"
+    },
+    {
+      "id": "c_mfrv",
+      "display_name": "Main Feed Regulating Valve",
+      "properties": {
+        "match_key": "Component:FCV|MFRV"
+      },
+      "type": "Component",
+      "eiis_code": "FCV",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:FCV"
+    },
+    {
+      "id": "c_mfrv_bypass",
+      "display_name": "MFRV Bypass Valve",
+      "properties": {
+        "match_key": "Component:FCV|MFRV-bypass"
+      },
+      "type": "Component",
+      "eiis_code": "FCV",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:FCV"
+    },
+    {
+      "id": "fm_design_error",
+      "display_name": "Process/design errors introduced during Ovation upgrade not identified in testing",
+      "properties": {
+        "match_key": "FailureMode:process-design-errors-ovation-upgrade"
+      },
+      "type": "FailureMode",
+      "description": "Design change introduced errors, including a duplicated flow correction already present in the Control System, that were not caught during testing.",
+      "match_key": "FailureMode:process-design-errors-introduced-during-ovation-upgrade-not-identified-in-testing"
+    },
+    {
+      "id": "fm_signal_error",
+      "display_name": "Ovation steam/feedwater flow signals reading high",
+      "properties": {
+        "match_key": "FailureMode:ovation-flow-signals-high"
+      },
+      "type": "FailureMode",
+      "description": "Steam flow and feed flow inputs to the Ovation system were higher than actual control board indications due to duplicated flow correction.",
+      "match_key": "FailureMode:ovation-steam-feedwater-flow-signals-reading-high"
+    },
+    {
+      "id": "fm_early_swap",
+      "display_name": "Premature automatic swap to high-power feedwater control mode",
+      "properties": {
+        "match_key": "FailureMode:premature-high-power-mode-swap"
+      },
+      "type": "FailureMode",
+      "description": "With erroneously high flow signals, the Ovation system's automatic swap to high-power control (normally at 20% feedwater flow) occurred at approximately 10% reactor power.",
+      "match_key": "FailureMode:premature-automatic-swap-to-high-power-feedwater-control-mode"
+    },
+    {
+      "id": "fm_sg_rise",
+      "display_name": "SG water levels rapidly rising",
+      "properties": {
+        "match_key": "FailureMode:sg-level-rapid-rise"
+      },
+      "type": "FailureMode",
+      "description": "Following the erroneous mode transfer, steam generator levels rose rapidly, exceeding manual reactor trip criteria.",
+      "match_key": "FailureMode:sg-water-levels-rapidly-rising"
+    },
+    {
+      "id": "cons_trip",
+      "display_name": "Manual reactor trip and automatic feedwater isolation",
+      "properties": {
+        "match_key": "Consequence:manual-reactor-trip-afw-isolation"
+      },
+      "type": "Consequence",
+      "start": "2023-11-14T10:41",
+      "end": null,
+      "duration": null,
+      "tz": "CST",
+      "match_key": "Consequence:manual-reactor-trip-and-automatic-feedwater-isolation"
+    },
+    {
+      "id": "ca_fix_signals",
+      "display_name": "Corrected U2 inaccurate Ovation signals causing early transfer to FRV operation",
+      "properties": {
+        "match_key": "CorrectiveAction:corrected-ovation-signals"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:corrected-u2-inaccurate-ovation-signals-causing-early-transfer-to-frv-operation"
+    },
+    {
+      "id": "ca_mod_test",
+      "display_name": "Develop Modification Acceptance Test procedure for Ovation project",
+      "properties": {
+        "match_key": "CorrectiveAction:develop-mod-acceptance-test"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:develop-modification-acceptance-test-procedure-for-ovation-project"
+    },
+    {
+      "id": "ca_teach",
+      "display_name": "Teaching and learning sessions on risk management and communications",
+      "properties": {
+        "match_key": "CorrectiveAction:teaching-learning-sessions"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:teaching-and-learning-sessions-on-risk-management-and-communications"
+    },
+    {
+      "id": "mfr_e232",
+      "display_name": "Emerson (Ovation system)",
+      "properties": {
+        "match_key": "Manufacturer:E232"
+      },
+      "type": "Manufacturer",
+      "code": "E232",
+      "match_key": "Manufacturer:E232"
+    },
+    {
+      "id": "rr_5073_iv_a",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5073_iv_b",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(B)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-b"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-b"
+    },
+    {
+      "id": "rr_ufsar",
+      "display_name": "UFSAR Chapter 15",
+      "properties": {
+        "match_key": "RegulatoryReference:ufsar-ch-15"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:ufsar-chapter-15"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_iv_a",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073_iv_b",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jb",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sb",
+      "evidence": null
+    },
+    {
+      "source": "c_ovation",
+      "relation": "PART_OF",
+      "target": "sys_jb",
+      "evidence": null
+    },
+    {
+      "source": "c_mfrv",
+      "relation": "PART_OF",
+      "target": "sys_jb",
+      "evidence": null
+    },
+    {
+      "source": "c_mfrv_bypass",
+      "relation": "PART_OF",
+      "target": "sys_jb",
+      "evidence": null
+    },
+    {
+      "source": "fm_design_error",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_design_error",
+      "relation": "LEADS_TO",
+      "target": "fm_signal_error",
+      "evidence": null
+    },
+    {
+      "source": "fm_signal_error",
+      "relation": "LEADS_TO",
+      "target": "fm_early_swap",
+      "evidence": null
+    },
+    {
+      "source": "fm_early_swap",
+      "relation": "LEADS_TO",
+      "target": "fm_sg_rise",
+      "evidence": null
+    },
+    {
+      "source": "fm_sg_rise",
+      "relation": "LEADS_TO",
+      "target": "cons_trip",
+      "evidence": null
+    },
+    {
+      "source": "cons_trip",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_afw",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_fix_signals",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_mod_test",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_teach",
+      "evidence": null
+    },
+    {
+      "source": "c_ovation",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_e232",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ufsar",
+      "evidence": null
+    }
+  ],
+  "chain": "duplicated flow-correction / undetected design errors in Ovation upgrade [cause B] -> Ovation steam/feedwater flow signals read high -> premature automatic swap to high-power feedwater control at ~10% power -> SG levels rise rapidly -> manual reactor trip & automatic feedwater isolation [backup AFW manually initiated]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Plant/unit not present in FORM-366 identity fields; taken from narrative (Farley Unit 2). Manual reactor trip and automatic feedwater isolation modeled as a single Consequence node since they occur together as the terminal event outcome. AFW modeled as BACKED_UP_BY since narrative states operators manually initiated it to restore feedwater capability after the trip. No previous similar events reported (None). Communication/team-structure issue is described as a 'contributor' but is folded into the theme rather than a separate FailureMode, since it's not a distinct physical failure in the causal chain."
+}

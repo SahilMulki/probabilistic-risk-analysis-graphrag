@@ -1,0 +1,343 @@
+{
+  "ler_number": "382-2025-004-00",
+  "identity": {
+    "accession_number": "ML25357A159",
+    "docket": "05000382",
+    "plant_name": "Waterford",
+    "unit": 3,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2025-10-26",
+    "report_date": "2025-12-23",
+    "operating_mode": null,
+    "power_level": 93,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Station Air Leak in Control Room Envelope Resulting in a Condition That Could Have Prevented Fulfillment of a Safety Function Waterford Steam Electric Station, Unit 3 NRC Docket No. 50-382 Renewed Facility Operating License No. NPF-38"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)(D)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "E",
+      "system": "VI",
+      "component": "PSP",
+      "manufacturer": "NSR",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "the direct cause of the pipe failure was due to stress corrosion cracking...The downward stresses, aging of piping, and corrosion resulted in a thru-wall crack propagating along the pipe near the support",
+    "cause_code": "E",
+    "category": "Management/QA Deficiency",
+    "theme": "aging pipe degradation / corrosion at support",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 382-2025-004-00",
+      "properties": {},
+      "type": "LER",
+      "key": "382-2025-004-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:382-2025-004-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Waterford Unit 3",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000382",
+      "match_key": "Unit:05000382"
+    },
+    {
+      "id": "cause",
+      "display_name": "Management/QA Deficiency (E)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "E",
+      "category": "Management/QA Deficiency",
+      "theme": "aging pipe degradation / corrosion at support",
+      "proximate_text": "the direct cause of the pipe failure was due to stress corrosion cracking...The downward stresses, aging of piping, and corrosion resulted in a thru-wall crack propagating along the pipe near the support",
+      "provisional": false,
+      "match_key": "Cause:Management/QA Deficiency"
+    },
+    {
+      "id": "sys_vi",
+      "display_name": "Control Room Envelope",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "VI",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected structure/boundary",
+      "match_key": "System:VI"
+    },
+    {
+      "id": "sys_sa",
+      "display_name": "Station Air",
+      "properties": {
+        "note": "acronym only in text"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:station-air"
+    },
+    {
+      "id": "sys_flt",
+      "display_name": "Control Room Emergency Air Filtration",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "FLT",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected by CRE inoperability; trains declared inoperable",
+      "match_key": "System:FLT"
+    },
+    {
+      "id": "c_pipe",
+      "display_name": "Station Air piping 7SA2-29",
+      "properties": {
+        "material": "2\" red brass",
+        "age_years": 40
+      },
+      "type": "Component",
+      "eiis_code": "PSP",
+      "identifier": "7SA2-29",
+      "model": null,
+      "manufacturer_code": "NSR",
+      "inferred_code": false,
+      "match_key": "Component:PSP|7SA2-29"
+    },
+    {
+      "id": "c_support",
+      "display_name": "Piping support (U-bolt)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "SPT",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:SPT"
+    },
+    {
+      "id": "c_isv",
+      "display_name": "Manual isolation valves SA-502 and SA-514",
+      "properties": {
+        "identifiers": [
+          "SA-502",
+          "SA-514"
+        ]
+      },
+      "type": "Component",
+      "eiis_code": "ISV",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:ISV"
+    },
+    {
+      "id": "fm_corrosion",
+      "display_name": "Internal corrosion from residual water in pipe",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Small amount of water present within the pipe contributed to corrosion of the red brass piping.",
+      "match_key": "FailureMode:internal-corrosion-from-residual-water-in-pipe"
+    },
+    {
+      "id": "fm_stress",
+      "display_name": "Downward stress at piping support",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Weight of the brass pipe length caused downward force between U-Bolt supports, concentrating stress near the support.",
+      "match_key": "FailureMode:downward-stress-at-piping-support"
+    },
+    {
+      "id": "fm_scc",
+      "display_name": "Stress corrosion cracking / thru-wall crack propagation",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Crack started on one side of the U-bolt support and propagated through-wall, eventually reaching the opposite side of the support.",
+      "match_key": "FailureMode:stress-corrosion-cracking-thru-wall-crack-propagation"
+    },
+    {
+      "id": "fm_leak",
+      "display_name": "Station Air piping leak in CRE",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Hairline crack developed into an air leak on Station Air piping in the 46 foot elevation CRE Hallway Area.",
+      "match_key": "FailureMode:station-air-piping-leak-in-cre"
+    },
+    {
+      "id": "cons_cre",
+      "display_name": "Control Room Envelope declared inoperable / condition that could have prevented fulfillment of safety function",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2025-10-26T00:40",
+      "end": "2025-10-31T00:00",
+      "duration": null,
+      "tz": "CDT",
+      "match_key": "Consequence:control-room-envelope-declared-inoperable-condition-that-could-have-prevented-fulfillment-of-safety-function"
+    },
+    {
+      "id": "ca_replace_pipe",
+      "display_name": "Replace 7SA2-29 pipe section",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-7sa2-29-pipe-section"
+    },
+    {
+      "id": "ca_replace_all",
+      "display_name": "Replace all red brass piping within CRE associated with Station Air and Instrument Air",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-all-red-brass-piping-within-cre-associated-with-station-air-and-instrument-air"
+    },
+    {
+      "id": "rr_5072",
+      "display_name": "10 CFR 50.72(b)(3)(v)(D)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-3-v-d"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "rr_ts3761",
+      "display_name": "Technical Specification 3.7.6.1",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-3-7-6-1"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts3761",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_vi",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sa",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_flt",
+      "evidence": null
+    },
+    {
+      "source": "c_pipe",
+      "relation": "PART_OF",
+      "target": "sys_sa",
+      "evidence": null
+    },
+    {
+      "source": "fm_corrosion",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_corrosion",
+      "relation": "LEADS_TO",
+      "target": "fm_scc",
+      "evidence": null
+    },
+    {
+      "source": "fm_stress",
+      "relation": "LEADS_TO",
+      "target": "fm_scc",
+      "evidence": null
+    },
+    {
+      "source": "fm_scc",
+      "relation": "LEADS_TO",
+      "target": "fm_leak",
+      "evidence": null
+    },
+    {
+      "source": "fm_leak",
+      "relation": "LEADS_TO",
+      "target": "cons_cre",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_pipe",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_all",
+      "evidence": null
+    }
+  ],
+  "chain": "aging/corrosion + support-induced stress [cause E] -> stress corrosion cracking / thru-wall crack propagation -> Station Air pipe leak in CRE -> CRE declared inoperable / condition that could have prevented fulfillment of safety function -> isolated via manual valves SA-502/SA-514, repaired 10/31",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "c_isv (manual isolation valves) is the operator mitigating action, not part of the causal failure chain, so no LEADS_TO edge from it; included only as a Component with no additional edges beyond node listing since it is not explicitly stated as PART_OF another system. Cause code E (Management/QA Deficiency) governs per Block 13 despite narrative reading like an aging/materials issue; theme captures the aging/corrosion/stress angle. No previous occurrences reported, so no SIMILAR_TO edge or stub LER created. Instrument Air mentioned only as unaffected by header pressure — treated as design/context, not modeled as a System node."
+}

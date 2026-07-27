@@ -1,0 +1,347 @@
+{
+  "ler_number": "220-2023-002-00",
+  "identity": {
+    "accession_number": "ML23363A151",
+    "docket": "05000220",
+    "plant_name": "Nine Mile Point",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2023-10-21",
+    "report_date": "2023-12-15",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "NMP1 Licensee Event Report 2023-002, Revision 0, Average Power Range Monitors Declared Inoperable Due to Trip of Reactor Recirculation Pump 12"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)",
+      "10 CFR 50.73(a)(2)(v)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The cause of the event was a coupling failure of the RRP 12 tachometer generator.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "tachometer generator coupling failure",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 220-2023-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "220-2023-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:220-2023-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Nine Mile Point Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000220",
+      "match_key": "Unit:05000220"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional Cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "tachometer generator coupling failure",
+      "proximate_text": "The cause of the event was a coupling failure of the RRP 12 tachometer generator.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_ad",
+      "display_name": "Reactor Recirculation",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "AD",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:AD"
+    },
+    {
+      "id": "sys_ig",
+      "display_name": "Average Power Range Monitor",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "IG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:IG"
+    },
+    {
+      "id": "c_rrp12",
+      "display_name": "Reactor Recirculation Pump 12",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "AD",
+      "identifier": "RRP 12",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:AD|RRP 12"
+    },
+    {
+      "id": "c_tachgen",
+      "display_name": "Tachometer Generator (RRP 12)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:tachometer-generator-rrp-12"
+    },
+    {
+      "id": "c_discharge_valve",
+      "display_name": "RRP 12 Discharge Blocking Valve",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:rrp-12-discharge-blocking-valve"
+    },
+    {
+      "id": "fm_coupling",
+      "display_name": "Loss of coupling in tachometer generator",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Coupling failure of the RRP 12 tachometer generator caused loss of speed signal.",
+      "match_key": "FailureMode:loss-of-coupling-in-tachometer-generator"
+    },
+    {
+      "id": "fm_pumptrip",
+      "display_name": "RRP 12 trips",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Reactor Recirculation Pump 12 tripped due to loss of tachometer generator coupling.",
+      "match_key": "FailureMode:rrp-12-trips"
+    },
+    {
+      "id": "fm_reverseflow",
+      "display_name": "Reverse flow condition through RRP 12",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Pump trip resulted in reverse flow through RRP 12, causing unconservative total flow input to APRM logic.",
+      "match_key": "FailureMode:reverse-flow-condition-through-rrp-12"
+    },
+    {
+      "id": "cons_aprm",
+      "display_name": "APRMs declared inoperable",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2023-10-21T20:48",
+      "end": "2023-10-21T20:58",
+      "duration": "00:10",
+      "tz": "EDT",
+      "match_key": "Consequence:aprms-declared-inoperable"
+    },
+    {
+      "id": "ca_repair",
+      "display_name": "Repair RRP 12 tachometer generator",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:repair-rrp-12-tachometer-generator"
+    },
+    {
+      "id": "ca_cap",
+      "display_name": "Corrective action program evaluation and condition monitoring improvements",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:corrective-action-program-evaluation-and-condition-monitoring-improvements"
+    },
+    {
+      "id": "rr_5073v",
+      "display_name": "10 CFR 50.73(a)(2)(v)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-a"
+    },
+    {
+      "id": "rr_5073iv",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5072",
+      "display_name": "10 CFR 50.72(b)(3)(v)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-3-v-a"
+    },
+    {
+      "id": "ler_2014_001",
+      "display_name": "NMP1 LER 2014-001",
+      "properties": {},
+      "type": "LER",
+      "key": "220-2014-001-00",
+      "stub": true,
+      "title": null,
+      "plant": "Nine Mile Point Unit 1",
+      "match_key": "LER:220-2014-001-00"
+    },
+    {
+      "id": "ler_2019_004",
+      "display_name": "NMP1 LER 2019-004",
+      "properties": {},
+      "type": "LER",
+      "key": "220-2019-004-00",
+      "stub": true,
+      "title": null,
+      "plant": "Nine Mile Point Unit 1",
+      "match_key": "LER:220-2019-004-00"
+    },
+    {
+      "id": "ler_2021_001",
+      "display_name": "NMP1 LER 2021-001",
+      "properties": {},
+      "type": "LER",
+      "key": "220-2021-001-00",
+      "stub": true,
+      "title": null,
+      "plant": "Nine Mile Point Unit 1",
+      "match_key": "LER:220-2021-001-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073v",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073iv",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ad",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ig",
+      "evidence": null
+    },
+    {
+      "source": "c_tachgen",
+      "relation": "PART_OF",
+      "target": "c_rrp12",
+      "evidence": null
+    },
+    {
+      "source": "fm_coupling",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_coupling",
+      "relation": "LEADS_TO",
+      "target": "fm_pumptrip",
+      "evidence": null
+    },
+    {
+      "source": "fm_pumptrip",
+      "relation": "LEADS_TO",
+      "target": "fm_reverseflow",
+      "evidence": null
+    },
+    {
+      "source": "fm_reverseflow",
+      "relation": "LEADS_TO",
+      "target": "cons_aprm",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_repair",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_cap",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_2014_001",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_2019_004",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_2021_001",
+      "evidence": null
+    }
+  ],
+  "chain": "tachometer generator coupling failure [cause TBD] -> RRP 12 trips -> reverse flow through RRP 12 -> unconservative APRM flow-biased trip setpoint -> APRMs declared inoperable (10 min, resolved by closing discharge blocking valve)",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code left TBD/provisional per FORM-366 fields (official code not assigned). Discharge blocking valve closure is an operator action restoring APRM operability, not a stated-operable backup system, so no BACKED_UP_BY edge modeled. Three previous similar LERs referenced as stubs; LER numbers copied exactly as stated (unit digit omitted in source text, so recorded with leading '1-' per plant-unit convention required by schema instructions)."
+}

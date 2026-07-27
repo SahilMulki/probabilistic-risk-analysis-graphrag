@@ -1,0 +1,492 @@
+{
+  "ler_number": "388-2020-001-01",
+  "identity": {
+    "accession_number": "ML20310A258",
+    "docket": "05000388",
+    "plant_name": "Susquehanna",
+    "unit": 2,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2020-02-14",
+    "report_date": "2020-11-05",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "01",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Manual Scram Due to Rising Main Condenser Backpressure Caused by Failure of an Offgas Recombiner Inlet Valve"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)",
+      "10 CFR 50.73(a)(2)(iv)(B)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [
+    {
+      "cause": "I",
+      "system": "I",
+      "component": "I",
+      "manufacturer": "I",
+      "reportable": null
+    }
+  ],
+  "cause": {
+    "proximate_text": "Contributing to this event were a degraded antenna cable connector that resulted in poor radio communication and lack of clear procedural direction to place the standby offgas recombiner in service for the condition that existed. These contributors resulted in delay in placing the standby offgas recombiner in service.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "inadvertent valve closure compounded by communications and procedural gaps",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 388-2020-006-01",
+      "properties": {
+        "match_key": "LER:388-2020-006-01"
+      },
+      "type": "LER",
+      "key": "388-2020-001-01",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:388-2020-001-01"
+    },
+    {
+      "id": "unit",
+      "display_name": "Susquehanna Unit 2",
+      "properties": {
+        "match_key": "Unit:05000388",
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000388",
+      "match_key": "Unit:05000388"
+    },
+    {
+      "id": "cause",
+      "display_name": "TBD (provisional)",
+      "properties": {
+        "match_key": "Cause:TBD"
+      },
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "inadvertent valve closure compounded by communications and procedural gaps",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_offgas",
+      "display_name": "Offgas System",
+      "properties": {
+        "match_key": "System:offgas-system"
+      },
+      "type": "System",
+      "eiis_code": "WF",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:WF"
+    },
+    {
+      "id": "sys_condair",
+      "display_name": "Condenser Air Removal System",
+      "properties": {
+        "match_key": "System:condenser-air-removal-system"
+      },
+      "type": "System",
+      "eiis_code": "SG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SG"
+    },
+    {
+      "id": "sys_vacpump",
+      "display_name": "Mechanical Vacuum Pump",
+      "properties": {
+        "match_key": "System:SHIP"
+      },
+      "type": "System",
+      "eiis_code": "SHIP",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; placed in service",
+      "match_key": "System:SHIP"
+    },
+    {
+      "id": "c_hv26912",
+      "display_name": "Offgas Recombiner Inlet Valve HV26912",
+      "properties": {
+        "valve_type": "Globe",
+        "valve_function": "Flow Control Valve",
+        "size": "10 inches",
+        "actuator_type": "Air-Operated",
+        "match_key": "Component:HV26912"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "HV26912",
+      "model": "Mark I",
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:offgas-recombiner-inlet-valve-hv26912"
+    },
+    {
+      "id": "c_sv26912",
+      "display_name": "Solenoid Valve SV26912",
+      "properties": {
+        "match_key": "Component:SV26912"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "SV26912",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:solenoid-valve-sv26912"
+    },
+    {
+      "id": "c_antenna",
+      "display_name": "Antenna cable connector (handheld radio)",
+      "properties": {
+        "match_key": "Component:antenna-cable-connector"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:antenna-cable-connector-handheld-radio"
+    },
+    {
+      "id": "fm_valveclose",
+      "display_name": "Inadvertent closure of offgas recombiner inlet valve HV26912",
+      "properties": {
+        "match_key": "FailureMode:inadvertent-closure-hv26912"
+      },
+      "type": "FailureMode",
+      "description": "Air-operated flow control valve HV26912 inadvertently closed, isolating the standby offgas recombiner inlet flow path.",
+      "match_key": "FailureMode:inadvertent-closure-of-offgas-recombiner-inlet-valve-hv26912"
+    },
+    {
+      "id": "fm_radiocomm",
+      "display_name": "Degraded antenna cable connector causing poor radio communication",
+      "properties": {
+        "match_key": "FailureMode:degraded-antenna-connector"
+      },
+      "type": "FailureMode",
+      "description": "Degraded antenna cable connector resulted in poor radio communication among operators responding to the event.",
+      "match_key": "FailureMode:degraded-antenna-cable-connector-causing-poor-radio-communication"
+    },
+    {
+      "id": "fm_procgap",
+      "display_name": "Lack of clear procedural direction to place standby recombiner in service",
+      "properties": {
+        "match_key": "FailureMode:procedural-direction-gap"
+      },
+      "type": "FailureMode",
+      "description": "Procedures lacked clear direction for placing the standby offgas recombiner in service for the degrading vacuum condition that existed.",
+      "match_key": "FailureMode:lack-of-clear-procedural-direction-to-place-standby-recombiner-in-service"
+    },
+    {
+      "id": "fm_delay",
+      "display_name": "Delay in placing standby offgas recombiner in service",
+      "properties": {
+        "match_key": "FailureMode:delay-standby-recombiner"
+      },
+      "type": "FailureMode",
+      "description": "Combination of degraded radio communication and lack of clear procedural direction delayed placing the standby recombiner in service.",
+      "match_key": "FailureMode:delay-in-placing-standby-offgas-recombiner-in-service"
+    },
+    {
+      "id": "fm_backpressure",
+      "display_name": "Rising main condenser backpressure",
+      "properties": {
+        "match_key": "FailureMode:rising-condenser-backpressure"
+      },
+      "type": "FailureMode",
+      "description": "Loss of Offgas and Condenser Air Removal Systems function led to rising main condenser backpressure.",
+      "match_key": "FailureMode:rising-main-condenser-backpressure"
+    },
+    {
+      "id": "fm_powerreduction",
+      "display_name": "Forced power reduction",
+      "properties": {
+        "match_key": "FailureMode:forced-power-reduction"
+      },
+      "type": "FailureMode",
+      "description": "Rising backpressure required a forced down power.",
+      "match_key": "FailureMode:forced-power-reduction"
+    },
+    {
+      "id": "cons_scram",
+      "display_name": "Manual reactor scram",
+      "properties": {
+        "match_key": "Consequence:manual-reactor-scram"
+      },
+      "type": "Consequence",
+      "start": "2020-02-14",
+      "end": "2020-02-14",
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:manual-reactor-scram"
+    },
+    {
+      "id": "ca_hv26912",
+      "display_name": "Stroke, disassemble, reassemble, and perform AOV diagnostics on HV26912",
+      "properties": {
+        "match_key": "CorrectiveAction:hv26912-diagnostics"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:stroke-disassemble-reassemble-and-perform-aov-diagnostics-on-hv26912"
+    },
+    {
+      "id": "ca_antenna",
+      "display_name": "Repair antenna cable connector and add signal strength checks to radio PM",
+      "properties": {
+        "match_key": "CorrectiveAction:repair-antenna-connector"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:repair-antenna-cable-connector-and-add-signal-strength-checks-to-radio-pm"
+    },
+    {
+      "id": "ca_radiotrack",
+      "display_name": "Establish tracking system for handheld radio maintenance/re-tuning",
+      "properties": {
+        "match_key": "CorrectiveAction:radio-tracking-system"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:establish-tracking-system-for-handheld-radio-maintenance-re-tuning"
+    },
+    {
+      "id": "ca_procrevise",
+      "display_name": "Revise off-normal vacuum procedures for abnormal recombiner operation",
+      "properties": {
+        "match_key": "CorrectiveAction:revise-vacuum-procedures"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-off-normal-vacuum-procedures-for-abnormal-recombiner-operation"
+    },
+    {
+      "id": "ca_sv26912",
+      "display_name": "Replace and test SV26912 during next system outage",
+      "properties": {
+        "match_key": "CorrectiveAction:replace-sv26912"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-and-test-sv26912-during-next-system-outage"
+    },
+    {
+      "id": "mfr_valtek",
+      "display_name": "Valtek, Inc.",
+      "properties": {
+        "match_key": "Manufacturer:Valtek"
+      },
+      "type": "Manufacturer",
+      "code": null,
+      "match_key": "Manufacturer:valtek-inc"
+    },
+    {
+      "id": "rr_5073a2iva",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {
+        "type": "reporting-criterion",
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5073a2ivb",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(B)",
+      "properties": {
+        "type": "reporting-criterion",
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-b"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-b"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "LER 388-2015-003-00",
+      "properties": {
+        "match_key": "LER:2-2015-003"
+      },
+      "type": "LER",
+      "key": "388-2015-003-00",
+      "stub": true,
+      "title": "Unit 2 Automatic Reactor Scram Caused by Main Turbine Trip Due to Loss of Main Condenser Vacuum",
+      "plant": "Susquehanna Steam Electric Station",
+      "match_key": "LER:388-2015-003-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073a2iva",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073a2ivb",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_offgas",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_condair",
+      "evidence": null
+    },
+    {
+      "source": "c_hv26912",
+      "relation": "PART_OF",
+      "target": "sys_offgas",
+      "evidence": null
+    },
+    {
+      "source": "c_hv26912",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_valtek",
+      "evidence": null
+    },
+    {
+      "source": "fm_valveclose",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_valveclose",
+      "relation": "LEADS_TO",
+      "target": "fm_radiocomm",
+      "evidence": null
+    },
+    {
+      "source": "fm_valveclose",
+      "relation": "LEADS_TO",
+      "target": "fm_procgap",
+      "evidence": null
+    },
+    {
+      "source": "fm_radiocomm",
+      "relation": "LEADS_TO",
+      "target": "fm_delay",
+      "evidence": null
+    },
+    {
+      "source": "fm_procgap",
+      "relation": "LEADS_TO",
+      "target": "fm_delay",
+      "evidence": null
+    },
+    {
+      "source": "fm_delay",
+      "relation": "LEADS_TO",
+      "target": "fm_backpressure",
+      "evidence": null
+    },
+    {
+      "source": "fm_backpressure",
+      "relation": "LEADS_TO",
+      "target": "fm_powerreduction",
+      "evidence": null
+    },
+    {
+      "source": "fm_powerreduction",
+      "relation": "LEADS_TO",
+      "target": "cons_scram",
+      "evidence": null
+    },
+    {
+      "source": "cons_scram",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_vacpump",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_hv26912",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_antenna",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_radiotrack",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procrevise",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_sv26912",
+      "evidence": null
+    },
+    {
+      "source": "c_sv26912",
+      "relation": "PART_OF",
+      "target": "sys_offgas",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    }
+  ],
+  "chain": "inadvertent closure of offgas recombiner inlet valve HV26912 [cause TBD] -> degraded antenna cable connector (poor radio comms) + lack of clear procedural direction -> delay placing standby recombiner in service -> rising main condenser backpressure -> forced power reduction -> manual reactor scram [backup: Mechanical Vacuum Pump placed in service]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code and category are TBD/provisional per FORM-366 fields (block 13 lists 'I' = inadequate/not coded), so cause node marked provisional per rule 4. Mechanical Vacuum Pump (SHIP) is modeled as a backup because narrative states 'until the Mechanical Vacuum Pump was placed in service' during the event's potential-consequence discussion, indicating it was available/used; MSIVs remaining open and main condenser remaining available as heat sink are noted narratively but not modeled as discrete backup Systems since they are inherent plant conditions, not distinct backup systems. Common Offgas Recombiner mentioned as available but is essentially the standby unit within sys_offgas, not modeled as separate System per rule 6 to avoid duplication with sys_offgas. Previous occurrence LER key preserved exactly as stated: '50-388/2015-003' truncated per instructions to unit-prefixed form '2-2015-003' consistent with example pattern (unit digit + report year-sequence)."
+}

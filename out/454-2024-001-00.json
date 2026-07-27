@@ -1,0 +1,337 @@
+{
+  "ler_number": "454-2024-001-00",
+  "identity": {
+    "accession_number": "ML24249A074",
+    "docket": "05000454",
+    "plant_name": "Byron",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2024-07-07",
+    "report_date": "2024-09-05",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": "57211",
+    "ens_date": "2024-07-07",
+    "ens_time": "1634 CDT",
+    "title": "Licensee Event Report (LER) No. 454-2024-001 \"Both Trains of Control Room Ventilation Temperature Control System Inoperable"
+  },
+  "reporting_basis": {
+    "reported_under": [],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "the root cause of this event was determined to be an inadequate brief performed by the Operations SRO with the Reactor Operator and Equipment Operators. During the brief, the SRO supervisor did not clearly establish that each operator understood their role in the crosstie activity or utilize station prints to clearly establish the intended plant manipulations. As a result, the equipment operators manipulated incorrect valves while establishing the crosstie",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "inadequate pre-job brief leading to incorrect valve manipulation",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 454-2024-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "454-2024-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:454-2024-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Byron Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000454",
+      "match_key": "Unit:05000454"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "inadequate pre-job brief leading to incorrect valve manipulation",
+      "proximate_text": "the root cause of this event was determined to be an inadequate brief performed by the Operations SRO with the Reactor Operator and Equipment Operators. During the brief, the SRO supervisor did not clearly establish that each operator understood their role in the crosstie activity or utilize station prints to clearly establish the intended plant manipulations.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_vc",
+      "display_name": "Control Room Ventilation Temperature Control System",
+      "properties": {
+        "note": "two independent, redundant trains (0A and 0B) providing control room air cooling/heating"
+      },
+      "type": "System",
+      "eiis_code": "VC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:VC"
+    },
+    {
+      "id": "sys_vs",
+      "display_name": "Service Building Chilled Water System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "VS",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "crosstie source for VC chilled water",
+      "match_key": "System:VS"
+    },
+    {
+      "id": "c_chiller_0a",
+      "display_name": "0A VC Chiller",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "0A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:0a-vc-chiller"
+    },
+    {
+      "id": "c_chiller_0b",
+      "display_name": "0B VC Chiller Train Valves",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "0B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:0b-vc-chiller-train-valves"
+    },
+    {
+      "id": "fm_oilloss",
+      "display_name": "0A VC chiller oil level progressively dropped to zero",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Chiller oil level dropped from 37% to 0% in the sight glass, prompting chiller to be secured and declared inoperable.",
+      "match_key": "FailureMode:0a-vc-chiller-oil-level-progressively-dropped-to-zero"
+    },
+    {
+      "id": "fm_brief",
+      "display_name": "Inadequate pre-job brief for VS-to-VC crosstie",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "SRO did not clearly establish operator roles or use station prints to establish intended plant manipulations during the crosstie brief.",
+      "match_key": "FailureMode:inadequate-pre-job-brief-for-vs-to-vc-crosstie"
+    },
+    {
+      "id": "fm_wrongvalves",
+      "display_name": "Equipment operators manipulated incorrect valves on 0B VC chiller train",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "While attempting to crosstie the 0A VC train to the VS chilled water system, operators incorrectly operated valves on the 0B VC chiller train.",
+      "match_key": "FailureMode:equipment-operators-manipulated-incorrect-valves-on-0b-vc-chiller-train"
+    },
+    {
+      "id": "fm_0b_inop",
+      "display_name": "0B VC chiller train rendered inoperable",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Incorrect valve manipulation caused the 0B VC chiller train to become inoperable.",
+      "match_key": "FailureMode:0b-vc-chiller-train-rendered-inoperable"
+    },
+    {
+      "id": "cons_bothinop",
+      "display_name": "Both trains of Control Room Ventilation Temperature Control System inoperable; loss of safety function; TS 3.7.11 Condition D entered",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2024-07-07T14:40:00",
+      "end": "2024-07-07T16:34:00",
+      "duration": "approximately 2 hours",
+      "tz": "CDT",
+      "match_key": "Consequence:both-trains-of-control-room-ventilation-temperature-control-system-inoperable-loss-of-safety-function-ts-3-7-11-condition-d-entered"
+    },
+    {
+      "id": "ca_return_0b",
+      "display_name": "Return 0B VC chiller train to operable by restoring valve lineup",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:return-0b-vc-chiller-train-to-operable-by-restoring-valve-lineup"
+    },
+    {
+      "id": "ca_remove_watch",
+      "display_name": "Remove and remediate directly involved individuals from watch-standing",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:remove-and-remediate-directly-involved-individuals-from-watch-standing"
+    },
+    {
+      "id": "ca_brief_review",
+      "display_name": "Review and reinforce requirements for conducting effective pre-job briefs",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:review-and-reinforce-requirements-for-conducting-effective-pre-job-briefs"
+    },
+    {
+      "id": "ca_comms",
+      "display_name": "Weekly leadership communications on standards, human performance tools, and learnings",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:weekly-leadership-communications-on-standards-human-performance-tools-and-learnings"
+    },
+    {
+      "id": "ca_procedure",
+      "display_name": "Revise VS to VC crosstie procedures with human-engineered steps and detailed drawings",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-vs-to-vc-crosstie-procedures-with-human-engineered-steps-and-detailed-drawings"
+    },
+    {
+      "id": "ca_training",
+      "display_name": "Revise VS to VC crosstie training to include flow paths, heat-up rates, and TS conditions",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-vs-to-vc-crosstie-training-to-include-flow-paths-heat-up-rates-and-ts-conditions"
+    },
+    {
+      "id": "prev_ler",
+      "display_name": "LER 454-2023-011-01",
+      "properties": {},
+      "type": "LER",
+      "key": "454-2023-011-01",
+      "stub": true,
+      "title": "0A Control Room Ventilation (VC) failed to actuate during 1A DG sequencer testing due to installed jumpers on Main Control Room Outside Air Intake A Monitors",
+      "plant": "Byron Station Unit 1",
+      "match_key": "LER:454-2023-011-01"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_vc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_vs",
+      "evidence": null
+    },
+    {
+      "source": "c_chiller_0a",
+      "relation": "PART_OF",
+      "target": "sys_vc",
+      "evidence": null
+    },
+    {
+      "source": "c_chiller_0b",
+      "relation": "PART_OF",
+      "target": "sys_vc",
+      "evidence": null
+    },
+    {
+      "source": "fm_oilloss",
+      "relation": "LEADS_TO",
+      "target": "fm_brief",
+      "evidence": null
+    },
+    {
+      "source": "fm_brief",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_brief",
+      "relation": "LEADS_TO",
+      "target": "fm_wrongvalves",
+      "evidence": null
+    },
+    {
+      "source": "fm_wrongvalves",
+      "relation": "LEADS_TO",
+      "target": "fm_0b_inop",
+      "evidence": null
+    },
+    {
+      "source": "fm_0b_inop",
+      "relation": "LEADS_TO",
+      "target": "cons_bothinop",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_return_0b",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_remove_watch",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_brief_review",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_comms",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procedure",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_training",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "prev_ler",
+      "evidence": null
+    }
+  ],
+  "chain": "0A VC chiller oil level loss (prompting crosstie attempt) -> inadequate pre-job brief [cause TBD] -> equipment operators manipulate incorrect valves on 0B VC chiller train -> 0B VC train rendered inoperable -> both trains of VC Temperature Control System inoperable / loss of safety function (TS 3.7.11 Condition D, ~2 hours)",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code and category were reported as TBD in FORM-366 fields, so cause node is marked provisional per rule 4, despite the narrative clearly articulating a personnel/human-performance root cause (inadequate brief) with contributing causes of inadequate procedures and training. The original trigger (0A chiller oil loss) is modeled as a FailureMode leading into the brief failure mode since it precipitated the crosstie evolution, but the CAUSED_BY edge is placed on the brief failure mode as the origin of the causal chain tied to the official cause. No manufacturer or Block 13 data was provided in FORM-366 fields (empty array), so no Manufacturer nodes or Block13Row entries are populated. No specific reporting citation for the 8-hour ENS beyond 10 CFR 50.72(b)(3)(v)(D) was given as a formal 'reported_under' 50.73 citation in the FORM-366 fields, but the narrative explicitly references 10 CFR 50.72(b)(3)(v)(D), so that was added to reporting_basis."
+}

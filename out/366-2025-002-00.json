@@ -1,0 +1,407 @@
+{
+  "ler_number": "366-2025-002-00",
+  "identity": {
+    "accession_number": "ML25143A260",
+    "docket": "05000366",
+    "plant_name": "Hatch",
+    "unit": 2,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2025-03-26",
+    "report_date": "2025-05-23",
+    "operating_mode": null,
+    "power_level": 22,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "2A Emergency Diesel Generator Inoperable Due to Inadvertent Overspeed Trip"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)",
+      "10 CFR 50.73(a)(2)(v)(D)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "B",
+      "system": "EK",
+      "component": "12",
+      "manufacturer": "H260",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "a loose retaining nut on the EOS impacted switch operation and caused the EOS to falsely signal an overspeed condition during the 2/13/2025 test. The EOS installed near the actuation point also contributed to the inadvertent trip",
+    "cause_code": "B",
+    "category": "Design/Manufacturing/Installation",
+    "theme": "EOS installation/design margin near actuation point",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 366-2025-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "366-2025-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:366-2025-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Hatch Unit 2",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000366",
+      "match_key": "Unit:05000366"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Manufacturing/Installation (B)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "B",
+      "category": "Design/Manufacturing/Installation",
+      "theme": "EOS installation/design margin near actuation point",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Design/Manufacturing/Installation"
+    },
+    {
+      "id": "sys_dg_2a",
+      "display_name": "2A Emergency Diesel Generator",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "DG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected EDG",
+      "match_key": "System:DG"
+    },
+    {
+      "id": "sys_dg_1b",
+      "display_name": "1B Emergency Diesel Generator (swing)",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "DG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "overlapping inoperable EDG",
+      "match_key": "System:DG"
+    },
+    {
+      "id": "sys_dg_2c",
+      "display_name": "2C Emergency Diesel Generator",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "DG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; operable",
+      "match_key": "System:DG"
+    },
+    {
+      "id": "c_eos",
+      "display_name": "Emergency Overspeed Switch (EOS)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "2R43S001A",
+      "model": "BZE6-RQ",
+      "manufacturer_code": "H260",
+      "inferred_code": false,
+      "match_key": "Component:emergency-overspeed-switch-eos"
+    },
+    {
+      "id": "c_nut",
+      "display_name": "EOS retaining nut",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:eos-retaining-nut"
+    },
+    {
+      "id": "fm_loose_nut",
+      "display_name": "Loose retaining nut on EOS impacted switch operation",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "A loose retaining nut on the EOS impacted switch operation.",
+      "match_key": "FailureMode:loose-retaining-nut-on-eos-impacted-switch-operation"
+    },
+    {
+      "id": "fm_false_signal",
+      "display_name": "EOS falsely signaled overspeed condition",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "EOS installed near the actuation point contributed to falsely signaling an overspeed condition.",
+      "match_key": "FailureMode:eos-falsely-signaled-overspeed-condition"
+    },
+    {
+      "id": "fm_2a_trip",
+      "display_name": "2A EDG unexpected overspeed trip",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "2A EDG unexpectedly tripped during test on 2/13/2025 due to false overspeed signal.",
+      "match_key": "FailureMode:2a-edg-unexpected-overspeed-trip"
+    },
+    {
+      "id": "fm_2a_inoperable",
+      "display_name": "2A EDG inoperable beyond TS allowed time",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "2A EDG inoperable from 6/6/2024 EOS install date until successful surveillance on 2/15/2025, exceeding TS 3.8.1.B completion time.",
+      "match_key": "FailureMode:2a-edg-inoperable-beyond-ts-allowed-time"
+    },
+    {
+      "id": "fm_1b_tagout",
+      "display_name": "1B EDG tagged out for planned maintenance",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "1B EDG tagged out for 18 hours 49 minutes on 6/21/2024 for standby plant service water pump maintenance, overlapping with 2A EDG inoperability.",
+      "match_key": "FailureMode:1b-edg-tagged-out-for-planned-maintenance"
+    },
+    {
+      "id": "fm_dual_inop",
+      "display_name": "Two EDGs inoperable simultaneously on Unit 2",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Overlapping inoperability of 2A EDG and 1B EDG exceeded TS 3.8.1.F completion time.",
+      "match_key": "FailureMode:two-edgs-inoperable-simultaneously-on-unit-2"
+    },
+    {
+      "id": "cons_ts_violation",
+      "display_name": "TS 3.8.1.B, F, and H completion times not met; condition prohibited by TS and potential loss of safety function",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2024-06-06",
+      "end": "2025-02-15",
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:ts-3-8-1-b-f-and-h-completion-times-not-met-condition-prohibited-by-ts-and-potential-loss-of-safety-function"
+    },
+    {
+      "id": "ca_replace_eos",
+      "display_name": "Replace the EOS on 2A EDG",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-the-eos-on-2a-edg"
+    },
+    {
+      "id": "ca_extent",
+      "display_name": "Extent-of-condition review of remaining EDGs",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:extent-of-condition-review-of-remaining-edgs"
+    },
+    {
+      "id": "ca_tighten_nuts",
+      "display_name": "Correct two additional loose retaining nuts found on other EDGs",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:correct-two-additional-loose-retaining-nuts-found-on-other-edgs"
+    },
+    {
+      "id": "ca_revise_proc",
+      "display_name": "Revise procedures to capture EOS installation guidance",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-procedures-to-capture-eos-installation-guidance"
+    },
+    {
+      "id": "mfr_honeywell",
+      "display_name": "Honeywell",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "H260",
+      "match_key": "Manufacturer:H260"
+    },
+    {
+      "id": "rr_5073ib",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_5073vd",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "rr_ts3818",
+      "display_name": "TS 3.8.1.B, F, H",
+      "properties": {
+        "type": "license-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:ts-3-8-1-b-f-h"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073ib",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073vd",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts3818",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_dg_2a",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_dg_1b",
+      "evidence": null
+    },
+    {
+      "source": "c_eos",
+      "relation": "PART_OF",
+      "target": "sys_dg_2a",
+      "evidence": null
+    },
+    {
+      "source": "c_nut",
+      "relation": "PART_OF",
+      "target": "c_eos",
+      "evidence": null
+    },
+    {
+      "source": "fm_loose_nut",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_loose_nut",
+      "relation": "LEADS_TO",
+      "target": "fm_false_signal",
+      "evidence": null
+    },
+    {
+      "source": "fm_false_signal",
+      "relation": "LEADS_TO",
+      "target": "fm_2a_trip",
+      "evidence": null
+    },
+    {
+      "source": "fm_2a_trip",
+      "relation": "LEADS_TO",
+      "target": "fm_2a_inoperable",
+      "evidence": null
+    },
+    {
+      "source": "fm_2a_inoperable",
+      "relation": "LEADS_TO",
+      "target": "fm_dual_inop",
+      "evidence": null
+    },
+    {
+      "source": "fm_1b_tagout",
+      "relation": "LEADS_TO",
+      "target": "fm_dual_inop",
+      "evidence": null
+    },
+    {
+      "source": "fm_dual_inop",
+      "relation": "LEADS_TO",
+      "target": "cons_ts_violation",
+      "evidence": null
+    },
+    {
+      "source": "cons_ts_violation",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_dg_2c",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_eos",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_extent",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_tighten_nuts",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_revise_proc",
+      "evidence": null
+    },
+    {
+      "source": "c_eos",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_honeywell",
+      "evidence": null
+    }
+  ],
+  "chain": "loose EOS retaining nut [cause B, design/installation] -> EOS falsely signals overspeed -> 2A EDG inadvertent trip -> 2A EDG inoperable beyond TS 3.8.1.B time -> overlapping 1B EDG tagout -> two EDGs inoperable on Unit 2 beyond TS 3.8.1.F time -> TS completion times not met / potential loss of safety function [backup 2C EDG operable]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Discovery of the true inoperability duration came from failure analysis received 3/26/2025, well after the initial 2/13/2025 trip; event date taken as the discovery/determination date per form block 5. No previous similar events reported. Block-13 component code '12' likely maps to a limit-switch type EIIS component subcode for the EOS; not independently verifiable from narrative, retained verbatim from form."
+}

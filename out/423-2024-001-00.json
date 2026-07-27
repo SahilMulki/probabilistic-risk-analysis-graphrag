@@ -1,0 +1,371 @@
+{
+  "ler_number": "423-2024-001-00",
+  "identity": {
+    "accession_number": "ML24288A015",
+    "docket": "05000423",
+    "plant_name": "Millstone",
+    "unit": 3,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2024-08-21",
+    "report_date": "2024-10-14",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "operability test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Loss of Safety Function And Condition Prohibited By Technical Specifications For Loss Of Secondary Containment Boundary"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(v)(C)",
+      "10 CFR 50.73(a)(2)(v)(D)",
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The root cause was the lack of identifying information in the work management database for 3HVR-FN8A to identify a potential to impact SLCRS.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Inadequate configuration/work-management documentation",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 423-2024-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "423-2024-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:423-2024-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Millstone Unit 3",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000423",
+      "match_key": "Unit:05000423"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Inadequate configuration/work-management documentation",
+      "proximate_text": "The root cause was the lack of identifying information in the work management database for 3HVR-FN8A to identify a potential to impact SLCRS.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_slcrs",
+      "display_name": "Supplementary Leak Collection and Release System (SLCRS)",
+      "properties": {
+        "note": "also VG, VH listed; secondary containment negative-pressure/filtration system"
+      },
+      "type": "System",
+      "eiis_code": "VF",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "system whose boundary was breached",
+      "match_key": "System:VF"
+    },
+    {
+      "id": "sys_secondary_containment",
+      "display_name": "Secondary Containment",
+      "properties": {
+        "note": "comprised of containment enclosure bldg, MSVB, ESF bldg, hydrogen recombiner bldg, aux bldg"
+      },
+      "type": "System",
+      "eiis_code": null,
+      "non_eiis": true,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:secondary-containment"
+    },
+    {
+      "id": "sys_abvs",
+      "display_name": "Auxiliary Building Filtration System (ABVS)",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "NF",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; operable during event",
+      "match_key": "System:NF"
+    },
+    {
+      "id": "c_fan",
+      "display_name": "Waste Disposal Building Exhaust Fan 3HVR-FN8A",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "FAN",
+      "identifier": "3HVR-FN8A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:FAN|3HVR-FN8A"
+    },
+    {
+      "id": "fm_removed",
+      "display_name": "Exhaust fan 3HVR-FN8A physically removed for maintenance without SLCRS-impact identification",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Fan removed on August 2, 2024 for scheduled maintenance; work management database lacked information identifying its potential impact on SLCRS boundary",
+      "match_key": "FailureMode:exhaust-fan-3hvr-fn8a-physically-removed-for-maintenance-without-slcrs-impact-identification"
+    },
+    {
+      "id": "fm_breach",
+      "display_name": "Secondary containment boundary breached",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Removal of fan created an open pathway/ductwork path from the auxiliary building to the outside environment via FME-covered ductwork",
+      "match_key": "FailureMode:secondary-containment-boundary-breached"
+    },
+    {
+      "id": "cons_scinop",
+      "display_name": "Secondary containment inoperable / loss of safety function beyond TS allowed outage time",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2024-08-02",
+      "end": "2024-08-21T21:36",
+      "duration": ">24 hours (exceeded TS 3.6.6.2 AOT)",
+      "tz": null,
+      "match_key": "Consequence:secondary-containment-inoperable-loss-of-safety-function-beyond-ts-allowed-outage-time"
+    },
+    {
+      "id": "ca_reinstall",
+      "display_name": "Reinstall exhaust fan 3HVR-FN8A and restore secondary containment boundary",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:reinstall-exhaust-fan-3hvr-fn8a-and-restore-secondary-containment-boundary"
+    },
+    {
+      "id": "ca_update_desc",
+      "display_name": "Update component description in work management system to flag SLCRS impact",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:update-component-description-in-work-management-system-to-flag-slcrs-impact"
+    },
+    {
+      "id": "ca_indicator",
+      "display_name": "Add indicator in work management system for components impacting secondary containment boundary",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:add-indicator-in-work-management-system-for-components-impacting-secondary-containment-boundary"
+    },
+    {
+      "id": "ca_cap",
+      "display_name": "Additional corrective actions per station corrective action program",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:additional-corrective-actions-per-station-corrective-action-program"
+    },
+    {
+      "id": "rr_5073v_c",
+      "display_name": "10 CFR 50.73(a)(2)(v)(C)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-c"
+    },
+    {
+      "id": "rr_5073v_d",
+      "display_name": "10 CFR 50.73(a)(2)(v)(D)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-d"
+    },
+    {
+      "id": "rr_5073i_b",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_5067",
+      "display_name": "10 CFR 50.67",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:10-cfr-50-67"
+    },
+    {
+      "id": "rr_fsar",
+      "display_name": "FSAR Table 15.0-8",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:fsar-table-15-0-8"
+    },
+    {
+      "id": "ler_prev_2020",
+      "display_name": "LER 423-2020-005-00",
+      "properties": {},
+      "type": "LER",
+      "key": "423-2020-005-00",
+      "stub": true,
+      "title": "SLCRS Door in secondary containment blocked open rendering secondary containment inoperable",
+      "plant": "Millstone Power Station Unit 3",
+      "match_key": "LER:423-2020-005-00"
+    },
+    {
+      "id": "ler_prev_2017",
+      "display_name": "LER 423-2017-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "423-2017-001-00",
+      "stub": true,
+      "title": "Mechanical failure of SLCRS door latch mechanism preventing automatic door closure, rendering secondary containment boundary inoperable",
+      "plant": "Millstone Power Station Unit 3",
+      "match_key": "LER:423-2017-001-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073v_c",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073v_d",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073i_b",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_slcrs",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_secondary_containment",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_fan",
+      "evidence": null
+    },
+    {
+      "source": "fm_removed",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_removed",
+      "relation": "LEADS_TO",
+      "target": "fm_breach",
+      "evidence": null
+    },
+    {
+      "source": "fm_breach",
+      "relation": "LEADS_TO",
+      "target": "cons_scinop",
+      "evidence": null
+    },
+    {
+      "source": "cons_scinop",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_abvs",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_reinstall",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_update_desc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_indicator",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_cap",
+      "evidence": null
+    },
+    {
+      "source": "cons_scinop",
+      "relation": "MITIGATED_BY",
+      "target": "rr_5067",
+      "evidence": null
+    },
+    {
+      "source": "cons_scinop",
+      "relation": "MITIGATED_BY",
+      "target": "rr_fsar",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev_2020",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev_2017",
+      "evidence": null
+    }
+  ],
+  "chain": "lack of SLCRS-impact identification in work management database [cause TBD] -> 3HVR-FN8A removed for maintenance without recognizing impact -> secondary containment boundary breached via ductwork pathway -> secondary containment inoperable >24h AOT / loss of safety function [backup: ABVS operable]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code is officially TBD/provisional in FORM-366 fields; narrative describes a root cause (documentation/work-management gap) but no letter code was assigned, so cause node marked provisional per rule 4. 3HVR-FN8A is explicitly stated as 'not a component in SLCRS' but able to impact its boundary, so it is modeled as a Component involved in the event without a PART_OF edge to SLCRS. Both previous-occurrence LERs cited with unit-prefixed keys exactly as stated in narrative (2020-005-00 and 2017-001-00, prefixed with unit digit 3). ABVS (auxiliary building filtration) explicitly stated operable during the event, supporting BACKED_UP_BY edge; SLCRS itself could not achieve negative pressure so it is not modeled as a backup. Regulatory basis docs (50.67, FSAR) used as analysis-basis references supporting the low-safety-significance conclusion, linked via MITIGATED_BY to the consequence rather than the LER since they qualify the consequence severity assessment."
+}

@@ -1,0 +1,360 @@
+{
+  "ler_number": "327-2021-001-00",
+  "identity": {
+    "accession_number": "ML21202A441",
+    "docket": "05000327",
+    "plant_name": "Sequoyah",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2021-05-24",
+    "report_date": "2021-07-21",
+    "operating_mode": null,
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "LicenseeEventReport50-327/2021-001-00, Reactor TriponHighNeutron FluxRateDuetoDroppedControlRods"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)",
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The direct cause of the failure has been attributed to the card connection between Control Bank B Group 2 stationary gripper phase control card and the backplane of its card cage.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "bad pin connection / degraded backplane card connection",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 327-2021-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "327-2021-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:327-2021-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Sequoyah Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000327",
+      "match_key": "Unit:05000327"
+    },
+    {
+      "id": "cause",
+      "display_name": "Provisional cause (TBD)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "bad pin connection / degraded backplane card connection",
+      "proximate_text": "The direct cause of the failure has been attributed to the card connection between Control Bank B Group 2 stationary gripper phase control card and the backplane of its card cage.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_aa",
+      "display_name": "Rod Control System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "AA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:AA"
+    },
+    {
+      "id": "sys_jc",
+      "display_name": "Reactor Protection System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "JC",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JC"
+    },
+    {
+      "id": "sys_ba",
+      "display_name": "Auxiliary Feedwater System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BA",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:BA"
+    },
+    {
+      "id": "c_card",
+      "display_name": "Control Bank B Group 2 Stationary Gripper Phase Control Card",
+      "properties": {
+        "model": "6050A11G01"
+      },
+      "type": "Component",
+      "eiis_code": "ECBD",
+      "identifier": null,
+      "model": "6050A11G01",
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:ECBD"
+    },
+    {
+      "id": "c_pins",
+      "display_name": "Backplane Connector Pins (AMP)",
+      "properties": {
+        "part_number": "67168-2"
+      },
+      "type": "Component",
+      "eiis_code": "CON",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:CON"
+    },
+    {
+      "id": "fm_pin",
+      "display_name": "Bad pin connections on phase control card backplane",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Poor pin connection between Control Bank B, Group 2 stationary gripper phase control card and the backplane of its card cage",
+      "match_key": "FailureMode:bad-pin-connections-on-phase-control-card-backplane"
+    },
+    {
+      "id": "fm_alarm",
+      "display_name": "Rod Control Urgent Failure / spurious rod drop",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Control Bank B, Group 2 rods began to lower following the bad pin connection, triggering a Rod Control Urgent Failure alarm",
+      "match_key": "FailureMode:rod-control-urgent-failure-spurious-rod-drop"
+    },
+    {
+      "id": "fm_fluxrate",
+      "display_name": "Power Range High Neutron Flux Rate trip signal",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Dropped rods caused a high neutron flux rate condition detected by the Power Range Nuclear Instruments, generating a reactor trip signal",
+      "match_key": "FailureMode:power-range-high-neutron-flux-rate-trip-signal"
+    },
+    {
+      "id": "cons_trip",
+      "display_name": "Automatic reactor trip and AFW/RPS actuation",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2021-05-24T09:15:27",
+      "end": "2021-05-24T09:15:28",
+      "duration": null,
+      "tz": "EDT",
+      "match_key": "Consequence:automatic-reactor-trip-and-afw-rps-actuation"
+    },
+    {
+      "id": "ca_replace",
+      "display_name": "Replace and test phase control card; reform pins in all five rod control power cabinets and logic cabinet",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-and-test-phase-control-card-reform-pins-in-all-five-rod-control-power-cabinets-and-logic-cabinet"
+    },
+    {
+      "id": "ca_procedure",
+      "display_name": "Revise PI-674 periodic calibration procedure for rod control power calibration to reduce pin deformation",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-pi-674-periodic-calibration-procedure-for-rod-control-power-calibration-to-reduce-pin-deformation"
+    },
+    {
+      "id": "mfr_westinghouse",
+      "display_name": "Westinghouse",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": null,
+      "match_key": "Manufacturer:westinghouse"
+    },
+    {
+      "id": "mfr_amp",
+      "display_name": "AMP",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": null,
+      "match_key": "Manufacturer:amp"
+    },
+    {
+      "id": "rr_5073iv",
+      "display_name": "10 CFR 50.73(a)(2)(iv)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv"
+    },
+    {
+      "id": "rr_5073ivA",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_ufsar15",
+      "display_name": "UFSAR Chapter 15 - Rod Cluster Control Assembly Misalignment",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:ufsar-chapter-15-rod-cluster-control-assembly-misalignment"
+    },
+    {
+      "id": "ler_prev1",
+      "display_name": "LER 327-2015-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "327-2015-001-00",
+      "stub": true,
+      "title": "Automatic reactor trip due to control rod H-8 dropping into core",
+      "plant": "Sequoyah Nuclear Plant",
+      "match_key": "LER:327-2015-001-00"
+    },
+    {
+      "id": "ler_prev2",
+      "display_name": "LER 327-2019-003-00",
+      "properties": {},
+      "type": "LER",
+      "key": "327-2019-003-00",
+      "stub": true,
+      "title": "Automatic reactor trip due to control rod H-8 dropping into core",
+      "plant": "Sequoyah Nuclear Plant",
+      "match_key": "LER:327-2019-003-00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073iv",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073ivA",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_aa",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_jc",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ba",
+      "evidence": null
+    },
+    {
+      "source": "c_card",
+      "relation": "PART_OF",
+      "target": "sys_aa",
+      "evidence": null
+    },
+    {
+      "source": "fm_pin",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_pin",
+      "relation": "LEADS_TO",
+      "target": "fm_alarm",
+      "evidence": null
+    },
+    {
+      "source": "fm_alarm",
+      "relation": "LEADS_TO",
+      "target": "fm_fluxrate",
+      "evidence": null
+    },
+    {
+      "source": "fm_fluxrate",
+      "relation": "LEADS_TO",
+      "target": "cons_trip",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procedure",
+      "evidence": null
+    },
+    {
+      "source": "c_card",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_westinghouse",
+      "evidence": null
+    },
+    {
+      "source": "c_pins",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_amp",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev1",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev2",
+      "evidence": null
+    }
+  ],
+  "chain": "bad pin connection on phase control card backplane [cause TBD] -> Control Bank B Group 2 rods drop (Rod Control Urgent Failure) -> Power Range High Neutron Flux Rate trip signal -> automatic reactor trip / AFW & RPS actuation",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Official cause code was not provided in FORM-366 FIELDS (TBD/provisional), so cause node is marked provisional per rule 4. No inoperable structures/components/systems contributed to the event per narrative section II.B, and no backup systems were cited as operable during the event window, so no BACKED_UP_BY edges were created. Two previous similar events (1-2015-001 and 1-2019-003) both involve control rod H-8 dropping, modeled as stub LERs with SIMILAR_TO edges, keys copied exactly as stated in narrative. AFW and RPS actuation are cited together as the reportability basis; both systems are modeled as INVOLVES since they responded/actuated automatically, per narrative section II.A and I."
+}

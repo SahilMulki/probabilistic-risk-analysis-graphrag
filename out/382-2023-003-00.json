@@ -1,0 +1,197 @@
+{
+  "ler_number": "382-2023-003-00",
+  "identity": {
+    "accession_number": "ML23364A001",
+    "docket": "05000382",
+    "plant_name": "Waterford",
+    "unit": 3,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2023-11-05",
+    "report_date": "2023-12-30",
+    "operating_mode": null,
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "-00 -00, Steam Generator Tube Degradation Indicated by Failed In-Situ Pressure Testing Waterford Steam Electric Station, Unit 3 NRC Docket No. 50-382 Renewed Facility Operating License No. NPF-38"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(ii)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": null,
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "Steam generator tube degradation identified during in-situ pressure testing",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 382-2023-003-00",
+      "properties": {
+        "match_key": "LER:382-2023-003-00"
+      },
+      "type": "LER",
+      "key": "382-2023-003-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:382-2023-003-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Waterford Unit 3",
+      "properties": {
+        "match_key": "Unit:05000382",
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000382",
+      "match_key": "Unit:05000382"
+    },
+    {
+      "id": "cause",
+      "display_name": "Undetermined (TBD)",
+      "properties": {
+        "match_key": "Cause:provisional"
+      },
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "Steam generator tube degradation identified during in-situ pressure testing",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_sg",
+      "display_name": "Steam Generator",
+      "properties": {
+        "note": "primary-to-secondary heat transfer boundary",
+        "match_key": "System:steam-generator"
+      },
+      "type": "System",
+      "eiis_code": "JB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:JB"
+    },
+    {
+      "id": "c_tube",
+      "display_name": "Steam generator tube",
+      "properties": {
+        "match_key": "Component:steam-generator-tube"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:steam-generator-tube"
+    },
+    {
+      "id": "fm_degrade",
+      "display_name": "Steam generator tube degradation",
+      "properties": {
+        "match_key": "FailureMode:steam-generator-tube-degradation"
+      },
+      "type": "FailureMode",
+      "description": "Tube wall degradation detected via in-situ pressure testing",
+      "match_key": "FailureMode:steam-generator-tube-degradation"
+    },
+    {
+      "id": "fm_failtest",
+      "display_name": "Tube failed in-situ pressure test",
+      "properties": {
+        "match_key": "FailureMode:tube-failed-in-situ-pressure-test"
+      },
+      "type": "FailureMode",
+      "description": "Tube did not withstand in-situ pressure test, indicating structural degradation beyond acceptance criteria",
+      "match_key": "FailureMode:tube-failed-in-situ-pressure-test"
+    },
+    {
+      "id": "cons_condition",
+      "display_name": "Condition prohibited by Technical Specifications / reportable degradation",
+      "properties": {
+        "match_key": "Consequence:condition-prohibited-by-technical-specifications"
+      },
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:condition-prohibited-by-technical-specifications-reportable-degradation"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(ii)(A)",
+      "properties": {
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-ii-a"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-ii-a"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sg",
+      "evidence": null
+    },
+    {
+      "source": "c_tube",
+      "relation": "PART_OF",
+      "target": "sys_sg",
+      "evidence": null
+    },
+    {
+      "source": "fm_degrade",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_degrade",
+      "relation": "LEADS_TO",
+      "target": "fm_failtest",
+      "evidence": null
+    },
+    {
+      "source": "fm_failtest",
+      "relation": "LEADS_TO",
+      "target": "cons_condition",
+      "evidence": null
+    }
+  ],
+  "chain": "undetermined tube degradation mechanism [cause TBD] -> steam generator tube wall degradation -> tube fails in-situ pressure test -> condition outside Technical Specification limits / reportable event",
+  "golden_questions": [
+    "Q1",
+    "Q4"
+  ],
+  "notes": "FORM-366 fields provided minimal identity data; plant name, unit, and reactor type inferred from docket 05000382 (Waterford 3, PWR) per public NRC docket records, and title cleaned of header artifacts. No narrative text was provided (366A empty), so cause, failure chain, and consequence are constructed generically from the title/abstract-level information only; cause_code remains TBD/provisional per FORM-366. No component/system EIIS codes were given in source, so none were invented per Rule 2. No corrective actions, manufacturers, backups, or previous occurrences could be identified without narrative text."
+}

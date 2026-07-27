@@ -1,0 +1,297 @@
+{
+  "ler_number": "440-2020-001-00",
+  "identity": {
+    "accession_number": "ML20107F741",
+    "docket": "05000440",
+    "plant_name": "Perry",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2020-02-03",
+    "report_date": "2020-04-09",
+    "operating_mode": null,
+    "power_level": null,
+    "discovery_context": "surveillance test",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Perry Nuclear Power Plant"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)",
+      "10 CFR 50.73(a)(2)(v)(C)"
+    ],
+    "ssff": "Y"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "The direct cause was determined to be a degraded overload relay. The apparent cause was determined to be inadequate procedural guidance for testing the overload relay.",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "inadequate procedural guidance for overload relay testing allowed a degraded relay to pass surveillance",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 440-2020-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "440-2020-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:440-2020-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Perry Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000440",
+      "match_key": "Unit:05000440"
+    },
+    {
+      "id": "cause",
+      "display_name": "Procedure Inadequacy (D)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "inadequate procedural guidance for overload relay testing allowed a degraded relay to pass surveillance",
+      "proximate_text": "The direct cause was determined to be a degraded overload relay. The apparent cause was determined to be inadequate procedural guidance for testing the overload relay.",
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_bb",
+      "display_name": "Combustible Gas Mixing System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BB",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected system",
+      "match_key": "System:BB"
+    },
+    {
+      "id": "c_cgmcb",
+      "display_name": "Combustible Gas Mixing Compressor B (CGMC B)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "CGMC B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:combustible-gas-mixing-compressor-b-cgmc-b"
+    },
+    {
+      "id": "c_cgmca",
+      "display_name": "Combustible Gas Mixing Compressor A (CGMC A)",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": "CGMC A",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:combustible-gas-mixing-compressor-a-cgmc-a"
+    },
+    {
+      "id": "c_rly",
+      "display_name": "Thermal overload relay",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "RLY",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": "C770",
+      "inferred_code": false,
+      "match_key": "Component:RLY"
+    },
+    {
+      "id": "fm_proc",
+      "display_name": "Inadequate procedural guidance for overload relay testing",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Procedure for testing the thermal overload relay was inadequate, allowing a degraded relay to pass testing and be returned to service in November 2019.",
+      "match_key": "FailureMode:inadequate-procedural-guidance-for-overload-relay-testing"
+    },
+    {
+      "id": "fm_relay_degraded",
+      "display_name": "Overload relay degraded",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "The thermal overload relay was in a degraded condition, undetected due to inadequate test procedure.",
+      "match_key": "FailureMode:overload-relay-degraded"
+    },
+    {
+      "id": "fm_trip",
+      "display_name": "CGMC B trips on thermal overload",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "CGMC B tripped on thermal overload approximately 20 seconds after start during surveillance testing on February 3, 2020, with High Motor Amp S/D alarm locked in.",
+      "match_key": "FailureMode:cgmc-b-trips-on-thermal-overload"
+    },
+    {
+      "id": "cons_inop_b",
+      "display_name": "CGMC B inoperable (retroactively determined, TS 3.6.3.3 violation)",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2019-11-01T09:15",
+      "end": "2020-02-14T12:10",
+      "duration": "approx. 105 days",
+      "tz": null,
+      "match_key": "Consequence:cgmc-b-inoperable-retroactively-determined-ts-3-6-3-3-violation"
+    },
+    {
+      "id": "cons_loss_safety_fn",
+      "display_name": "Loss of safety function of Combustible Gas Mixing System",
+      "properties": {
+        "note": "CGMC A was also inoperable at various times during the same period for surveillance testing, resulting in a reportable loss of safety function per 10 CFR 50.73(a)(2)(v)(C)"
+      },
+      "type": "Consequence",
+      "start": null,
+      "end": null,
+      "duration": null,
+      "tz": null,
+      "match_key": "Consequence:loss-of-safety-function-of-combustible-gas-mixing-system"
+    },
+    {
+      "id": "ca_procedure",
+      "display_name": "Revise overload relay testing procedure for clarification",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:revise-overload-relay-testing-procedure-for-clarification"
+    },
+    {
+      "id": "mfr_c770",
+      "display_name": "Manufacturer C770",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "C770",
+      "match_key": "Manufacturer:C770"
+    },
+    {
+      "id": "rr_5073i",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_5073v",
+      "display_name": "10 CFR 50.73(a)(2)(v)(C)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-v-c"
+    },
+    {
+      "id": "rr_ts3633",
+      "display_name": "Technical Specification 3.6.3.3",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-3-6-3-3"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073i",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073v",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts3633",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bb",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "c_cgmcb",
+      "evidence": null
+    },
+    {
+      "source": "c_rly",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_c770",
+      "evidence": null
+    },
+    {
+      "source": "fm_proc",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_proc",
+      "relation": "LEADS_TO",
+      "target": "fm_relay_degraded",
+      "evidence": null
+    },
+    {
+      "source": "fm_relay_degraded",
+      "relation": "LEADS_TO",
+      "target": "fm_trip",
+      "evidence": null
+    },
+    {
+      "source": "fm_trip",
+      "relation": "LEADS_TO",
+      "target": "cons_inop_b",
+      "evidence": null
+    },
+    {
+      "source": "cons_inop_b",
+      "relation": "LEADS_TO",
+      "target": "cons_loss_safety_fn",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_procedure",
+      "evidence": null
+    }
+  ],
+  "chain": "inadequate procedural guidance for overload relay testing [cause D] -> degraded overload relay passes testing -> CGMC B trips on thermal overload -> CGMC B inoperable (Nov 1 2019 - Feb 14 2020) -> loss of safety function of Combustible Gas Mixing System (concurrent CGMC A inoperability)",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Retroactive inoperability discovery: the Feb 3, 2020 trip investigation revealed a prior Nov 1, 2019 trip where the relay was degraded but passed testing due to inadequate procedure, extending the inoperability period back to Nov 1, 2019. CGMC A is mentioned only as concurrently inoperable during surveillance testing (contributing to loss-of-safety-function reportability), not as a failed component in the causal chain, so no FailureMode was created for it. No previous similar events per narrative. No backup system stated as operable during the inoperability window (Hydrogen Recombiners/Containment Spray/Venting discussed only in PRA risk-context, not as an operable backup during the event), so no BACKED_UP_BY edge per rule 6."
+}

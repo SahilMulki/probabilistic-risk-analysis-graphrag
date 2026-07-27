@@ -1,0 +1,472 @@
+{
+  "ler_number": "440-2023-001-00",
+  "identity": {
+    "accession_number": "ML23053A083",
+    "docket": "05000440",
+    "plant_name": "Perry",
+    "unit": 1,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2023-01-05",
+    "report_date": "2023-02-22",
+    "operating_mode": "1",
+    "power_level": null,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Perry Nuclear Power Plant Docket No. 50-440, License No. NPF-58 Licensee Event Report Submittal"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [],
+  "cause": {
+    "proximate_text": "the cause of the reactor trip was attributed to the failure of a DFWCS level control processor module along with a degraded power supply, concurrent with a DFWCS network communications overload",
+    "cause_code": "TBD",
+    "category": "provisional",
+    "theme": "combined equipment failure plus latent configuration-control error causing zero-demand feedwater signal",
+    "provisional": true
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 440-2023-001-00",
+      "properties": {},
+      "type": "LER",
+      "key": "440-2023-001-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:440-2023-001-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Perry Unit 1",
+      "properties": {
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000440",
+      "match_key": "Unit:05000440"
+    },
+    {
+      "id": "cause",
+      "display_name": "Combined Equipment Failure / Latent Configuration Error (X)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "TBD",
+      "category": "provisional",
+      "theme": "combined equipment failure plus latent configuration-control error causing zero-demand feedwater signal",
+      "proximate_text": null,
+      "provisional": true,
+      "match_key": "Cause:provisional"
+    },
+    {
+      "id": "sys_sj",
+      "display_name": "Digital Feedwater Control System",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "sys_bg",
+      "display_name": "High Pressure Core Spray",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BG",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "manually initiated ECCS",
+      "match_key": "System:BG"
+    },
+    {
+      "id": "sys_bn",
+      "display_name": "Reactor Core Isolation Cooling",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BN",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "manually initiated ECCS",
+      "match_key": "System:BN"
+    },
+    {
+      "id": "sys_p",
+      "display_name": "Reactor Feed Pump Turbines",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "P",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:P"
+    },
+    {
+      "id": "c_xfmr",
+      "display_name": "Voltage-regulating transformer",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "XFMR",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:XFMR"
+    },
+    {
+      "id": "c_cpu",
+      "display_name": "Level control processor module",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "CPU",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": "F180",
+      "inferred_code": false,
+      "match_key": "Component:CPU"
+    },
+    {
+      "id": "c_jx",
+      "display_name": "Power supply",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "JX",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": "X999",
+      "inferred_code": false,
+      "match_key": "Component:JX"
+    },
+    {
+      "id": "c_cnv",
+      "display_name": "Media translators",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "CNV",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:CNV"
+    },
+    {
+      "id": "c_gov",
+      "display_name": "RFPT governor",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "65",
+      "identifier": null,
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:65"
+    },
+    {
+      "id": "fm_config",
+      "display_name": "Media translators connected to incorrect power source (latent configuration error)",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Configuration control issue found with some DFWCS media translators being connected to the incorrect power source",
+      "match_key": "FailureMode:media-translators-connected-to-incorrect-power-source-latent-configuration-error"
+    },
+    {
+      "id": "fm_indication_loss",
+      "display_name": "Unexpected loss of DFWCS indication/workstations during maintenance",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Loss of all DFWCS operator interface screens and additional workstations when transformer power removed",
+      "match_key": "FailureMode:unexpected-loss-of-dfwcs-indication-workstations-during-maintenance"
+    },
+    {
+      "id": "fm_cpu_fail",
+      "display_name": "Level control processor module failed",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Walkdown identified a failed level control processor module",
+      "match_key": "FailureMode:level-control-processor-module-failed"
+    },
+    {
+      "id": "fm_ps_degraded",
+      "display_name": "Power supply degraded/intermittent",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Degraded/intermittent power supply identified during walkdown",
+      "match_key": "FailureMode:power-supply-degraded-intermittent"
+    },
+    {
+      "id": "fm_network_overload",
+      "display_name": "DFWCS network communications overload",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Increased network communication traffic due to loss of interface screens hindering alarm acknowledgment",
+      "match_key": "FailureMode:dfwcs-network-communications-overload"
+    },
+    {
+      "id": "fm_alarm_hindered",
+      "display_name": "Operator unable to recognize zero-demand signal",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Due to loss of DFWCS interface screens, operators did not recognize the system demanded zero level to controllers during re-sync",
+      "match_key": "FailureMode:operator-unable-to-recognize-zero-demand-signal"
+    },
+    {
+      "id": "fm_zero_demand",
+      "display_name": "Zero-demand signal sent to RFPT governor",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Zero-demand signal sent to Reactor Feed Pump Turbines governor causing reduction to idle and minimum flow",
+      "match_key": "FailureMode:zero-demand-signal-sent-to-rfpt-governor"
+    },
+    {
+      "id": "fm_level_drop",
+      "display_name": "Reactor water level lowered to Level 3",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "Reduced feedwater flow resulted in reactor water level lowering to Level 3",
+      "match_key": "FailureMode:reactor-water-level-lowered-to-level-3"
+    },
+    {
+      "id": "cons_trip",
+      "display_name": "Automatic reactor trip / manual ECCS initiation",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2023-01-05T12:42",
+      "end": "2023-01-08",
+      "duration": "reactor restarted January 8, 2023",
+      "tz": null,
+      "match_key": "Consequence:automatic-reactor-trip-manual-eccs-initiation"
+    },
+    {
+      "id": "ca_replace_ps",
+      "display_name": "Replace defective DFWCS power supply",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-defective-dfwcs-power-supply"
+    },
+    {
+      "id": "ca_replace_cpu",
+      "display_name": "Replace failed secondary control processor module",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-failed-secondary-control-processor-module"
+    },
+    {
+      "id": "ca_fix_config",
+      "display_name": "Correct media translator configuration/power source issue",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:correct-media-translator-configuration-power-source-issue"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5072b2iva",
+      "display_name": "10 CFR 50.72(b)(2)(iv)(A)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-2-iv-a"
+    },
+    {
+      "id": "rr_5072b2ivb",
+      "display_name": "10 CFR 50.72(b)(2)(iv)(B)",
+      "properties": {
+        "type": "reporting-criterion"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-2-iv-b"
+    },
+    {
+      "id": "rr_rg1174",
+      "display_name": "Regulatory Guide 1.174",
+      "properties": {
+        "type": "analysis-basis"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:regulatory-guide-1-174"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072b2iva",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072b2ivb",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_sj",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bg",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bn",
+      "evidence": null
+    },
+    {
+      "source": "c_cpu",
+      "relation": "PART_OF",
+      "target": "sys_sj",
+      "evidence": null
+    },
+    {
+      "source": "c_jx",
+      "relation": "PART_OF",
+      "target": "sys_sj",
+      "evidence": null
+    },
+    {
+      "source": "c_cnv",
+      "relation": "PART_OF",
+      "target": "sys_sj",
+      "evidence": null
+    },
+    {
+      "source": "fm_config",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_config",
+      "relation": "LEADS_TO",
+      "target": "fm_indication_loss",
+      "evidence": null
+    },
+    {
+      "source": "fm_indication_loss",
+      "relation": "LEADS_TO",
+      "target": "fm_network_overload",
+      "evidence": null
+    },
+    {
+      "source": "fm_network_overload",
+      "relation": "LEADS_TO",
+      "target": "fm_alarm_hindered",
+      "evidence": null
+    },
+    {
+      "source": "fm_cpu_fail",
+      "relation": "LEADS_TO",
+      "target": "fm_zero_demand",
+      "evidence": null
+    },
+    {
+      "source": "fm_ps_degraded",
+      "relation": "LEADS_TO",
+      "target": "fm_zero_demand",
+      "evidence": null
+    },
+    {
+      "source": "fm_alarm_hindered",
+      "relation": "LEADS_TO",
+      "target": "fm_zero_demand",
+      "evidence": null
+    },
+    {
+      "source": "fm_zero_demand",
+      "relation": "LEADS_TO",
+      "target": "fm_level_drop",
+      "evidence": null
+    },
+    {
+      "source": "fm_level_drop",
+      "relation": "LEADS_TO",
+      "target": "cons_trip",
+      "evidence": null
+    },
+    {
+      "source": "cons_trip",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_bg",
+      "evidence": null
+    },
+    {
+      "source": "cons_trip",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_bn",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_ps",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_cpu",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_fix_config",
+      "evidence": null
+    }
+  ],
+  "chain": "media translators wired to incorrect power source (latent configuration error) [cause X] -> unexpected DFWCS indication loss -> network communications overload -> operators unable to recognize zero-demand signal (concurrent with failed CPU module & degraded power supply) -> zero-demand signal sent to RFPT governor -> reactor water level drops to Level 3 -> automatic reactor trip [backups HPCS, RCIC manually initiated]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Cause code reported as 'X' (Other/Combined) in Block 13 rows rather than a single dominant code; category left as 'provisional' string per FORM-366 fields (category value 'provisional' copied verbatim, though cause_code itself is X, not TBD). Two distinct component failures (CPU module failure, power supply degradation) modeled as separate FailureMode nodes per rule 5, both feeding into the zero-demand signal along with the human-performance/config issue chain. RFPT governor [65] and RFPTs [P] treated as System/Component context for the zero-demand signal propagation, not as an independently failed system. No previous similar LERs cited (narrative states none in past three years), so no stub LER node created."
+}

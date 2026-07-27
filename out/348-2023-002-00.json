@@ -1,0 +1,284 @@
+{
+  "ler_number": "348-2023-002-00",
+  "identity": {
+    "accession_number": "ML23333A215",
+    "docket": "05000348",
+    "plant_name": "Farley",
+    "unit": 1,
+    "reactor_type": "PWR",
+    "nss_vendor": null,
+    "event_date": "2023-10-02",
+    "report_date": "2023-11-29",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": null,
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Residual Heat Removal Pump Inoperable for Longer than Allowed by Technical Specifications"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(i)(B)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "A",
+      "system": "BP",
+      "component": "52",
+      "manufacturer": "S188",
+      "reportable": "N"
+    }
+  ],
+  "cause": {
+    "proximate_text": "the most likely cause of the 1B RHR circuit breaker racking release handle being in the 'Trip Free' position was due to human performance errors which resulted in the inadvertent mispositioning of the wrong breaker (1B RHR pump breaker) during the 1B Emergency Diesel (EDG) surveillance the morning of August 28, 2023",
+    "cause_code": "A",
+    "category": "Personnel Error",
+    "theme": "wrong-breaker mispositioning during unrelated EDG surveillance",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 348-2023-002-00",
+      "properties": {},
+      "type": "LER",
+      "key": "348-2023-002-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:348-2023-002-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Farley Unit 1",
+      "properties": {
+        "reactor_type": "PWR"
+      },
+      "type": "Unit",
+      "key": "05000348",
+      "match_key": "Unit:05000348"
+    },
+    {
+      "id": "cause",
+      "display_name": "Personnel Error (A)",
+      "properties": {},
+      "type": "Cause",
+      "cause_code": "A",
+      "category": "Personnel Error",
+      "theme": "wrong-breaker mispositioning during unrelated EDG surveillance",
+      "proximate_text": "the most likely cause of the 1B RHR circuit breaker racking release handle being in the 'Trip Free' position was due to human performance errors which resulted in the inadvertent mispositioning of the wrong breaker (1B RHR pump breaker) during the 1B Emergency Diesel (EDG) surveillance the morning of August 28, 2023",
+      "provisional": false,
+      "match_key": "Cause:Personnel Error"
+    },
+    {
+      "id": "sys_bp",
+      "display_name": "Residual Heat Removal",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "BP",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "affected train",
+      "match_key": "System:BP"
+    },
+    {
+      "id": "sys_ek",
+      "display_name": "Emergency Diesel Generator",
+      "properties": {},
+      "type": "System",
+      "eiis_code": "EK",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "context - surveillance being performed when mispositioning occurred",
+      "match_key": "System:EK"
+    },
+    {
+      "id": "c_pump_1b",
+      "display_name": "1B RHR Pump",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "BP",
+      "identifier": "1B",
+      "model": null,
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:BP|1B"
+    },
+    {
+      "id": "c_bkr_1b",
+      "display_name": "1B RHR Pump Circuit Breaker",
+      "properties": {},
+      "type": "Component",
+      "eiis_code": "52",
+      "identifier": "1B",
+      "model": null,
+      "manufacturer_code": "S188",
+      "inferred_code": false,
+      "match_key": "Component:52|1B"
+    },
+    {
+      "id": "fm_mispos",
+      "display_name": "1B RHR breaker racking release handle inadvertently left in Trip Free position",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "During 1B EDG surveillance on August 28, 2023, personnel mispositioned the wrong breaker, leaving the 1B RHR pump breaker racking release handle in 'Trip Free' instead of 'Operational'.",
+      "match_key": "FailureMode:1b-rhr-breaker-racking-release-handle-inadvertently-left-in-trip-free-position"
+    },
+    {
+      "id": "fm_nostart",
+      "display_name": "1B RHR pump failed to start on demand",
+      "properties": {},
+      "type": "FailureMode",
+      "description": "With the racking release handle in Trip Free, the breaker charging springs were not charged, and the 1B RHR pump failed to start during the quarterly surveillance run on October 2, 2023.",
+      "match_key": "FailureMode:1b-rhr-pump-failed-to-start-on-demand"
+    },
+    {
+      "id": "cons_inop",
+      "display_name": "1B RHR pump inoperable beyond Technical Specification allowed time",
+      "properties": {},
+      "type": "Consequence",
+      "start": "2023-08-28",
+      "end": "2023-10-02T11:00",
+      "duration": "approximately 35 days",
+      "tz": null,
+      "match_key": "Consequence:1b-rhr-pump-inoperable-beyond-technical-specification-allowed-time"
+    },
+    {
+      "id": "ca_spring",
+      "display_name": "Placed racking release handle to Operational position, charging springs charged; no damage noted",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:placed-racking-release-handle-to-operational-position-charging-springs-charged-no-damage-noted"
+    },
+    {
+      "id": "ca_hp",
+      "display_name": "Address human performance errors through station performance management process",
+      "properties": {},
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:address-human-performance-errors-through-station-performance-management-process"
+    },
+    {
+      "id": "mfr_s188",
+      "display_name": "Manufacturer S188",
+      "properties": {},
+      "type": "Manufacturer",
+      "code": "S188",
+      "match_key": "Manufacturer:S188"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(i)(B)",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "reporting-criterion",
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-i-b"
+    },
+    {
+      "id": "rr_ts352",
+      "display_name": "Technical Specification 3.5.2",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "license-basis",
+      "match_key": "RegulatoryReference:technical-specification-3-5-2"
+    },
+    {
+      "id": "rr_ufsar",
+      "display_name": "UFSAR Chapter 15",
+      "properties": {},
+      "type": "RegulatoryReference",
+      "ref_type": "analysis-basis",
+      "match_key": "RegulatoryReference:ufsar-chapter-15"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ts352",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_ufsar",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_bp",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_ek",
+      "evidence": null
+    },
+    {
+      "source": "c_bkr_1b",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_s188",
+      "evidence": null
+    },
+    {
+      "source": "fm_mispos",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_mispos",
+      "relation": "LEADS_TO",
+      "target": "fm_nostart",
+      "evidence": null
+    },
+    {
+      "source": "fm_nostart",
+      "relation": "LEADS_TO",
+      "target": "cons_inop",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_spring",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_hp",
+      "evidence": null
+    }
+  ],
+  "chain": "human performance error during 1B EDG surveillance [cause A] -> wrong breaker mispositioned, racking release handle left in Trip Free -> charging springs not charged -> 1B RHR pump fails to start on demand -> 1B RHR pump inoperable beyond TS 3.5.2 allowed time [no safety consequence; 1A RHR pump available throughout]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "The mispositioning event occurred on August 28, 2023 during an unrelated 1B EDG surveillance, but was not discovered until the 1B RHR pump failed to start on October 2, 2023; the inoperability window per TS 3.5.2 dates back to the mispositioning. No BACKED_UP_BY edge modeled for 1A RHR pump since it is described only as 'available' in the reportability/safety assessment narrative rather than framed as an explicit operable backup during a stated inoperability window in the same sense as the example; however narrative does state it was available to perform the safety function, which is borderline design-context vs operable-backup language. Given ambiguity, omitted per rule 6 guidance to omit if unclear. Docket used as unit key per schema convention from example."
+}

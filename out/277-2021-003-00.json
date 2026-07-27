@@ -1,0 +1,469 @@
+{
+  "ler_number": "277-2021-003-00",
+  "identity": {
+    "accession_number": "ML22012A400",
+    "docket": "05000277",
+    "plant_name": "Peach Bottom",
+    "unit": 2,
+    "reactor_type": "BWR",
+    "nss_vendor": "General Electric",
+    "event_date": "2021-11-14",
+    "report_date": "2022-01-12",
+    "operating_mode": "1",
+    "power_level": 100,
+    "discovery_context": "normal operation",
+    "status": "final",
+    "revision": "00",
+    "ens_number": "55575",
+    "ens_date": null,
+    "ens_time": null,
+    "title": "Licensee Event Report (LER) 2-2021-003-00 Manual Reactor Scram due to Degrading Condenser Vacuum"
+  },
+  "reporting_basis": {
+    "reported_under": [
+      "10 CFR 50.73(a)(2)(iv)(A)"
+    ],
+    "ssff": "not stated"
+  },
+  "block_13": [
+    {
+      "cause": "B",
+      "system": "WF",
+      "component": "PCV",
+      "manufacturer": "F052",
+      "reportable": "Y"
+    }
+  ],
+  "cause": {
+    "proximate_text": "The root cause of the failure of the positioner was determined to be the use of low temperature soft parts in a high temperature environment. Analysis identified that the positioner failure was due to a degraded bellows o-ring and subsequent air leakage. The elastomer became embrittled to the point of failure, likely caused by heat/temperature aging. A high temperature environment existed when a steam leak occurred near the failed part in 2019.",
+    "cause_code": "B",
+    "category": "Design/Manufacturing/Installation",
+    "theme": "Wrong-temperature-rated soft parts embrittled by steam-leak heat exposure",
+    "provisional": false
+  },
+  "nodes": [
+    {
+      "id": "ler",
+      "display_name": "LER 2-2021-003-00",
+      "properties": {
+        "match_key": "LER:2-2021-003-00"
+      },
+      "type": "LER",
+      "key": "277-2021-003-00",
+      "stub": false,
+      "title": null,
+      "plant": null,
+      "match_key": "LER:277-2021-003-00"
+    },
+    {
+      "id": "unit",
+      "display_name": "Peach Bottom Unit 2",
+      "properties": {
+        "match_key": "Unit:05000277",
+        "reactor_type": "BWR",
+        "nss_vendor": "General Electric"
+      },
+      "type": "Unit",
+      "key": "05000277",
+      "match_key": "Unit:05000277"
+    },
+    {
+      "id": "cause",
+      "display_name": "Design/Manufacturing/Installation (B)",
+      "properties": {
+        "match_key": "Cause:Design/Manufacturing/Installation"
+      },
+      "type": "Cause",
+      "cause_code": "B",
+      "category": "Design/Manufacturing/Installation",
+      "theme": "Wrong-temperature-rated soft parts embrittled by steam-leak heat exposure",
+      "proximate_text": null,
+      "provisional": false,
+      "match_key": "Cause:Design/Manufacturing/Installation"
+    },
+    {
+      "id": "sys_wf",
+      "display_name": "Offgas System",
+      "properties": {
+        "match_key": "System:WF"
+      },
+      "type": "System",
+      "eiis_code": "WF",
+      "non_eiis": false,
+      "provisional": false,
+      "role": null,
+      "match_key": "System:WF"
+    },
+    {
+      "id": "sys_sj",
+      "display_name": "Feedwater System",
+      "properties": {
+        "match_key": "System:SJ"
+      },
+      "type": "System",
+      "eiis_code": "SJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; operable",
+      "match_key": "System:SJ"
+    },
+    {
+      "id": "sys_jj",
+      "display_name": "Electrohydraulic Control System",
+      "properties": {
+        "match_key": "System:JJ"
+      },
+      "type": "System",
+      "eiis_code": "JJ",
+      "non_eiis": false,
+      "provisional": false,
+      "role": "backup; operable",
+      "match_key": "System:JJ"
+    },
+    {
+      "id": "c_pcv",
+      "display_name": "Jet Compressor Bypass Valve ('A' train) - 2\" Design ES Pressure Control Valve",
+      "properties": {
+        "match_key": "Component:PCV"
+      },
+      "type": "Component",
+      "eiis_code": "PCV",
+      "identifier": null,
+      "model": "Design ES Type",
+      "manufacturer_code": "F052",
+      "inferred_code": false,
+      "match_key": "Component:PCV"
+    },
+    {
+      "id": "c_positioner",
+      "display_name": "3582 Positioner",
+      "properties": {
+        "match_key": "Component:3582-positioner"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": "3582",
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:3582-positioner"
+    },
+    {
+      "id": "c_actuator",
+      "display_name": "657 Actuator",
+      "properties": {
+        "match_key": "Component:657-actuator"
+      },
+      "type": "Component",
+      "eiis_code": null,
+      "identifier": null,
+      "model": "657",
+      "manufacturer_code": null,
+      "inferred_code": false,
+      "match_key": "Component:657-actuator"
+    },
+    {
+      "id": "fm_bellows",
+      "display_name": "Bellows o-ring embrittled from heat aging",
+      "properties": {
+        "match_key": "FailureMode:bellows-oring-embrittled"
+      },
+      "type": "FailureMode",
+      "description": "Low-temperature-rated elastomer became embrittled due to heat exposure from a nearby 2019 steam leak",
+      "match_key": "FailureMode:bellows-o-ring-embrittled-from-heat-aging"
+    },
+    {
+      "id": "fm_airleak",
+      "display_name": "Positioner air leak",
+      "properties": {
+        "match_key": "FailureMode:positioner-air-leak"
+      },
+      "type": "FailureMode",
+      "description": "Degraded bellows o-ring caused significant air leakage in the valve positioner",
+      "match_key": "FailureMode:positioner-air-leak"
+    },
+    {
+      "id": "fm_valvefail",
+      "display_name": "Jet Compressor Bypass Valve fails to close",
+      "properties": {
+        "match_key": "FailureMode:valve-fails-to-close"
+      },
+      "type": "FailureMode",
+      "description": "Air leak prevented the air-operated valve (fails open) from closing, unable to control bypass steam to Jet Compressor suction",
+      "match_key": "FailureMode:jet-compressor-bypass-valve-fails-to-close"
+    },
+    {
+      "id": "fm_pressure",
+      "display_name": "Offgas Jet Compressor suction high pressure / system isolation",
+      "properties": {
+        "match_key": "FailureMode:offgas-isolation"
+      },
+      "type": "FailureMode",
+      "description": "High pressure alarm reached Offgas System isolation setpoint; operator actions to restore Offgas unsuccessful",
+      "match_key": "FailureMode:offgas-jet-compressor-suction-high-pressure-system-isolation"
+    },
+    {
+      "id": "fm_vacuum",
+      "display_name": "Main Condenser vacuum degradation",
+      "properties": {
+        "match_key": "FailureMode:condenser-vacuum-degradation"
+      },
+      "type": "FailureMode",
+      "description": "Continued degradation of Main Condenser vacuum following Offgas System isolation and power reduction",
+      "match_key": "FailureMode:main-condenser-vacuum-degradation"
+    },
+    {
+      "id": "cons_scram",
+      "display_name": "Manual reactor scram / PCIS Group II/III isolation",
+      "properties": {
+        "match_key": "Consequence:manual-scram-pcis-isolation"
+      },
+      "type": "Consequence",
+      "start": "2021-11-14T05:25",
+      "end": null,
+      "duration": null,
+      "tz": "EST",
+      "match_key": "Consequence:manual-reactor-scram-pcis-group-ii-iii-isolation"
+    },
+    {
+      "id": "ca_replace_positioner",
+      "display_name": "Replace valve positioner",
+      "properties": {
+        "match_key": "CorrectiveAction:replace-valve-positioner"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-valve-positioner"
+    },
+    {
+      "id": "ca_elastomer",
+      "display_name": "Replace elastomers with higher-temperature rated components",
+      "properties": {
+        "match_key": "CorrectiveAction:replace-elastomers-higher-temp"
+      },
+      "type": "CorrectiveAction",
+      "status": "completed",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-elastomers-with-higher-temperature-rated-components"
+    },
+    {
+      "id": "ca_softparts",
+      "display_name": "Replace other low temperature soft parts within the system",
+      "properties": {
+        "match_key": "CorrectiveAction:replace-other-low-temp-parts"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:replace-other-low-temperature-soft-parts-within-the-system"
+    },
+    {
+      "id": "ca_rescreen",
+      "display_name": "Re-screen Offgas system components for criticality",
+      "properties": {
+        "match_key": "CorrectiveAction:rescreen-offgas-criticality"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:re-screen-offgas-system-components-for-criticality"
+    },
+    {
+      "id": "ca_training",
+      "display_name": "Include event as case study in trend/risk-assessment training",
+      "properties": {
+        "match_key": "CorrectiveAction:training-case-study"
+      },
+      "type": "CorrectiveAction",
+      "status": "planned",
+      "provisional": false,
+      "match_key": "CorrectiveAction:include-event-as-case-study-in-trend-risk-assessment-training"
+    },
+    {
+      "id": "mfr_fisher",
+      "display_name": "Fisher Controls International",
+      "properties": {
+        "match_key": "Manufacturer:F052"
+      },
+      "type": "Manufacturer",
+      "code": "F052",
+      "match_key": "Manufacturer:F052"
+    },
+    {
+      "id": "rr_5073",
+      "display_name": "10 CFR 50.73(a)(2)(iv)(A)",
+      "properties": {
+        "type": "reporting-criterion",
+        "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-73-a-2-iv-a"
+    },
+    {
+      "id": "rr_5072",
+      "display_name": "10 CFR 50.72(b)(2)(iv)(B)",
+      "properties": {
+        "type": "reporting-criterion",
+        "match_key": "RegulatoryReference:10-cfr-50-72-b-2-iv-b"
+      },
+      "type": "RegulatoryReference",
+      "ref_type": null,
+      "match_key": "RegulatoryReference:10-cfr-50-72-b-2-iv-b"
+    },
+    {
+      "id": "ler_prev",
+      "display_name": "Previous similar event at Peach Bottom",
+      "properties": {},
+      "type": "LER",
+      "key": "Peach Bottom",
+      "stub": true,
+      "title": null,
+      "plant": "Peach Bottom Atomic Power Station",
+      "match_key": "LER:Peach Bottom"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ler",
+      "relation": "OCCURRED_AT",
+      "target": "unit",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5073",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "REPORTED_UNDER",
+      "target": "rr_5072",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "INVOLVES",
+      "target": "sys_wf",
+      "evidence": null
+    },
+    {
+      "source": "c_pcv",
+      "relation": "PART_OF",
+      "target": "sys_wf",
+      "evidence": null
+    },
+    {
+      "source": "c_positioner",
+      "relation": "PART_OF",
+      "target": "c_pcv",
+      "evidence": null
+    },
+    {
+      "source": "c_actuator",
+      "relation": "PART_OF",
+      "target": "c_pcv",
+      "evidence": null
+    },
+    {
+      "source": "fm_bellows",
+      "relation": "CAUSED_BY",
+      "target": "cause",
+      "evidence": null
+    },
+    {
+      "source": "fm_bellows",
+      "relation": "LEADS_TO",
+      "target": "fm_airleak",
+      "evidence": null
+    },
+    {
+      "source": "fm_airleak",
+      "relation": "LEADS_TO",
+      "target": "fm_valvefail",
+      "evidence": null
+    },
+    {
+      "source": "fm_valvefail",
+      "relation": "LEADS_TO",
+      "target": "fm_pressure",
+      "evidence": null
+    },
+    {
+      "source": "fm_pressure",
+      "relation": "LEADS_TO",
+      "target": "fm_vacuum",
+      "evidence": null
+    },
+    {
+      "source": "fm_vacuum",
+      "relation": "LEADS_TO",
+      "target": "cons_scram",
+      "evidence": null
+    },
+    {
+      "source": "cons_scram",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_sj",
+      "evidence": null
+    },
+    {
+      "source": "cons_scram",
+      "relation": "BACKED_UP_BY",
+      "target": "sys_jj",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_replace_positioner",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_elastomer",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_softparts",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_rescreen",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "MITIGATED_BY",
+      "target": "ca_training",
+      "evidence": null
+    },
+    {
+      "source": "c_positioner",
+      "relation": "MANUFACTURED_BY",
+      "target": "mfr_fisher",
+      "evidence": null
+    },
+    {
+      "source": "ler",
+      "relation": "SIMILAR_TO",
+      "target": "ler_prev",
+      "evidence": null
+    }
+  ],
+  "chain": "low-temperature soft parts installed in high-temperature environment [cause B] -> bellows o-ring embrittled by steam-leak heat aging -> positioner air leak -> Jet Compressor Bypass Valve fails to close -> Offgas suction high pressure / system isolation -> Main Condenser vacuum degradation -> manual reactor scram / PCIS Group II/III isolation [backups: Feedwater (SJ), Electrohydraulic Control (JJ)]",
+  "golden_questions": [
+    "Q1",
+    "Q3",
+    "Q4",
+    "Q14"
+  ],
+  "notes": "Previous Similar Events section only states 'Peach Bottom' with no LER number, unit, or title provided; stub LER node created with key set to that literal text per instructions, though it lacks a proper LER-number format. Contributing causes (equipment misclassified as non-critical; failure to identify deteriorating Offgas trends) are noted in narrative but not modeled as separate FailureMode nodes since they are organizational/programmatic contributing factors rather than physical failure steps in the causal chain to the scram; they are reflected in cause theme/proximate_text context only."
+}
